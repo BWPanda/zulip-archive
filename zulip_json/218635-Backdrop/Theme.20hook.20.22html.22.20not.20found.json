@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>I'm debugging a module that I'm porting and I see this in the log but don't know where to find what's causing it. There don't seem to be any theme hooks for 'html' in the module. Any ideas how I can proceed?</p>\n<blockquote>\n<p>Theme hook \"html\" not found.</p>\n</blockquote>",
+        "id": 193624974,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586557518
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> maybe try looking for something like <code>theme('html'</code></p>",
+        "id": 193627756,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1586559679
+    },
+    {
+        "content": "<p>Thanks, should have thought of that! I do see that. It's present in the D7 code as well -- is that something that got removed from Drupal or ??</p>",
+        "id": 193674929,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586632409
+    },
+    {
+        "content": "<p>It looks like it's just trying to generate a complete page -- is the equivalent in Backdrop <code>theme('layout'</code>?</p>",
+        "id": 193675006,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586632522
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> ++</p>",
+        "id": 193675750,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586633576
+    },
+    {
+        "content": "<p>flatt)** :-) (Karma: 1)</p>",
+        "id": 193675751,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1586633576
+    },
+    {
+        "content": "<p>I was reluctant to mention it, because I was sure you had already done that. <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 193676155,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1586634093
+    },
+    {
+        "content": "<p>Maybe it's something that module defined at one point but removed. Try looking through the commit history or with git blame to see if there are any clues there.</p>",
+        "id": 193676225,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1586634153
+    },
+    {
+        "content": "<p>It does seem logical that I would have done. I had tried grepping <code>theme_</code> and <code>_theme</code> (looked in the theme hook function) and <code>theme_html</code> and just <code>_html</code> but not <code>theme(</code> <span aria-label=\"rolling eyes\" class=\"emoji emoji-1f644\" role=\"img\" title=\"rolling eyes\">:rolling_eyes:</span></p>",
+        "id": 193676976,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586635303
+    },
+    {
+        "content": "<p>^^ that used to always get me... API documentation always mentions <code>theme_whatever()</code> functions, but their actual implementation is always <code>theme('whatever')</code>. I've learned my lesson since.</p>",
+        "id": 193719354,
+        "sender_full_name": "klonos",
+        "timestamp": 1586708429
+    }
+]

@@ -1,0 +1,187 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html">Checking if config exists</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="205261132"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205261132" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205261132">(Jul 28 2020 at 16:50)</a>:</h4>
+<p>What is the best way to check if a configuration file exists?</p>
+
+
+
+<a name="205263843"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205263843" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205263843">(Jul 28 2020 at 17:12)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> - Besides looking in the config directory?  ;-)</p>
+
+
+
+<a name="205263893"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205263893" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205263893">(Jul 28 2020 at 17:13)</a>:</h4>
+<p>Yes, I mean checking from within code.</p>
+
+
+
+<a name="205263899"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205263899" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205263899">(Jul 28 2020 at 17:13)</a>:</h4>
+<p><span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="205268101"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205268101" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205268101">(Jul 28 2020 at 17:49)</a>:</h4>
+<p>If you dont know which exact one then <code>config_get_names_with_prefix()</code><br>
+otherwise just call <code>config()</code>.</p>
+
+
+
+<a name="205268312"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205268312" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205268312">(Jul 28 2020 at 17:51)</a>:</h4>
+<p>or <code>config_get()</code></p>
+
+
+
+<a name="205272987"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205272987" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205272987">(Jul 28 2020 at 18:32)</a>:</h4>
+<p>If I do <code>$config = config('config_name')</code> and that doesn't exist, does it just return NULL?</p>
+
+
+
+<a name="205273865"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205273865" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205273865">(Jul 28 2020 at 18:39)</a>:</h4>
+<p>May be moot point. The error I'm chasing may be from another section of code.</p>
+
+
+
+<a name="205278574"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205278574" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205278574">(Jul 28 2020 at 19:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> try this and compare the objects returned:</p>
+<div class="codehilite"><pre><span></span><code>dpm(config(&#39;system.core&#39;), &#39;existing&#39;);
+dpm(config(&#39;i-do-not-exist&#39;), &#39;non-existing&#39;);
+</code></pre></div>
+
+
+<p>...for the file that does exist, the <code>isNew:protected </code> property is <code>FALSE</code>, whereas for the non-existing one is <code>TRUE</code><br>
+...then also the <code>data:protected</code> property is an empty array for the non-existing one.</p>
+
+
+
+<a name="205278793"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205278793" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205278793">(Jul 28 2020 at 19:20)</a>:</h4>
+<p>...for better DX, perhaps we should have <code>config()</code> return FALSE or NULL if the config file does not exist?</p>
+
+
+
+<a name="205280532"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205280532" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205280532">(Jul 28 2020 at 19:35)</a>:</h4>
+<p><code>$config = config('config_name')-&gt;get()</code> should return empty, so that should do the trick.</p>
+
+
+
+<a name="205281717"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205281717" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205281717">(Jul 28 2020 at 19:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> best way is to do something like this:</p>
+<div class="codehilite"><pre><span></span><code>$config = config(&#39;mymodule.settings&#39;);
+if (!$config-&gt;isNew()) {
+</code></pre></div>
+
+
+
+<a name="205281874"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205281874" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205281874">(Jul 28 2020 at 19:47)</a>:</h4>
+<p>If the config has never existed before then it'll exist only as an object and have the isNew flag. Otherwise you know it existed previously</p>
+
+
+
+<a name="205283107"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205283107" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205283107">(Jul 28 2020 at 19:58)</a>:</h4>
+<p>This seems like a discussion that should be documented somewhere or added to the forum for future reference.</p>
+
+
+
+<a name="205317338"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205317338" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205317338">(Jul 29 2020 at 04:28)</a>:</h4>
+<p><a href="https://forum.backdropcms.org/forum/how-tell-if-config-file-exists">https://forum.backdropcms.org/forum/how-tell-if-config-file-exists</a></p>
+
+
+
+<a name="205317344"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205317344" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205317344">(Jul 29 2020 at 04:28)</a>:</h4>
+<p>Thanks all!</p>
+
+
+
+<a name="205318025"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205318025" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205318025">(Jul 29 2020 at 04:49)</a>:</h4>
+<p>Posted some alternatives (in the forum)</p>
+
+
+
+<a name="205339272"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339272" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339272">(Jul 29 2020 at 10:28)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> ++</p>
+
+
+
+<a name="205339273"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339273" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339273">(Jul 29 2020 at 10:28)</a>:</h4>
+<p><strong>stpaultim</strong> 1000% (Karma: 19)</p>
+
+
+
+<a name="205339278"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339278" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339278">(Jul 29 2020 at 10:28)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> ++</p>
+
+
+
+<a name="205339279"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339279" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339279">(Jul 29 2020 at 10:28)</a>:</h4>
+<p><strong>laryn</strong> :-) (Karma: 11)</p>
+
+
+
+<a name="205339282"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339282" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339282">(Jul 29 2020 at 10:28)</a>:</h4>
+<p>@herb++</p>
+
+
+
+<a name="205339283"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339283" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339283">(Jul 29 2020 at 10:28)</a>:</h4>
+<p>herb 1000% (Karma: 1)</p>
+
+
+
+<a name="205339291"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339291" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339291">(Jul 29 2020 at 10:28)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> ++</p>
+
+
+
+<a name="205339292"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339292" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339292">(Jul 29 2020 at 10:28)</a>:</h4>
+<p>(peter)** - Dragon Fire (Karma: 30)</p>
+
+
+
+<a name="205339321"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Checking%20if%20config%20exists/near/205339321" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Checking.20if.20config.20exists.html#205339321">(Jul 29 2020 at 10:29)</a>:</h4>
+<p>...some people do not have as much karma as they deserve here <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

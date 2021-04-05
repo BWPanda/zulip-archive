@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>I will need this for an upcoming project so I have ported TAC. It took a bit of banging my head to figure some parts out but I think the basic functionality is working. I haven't been able to do anything with an upgrade path yet. The difficulty will be that Role IDs disappear and needing to use those before they go away to convert to the new format... Testing and help would be much appreciated if anyone else is interested or has a need coming up:<br>\n<a href=\"https://github.com/backdrop-contrib/taxonomy_access\">https://github.com/backdrop-contrib/taxonomy_access</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/taxonomy_access\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/taxonomy_access\" title=\"backdrop-contrib/taxonomy_access\">backdrop-contrib/taxonomy_access</a></div><div class=\"message_embed_description\">Access control for user roles based on taxonomy categories (vocabulary, terms). - backdrop-contrib/taxonomy_access</div></div></div>",
+        "id": 218467470,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606849825
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> the role IDs don't necessarily disappear. They are still numbers if upgrading from Drupal. But just numbers as strings rather than integers</p>",
+        "id": 218510590,
+        "sender_full_name": "Herb",
+        "timestamp": 1606878591
+    },
+    {
+        "content": "<p>And any new roles are likely to be words</p>",
+        "id": 218510639,
+        "sender_full_name": "Herb",
+        "timestamp": 1606878614
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Another question. I see that the role IDs are preserved in the config as the name (just as a string, as you said) but the same doesn't seem to be true of vocabularies. Are the <code>vid</code> values lost in an upgrade?</p>",
+        "id": 218594529,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606931784
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>, I dealt with this issue when porting uc_price_per_role. Although the old role IDs get converted to strings with the same integer value, rid 1 gets converted to role 'anonymous' and rid 2 gets converted to role 'authenticated' (note that there are constants BACKDROP_ANONYMOUS_ROLE and BACKDROP_AUTHENTICATED_ROLE). The implementation of uc_price_per_role_update_1000() might be a useful example for how to deal with the conversion.</p>",
+        "id": 218597478,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1606933095
+    },
+    {
+        "content": "<p>Thanks! I'll check it out.</p>",
+        "id": 218597615,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606933167
+    },
+    {
+        "content": "<p>Very helpful <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span>  <span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> ++</p>",
+        "id": 218599116,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606933780
+    },
+    {
+        "content": "<p><strong>bugfolder</strong> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> (Karma: 3)</p>",
+        "id": 218599117,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1606933780
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> not sure about the vid.</p>",
+        "id": 218635767,
+        "sender_full_name": "Herb",
+        "timestamp": 1606952172
+    }
+]

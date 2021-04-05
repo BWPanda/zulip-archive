@@ -1,0 +1,100 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Module-provided.20views.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html">Module-provided views</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="190775649"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190775649" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190775649">(Mar 16 2020 at 20:28)</a>:</h4>
+<p>It looks like I can provide a Views <code>json</code> file in a module's <code>config</code> folder and it gets installed automatically when the module is first installed. When I disable and uninstall the module, that View remains. Is that best practice, or should the module disable/delete it? Is there an automated way to do so?</p>
+
+
+
+<a name="190775812"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190775812" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190775812">(Mar 16 2020 at 20:29)</a>:</h4>
+<p>In fact, even after the module is fully uninstalled I can't delete the view currently from the UI (likely since I've added a <code>module="module_name"</code> line in the <code>.json</code>).</p>
+
+
+
+<a name="190778005"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190778005" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190778005">(Mar 16 2020 at 20:48)</a>:</h4>
+<p>Maybe you need to add it to <code>hook_config_info()</code> for it to be deleted automatically on uninstall...?</p>
+
+
+
+<a name="190825378"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190825378" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190825378">(Mar 17 2020 at 09:44)</a>:</h4>
+<p>Funny, I had the same question recently but forgot to ask. So... - should we delete it or not after module uninstall? What is the recommended way?</p>
+
+
+
+<a name="190833441"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190833441" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190833441">(Mar 17 2020 at 11:07)</a>:</h4>
+<p>I just verified that using hook_config_info() doesn't remove views on uninstall. It has to be <code>$config-&gt;delete</code> inside hook_uninstall.<br>
+Another unasked question has been answered: using <code>"module": "mymodule",</code> in views json prevents manual deletes and allows to revert views to their initial setup, if they are overridden. (Which is good.)</p>
+
+
+
+<a name="190833588"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190833588" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190833588">(Mar 17 2020 at 11:08)</a>:</h4>
+<blockquote>
+<p>I just verified that using hook_config_info() doesn't remove views on uninstall.</p>
+</blockquote>
+<p>I wonder if it should...?</p>
+
+
+
+<a name="190834096"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190834096" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190834096">(Mar 17 2020 at 11:14)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda (Peter)</span> <a href="#narrow/stream/218635-General/topic/Module-provided.20views/near/190833588" title="#narrow/stream/218635-General/topic/Module-provided.20views/near/190833588">said</a>:</p>
+<blockquote>
+<p>I wonder if it should...?</p>
+</blockquote>
+<p>Interesting question - maybe it makes sense to not delete them automatically and module maintainers take care of it.</p>
+
+
+
+<a name="190834260"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190834260" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190834260">(Mar 17 2020 at 11:16)</a>:</h4>
+<p>Not always. E.g. a module provides a view that lists items it creates (e.g. Mailchimp lists (off the top of my head)). If you uninstall the module, the view has no more use as the data it displays was removed with the module, so the view should go too.</p>
+
+
+
+<a name="190834542"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190834542" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190834542">(Mar 17 2020 at 11:20)</a>:</h4>
+<p>Sure, if a view is useless without its module, the view should get deleted (config-&gt;delete). But is this always the case? I think, Drupal doesn't delete views automatically either. Views can make sense without their modules...</p>
+
+
+
+<a name="190836540"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190836540" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190836540">(Mar 17 2020 at 11:49)</a>:</h4>
+<p>I suppose one option in certain cases would be for a module to unset the <code>"module": "mymodule"</code> line in the view in the uninstall hook, so it's not automatically deleted but <strong>can be</strong> deleted if desired.</p>
+
+
+
+<a name="190836681"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190836681" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190836681">(Mar 17 2020 at 11:51)</a>:</h4>
+<p>That's a good idea. <code>config_clear($config_file, 'module')</code> in hook_uninstall could do the trick.</p>
+
+
+
+<a name="190914710"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module-provided%20views/near/190914710" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module-provided.20views.html#190914710">(Mar 17 2020 at 21:44)</a>:</h4>
+<p>I have modules that create views that could be useful after the module is disabled, I'm thinking that in those cases there might also be a check to see if the view was modified via the views ui; delete it if it is unchanged, unset/clear the connection to the module if it has been modified</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

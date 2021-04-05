@@ -1,0 +1,98 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html">Client Side Date Field Formatter</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="230235591"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230235591" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230235591">(Mar 14 2021 at 12:32)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> How does this module detect timezones? I'm curious if it uses a more reliable method than <a href="https://github.com/backdrop-contrib/timezone_detect">https://github.com/backdrop-contrib/timezone_detect</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/timezone_detect" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/timezone_detect" title="backdrop-contrib/timezone_detect">backdrop-contrib/timezone_detect</a></div><div class="message_embed_description">Auto-detect and set user timezones in Backdrop. Contribute to backdrop-contrib/timezone_detect development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="230235773"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230235773" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230235773">(Mar 14 2021 at 12:34)</a>:</h4>
+<p>No library at all, not timezone handling in any way, super lazy - I let the browser decide.</p>
+<p>That only needs minimal js code: <a href="https://github.com/backdrop-contrib/cs_date_formatter/blob/1.x-1.x/js/cs-date-formatter.js">https://github.com/backdrop-contrib/cs_date_formatter/blob/1.x-1.x/js/cs-date-formatter.js</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/cs_date_formatter/blob/1.x-1.x/js/cs-date-formatter.js" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/cs_date_formatter/blob/1.x-1.x/js/cs-date-formatter.js" title="backdrop-contrib/cs_date_formatter">backdrop-contrib/cs_date_formatter</a></div><div class="message_embed_description">Backdrop CMS module for client side date field rendering - backdrop-contrib/cs_date_formatter</div></div></div>
+
+
+
+<a name="230237921"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230237921" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230237921">(Mar 14 2021 at 13:18)</a>:</h4>
+<p>Thanks, it's on my list to take a look at.</p>
+
+
+
+<a name="230260521"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230260521" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230260521">(Mar 14 2021 at 18:53)</a>:</h4>
+<p>Off topic, but I had someone bring up the issue on Drupal installs where it knows the timezone of the user, but wouldn't default to the timezone of the user... I never noticed it until he pointed it out but it is a curious question. I'm limited on my BD installs so I haven't paid attention if this is the case with BD or not. Might be something to consider fixing as a QoL if it isn't already.</p>
+
+
+
+<a name="230280203"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230280203" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230280203">(Mar 15 2021 at 00:03)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> I do not fully understand what you posted above, but I'm familiar with these 2 issues re timezones:</p>
+<ul>
+<li>There was debate over the auto-detection of the timezone during installation: should the installer default the timezone to whatever is configured on the server where the site is being installed, or the timezone of the browser of the person performing the installation? (think site hosted in the US, but installation and configuration is happening remotely, by a person in Australia)</li>
+<li>After we had enough people register in the main <a href="http://b.org">b.org</a> site, we thought that it'd be a good idea to ask them to add their country/timezone to their user profiles. Most/many people configure that, but because the field does not allow setting "none", if someone skipped setting their timezone, then it would default to Afghanistan or something like that (because alphabetical) ...same thing for user profiles created before we added the timezone/country field. ...we only found that out when we tried to get a count of people registered in <a href="http://b.org">b.org</a> by country/timezone.</li>
+</ul>
+<p>...just some things to be aware or think about.</p>
+
+
+
+<a name="230282920"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230282920" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230282920">(Mar 15 2021 at 00:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> timezone of the server probably makes the most sense? But yes, good topics I didn't think about but make sense now that you mention it.</p>
+<p>My thought is "if we can get it so 40% of the people don't have to change it, it's better than 99% having to change it."</p>
+<p>Guess more feedback from people would be warranted or additional data collection.</p>
+<p>Thanks for pointing out the problems with the idea.</p>
+
+
+
+<a name="230283429"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230283429" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230283429">(Mar 15 2021 at 01:07)</a>:</h4>
+<blockquote>
+<p>...timezone of the server probably makes the most sense?</p>
+</blockquote>
+<p>Until what happens is that the server hosting the site is in the US, whereas the business (hence visitors/audience) is either global or say Africa, and the person installing Backdrop is in EU <span aria-label="crazy" class="emoji emoji-1f61c" role="img" title="crazy">:crazy:</span></p>
+
+
+
+<a name="230283520"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230283520" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230283520">(Mar 15 2021 at 01:09)</a>:</h4>
+<p>A lot of servers have their timezone set to UTC, regardless of where they're located.</p>
+
+
+
+<a name="230283572"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230283572" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230283572">(Mar 15 2021 at 01:10)</a>:</h4>
+<p>...a more generic issue that happens during installation (and we saw that happening with the email field predominantly) is that the person installing Backdrop sees that form with the site info during the installer as requesting details about them - whereas it is details about the site.</p>
+
+
+
+<a name="230300716"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Client%20Side%20Date%20Field%20Formatter/near/230300716" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Client.20Side.20Date.20Field.20Formatter.html#230300716">(Mar 15 2021 at 06:32)</a>:</h4>
+<blockquote>
+<p>A lot of servers have their timezone set to UTC</p>
+</blockquote>
+<p>Maybe some even run on Stardate (lookup Wikipedia) and never have any problems with timezone or date formats <span aria-label="rofl" class="emoji emoji-1f923" role="img" title="rofl">:rofl:</span> UTC is what comes closest to that.</p>
+<p>No, seriously, if anyone of you finds the new module useful or found that something's missing or broken, I'd be thankful for feedback.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

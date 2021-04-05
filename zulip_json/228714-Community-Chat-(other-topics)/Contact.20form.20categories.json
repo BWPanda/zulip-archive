@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>Is there a way to link to the contact form and to pre-select the category?</p>",
+        "id": 199711607,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591254408
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> I guess, you're looking for the default category setting:</p>\n<p><a href=\"/user_uploads/18319/L61P9VNISUqfSkOEMMiCbhvZ/screenshot-cat-selected.png\">screenshot-cat-selected.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/L61P9VNISUqfSkOEMMiCbhvZ/screenshot-cat-selected.png\" title=\"screenshot-cat-selected.png\"><img src=\"/user_uploads/18319/L61P9VNISUqfSkOEMMiCbhvZ/screenshot-cat-selected.png\"></a></div>",
+        "id": 199711872,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591254644
+    },
+    {
+        "content": "<p>I think <span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> wants to have multiple categories, and link to one that's not the default...</p>",
+        "id": 199711912,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591254717
+    },
+    {
+        "content": "<p>Like the Prepopulate module for D7.</p>",
+        "id": 199711968,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591254755
+    },
+    {
+        "content": "<p>Thanks, but Peter is right - I have six categories and ideal want to set the category depending on the page they clicked from.</p>",
+        "id": 199711981,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591254772
+    },
+    {
+        "content": "<p>The WIP site is <a href=\"https://1sttatts.kgolding.co.uk/\">https://1sttatts.kgolding.co.uk/</a> and I want to link to the contact form for each of the \"Sections\".</p>",
+        "id": 199712166,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591254932
+    },
+    {
+        "content": "<p>I am already using Webform on the site, and I think this supports pre-filling so I'll explore that as an option</p>",
+        "id": 199712690,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591255342
+    },
+    {
+        "content": "<p>I see...<br>\nAs far as I know, there's no simple solution for that in the contact module. Either do some coding (hook_form_alter()), or use webform instead... Or am I missing something?</p>",
+        "id": 199712705,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591255357
+    },
+    {
+        "content": "<p>Looks like Backdrop's Webform doesn't have the \"Allow elements to be populated using query string parameters\" feature - so back to the drawing board.</p>",
+        "id": 199714656,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591257026
+    },
+    {
+        "content": "<p>I suppose I could just create a separate Webform for each section?</p>",
+        "id": 199714666,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591257045
+    },
+    {
+        "content": "<p>The plot thickens... looks like Webform support tokens in the default value using \"[current-page:query:?]\" :)</p>",
+        "id": 199715176,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591257435
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...looks like you'd either need to raise an issue agains the Webform module in <a href=\"https://github.com/backdrop-contrib/webform/issues\">https://github.com/backdrop-contrib/webform/issues</a> or alternatively use <a href=\"https://github.com/backdrop-contrib/prepopulate\">https://github.com/backdrop-contrib/prepopulate</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/webform/issues\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/webform/issues\" title=\"backdrop-contrib/webform\">backdrop-contrib/webform</a></div><div class=\"message_embed_description\">For making surveys and forms in Backdrop. Contribute to backdrop-contrib/webform development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/prepopulate\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/prepopulate\" title=\"backdrop-contrib/prepopulate\">backdrop-contrib/prepopulate</a></div><div class=\"message_embed_description\">Allows fields in most forms to be pre-populated from the $_REQUEST variable. - backdrop-contrib/prepopulate</div></div></div>",
+        "id": 199720363,
+        "sender_full_name": "klonos",
+        "timestamp": 1591260963
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I think I'm going to go for a separate webform for each of the four sections, which will let me add custom fields per section as well.</p>",
+        "id": 199722952,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591262846
+    },
+    {
+        "content": "<p>Yup, Webform is the recommended way if you need more elaborate functionality for your contact forms <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span>  The core Contact module is only for the most simplistic use case.</p>",
+        "id": 199723383,
+        "sender_full_name": "klonos",
+        "timestamp": 1591263166
+    },
+    {
+        "content": "<p>Ha, didn't realise Prepopulate was ported to Backdrop already! <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>",
+        "id": 199725921,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591264975
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> I'm pretty sure Webform does have that feature. It should work the same way it does in Drupal 7</p>",
+        "id": 199783000,
+        "sender_full_name": "Herb",
+        "timestamp": 1591292313
+    },
+    {
+        "content": "<p>If you're having trouble let me know</p>",
+        "id": 199783025,
+        "sender_full_name": "Herb",
+        "timestamp": 1591292324
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Thanks for the offer, but I have sorted it now, and yes webform can have fields preset using tokens in the default values including a query token.</p>",
+        "id": 199802826,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1591301601
+    }
+]

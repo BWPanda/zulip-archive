@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Hey people, I wonder if one of you has seen this before, when running the tests via command line. Am I doing something wrong or can it be related to the cache feature (tests ran fine without it). Or is there a problem in the test classes? <a href=\"/user_uploads/18319/in6WOcTvCvWfjySdlD1rAiWX/key-length.png\" title=\"key-length.png\">key-length.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/in6WOcTvCvWfjySdlD1rAiWX/key-length.png\" title=\"key-length.png\"><img src=\"/user_uploads/18319/in6WOcTvCvWfjySdlD1rAiWX/key-length.png\"></a></div>",
+        "id": 196622397,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1588765934
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>  I have run into this before. I believe it is related to the key length when using a multi-byte character set. The cache system converts all of the tables to MyISAM after the install process in order to save time when copying the tables.</p>",
+        "id": 196665919,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588784944
+    },
+    {
+        "content": "<p>In <code>run-tests.sh</code> you can change <code>$test-&gt;prepareCache();</code> to <code>$test-&gt;prepareCache(TRUE);</code> to stop it from trying to convert the tables.</p>",
+        "id": 196666329,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588785097
+    },
+    {
+        "content": "<p>Leaving the tables as INNODB will make the tests take a lot longer though</p>",
+        "id": 196666373,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588785121
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> sounds plausible. But isn't that a bug then? I ran into this with travisCI and Bionic with mysql 5.7 (without any modifications). Wouldn't that mean that tests with caching on can't ever run on Bionic with mysql?</p>",
+        "id": 196729643,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1588830983
+    }
+]

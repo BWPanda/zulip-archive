@@ -1,0 +1,97 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/User.20registration.20form.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html">User registration form</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="218493414"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218493414" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218493414">(Dec 01 2020 at 22:50)</a>:</h4>
+<p>I've added a user login block to my home page, but I'm struggling to add a user registration form into a page that I can customise - i.e. as a block within a view.</p>
+
+
+
+<a name="218498033"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218498033" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218498033">(Dec 01 2020 at 23:42)</a>:</h4>
+<p><span class="user-mention" data-user-id="307683">@Kevin Golding</span> Sounds like you might need this: <a href="https://github.com/backdrop-contrib/formblock">https://github.com/backdrop-contrib/formblock</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/formblock" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/formblock" title="backdrop-contrib/formblock">backdrop-contrib/formblock</a></div><div class="message_embed_description">Enables the presentation of user registration, site wide contact, or node creation forms in blocks. - backdrop-contrib/formblock</div></div></div>
+
+
+
+<a name="218499782"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218499782" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218499782">(Dec 02 2020 at 00:06)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span>  <span aria-label="congratulations" class="emoji emoji-1f389" role="img" title="congratulations">:congratulations:</span>  That's exactly what I needed - thank you :)</p>
+
+
+
+<a name="218500971"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218500971" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218500971">(Dec 02 2020 at 00:24)</a>:</h4>
+<p>I'm trying to use a custom layout for the /user/** paths, but they always seem to use the default layout. I've tried setting my layout path to <code>user</code> <code>user/%</code> &amp; <code>user/%/%</code> to no avail.</p>
+
+
+
+<a name="218501525"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218501525" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218501525">(Dec 02 2020 at 00:32)</a>:</h4>
+<p>Looks like I need to do the reverse, and use my custom layout specifically for nodes, and leave the default layout alone.</p>
+
+
+
+<a name="218501974"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218501974" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218501974">(Dec 02 2020 at 00:38)</a>:</h4>
+<p><code>user/%</code> should work I would think...</p>
+
+
+
+<a name="218502991"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218502991" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218502991">(Dec 02 2020 at 00:53)</a>:</h4>
+<p>It didn't seem too, also an emailed reset link didn't work.</p>
+
+
+
+<a name="218509615"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218509615" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218509615">(Dec 02 2020 at 02:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="307683">@Kevin Golding</span> I may be asking a dumb question, but did you set the condition on the custom layout path to only show user info?</p>
+<p>For example, setting node/% still uses the default layout until I set a condition for the content types that will use the custom layout.</p>
+<p>Disclaimer: I'm new to BD also, so anyone who has more experienced is welcome to correct me.</p>
+
+
+
+<a name="218510718"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218510718" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218510718">(Dec 02 2020 at 03:12)</a>:</h4>
+<p><span class="user-mention" data-user-id="307683">@Kevin Golding</span> I just tested this and I noticed that I needed to enter a Layout name and select a template first, then I could enter <code>user/%</code> and it automatically created the appropriate context: <a href="/user_uploads/18319/QeMxeZ-2nZwyRymFT4-b-TzN/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/QeMxeZ-2nZwyRymFT4-b-TzN/image.png" title="image.png"><img src="/user_uploads/18319/QeMxeZ-2nZwyRymFT4-b-TzN/image.png"></a></div>
+
+
+
+<a name="218511367"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218511367" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218511367">(Dec 02 2020 at 03:21)</a>:</h4>
+<p>The caveat I think is that this won't work for login and registration pages. Only user accounts</p>
+
+
+
+<a name="218523943"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218523943" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218523943">(Dec 02 2020 at 07:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> <span class="user-mention" data-user-id="256607">@BWPanda</span> Thanks for the pointers, I've settled on using the default layout and am using <code>node/%</code> for my custom layout, and I'll clone it for <code>tags/%</code>'s etc as needed. I think I was trying to be too clever overriding the default layout :)</p>
+
+
+
+<a name="218527906"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/User%20registration%20form/near/218527906" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/User.20registration.20form.html#218527906">(Dec 02 2020 at 08:45)</a>:</h4>
+<p>Could this be related to <a href="https://github.com/backdrop/backdrop-issues/issues/4029">https://github.com/backdrop/backdrop-issues/issues/4029</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4029" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4029" title="[UX][D7] Add a 'User: compare' visibility rule · Issue #4029 · backdrop/backdrop-issues">[UX][D7] Add a 'User: compare' visibility rule · Issue #4029 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need In Drupal 7 / Panels you could choose to show or hide a content pane based on whether a User context was equal to the logged in User context. This panels access plugin allow...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

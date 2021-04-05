@@ -1,0 +1,96 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html">Guidelines on alpha/beta/release versioning of modules?</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="227044285"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227044285" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227044285">(Feb 19 2021 at 23:11)</a>:</h4>
+<p>I was wondering if there were any Backdrop guidelines for when to call a release alpha or beta or rc versus a full release number?</p>
+<p>For the modules I've ported, I gave them all alpha versions to begin with, e.g., 1.x-1.0.alpha1, etc., and marked the releases as "prerelease". I'm starting to wonder when it's time to promote some of them to the next level.</p>
+<p>I suspect that for people considering Backdrop and looking for whether their pet contrib modules have been ported, a sea of yellow in the Backdrop Upgrade Status module list might be a bit off-putting. So modules probably shouldn't stay prerelease any longer than appropriate; I'm just wondering what's appropriate?</p>
+<p>Any pointers where such guidance is documented would be great. I know that "Tagging for release" on <a href="https://docs.backdropcms.org/converting-modules-from-drupal">Converting Modules from Drupal</a> discusses the semantic versioning of modules; perhaps a few words about alpha/beta/rc/etc. there might be helpful?</p>
+
+
+
+<a name="227046870"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227046870" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227046870">(Feb 19 2021 at 23:39)</a>:</h4>
+<p>Good question</p>
+
+
+
+<a name="227048581"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227048581" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227048581">(Feb 19 2021 at 23:59)</a>:</h4>
+<p>I'd suggest that it's up to the individual maintainer based on what they think is appropriate for that project. I don't think there is/should be any overall requirements for this (I.e. what works for one project might not work for another).</p>
+
+
+
+<a name="227048847"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227048847" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227048847">(Feb 20 2021 at 00:02)</a>:</h4>
+<p>I wasn't so much looking for _requirements_ as for guidelines/best practices/advice. I'd like to strive for as common an approach as possible.</p>
+
+
+
+<a name="227050242"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227050242" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227050242">(Feb 20 2021 at 00:21)</a>:</h4>
+<p>I don't think there are any guidelines or best practices on that. As <span class="user-mention" data-user-id="256607">@BWPanda</span> said, it's really up to the maintainer. If you're still in full dev mode, I wouldn't promote up, but once you get it to a point where you're not making a bunch of changes, tag it and wait a few weeks to see if anyone comes up with anything. If nothing major is found, move it up to the next level. There will always be bugs, so waiting for a release with no bugs means the module will never reach 1.0 status.</p>
+
+
+
+<a name="227061306"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227061306" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227061306">(Feb 20 2021 at 03:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="335929">@bugfolder</span> do you know if marking them prerelease in GitHub will still trigger making the release node on <a href="http://backdropcms.org">backdropcms.org</a>? I've never tried it. I suggest though just making it an actual release even if it's an alpha</p>
+
+
+
+<a name="227061435"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227061435" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227061435">(Feb 20 2021 at 03:25)</a>:</h4>
+<p>I tend to rarely make alpha or beta. Mostly because of the versioning works now. 1.x-1.0.0 suggests to me that it might have bugs. Once it's something like 1.x-1.0.2 it means some bugs have been fixed</p>
+
+
+
+<a name="227061493"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227061493" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227061493">(Feb 20 2021 at 03:26)</a>:</h4>
+<p>If it's really not working well I may just not create any release in GitHub.</p>
+
+
+
+<a name="227061536"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227061536" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227061536">(Feb 20 2021 at 03:27)</a>:</h4>
+<p>Though I'm not against ever making alpha releases</p>
+
+
+
+<a name="227061762"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227061762" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227061762">(Feb 20 2021 at 03:31)</a>:</h4>
+<p>I think I'm just a bit allergic to alpha and beta because there are so many projects on <a href="http://drupal.org">drupal.org</a> that never seem to leave beta even though they've been stable for years and years</p>
+<div class="message_embed"><a class="message_embed_image" href="http://drupal.org" style="background-image: url(https://www.drupal.org/sites/all/themes/bluecheese/images/og.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="http://drupal.org" title="Drupal - Open Source CMS">Drupal - Open Source CMS</a></div><div class="message_embed_description">Drupal - the leading open-source CMS for ambitious digital experiences that reach your audience across multiple channels. Because we all have different needs, Drupal allows you to create a unique space in a world of cookie-cutter solutions.</div></div></div>
+
+
+
+<a name="227069712"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227069712" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227069712">(Feb 20 2021 at 05:59)</a>:</h4>
+<p>For me 1.x-1.0.1 is good for first public release. Bugfix? 1.x-1.0.2 etc., but not perpetual alpha/beta/RC as <span class="user-mention" data-user-id="256705">@Herb</span>  mentioned.</p>
+
+
+
+<a name="227075206"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Guidelines%20on%20alpha/beta/release%20versioning%20of%20modules%3F/near/227075206" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Guidelines.20on.20alpha.2Fbeta.2Frelease.20versioning.20of.20modules.3F.html#227075206">(Feb 20 2021 at 07:58)</a>:</h4>
+<p>And 1.x-1.0.0 - for internal/dev testing.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

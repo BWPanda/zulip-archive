@@ -1,0 +1,170 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html">setting up b.org locally</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="211515336"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211515336" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211515336">(Sep 28 2020 at 16:27)</a>:</h4>
+<p>Been a while since I last set up <a href="http://b.org">b.org</a> on my local. Thank you <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> for setting up the .lando file and commiting it in the repo. It made things easier. ...still the process of setting up <a href="http://b.org">b.org</a> on my local needed a bit of fiddling around <span aria-label="sweat" class="emoji emoji-1f613" role="img" title="sweat">:sweat:</span> ...for those of you that are working with <a href="http://b.org">b.org</a> on your local and using lando, do you get 404s when trying to access the <code>/modules</code>, <code>/themes</code>, <code>/layouts</code> pages (not the admin pages - the public-facing ones). Nothing is logged in dblog <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span></p>
+
+
+
+<a name="211515356"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211515356" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211515356">(Sep 28 2020 at 16:27)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> have you had this 404 issue before? ^^</p>
+
+
+
+<a name="211516024"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211516024" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211516024">(Sep 28 2020 at 16:32)</a>:</h4>
+<p>(<code>/add-ons</code> works fine by the way)</p>
+
+
+
+<a name="211548097"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211548097" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211548097">(Sep 28 2020 at 20:46)</a>:</h4>
+<p>Haven't tried <a href="http://B.org">B.org</a> for a while, been working a lot on API. But don't recall any issues when I did... Can try later for you.</p>
+
+
+
+<a name="211561600"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211561600" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211561600">(Sep 28 2020 at 23:02)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> Testing <a href="http://B.org">B.org</a> lando setup now</p>
+
+
+
+<a name="211566355"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211566355" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211566355">(Sep 29 2020 at 00:03)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> Works for me. I'd suggest destroying your instance and starting again (assuming you've had it running for a while with different branches, PRs, etc.). That's what I did.</p>
+
+
+
+<a name="211566616"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211566616" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211566616">(Sep 29 2020 at 00:07)</a>:</h4>
+<p>In any case, let me know when you're online and I can try to help you debug.</p>
+
+
+
+<a name="211567180"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211567180" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211567180">(Sep 29 2020 at 00:15)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256607">@BWPanda</span> ...I'm working at the moment, but it was the first time I've used lando to set <a href="http://b.org">b.org</a> on my local ...I'll try destroying and rebuilding and will let you know if that fixes things.</p>
+
+
+
+<a name="211567279"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211567279" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211567279">(Sep 29 2020 at 00:17)</a>:</h4>
+<p>Well destroying won't do anything if you've only just set it up for the first time... Here's a list of things to make sure you do:</p>
+<ul>
+<li>Clone repo (your fork or the main one, just make sure it's up-to-date)</li>
+<li>Setup your <code>.env</code> file (for accessing <a href="http://sanitize.backdropcms.org">sanitize.backdropcms.org</a>)</li>
+<li>Start Lando</li>
+<li>Run <code>lando pulldb</code> to get the latest DB</li>
+<li>Run <code>lando php scripts/lp-pull.php --files</code> to get the latest files</li>
+<li>Manually unzip and move them to the first place (I aim to automate this a bit more, see <a href="https://github.com/backdrop-ops/api.backdropcms.org/issues/91">https://github.com/backdrop-ops/api.backdropcms.org/issues/91</a>)</li>
+<li>You might need to add the Lando URL to settings.php for the 'trusted_host_patterns' thing</li>
+<li>Copy all <code>live-active</code> config to <code>staging</code> and <code>dev-active</code> (normally you'd run <code>drush bcim</code> to update <code>dev-active</code>, but I couldn't run that because it was empty and wouldn't work until I did it manually first)</li>
+<li>Access site and make sure everything works (on the <code>main</code> branch)</li>
+<li>Switch to issue branch</li>
+<li>Run <code>lando drush bcim</code> to import issue-specific config</li>
+<li>Run <code>lando drush cc all</code> just for the heck of it</li>
+<li>Make sure issue-branch works as expected</li>
+</ul>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/api.backdropcms.org/issues/91" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/api.backdropcms.org/issues/91" title="Add Lando tooling to allow pulling the latest DB/files · Issue #91 · backdrop-ops/api.backdropcms.org">Add Lando tooling to allow pulling the latest DB/files · Issue #91 · backdrop-ops/api.backdropcms.org</a></div><div class="message_embed_description">I'd like to do the same here as we did in backdrop-ops/backdropcms.org#678 - adding a Lando command for pulling in and setting up the latest API website DB/files.</div></div></div>
+
+
+
+<a name="211578891"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211578891" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211578891">(Sep 29 2020 at 04:03)</a>:</h4>
+<p>Is this documented somewhere? If not, should it be?</p>
+
+
+
+<a name="211578946"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211578946" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211578946">(Sep 29 2020 at 04:04)</a>:</h4>
+<p>Looks like the wiki is disabled on <a href="https://github.com/backdrop-ops/api.backdropcms.org">https://github.com/backdrop-ops/api.backdropcms.org</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/api.backdropcms.org" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/api.backdropcms.org" title="backdrop-ops/api.backdropcms.org">backdrop-ops/api.backdropcms.org</a></div><div class="message_embed_description">API website for displaying Backdrop CMS source code and developer documentation. - backdrop-ops/api.backdropcms.org</div></div></div>
+
+
+
+<a name="211586189"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586189" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586189">(Sep 29 2020 at 06:52)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256607">@BWPanda</span> ...I've done all the above, with these exceptions:</p>
+<ul>
+<li>I've manually downloaded and extracted the files in the <code>/files</code> directory</li>
+<li>I've copied config from <code>live-active</code> into <code>dev-active</code> BUT did not copy them into <code>staging</code>. Is that required? (and if so, then why?)</li>
+<li>I did not switch to the branch that I needed to test - I was working off of the <code>main</code> branch</li>
+<li>Did NOT run <code>lando drush bcim</code> (even after running it, I got "There are no configuration changes to import." - as expected of course)<br>
+...I've tried <code>lando drush cc all</code> a couple of times, but that did NOT make any difference.</li>
+</ul>
+
+
+
+<a name="211586215"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586215" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586215">(Sep 29 2020 at 06:53)</a>:</h4>
+<p>And still getting weird messages on some pages?</p>
+
+
+
+<a name="211586349"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586349" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586349">(Sep 29 2020 at 06:55)</a>:</h4>
+<p>All other pages I've test work fine ...it's just those 3 pages that have the issue ...and it's not a "weird" issue per se; just a "404 page not found"</p>
+
+
+
+<a name="211586412"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586412" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586412">(Sep 29 2020 at 06:56)</a>:</h4>
+<p>Are you trying as anonymous or logged in?</p>
+
+
+
+<a name="211586414"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586414" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586414">(Sep 29 2020 at 06:56)</a>:</h4>
+<p>...these pages are provided by the "Project listings" view, which is enabled</p>
+
+
+
+<a name="211586417"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586417" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586417">(Sep 29 2020 at 06:56)</a>:</h4>
+<p>BTW, I use <code>drush uli</code> to login as user 1</p>
+
+
+
+<a name="211586443"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586443" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586443">(Sep 29 2020 at 06:57)</a>:</h4>
+<p>Yup, I use the same ...I've tested as user1, as <code>klonos</code> (after resetting my password), and in incognito as anonymous.</p>
+
+
+
+<a name="211586622"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586622" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586622">(Sep 29 2020 at 07:00)</a>:</h4>
+<p>Hmm, curious. I'm assuming it's not DB related since the page is a view and that's in config... Also assuming it's not Lando-related. Care to zip up your site and share it with me? I'll see if I can replicate.</p>
+
+
+
+<a name="211586624"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586624" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586624">(Sep 29 2020 at 07:00)</a>:</h4>
+<p>Dinner now, back in a few hours.</p>
+
+
+
+<a name="211586671"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/setting%20up%20b.org%20locally/near/211586671" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/setting.20up.20b.2Eorg.20locally.html#211586671">(Sep 29 2020 at 07:01)</a>:</h4>
+<p>Enjoy dinner <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span> ...I'll dig deeper and then will share my setup if I'm still stuck. Thanks for offering to help <span class="user-mention" data-user-id="256607">@BWPanda</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

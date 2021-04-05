@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Does anyone know if it is possible to change which PHP versions are used for the tests on a single issue?</p>",
+        "id": 189506580,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1583165702
+    },
+    {
+        "content": "<p>AFAIK all PRs are tested against the same php5 and php7 versions - no way to specify php version.</p>",
+        "id": 189506755,
+        "sender_full_name": "klonos",
+        "timestamp": 1583165767
+    },
+    {
+        "content": "<p>hmm, can we add a new version to the list of tests to run?</p>",
+        "id": 189506850,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1583165825
+    },
+    {
+        "content": "<p>I want to try running the test bot on 7.4 so I can properly test if I got all of the places I need to change things for <a href=\"https://github.com/backdrop/backdrop-issues/issues/4308\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/4308\">https://github.com/backdrop/backdrop-issues/issues/4308</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4308\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4308\" target=\"_blank\" title=\"PHP 7.4: Notice: Trying to access array offset on value of type &lt;int, null&gt; · Issue #4308 · backdrop/backdrop-issues\">PHP 7.4: Notice: Trying to access array offset on value of type &lt;int, null&gt; · Issue #4308 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug There are a few places where we check the first character of a string or int using the array access syntax. As of PHP 7.4 this now gives an error notice. We should convert ea...</div></div></div>",
+        "id": 189506900,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1583165866
+    },
+    {
+        "content": "<p>I think that we had a ticket somewhere for bumping php7 to 7.2/7.3 ...perhaps we just discussed it during a dev meeting though.</p>",
+        "id": 189507019,
+        "sender_full_name": "klonos",
+        "timestamp": 1583165933
+    },
+    {
+        "content": "<p>I would ping Gor about it.</p>",
+        "id": 189507076,
+        "sender_full_name": "klonos",
+        "timestamp": 1583165975
+    },
+    {
+        "content": "<p>(sounds like a ZenCI thing)</p>",
+        "id": 189507100,
+        "sender_full_name": "klonos",
+        "timestamp": 1583165993
+    },
+    {
+        "content": "<p>I pinged him on Gitter since it doesn't look like he is on Zulip yet.</p>",
+        "id": 189507398,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1583166147
+    },
+    {
+        "content": "<p>Looks like PHP versions are set here: <a href=\"https://github.com/backdrop-ops/backdropcms.org/blob/master/www/modules/custom/borg_qa/gitlc.yml\" target=\"_blank\" title=\"https://github.com/backdrop-ops/backdropcms.org/blob/master/www/modules/custom/borg_qa/gitlc.yml\">https://github.com/backdrop-ops/backdropcms.org/blob/master/www/modules/custom/borg_qa/gitlc.yml</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/blob/master/www/modules/custom/borg_qa/gitlc.yml\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/blob/master/www/modules/custom/borg_qa/gitlc.yml\" target=\"_blank\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 189508121,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1583166569
+    }
+]

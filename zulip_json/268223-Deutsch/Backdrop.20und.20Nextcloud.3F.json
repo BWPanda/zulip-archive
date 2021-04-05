@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Hallo,<br>\nhat jemand eine Idee, wie man eine Backdrop-Seite per SSO in eine Nextcloud-Installation integrieren kann?</p>",
+        "id": 219646852,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1607713086
+    },
+    {
+        "content": "<p>Die Frage habe ich noch nicht so ganz verstanden. Nur, dass es wohl um Single-Sign-On geht. Nicht gerade mein Spezialgebiet... Trotzdem mal nachgefragt: Sollen die Backdrop-Benutzerkonten aus den Nextcloud-Usern generiert werden. Oder umgekehrt? Oder kommen die Nutzerdaten von ganz woanders her? Mit Nextcloud kennt sich, glaube ich, <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> gut aus.</p>",
+        "id": 219666646,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607723266
+    },
+    {
+        "content": "<p>Ich möchte gern ein Intranet (Backdrop) in Verbindung mit Nextcloud verwenden. Die User sollen im Intranet gepflegt werden und auf die Nextcloud entsprechend ihrer Gruppenrechte zugreifen können. Das wäre so meine Idealvorstellung...</p>",
+        "id": 219669701,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1607725221
+    },
+    {
+        "content": "<p>Dann scheint mir das eher eine Frage für Nextcloud-Expert/innen zu sein. Dazu gehöre ich leider gar nicht.</p>",
+        "id": 219670718,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607726032
+    },
+    {
+        "content": "<p>Interessante Frage. Soweit ich weiß, ist das einzige bisher verfügbare SSO Modul für Backdrop simple_ldap. Es wäre also ein weiterer Dienst nötig, der LDAP und damit SSO zur Verfügung  stellt. Für Drupal gibt es u.a. SAML Module, dann würdest du zusätzlich einen IdP (Identity Provider, Shibboleth) brauchen. Nextcloud kann LDAP und SAML. Ich kenne LDAP + Nextcloud (nicht selbst aufgesetzt) oder SAML + Drupal. Bin aber keine SSO Expertin.</p>",
+        "id": 219701104,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1607767618
+    },
+    {
+        "content": "<p>Hm. Es gibt für Nextcloud noch \"User and Group SSL Backend\". Das kann aber irgendwie nicht auf die Drupal-Datenbank zugreifen.</p>",
+        "id": 219704910,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1607773748
+    },
+    {
+        "content": "<p>bzw. Backdrop-DB</p>",
+        "id": 219704912,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1607773754
+    },
+    {
+        "content": "<p>Hab beides mal getestet</p>",
+        "id": 219704913,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1607773758
+    }
+]

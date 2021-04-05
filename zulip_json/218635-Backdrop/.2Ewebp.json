@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>Anyone interested in <code>.webp</code> support?<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4509\">https://github.com/backdrop/backdrop-issues/issues/4509</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4509\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4509\" title=\"Add webp support · Issue #4509 · backdrop/backdrop-issues\">Add webp support · Issue #4509 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need A common &quot;Opportunity&quot; listed in Google PageSpeed insights is to &quot;Serve images in next-gen formats.&quot; Backdrop does not currently support any next-gen for...</div></div></div>",
+        "id": 205477584,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596115382
+    },
+    {
+        "content": "<p>This, as well as native support of animated gif, and svg come up every once in a while from digital agencies. It'd be nice to have, but we'd need to make them work with image styles (and there are security concerns with .svg)</p>",
+        "id": 205478405,
+        "sender_full_name": "klonos",
+        "timestamp": 1596115854
+    },
+    {
+        "content": "<p>Hm. Does gd support .webp anyway? It's not just a thing of \"add an extension in a list\". I know that imagemagick handles .webp well, but never heard anything regarding gd. Animated gif and svg are a different issue.</p>",
+        "id": 205479975,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1596116737
+    },
+    {
+        "content": "<p>Ah, OK, gd <em>can</em> support .webp, but it's not necessarily enabled and depends on the php version.</p>",
+        "id": 205480955,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1596117279
+    }
+]

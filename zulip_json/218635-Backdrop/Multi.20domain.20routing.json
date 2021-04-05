@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>Is there presently a domain routing solution from within Backdrop for websites that have sections that certain domains should resolve to, rather than all going to the home page? I am not referring to multisite - just multiple domain mapping.</p>",
+        "id": 218785584,
+        "sender_full_name": "Eliza Olivares",
+        "timestamp": 1607049546
+    },
+    {
+        "content": "<p>If a solution exists for Drupal 7 it's plausible it could be ported to Backdrop</p>",
+        "id": 218792631,
+        "sender_full_name": "Herb",
+        "timestamp": 1607055274
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"279853\">@Eliza Olivares</span> - I think you are looking for the equivalent of Domain Access Module for Drupal?</p>\n<p>Domain Access module allows you to configure multiple domains to a single Drupal site and then select which nodes are used on which domain. It's a very powerful module and I have used it extensively for Drupal 7, but I have not yet found a similar solution for Backdrop CMS. </p>\n<p><a href=\"https://forum.backdropcms.org/forum/domain-access-equivalent\">https://forum.backdropcms.org/forum/domain-access-equivalent</a></p>",
+        "id": 218792737,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1607055453
+    },
+    {
+        "content": "<p>Here is a link to the port request. You might want to comment there if you are interested in this module.<br>\n<a href=\"https://github.com/backdrop-ops/contrib/issues/400\">https://github.com/backdrop-ops/contrib/issues/400</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/400\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/400\" title=\"Port request for Domain Access · Issue #400 · backdrop-ops/contrib\">Port request for Domain Access · Issue #400 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Name of the module, theme, or layout Domain Access Link to the drupal.org module, theme, or layout https://www.drupal.org/project/domain (Optional) Link to an issue in the drupal.org queue asking t...</div></div></div>",
+        "id": 218792850,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1607055596
+    },
+    {
+        "content": "<p><span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> One day I'll have time to work on all the module ports on my list.</p>\n<p>Palante Technology Cooperative is down to pay bounties on functional module ports, if anyone is doing bounty work on here.</p>",
+        "id": 218795825,
+        "sender_full_name": "Eliza Olivares",
+        "timestamp": 1607059871
+    },
+    {
+        "content": "<p>I'm sure some people are. I'd go for it but I'm quite busy</p>",
+        "id": 218796168,
+        "sender_full_name": "Herb",
+        "timestamp": 1607060327
+    }
+]

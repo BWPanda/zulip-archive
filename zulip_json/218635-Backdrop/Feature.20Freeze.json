@@ -1,0 +1,746 @@
+[
+    {
+        "content": "<p>Tomorrow (Sept 1) is Feature Freeze. What are the features we're still trying to get in (if any)?<br>\nWhat can I help with?</p>",
+        "id": 208640048,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598929125
+    },
+    {
+        "content": "<p>I'm guessing these: <a href=\"https://github.com/backdrop/backdrop-issues/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.17.0\">https://github.com/backdrop/backdrop-issues/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.17.0</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.17.0\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.17.0\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 208640143,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598929285
+    },
+    {
+        "content": "<p>Password constraints issue may be close. I think it needs more eyes on it. #-4265</p>",
+        "id": 208640300,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598929464
+    },
+    {
+        "content": "<p>Oh, Lazy Loading is RTBC.</p>",
+        "id": 208640384,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598929572
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> - I think that sandboxes are usually update automatically with a new commit, aren't they? <br>\nMaybe it depends upon the nature of the changes. I don't usually do anything manual to update sandboxes after I push new code (I'm usually pushing pretty simple code). </p>\n<p>I suppose it would be different if the change does anything during install process.</p>",
+        "id": 208646684,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598938814
+    },
+    {
+        "content": "<p>Yeah, I'm not actually sure. I just assumed that was the case, but I guess it wouldn't make much sense to have to refresh the sandbox manually after each commit...</p>",
+        "id": 208646706,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598938868
+    },
+    {
+        "content": "<p>Maybe it's already too late, but we could get <a href=\"https://github.com/backdrop/backdrop-issues/issues/4509\">webp support</a> in. But no need to rush, 1.18 is fine, too.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4509\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4509\" title=\"Add webp support · Issue #4509 · backdrop/backdrop-issues\">Add webp support · Issue #4509 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need A common &quot;Opportunity&quot; listed in Google PageSpeed insights is to &quot;Serve images in next-gen formats.&quot; Backdrop does not currently support any next-gen for...</div></div></div>",
+        "id": 208678390,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598962493
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> it could probably be 1.16.3 too</p>",
+        "id": 208686204,
+        "sender_full_name": "Herb",
+        "timestamp": 1598966844
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4558\">https://github.com/backdrop/backdrop-issues/issues/4558</a><br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4265\">https://github.com/backdrop/backdrop-issues/issues/4265</a></p>\n<p>These are the two issues I'm watching closely today to see if they might still get into 1.17.0. Both could use some eyes on them today.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4558\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4558\" title=\"[UX] Allow *all* blocks to have an admin label · Issue #4558 · backdrop/backdrop-issues\">[UX] Allow *all* blocks to have an admin label · Issue #4558 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need If you create a custom block in a layout, but you don&#39;t want it to be reusable, there&#39;s no way to give that block an admin label that&#39;s not displayed on the fron...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4265\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4265\" title=\"[SR] Enforce some basic password constraints: no username, no email · Issue #4265 · backdrop/backdrop-issues\">[SR] Enforce some basic password constraints: no username, no email · Issue #4265 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Currently Backdrop (and D7) allow anything to be entered in the password. I think that&#39;s okay for the most part (contrib modules like Password Policy (d7-only?) can prov...</div></div></div>",
+        "id": 208729760,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598985798
+    },
+    {
+        "content": "<p>I would like to get this small change in if possible please: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4584\">https://github.com/backdrop/backdrop-issues/issues/4584</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4584\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4584\" title=\"Add a [node:author:link] token · Issue #4584 · backdrop/backdrop-issues\">Add a [node:author:link] token · Issue #4584 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is basically the same as the following Token 7.x issues: https://www.drupal.org/project/token/issues/1176592 I&#39;m working on D7 Submitted By module and found that there is no way to have a ...</div></div></div>",
+        "id": 208756374,
+        "sender_full_name": "klonos",
+        "timestamp": 1598998821
+    },
+    {
+        "content": "<p>...just 6 lines of code <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 208756418,
+        "sender_full_name": "klonos",
+        "timestamp": 1598998862
+    },
+    {
+        "content": "<p>@klonos - I gave it the milestone candidate tag. Not sure I feel comfortable marking it RTBC, despite how simple the code looks.</p>",
+        "id": 208757539,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598999611
+    },
+    {
+        "content": "<p>To be added to the milestone, I think it either needs an advocate or to be RTBC.</p>",
+        "id": 208757674,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598999670
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ++</p>",
+        "id": 208760667,
+        "sender_full_name": "klonos",
+        "timestamp": 1599001926
+    },
+    {
+        "content": "<p><strong>stpaultim</strong> go team. (Karma: 24)</p>",
+        "id": 208760668,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1599001926
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ?? perhaps you can have a look (pweeeese <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> )</p>",
+        "id": 208760685,
+        "sender_full_name": "klonos",
+        "timestamp": 1599001948
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> recheck on <a href=\"https://github.com/backdrop/backdrop-issues/issues/4558\">https://github.com/backdrop/backdrop-issues/issues/4558</a> please?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4558\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4558\" title=\"[UX] Allow *all* blocks to have an admin label · Issue #4558 · backdrop/backdrop-issues\">[UX] Allow *all* blocks to have an admin label · Issue #4558 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need If you create a custom block in a layout, but you don&#39;t want it to be reusable, there&#39;s no way to give that block an admin label that&#39;s not displayed on the fron...</div></div></div>",
+        "id": 208762321,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599003259
+    },
+    {
+        "content": "<p>Also needs a milestone label. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 208764900,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599005409
+    },
+    {
+        "content": "<p>It already has a label <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ...just not a milestone set.</p>",
+        "id": 208765448,
+        "sender_full_name": "klonos",
+        "timestamp": 1599005887
+    },
+    {
+        "content": "<p>...I'm testing/reviewing now.</p>",
+        "id": 208765461,
+        "sender_full_name": "klonos",
+        "timestamp": 1599005899
+    },
+    {
+        "content": "<p>RTBC <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...we can tweak further in the next couple of weeks if needed.</p>",
+        "id": 208768805,
+        "sender_full_name": "klonos",
+        "timestamp": 1599009100
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ++</p>",
+        "id": 208768810,
+        "sender_full_name": "klonos",
+        "timestamp": 1599009106
+    },
+    {
+        "content": "<p><strong>docwilmot</strong> leveled up! (Karma: 9)</p>",
+        "id": 208768811,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1599009106
+    },
+    {
+        "content": "<p>...I've run out of juice for now (I should be working). GTG</p>",
+        "id": 208768901,
+        "sender_full_name": "klonos",
+        "timestamp": 1599009161
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> I was pushing up tests while you were typing you needed tests. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 208771773,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599012038
+    },
+    {
+        "content": "<p>Now it'll just look like you're really, really fast <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 208771802,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1599012072
+    },
+    {
+        "content": "<p><span aria-label=\"rocket\" class=\"emoji emoji-1f680\" role=\"img\" title=\"rocket\">:rocket:</span></p>",
+        "id": 208771818,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599012102
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Can you give the thumbs-up to my fixing the tests in <a href=\"https://github.com/backdrop/backdrop-issues/issues/706\">https://github.com/backdrop/backdrop-issues/issues/706</a>?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/706\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/706\" title=\"Use .htaccess for securing config directory · Issue #706 · backdrop/backdrop-issues\">Use .htaccess for securing config directory · Issue #706 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Currently, the config directory is &#39;secured&#39; by appending a hash string to the dir path. This has caused some issues when changing database credentials, etc., and could be improved. I sugge...</div></div></div>",
+        "id": 208772140,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1599012439
+    },
+    {
+        "content": "<p>sure, running more tests now...</p>",
+        "id": 208772152,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599012459
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I am still around. Will test now.</p>",
+        "id": 208772953,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599013300
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> reject weak seems to be not working...  but if you could test min length on it's own that would be great :) I'll push an update when you are done (don't want to break your sandbox)</p>",
+        "id": 208773139,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599013487
+    },
+    {
+        "content": "<p>ok</p>",
+        "id": 208773150,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599013497
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> yes, min length seems to work</p>",
+        "id": 208773483,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599013914
+    },
+    {
+        "content": "<p>ok, pushing this change.</p>",
+        "id": 208773530,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599013937
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - Seems to be working for me.</p>",
+        "id": 208774268,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599014919
+    },
+    {
+        "content": "<p>I've got 2 tests failing locally - though not in Zen. trying to figure out why</p>",
+        "id": 208774290,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599014987
+    },
+    {
+        "content": "<p>bingo</p>",
+        "id": 208774378,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599015116
+    },
+    {
+        "content": "<p>I wonder if we have enough agreement on Password issue?</p>",
+        "id": 208774626,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599015480
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> looks like no: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4265\">https://github.com/backdrop/backdrop-issues/issues/4265</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4265\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4265\" title=\"[SR] Enforce some basic password constraints: no username, no email · Issue #4265 · backdrop/backdrop-issues\">[SR] Enforce some basic password constraints: no username, no email · Issue #4265 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Currently Backdrop (and D7) allow anything to be entered in the password. I think that&#39;s okay for the most part (contrib modules like Password Policy (d7-only?) can prov...</div></div></div>",
+        "id": 208775396,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599016600
+    },
+    {
+        "content": "<p>Makes sense to me</p>",
+        "id": 208775461,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599016686
+    },
+    {
+        "content": "<p>To put this off until later.</p>",
+        "id": 208775468,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599016698
+    },
+    {
+        "content": "<p>off to bed now sorry. good luck with the rest.</p>",
+        "id": 208775591,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599016857
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> are you still here?</p>",
+        "id": 208778437,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599020816
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> how can I help you?</p>",
+        "id": 208778441,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599020823
+    },
+    {
+        "content": "<p>We both mentioned that we thought this might be close enough without the password length bit... so I'm seeing what that might look like here: <a href=\"https://github.com/backdrop/backdrop/pull/3282\">https://github.com/backdrop/backdrop/pull/3282</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3282\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3282\" title=\"4265 password policy simple by jenlampton · Pull Request #3282 · backdrop/backdrop\">4265 password policy simple by jenlampton · Pull Request #3282 · backdrop/backdrop</a></div><div class=\"message_embed_description\">trying a simpler approach</div></div></div>",
+        "id": 208778697,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599021103
+    },
+    {
+        "content": "<p>it may be too late for this today so if you have other rhings to do it's not urgent</p>",
+        "id": 208778704,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599021121
+    },
+    {
+        "content": "<p>I'll take a look.</p>",
+        "id": 208779066,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599021513
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - The indicator doesn't seem to be visible in your last PR.</p>",
+        "id": 208779305,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599021835
+    },
+    {
+        "content": "<p>nevermind, it is working</p>",
+        "id": 208779965,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599022675
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I fixed it. Let's get this one in, we're all on the same page</p>",
+        "id": 208780246,
+        "sender_full_name": "Herb",
+        "timestamp": 1599023029
+    },
+    {
+        "content": "<p>OK, I'm good with this one if you are satisfied with it and still have the possibility to move forward with your ideas in the future (after further discussion).</p>",
+        "id": 208780313,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023091
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I think <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> took a dinner break and will be back soon.</p>",
+        "id": 208780399,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023198
+    },
+    {
+        "content": "<p>I'm going to bed</p>",
+        "id": 208780577,
+        "sender_full_name": "Herb",
+        "timestamp": 1599023417
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - Do we still have a core committer around to look at it?</p>",
+        "id": 208780600,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023451
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> - What do you think?</p>",
+        "id": 208780620,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023487
+    },
+    {
+        "content": "<p>Are there other features still being worked on tonight?</p>",
+        "id": 208780717,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023586
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Are you referring to the password issue? If so, can you please summarise the current status for me to catch me up...?</p>",
+        "id": 208780769,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599023642
+    },
+    {
+        "content": "<p>Yes. 1 minute</p>",
+        "id": 208780806,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023671
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> submitted a revised PR that pulled out the minimum character enforcement. <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> made a small revision and marked it RTBC. It's a VERY simple version of what had been discussed as recently as 3 days ago.</p>",
+        "id": 208780843,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023738
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> has offered to take a look at it again if @herbdool  is in favor</p>",
+        "id": 208780899,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599023781
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I'm seeing 2 failing tests... working on them locally now</p>",
+        "id": 208780925,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599023828
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/9xyrhwH-svSkOhD93vDGnYme/passwords444359.png\">passwords444359.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/9xyrhwH-svSkOhD93vDGnYme/passwords444359.png\" title=\"passwords444359.png\"><img src=\"/user_uploads/18319/9xyrhwH-svSkOhD93vDGnYme/passwords444359.png\"></a></div>",
+        "id": 208780926,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023832
+    },
+    {
+        "content": "<p>OK.</p>",
+        "id": 208780934,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023846
+    },
+    {
+        "content": "<p>Let <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> take a look then. I haven't been following that issue much sorry.</p>",
+        "id": 208780988,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599023886
+    },
+    {
+        "content": "<p>No worries. Are you still working on any issues for 1.17 or is the Password Policy issue the last one</p>",
+        "id": 208781038,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599023949
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> can merge <a href=\"https://github.com/backdrop/backdrop-issues/issues/2162\">https://github.com/backdrop/backdrop-issues/issues/2162</a> and <a href=\"https://github.com/backdrop/backdrop-issues/issues/3846\">https://github.com/backdrop/backdrop-issues/issues/3846</a> if possible. I don't feel I should since I was the one who marked them RTBC.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2162\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2162\" title=\"[UX] Change `Front page` to `Home page` in core · Issue #2162 · backdrop/backdrop-issues\">[UX] Change `Front page` to `Home page` in core · Issue #2162 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">We have a lot of places in core that refer to the home page of the site as a Front page. This is a bit of a drupalism and I would love to see us move to calling it the Home page consistently. That,...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3846\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3846\" title=\"[UX][DX] Update.php throws error about install.php (and says to delete live config) · Issue #3846 · backdrop/backdrop-issues\">[UX][DX] Update.php throws error about install.php (and says to delete live config) · Issue #3846 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;m experiencing some server issue (missing staging directory) that is preventing update.php from running. When this happens, I would expect to see an error message letting me know that my stag...</div></div></div>",
+        "id": 208781152,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599024069
+    },
+    {
+        "content": "<p>And <a href=\"https://github.com/backdrop/backdrop-issues/issues/3595\">https://github.com/backdrop/backdrop-issues/issues/3595</a> looks like it might be good to go, but I haven't looked at it.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3595\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3595\" title=\"[UX] Add a summary text next to the CKEditor formatting options link, showing the active format · Issue #3595 · backdrop/backdrop-issues\">[UX] Add a summary text next to the CKEditor formatting options link, showing the active format · Issue #3595 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Follow-up to #3516 Original issue title: Add summary text for the fieldset that allows selecting a text editor In #3516 we changed the text size and appearance of the Formatting options link below ...</div></div></div>",
+        "id": 208781162,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599024089
+    },
+    {
+        "content": "<p>They're not specifically 1.17.0 issues, but they're all RTBC.</p>",
+        "id": 208781248,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599024172
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/3594\">https://github.com/backdrop/backdrop-issues/issues/3594</a> is the only 1.17.0 issue left</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3594\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3594\" title=\"[D8] Expand image tokens to allow image styles (imagecache_token functionality) · Issue #3594 · backdrop/backdrop-issues\">[D8] Expand image tokens to allow image styles (imagecache_token functionality) · Issue #3594 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need The functionality of Imagecache Token could be merged into the existing token functionality. (It looks like this functionality is merged into token in D8.) This module provi...</div></div></div>",
+        "id": 208781280,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599024223
+    },
+    {
+        "content": "<p>tests fixed :) string change...</p>",
+        "id": 208781283,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599024228
+    },
+    {
+        "content": "<p><em>giddy</em></p>",
+        "id": 208782059,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599025085
+    },
+    {
+        "content": "<p>All this time I thought we were approaching a '<em>code</em> freeze', but it's only a '<em>feature</em> freeze'. I'll try to lower my heart rate now.</p>",
+        "id": 208784306,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599027866
+    },
+    {
+        "content": "<p>(deleted)</p>",
+        "id": 208785668,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599029327
+    },
+    {
+        "content": "<p>Wrong chat channel</p>",
+        "id": 208785707,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599029386
+    },
+    {
+        "content": "<p>Hey folks, we cleared out the 1.17.0 milestone! Big thanks to super-reviewers <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>, <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>, <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span>, <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>,  <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>, <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>, <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>, <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>, and others I've probably missed! We can tidy up the 1.16.x and bug-fix queue a bit more before release. I'll be making a 1.17.0-preview release tomorrow.</p>",
+        "id": 208790897,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1599033594
+    },
+    {
+        "content": "<p>I really wanted to get <a href=\"https://github.com/backdrop/backdrop-issues/issues/4584\">https://github.com/backdrop/backdrop-issues/issues/4584</a> in 1.17.0 <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4584\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4584\" title=\"Add a [node:author:link] token · Issue #4584 · backdrop/backdrop-issues\">Add a [node:author:link] token · Issue #4584 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is basically the same as the following Token 7.x issues: https://www.drupal.org/project/token/issues/1176592 I&#39;m working on D7 Submitted By module and found that there is no way to have a ...</div></div></div>",
+        "id": 208791465,
+        "sender_full_name": "klonos",
+        "timestamp": 1599033973
+    },
+    {
+        "content": "<p>Doh, sorry <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>! Alas maybe it'll be a very early 1.18.0 feature.</p>",
+        "id": 208791716,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1599034116
+    },
+    {
+        "content": "<p>...we were all saying that 1.17.0 was gonna be \"slim\" but ended up with 11 feature issues closed in that milestone <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> ...plus another couple of tasks, and a couple of bug fixes!</p>",
+        "id": 208792009,
+        "sender_full_name": "klonos",
+        "timestamp": 1599034320
+    },
+    {
+        "content": "<p>...if you add the 49 closed issues in 1.16.3, that's a hell of a release. Great teamwork all!</p>",
+        "id": 208792079,
+        "sender_full_name": "klonos",
+        "timestamp": 1599034356
+    },
+    {
+        "content": "<p>For statistics-lovers: 49 closed Issues raise 1.16.3  to be the second in <a href=\"https://github.com/backdrop/backdrop-issues/milestones?direction=desc&amp;sort=count&amp;state=closed\">ranks regarding Issue count</a>. Right after 1.0.0 (109 Issues), followed by 1.5.0 (48 Issues). <span aria-label=\"astonished\" class=\"emoji emoji-1f632\" role=\"img\" title=\"astonished\">:astonished:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/milestones?direction=desc&amp;sort=count&amp;state=closed\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/milestones?direction=desc&amp;sort=count&amp;state=closed\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 208801632,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599040707
+    },
+    {
+        "content": "<p>Yikes, we have a regression... CKEditor is broken on node forms that also have image fields.</p>",
+        "id": 208815588,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599049673
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I wouldn't call it very simple. It's only got one thing less than my pr <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 208852871,
+        "sender_full_name": "Herb",
+        "timestamp": 1599064821
+    },
+    {
+        "content": "<blockquote>\n<p>For statistics-lovers: 49 closed Issues raise 1.16.3 to be the second in ranks regarding Issue count. Right after 1.0.0 (109 Issues), followed by 1.5.0 (48 Issues).</p>\n</blockquote>\n<p>We still have two weeks to get issues into 1.16.3.</p>",
+        "id": 208857622,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599067059
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> - I understand! The small problem I had with your recent PR was totally fixable. Thanks for all your work on this issue. I hope we continue the work.</p>",
+        "id": 208863580,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599069740
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> did you open a 1.16.3 issue about the regression already? <em>checking</em></p>",
+        "id": 208863805,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599069840
+    },
+    {
+        "content": "<p>yep, found it :) <a href=\"https://github.com/backdrop/backdrop-issues/issues/4592\">https://github.com/backdrop/backdrop-issues/issues/4592</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4592\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4592\" title=\"Regression: CKEditor broken after #4527 · Issue #4592 · backdrop/backdrop-issues\">Regression: CKEditor broken after #4527 · Issue #4592 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug On nodes with CKEditor enabled fields and image fields the editor is broken. js error: Uncaught TypeError: Backdrop.editors is undefined The problem seems to be the order of ...</div></div></div>",
+        "id": 208863892,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599069856
+    },
+    {
+        "content": "<p>I've created a checklist for the preview release today: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4593\">https://github.com/backdrop/backdrop-issues/issues/4593</a> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> please let me know if you are interested in taking on any of the release tasks!  I have assigned them all to <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> for now, but that can be changed :)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4593\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4593\" title=\"Backdrop 1.17.0-preview Release checklist · Issue #4593 · backdrop/backdrop-issues\">Backdrop 1.17.0-preview Release checklist · Issue #4593 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Scheduled for September 2nd, 2020 Pre-release tasks Merge commits Create a new minor release milestone Move all unfinished issues to the next minor release milestone Draft Release notes @jenlampton...</div></div></div>",
+        "id": 208865189,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599070524
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I have assigned you two the blog post / roadmap updates / tweet stuff, but if anyone else is interested doing any of those things we love to share the love (and, responsibilities!) Also, if anyone else would like to do release notes, I'm happy give that up :)</p>",
+        "id": 208865360,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599070609
+    },
+    {
+        "content": "<p>I can certainly do the roadmap updates ...possibly the blog post about the 1.17.0 release too.</p>",
+        "id": 208865715,
+        "sender_full_name": "klonos",
+        "timestamp": 1599070759
+    },
+    {
+        "content": "<p>We never got a video done for 1.16. Maybe I can work on a combined video for 1.16 and 1.17?</p>",
+        "id": 208879317,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599076812
+    },
+    {
+        "content": "<p>Now that custom contexts is in do we need an issue to explain what the hell it means? I get the impression many people still don't get it.</p>",
+        "id": 208882647,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599078400
+    },
+    {
+        "content": "<p>I think we do. But, I didn't want to say anything that might slow things down, until it was committed.</p>",
+        "id": 208882782,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599078469
+    },
+    {
+        "content": "<p>I plan to look at it again in the next day or two and see if it makes more sense to me now.</p>",
+        "id": 208882854,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599078491
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> thanks for all the work on this release. I wasn't available today</p>",
+        "id": 208916516,
+        "sender_full_name": "Herb",
+        "timestamp": 1599103544
+    },
+    {
+        "content": "<p>I wasn't available much today either, I only really made the release issues :) thank you <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> and <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> !</p>",
+        "id": 208916977,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599104077
+    },
+    {
+        "content": "<p>Feature freeze for 1.18.0 today, yes?</p>",
+        "id": 221578587,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609793382
+    },
+    {
+        "content": "<p>Yes, that is the plan (at least my firm understanding of the plan)</p>",
+        "id": 221578640,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609793402
+    },
+    {
+        "content": "<p>I think that (in theory) we have time only till midnight today PT.</p>",
+        "id": 221584148,
+        "sender_full_name": "klonos",
+        "timestamp": 1609796119
+    },
+    {
+        "content": "<p>But, to be clear. The deadline today is ONLY for new features. UX changes and bug fixes can still be added through Jan 15th, right?</p>",
+        "id": 221584290,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609796184
+    },
+    {
+        "content": "<p>My understanding is that anything with the milestone 1.17.5 can be added through release date. Issues with the milestone 1.18 need to be ready today.</p>",
+        "id": 221584377,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609796239
+    },
+    {
+        "content": "<p>You are right <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ...and if certain things can be split off from the main feature request as a clean-up \"task\", then the main feature can get in.</p>",
+        "id": 221594414,
+        "sender_full_name": "klonos",
+        "timestamp": 1609802309
+    },
+    {
+        "content": "<p>Oh, thats today?</p>",
+        "id": 221602290,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609808778
+    },
+    {
+        "content": "<p>I dont think relationships will get in then.</p>",
+        "id": 221602339,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609808838
+    },
+    {
+        "content": "<p>Yeah, I'm also struggling between work/life and finding time to polish the merging of the updates pages <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span> ...perhaps I can trim down the changes and file a follow-up issue for the issue with the dashboard block, and then we might be able to still get it in.</p>",
+        "id": 221602572,
+        "sender_full_name": "klonos",
+        "timestamp": 1609809014
+    },
+    {
+        "content": "<p>Small PRs are good PRs <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 221602687,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609809125
+    },
+    {
+        "content": "<p>Yeah, I don't think the merged updates page or layout relationships would be a good idea to rush through at this point. If ya'll feel strongly about it we could probably merge and tidy over the next two weeks. But I don't think we need to create the pressure.</p>",
+        "id": 221602777,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1609809227
+    },
+    {
+        "content": "<p>But correct, we have... about 7 hours left <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> I was going to make the preview release today, but that could wait until tomorrow.</p>",
+        "id": 221602874,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1609809295
+    },
+    {
+        "content": "<p>If we pushed the RC for another day, then that would help my issue a lot. I'm 99% there to solving this UX issue that dates since 2017, and I would really love to get it in for 1.18.0.</p>",
+        "id": 221603170,
+        "sender_full_name": "klonos",
+        "timestamp": 1609809507
+    },
+    {
+        "content": "<p>...what remains to be done is:</p>\n<ol>\n<li>remove the code changes related to the dashboard block (and leave that as a follow-up task, to be done in the next couple of weeks)</li>\n<li>confirm if the \"lingering\" menu items issue was actually related to <a href=\"https://github.com/backdrop/backdrop-issues/issues/4844\">https://github.com/backdrop/backdrop-issues/issues/4844</a> which has now been merged <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></li>\n</ol>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4844\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4844\" title=\"Fix layout and views menu items get undeletable but stay visible once created · Issue #4844 · backdrop/backdrop-issues\">Fix layout and views menu items get undeletable but stay visible once created · Issue #4844 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Problem When creating a menu item through a layout &quot;menu settings&quot; on a single URL path, it creates a &quot;hard coded&quot; link that persists even after removing that link from the menu...</div></div></div>",
+        "id": 221603544,
+        "sender_full_name": "klonos",
+        "timestamp": 1609809854
+    },
+    {
+        "content": "<p>Nah, just coming in from work now. I don't think this has had enough scrutiny yet.</p>",
+        "id": 221608066,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609814966
+    },
+    {
+        "content": "<p>1.19 then, hopefully</p>",
+        "id": 221608074,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609814983
+    },
+    {
+        "content": "<p>Pity</p>",
+        "id": 221608082,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609814992
+    },
+    {
+        "content": "<p>Pity indeed.</p>",
+        "id": 221612888,
+        "sender_full_name": "klonos",
+        "timestamp": 1609822458
+    },
+    {
+        "content": "<p>...but to be clear <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> were you referring to the layout relationships issue or the update pages one? ...or both?</p>",
+        "id": 221612917,
+        "sender_full_name": "klonos",
+        "timestamp": 1609822522
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> Need any help with the feature freeze stuff?</p>",
+        "id": 221618437,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609830439
+    },
+    {
+        "content": "<p>I have little time now, but more time in about 2 hours...</p>",
+        "id": 221618448,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609830475
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I don't think so... the feature freeze items are really the 1.18.0 tag: <a href=\"https://github.com/backdrop/backdrop-issues/milestone/93\">https://github.com/backdrop/backdrop-issues/milestone/93</a> I don't think any of the remaining items are going to make it.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/milestone/93\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/milestone/93\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 221618996,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1609831210
+    },
+    {
+        "content": "<p>Ok no worries. And not much work to make a new preview release I guess...?</p>",
+        "id": 221619015,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609831252
+    },
+    {
+        "content": "<p>And by local time we only have 40 minutes left :D At least I'll be going to bed soon enough. I will make the 1.18.0-preview release tomorrow.</p>",
+        "id": 221619017,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1609831255
+    },
+    {
+        "content": "<p>Yeah the most work is assembling the release notes.</p>",
+        "id": 221619028,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1609831274
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> If you want to research ways to automate research notes that would be neat. We use <code>drush rn</code> for bugfix releases (which uses the Git history), but really we could use something that uses the GitHub milestone list instead. Though since there's only 10 items it shouldn't be much work to assemble: <a href=\"https://github.com/backdrop/backdrop-issues/milestone/93?closed=1\">https://github.com/backdrop/backdrop-issues/milestone/93?closed=1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/milestone/93?closed=1\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/milestone/93?closed=1\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 221619118,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1609831361
+    },
+    {
+        "content": "<p>The trouble with <code>drush rn</code> for minor releases is that it includes _all_ the bug fixes from the last 4 months, which for this release would be like 70+ fixes, and only 10 feature issues.</p>",
+        "id": 221619134,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1609831405
+    },
+    {
+        "content": "<p>Sure, something for me to work on <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 221619147,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609831424
+    },
+    {
+        "content": "<p>I looked at <a href=\"https://github.com/github-tools/github-release-notes\">https://github.com/github-tools/github-release-notes</a> once but I couldn't figure out how it worked <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/github-tools/github-release-notes\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/16116810?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/github-tools/github-release-notes\" title=\"github-tools/github-release-notes\">github-tools/github-release-notes</a></div><div class=\"message_embed_description\">Node module to create a release or a changelog from a tag and uses issues or commits to creating the release notes. - github-tools/github-release-notes</div></div></div>",
+        "id": 221619310,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1609831638
+    }
+]

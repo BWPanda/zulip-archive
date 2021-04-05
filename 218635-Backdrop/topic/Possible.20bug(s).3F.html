@@ -1,0 +1,78 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Possible.20bug(s).3F.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html">Possible bug(s)?</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="231092038"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Possible%20bug%28s%29%3F/near/231092038" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html#231092038">(Mar 19 2021 at 21:24)</a>:</h4>
+<p>I wasn't able to find any existing issue for this, but would be very odd if nobody noticed it: when you create/edit taxonomy terms, you can add a description, and that description uses CKEditor, with the ability to add images. Bugs:</p>
+<ul>
+<li>you may select an existing image, but there is no option in the "Insert image" dialog to upload a new image <span aria-label="thumbs down" class="emoji emoji-1f44e" role="img" title="thumbs down">:thumbs_down:</span> </li>
+<li>existing images can be added to the description of terms, and they can be viewed, so they are saved properly, but the usage count for the image file does not get incremented. This means that if the "main" image gets deleted from everywhere else it is being used, eventually its usage count will reach 0, despite the fact that it is being used in one or more term descriptions ...eventually, garbage collection will kick in, and it will delete the actual file, which will result in data loss <span aria-label="thumbs down" class="emoji emoji-1f44e" role="img" title="thumbs down">:thumbs_down:</span> <span aria-label="thumbs down" class="emoji emoji-1f44e" role="img" title="thumbs down">:thumbs_down:</span> </li>
+</ul>
+<p>So, is there any existing issue for this that I couldn't find?</p>
+
+
+
+<a name="231094993"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Possible%20bug%28s%29%3F/near/231094993" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html#231094993">(Mar 19 2021 at 21:54)</a>:</h4>
+<p>Does the image get marked as permanent, or just stays temporary until the next garbage cleanup?</p>
+
+
+
+<a name="231096688"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Possible%20bug%28s%29%3F/near/231096688" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html#231096688">(Mar 19 2021 at 22:11)</a>:</h4>
+<p>Never thought about the ability to put images into the description of a Taxonomy but I don't see why it shouldn't be allowed, so if it's doing as you describe, definitely a bug.</p>
+
+
+
+<a name="231118157"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Possible%20bug%28s%29%3F/near/231118157" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html#231118157">(Mar 20 2021 at 03:32)</a>:</h4>
+<p>@laryn you aren't presented with an option to upload any images in the description field when creating/editing a taxonomy term - only allowed to reuse existing ones: <br>
+<a href="/user_uploads/18319/39Z7GAnOFe0b_HLT_6snxNd6/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/39Z7GAnOFe0b_HLT_6snxNd6/image.png" title="image.png"><img src="/user_uploads/18319/39Z7GAnOFe0b_HLT_6snxNd6/image.png"></a></div>
+
+
+
+<a name="231118165"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Possible%20bug%28s%29%3F/near/231118165" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html#231118165">(Mar 20 2021 at 03:33)</a>:</h4>
+<p>See? ^^ ...only the "Select from library" tab is available <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span> <br>
+...as such, you need to upload at least one image via some other way first (either from a node, or the "+ Add file" link). And that makes the image permanent.</p>
+
+
+
+<a name="231118644"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Possible%20bug%28s%29%3F/near/231118644" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html#231118644">(Mar 20 2021 at 03:42)</a>:</h4>
+<p>...here's an issue for the first bug: <a href="https://github.com/backdrop/backdrop-issues/issues/5007">https://github.com/backdrop/backdrop-issues/issues/5007</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/5007" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/5007" title="Taxonomy terms &quot;Description&quot; field: &quot;The &quot;Insert image&quot; dialog does not provide the option to upload an image · Issue #5007 · backdrop/backdrop-issues">Taxonomy terms "Description" field: "The "Insert image" dialog does not provide the option to upload an image · Issue #5007 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Steps To Reproduce To reproduce the behavior: On a vanilla installation of Backdrop, head to the &quot;Tags&quot; vocabulary, to add a taxonomy term -&gt; /admin/structure/taxonomy/tags/add Click t...</div></div></div>
+
+
+
+<a name="231155680"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Possible%20bug%28s%29%3F/near/231155680" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html#231155680">(Mar 20 2021 at 16:23)</a>:</h4>
+<p>...and here's the issue for the second one: <a href="https://github.com/backdrop/backdrop-issues/issues/5016">https://github.com/backdrop/backdrop-issues/issues/5016</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/5016" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/5016" title="Image files added to the &quot;Description&quot; field of taxonomy terms or the &quot;Block content&quot; field in custom blocks do not get a usage count · Issue #5016 · backdrop/backdrop-issues">Image files added to the "Description" field of taxonomy terms or the "Block content" field in custom blocks do not get a usage count · Issue #5016 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This issue here is related to #5007 Steps To Reproduce To reproduce the behavior: In a vanilla installation of Backdrop, go to admin/content/files and use the &quot;+ Add file&quot; link to upload ...</div></div></div>
+
+
+
+<a name="231155685"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Possible%20bug%28s%29%3F/near/231155685" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Possible.20bug(s).3F.html#231155685">(Mar 20 2021 at 16:23)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> that's the issue I lost and had to retype ^^</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

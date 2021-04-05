@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>There was some talk about cloning modules relatively recently. I've done a basic port of <code>Replicate UI</code> and it seems to be working in a basic way (via a \"Replicate\" tab on nodes, terms, etc.) Anyone interested in testing please do!<br>\n<a href=\"https://github.com/backdrop-contrib/replicate_ui\">https://github.com/backdrop-contrib/replicate_ui</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/replicate_ui\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/replicate_ui\" title=\"backdrop-contrib/replicate_ui\">backdrop-contrib/replicate_ui</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/replicate_ui development by creating an account on GitHub.</div></div></div>",
+        "id": 202589120,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593619988
+    },
+    {
+        "content": "<p>The module supports \"Drupal actions\" which I think means it's supposed to also provide dropdown actions and VBO (e.g. on the admin content listing page) and/or a \"Replicate\" link in the operations drop buttons, but those don't work (yet). I vaguely recall a conversation about Drupal actions being removed -- am I remembering that right?</p>",
+        "id": 202589334,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593620084
+    },
+    {
+        "content": "<p>Actions might be in contrib now</p>",
+        "id": 202611966,
+        "sender_full_name": "Herb",
+        "timestamp": 1593631060
+    },
+    {
+        "content": "<p>But there is an API to do vbo type mass updates</p>",
+        "id": 202612092,
+        "sender_full_name": "Herb",
+        "timestamp": 1593631117
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> we still have <code>hook_action_info()</code> but those actions are usually triggered now by VBO, trigger module was moved to contrib.</p>",
+        "id": 202763285,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1593743053
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Thanks, I will put this on my list to investigate at some point...</p>",
+        "id": 203869924,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594751553
+    }
+]

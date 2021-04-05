@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I've made a few issues/branches in Stripe in case you want to test before we release. Basically I tried to copy changes from the Drupal version and also update the Stripe PHP bindings. It seems to be working fine on a dev site but thought you might want to test on any site you're currently using the module on.</p>",
+        "id": 195485843,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588028816
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/stripe/issues\" title=\"https://github.com/backdrop-contrib/stripe/issues\">https://github.com/backdrop-contrib/stripe/issues</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/stripe/issues\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/stripe/issues\" title=\"backdrop-contrib/stripe\">backdrop-contrib/stripe</a></div><div class=\"message_embed_description\">This module provides a simple abstraction to use the Stripe PHP SDK. - backdrop-contrib/stripe</div></div></div>",
+        "id": 195485862,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588028828
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I have ported and done some early testing on <code>uc_stripe</code> and as part of the port I'm making it dependent on <code>stripe</code> to bundle the Stripe library. Would you have time in the near future to test the last few branches/issues I posted, or are you comfortable with me making an initial release of <code>stripe</code> after merging them in if it is working for me?</p>",
+        "id": 202132653,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593200019
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/uc_stripe\">https://github.com/backdrop-contrib/uc_stripe</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/uc_stripe\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/uc_stripe\" title=\"backdrop-contrib/uc_stripe\">backdrop-contrib/uc_stripe</a></div><div class=\"message_embed_description\">Ubercart payment gateway module for Stripe. Contribute to backdrop-contrib/uc_stripe development by creating an account on GitHub.</div></div></div>",
+        "id": 202132661,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593200023
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/stripe/issues/18\">https://github.com/backdrop-contrib/stripe/issues/18</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/stripe/issues/18\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/stripe/issues/18\" title=\"Update Stripe libraries · Issue #18 · backdrop-contrib/stripe\">Update Stripe libraries · Issue #18 · backdrop-contrib/stripe</a></div><div class=\"message_embed_description\">Currently bundling v5.7.0 of Stripe libraries but most recent release is v7.29.0 -- we should update.</div></div></div>",
+        "id": 202132752,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593200066
+    }
+]

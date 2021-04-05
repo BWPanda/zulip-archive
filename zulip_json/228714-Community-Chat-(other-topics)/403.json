@@ -1,0 +1,104 @@
+[
+    {
+        "content": "<p>I'm getting a 403 trying to access a page which is a view to a list of a content type. I have three different content types and two work ok but my /modules one is displaying a 403. Am looking for pointers of what to check. I can't see anything in the log.</p>",
+        "id": 217467435,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1605911705
+    },
+    {
+        "content": "<p>Hmm, interesting. I get the same on my site (without a view though). I suspect it thinks you're trying to access the <code>modules</code> directory in your filesystem...</p>",
+        "id": 217469300,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605913142
+    },
+    {
+        "content": "<p>Same happens with <code>themes</code> and <code>layouts</code>.</p>",
+        "id": 217469332,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605913171
+    },
+    {
+        "content": "<p>If I change it to modulex it works. So do you think /modules is hard coded somewhere?</p>",
+        "id": 217469629,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1605913358
+    },
+    {
+        "content": "<p>Not hard-coded so much as just a matching directory in the filesystem.</p>",
+        "id": 217469849,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605913504
+    },
+    {
+        "content": "<p>Aha, so maybe an htaccess issue?</p>",
+        "id": 217469992,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1605913576
+    },
+    {
+        "content": "<p>I remove <code>module</code> in <code>.htaccess</code> and it doesn't help - looks like my choice of <code>/modules</code> clashes with the directory name... I've changed it just `/module/ and it's working</p>",
+        "id": 217470804,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1605914209
+    },
+    {
+        "content": "<p>No time for Backdropcms today. Helping <span class=\"user-mention\" data-user-id=\"270372\">@Wilbur Ince</span> with his new roof.</p>",
+        "id": 217519035,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605992833
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/FFHhB_1Vcd6DoBMUMJRd51Ps/IMG_20201121_143506049.jpg\">IMG_20201121_143506049.jpg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/FFHhB_1Vcd6DoBMUMJRd51Ps/IMG_20201121_143506049.jpg\" title=\"IMG_20201121_143506049.jpg\"><img src=\"/user_uploads/18319/FFHhB_1Vcd6DoBMUMJRd51Ps/IMG_20201121_143506049.jpg\"></a></div>",
+        "id": 217519050,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605992871
+    },
+    {
+        "content": "<p>Glad it's you and not me! <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 217521157,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605995897
+    },
+    {
+        "content": "<p>Couldn't he have planned for that to be in a warmer month?</p>",
+        "id": 217521947,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1605997136
+    },
+    {
+        "content": "<p>Roofs are important <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ++ <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 217533499,
+        "sender_full_name": "klonos",
+        "timestamp": 1606018638
+    },
+    {
+        "content": "<p><strong>stpaultim</strong> go team. (Karma: 31)</p>",
+        "id": 217533500,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1606018639
+    },
+    {
+        "content": "<blockquote>\n<p>Couldn't he have planned for that to be in a warmer month?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> - I asked him the same thing!</p>",
+        "id": 217534501,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1606020673
+    },
+    {
+        "content": "<p>Happy US Thanksgiving, Worldwide Backdrop community!</p>",
+        "id": 218013992,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1606404542
+    },
+    {
+        "content": "<p><span aria-label=\"turkey\" class=\"emoji emoji-1f983\" role=\"img\" title=\"turkey\">:turkey:</span></p>",
+        "id": 218014020,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1606404560
+    },
+    {
+        "content": "<p>I'm thankful for the cause that Backdrop CMS is, and all of you guys working on it <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span></p>",
+        "id": 218035054,
+        "sender_full_name": "klonos",
+        "timestamp": 1606421297
+    }
+]

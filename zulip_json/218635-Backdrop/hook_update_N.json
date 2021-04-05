@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>I'm having trouble getting a <code>hook_update_N</code> to fire for upgrades in a module and I am not sure why. The module's schema version is <code>7002</code> so that should trigger it. I tried <code>hook_update_1000</code> and then when that didn't fire I tried <code>hook_update_1100</code>.</p>",
+        "id": 218593105,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606931168
+    },
+    {
+        "content": "<p>One thing to note is that the upgrade process was completed before this module was ported and I'm trying to do this after the fact -- is that a bad idea? It seems the database update should still be flagged in this case, but maybe I'm wrong.</p>",
+        "id": 218593250,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606931233
+    },
+    {
+        "content": "<p>If I manually set the schema to a lower number it does trigger the update. I think this is coming back to me now... Ideally needs to happen during the upgrade process, otherwise requires some special sauce.</p>",
+        "id": 218594806,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606931910
+    },
+    {
+        "content": "<p>Do you have the last update hook defined?</p>",
+        "id": 218636677,
+        "sender_full_name": "Herb",
+        "timestamp": 1606952835
+    },
+    {
+        "content": "<p><a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_last_removed/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_last_removed/1</a></p>",
+        "id": 218636799,
+        "sender_full_name": "Herb",
+        "timestamp": 1606952939
+    }
+]

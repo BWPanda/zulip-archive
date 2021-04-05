@@ -1,0 +1,110 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Invisible.20hamburger.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html">Invisible hamburger</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="212696190"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212696190" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212696190">(Oct 08 2020 at 14:17)</a>:</h4>
+<p>Has anyone dealt with an invisible hamburger icon? Problem for iOS / Safari mobile devices only, other browsers show it as expected. Thanks in advance.</p>
+
+
+
+<a name="212700313"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212700313" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212700313">(Oct 08 2020 at 14:45)</a>:</h4>
+<p>Just took a look at one site on iOS/Safari - I see the hamburger menu</p>
+
+
+
+<a name="212700695"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212700695" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212700695">(Oct 08 2020 at 14:48)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/Invisible.20hamburger/near/212696190">said</a>:</p>
+<blockquote>
+<p>Has anyone dealt with an invisible hamburger icon? Problem for iOS / Safari mobile devices only, other browsers show it as expected. Thanks in advance.</p>
+</blockquote>
+<p>Mine are fine, but I develop on iOS/Safari, and it's very theme dependent.  If you have the debugger, check the location.  I've found the best css uses position absolute with a top and right, and at least 2% padding to allow for the scroll bars.</p>
+<p>Here's a sample of css from one of my sites (bear in mind that it's very theme-dependent)<br>
+.menu-toggle-button  {<br>
+  position: absolute;<br>
+  top: -8em;<br>
+  right: 20%;<br>
+  z-index: 999;<br>
+  margin-top:1%;<br>
+  }</p>
+
+
+
+<a name="212702305"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212702305" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212702305">(Oct 08 2020 at 14:58)</a>:</h4>
+<p>Debugging without Apple hardware (my case) is pretty problematic. Looks like I need to buy some kind of plan from <a href="http://browserstack.com">browserstack.com</a>. Thanks!</p>
+
+
+
+<a name="212702584"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212702584" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212702584">(Oct 08 2020 at 14:59)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/Invisible.20hamburger/near/212702305">said</a>:</p>
+<blockquote>
+<p>Debugging without Apple hardware (my case) is pretty problematic. Looks like I need to buy some kind of plan from <a href="http://browserstack.com">browserstack.com</a>. Thanks!</p>
+</blockquote>
+<p>Chrome's developer tools have a pretty good iOS emulator in their responsive design toolkit.  I use it too.  That's available on both PC and Linux.  No need to buy anything!  Also, it might be hidden because of the z-index!  That's important.</p>
+
+
+
+<a name="212703212"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212703212" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212703212">(Oct 08 2020 at 15:03)</a>:</h4>
+<p>In Chrome on Linux all fine, same as in Firefox. Maybe tomorrow I'll be smarter ;-) Thank you!</p>
+
+
+
+<a name="212703331"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212703331" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212703331">(Oct 08 2020 at 15:04)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/Invisible.20hamburger/near/212703212">said</a>:</p>
+<blockquote>
+<p>In Chrome on Linux all fine, same as in Firefox. Maybe tomorrow I'll be smarter ;-) Thank you!</p>
+</blockquote>
+<p>Is the site accessible?  I can take a quick look at it if you want.</p>
+
+
+
+<a name="212703980"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212703980" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212703980">(Oct 08 2020 at 15:08)</a>:</h4>
+<p>PM</p>
+
+
+
+<a name="212708414"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212708414" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212708414">(Oct 08 2020 at 15:36)</a>:</h4>
+<p>Maybe it's something (z-index?) in your theme? Which theme do you use? The only thing that comes to my mind is some conflicting css rule specially crafted for iOS, which doesn't strike on other os-es, but hides the button on iOS. (Wild guessing, though...)</p>
+
+
+
+<a name="212711899"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212711899" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212711899">(Oct 08 2020 at 16:01)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/218635-Backdrop/topic/Invisible.20hamburger/near/212708414">said</a>:</p>
+<blockquote>
+<p>Maybe it's something (z-index?) in your theme? Which theme do you use? The only thing that comes to my mind is some conflicting css rule specially crafted for iOS, which doesn't strike on other os-es, but hides the button on iOS. (Wild guessing, though...)</p>
+</blockquote>
+<p>He's using a subtheme of Basis.  I just looked at his site.  I think the issue is in the js for the subtheme.  It doesn't look like it's toggling the element state correctly in the subtheme.  I have another site using Basis and it works fine on the iphone.  I made some debugging  suggestions (go back to Basis, reach out to subtheme developer if it isn't custom), start commenting stuff out, etc.  I'm betting if he switches back to Basis, the hamburger will work properly.</p>
+
+
+
+<a name="212716753"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Invisible%20hamburger/near/212716753" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Invisible.20hamburger.html#212716753">(Oct 08 2020 at 16:36)</a>:</h4>
+<p>Thanks a lot all, I will try your suggestions!</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

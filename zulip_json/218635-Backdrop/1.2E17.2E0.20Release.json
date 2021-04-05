@@ -1,0 +1,308 @@
+[
+    {
+        "content": "<p>At this point, I think that we should be pushing all bug fixes and UX tasks slated for 1.16.3 (which also imply 1.x) to 1.17.1 instead. ...the only exception should be <a href=\"https://github.com/backdrop/backdrop-issues/issues/4604\">#4604</a> and any other such critical issue. Is there anything else that is imperative to get in before 1.17.0?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4604\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4604\" title=\"Layout context regression: Updating to 1.17.0 throws PHP fatal &quot;Unsupported operand types&quot; error · Issue #4604 · backdrop/backdrop-issues\">Layout context regression: Updating to 1.17.0 throws PHP fatal \"Unsupported operand types\" error · Issue #4604 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug I am attempting to update a site from backdrop 1.15.0 to 1.17.0-preview, and I get the following PHP fatals when running update.php It appears as though core assumes $this-co...</div></div></div>",
+        "id": 209913754,
+        "sender_full_name": "klonos",
+        "timestamp": 1599972647
+    },
+    {
+        "content": "<p>We need a solution for this one <a href=\"https://github.com/backdrop/backdrop-issues/issues/4614\">https://github.com/backdrop/backdrop-issues/issues/4614</a> or if we're not able to fix, we need to revert.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4614\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4614\" title=\"Date format for database log messages not always updated, &amp; undefined function date_format_type_options() · Issue #4614 · backdrop/backdrop-issues\">Date format for database log messages not always updated, &amp; undefined function date_format_type_options() · Issue #4614 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug New date format for database log messages appears corrupted after update from older versions of backdrop: 1.15.x or earlier. Unrelated, but also: Let&#39;s not use _date_form...</div></div></div>",
+        "id": 209920061,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599985136
+    },
+    {
+        "content": "<p>And here's a minor regression (dialog title) that has not even a PR yet: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4609\">https://github.com/backdrop/backdrop-issues/issues/4609</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4609\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4609\" title=\"Wrong dialog title &quot;AJAX callback&quot; on form validation errors - custom context form · Issue #4609 · backdrop/backdrop-issues\">Wrong dialog title \"AJAX callback\" on form validation errors - custom context form · Issue #4609 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When adding or configuring a custom context, a dialog opens with the title &quot;Custom contexts&quot;. When the form fails validation and an error message shows up, the dial...</div></div></div>",
+        "id": 209920126,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599985277
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...I just filed a 2-liner PR to fix that dialog regression: <a href=\"https://github.com/backdrop/backdrop/pull/3306\">https://github.com/backdrop/backdrop/pull/3306</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3306\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3306\" title=\"Issue #4609: Proper dialog title on custom context validation error by klonos · Pull Request #3306 · backdrop/backdrop\">Issue #4609: Proper dialog title on custom context validation error by klonos · Pull Request #3306 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4609</div></div></div>",
+        "id": 209924146,
+        "sender_full_name": "klonos",
+        "timestamp": 1599992845
+    },
+    {
+        "content": "<p>@klonos Cool, but dialogs are a bit tricky...</p>",
+        "id": 209924959,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599994119
+    },
+    {
+        "content": "<p>And yet another one better addressed before a stable release: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4613\">https://github.com/backdrop/backdrop-issues/issues/4613</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4613\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4613\" title=\"Merge layout.context.admin into layout.admin? · Issue #4613 · backdrop/backdrop-issues\">Merge layout.context.admin into layout.admin? · Issue #4613 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Just realised a small oops: during developing custom contexts, I put all the new code into a &quot;temporary&quot; layout.contexts.admin.inc file and included it with module_load_include(&#39;inc&amp;#...</div></div></div>",
+        "id": 209925026,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599994212
+    },
+    {
+        "content": "<p>It's release day today! <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 210080535,
+        "sender_full_name": "klonos",
+        "timestamp": 1600131132
+    },
+    {
+        "content": "<p>...in EU and AU at least <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 210080545,
+        "sender_full_name": "klonos",
+        "timestamp": 1600131159
+    },
+    {
+        "content": "<p>I'm going to reroll <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span>'s <a href=\"https://github.com/backdrop/backdrop-issues/issues/4614\">https://github.com/backdrop/backdrop-issues/issues/4614</a> PR with the suggested fixes.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4614\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4614\" title=\"Follow-ups for new dblog date format (PHP fatal: undefined function date_format_type_options(), update problems, config value name change) · Issue #4614 · backdrop/backdrop-issues\">Follow-ups for new dblog date format (PHP fatal: undefined function date_format_type_options(), update problems, config value name change) · Issue #4614 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">TO address before 1.17.0 release: Occasionally PHP date format not properly updated, see description below: PHP fatal when date module not enabled: Call to undefined function date_format_type_optio...</div></div></div>",
+        "id": 210187475,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600202425
+    },
+    {
+        "content": "<p>Hi all! It looks like we have one RTBC issue in <a href=\"https://github.com/backdrop/backdrop-issues/milestone/89\">https://github.com/backdrop/backdrop-issues/milestone/89</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/milestone/89\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/milestone/89\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 210188683,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600203040
+    },
+    {
+        "content": "<p>everything tagged with 1.16.3 can probably be bumped as anything critical relating to 1.17 should be in the 1.17 milestone</p>",
+        "id": 210188790,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600203090
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> I'm going to review the 1.17 release checklist</p>",
+        "id": 210188840,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600203120
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> we could use another review on <a href=\"https://github.com/backdrop/backdrop-issues/issues/4600\">https://github.com/backdrop/backdrop-issues/issues/4600</a>, and if it's better than what we have now let's get it in, and iterate in 1.17.1 (or later)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4600\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4600\" title=\"[UX] text cleanup on new block administrative label/description · Issue #4600 · backdrop/backdrop-issues\">[UX] text cleanup on new block administrative label/description · Issue #4600 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is a follow-up to #4558 where we introduced the shiny new admin label and description setting for all blocks :) Current text is as follows: Fieldset title: Admin label Fieldset description: La...</div></div></div>",
+        "id": 210189397,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600203386
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> or <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> do you know if we have anyone working on a blog post?</p>",
+        "id": 210189782,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600203576
+    },
+    {
+        "content": "<p>I haven't heard from <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> - I am not working on it yet. Juggling several things now, but might have time in about an hour.</p>",
+        "id": 210189916,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1600203625
+    },
+    {
+        "content": "<p>I'm at work till 9.30 eastern. I would mark <a href=\"https://github.com/backdrop/backdrop-issues/issues/4619\">https://github.com/backdrop/backdrop-issues/issues/4619</a> as critical if we did such things.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4619\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4619\" title=\"Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues\">Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug 1.17 brings an exciting new feature: custom layout contexts. It&#39;s however not sufficiently checking for the existence of the entity needed for the context later on. The c...</div></div></div>",
+        "id": 210192459,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600204970
+    },
+    {
+        "content": "<p>In the process of trying to get the current PR working, I found new issues with dblog date format issue. IMO I think we should revert it <a href=\"https://github.com/backdrop/backdrop-issues/issues/4614#issuecomment-692992579\">https://github.com/backdrop/backdrop-issues/issues/4614#issuecomment-692992579</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4614#issuecomment-692992579\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4614#issuecomment-692992579\" title=\"Follow-ups for new dblog date format (PHP fatal: undefined function date_format_type_options(), update problems, config value name change) · Issue #4614 · backdrop/backdrop-issues\">Follow-ups for new dblog date format (PHP fatal: undefined function date_format_type_options(), update problems, config value name change) · Issue #4614 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">TO address before 1.17.0 release: Occasionally PHP date format not properly updated, see description below: PHP fatal when date module not enabled: Call to undefined function date_format_type_optio...</div></div></div>",
+        "id": 210194152,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600205834
+    },
+    {
+        "content": "<p>all valid concerns. Let's revert :)</p>",
+        "id": 210203966,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600211973
+    },
+    {
+        "content": "<p>Alright I think all issues are done that will get done for 1.17.0. Several got bumped (MySQL 8 support, some text changes, the issue <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> mentioned a few posts above). The dblog issue has been reverted. I think we're set for release.</p>",
+        "id": 210208290,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600215245
+    },
+    {
+        "content": "<p>I'll start with the 1.16.3 release first.</p>",
+        "id": 210208823,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600215672
+    },
+    {
+        "content": "<p>Anyone have any final thoughts on <a href=\"https://github.com/backdrop/backdrop-issues/issues/4600#issuecomment-693095138\">https://github.com/backdrop/backdrop-issues/issues/4600#issuecomment-693095138</a>? <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4600#issuecomment-693095138\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4600#issuecomment-693095138\" title=\"[UX] text cleanup on new block administrative label/description · Issue #4600 · backdrop/backdrop-issues\">[UX] text cleanup on new block administrative label/description · Issue #4600 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is a follow-up to #4558 where we introduced the shiny new admin label and description setting for all blocks :) Current text is as follows: Fieldset title: Admin label Fieldset description: La...</div></div></div>",
+        "id": 210209204,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600215963
+    },
+    {
+        "content": "<p>The 1.16.3 release tag is cut. <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> could you mark the tasks in <a href=\"https://github.com/backdrop/backdrop-issues/issues/4595\">https://github.com/backdrop/backdrop-issues/issues/4595</a> ? Do we have release notes for 1.16.3? There are <strong>53</strong> issues in that release!</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4595\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4595\" title=\"Backdrop 1.16.3 Release checklist · Issue #4595 · backdrop/backdrop-issues\">Backdrop 1.16.3 Release checklist · Issue #4595 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for September 15th, 2020 10am - 4pm PT Pre-release tasks Merge commits @quicksketch @serundeputy @herbdool @BWPanda Create the next bugfix milestone @jenlampton Move all unfinishe...</div></div></div>",
+        "id": 210209392,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600216119
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> do you know if update.php needs to be run for 1.16.3?</p>",
+        "id": 210209502,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600216212
+    },
+    {
+        "content": "<p>Let me double-check. It doesn't look like it at first glance.</p>",
+        "id": 210209770,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600216447
+    },
+    {
+        "content": "<p>ok, let me update to it and confirm :)</p>",
+        "id": 210209800,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600216496
+    },
+    {
+        "content": "<p>Hm, yes it does require update.php. And unfortunately, it appears that the front page is broken until you run it.</p>",
+        "id": 210209947,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600216638
+    },
+    {
+        "content": "<p>Ah, or at least until caches are cleared. Seems related to the Views localization change.</p>",
+        "id": 210209967,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600216673
+    },
+    {
+        "content": "<p>hm...</p>",
+        "id": 210210067,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600216763
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/gNBggRk4Qw4oygE-T5zMHb3q/Screen-Shot-2020-09-15-at-5.39.10-PM.png\">Screen-Shot-2020-09-15-at-5.39.10-PM.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/gNBggRk4Qw4oygE-T5zMHb3q/Screen-Shot-2020-09-15-at-5.39.10-PM.png\" title=\"Screen-Shot-2020-09-15-at-5.39.10-PM.png\"><img src=\"/user_uploads/18319/gNBggRk4Qw4oygE-T5zMHb3q/Screen-Shot-2020-09-15-at-5.39.10-PM.png\"></a></div>",
+        "id": 210210080,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600216774
+    },
+    {
+        "content": "<p>Yep, same. Two DB updates required.</p>",
+        "id": 210210098,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600216796
+    },
+    {
+        "content": "<p>You also get <code>Error: Call to a member function init() on null in view-&gt;init_localization() (line 2009 of /app/core/modules/views/includes/view.inc).</code> on the homepage, since it's a view.</p>",
+        "id": 210210172,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600216840
+    },
+    {
+        "content": "<p>Okay... on to 1.17.0...</p>",
+        "id": 210210621,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600217303
+    },
+    {
+        "content": "<p>I'm a bit wary about leaving <a href=\"https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358\">https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358</a> unfixed. Seems a person may want to test this new feature on their default layout and delete the test node and find their site broken, with no indication as to the cause. I'm still at work, can someone at least do a quick PR with:</p>\n<div class=\"codehilite\"><pre><span></span><code>    // Do not render if the entity is not found on this layout.\n    if (empty($entity)) {\n      return NULL;\n    }\n</code></pre></div>\n\n\n<p>in <code>FieldBlock::getContent()</code>?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358\" title=\"Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues\">Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug 1.17 brings an exciting new feature: custom layout contexts. It&#39;s however not sufficiently checking for the existence of the entity needed for the context later on. The c...</div></div></div>",
+        "id": 210210632,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600217321
+    },
+    {
+        "content": "<p>That would be good enough for preventing the fatal</p>",
+        "id": 210210642,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600217339
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> can you look at <a href=\"https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358\">https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358\" title=\"Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues\">Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug 1.17 brings an exciting new feature: custom layout contexts. It&#39;s however not sufficiently checking for the existence of the entity needed for the context later on. The c...</div></div></div>",
+        "id": 210210752,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600217496
+    },
+    {
+        "content": "<p>I will write a quick PR baed on <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>'s suggestion.</p>",
+        "id": 210210855,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600217595
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> we will have a release in 2 weeks, and can fix this before the Press about 1.17, but agree it would be nice if we could fix it</p>",
+        "id": 210210869,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600217620
+    },
+    {
+        "content": "<p>Sorry I may have gotten to it first. Here's a bare-minimum PR <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> <a href=\"https://github.com/backdrop/backdrop/pull/3312/files\">https://github.com/backdrop/backdrop/pull/3312/files</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3312/files\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/100206?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3312/files\" title=\"Issue #4619: Avoid fatal error if layout's context entity has been deleted. by quicksketch · Pull Request #3312 · backdrop/backdrop\">Issue #4619: Avoid fatal error if layout's context entity has been deleted. by quicksketch · Pull Request #3312 · backdrop/backdrop</a></div><div class=\"message_embed_description\">A temporary fix for backdrop/backdrop-issues#4619.</div></div></div>",
+        "id": 210210998,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600217749
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.0\">https://github.com/backdrop/backdrop/releases/tag/1.17.0</a> is out <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.0\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.0\" title=\"Release 1.17.0 · backdrop/backdrop\">Release 1.17.0 · backdrop/backdrop</a></div><div class=\"message_embed_description\">The Backdrop community is proud to release version 1.17.0 of Backdrop CMS, following our 4-month release cycle.\nNotes for updating:\n\nIt will be necessary to run the update script (located at /updat...</div></div></div>",
+        "id": 210214031,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1600221266
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Looks like you are working on the blog post. Thanks. </p>\n<p>I'm still pretty focused on Backdrop LIVE. I don't want to loose my momentum with only two days to go.</p>",
+        "id": 210214235,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1600221518
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I think that's great! I'll keep writing this up but may have you proofread for typos before I publish?</p>",
+        "id": 210214852,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600222146
+    },
+    {
+        "content": "<p>ok, ready for proofreading: <a href=\"https://backdropcms.org/news/backdrop-cms-117-released\">https://backdropcms.org/news/backdrop-cms-117-released</a> :)</p>",
+        "id": 210215117,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600222506
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I think the blog post looks great. I would ask for a clearer description of Custom Contexts, but that would just be mean. ;-)</p>",
+        "id": 210215222,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1600222658
+    },
+    {
+        "content": "<p>I think it's good to go.</p>",
+        "id": 210215228,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1600222673
+    },
+    {
+        "content": "<p>Published! <a href=\"https://backdropcms.org/news/backdrop-cms-117-released\">https://backdropcms.org/news/backdrop-cms-117-released</a></p>",
+        "id": 210215452,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600222938
+    },
+    {
+        "content": "<p>I cannot test backdrop because MySQL 8 not supported.</p>",
+        "id": 210243299,
+        "sender_full_name": "Tuhin",
+        "timestamp": 1600251777
+    },
+    {
+        "content": "<blockquote>\n<p>I cannot test backdrop because MySQL 8 not supported.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"274685\">@Tuhin</span> You may be able to help with testing <a href=\"https://github.com/backdrop/backdrop-issues/issues/4238\">this issue PR</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4238\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4238\" title=\"MySQL 8 support · Issue #4238 · backdrop/backdrop-issues\">MySQL 8 support · Issue #4238 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need MySQL 8 has a number of incompatibilities with previous versions, including new keywords that need to be escaped, and removing of the NO_AUTO_CREATE_USER init SQL mode. This...</div></div></div>",
+        "id": 210243955,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1600252240
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I'm aware of this issue</p>",
+        "id": 210244304,
+        "sender_full_name": "Tuhin",
+        "timestamp": 1600252518
+    },
+    {
+        "content": "<p>Sorry I wasn't around as much this week for the release guys <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span> ...ISP issues at the apartment have caused me to lag behind at work-related tasks, and I was also trying to reach out to the Greek Drupal community re the Backdrop Live event (which I finally got around to just a couple of hrs ago).</p>",
+        "id": 210299407,
+        "sender_full_name": "klonos",
+        "timestamp": 1600279848
+    },
+    {
+        "content": "<p>I've just updated our <a href=\"https://backdropcms.org/roadmap\">https://backdropcms.org/roadmap</a> and <a href=\"https://backdropcms.org/user-guide/project-history\">https://backdropcms.org/user-guide/project-history</a> pages <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...we should remember to be updating the \"Features planned for version x.y.z\" section as we are adding/removing milestones from issues in our queue.</p>",
+        "id": 210348094,
+        "sender_full_name": "klonos",
+        "timestamp": 1600318412
+    },
+    {
+        "content": "<p>Just generated the language source file for Backdrop 1.17 and released it on <a href=\"https://localize.backdropcms.org\">https://localize.backdropcms.org</a>.</p>",
+        "id": 211547433,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601325616
+    }
+]

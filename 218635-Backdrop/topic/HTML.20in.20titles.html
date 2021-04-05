@@ -1,0 +1,106 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/HTML.20in.20titles.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html">HTML in titles</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="208073928"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208073928" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208073928">(Aug 26 2020 at 10:18)</a>:</h4>
+<p>If I enter HTML tags in a node title, the tags are escaped and printed out whenever the node title is displayed. Is there any easy way to override this to avoid escaping HTML tags in titles?</p>
+
+
+
+<a name="208074137"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208074137" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208074137">(Aug 26 2020 at 10:21)</a>:</h4>
+<p>Do you want to strip the tags instead, or do you want to allow them?</p>
+
+
+
+<a name="208074861"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208074861" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208074861">(Aug 26 2020 at 10:29)</a>:</h4>
+<p>I want to allow them (to format parts of the title differently)</p>
+
+
+
+<a name="208074916"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208074916" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208074916">(Aug 26 2020 at 10:29)</a>:</h4>
+<p>Do you have a theme?</p>
+
+
+
+<a name="208075006"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208075006" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208075006">(Aug 26 2020 at 10:30)</a>:</h4>
+<p>Uh, Basis...?</p>
+
+
+
+<a name="208075079"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208075079" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208075079">(Aug 26 2020 at 10:31)</a>:</h4>
+<p>I've actually just worked out how to add <code>&lt;span&gt;</code> tags where I want them via Javascript, but if there's an eaier way with PHP, etc., then I might opt for that instead.</p>
+
+
+
+<a name="208075522"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208075522" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208075522">(Aug 26 2020 at 10:36)</a>:</h4>
+<p>Ah, OK, no custom theme in that case... I'd only know a quick trick in theme_preprocess_layout(), but in that case you can't implement that.</p>
+
+
+
+<a name="208075667"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208075667" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208075667">(Aug 26 2020 at 10:38)</a>:</h4>
+<p>Well I'll likely sub-theme Basis to make my own changes here and there. Would <code>theme_preprocess_layout()</code> work everywhere node titles are displayed (e.g. teasers, page titles, views, etc.)?</p>
+
+
+
+<a name="208076553"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208076553" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208076553">(Aug 26 2020 at 10:50)</a>:</h4>
+<p>If you also need node teasers and stuff, you probably need additional preprocessors for node.tpl.php. Views... could be tricky.</p>
+
+
+
+<a name="208077589"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208077589" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208077589">(Aug 26 2020 at 11:02)</a>:</h4>
+<p>Hmm ok, think I'll stick with JS then :-)</p>
+
+
+
+<a name="208077734"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208077734" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208077734">(Aug 26 2020 at 11:04)</a>:</h4>
+<p>I guess, the minimum you need is template_preprocess_node and template_preprocess_layout - depends on what and where... js could be the easier thing.</p>
+
+
+
+<a name="208078035"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/HTML%20in%20titles/near/208078035" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/HTML.20in.20titles.html#208078035">(Aug 26 2020 at 11:08)</a>:</h4>
+<p>(Curiosity is my cryptonite...)<br>
+in YOURTHEME_preprocess_layout()</p>
+<div class="codehilite"><pre><span></span><code>  if ($node = menu_get_object()) {
+    $variables[&#39;title&#39;] = filter_xss($node-&gt;title, array(&#39;strong&#39;, &#39;span&#39;, &#39;em&#39;));
+  }
+</code></pre></div>
+
+
+<p>In YOURTHEME_preprocess_node:</p>
+<div class="codehilite"><pre><span></span><code>  $node = $variables[&#39;node&#39;];
+  $variables[&#39;title&#39;] = filter_xss($node-&gt;title, array(&#39;strong&#39;, &#39;span&#39;, &#39;em&#39;));
+</code></pre></div>
+
+
+<p>That keeps strong/span/em and strips anything else.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

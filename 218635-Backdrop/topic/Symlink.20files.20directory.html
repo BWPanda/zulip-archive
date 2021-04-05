@@ -1,0 +1,75 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Symlink.20files.20directory.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Symlink.20files.20directory.html">Symlink files directory</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="212849701"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Symlink%20files%20directory/near/212849701" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Symlink.20files.20directory.html#212849701">(Oct 09 2020 at 16:46)</a>:</h4>
+<p>Looking for some quick help here - i have the symbolic link up for sites/default/files to files (files is the source), but Backdrop isn't picking it up.  It shows up on the command line and is working - I can list /sites/default/files and see all the files in /files, but not in backdrop<br>
+Any ideas?</p>
+
+
+
+<a name="212855608"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Symlink%20files%20directory/near/212855608" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Symlink.20files.20directory.html#212855608">(Oct 09 2020 at 17:42)</a>:</h4>
+<p>Maybe web-server configuration, for example:<br>
+<code>&lt;Directory YOUR_PATH&gt;
+    Options FollowSymLinks
+    AllowOverride All
+    ....
+&lt;/Directory&gt;</code></p>
+
+
+
+<a name="212856215"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Symlink%20files%20directory/near/212856215" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Symlink.20files.20directory.html#212856215">(Oct 09 2020 at 17:48)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/New.20site.20launch/near/212855608">said</a>:</p>
+<blockquote>
+<p>Maybe web-server configuration, for example:<br>
+<code>&lt;Directory YOUR_PATH&gt;
+    Options FollowSymLinks
+    AllowOverride All
+    ....
+&lt;/Directory&gt;</code></p>
+</blockquote>
+<p>What file to edit?</p>
+
+
+
+<a name="212856523"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Symlink%20files%20directory/near/212856523" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Symlink.20files.20directory.html#212856523">(Oct 09 2020 at 17:51)</a>:</h4>
+<p>In case of Debian GNU/Linux - /etc/apache2/apache2.conf (Otherwise, httpd.conf)</p>
+
+
+
+<a name="212856786"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Symlink%20files%20directory/near/212856786" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Symlink.20files.20directory.html#212856786">(Oct 09 2020 at 17:54)</a>:</h4>
+<p>Backup, restart or reload is required, you know.</p>
+
+
+
+<a name="212861422"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Symlink%20files%20directory/near/212861422" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Symlink.20files.20directory.html#212861422">(Oct 09 2020 at 18:38)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/Symlink.20files.20directory/near/212856786">said</a>:</p>
+<blockquote>
+<p>Backup, restart or reload is required, you know.</p>
+</blockquote>
+<p>Yep, will do through WHM.  I know where to look.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

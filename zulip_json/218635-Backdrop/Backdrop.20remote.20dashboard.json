@@ -1,0 +1,194 @@
+[
+    {
+        "content": "<p>Idea: create a webhook API that revolves around telemetry where a site owner can create an endpoint for their site(s) and have their site talk to <a href=\"http://b.org\">b.org</a> for real-time updates on the telemetry of their sites. For example, any time a module gets updated, it sends the intent to <a href=\"http://b.org\">b.org</a> and they can view details of their site that shows them at a glance, which sites have what modules.</p>\n<p>Extend this to be free for 5 sites and pay $10/mo for more than 5. (Loose monetary example as a way for <a href=\"http://b.org\">b.org</a> to make some money)</p>\n<p>Since webhooks have to be setup as a private/public pair, this would be an opt-in from the user.</p>",
+        "id": 221719319,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609891650
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> the reason for Telemetry to be implemented is to help us make better-informed decisions (in matters like when to drop support for php5, or change the OOTB default settings for core, or prioritize another feature over others). Any attempt to monetize any aspect of it would get strong resistance from me personally.</p>",
+        "id": 221724911,
+        "sender_full_name": "klonos",
+        "timestamp": 1609897127
+    },
+    {
+        "content": "<p>...to get an idea of where I'm coming from, and as an example, one of my colleagues posted a link to <a href=\"https://www.acquia.com/products/drupal-cloud/cloud-ide\">https://www.acquia.com/products/drupal-cloud/cloud-ide</a> in our #random Slack channel yesterday, and said that they were excited about it. Here's how I responded:</p>\n<blockquote>\n<p>Impressive indeed! ...Acquia Cloud Lock-in IDE I say ...nice addition to their fleet of closed-source software/services that assist their efforts to monetize as much as possible of an otherwise open source software created by the community that they have been exploiting for years now. Well done! ...this is not to say that the software is no good - just saying that merely out of ethic responsibility it should boycotted and any other open-source alternative be used instead.</p>\n</blockquote>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.acquia.com/products/drupal-cloud/cloud-ide\" style=\"background-image: url(https://www.acquia.com/sites/acquia.com/files/styles/social_share/public/images/2020-12/Cloud%20IDE_header.jpg?itok=GgCf6pUk)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.acquia.com/products/drupal-cloud/cloud-ide\" title=\"Cloud IDE\">Cloud IDE</a></div><div class=\"message_embed_description\">The ONLY web-based IDE for Drupal development.</div></div></div>",
+        "id": 221724996,
+        "sender_full_name": "klonos",
+        "timestamp": 1609897242
+    },
+    {
+        "content": "<p>...if we are to make money, I think that we should be focusing our energy towards figuring out ways to improve how much we get from donations, or try to get the sources of our expenses (hosting provider for the Backdrop servers, email-sending services, demo sandboxes) to consider sponsoring us and providing these services for free, or at a discount.</p>",
+        "id": 221725115,
+        "sender_full_name": "klonos",
+        "timestamp": 1609897417
+    },
+    {
+        "content": "<p>...telemetry and any other core components should stay away from anything related to direct $$$-making.</p>",
+        "id": 221725171,
+        "sender_full_name": "klonos",
+        "timestamp": 1609897457
+    },
+    {
+        "content": "<p>Having said all that, I am not against developers and digital agencies making $$$ by providing Backdrop-related services.</p>",
+        "id": 221725191,
+        "sender_full_name": "klonos",
+        "timestamp": 1609897499
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> you're missing the point of the idea. Make it free for all I care.</p>",
+        "id": 221727071,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609899857
+    },
+    {
+        "content": "<p>The mention of money in context of the telemetry initiative triggered the open-source rebel in me. Sorry <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> ...can you please elaborate more re this bit:</p>\n<blockquote>\n<p>...for real-time updates on the telemetry of their sites.</p>\n</blockquote>\n<p>I don't understand the example use case you provided. Can you explain a bit more please?</p>",
+        "id": 221727224,
+        "sender_full_name": "klonos",
+        "timestamp": 1609900073
+    },
+    {
+        "content": "<p>The use of the word \"telemetry\" might have been a poor word choice. Give me a few to find an example</p>",
+        "id": 221727314,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609900155
+    },
+    {
+        "content": "<p>Something like this: <a href=\"https://www.drupal.org/project/drd\">https://www.drupal.org/project/drd</a> only handled by <a href=\"http://d.org\">d.org</a> directly.</p>\n<p>\"Telemetry\" in the sense that a user could see the aggregate telemetry data of a bunch of their BD sites all in one place.</p>\n<p>It's related to the telemetry initiative, but also not related...</p>\n<p>The reason I suggest to monetize it is because \"no, you don't need that service\". </p>\n<p>There are other \"free\" alternatives to accomplish the same thing. However, if it was an optional service provided directly by <a href=\"http://b.org\">b.org</a>, it's a way for large agencies to monetarily help contribute back to <a href=\"http://b.org\">b.org</a>.</p>\n<p>I'm in total agreement with you on your reasons for not wanting to monetize. However I also realize there are ways of making money within the community and for the community, without creating the bad environment associated with it. Those are the ideas I would like to see the community explore.</p>",
+        "id": 221727903,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609900901
+    },
+    {
+        "content": "<p>Sorry <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> for hijacking the topic 🥺</p>",
+        "id": 221728198,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609901337
+    },
+    {
+        "content": "<blockquote>\n<p>It's related to the telemetry initiative, but also not related...</p>\n</blockquote>\n<p>I'm thinking mostly not related <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...I wasn't aware of <a href=\"https://www.drupal.org/project/drd\">https://www.drupal.org/project/drd</a>, which seems to be a \"competitor\", or rather open-source, DIY version of <a href=\"https://www.drupal.org/project/system_status\">https://www.drupal.org/project/system_status</a> (which requires a paid subscription to <a href=\"https://lumturio.com\">https://lumturio.com</a>). The agency I work for uses Lumturio to manage/overview the security status of the sites we look after (but we're not very happy with it I must say; mainly due to reeeeeeaheeeely slooooow support responce times - even for their \"enterprise\" tier of customers)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://lumturio.com\" style=\"background-image: url(http://lumturio.com/Logo_www.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://lumturio.com\" title=\"Drupal and WordPress monitor\">Drupal and WordPress monitor</a></div><div class=\"message_embed_description\">Our platform will let you know instantly when security issues arise or critical updates are required.</div></div></div>",
+        "id": 221728753,
+        "sender_full_name": "klonos",
+        "timestamp": 1609902045
+    },
+    {
+        "content": "<p>Your idea seems similar to what <a href=\"https://canonical.com\">https://canonical.com</a> offer as a service on top of Ubuntu ...I can't recall the name of it though.</p>",
+        "id": 221728903,
+        "sender_full_name": "klonos",
+        "timestamp": 1609902233
+    },
+    {
+        "content": "<p>...ah, here it is: <a href=\"https://landscape.canonical.com\">https://landscape.canonical.com</a></p>",
+        "id": 221728942,
+        "sender_full_name": "klonos",
+        "timestamp": 1609902246
+    },
+    {
+        "content": "<p>That is a great business idea <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> ...it's been thought of before, but you can basically port <a href=\"https://www.drupal.org/project/drd\">https://www.drupal.org/project/drd</a> and once it works for Backdrop, then build a service around it ...in fact, it can support both Drupal and Backdrop sites I think.</p>",
+        "id": 221728989,
+        "sender_full_name": "klonos",
+        "timestamp": 1609902346
+    },
+    {
+        "content": "<p>I agree that we could possibly create a service like that, and the income should all be channeled towards the Backdrop community. But there are things like perhaps having to create a commercial entity behind it (which creeps me a bit, in fear that it might evolve to become the equivalent of Acquia for Backdrop) ...and also things like requiring permanent staff to man support, which will most likely need to be paid etc. We need to tread carefully I think.</p>",
+        "id": 221729181,
+        "sender_full_name": "klonos",
+        "timestamp": 1609902599
+    },
+    {
+        "content": "<p>Unless a Backdrop person/agency decided to do this themselves and then just donate part/all of the profits to Backdrop... <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 221729255,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609902670
+    },
+    {
+        "content": "<p>I would be all in to help with such an endeavour! <span aria-label=\"hand\" class=\"emoji emoji-270b\" role=\"img\" title=\"hand\">:hand:</span></p>",
+        "id": 221729272,
+        "sender_full_name": "klonos",
+        "timestamp": 1609902705
+    },
+    {
+        "content": "<p>(best effort and as time/life permits though)</p>",
+        "id": 221729312,
+        "sender_full_name": "klonos",
+        "timestamp": 1609902724
+    },
+    {
+        "content": "<p>Yeah, I've seen some 3rd party sites handle this in the past for Drupal. It's not a new idea by any stretch but I think a lot of folks would MUCH rather pay to have this housed directly on <a href=\"http://b.org\">b.org</a> than to pay a 3rd party company. (note: Not saying it needs to be a paid only service)</p>\n<p>I would take it as far as offering a way to remotely update all of those sites and be able to pick and choose which sites get which updates. Want to mass update all of the sites? Bam. Done. Want to only update a particular site or handful of sites? Done. This implementation would have to come a bit later when the \"automatic updates\" comes around.</p>\n<blockquote>\n<p>But there are things like perhaps having to create a commercial entity behind it (which creeps me a bit, in fear that it might evolve to become the equivalent of Acquia for Backdrop) ...and also things like requiring permanent staff to man support, which will most likely need to be paid etc. We need to tread carefully I think.</p>\n</blockquote>\n<p>I agree. I think the very first step is creating a \"code of conduct\" regarding the monetization side of things. I think a lot of open-source platforms that jump feet first into monetization, don't create a \"why\", they just create the \"how\". This leads to the problems you're afraid of.</p>",
+        "id": 221729365,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609902819
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-ops/conduct/blob/master/code_of_conduct.md\">https://github.com/backdrop-ops/conduct/blob/master/code_of_conduct.md</a></p>",
+        "id": 221729366,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1609902819
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  In regards to creating a commercial entity, I think the monetization of <a href=\"http://b.org\">b.org</a> will be perfectly fine under the non-profit entity. The point of a non-profit vs profit is one is designed for the betterment of the public, the other is designed for the betterment of the owners.</p>\n<p><a href=\"https://www.thebalancesmb.com/how-do-nonprofits-make-money-4779842\">https://www.thebalancesmb.com/how-do-nonprofits-make-money-4779842</a></p>\n<p>It would be perfectly fine for <a href=\"http://b.org\">b.org</a> to offer \"paid services\" that are used to fund the overall stability and growth of the organization. Since the entity is based within the US, this is perfectly acceptable according to the how the laws read and the classification of profit vs non-profit is purely for taxation purposes only. Here in the US (and I'm sure the rest of the world), there are for-profit organizations that act like non-profit and non-profit entities that act like for-profit. It's how the organization is fundamentally structured that determines its true purpose.</p>\n<p>You are right that the big question of how we deal with staff and compensation. Those are topics that need discussion for sure, but sometimes the answers to problems like that reveal themselves when the other pieces begin to fall in place.</p>\n<p>As a brain teaser, be thinking about a world where there was monetization within the backdrop organization and community and how it could be structured to maintain the open environment without damaging the integrity.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.thebalancesmb.com/how-do-nonprofits-make-money-4779842\" style=\"background-image: url(https://www.thebalancesmb.com/thmb/Rk5f-FB9MPXsZLRtyKTS6cI_lqA=/2119x1414/filters:fill(auto,1)/howdononprofitsmakemoney-6d860259e6954bbebf374bb51730ce99.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.thebalancesmb.com/how-do-nonprofits-make-money-4779842\" title=\"How Do Charities Make Money?\">How Do Charities Make Money?</a></div><div class=\"message_embed_description\">Nonprofits make money through donations and grants, or through the sale of products or services. Learn how that happens and what they do with the money.</div></div></div>",
+        "id": 221731421,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609905535
+    },
+    {
+        "content": "<p>I'm fine with backdrop, the organization, providing paid services. Maybe someday a competitor to Akismet and the now gone backup service for Drupal</p>",
+        "id": 221731624,
+        "sender_full_name": "Herb",
+        "timestamp": 1609905789
+    },
+    {
+        "content": "<blockquote>\n<p>Idea: create a webhook API that revolves around telemetry where a site owner can create an endpoint for their site(s) and have their site talk to <a href=\"http://b.org\">b.org</a> for real-time updates on the telemetry of their sites. For example, any time a module gets updated, it sends the intent to <a href=\"http://b.org\">b.org</a> and they can view details of their site that shows them at a glance, which sites have what modules.</p>\n</blockquote>\n<p>\"have their site talk to <a href=\"http://b.org\">b.org</a>\" ... <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span>  It's not the first time that I get the impression, you read \"1984\" as an instruction manual. Aggregating data is something that has to be done very carefully. Maybe not in Kansas, but for sure in Europe. Think of GPDR. A service like that very likely needs some lawyers to review every detail and a bullet proof contract.</p>",
+        "id": 221753651,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609929898
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> What does the GDPR say about non-personally-identifiable information? For example, can we collect information about websites like:</p>\n<blockquote>\n<p>A Backdrop site on the internet has the following modules installed: ...</p>\n</blockquote>\n<p>If the information can't be linked back to a specific person, business/organisation or website, is it still covered by the GDPR?</p>",
+        "id": 221753912,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609930093
+    },
+    {
+        "content": "<blockquote>\n<p>If the information can't be linked back to a specific person, business/organisation or website, is it still covered by the GDPR?</p>\n</blockquote>\n<p>I'm no lawyer. The big question would be if that's really the case (anonymous info) and how we could guarantee that. Even IP addresses are problematic. And if I get it right, we'd need some sort of unique key to identify the source of the information, likely this leads to situations, where the source (person/website) can be figured out.</p>",
+        "id": 221755011,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609930986
+    },
+    {
+        "content": "<blockquote>\n<p>we'd need some sort of unique key to identify the source of the information</p>\n</blockquote>\n<p>We can just hash the URL, or some other unique identifier, same as we do with passwords in the DB.</p>",
+        "id": 221755063,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609931024
+    },
+    {
+        "content": "<blockquote>\n<p>We can just hash the URL, or some other unique identifier,...</p>\n</blockquote>\n<p>Client-side I suppose? It might work, but I wouldn't bet on that.</p>",
+        "id": 221755476,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609931284
+    },
+    {
+        "content": "<p>The dashboard idea is an opt-in idea. You would have to copy keys from <a href=\"http://b.org\">b.org</a> and paste them into your site. If that isn't opt-in allowing consent of information, I don't know what else could make it more clear.</p>",
+        "id": 221758613,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609933743
+    },
+    {
+        "content": "<blockquote>\n<p>The dashboard idea is an opt-in idea.</p>\n</blockquote>\n<p>Opt-in or not, it'll still require a contract. How do they get the key? Anonymously or do they have to log in? If they log in, they are identifiable.</p>",
+        "id": 221759764,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609934630
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> login</p>\n<p>It would be a service, not a requirement so if someone from GDPR country is not comfortable with using it, they don't have to use it.</p>",
+        "id": 221819926,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609965449
+    },
+    {
+        "content": "<p>Looking into GDPR, it is very gray in how it's written, however the purpose of it isn't to stop the collection of personally identifiable, it's to ensure companies protect that data, don't re-sell it, don't mis-use that data and allow that data to be completely removed upon request by the end user. All that is required at the time of sign up is a consent form that informs the user of what data is collected and why. As long as the end-user gives  consent, the organization is allowed to collect it.</p>\n<p>Backdrop isn't in the business to use that data or sell that data for outside gain which means the collection of data is within the scope of GDPR so long as that data is securely protected in the event of a breach and if a breach has been found to compromise that data, the end-user must me notified within a reasonable time.</p>\n<p>This is obviously the nutshell version, but I don't think anything being discussed here is out of compliance with the GDPR.</p>",
+        "id": 221822239,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609966519
+    }
+]

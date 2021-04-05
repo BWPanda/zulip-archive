@@ -1,0 +1,104 @@
+[
+    {
+        "content": "<p>Found the reason! <a href=\"https://github.com/backdrop/backdrop-issues/issues/4933\">https://github.com/backdrop/backdrop-issues/issues/4933</a> Now we only need a solution for it. <span aria-label=\"smiling devil\" class=\"emoji emoji-1f608\" role=\"img\" title=\"smiling devil\">:smiling_devil:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4933\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4933\" title=\"Unable to save page after using CKEditor &quot;Maximize&quot; mode · Issue #4933 · backdrop/backdrop-issues\">Unable to save page after using CKEditor \"Maximize\" mode · Issue #4933 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug Sometimes I&#39;m not able to save a page after editing the body text in CKEditor. After hitting the &quot;Save&quot; button of the page edit form, the editor area changes: b...</div></div></div>",
+        "id": 230346225,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615815998
+    },
+    {
+        "content": "<p>Interesting, thanks for the research! (Unfortunately, I don't have any the needed JS skills.)</p>",
+        "id": 230349778,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615817265
+    },
+    {
+        "content": "<p>But this at least means, that you have a workaround for your client sites - just comment that single line and saving after using \"maximize\" works again. (And also double-click on form buttons, which this line tries to prevent).</p>",
+        "id": 230354993,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615819149
+    },
+    {
+        "content": "<p>Wow nice sleuthing <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>!</p>",
+        "id": 230377282,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1615825659
+    },
+    {
+        "content": "<p>Indeed. I just had a look, and it seems that once you've maximized then selected an image, any click of the node form \"Save\" button fires the submit handler twice, hence <code>Backdrop.behaviors.formSingleSubmit.onFormSubmit()</code> fires twice, and prevents default</p>",
+        "id": 230377808,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615825859
+    },
+    {
+        "content": "<p>FYI <code> e.stopImmediatePropagation();</code> at the start of that function fixes the problem without figuring out why it fires twice. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 230377980,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615825927
+    },
+    {
+        "content": "<blockquote>\n<p><code>e.stopImmediatePropagation();</code> at the start of that function fixes the problem ...</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>, I'd like to test this; \"that function\" would be the following?</p>\n<div class=\"codehilite\"><pre><span></span><code>function onFormSubmit (e) {\n      if (e.isDefaultPrevented()) {\n        // Don&#39;t act on form submissions that have been prevented by other JS.\n        return;\n      }\n</code></pre></div>\n<p>(<a href=\"https://github.com/backdrop/backdrop/blob/72b071a1842d9b745fc0fa28c069b20c6260984b/core/misc/form.js#L100\">https://github.com/backdrop/backdrop/blob/72b071a1842d9b745fc0fa28c069b20c6260984b/core/misc/form.js#L100</a>)</p>\n<p>And what does \"at the start\" exactly mean? Sorry for limited understanding.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/72b071a1842d9b745fc0fa28c069b20c6260984b/core/misc/form.js#L100\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/72b071a1842d9b745fc0fa28c069b20c6260984b/core/misc/form.js#L100\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 230429024,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615846553
+    },
+    {
+        "content": "<p>At the start of the function that <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> linked to: <a href=\"https://github.com/backdrop/backdrop/blob/72b071a1842d9b745fc0fa28c069b20c6260984b/core/misc/form.js#L109\">https://github.com/backdrop/backdrop/blob/72b071a1842d9b745fc0fa28c069b20c6260984b/core/misc/form.js#L109</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/72b071a1842d9b745fc0fa28c069b20c6260984b/core/misc/form.js#L109\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/72b071a1842d9b745fc0fa28c069b20c6260984b/core/misc/form.js#L109\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 230432483,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615847837
+    },
+    {
+        "content": "<p>So</p>\n<div class=\"codehilite\"><pre><span></span><code> * Lastly, all forms submitted via HTTP GET are idempotent by definition of HTTP\n * standards, so excluded in this implementation.\n */\nBackdrop.behaviors.formSingleSubmit = {\n  attach: function () {\n    function onFormSubmit (e) {\n      e.stopImmediatePropagation();\n      if (e.isDefaultPrevented()) {\n        // Don&#39;t act on form submissions that have been prevented by other JS.\n        return;\n      }\n      var $form = $(e.currentTarget);\netc\n</code></pre></div>",
+        "id": 230432595,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615847895
+    },
+    {
+        "content": "<p>I did wonder tho after posting if that line would actually stop the function from doing its job</p>",
+        "id": 230432663,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615847945
+    },
+    {
+        "content": "<p>Didnt test</p>",
+        "id": 230432676,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615847954
+    },
+    {
+        "content": "<p>Thank you! I'll try to test it tomorrow.</p>",
+        "id": 230432742,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615847999
+    },
+    {
+        "content": "<p>(the function is meant to prevent doubleclick the node save button from double submitting the node form)</p>",
+        "id": 230432804,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615848013
+    },
+    {
+        "content": "<p>I did some quick checks yesterday, when <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> posted his suggestion - double clicks are still prevented properly. <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> Hm, no PR yet? I'll give it a stab.</p>\n<p>BTW: this team workflow is soooo... Backdrop <span aria-label=\"heart eyes\" class=\"emoji emoji-1f60d\" role=\"img\" title=\"heart eyes\">:heart_eyes:</span></p>",
+        "id": 230466546,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615877314
+    },
+    {
+        "content": "<p>I didnt think this was <em>the</em> solution to be honest. I wonder if we should figure out why the submit button fires twice. Would that cause any handlers to fire twice?</p>",
+        "id": 230502951,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615897569
+    },
+    {
+        "content": "<p>Figuring out the reason, why \"Maximize\" seems to cause an additional event listener, would definitely be the cherry on top. That's over my head, though.</p>",
+        "id": 230503887,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615898076
+    },
+    {
+        "content": "<p>Tested PR in the sandbox, works for me!</p>",
+        "id": 230529130,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615907383
+    }
+]

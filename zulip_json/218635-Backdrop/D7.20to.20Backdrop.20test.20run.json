@@ -1,0 +1,128 @@
+[
+    {
+        "content": "<p>I'm trying to test a D7 to Backdrop upgrade using a very simplistic process:</p>\n<ol>\n<li>install a fresh D7 + admin_menu site</li>\n<li>without adding any content/files, take a backup of the D7 database</li>\n<li>install a fresh Backdrop site</li>\n<li>import the D7 database to the Backdrop site installation</li>\n<li>run <code>/update.php</code><br>\n...the result is that I am redirected to <code>/core/update.php</code>, but get a \"404 page not found\" error. Am I missing any steps?</li>\n</ol>",
+        "id": 219659778,
+        "sender_full_name": "klonos",
+        "timestamp": 1607719510
+    },
+    {
+        "content": "<p>Did you confirm the Backdrop site works properly first before any migration stuff? That'll tell you if your environment is correctly setup (<code>.htaccess</code>, etc.)</p>",
+        "id": 219659931,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607719580
+    },
+    {
+        "content": "<p>Destroying and rebuilding to answer that <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...</p>",
+        "id": 219660068,
+        "sender_full_name": "klonos",
+        "timestamp": 1607719668
+    },
+    {
+        "content": "<p>(btw, all this so that I can test <a href=\"https://github.com/backdrop/backdrop-issues/issues/4799\">https://github.com/backdrop/backdrop-issues/issues/4799</a> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> )</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4799\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4799\" title=\"&quot;Undefined index: distribution_name&quot; for Drupal migrations · Issue #4799 · backdrop/backdrop-issues\">\"Undefined index: distribution_name\" for Drupal migrations · Issue #4799 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">If a Drupal site is upgraded to Backdrop then the installation doesn&#39;t run and &#39;distribution_name&#39; doesn&#39;t get set. However when we get that information from the profile info file, ...</div></div></div>",
+        "id": 219660219,
+        "sender_full_name": "klonos",
+        "timestamp": 1607719735
+    },
+    {
+        "content": "<p>Confirmed <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...I can access the Backdrop site and log in as user1 (admin) after installation <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 219660615,
+        "sender_full_name": "klonos",
+        "timestamp": 1607719987
+    },
+    {
+        "content": "<p>...after importing the D7 db though, and trying to access update.php, I still get \"404 page not found\"</p>",
+        "id": 219660682,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720026
+    },
+    {
+        "content": "<p>Interesting... <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 219660794,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607720070
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> see my comment in <a href=\"https://github.com/backdrop/backdrop-issues/issues/4799\">https://github.com/backdrop/backdrop-issues/issues/4799</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4799\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4799\" title=\"&quot;Undefined index: distribution_name&quot; for Drupal migrations · Issue #4799 · backdrop/backdrop-issues\">\"Undefined index: distribution_name\" for Drupal migrations · Issue #4799 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">If a Drupal site is upgraded to Backdrop then the installation doesn&#39;t run and &#39;distribution_name&#39; doesn&#39;t get set. However when we get that information from the profile info file, ...</div></div></div>",
+        "id": 219661073,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720171
+    },
+    {
+        "content": "<p>...I'm trying to replicate the issues that were reported in <a href=\"https://forum.backdropcms.org/forum/post-drupal-7-migration-issue-notice-undefined-index-name\">https://forum.backdropcms.org/forum/post-drupal-7-migration-issue-notice-undefined-index-name</a></p>",
+        "id": 219661145,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720224
+    },
+    {
+        "content": "<p>...then test if your PR fixes things.</p>",
+        "id": 219661161,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720238
+    },
+    {
+        "content": "<p>Thanks <span aria-label=\"thumbs up\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"thumbs up\">:thumbs_up:</span></p>",
+        "id": 219661219,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607720277
+    },
+    {
+        "content": "<p>On a side note, I think my PR is worth merging just because of the code (without knowing what the code does, just reading over it, I think my changes make sense). But that's just me... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 219661351,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607720327
+    },
+    {
+        "content": "<p>...well, not sure about that <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...the code change seems simple and straight-forward, and I do notice that the function description says <code>Defaults to \"Backdrop CMS\" if none is explicitly provided by the installation profile</code> ...it is not clear that this happens before the changes, but it should do with your PR. ...I'm just not sure what side-effects that will have ...I mean, we'd be fixing a function to meet its intended use, but possibly breaking things that this far have been working with the current (although most likely wrong) behavior.</p>",
+        "id": 219662146,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720745
+    },
+    {
+        "content": "<p>...hence my efforts to test <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 219662234,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720779
+    },
+    {
+        "content": "<p>Sure</p>",
+        "id": 219662274,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607720802
+    },
+    {
+        "content": "<p>...anyway, I could use a sanity check with the steps I've outlined in the comment on that issue, and since I know that you use lando too <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> perhaps you could test and see what I might be missing.</p>",
+        "id": 219662381,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720873
+    },
+    {
+        "content": "<p>... <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> not sure if you are using lando as well, and if you have time/energy to test too please.</p>",
+        "id": 219662467,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720910
+    },
+    {
+        "content": "<p>Idea!!!: ...this could actually be a pre-release test we run, to make sure that we have not broken basic/vanilla D7 to Backdrop upgrades</p>",
+        "id": 219662555,
+        "sender_full_name": "klonos",
+        "timestamp": 1607720973
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I've moved the testing steps over to <a href=\"https://github.com/backdrop/backdrop-issues/issues/4801\">https://github.com/backdrop/backdrop-issues/issues/4801</a> <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4801\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4801\" title=\"Automatic testing of D7 to Backdrop upgrades as part of releases · Issue #4801 · backdrop/backdrop-issues\">Automatic testing of D7 to Backdrop upgrades as part of releases · Issue #4801 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This idea came to me while trying to test #4799 and while discussing this on Zulip: https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run Idea!!!: ...t...</div></div></div>",
+        "id": 219666554,
+        "sender_full_name": "klonos",
+        "timestamp": 1607723183
+    },
+    {
+        "content": "<p>Cool, taking a look</p>",
+        "id": 219681855,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607736718
+    },
+    {
+        "content": "<blockquote>\n<p>@indigoxela not sure if you are using lando as well, and if you have time/energy to test too please.</p>\n</blockquote>\n<p>No, I never used lando. I have a virtual machine, set up like I'd set up any webserver (Apache, MariaDB, php-fpm), with real (sub-)domains pointing to my dev webs. Sure, I'll try to reproduce the problem another time.</p>",
+        "id": 219701641,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1607768568
+    }
+]

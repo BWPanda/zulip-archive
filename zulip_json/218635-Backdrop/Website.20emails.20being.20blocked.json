@@ -1,0 +1,350 @@
+[
+    {
+        "content": "<p>One of my (Drupal) clients with an ecommerce store is having a lot of website emails (password resets, order notifications, etc. - I think they're called 'transactional' emails?) being blocked/bouncing due to different providers thinking they're spam (Bigpond (Australian ISP), Outlook, Hotmail). Do others here experience this with your websites/clients? If so, how do you get around it?</p>",
+        "id": 223188406,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611033515
+    },
+    {
+        "content": "<p>Do I need to configure my server differently or something? I have a Linode server with ~20 Drupal &amp; Backdrop clients' websites hosted on it.</p>",
+        "id": 223188501,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611033686
+    },
+    {
+        "content": "<p>SPF, DKIM and DMARC</p>",
+        "id": 223188506,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611033691
+    },
+    {
+        "content": "<p><a href=\"https://www.thewichitacomputerguy.com/blog/comprehensive-guide-email-authentication-spf-dkim-rdns-and-dmarc-records\">https://www.thewichitacomputerguy.com/blog/comprehensive-guide-email-authentication-spf-dkim-rdns-and-dmarc-records</a></p>",
+        "id": 223188552,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611033733
+    },
+    {
+        "content": "<p>There's \"easier\" docs out there, but that's the one I put together when I had to crash course it a few years back for the exact same problem</p>",
+        "id": 223188563,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611033767
+    },
+    {
+        "content": "<p>Blimey! That's a lot of information <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span> Thanks, I'll see if I can start reading through it later <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>",
+        "id": 223188647,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611033890
+    },
+    {
+        "content": "<p>Yeah, I didn't want to have to go digging through 20 other sites to find the info if I forgot it <span aria-label=\"rolling on the floor laughing\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rolling on the floor laughing\">:rolling_on_the_floor_laughing:</span></p>",
+        "id": 223188884,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611034318
+    },
+    {
+        "content": "<p>I guarantee that's the problem though</p>",
+        "id": 223188929,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611034381
+    },
+    {
+        "content": "<p>HMU if you have any questions <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 223189082,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611034619
+    },
+    {
+        "content": "<p>So Backdrop's done this for <a href=\"http://B.org\">B.org</a>...? Do you have to do it per domain, or per server?</p>",
+        "id": 223189532,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611035343
+    },
+    {
+        "content": "<p>SPF &amp; DMARC = per domain<br>\nDKIM = per email sending server (website email, gmail, microsoft outlook mail, mail chimp, quickbooks, stripe; basically any sending server that is sending on the behalf of your domain must generate a DKIM key which is then added to your DNS)</p>",
+        "id": 223191787,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611038262
+    },
+    {
+        "content": "<blockquote>\n<p>BWPanda: So Backdrop's done this for <a href=\"http://B.org\">B.org</a>...?</p>\n</blockquote>\n<p><strong>SPF</strong><br>\n<a href=\"http://backdropcms.org\">backdropcms.org</a> text = \"v=spf1 include:<a href=\"http://spf.sendinblue.com\">spf.sendinblue.com</a> mx ~all\"<br>\n<a href=\"http://backdropcms.org\">backdropcms.org</a> text = \"v=spf1 a mx a:<a href=\"http://spf.backdropcms.org\">spf.backdropcms.org</a> include:<a href=\"http://spf.efwd.registrar-servers.com\">spf.efwd.registrar-servers.com</a> include:<a href=\"http://spf.mandrillapp.com\">spf.mandrillapp.com</a> include:<a href=\"http://sparkpostmail.com\">sparkpostmail.com</a> include:<a href=\"http://spf.mailjet.com\">spf.mailjet.com</a> -all\"</p>\n<p>Technically, there should only be one spf record on @. There are two. The <a href=\"http://sendinblue.com\">sendinblue.com</a> one needs to be merged with the long one.</p>\n<p><strong>DKIM</strong><br>\n<a href=\"http://mail._domainkey.backdropcms.org\">mail._domainkey.backdropcms.org</a>    text = \"k=rsa\\;p=MIGfMA........</p>\n<p>dkim keys are harder to find due to the sending server requirements. I found the one for the hosting service (website emails) but if there are other emails going out through other services, the DKIM for those will be more difficult to find.</p>\n<p><strong>DMARC</strong><br>\n<a href=\"http://_dmarc.backdropcms.org\">_dmarc.backdropcms.org</a> text = \"v=DMARC1\\; p=quarantine\\; pct=100\\; rua=mailto:qryt3azx@ag.dmarcian.com,mailto:dmarc@mailinblue.com!10m\\; ruf=mailto:dmarc@mailinblue.com!10m\\; sp=none\\; rf=afrf\\; ri=86400\"</p>\n<hr>\n<p>To answer your question, yes, it looks like <a href=\"http://b.org\">b.org</a> is good to go :-)</p>",
+        "id": 223192416,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611039080
+    },
+    {
+        "content": "<p>Looking at the DMARC rule, the <strong>sp=none</strong> needs to be removed. It opens up email spoofing on all <a href=\"http://b.org\">b.org</a> subdomains. By default all sub-domains use the same rule as the parent domain \"unless\" sp= (subdomain) is specified to something different than p= (the parent).</p>\n<p>Sub-domains can have their own DMARC policy, but in this case, <a href=\"http://b.org\">b.org</a> is saying \"quarantine all emails that don't match SPF or DKIM for <a href=\"http://b.org\">b.org</a>, but allow all emails on a subdomain pass through even if they don't match SPF and DKIM\".</p>\n<p>The specs and info on DMARC are horrible at best. Very spotty information and difficult to make heads or tails of.<br>\n<a href=\"https://dmarc.org/\">https://dmarc.org/</a><br>\n<a href=\"https://tools.ietf.org/html/rfc7489\">https://tools.ietf.org/html/rfc7489</a></p>",
+        "id": 223192889,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611039737
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> How do you check all that? I'd like to test my client's address to see if anything's been done already... Some of it (the SPF stuff in particular) sounds familiar. I might have done that already in the past...</p>",
+        "id": 223193647,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611040677
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> </p>\n<p>There's lots of tools. Mxtoolbox is usually a good one to start with and covers pretty much all of them: <a href=\"https://mxtoolbox.com/SuperTool.aspx\">https://mxtoolbox.com/SuperTool.aspx</a></p>\n<p>Quick question, do you have any emails from them? Checking the email headers of an email sent from their site is a good first place to check. See what is being sent and what is passing or failing.</p>\n<p><strong> SPF Checkers </strong><br>\n<a href=\"https://dmarcian.com/spf-survey/\">https://dmarcian.com/spf-survey/</a><br>\n<a href=\"https://www.dmarcanalyzer.com/spf/checker/\">https://www.dmarcanalyzer.com/spf/checker/</a></p>\n<p><strong> DMARC Checkers </strong><br>\n<a href=\"https://dmarcian.com/dmarc-inspector/\">https://dmarcian.com/dmarc-inspector/</a><br>\n<a href=\"https://www.dmarcanalyzer.com/dmarc/dmarc-record-check/\">https://www.dmarcanalyzer.com/dmarc/dmarc-record-check/</a></p>\n<p><strong> DKIM </strong><br>\nIt is best to dig into the DNS itself (if you have access) and look for the DKIM keys directly within the DNS.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://mxtoolbox.com/SuperTool.aspx\" style=\"background-image: url(https://mxtoolbox.com/Public/Images/logo_square_1900.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://mxtoolbox.com/SuperTool.aspx\" title=\"Network Tools: DNS,IP,Email\">Network Tools: DNS,IP,Email</a></div><div class=\"message_embed_description\">DNS and Network troubleshooting and diagnostic tools integrated into one sweet interface.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://dmarcian.com/spf-survey/\" style=\"background-image: url(https://dmarcian.com/wp-content/uploads/2018/06/website-preview.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://dmarcian.com/spf-survey/\" title=\"SPF Record Checker - Free SPF Lookup\">SPF Record Checker - Free SPF Lookup</a></div><div class=\"message_embed_description\">dmarcian's SPF Record Checker presents a Graphical View to Quickly Identify which Servers are Authorized to Send on behalf of a Domain.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://dmarcian.com/dmarc-inspector/\" style=\"background-image: url(https://dmarcian.com/wp-content/uploads/2018/06/website-preview.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://dmarcian.com/dmarc-inspector/\" title=\"Free DMARC Check &amp; Record Test - DMARC Inspector\">Free DMARC Check &amp; Record Test - DMARC Inspector</a></div><div class=\"message_embed_description\">Want to Check a Domain's DMARC Record? Use our DMARC Inspector and Check any Domain for a DMARC Record. dmarcian, #1 in DMARC.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.dmarcanalyzer.com/dmarc/dmarc-record-check/\" style=\"background-image: url(https://www.dmarcanalyzer.com/app/uploads/2019/07/DMARC-failed-DMARC-analyzer.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.dmarcanalyzer.com/dmarc/dmarc-record-check/\" title=\"DMARC record Checker | DMARC record Tester - Mimecast | DMARC Analyzer\">DMARC record Checker | DMARC record Tester - Mimecast | DMARC Analyzer</a></div><div class=\"message_embed_description\">Need to check your DMARC record? ➨ Free DMARC record Checker - Validate your DMARC record with the DMARC record Checker ✓ All about: How to check your DMARC record - DMARC record lookup - DMARC record tester - DMARC record validator - Mimecast | DMARC Analyzer Trusted Email. Delivered.</div></div></div>",
+        "id": 223194019,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611041106
+    },
+    {
+        "content": "<p>Yes, the client has forwarded me a few of the bounced messages</p>",
+        "id": 223194040,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611041141
+    },
+    {
+        "content": "<p>Those won't work because they forwarded it. You will need an email that is coming directly from the server unless you can get the customer to copy all of the original header info and send it over. Unless that's what you're referring to ;-)</p>",
+        "id": 223194103,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611041205
+    },
+    {
+        "content": "<p>Ah ok, I can sign up to their website which will email me a password.</p>",
+        "id": 223194201,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611041301
+    },
+    {
+        "content": "<p>Yeah that would be enough. That is, if you actually get it ;-)</p>",
+        "id": 223194221,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611041334
+    },
+    {
+        "content": "<p>Feel free to PM me the domain if you want me to take a peek to see if I can learn anything.</p>",
+        "id": 223194246,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611041381
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> not sure about other providers, but Linodes are known to have such issues, because their IP ranges get blocked on a global scale, due to some IPs being used by spam-sending bots etc. ...at least that's what I recall from when I had to deal with this years ago. But yeah, we've also sorted that issue for <a href=\"http://b.org\">b.org</a>, so <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> and/or <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> should be able to provide more on that.</p>",
+        "id": 223215511,
+        "sender_full_name": "klonos",
+        "timestamp": 1611056825
+    },
+    {
+        "content": "<p>Another possibility: set up SMTP authentication module and send from the website through an actual email address instead of through the server.</p>",
+        "id": 223274919,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611082615
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> It can be a lot of work to take that approach. I usually recommend configuring an SMTP relay using msmtp or postfix. Configure the SMTP relay to use a mail account such as Gmail or something similar. For enterprise, Amazon's SES service is easy to get rolling.</p>",
+        "id": 223280932,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611084942
+    },
+    {
+        "content": "<p>Most of my clients over the years have or can create an e-mail account with their domain that can be used for the relay.</p>",
+        "id": 223281055,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611084979
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> <a href=\"https://gist.github.com/larsdesigns/1dcd73a803b16e2801bc5d858e06de65\">https://gist.github.com/larsdesigns/1dcd73a803b16e2801bc5d858e06de65</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://gist.github.com/larsdesigns/1dcd73a803b16e2801bc5d858e06de65\" style=\"background-image: url(https://github.githubassets.com/images/modules/gists/gist-og-image.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://gist.github.com/larsdesigns/1dcd73a803b16e2801bc5d858e06de65\" title=\"/etc/msmtprc\">/etc/msmtprc</a></div><div class=\"message_embed_description\">/etc/msmtprc. GitHub Gist: instantly share code, notes, and snippets.</div></div></div>",
+        "id": 223282375,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611085516
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span>. Would configuring msmtp be a similar alternative to installing the SMTP module for a Drupal/Backdrop site? <a href=\"https://github.com/backdrop-contrib/smtp\">https://github.com/backdrop-contrib/smtp</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/smtp\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/smtp\" title=\"backdrop-contrib/smtp\">backdrop-contrib/smtp</a></div><div class=\"message_embed_description\">Backdrop CMS port of the SMTP module for Drupal 7. Contribute to backdrop-contrib/smtp development by creating an account on GitHub.</div></div></div>",
+        "id": 223282886,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611085701
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> yes it is similar.</p>",
+        "id": 223283553,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611085946
+    },
+    {
+        "content": "<p>I have found it to give better performance. The SMTP module is usually the go-to for a shared hosting situation. It works fine also.</p>",
+        "id": 223283904,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611086064
+    },
+    {
+        "content": "<p>So just to confirm: if I use the SMTP module, or setup msmtp, I don't have to do any of the things <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> mentioned (SPF, dmarc, dkim)? Or are some/all those still required?</p>",
+        "id": 223284413,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611086249
+    },
+    {
+        "content": "<p>You will not need to setup spf, dmarq or anything else. The e-mail service provider should have those things taken care of.</p>",
+        "id": 223290437,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611088613
+    },
+    {
+        "content": "<p>To a degree, I'm going to have to disagree with <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> </p>\n<p>These things are still required if the relay is sending email on your domains behalf.</p>\n<p>Case-in-point If you didn't need these authentication protocols for your domain when using a relay, the protocols would be completely useless as any spoofer could simply use a relay to send email on any domains behalf. You still have to setup the SPF for the relay IPs, the sending server still needs to have the DKIM key for authenticating the relay with your domain and the DMARC is for the given domain.</p>\n<p>The incoming email server doesn't care where the email came from as long as the incoming email can say \"yes, I'm legit\", something a relay can only do on its own domains behalf.</p>\n<p>Unless I'm missing something in the conversation, the 3 records are still mandatory no matter what. The only one that is different is the DKIM because you're using the key from the relay instead of the hosting platform.</p>\n<p><a href=\"https://dmarcian.com/smtp-relay-for-third-party-sender-dmarc-compliance/\">https://dmarcian.com/smtp-relay-for-third-party-sender-dmarc-compliance/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://dmarcian.com/smtp-relay-for-third-party-sender-dmarc-compliance/\" style=\"background-image: url(https://dmarcian.com/wp-content/uploads/2018/06/website-preview.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://dmarcian.com/smtp-relay-for-third-party-sender-dmarc-compliance/\" title=\"SMTP Relay for Third Party Sender DMARC Compliance - dmarcian\">SMTP Relay for Third Party Sender DMARC Compliance - dmarcian</a></div><div class=\"message_embed_description\">How can you eventually move to a p=reject policy when third parties are unable to send email properly on your behalf? In many cases, a DMARC compliant SMTP relay server can be used to do the trick. In this article, we’ll explore some of the facets of sending DMARC compliant email from third parties, what...</div></div></div>",
+        "id": 223303085,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611094010
+    },
+    {
+        "content": "<p>Sure, it \"will work\" but you're back to square 1 with a new puzzle piece in the mix.</p>",
+        "id": 223303682,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611094270
+    },
+    {
+        "content": "<p>The <a href=\"https://backdropcms.org/project/smtp\">SMTP Authentication Support</a> module (and the <a href=\"https://github.com/backdrop-contrib/phpmailer\">PHPMailer</a> module) work by sending email through some admin specified email account, which the admin has to provide valid credentials for. They don't come from the web server but from the email server of the admin specified email account. If the email server/domain for that email account has the SPF/DKIM/DMARC set up, nothing else needs to be done. If it doesn't, an email or phone call to the email server owner is all that can be done. Most people use a GMail account with those modules.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/phpmailer\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/phpmailer\" title=\"backdrop-contrib/phpmailer\">backdrop-contrib/phpmailer</a></div><div class=\"message_embed_description\">SMTP support for Backdrop CMS with PHPMailer. Contribute to backdrop-contrib/phpmailer development by creating an account on GitHub.</div></div></div>",
+        "id": 223305310,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611095014
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> </p>\n<blockquote>\n<p>If the email server/domain for that email account has the SPF/DKIM/DMARC set up, nothing else needs to be done.</p>\n</blockquote>\n<p>Right. I use Workspace(place?) for my domains email. I still had to setup all of those records for MY domain in order to get it to work. Point is, it doesn't matter where the email routes, if you want the email to come from your domain, you have to set it up for your domain.</p>\n<p>If I were to use a relay with an email <a href=\"mailto:something@gmail.com\">something@gmail.com</a> then yes, this discussion is relevant. But if I want email to come from <a href=\"http://acme.com\">acme.com</a>, it doesn't matter who sends it, I still have to setup those records for <a href=\"http://acme.com\">acme.com</a> regardless of whether the hosting server sends it or a relay sends it.</p>",
+        "id": 223306146,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611095447
+    },
+    {
+        "content": "<p>Clear as mud <span aria-label=\"big smile\" class=\"emoji emoji-1f604\" role=\"img\" title=\"big smile\">:big_smile:</span> No seriously, this is all very helpful, thanks! I <em>am</em> trying to have my client send emails from her own domain address, so will look into all those things. First thing is getting her email password and setting up SMTP module.</p>",
+        "id": 223306406,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611095591
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> I see you're the maintainer for the phpmailer module. What's the benefit of that over the SMTP module?</p>",
+        "id": 223306558,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611095659
+    },
+    {
+        "content": "<p>I also maintained the SMTP module's D5 and D6 branches for a few years. For the Drupal modules, I think the biggest benefit is that the PHPMailer module uses the <a href=\"https://github.com/PHPMailer/PHPMailer\">PHPMailer library</a>, so that is as current as you want it to be, and the library maintainer is active and responsive. The SMTP module incorporated parts of the PHPMailer library into its code base many years ago, so it isn't getting any of the updates the library maintainer is putting into it. For the Backdrop modules, with the way Backdrop treats libraries, that benefit is negated. As far as the details of the modules go, I don't remember, as I haven't been a very active maintainer for a while.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/PHPMailer/PHPMailer\" style=\"background-image: url(https://repository-images.githubusercontent.com/2253830/76f5e300-dfa3-11e9-9f51-9571102b4fc9)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/PHPMailer/PHPMailer\" title=\"PHPMailer/PHPMailer\">PHPMailer/PHPMailer</a></div><div class=\"message_embed_description\">The classic email sending library for PHP. Contribute to PHPMailer/PHPMailer development by creating an account on GitHub.</div></div></div>",
+        "id": 223308329,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611096798
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span>,   <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> Jason is correct. The PHPMailer and the SMTP relay for msmtp works very much the same way. SPF, DKIM, etc are not necessary for the configuration that I posted. Those records need to be in place for the email provider. For example I used gmail to send e-mail for <a href=\"http://larsdesigns.net\">larsdesigns.net</a>. I have the records necessary for the gmail server to relay the e-mail but I do not need them for the source host(s). This way I can have and do have many different web hosts, phones apps, etc sending mail using the gmail account.</p>",
+        "id": 223309573,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611097616
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> playing devil's advocate, mind sharing the original headers for one of those emails?</p>",
+        "id": 223309959,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611097859
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> I think you are confused about setting up an smtp relay and settings up a smtp server.</p>",
+        "id": 223310101,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611097952
+    },
+    {
+        "content": "<p>If you look at the config file I posted you will see it is a relay configuration with authentication.</p>",
+        "id": 223310128,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611097975
+    },
+    {
+        "content": "<p>The smtp server would need dkim, dmarq, spf etc. it is not necessary for a relay. I hope this is helpful.</p>",
+        "id": 223310292,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611098088
+    },
+    {
+        "content": "<p>For <a href=\"http://backdropcms.org\">backdropcms.org</a> we are not using a relay. We are actually using postfix as the smtp server to send the mail. So we have dkim, dmarq etc configured. But we may end up relaying to an SMTP server/service provided by SendGrid or Amazon SES in future. Depends a bit on the e-mail quantity and the number hosts that the community grows into.</p>",
+        "id": 223310578,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611098267
+    },
+    {
+        "content": "<p>The dns records would then need to be updated for the new smtp server and not the originating host.</p>",
+        "id": 223311469,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611098915
+    },
+    {
+        "content": "<p>Anyway, I think this topic has been worked over.</p>",
+        "id": 223311519,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611098978
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Quick question...</p>\n<p>Are none of the emails getting delivered? or some are and some aren't?</p>",
+        "id": 223320916,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611106023
+    },
+    {
+        "content": "<p>I believe only some (to certain email providers (i.e. Hotmail, Outlook, etc.)) are being blocked. Rest are fine.</p>",
+        "id": 223320960,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611106059
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Quick question back at you... If <a href=\"https://mxtoolbox.com/blacklists.aspx\">https://mxtoolbox.com/blacklists.aspx</a> reports that my server's IP address is listed on a blacklist, will adding/configuring SPF, DMARC &amp; DKIM records fix that. Or is it already too late?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://mxtoolbox.com/blacklists.aspx\" style=\"background-image: url(https://mxtoolbox.com/Public/Images/logo_square_1900.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://mxtoolbox.com/blacklists.aspx\" title=\"Email Blacklist Check - IP Blacklist Check - See if your server is blacklisted\">Email Blacklist Check - IP Blacklist Check - See if your server is blacklisted</a></div><div class=\"message_embed_description\"> The blacklist check will test a mail server IP address against over 100 DNS based email blacklists. (Commonly called Realtime blacklist, DNSBL or RBL).  If your mail server has been blacklisted, some email you send may not be delivered.  Email blacklists are a common way of reducing spam.  If you don't know your mail server's address, start with a MX Lookup.   Or, just send an email to ping@tools.mxtoolbox.com</div></div></div>",
+        "id": 223321836,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611106707
+    },
+    {
+        "content": "<p>Oooo, that's a good question. I think using the relay will fix this particular problem. If any providers have blocked the domain itself due to the server IP being banned and associated with that server IP, then the SPF and DMARC records might help here.</p>",
+        "id": 223321939,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611106802
+    },
+    {
+        "content": "<p>Well this is cool! Copy the raw email headers into this and it will output a pretty format of sending details.</p>\n<p><a href=\"https://toolbox.googleapps.com/apps/messageheader/analyzeheader\">https://toolbox.googleapps.com/apps/messageheader/analyzeheader</a></p>",
+        "id": 223339779,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611127856
+    },
+    {
+        "content": "<p>I didn't want to advertise services of my own company here, but some could find useful all the tools we list for our customers on <a href=\"https://www.altagrade.com/help/tools/online-tools\">https://www.altagrade.com/help/tools/online-tools</a>. </p>\n<p>Also, if your mail-related issues persists on other hosting providers, please consider switching to AltaGrade and subscribing to DMARC Compliance service explained on <a href=\"https://www.altagrade.com/help/tutorials/order-services\">https://www.altagrade.com/help/tutorials/order-services</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.altagrade.com/help/tools/online-tools\" style=\"background-image: url(https://www.altagrade.com/sites/default/files/altagrade.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.altagrade.com/help/tools/online-tools\" title=\"Online Tools • AltaGrade\">Online Tools • AltaGrade</a></div><div class=\"message_embed_description\">There are many good command line tools to measure websites' performance. We have compiled a list of particularly useful online tools here, so that our customers could run different tests and checks for their Drupal, Backdrop and WordPress projects on AltaGrade servers.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.altagrade.com/help/tutorials/order-services\" style=\"background-image: url(https://www.altagrade.com/sites/default/files/altagrade.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.altagrade.com/help/tutorials/order-services\" title=\"Order additional services • AltaGrade\">Order additional services • AltaGrade</a></div><div class=\"message_embed_description\">To order additional services you must have an active AltaGrade hosting plan for your own account or the account of the person who invited you to their team. You can order additional services by clicking on the Order link on the right top corner of your AltaGrade Dashboard if your team has a single hosting plan. If you have multiple hosting plans, then we recommend to order</div></div></div>",
+        "id": 223355992,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611138544
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Website.20emails.20being.20blocked/near/223321836\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> Quick question back at you... If <a href=\"https://mxtoolbox.com/blacklists.aspx\">https://mxtoolbox.com/blacklists.aspx</a> reports that my server's IP address is listed on a blacklist, will adding/configuring SPF, DMARC &amp; DKIM records fix that. Or is it already too late?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> You will need to fix whatever problem got you blacklisted in the first place, and then you will need to get yourself removed from whatever blacklist(s) you are on. For some, it will just be a waiting game. For others, you need to go to their website and perform some action. The method of removal depends on the blacklist, so you need to go to their site(s) and find that information there. Also, if you are on multiple blacklists you might have to do it for each one, depending on which one(s) you are on.</p>",
+        "id": 223398639,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611160499
+    },
+    {
+        "content": "<p>After reading <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> comment, it reminded me that incoming servers (if configured this way) will check the IP of the email domain. If the email domain IP is blacklisted, they might block it regardless of whether the email itself was sent from that IP or a clean IP. In theory. I don't have any real world experience on this particular topic. So like <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> mentioned, you might have to find a clean IP for the customer. I'd probably leave this for last if it were me because it probably has the highest overhead to accomplish.</p>",
+        "id": 223428659,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611173615
+    },
+    {
+        "content": "<p>Yes, I have my email server configured to reject emails from blacklisted domains. I don't remember if I'm also rejecting emails from blacklisted IPs.</p>",
+        "id": 223431154,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611174773
+    },
+    {
+        "content": "<p>So it seems it's not my IP address that's the problem after all. Apparently Linode itself has been blacklisted: <a href=\"http://www.uceprotect.net/en/rblcheck.php?asn=63949\">http://www.uceprotect.net/en/rblcheck.php?asn=63949</a> I've opened a support ticket with them, but not sure what, if anything, they can/will do...</p>",
+        "id": 223445914,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611181514
+    },
+    {
+        "content": "<p>Linode replied:</p>\n<blockquote>\n<p>Thanks for reaching out about this and for taking the time to investigate and get us all of that information. We've gotten multiple reports about this blocklist over the last day or two.</p>\n<p>Our Trust and Safety team has investigated on our end, and we can let you know that this particular blocklist is not considered reputable by industry standards. It engages in a predatory practice of charging for delisting. As such, it is our recommendation that clients do not reference it with their mail servers.</p>\n<p>I've gone ahead and checked the Spamhaus SBL, a reputable blocklist, and currently your IP is not listed there. As the IP is not listed, it is unlikely that you will experience deliverability issues.</p>\n<p>With that said, there is no way for us to manually request delisting of our ASN from UCEPROTECT. However, this listing should expire automatically. This typically takes 1 to 7 days.</p>\n<p>Please let us know if you have any questions or need anything else.</p>\n</blockquote>",
+        "id": 223450616,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611184430
+    },
+    {
+        "content": "<blockquote>\n<p>Apparently Linode itself has been blacklisted</p>\n</blockquote>\n<p>I did mention that in my response here: <a href=\"#narrow/stream/218635-Backdrop/topic/Website.20emails.20being.20blocked/near/223215511\">https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Website.20emails.20being.20blocked/near/223215511</a> ...been bitten by this multiple times unfortunately.</p>",
+        "id": 223451650,
+        "sender_full_name": "klonos",
+        "timestamp": 1611185260
+    },
+    {
+        "content": "<blockquote>\n<blockquote>\n<p>...and we can let you know that this particular blocklist is not considered reputable by industry standards. It engages in a predatory practice of charging for delisting. As such, it is our recommendation that clients do not reference it with their mail servers.</p>\n</blockquote>\n</blockquote>\n<p>Unfortunately, that is a problem, as it is elsewhere with unscrupulous people who try to take advantage of others.</p>",
+        "id": 223452424,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611185806
+    }
+]

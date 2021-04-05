@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>I have a feeling this is something that wasn't required in Drupal 7. I just tested on a fresh Backdrop site. A non-admin user with \"Create post\" but no permission for \"view published content\". I would have thought that the user would be able to add the node but not view it. But that doesn't seem to be the case.</p>",
+        "id": 224924630,
+        "sender_full_name": "Herb",
+        "timestamp": 1612294782
+    },
+    {
+        "content": "<blockquote>\n<p>I have a feeling this is something that wasn't required in Drupal 7...</p>\n</blockquote>\n<p>Your feeling's misleading. The behavior is like in D7. Without the \"view\" permission (\"access content\") you can't create/edit.</p>",
+        "id": 224980524,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1612335697
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>. I had thought one would be able to create the node but get an access denied after saving. But that's fine. I'm doing a d7 upgrade so want it to behave the same</p>",
+        "id": 225010963,
+        "sender_full_name": "Herb",
+        "timestamp": 1612357263
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  Ah, I think I know, what you had in mind: when nodes are unpublished by default, and unprivileged users don't have the permission to see unpublished content... When they save a node, they're not allowed to see it after saving.</p>",
+        "id": 225015669,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1612359499
+    }
+]

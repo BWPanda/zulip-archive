@@ -1,0 +1,206 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html">Term name as body class</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="211058567"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211058567" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211058567">(Sep 23 2020 at 20:33)</a>:</h4>
+<p>How can I add a taxonomy term name (or the term ID) to the <code>body</code> tag of a node? I guess put something in <code>template.php</code>, but what?</p>
+
+
+
+<a name="211060174"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211060174" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211060174">(Sep 23 2020 at 20:46)</a>:</h4>
+<p>Since you want to change the body tag, and since it's set in <code>page.tpl.php</code>, then you'll want to implement <code>hook_preprocess_page()</code> in a custom module or your theme. You should be able to get the current NID from the URL, load the node, then get the term from there. Then just add it as a class to the <code>$classes</code> array.</p>
+
+
+
+<a name="211061319"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211061319" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211061319">(Sep 23 2020 at 20:57)</a>:</h4>
+<p>Thanks for your hints, <span class="user-mention" data-user-id="256607">@BWPanda</span> ! Unfortunately, I still don't know which code to write when I read something like "get the term from there".</p>
+
+
+
+<a name="211061416"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211061416" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211061416">(Sep 23 2020 at 20:58)</a>:</h4>
+<p>I've had also a look in Drupal land and found e.g. this snippet which looks similar to what you suggest (adapted to my theme and partly to Backdrop):</p>
+<div class="codehilite"><pre><span></span><code>function salon_preprocess_page(&amp;$variables) {
+  if(arg(0)==&#39;node&#39; &amp;&amp; is_numeric(arg(1))) {
+    $node = node_load(arg(1));
+    $results = _salon_taxonomy_node_get_terms($node);
+    if(is_array($results)) {
+      foreach ($results as $item) {
+        $variables[&#39;classes_array&#39;][] = &quot;taxonomy-&quot;.strtolower(backdrop_clean_css_identifier($item-&gt;name));
+      }
+    }
+  }
+}
+
+function _salon_taxonomy_node_get_terms($node, $key = &#39;tid&#39;) {
+  static $terms;
+  if (!isset($terms[$node-&gt;vid][$key])) {
+    $query = db_select(&#39;taxonomy_index&#39;, &#39;r&#39;);
+    $t_alias = $query-&gt;join(&#39;taxonomy_term_data&#39;, &#39;t&#39;, &#39;r.tid = t.tid&#39;);
+    $v_alias = $query-&gt;join(&#39;taxonomy_vocabulary&#39;, &#39;v&#39;, &#39;t.vid = v.vid&#39;);
+    $query-&gt;fields( $t_alias );
+    $query-&gt;condition(&quot;r.nid&quot;, $node-&gt;nid);
+    $result = $query-&gt;execute();
+    $terms[$node-&gt;vid][$key] = array();
+    foreach ($result as $term) {
+      $terms[$node-&gt;vid][$key][$term-&gt;$key] = $term;
+    }
+  }
+  return $terms[$node-&gt;vid][$key];
+}
+</code></pre></div>
+
+
+<p>Result is an error: Base table or view not found: 1146 Table 'taxonomy_vocabulary' doesn't exist. Maybe because it's not a table anymore but in configuration?</p>
+
+
+
+<a name="211061879"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211061879" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211061879">(Sep 23 2020 at 21:02)</a>:</h4>
+<p>Hm, maybe I should try to port <a href="https://www.drupal.org/project/term_body_class">https://www.drupal.org/project/term_body_class</a> instead.</p>
+
+
+
+<a name="211062367"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211062367" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211062367">(Sep 23 2020 at 21:07)</a>:</h4>
+<p>I can help more later if you haven't solved it by then.</p>
+
+
+
+<a name="211062882"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211062882" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211062882">(Sep 23 2020 at 21:11)</a>:</h4>
+<p>Thanks, very kind! In the meantime, I'll give Term Body Class a try (<a href="https://github.com/backdrop-contrib/term_body_class">https://github.com/backdrop-contrib/term_body_class</a>, for now not touched).</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/term_body_class" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/term_body_class" title="backdrop-contrib/term_body_class">backdrop-contrib/term_body_class</a></div><div class="message_embed_description">Contribute to backdrop-contrib/term_body_class development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="211071086"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211071086" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211071086">(Sep 23 2020 at 22:39)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> I've started to port <a href="https://github.com/backdrop-contrib/term_body_class">Term Body Class</a>, but it's not working yet. Interested to have a look? Code is really small. The module provides an <code>Add as body class</code> checkbox on the field settings of a taxonomy field, e.g. on the Tags field of content type Post. Problem: When I check the box, the value doesn't get saved: After Save, I return to the setting page, and the box is unchecked. Ideas?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/term_body_class" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/term_body_class" title="backdrop-contrib/term_body_class">backdrop-contrib/term_body_class</a></div><div class="message_embed_description">Contribute to backdrop-contrib/term_body_class development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="211072960"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211072960" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211072960">(Sep 23 2020 at 23:06)</a>:</h4>
+<p>I'll see if I can take a look later. In the meantime, here's some working code that I was talking about earlier (adjust as necessary):</p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">/**</span>
+<span class="x"> * Implements template_preprocess_page().</span>
+<span class="x"> */</span>
+<span class="x">function [THEME_NAME]_preprocess_page(&amp;$variables) {</span>
+<span class="x">  // Check if this page is a node.</span>
+<span class="x">  if (arg(0) == 'node' &amp;&amp; is_numeric(arg(1))) {</span>
+<span class="x">    // Load the full node object.</span>
+<span class="x">    $node = node_load(arg(1));</span>
+<span class="x">    // Only apply this to certain content types (e.g. post).</span>
+<span class="x">    if ($node-&gt;type == 'post') {</span>
+<span class="x">      // Only apply this certain fields (e.g. field_tags, i.e. the tags vocab).</span>
+<span class="x">      if (isset($node-&gt;field_tags[$node-&gt;langcode])) {</span>
+<span class="x">        // Adds all tags as classes. You could alternatively just use the first</span>
+<span class="x">        // tag with $node-&gt;field_tags[$node-&gt;langcode][0].</span>
+<span class="x">        foreach ($node-&gt;field_tags[$node-&gt;langcode] as $value) {</span>
+<span class="x">          // $value['taxonomy-term'] might not be available straight away (after</span>
+<span class="x">          // adding a new term for example), so you could alternatively load the</span>
+<span class="x">          // term yourself using taxonomy_term_load($value['tid']).</span>
+<span class="x">          $variables['classes'][] = 'tag-' . $value['taxonomy_term']-&gt;name;</span>
+<span class="x">        }</span>
+<span class="x">      }</span>
+<span class="x">    }</span>
+<span class="x">  }</span>
+<span class="x">}</span>
+</code></pre></div>
+
+
+
+<a name="211077288"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211077288" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211077288">(Sep 24 2020 at 00:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> <a href="https://github.com/backdrop-contrib/term_body_class/issues/3">https://github.com/backdrop-contrib/term_body_class/issues/3</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/term_body_class/issues/3" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/term_body_class/issues/3" title="Get module working · Issue #3 · backdrop-contrib/term_body_class">Get module working · Issue #3 · backdrop-contrib/term_body_class</a></div><div class="message_embed_description">Helping to fix some bugs and get this module working.</div></div></div>
+
+
+
+<a name="211097601"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211097601" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211097601">(Sep 24 2020 at 07:33)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> So nice to wake up and see your posts here and in the issue queue. Looking forward to have a closer look in a few hours. Thank you!</p>
+
+
+
+<a name="211130467"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211130467" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211130467">(Sep 24 2020 at 13:26)</a>:</h4>
+<p>Tested the PR, and it works! (Will clean up the module a bit and make a release next week or so.)</p>
+
+
+
+<a name="211291871"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211291871" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211291871">(Sep 25 2020 at 17:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> ++</p>
+
+
+
+<a name="211291872"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211291872" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211291872">(Sep 25 2020 at 17:57)</a>:</h4>
+<p><strong>bwpanda</strong> <span aria-label="pancakes" class="emoji emoji-1f95e" role="img" title="pancakes">:pancakes:</span> (Karma: 7)</p>
+
+
+
+<a name="211291884"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211291884" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211291884">(Sep 25 2020 at 17:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> ++</p>
+
+
+
+<a name="211291885"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211291885" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211291885">(Sep 25 2020 at 17:57)</a>:</h4>
+<p><strong>bwpanda</strong> Cheers (Karma: 8)</p>
+
+
+
+<a name="211291904"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211291904" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211291904">(Sep 25 2020 at 17:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> ++</p>
+
+
+
+<a name="211291905"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211291905" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211291905">(Sep 25 2020 at 17:57)</a>:</h4>
+<p>grabienski** great work (Karma: 11)</p>
+
+
+
+<a name="211558256"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211558256" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211558256">(Sep 28 2020 at 22:24)</a>:</h4>
+<p>Just released, <a href="https://backdropcms.org/project/term_body_class">https://backdropcms.org/project/term_body_class</a></p>
+
+
+
+<a name="211558377"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211558377" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211558377">(Sep 28 2020 at 22:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> ++</p>
+
+
+
+<a name="211558378"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Term%20name%20as%20body%20class/near/211558378" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Term.20name.20as.20body.20class.html#211558378">(Sep 28 2020 at 22:26)</a>:</h4>
+<p>grabienski** Props to you for all your hard work. (Karma: 12)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

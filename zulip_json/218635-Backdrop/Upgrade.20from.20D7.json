@@ -1,0 +1,788 @@
+[
+    {
+        "content": "<p>So, I'm upgrading from D7 to Backdrop and could need some live help.</p>",
+        "id": 207513066,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597923708
+    },
+    {
+        "content": "<p>Current state: everything prepared, and now I try to run update.php.</p>",
+        "id": 207513140,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597923742
+    },
+    {
+        "content": "<p>On <code>update.php</code> I'm not allowed to continue because of a requirements problem: I get the message \"Directory public://css_injector is not writable\".</p>",
+        "id": 207513255,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597923843
+    },
+    {
+        "content": "<p>Was css injector still enabled in Drupal?</p>",
+        "id": 207513414,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597924010
+    },
+    {
+        "content": "<p>I guess you could try creating that directory in /files?</p>",
+        "id": 207513455,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597924049
+    },
+    {
+        "content": "<p>Yes, it was enabled.</p>",
+        "id": 207513575,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924195
+    },
+    {
+        "content": "<p>And the directory <code>files/css_injector</code> exists.</p>",
+        "id": 207513757,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924340
+    },
+    {
+        "content": "<p>Check the permissions on it...?</p>",
+        "id": 207513771,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597924352
+    },
+    {
+        "content": "<p>Permissions look fine to me: 755</p>",
+        "id": 207513780,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924358
+    },
+    {
+        "content": "<p>(not an expert, but I've also tried 777 to be sure)</p>",
+        "id": 207513794,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924375
+    },
+    {
+        "content": "<p>Can you see if the files directory is actually set to <code>/files</code>?</p>",
+        "id": 207513816,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597924405
+    },
+    {
+        "content": "<p>No, not sure where.</p>",
+        "id": 207513878,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924448
+    },
+    {
+        "content": "<p>However, I guess the issue has to do how I've set up the files directory...</p>",
+        "id": 207513902,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924476
+    },
+    {
+        "content": "<p>If you haven't run <code>update.php</code> yet and converted everything to config, then I think it should be stored in the <code>variables</code> table of the database</p>",
+        "id": 207513924,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597924505
+    },
+    {
+        "content": "<p>Ideally that should be disabled before running the main site update, I think.</p>",
+        "id": 207513948,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597924537
+    },
+    {
+        "content": "<p>Then reactivated and run update for modules. IIRC</p>",
+        "id": 207514011,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597924567
+    },
+    {
+        "content": "<p>I followed most steps of <a href=\"https://backdropcms.org/upgrade-from-drupal\">https://backdropcms.org/upgrade-from-drupal</a>, here <strong>Step 3</strong>, no 2., the recommended approach to move the files over to Backdrop:</p>\n<ul>\n<li>Copy the files directory from Drupal 7 (usually <code>drupal/sites/default/files</code>) into the Backdrop site (usually <code>backdrop/files</code>)</li>\n<li>Create a <code>default</code> directory within <code>backdrop/sites</code>.</li>\n<li>Create a symlink in your filesystem from <code>sites/default/files</code> to  <code>files</code> .</li>\n</ul>",
+        "id": 207514053,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924610
+    },
+    {
+        "content": "<p>Suspecting something went wrong with the symlink. Is there a way to check if the symlink works?</p>",
+        "id": 207514114,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924678
+    },
+    {
+        "content": "<p>Created the symlink this way:</p>\n<ul>\n<li><code>mkdir /sites/default</code></li>\n<li><code>ln -s /files /sites/default/files</code></li>\n</ul>",
+        "id": 207514200,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924743
+    },
+    {
+        "content": "<p>@laryn Why do you think CSS Injector should be disabled in Drupal?</p>",
+        "id": 207514230,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924773
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> I think you need to:</p>\n<div class=\"codehilite\"><pre><span></span><code>cd /sites/default\nln -s ../../files files\n</code></pre></div>",
+        "id": 207514377,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597924902
+    },
+    {
+        "content": "<blockquote>\n<p>it should be stored in the variables table of the database</p>\n</blockquote>\n<p>Do you know the command to find it using phpMyAdmin?</p>",
+        "id": 207514379,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597924903
+    },
+    {
+        "content": "<blockquote>\n<p>`ln -s ../../files files``</p>\n</blockquote>\n<p>Hm, isn't that a symlink from <code>files</code> to <code>files</code>?</p>",
+        "id": 207514610,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597925094
+    },
+    {
+        "content": "<p>If you run that from the <code>/sites/default</code> directory, it should create a link called <code>files</code> which points to <code>../../files</code> (the files directory in the root).</p>",
+        "id": 207514676,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597925160
+    },
+    {
+        "content": "<p>I can see my symlink via Filezilla, it's in <code>/sites/default</code> and from what the symbol looks like, it points to <code>files</code>.</p>",
+        "id": 207514734,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597925184
+    },
+    {
+        "content": "<p>I thought one of the first steps was disable (but don't uninstall) all not-core modules you want to use on the Backdrop site. But it's been a little while since I did an upgrade at this point...</p>",
+        "id": 207514741,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597925188
+    },
+    {
+        "content": "<p>I assumed it was so any module updates ran after any core updates.</p>",
+        "id": 207514763,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597925213
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> is correct. Non-core modules should be disabled first. Just means less errors/issues up front.</p>",
+        "id": 207514808,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597925254
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> If you can access <code>/sites/default/files/[filename].jpg</code> and it works, then it should be fine.</p>",
+        "id": 207514883,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597925290
+    },
+    {
+        "content": "<p>Hm, on <a href=\"https://packweb.eu/blog/migrating-drupal-7-backdrop-cms\">https://packweb.eu/blog/migrating-drupal-7-backdrop-cms</a> I read: \"Delete all modules in the 'Contrib' category from the filesystem. <strong>Don't disable</strong> or uninstall them.\" ;-?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://packweb.eu/blog/migrating-drupal-7-backdrop-cms\" style=\"background-image: url(https://packweb.eu/sites/packweb.eu/files/blog/upgrade-1672367_1920.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://packweb.eu/blog/migrating-drupal-7-backdrop-cms\" title=\"Migrating from Drupal 7 to Backdrop CMS\">Migrating from Drupal 7 to Backdrop CMS</a></div><div class=\"message_embed_description\">We've been upgrading a few of our client's Drupal 7 sites to Backdrop CMS recently (read why here), so we thought we'd share with you the process we're using. The official Backdrop instructions can be found on the 'Upgrading from Drupal 7' page; ours are based on those instructions, but with some changes that we find fit better with our workflow.</div></div></div>",
+        "id": 207514931,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597925347
+    },
+    {
+        "content": "<p>That's because I'm lazy and the sites I migrate are fairly simple <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span> Are you following my instructions or Backdrop's? I don't think you can pick and choose steps from each...</p>",
+        "id": 207515073,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597925461
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I've read both instructions and tried to understand everything. However, even on <a href=\"https://backdropcms.org/upgrade-from-drupal\">https://backdropcms.org/upgrade-from-drupal</a> there's nothing about disabling contrib modules. Only thing there: \"Disable and uninstall <strong>core</strong> modules that have been <strong>removed from Backdrop CMS that you no longer need</strong>.\"</p>",
+        "id": 207515322,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597925710
+    },
+    {
+        "content": "<blockquote>\n<p>If you can access /sites/default/files/[filename].jpg and it works, then it should be fine.</p>\n</blockquote>\n<p>Well, that doesn't work. I get a \"Forbidden\" 403 error for <code>/sites/default/files/image.jpg</code>, but <code>/files/image.jpg</code> shows the image!</p>",
+        "id": 207515569,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597925899
+    },
+    {
+        "content": "<p>So, issue seems to be the symlink.</p>",
+        "id": 207515612,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597925951
+    },
+    {
+        "content": "<p>So your symlink doesn't work then. Try my suggestion above re. that.</p>",
+        "id": 207515621,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597925961
+    },
+    {
+        "content": "<p>Trying ...</p>",
+        "id": 207515701,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597926036
+    },
+    {
+        "content": "<ul>\n<li><code>ln -s ../../files files</code></li>\n<li>ln: failed to create symbolic link 'files': File exists</li>\n</ul>",
+        "id": 207515715,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597926063
+    },
+    {
+        "content": "<p>You know how to remove my former one?</p>",
+        "id": 207515743,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597926084
+    },
+    {
+        "content": "<p><code>rm /sites/default/files</code></p>",
+        "id": 207515765,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597926116
+    },
+    {
+        "content": "<p>Or <code>rm -r /sites/default/files</code> if it complains that it's a directory</p>",
+        "id": 207515825,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597926147
+    },
+    {
+        "content": "<p>Great, now I can access <code>/sites/default/files/image.jpg</code> via the browser.</p>",
+        "id": 207516045,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597926353
+    },
+    {
+        "content": "<p><strong>But</strong> CSS Injector directory still \"Not writable\" :-/</p>",
+        "id": 207516121,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597926408
+    },
+    {
+        "content": "<p>Guess I'll disable CSS Injector and try again.</p>",
+        "id": 207516396,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597926616
+    },
+    {
+        "content": "<p>Ok, I've disabled CSS Injector in Drupal. Unfortunately, when I continue, I get this frustrating error:</p>\n<p>\"DatabaseSchemaObjectExistsException: Cannot rename languages to language: table language already exists. in DatabaseSchema_mysql-&gt;renameTable() (line 313 of [...])/core/includes/database/mysql/schema.inc).\"</p>",
+        "id": 207517164,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597927206
+    },
+    {
+        "content": "<p>^^^Has anyone heard of this? ^^</p>",
+        "id": 207517291,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597927307
+    },
+    {
+        "content": "<p>Oh, the Database exception was probably my fault: Didn't remove all database tables before importing the database without CSS injector enabled.</p>",
+        "id": 207518063,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597927773
+    },
+    {
+        "content": "<p>Now I'll see if the \"208 pending updates\" will run!</p>",
+        "id": 207518166,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597927834
+    },
+    {
+        "content": "<p>Phew, database updates ran without problem, and the site is still up. There were some messages, will dig into it later. Thanks <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> and <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> for supporting me!</p>",
+        "id": 207520479,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597929317
+    },
+    {
+        "content": "<p>Did I mention it? Upgrading to Backdrop makes me always nervous. And I think the docs are not good. Hard to make them better, though.</p>",
+        "id": 207520615,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1597929399
+    },
+    {
+        "content": "<p>There is no such thing as \"perfect\" documentation ...especially since software gets updated, and also because there are so many moving parts. Producing good documentation is an iterative process, so everyone's feedback and improvements is welcomed <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 207527204,
+        "sender_full_name": "klonos",
+        "timestamp": 1597933205
+    },
+    {
+        "content": "<p>And different people have different approaches with the upgrade. I seem to recall <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> recommends having all the modules enabled and new code bases before running update.php.</p>",
+        "id": 207594149,
+        "sender_full_name": "Herb",
+        "timestamp": 1597974899
+    },
+    {
+        "content": "<p>Yep! I do one final update at the end with everything in place (just like<br>\nyou do with Drupal) but I usually also do a few before that as tests, I'm<br>\nvarious stages of enabledness.</p>",
+        "id": 207594785,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1597976000
+    },
+    {
+        "content": "<p>I guess what would help me, is doing such upgrades more often! Btw, <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> have you in the meantime tried to do a D7 to Backdrop upgrade?</p>",
+        "id": 207623548,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598009195
+    },
+    {
+        "content": "<p>I have not <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ...via the agency I work for, I have access to the db/files/codebase of so many D7 sites, but have never actually done that. Shame on me <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span></p>",
+        "id": 207684997,
+        "sender_full_name": "klonos",
+        "timestamp": 1598043966
+    },
+    {
+        "content": "<p>...I am mostly interested in fixing UX/UI issues in core, and I seem to be always drawn to those. I simply don't have time for other things then.</p>",
+        "id": 207685069,
+        "sender_full_name": "klonos",
+        "timestamp": 1598044026
+    },
+    {
+        "content": "<p>No worries, <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span></p>",
+        "id": 207693338,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598050437
+    },
+    {
+        "content": "<p>Webform or upgrade experts: In an website upgrade from D7 to Backdrop, most Webform settings were empty, and the content type didn't have webform functionality. Before fixing the settings, I got a blank page on <code>admin/content/webform</code>. Looking at a webform node I saw the node but no webform components. After fixing the settings, I get a PDO exception even on <code>admin/content</code>:</p>\n<blockquote>\n<p>SQLSTATE[42S22]: Column not found: 1054 Unknown column 'webform_roles.role' in 'field list': SELECT webform_roles.role AS role FROM {webform_roles} webform_roles WHERE (nid = :db_condition_placeholder_0) ; Array ( [:db_condition_placeholder_0] =&gt; 379 ) in webform_node_load() (line 1778 of /.../modules/webform/webform.module).</p>\n</blockquote>\n<p>Sounds familiar to anyone?</p>",
+        "id": 208680124,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598963457
+    },
+    {
+        "content": "<p>(Have to run now but will be back online in a couple of hours.)</p>",
+        "id": 208680403,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598963627
+    },
+    {
+        "content": "<p>Doesn't sound familiar but I will be following as I have a project upcoming that has some complex webforms... Is it a multilingual site?</p>",
+        "id": 208680976,
+        "sender_full_name": "Laryn",
+        "timestamp": 1598963968
+    },
+    {
+        "content": "<p>Doesn't sound familiar, but I have a suspicion: in webform_update_1601() the column <code>rid</code> should have been changed to <code>role</code> and varchar type. As this column doesn't seem to exist now, either the update hook failed or wasn't run at all.</p>\n<p>Did you see any errors regarding that db table when upgrading?</p>",
+        "id": 208681363,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598964208
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> It's not multilingual (but localized, German default language). Neither the website nor the one webform used on the site are very complex.</p>",
+        "id": 208689783,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598968422
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I don't recall any errors regarding Webform, but looking at the notices from update.php (saved them as text for reference), Webform got no updates at all during the upgrade! Same happened btw with Override Node Options and References. How can this be?</p>",
+        "id": 208690352,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598968664
+    },
+    {
+        "content": "<p>Now when I think about it again (did the upgrade more than a week ago), it might be that at first I forgot to download two or three contrib modules for Backdrop before running <code>update.php</code>. (Not sure which ones and when exactly I added them.) Would that explain the behavior?</p>",
+        "id": 208691773,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598969297
+    },
+    {
+        "content": "<blockquote>\n<p>Would that explain the behavior?</p>\n</blockquote>\n<p>At least it sounds plausible.</p>",
+        "id": 208691883,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598969348
+    },
+    {
+        "content": "<p>Indeed! Will run the upgrade again tomorrow.</p>",
+        "id": 208692122,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598969449
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Upgrade.20from.20D7/near/208680124\">said</a>:</p>\n<blockquote>\n<p>Webform or upgrade experts: In an website upgrade from D7 to Backdrop, most Webform settings were empty, and the content type didn't have webform functionality. Before fixing the settings, I got a blank page on <code>admin/content/webform</code>. Looking at a webform node I saw the node but no webform components. After fixing the settings, I get a PDO exception even on <code>admin/content</code>:</p>\n<blockquote>\n<p>SQLSTATE[42S22]: Column not found: 1054 Unknown column 'webform_roles.role' in 'field list': SELECT webform_roles.role AS role FROM {webform_roles} webform_roles WHERE (nid = :db_condition_placeholder_0) ; Array ( [:db_condition_placeholder_0] =&gt; 379 ) in webform_node_load() (line 1778 of /.../modules/webform/webform.module).</p>\n</blockquote>\n<p>Sounds familiar to anyone?</p>\n</blockquote>\n<p>Olaf,  have you tried rebuilding one of the forms and see if that fixes it?  I don't normally do upgrades with complex sites, I migrate them, so I havent' had this issue.</p>",
+        "id": 208735375,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1598988208
+    },
+    {
+        "content": "<blockquote>\n<p>it might be that at first I forgot to download two or three contrib modules for Backdrop before running update.php. (Not sure which ones and when exactly I added them.) Would that explain the behavior?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> yes, all modules need to be present before you run update.php. Some modules need to run their updates before the core updates run, so they all need to be there at the same time. If you have a clean D7 database, I'd recommend starting over from there (but save all your config! You can sync that again when you are done)</p>",
+        "id": 208782576,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599025700
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> Thanks! Rebuilding the webform would be interesting but I guess in this situation it makes more sense to give the upgrade another try. Re migrating sites instead of upgrading: Which tools and which workflow do you use for migrations?</p>",
+        "id": 208792064,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599034341
+    },
+    {
+        "content": "<p>So, I started over (and downloaded <strong>all</strong> contrib modules before running <code>update.php</code>), and the Webform issue is fixed, yay! Thanks everyone!!</p>",
+        "id": 208803950,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599042393
+    },
+    {
+        "content": "<p>@Olaf Grabienski,</p>\n<p>We’re typically updating and redesigning the site when we migrate, so mainly I use the same tools you would to develop a new site. That’s one of the reasons we don’t just upgrade.  We tend not to use drush or composer because we’re a small shop that’s been around a long time and does more than just Drupal, so I have my own scripts. I tried out drush a long time ago and it wasn’t worth the effort for us. If you want to use one of those, I would recommend composer over drush.  It’s less overhead in my experience.  I use primarily feeds and some custom coding to migrate data from D6 or D7 to Backdrop.  I don’t typically bring over anything but content.  I recreate the webforms manually, since there’s usually only one or two. The one migration where there were a lot, we revamped the forms anyway, so I would have had to redo them.</p>\n<p>We’re not using D8 or D9 at all.  It’s too expensive a footprint for any of our clients with no benefit.  Hope that helps!</p>\n<p>I’ve run into a couple of wrinkles with feeds, but have gotten lots of help on Zulip, so there haven’t ever been any showstoppers with that.  I’m pretty happy with it.</p>\n<p>Good luck with your upgrade!</p>\n<p>Warmest regards,</p>\n<p>Elisabeth Garbeil, MBA PMP<br>\nBrainwrap LLC<br>\n\"Being on the web doesn't have to make your head hurt.\"<br>\n<a href=\"http://www.brainwrap.com\">www.brainwrap.com</a><br>\n(810) 560-7181<br>\n<a href=\"mailto:egarbeil@brainwrap.com\">egarbeil@brainwrap.com</a></p>",
+        "id": 208839944,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599059724
+    },
+    {
+        "content": "<p>Just out of curiosity, <span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span>, do you ever have anything you would consider the Migrate module for, if it were available?</p>",
+        "id": 208843373,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599060933
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span>. The upgrade is running fine so far. It's even fun, apart from the crucial moment when running <code>update.php</code>. I see however a lot of advantages building a site from scratch and just import content (and user accounts). Will certainly do that with one of the next sites. Regarding the tools: <em>Feeds</em> for the import, and for the export: <em>Views Data Export</em>? I know Feeds somewhat (long ago), but have never used Views Data Export so far.</p>",
+        "id": 208843643,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599061028
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Upgrade.20from.20D7/near/208843643\">said</a>:</p>\n<blockquote>\n<p>Thanks <span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span>. The upgrade is running fine so far. It's even fun, apart from the crucial moment when running <code>update.php</code>. I see however a lot of advantages building a site from scratch and just import content (and user accounts). Will certainly do that with one of the next sites. Regarding the tools: <em>Feeds</em> for the import, and for the export: <em>Views Data Export</em>? I know Feeds somewhat (long ago), but have never used Views Data Export so far.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> - glad to hear it.  For D7, yes I use Views Data Export.  For D6, there's a module called node export that is better, plus chaos tools also has an export - D6 is quite different from D7.</p>",
+        "id": 208847674,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599062523
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Upgrade.20from.20D7/near/208843373\">said</a>:</p>\n<blockquote>\n<p>Just out of curiosity, <span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span>, do you ever have anything you would consider the Migrate module for, if it were available?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> , probably I would consider it for D6 or D7 to Backdrop (especially D6), if it were available.  I used Migrate to go from D6 to D7 for the sites that upgraded and it worked pretty well.  Migrate is good for basic sites with not a lot of complexity, but a lot of content.</p>",
+        "id": 208848138,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599062702
+    },
+    {
+        "content": "<p>From \"Upgrading from Drupal 7\" <a href=\"https://backdropcms.org/upgrade-from-drupal\">https://backdropcms.org/upgrade-from-drupal</a>:</p>\n<blockquote>\n<p>If you are running an install profile other than the core 'standard' profile, make sure you have a Backdrop version of that profile, or switch to the standard profile in Drupal 7.</p>\n</blockquote>\n<p>How can I switch to the standard profile in Drupal 7?</p>",
+        "id": 210454658,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1600378492
+    },
+    {
+        "content": "<p><a href=\"https://www.drupal.org/project/profile_switcher\">https://www.drupal.org/project/profile_switcher</a></p>",
+        "id": 210455145,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600378808
+    },
+    {
+        "content": "<p>Read the warnings.</p>",
+        "id": 210455161,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600378820
+    },
+    {
+        "content": "<p>Is it a bad solution if I modify the <code>system.core.json</code> after the upgrade?:<br>\n<code>\"install_profile\": \"minimal\",</code> -&gt; <code>\"install_profile\": \"standard\",</code></p>",
+        "id": 210457550,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1600380439
+    },
+    {
+        "content": "<p>Backdrop core has a minimal profile as well, so you should not need to change your profile if that is the one you are using.</p>",
+        "id": 210458673,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1600381284
+    },
+    {
+        "content": "<p>This is weird:  The upgraded Backdrop site shows some notices if the Drupal 7 has got 'minimal' profile.<br>\n<a href=\"/user_uploads/18319/WVEYktFXf_bD5tT3Ye6-2Z8S/kép.png\">kép.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/WVEYktFXf_bD5tT3Ye6-2Z8S/kép.png\" title=\"kép.png\"><img src=\"/user_uploads/18319/WVEYktFXf_bD5tT3Ye6-2Z8S/kép.png\"></a></div>",
+        "id": 210459604,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1600381997
+    },
+    {
+        "content": "<p>If you change <code>install_profile</code> in <code>system.core.json</code> after the upgrade, there will likely be some things missing, which might explain the error notices.</p>",
+        "id": 210460811,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600382890
+    },
+    {
+        "content": "<p>I get/used to get that (undefined index errors) with D7 -&gt; Backdrop sites. It's to do with the profile not being available I think (or something like that). Doesn't have any adverse effects though.</p>",
+        "id": 210460975,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600383011
+    },
+    {
+        "content": "<p>Thanks everyone, I will test it.</p>",
+        "id": 210461554,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1600383508
+    },
+    {
+        "content": "<p>Attempting to Upgrade from D7 to Backdrop and I received an error that says, \"Error: Call to undefined function entity_property_info_cache_clear() in rules_flush_caches() (line 484 of /var/www/backdrop.44proguards.com/htdocs/modules/rules/rules.module).\"</p>",
+        "id": 211995537,
+        "sender_full_name": "Dennis Tran",
+        "timestamp": 1601602086
+    },
+    {
+        "content": "<p>It seems like the entity_plus module defines this missing function and I downloaded it. Do I have to somehow activate it before going through update.php?</p>",
+        "id": 211995561,
+        "sender_full_name": "Dennis Tran",
+        "timestamp": 1601602149
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"343824\">@Dennis Tran</span> Rules can be finicky to upgrade. You could try do the upgrade without Rules at first (remove the module temporarily)</p>",
+        "id": 211997360,
+        "sender_full_name": "Herb",
+        "timestamp": 1601604541
+    },
+    {
+        "content": "<p>Or make sure you're on the latest release for Rules</p>",
+        "id": 211997375,
+        "sender_full_name": "Herb",
+        "timestamp": 1601604573
+    },
+    {
+        "content": "<p>If so then check if that undefined function is actually called in the code. If so then it's a bug</p>",
+        "id": 211997439,
+        "sender_full_name": "Herb",
+        "timestamp": 1601604618
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  so if I don't include a module in the modules folder, I can add it later on and perform update.php on it?</p>",
+        "id": 211997719,
+        "sender_full_name": "Dennis Tran",
+        "timestamp": 1601605062
+    },
+    {
+        "content": "<p>Does this relate? <a href=\"https://github.com/backdrop-contrib/ubercart/issues/235\">https://github.com/backdrop-contrib/ubercart/issues/235</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ubercart/issues/235\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ubercart/issues/235\" title=\"Migration Dependences · Issue #235 · backdrop-contrib/ubercart\">Migration Dependences · Issue #235 · backdrop-contrib/ubercart</a></div><div class=\"message_embed_description\">This is related to #225, but deals with the situation where we are migrating from a Drupal Ubercart installation. The migration instructions say to leave migrated modules enabled in Drupal when you...</div></div></div>",
+        "id": 211999358,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601607077
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> Just had an idea: can you create a wiki page on ubercart, with instructions and attach the stub modules as zip files there?</p>",
+        "id": 211999455,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601607177
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ! I actually am working on a D7 Ubercart site and the \"stub\" modules sounds like a good workaround. I'll give it a try tomorrow.</p>",
+        "id": 212019480,
+        "sender_full_name": "Dennis Tran",
+        "timestamp": 1601620797
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"343824\">@Dennis Tran</span> you can. It's not ideal but it can help sometimes.</p>",
+        "id": 212057664,
+        "sender_full_name": "Herb",
+        "timestamp": 1601634775
+    },
+    {
+        "content": "<p>I noticed <a href=\"https://github.com/backdrop-contrib/rules/search?q=entity_property_info_cache_clear%28&amp;type=\">https://github.com/backdrop-contrib/rules/search?q=entity_property_info_cache_clear%28&amp;type=</a> so maybe Rules does need to be fixed</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/rules/search?q=entity_property_info_cache_clear%28&amp;type=\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/rules/search?q=entity_property_info_cache_clear%28&amp;type=\" title=\"backdrop-contrib/rules\">backdrop-contrib/rules</a></div><div class=\"message_embed_description\">Porting the Rules project to Backdrop. Contribute to backdrop-contrib/rules development by creating an account on GitHub.</div></div></div>",
+        "id": 212057691,
+        "sender_full_name": "Herb",
+        "timestamp": 1601634809
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>  Yes, I'll put that information in the wiki page.</p>",
+        "id": 212076965,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1601646695
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span></p>",
+        "id": 212095365,
+        "sender_full_name": "Dennis Tran",
+        "timestamp": 1601654954
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I tried the upgrade process with stub modules and that worked!</p>",
+        "id": 212099217,
+        "sender_full_name": "Dennis Tran",
+        "timestamp": 1601656933
+    },
+    {
+        "content": "<p>The only error message I got was -&gt; Warning: Invalid argument supplied for foreach() in system_get_date_formats() (line 3838 of /var/www/backdrop.test/htdocs/core/modules/system/system.module).</p>",
+        "id": 212100549,
+        "sender_full_name": "Dennis Tran",
+        "timestamp": 1601657663
+    },
+    {
+        "content": "<p>But that didn't seem to break anything</p>",
+        "id": 212100563,
+        "sender_full_name": "Dennis Tran",
+        "timestamp": 1601657672
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> ++ for <a href=\"https://github.com/backdrop-contrib/ubercart/wiki/Upgrading-Ubercart-from-Drupal-7\">https://github.com/backdrop-contrib/ubercart/wiki/Upgrading-Ubercart-from-Drupal-7</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ubercart/wiki/Upgrading-Ubercart-from-Drupal-7\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ubercart/wiki/Upgrading-Ubercart-from-Drupal-7\" title=\"backdrop-contrib/ubercart\">backdrop-contrib/ubercart</a></div><div class=\"message_embed_description\">Port of Drupal Ubercart to Backdrop. The core modules are quite functional. Please, help to test it! - backdrop-contrib/ubercart</div></div></div>",
+        "id": 212316156,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601911907
+    },
+    {
+        "content": "<p><strong>bugfolder</strong> <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span>  <span aria-label=\"heart\" class=\"emoji emoji-2764\" role=\"img\" title=\"heart\">:heart:</span> (Karma: 1)</p>",
+        "id": 212316157,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601911907
+    },
+    {
+        "content": "<p>I've filed <a href=\"https://github.com/backdrop/backdrop-issues/issues/4690\">https://github.com/backdrop/backdrop-issues/issues/4690</a> to look into that warning re <code>system_get_date_formats()</code></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4690\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4690\" title=\"Warning: Invalid argument supplied for foreach() in system_get_date_formats() (line 3838 of system.module) · Issue #4690 · backdrop/backdrop-issues\">Warning: Invalid argument supplied for foreach() in system_get_date_formats() (line 3838 of system.module) · Issue #4690 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This was reported by Dennis Tran in our Zulip chat, as an error thrown during updating a D7 Ubercart site to Backdrop: Warning: Invalid argument supplied for foreach() in system_get_date_formats() ...</div></div></div>",
+        "id": 212671422,
+        "sender_full_name": "klonos",
+        "timestamp": 1602153311
+    },
+    {
+        "content": "<p>Hi all, have you ever come across a site that doesn't pick up the change after you change the settings.php value of $settings['update_free_access'] = TRUE? I got to step 3.7, but don't seem to be able to run the updates. I also can't log in since I replaced the database with a Drupal 7 one. Thanks for any tips!</p>",
+        "id": 216563757,
+        "sender_full_name": "Quinn Dombrowski",
+        "timestamp": 1605239145
+    },
+    {
+        "content": "<blockquote>\n<p>have you ever come across a site that doesn't pick up the change after you change the settings.php</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"314463\">@Quinn Dombrowski</span>  To be honest, never. To make sure: your updated settings.php file in in the Backdrop root directory (same as where index.php is). There's no settings.local.php in that directory with contradicting settings?</p>",
+        "id": 216578734,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605255568
+    },
+    {
+        "content": "<p>Could it be a cache thing? Do you happen to have access to Drush on that server to clear caches?</p>",
+        "id": 216664148,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605297080
+    },
+    {
+        "content": "<p>How to move D7 to Backdrop. I was looking at this video: <a href=\"https://www.youtube.com/watch?v=5YIPWVYim1Q\">YouTube - Session: Moving from Drupal 7 to Backdrop CMS</a> and got to the point 24:38 where it says to get the Backdrop Upgrade Status module to see what modules are going to work. I did not find any such module. That makes it difficult to use the video to learn how to move a D7 site to Backdrop. Now I'm stuck. Ideas?</p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"5YIPWVYim1Q\" href=\"https://www.youtube.com/watch?v=5YIPWVYim1Q\"><img src=\"https://i.ytimg.com/vi/5YIPWVYim1Q/default.jpg\"></a></div>",
+        "id": 216825572,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1605491014
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\">https://github.com/backdrop-contrib/backdrop_upgrade_status</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\" title=\"backdrop-contrib/backdrop_upgrade_status\">backdrop-contrib/backdrop_upgrade_status</a></div><div class=\"message_embed_description\">Checks to see if the installed modules on a Drupal 7 site are ready for upgrade to Backdrop CMS. - backdrop-contrib/backdrop_upgrade_status</div></div></div>",
+        "id": 216825640,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605491101
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> Whenever searching for a module, theme, layout, etc. and you can't find it in Backdrop's \"Project Installer\" or on <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a>, search GitHub: <a href=\"https://github.com/backdrop-contrib\">https://github.com/backdrop-contrib</a> Often there'll be projects (like this one) that don't have a release (hence they don't appear in Backdrop) but you can still download and use them.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/7720679?s=280&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib\" title=\"Backdrop CMS contributed projects\">Backdrop CMS contributed projects</a></div><div class=\"message_embed_description\">Join the group at https://github.com/backdrop-ops/contrib to add your own! - Backdrop CMS contributed projects</div></div></div>",
+        "id": 216825810,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605491390
+    },
+    {
+        "content": "<p>I thought the module was a D7 module to check whether the installed modules will work with Backdrop. I know how to install D7 modules using the URL in D7, but I don't know how to do it without the URL (or is there a URL in GIT? I've never used GIT. Do I copy the Go to file button link? i.e. right click on Go To File and grab the URL? I don't know how to move it to <a href=\"http://Drupal.org\">Drupal.org</a> so I can get it the usual way I get modules.</p>",
+        "id": 216825921,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1605491534
+    },
+    {
+        "content": "<p>It is, yes.</p>",
+        "id": 216826092,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605491835
+    },
+    {
+        "content": "<p>It needs to be moved/copied to <a href=\"http://Drupal.org\">Drupal.org</a>...</p>",
+        "id": 216826094,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605491856
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> - You don't need GIT. You can just download the module with this link , decompress it, and put it in the sites/all/modules directory. <a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status/archive/7.x-1.x.zip\">https://github.com/backdrop-contrib/backdrop_upgrade_status/archive/7.x-1.x.zip</a></p>",
+        "id": 216826257,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605492108
+    },
+    {
+        "content": "<p>Actually:<br>\n1) Download the module<br>\n2) Decompress it<br>\n3) Change the directory name to remove any extra version information. For example. change \"backdrop_upgrade_status-7.x-1.x\" to \"backdrop_upgrade_status\"<br>\n4) Drop it in the sites/all/modules/ directory for your Drupal site.</p>",
+        "id": 216826411,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605492316
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/Mle4nnU4m3B7-XDUsmpdo0P9/backdrop-contrib_backdrop_upgrade_status__Checks_to_see_if_the_installed_modules_on_a_Drupal_7_site_are_ready_for_upgrade_to_Backdrop_CMS_.png\">backdrop-contrib_backdrop_upgrade_status__Checks_to_see_if_the_installed_modules_on_a_Drupal_7_site_are_ready_for_upgrade_to_Backdrop_CMS_.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/Mle4nnU4m3B7-XDUsmpdo0P9/backdrop-contrib_backdrop_upgrade_status__Checks_to_see_if_the_installed_modules_on_a_Drupal_7_site_are_ready_for_upgrade_to_Backdrop_CMS_.png\" title=\"backdrop-contrib_backdrop_upgrade_status__Checks_to_see_if_the_installed_modules_on_a_Drupal_7_site_are_ready_for_upgrade_to_Backdrop_CMS_.png\"><img src=\"/user_uploads/18319/Mle4nnU4m3B7-XDUsmpdo0P9/backdrop-contrib_backdrop_upgrade_status__Checks_to_see_if_the_installed_modules_on_a_Drupal_7_site_are_ready_for_upgrade_to_Backdrop_CMS_.png\"></a></div>",
+        "id": 216826415,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605492341
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> Yes, if there are no releases for a GitHub project (e.g. <a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status/releases\">https://github.com/backdrop-contrib/backdrop_upgrade_status/releases</a>) then do what <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> said above.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status/releases\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status/releases\" title=\"backdrop-contrib/backdrop_upgrade_status\">backdrop-contrib/backdrop_upgrade_status</a></div><div class=\"message_embed_description\">Checks to see if the installed modules on a Drupal 7 site are ready for upgrade to Backdrop CMS. - backdrop-contrib/backdrop_upgrade_status</div></div></div>",
+        "id": 216826463,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605492393
+    },
+    {
+        "content": "<p>As <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> says, it is a Drupal module, but we have not been confident enough in it's stability to put it on <a href=\"http://Drupal.org\">Drupal.org</a> yet. It's still under development, but it works enough to test it (i believe).</p>",
+        "id": 216826484,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605492441
+    },
+    {
+        "content": "<p>I've never used it myself.</p>",
+        "id": 216826533,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605492486
+    },
+    {
+        "content": "<p>I'll first go through my site and delete unused modules. Then I'll think about FTP to the sites/all/modules. If it's not ready yet, I'll wait. I doubt I have any forbidden modules anyway. I've done enough for today...</p>",
+        "id": 216827197,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1605493613
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> , I started the process of looking into what it will take to port my D7 site, making a list of the ~70 D7 contrib modules, going through the BD docs, and searching module-by-module through the BD module repository for ports. That worked, but after seeing this thread, I went and installed backdrop_upgrade_status and it worked like a charm, giving the relevant information almost instantaneously. I would have loved to have led with that! So let me put in my vote for getting it up on <a href=\"http://Drupal.org\">Drupal.org</a> (even at the risk of fragility); I think the benefit to folks wondering what to do outweighs any risks.</p>",
+        "id": 216885675,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1605540277
+    },
+    {
+        "content": "<p>It seems to me, based on this thread, that the bigger issue is that it's not (well) documented. Whether it's on d.o or not doesn't really matter, if there's sufficient documentation to guide people to it and its proper use.</p>",
+        "id": 216887009,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1605540823
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> there's an issue proposed for the backdrop_upgrade_status that would allow site maintainers such as yourself, to manually submit the list of modules you use on Drupal 7 to the Backdrop team so they can begin compiling a list of which ones to prioritize.</p>\n<p>From your perspective, what do you think would be the best way to get others such as yourself to be highly motivated to submit this data?</p>",
+        "id": 216911373,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605551092
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span>, agreed that that's an issue. Putting a link to that prominently on the Backdrop main page (something like \"Wondering whether to migrate from D7 to Backdrop? Use this tool [link]\" might help. I seem to recall that there was (is) a D7-&gt;D8 upgrade availability module (and the carnage I saw when I ran it was a powerful argument for moving to Backdrop). Perhaps pointing to both modules: \"compare migrating to BD vs D8 on your D7 site\" would be helpful.</p>\n<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span>, if that backdrop_upgrade_status module offered a one-click button \"submit a list of my needed contrib modules to the Backdrop team\" on the same availability results page, that might get people to submit since anyone looking at upgrade status is probably somewhat motivated to make their needs known.</p>",
+        "id": 216914116,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1605552323
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> yeah, that's kind of what I was thinking too. I brought up the idea of automating it in the background, but that didn't go over too well for privacy reasons. I think a submit button is probably good enough and I agree it should be at the top of that status page.</p>",
+        "id": 216914863,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605552654
+    },
+    {
+        "content": "<p>Anyone interested in being the maintainer of <a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\">https://github.com/backdrop-contrib/backdrop_upgrade_status</a> and getting it hosted on <a href=\"http://drupal.org\">drupal.org</a>? People like the idea of hosting it there but it'll require someone take it on.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\" title=\"backdrop-contrib/backdrop_upgrade_status\">backdrop-contrib/backdrop_upgrade_status</a></div><div class=\"message_embed_description\">Checks to see if the installed modules on a Drupal 7 site are ready for upgrade to Backdrop CMS. - backdrop-contrib/backdrop_upgrade_status</div></div></div>",
+        "id": 216927636,
+        "sender_full_name": "Herb",
+        "timestamp": 1605558632
+    },
+    {
+        "content": "<p>I'll bring this up during our next meeting. Maintaining such a \"high profile\" project would need to become the responsibility of multiple people in the community, instead of one or two of them.</p>",
+        "id": 216951338,
+        "sender_full_name": "klonos",
+        "timestamp": 1605572178
+    },
+    {
+        "content": "<p>...very good ideas all of them <span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> ++</p>",
+        "id": 216951359,
+        "sender_full_name": "klonos",
+        "timestamp": 1605572199
+    },
+    {
+        "content": "<p><strong>bugfolder</strong> 1000% (Karma: 2)</p>",
+        "id": 216951360,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1605572200
+    },
+    {
+        "content": "<p>...and <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span>++</p>",
+        "id": 216951366,
+        "sender_full_name": "klonos",
+        "timestamp": 1605572207
+    },
+    {
+        "content": "<p>ward** thanks for all you do (Karma: 1)</p>",
+        "id": 216951367,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1605572207
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> is there a way to fix karma-giving to people with spaces in their handles?</p>",
+        "id": 216951426,
+        "sender_full_name": "klonos",
+        "timestamp": 1605572259
+    },
+    {
+        "content": "<p>Great. I'll try the module in the next few days... Thank you for the clear instructions.</p>",
+        "id": 217838486,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1606271160
+    }
+]

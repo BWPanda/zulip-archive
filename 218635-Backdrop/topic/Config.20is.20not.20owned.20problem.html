@@ -1,0 +1,50 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Config.20is.20not.20owned.20problem.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20is.20not.20owned.20problem.html">Config is not owned problem</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="200216045"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20is%20not%20owned%20problem/near/200216045" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20is.20not.20owned.20problem.html#200216045">(Jun 09 2020 at 12:15)</a>:</h4>
+<p>Hey you CMI gurus out there, how to fix "The configuration blabla is not owned by any module."? What is expected? The config file contains a "_module" hint.</p>
+
+
+
+<a name="200216793"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20is%20not%20owned%20problem/near/200216793" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20is.20not.20owned.20problem.html#200216793">(Jun 09 2020 at 12:24)</a>:</h4>
+<p>Was a module removed and config still existed?</p>
+
+
+
+<a name="200216833"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20is%20not%20owned%20problem/near/200216833" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20is.20not.20owned.20problem.html#200216833">(Jun 09 2020 at 12:24)</a>:</h4>
+<p>Or a module no longer had a config_info hook?</p>
+
+
+
+<a name="200216890"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20is%20not%20owned%20problem/near/200216890" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20is.20not.20owned.20problem.html#200216890">(Jun 09 2020 at 12:24)</a>:</h4>
+<p>No, I added a brand new config file. Here's the failing test: <a href="https://zen.ci/backdrop/backdrop/test/test-php53-backdrop_backdrop_3163-39a00de">https://zen.ci/backdrop/backdrop/test/test-php53-backdrop_backdrop_3163-39a00de</a></p>
+
+
+
+<a name="200216995"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20is%20not%20owned%20problem/near/200216995" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20is.20not.20owned.20problem.html#200216995">(Jun 09 2020 at 12:25)</a>:</h4>
+<p>Ah, garbage... the config hook... Thanks a lot! <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

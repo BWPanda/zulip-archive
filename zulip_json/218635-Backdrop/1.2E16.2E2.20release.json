@@ -1,0 +1,188 @@
+[
+    {
+        "content": "<p>This is a place where we can discuss today's release</p>",
+        "id": 201165259,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592410929
+    },
+    {
+        "content": "<p>Release checklists are up: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4442\">https://github.com/backdrop/backdrop-issues/issues/4442</a> and <a href=\"https://github.com/backdrop/backdrop-issues/issues/4443\">https://github.com/backdrop/backdrop-issues/issues/4443</a>.  @klonos @stpaultim if either of you are around and want to help, lmk.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4442\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4442\" title=\"Backdrop 1.16.2 Release checklist · Issue #4442 · backdrop/backdrop-issues\">Backdrop 1.16.2 Release checklist · Issue #4442 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for June 17th, 10am PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release milestone @j...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4443\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4443\" title=\"Backdrop 1.15.4 Release checklist · Issue #4443 · backdrop/backdrop-issues\">Backdrop 1.15.4 Release checklist · Issue #4443 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for June 17th, 10am PT Pre-release tasks Merge commits @quicksketch Draft Release notes @jenlampton Include a short, descriptive summary of the release, for example: Maintenance r...</div></div></div>",
+        "id": 201166989,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592411788
+    },
+    {
+        "content": "<p>Drupal releases are not yet out, so I think we're okay on time.</p>",
+        "id": 201167079,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592411834
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> I'm running all the tests locally on the latest PR but am getting some test failures</p>",
+        "id": 201167114,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592411854
+    },
+    {
+        "content": "<p>I think we should make a PR against 1.x and let Zen.CI run them, as it's a lot faster and might avoid any issues with local-specific problems.</p>",
+        "id": 201167623,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592412077
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> I don't think we can do that privately?</p>",
+        "id": 201168664,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592412582
+    },
+    {
+        "content": "<p>I pushed an update to the PR that adds the new function call</p>",
+        "id": 201168738,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592412603
+    },
+    {
+        "content": "<p>Hey <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...I'm around now. Checking the lists to see what I can help with <span aria-label=\"eyes\" class=\"emoji emoji-1f440\" role=\"img\" title=\"eyes\">:eyes:</span></p>",
+        "id": 201182728,
+        "sender_full_name": "klonos",
+        "timestamp": 1592418879
+    },
+    {
+        "content": "<p>So today is a security release? Just curious if we should be doing this in the Security channel. Or is it not necessary since we already have the patch and it's currently private?</p>",
+        "id": 201184010,
+        "sender_full_name": "Herb",
+        "timestamp": 1592419507
+    },
+    {
+        "content": "<p>Yeah, it's a security release today. Now that Drupal's release is out it's not a secret. Though we should use the Security channel for discussion of the changes.</p>",
+        "id": 201186019,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592420451
+    },
+    {
+        "content": "<p>And sorry folks, I'll be starting on making the release in about 30 minutes.</p>",
+        "id": 201187890,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592421427
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.4\">https://github.com/backdrop/backdrop/releases/tag/1.15.4</a> tag is cut. Working on 1.16.2...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.4\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.4\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 201192992,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592424196
+    },
+    {
+        "content": "<p>SA <a href=\"https://backdropcms.org/security/backdrop-sa-core-2020-004\">https://backdropcms.org/security/backdrop-sa-core-2020-004</a> is published and <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.4\">https://github.com/backdrop/backdrop/releases/tag/1.15.4</a> is released.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.4\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.4\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 201193995,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592424645
+    },
+    {
+        "content": "<p>I was to mark the release as security, but someone beat me to it <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 201194082,
+        "sender_full_name": "klonos",
+        "timestamp": 1592424702
+    },
+    {
+        "content": "<p>...marked 1.16.2</p>",
+        "id": 201194179,
+        "sender_full_name": "klonos",
+        "timestamp": 1592424742
+    },
+    {
+        "content": "<p>Ha, thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>! Yeah I was on a roll. Thanks for updating 1.16.2. :D</p>",
+        "id": 201194285,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592424806
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.2\">https://github.com/backdrop/backdrop/releases/tag/1.16.2</a> is out and done. Yay! Now just the post-release tasks.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.2\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.2\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 201194416,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592424859
+    },
+    {
+        "content": "<p>Thank you <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> and <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> for doing most of the heavy-lifting ...I'm just helping with the trivialities, trying to save you time.</p>",
+        "id": 201194429,
+        "sender_full_name": "klonos",
+        "timestamp": 1592424868
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> ++</p>",
+        "id": 201194438,
+        "sender_full_name": "klonos",
+        "timestamp": 1592424874
+    },
+    {
+        "content": "<p><strong>quicksketch</strong> :-) (Karma: 1)</p>",
+        "id": 201194439,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1592424875
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ++</p>",
+        "id": 201194451,
+        "sender_full_name": "klonos",
+        "timestamp": 1592424878
+    },
+    {
+        "content": "<p><strong>jenlampton</strong> go team. (Karma: 7)</p>",
+        "id": 201194452,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1592424878
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> When you get a chance, could you push updates to composer and docker? Release check-list is at <a href=\"https://github.com/backdrop/backdrop-issues/issues/4442\">https://github.com/backdrop/backdrop-issues/issues/4442</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4442\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4442\" title=\"Backdrop 1.16.2 Release checklist · Issue #4442 · backdrop/backdrop-issues\">Backdrop 1.16.2 Release checklist · Issue #4442 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for June 17th, 10am PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release milestone @j...</div></div></div>",
+        "id": 201194559,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592424931
+    },
+    {
+        "content": "<p>Huh, someone updated the download block too, which now only requires inputing the version <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span>  ...I've updated that as well.</p>",
+        "id": 201194714,
+        "sender_full_name": "klonos",
+        "timestamp": 1592424998
+    },
+    {
+        "content": "<p>Is there a checklist/PR for Pantheon as well?</p>",
+        "id": 201194948,
+        "sender_full_name": "Herb",
+        "timestamp": 1592425110
+    },
+    {
+        "content": "<p>Yes <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> ...see <a href=\"https://github.com/backdrop/backdrop-issues/issues/4442\">https://github.com/backdrop/backdrop-issues/issues/4442</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4442\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4442\" title=\"Backdrop 1.16.2 Release checklist · Issue #4442 · backdrop/backdrop-issues\">Backdrop 1.16.2 Release checklist · Issue #4442 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for June 17th, 10am PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release milestone @j...</div></div></div>",
+        "id": 201195159,
+        "sender_full_name": "klonos",
+        "timestamp": 1592425232
+    },
+    {
+        "content": "<p>I just pushed the update to Pantheon's upstream. Working on the Tugboat demos.</p>",
+        "id": 201196118,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592425709
+    },
+    {
+        "content": "<p>i should say though i don't do the <code>backdrop-ops/backdrop-docker</code> one any longer</p>",
+        "id": 201212022,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1592435514
+    },
+    {
+        "content": "<p>Do we have documentation/procedures on what it takes to do that <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> ?</p>",
+        "id": 201224986,
+        "sender_full_name": "klonos",
+        "timestamp": 1592450993
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> <a href=\"https://github.com/backdrop/backdrop-issues/blob/master/procedures/update--docker-image.md\">https://github.com/backdrop/backdrop-issues/blob/master/procedures/update--docker-image.md</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/blob/master/procedures/update--docker-image.md\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/blob/master/procedures/update--docker-image.md\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 201257207,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1592481197
+    },
+    {
+        "content": "<p>...well shame on me. 've updated those instructions a year ago, and I didn't remember anything about having done so <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 201284428,
+        "sender_full_name": "klonos",
+        "timestamp": 1592494212
+    }
+]

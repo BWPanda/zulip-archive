@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Apologies if this isn't the right place to ping <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> , but I'm wondering about the status of my PR 23 days ago, <a href=\"https://github.com/backdrop-contrib/profile/pull/6\">https://github.com/backdrop-contrib/profile/pull/6</a>. Is it missing anything? Should it be reviewed by others? Anything I can do to help it along?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/profile/pull/6\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/profile/pull/6\" title=\"Upgrade from profile2 by bugfolder · Pull Request #6 · backdrop-contrib/profile\">Upgrade from profile2 by bugfolder · Pull Request #6 · backdrop-contrib/profile</a></div><div class=\"message_embed_description\">This PR responds to this issue: #5\nIt adds a hook_update_N() implementation that migrates any existing Profile2 profiles into this module and cleans up the db and config directory.\nIt also adds som...</div></div></div>",
+        "id": 216807435,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1605466037
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> I could take a look at it today. <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ported the module but didn't put himself as maintainer so someone like you could volunteer to maintain it.</p>",
+        "id": 216866930,
+        "sender_full_name": "Herb",
+        "timestamp": 1605531534
+    },
+    {
+        "content": "<p>I'm tempted, but there's a lot going on in the module that I don't fully understand, which gives me pause. (I <em>do</em> understand the parts that I wrote the PR for. I hope.) Getting some other eyes on it would be great, so, thanks in advance!</p>",
+        "id": 216884477,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1605539768
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"335929\">bugfolder</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Pull.20request.20on.20Profile.20module/near/216884477\">said</a>:</p>\n<blockquote>\n<p>I'm tempted, but there's a lot going on in the module that I don't fully understand, which gives me pause...</p>\n</blockquote>\n<p>I have that feeling with most/all of the modules I am a maintainer on. <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span> And is why I tend to put \"co-maintainers wanted\" in the README.</p>",
+        "id": 216901609,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605546744
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> don't worry. I maintain some modules too where I don't understand everything. From your PR I'm confident you've got the skillset to learn what you need if anything breaks. Or ask the community for help</p>",
+        "id": 216903455,
+        "sender_full_name": "Herb",
+        "timestamp": 1605547569
+    }
+]

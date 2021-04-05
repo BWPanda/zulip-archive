@@ -1,0 +1,284 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Current.20page.20field.20token.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html">Current page field token</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="211785754"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211785754" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211785754">(Sep 30 2020 at 16:24)</a>:</h4>
+<p>Oops, I have another token requirement that isn't covered in Backdrop: [current-page:node:field_myfield]</p>
+
+
+
+<a name="211785877"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211785877" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211785877">(Sep 30 2020 at 16:25)</a>:</h4>
+<p>Could [current-page:query:?] be a workaround?</p>
+
+
+
+<a name="211785906"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211785906" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211785906">(Sep 30 2020 at 16:25)</a>:</h4>
+<p>And if so, how does it work? Never used so far.</p>
+
+
+
+<a name="211873432"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211873432" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211873432">(Oct 01 2020 at 06:33)</a>:</h4>
+<p>Wouldn't module entity_token provide these? I'm almost sure.</p>
+
+
+
+<a name="211889584"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211889584" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211889584">(Oct 01 2020 at 10:06)</a>:</h4>
+<p>Oh yes, probably, thank you, I'll have a look! (Seems I have to install 3 modules then: Entity, Entity Plus, and Entity Token.)</p>
+
+
+
+<a name="211891709"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211891709" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211891709">(Oct 01 2020 at 10:32)</a>:</h4>
+<p>(Ah, Entity is part of Backdrop core, so only 2 modules.)</p>
+
+
+
+<a name="211891985"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211891985" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211891985">(Oct 01 2020 at 10:35)</a>:</h4>
+<blockquote>
+<p>Wouldn't module entity_token provide these?</p>
+</blockquote>
+<p>Nope! I've installed <a href="https://github.com/backdrop-contrib/entity_token">https://github.com/backdrop-contrib/entity_token</a>, but the <code>current:page</code> tokens are the same as before. No field related ones.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/entity_token" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/entity_token" title="backdrop-contrib/entity_token">backdrop-contrib/entity_token</a></div><div class="message_embed_description">Provides token replacements for all properties that have no tokens and are known to the entity API. - backdrop-contrib/entity_token</div></div></div>
+
+
+
+<a name="211893085"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211893085" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211893085">(Oct 01 2020 at 10:50)</a>:</h4>
+<p>I suppose, you can't use <code>[node:field_whatever]</code>?</p>
+
+
+
+<a name="211893726"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211893726" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211893726">(Oct 01 2020 at 10:58)</a>:</h4>
+<p>Unfortunately not, I'm embedding the Webform (as node reference, rendered entity) in another content item which holds the field in question.</p>
+
+
+
+<a name="211894261"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211894261" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211894261">(Oct 01 2020 at 11:03)</a>:</h4>
+<p>Hm... Is it in a custom layout? I'm asking because you could use a custom layout context and then render the field in a layout region. (Probably not what you need, just a quick idea.) Is it a single webform or do you need something dynamic for multiple?</p>
+
+
+
+<a name="211894669"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211894669" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211894669">(Oct 01 2020 at 11:08)</a>:</h4>
+<p>No, it isn't a custom layout. Also, it's quite complicated: I need the field value in the <em>description</em> text of a webform component:</p>
+<p>[ ] Ich möchte an der Veranstaltung teilnehmen und überweise den Eintrittspreis innerhalb einer Woche auf das Konto ...<br>
+<em>Eintrittspreise: [current-page:node:field_programm_eintritt]. Die Kontodaten senden wir Ihnen per E-Mail.</em></p>
+
+
+
+<a name="211895021"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211895021" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211895021">(Oct 01 2020 at 11:12)</a>:</h4>
+<p>Works in the D7 site, I guess due to Entity tokens (which however doesn't do the trick in Backdrop).</p>
+
+
+
+<a name="211895154"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211895154" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211895154">(Oct 01 2020 at 11:14)</a>:</h4>
+<p>I've also found another approach for D7 (patch in <a href="https://www.drupal.org/node/919760#comment-9973163">https://www.drupal.org/node/919760#comment-9973163</a>), but in Backdrop I don't find the place where the patch would apply.</p>
+
+
+
+<a name="211895216"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211895216" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211895216">(Oct 01 2020 at 11:15)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> Do you think it's more easy to write a custom token specifically for this use case instead?</p>
+
+
+
+<a name="211895469"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211895469" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211895469">(Oct 01 2020 at 11:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> I've written custom tokens myself before. Its quite easy and very powerful.</p>
+
+
+
+<a name="211895506"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211895506" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211895506">(Oct 01 2020 at 11:19)</a>:</h4>
+<p>Sounds like you have a fairly unique situation that a custom token would work nicely for.</p>
+
+
+
+<a name="211895709"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211895709" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211895709">(Oct 01 2020 at 11:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> sounds reasonable! Only, as usual, above my skills without further indications. At first sight, I've no idea how the code for this token would look like.</p>
+
+
+
+<a name="211895845"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211895845" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211895845">(Oct 01 2020 at 11:23)</a>:</h4>
+<p>The other token I wrote recently (<a href="#narrow/stream/218635-Backdrop/topic/Random.20token/near/211779508">https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Random.20token/near/211779508</a>) was more a copy &amp; paste thing.</p>
+
+
+
+<a name="211895985"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211895985" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211895985">(Oct 01 2020 at 11:25)</a>:</h4>
+<p>Yep, so just need to implement <code>hook_token_info()</code> and <code>hook_tokens()</code>.</p>
+
+
+
+<a name="211896102"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211896102" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211896102">(Oct 01 2020 at 11:27)</a>:</h4>
+<p>Well, the "just implement" part is the crucial one for me !-)</p>
+
+
+
+<a name="211896193"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211896193" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211896193">(Oct 01 2020 at 11:28)</a>:</h4>
+<p>The one I did recently was a token that output the name of a species. This was taken from a term reference field and a textfield on the node, and another optional textfield. Would it help to share that code, or not really?</p>
+
+
+
+<a name="211896477"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211896477" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211896477">(Oct 01 2020 at 11:32)</a>:</h4>
+<p>Another option is that you spin up a Tugboat demo site on <a href="http://BackdropCMS.org">BackdropCMS.org</a>, then set it up the way you need (webform, fields, etc.), share it with me and I can try writing the token code to match that setup...</p>
+
+
+
+<a name="211896550"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211896550" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211896550">(Oct 01 2020 at 11:33)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> Sounds both interesting ... Have to leave for an hour and will check in again then.</p>
+
+
+
+<a name="211896945"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211896945" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211896945">(Oct 01 2020 at 11:38)</a>:</h4>
+<p>Ok, well while I have it open then, here's my custom token code:</p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">/**</span>
+<span class="x"> * Implements hook_token_info().</span>
+<span class="x"> */</span>
+<span class="x">function surg_token_info() {</span>
+<span class="x">  return array(</span>
+<span class="x">    'types' =&gt; array(</span>
+<span class="x">      'species' =&gt; array(</span>
+<span class="x">        'name' =&gt; t('Species'),</span>
+<span class="x">        'description' =&gt; t('Tokens related to Species nodes.'),</span>
+<span class="x">        'needs-data' =&gt; 'node',</span>
+<span class="x">      ),</span>
+<span class="x">    ),</span>
+<span class="x">    'tokens' =&gt; array(</span>
+<span class="x">      'species' =&gt; array(</span>
+<span class="x">        'title' =&gt; array(</span>
+<span class="x">          'name' =&gt; t('Title'),</span>
+<span class="x">          'description' =&gt; t('The title of the Species node.'),</span>
+<span class="x">          'type' =&gt; 'node',</span>
+<span class="x">        ),</span>
+<span class="x">      ),</span>
+<span class="x">    ),</span>
+<span class="x">  );</span>
+<span class="x">}</span>
+
+<span class="x">/**</span>
+<span class="x"> * Implements hook_tokens().</span>
+<span class="x"> */</span>
+<span class="x">function surg_tokens($type, $tokens, array $data = array(), array $options = array()) {</span>
+<span class="x">  $langcode = isset($options['language']) ? $options['language']-&gt;langcode : LANGUAGE_NONE;</span>
+<span class="x">  $sanitize = !empty($options['sanitize']);</span>
+<span class="x">  $replacements = array();</span>
+
+<span class="x">  if ($type == 'species' &amp;&amp; !empty($node = $data['node'])) {</span>
+<span class="x">    foreach ($tokens as $name =&gt; $original) {</span>
+<span class="x">      if ($name == 'title') {</span>
+<span class="x">        // Create a title of the form: 'GENUS SPECIES [(NOTATION)]'.</span>
+<span class="x">        $genus = taxonomy_term_load($node-&gt;field_genus[$langcode][0]['tid']);</span>
+<span class="x">        $title = $genus-&gt;name . ' ' . $node-&gt;field_species[$langcode][0]['value'];</span>
+<span class="x">        if (!empty($notation = $node-&gt;field_notation[$langcode][0]['value'])) {</span>
+<span class="x">          $title .= ' (' . $notation . ')';</span>
+<span class="x">        }</span>
+
+<span class="x">        $replacements[$original] = $sanitize ? filter_xss($title) : $title;</span>
+<span class="x">      }</span>
+<span class="x">    }</span>
+<span class="x">  }</span>
+
+<span class="x">  return $replacements;</span>
+<span class="x">}</span>
+</code></pre></div>
+
+
+
+<a name="211897197"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211897197" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211897197">(Oct 01 2020 at 11:41)</a>:</h4>
+<p>I first create a token type called 'Species' which holds all the tokens (in this case just 1) for my Species nodes (and it requires 'node' data to work properly). I then create a token in the Species group called 'title' which I will use as my Species node titles (I did all this because in D7 I was using custom PHP code in auto nodetitle, which isn't available in Backdrop since the PHP module was (rightly) removed).<br>
+So that's the <code>hook_token_info()</code> implementation.</p>
+
+
+
+<a name="211897628"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211897628" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211897628">(Oct 01 2020 at 11:46)</a>:</h4>
+<p>Now for the token code itself (in <code>hook_tokens()</code>:<br>
+I make sure I'm only dealing with 'Species' tokens where node data is available. Then, for each token (again, in this case just 'title') I generate the title based on the different node field values. I get the term ID from the term reference field, and use it to load the full term, where I add the term name to the beginning of my title. Then I add the value of my Species textfield. Finally, if the Notation field has a value, I append it in brackets on the end. I then add that to the array and return it.</p>
+
+
+
+<a name="211907000"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211907000" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211907000">(Oct 01 2020 at 13:13)</a>:</h4>
+<p>Hey <span class="user-mention" data-user-id="256607">@BWPanda</span> Thank you for sharing the code, very kind! I've still difficulties to connect the dots. (Never learned PHP, and in the rare cases I need it, I'm usually short of time, so learning from these examples didn't happen most of the times.)</p>
+<p>However, I have set up a Tugboat site with a simplified example of my use case. You can already have a quick look at an example Event: <a href="https://1-17-1-0qtn4ndjcnnqarovkgm1o2t6moadh6dh.tugboat.qa/event/barbecue">https://1-17-1-0qtn4ndjcnnqarovkgm1o2t6moadh6dh.tugboat.qa/event/barbecue</a>. (The goal is to render the "Admission fee" value of the Event node in the "Confirmation" component of the webform at the bottom of the page.)</p>
+
+
+
+<a name="211907105"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211907105" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211907105">(Oct 01 2020 at 13:14)</a>:</h4>
+<p>If you want, I can add a user account for you. Which email address?</p>
+
+
+
+<a name="211927944"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211927944" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211927944">(Oct 01 2020 at 15:27)</a>:</h4>
+<p>Just a friendly reminder: although I appreciate the help efforts to get things done quickly, long term there should be bug report issues filed for things that work in D7 whereas not in Backdrop (whether core or contrib). We should make it easy as possible for people upgrading from D7 to do the same things ...if things don't work, then "Backdrop is broken".</p>
+
+
+
+<a name="211928524"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211928524" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211928524">(Oct 01 2020 at 15:31)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> This one <em>doesn't</em> work in D7, or only with Entity tokens. But you're right, in Backdrop with Entity tokens it doesn't work either.</p>
+
+
+
+<a name="211928850"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211928850" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211928850">(Oct 01 2020 at 15:33)</a>:</h4>
+<p>However, Entity tokens is beta, and it seems to be buggy anyways. At least, I wasn't able to save a node after installing it. Unfortunately, I've just not the time to dig deeper in this case and gave up with this approach for the time being.</p>
+
+
+
+<a name="211930365"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211930365" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211930365">(Oct 01 2020 at 15:43)</a>:</h4>
+<p>Voilà, filed a bug report for the missing Random tokens: <a href="https://github.com/backdrop/backdrop-issues/issues/4672">https://github.com/backdrop/backdrop-issues/issues/4672</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4672" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4672" title="Random tokens are missing · Issue #4672 · backdrop/backdrop-issues">Random tokens are missing · Issue #4672 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug Drupal 7 (with the Token module installed) provides &quot;Random&quot; tokens like [random:number]. Backdrop has integrated tokens but without Random tokens. They should be a...</div></div></div>
+
+
+
+<a name="211935918"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211935918" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211935918">(Oct 01 2020 at 16:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> ++</p>
+
+
+
+<a name="211935919"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Current%20page%20field%20token/near/211935919" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Current.20page.20field.20token.html#211935919">(Oct 01 2020 at 16:21)</a>:</h4>
+<p>grabienski** Cheers (Karma: 14)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

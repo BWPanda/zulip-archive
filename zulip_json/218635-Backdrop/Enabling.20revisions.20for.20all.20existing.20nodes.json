@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>I've imported a bunch of content into a Backdrop site; I'd now like to turn on node revisions for all of the nodes on the site, en masse. How would I do that?</p>",
+        "id": 202750257,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593728042
+    },
+    {
+        "content": "<p>I can't figure out where this is set in the database; don't see it in the <code>node</code> table</p>",
+        "id": 202750331,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593728096
+    },
+    {
+        "content": "<p>Huh -- is it actually in the <code>node_revision</code> table? Does EVERY node have an entry in that table, even if it doesn't have any revisions besides the original one?</p>",
+        "id": 202750456,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593728191
+    },
+    {
+        "content": "<p>(Nope!)</p>",
+        "id": 202750505,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593728242
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"262176\">@Jack</span> You enable it per content type. Look for the \"Revision settings\" tab.</p>",
+        "id": 202761503,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593740146
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> AFAICT that doesn't affect existing nodes that don't already have content revisions enabled....huh, but maybe my problem was that for the Page content type new revisions weren't enabled by default <em>before</em> the import, ugh.</p>",
+        "id": 202831317,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593804365
+    },
+    {
+        "content": "<p>Nevertheless, I'd assume there must be a programmatic way to change this for all nodes on a site, same way I can use an UPDATE MySQL query to close comments on all nodes on the site.</p>",
+        "id": 202831343,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593804415
+    },
+    {
+        "content": "<p>Huh -- <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> I think I might be seeing what you're saying...</p>",
+        "id": 202831458,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593804521
+    },
+    {
+        "content": "<p>Yes! Now that I've enabled new revisions by default for the Page content type, I haven't found a single imported page that doesn't have \"Create new revision\" enabled by default when I edit the node. Revisions enabled isn't a value set on a per-node basis, it's set on a per-content-type basis as you said AND it applies to all nodes, not just nodes you create after fixing that setting.</p>",
+        "id": 202831682,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593804742
+    },
+    {
+        "content": "<p>Problem was I was convinced that I had new revisions enabled by default for the Page content type already, but when I just checked I didn't. Whoops!</p>",
+        "id": 202831745,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593804790
+    },
+    {
+        "content": "<p>Thanks for the help sorting that out <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> !</p>",
+        "id": 202831762,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1593804807
+    }
+]

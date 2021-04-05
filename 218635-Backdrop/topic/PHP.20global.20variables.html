@@ -1,0 +1,92 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/PHP.20global.20variables.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html">PHP global variables</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217472334"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217472334" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217472334">(Nov 20 2020 at 23:38)</a>:</h4>
+<p>Can someone please tell me what I'm doing wrong here:</p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">$test = array();</span>
+
+<span class="x">function blah() {</span>
+<span class="x">  global $test;</span>
+
+<span class="x">  $test['yada'] = 'foobar';</span>
+<span class="x">}</span>
+
+<span class="x">dpm($test); // shows `array()`</span>
+<span class="x">blah();</span>
+<span class="x">dpm($test); // shows `array()`, expecting `array('yada' =&gt; 'foobar')`</span>
+</code></pre></div>
+
+
+
+<a name="217474400"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217474400" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217474400">(Nov 21 2020 at 00:10)</a>:</h4>
+<p>Does test need to be declared global outside the function?</p>
+
+
+
+<a name="217477052"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217477052" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217477052">(Nov 21 2020 at 01:02)</a>:</h4>
+<p>Ah, apparently it does! Seems I've been doing it wrong all this time <span aria-label="smiling face" class="emoji emoji-263a" role="img" title="smiling face">:smiling_face:</span> I thought just specifying a variable outside of a function would do that, but I guess not...</p>
+
+
+
+<a name="217477055"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217477055" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217477055">(Nov 21 2020 at 01:02)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> ++</p>
+
+
+
+<a name="217477057"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217477057" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217477057">(Nov 21 2020 at 01:02)</a>:</h4>
+<p><strong>laryn</strong> Cheers (Karma: 13)</p>
+
+
+
+<a name="217485876"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217485876" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217485876">(Nov 21 2020 at 05:20)</a>:</h4>
+<p>Hmm, actually,according to <a href="https://www.php.net/manual/en/language.variables.scope.php#language.variables.scope.global">https://www.php.net/manual/en/language.variables.scope.php#language.variables.scope.global</a> I shouldn't need to use the <code>global</code>keyword outside of the function...</p>
+
+
+
+<a name="217493888"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217493888" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217493888">(Nov 21 2020 at 09:42)</a>:</h4>
+<p>And indeed adding the <code>global</code> keyword doesn't work for the problem I'm having.</p>
+
+
+
+<a name="217501226"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217501226" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217501226">(Nov 21 2020 at 13:08)</a>:</h4>
+<p>Now that karma you gave me feels ill-gotten.</p>
+
+
+
+<a name="217511820"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217511820" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217511820">(Nov 21 2020 at 18:04)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> ++ now it fixed?</p>
+
+
+
+<a name="217511821"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20global%20variables/near/217511821" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20global.20variables.html#217511821">(Nov 21 2020 at 18:04)</a>:</h4>
+<p><strong>laryn</strong> thanks for all you do (Karma: 14)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

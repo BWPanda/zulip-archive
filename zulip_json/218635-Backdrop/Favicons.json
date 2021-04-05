@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Is there a way to designate different favicons for different sections of a website?</p>",
+        "id": 202395014,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593491935
+    },
+    {
+        "content": "<p><a href=\"https://stackoverflow.com/questions/25005936/how-to-use-multiple-favicons-for-one-site\">https://stackoverflow.com/questions/25005936/how-to-use-multiple-favicons-for-one-site</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/25005936/how-to-use-multiple-favicons-for-one-site\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/25005936/how-to-use-multiple-favicons-for-one-site\" title=\"How to use multiple favicons for one site\">How to use multiple favicons for one site</a></div><div class=\"message_embed_description\">I've done quite a bit of searching and reading on trying to find a solution but have not come up or across with anything that has worked for me just yet. I am building a site that carries a colored </div></div></div>",
+        "id": 202395252,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593492321
+    },
+    {
+        "content": "<p>I guess  you'd need custom PHP code to designate the different sections and assign the favicon for each...</p>",
+        "id": 202395301,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593492369
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> -- I guess part of my question is if I code this in <code>template.php</code> (for example) how do I override the default favicon?</p>",
+        "id": 202395332,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593492475
+    },
+    {
+        "content": "<p>Maybe using <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_html_head_alter/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_html_head_alter/1</a> (untested)...?</p>",
+        "id": 202395717,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593493042
+    }
+]

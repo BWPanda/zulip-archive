@@ -1,0 +1,182 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> or anyone. I've never worked with the translation features in BackdropCMS. What is the best place for me to get started? Do we have any videos or documentation on how translations work in Backdrop CMS?</p>",
+        "id": 205741319,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596397662
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> as far as I know, there's no documentation for this, maybe because scenarios are very different (e.g. if Backend also needs to be translated or not). However, getting started is very easy, enabling modules, enabling translation per content type, add language switcher block to the active layout. It's very important to know that each translated node has a different NID (which is why D7 came up with Entity Translation Module (one NID for all language versions). But for getting started, basic content translation works pretty well.</p>",
+        "id": 205769827,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596442822
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/IYvjQif-jaCtzhpsJbrBcA7U/Screenshot-2020-08-03-at-10.16.27.png\">Screenshot-2020-08-03-at-10.16.27.png</a> <a href=\"/user_uploads/18319/w-u6ubXtKdreoA2efZ65pUuI/Screenshot-2020-08-03-at-10.11.03.png\">Screenshot-2020-08-03-at-10.11.03.png</a> <a href=\"/user_uploads/18319/omTgjZapZHPkV9BckQn0K8WG/Screenshot-2020-08-03-at-10.08.56.png\">Screenshot-2020-08-03-at-10.08.56.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/IYvjQif-jaCtzhpsJbrBcA7U/Screenshot-2020-08-03-at-10.16.27.png\" title=\"Screenshot-2020-08-03-at-10.16.27.png\"><img src=\"/user_uploads/18319/IYvjQif-jaCtzhpsJbrBcA7U/Screenshot-2020-08-03-at-10.16.27.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/w-u6ubXtKdreoA2efZ65pUuI/Screenshot-2020-08-03-at-10.11.03.png\" title=\"Screenshot-2020-08-03-at-10.11.03.png\"><img src=\"/user_uploads/18319/w-u6ubXtKdreoA2efZ65pUuI/Screenshot-2020-08-03-at-10.11.03.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/omTgjZapZHPkV9BckQn0K8WG/Screenshot-2020-08-03-at-10.08.56.png\" title=\"Screenshot-2020-08-03-at-10.08.56.png\"><img src=\"/user_uploads/18319/omTgjZapZHPkV9BckQn0K8WG/Screenshot-2020-08-03-at-10.08.56.png\"></a></div>",
+        "id": 205769842,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596442840
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span>! I also guess there's no documentation about translating Backdrop, apart of <a href=\"https://backdropcms.org/installing-in-other-languages\">https://backdropcms.org/installing-in-other-languages</a>. <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span></p>",
+        "id": 205779205,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1596450304
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Are you trying to understand Backdrop translation for testing purposes, or do you need it for a real world website?</p>",
+        "id": 205781394,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1596452164
+    },
+    {
+        "content": "<p>To get the idea, refer to the Drupal 7 documentation. (Some things changed in Backdrop, but the main concept is the same as in D7.)</p>\n<ul>\n<li>Interface translation, <a href=\"https://www.drupal.org/docs/7/multilingual/translating-site-interfaces\">https://www.drupal.org/docs/7/multilingual/translating-site-interfaces</a></li>\n<li>Content translation, <a href=\"https://www.drupal.org/docs/7/multilingual/translating-content\">https://www.drupal.org/docs/7/multilingual/translating-content</a></li>\n</ul>",
+        "id": 205781679,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1596452434
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> - I'll try again and experiment.</p>",
+        "id": 205820149,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596474399
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> - right now, I just wanted to help test a PR and realized how little I know about translation in BackdropCMS (never really used it in Drupal either).</p>",
+        "id": 205820210,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596474434
+    },
+    {
+        "content": "<p>Specifically, I was looking at testing this one: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4514\">https://github.com/backdrop/backdrop-issues/issues/4514</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4514\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4514\" title=\"Views link to node translation not showing · Issue #4514 · backdrop/backdrop-issues\">Views link to node translation not showing · Issue #4514 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug The &quot;Translate link&quot; in views never shows because of a mistake in an if clause. Steps To Reproduce To reproduce the behavior: Enable Content Translation module, add...</div></div></div>",
+        "id": 205820945,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596474764
+    },
+    {
+        "content": "<p>This Issue brings up an interesting question: can \"translate to English\"  ever work in Backdrop or should we remove that setting. The change came in with early D8.<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4517\">https://github.com/backdrop/backdrop-issues/issues/4517</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4517\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4517\" title=\"Wrong langcode data on admin/config/regional/translate if default language is not English · Issue #4517 · backdrop/backdrop-issues\">Wrong langcode data on admin/config/regional/translate if default language is not English · Issue #4517 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug If the default language of a site is not English, locale&#39;s table shows wrong data. Steps To Reproduce To reproduce the behavior: Install a site in a different language or...</div></div></div>",
+        "id": 206033665,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1596640140
+    },
+    {
+        "content": "<p>At least somehow it works, see my comment in the issue.</p>",
+        "id": 206036170,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1596641079
+    },
+    {
+        "content": "<p>Translation gurus! (that's <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> and <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>) I found a bug involving the Locale module. Care to take a look? <a href=\"https://github.com/backdrop/backdrop-issues/issues/4559\">https://github.com/backdrop/backdrop-issues/issues/4559</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4559\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4559\" title=\"SQL error when uninstalling Locale module · Issue #4559 · backdrop/backdrop-issues\">SQL error when uninstalling Locale module · Issue #4559 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug In trying to reproduce #4517, I stumbled upon this bug: uninstalling the Locale module give this error: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#39;backdro...</div></div></div>",
+        "id": 207619800,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598005825
+    },
+    {
+        "content": "<p>Please quit looking for bugs. If we look for bugs, we find bugs. If we don't look, then there are no bugs. It's simple.</p>\n<p>;-)</p>",
+        "id": 207619959,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598005967
+    },
+    {
+        "content": "<blockquote>\n<p>If we don't look, then there are no bugs.</p>\n</blockquote>\n<p>Genius! <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 207620336,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598006304
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> No time to have a look now, but I put it on the list.</p>",
+        "id": 207623876,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598009507
+    },
+    {
+        "content": "<p>It seems that this problem has nothing to do with translations as-is, but looks like (sort of) a race condition when uninstalling a module. It's a severe bug because after that SQLSTATE the site is in an unstable and hard to repair state.</p>",
+        "id": 207624664,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598010192
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Translations/near/207620336\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>If we don't look, then there are no bugs.</p>\n</blockquote>\n<p>Genius! <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>\n</blockquote>\n<p>Guy doesn't like going to the doctor ...his wife convinces him to ...guy goes to the doctor ...doctor tests ...doctor finds cancer ...guy goes back to wife:</p>\n<blockquote>\n<p>I told you I didn't wanna go to the doctor! Yesterday I was fine ...today I went to the doctor, and now I have cancer.</p>\n</blockquote>",
+        "id": 207688747,
+        "sender_full_name": "klonos",
+        "timestamp": 1598046706
+    },
+    {
+        "content": "<p>good afternoon; How can I contribute to the translation of the backdrop?</p>",
+        "id": 208978616,
+        "sender_full_name": "Diego Forichi",
+        "timestamp": 1599144469
+    },
+    {
+        "content": "<p>Hi, Diego Forichi. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 208978617,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1599144470
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"337529\">@Diego Forichi</span> wait a bit until <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> is back here in the chat. He will give you instructions.</p>",
+        "id": 208979005,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599144612
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"337529\">@Diego Forichi</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...you can start by reading the instructions here: <a href=\"https://localize.backdropcms.org/\">https://localize.backdropcms.org/</a></p>",
+        "id": 208990090,
+        "sender_full_name": "klonos",
+        "timestamp": 1599148905
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"337529\">@Diego Forichi</span> Please apply for a user account on <a href=\"https://localize.backdropcms.org\">https://localize.backdropcms.org</a>, then I'll enable the account later this evening or at the latest tomorrow around noon (european time) and will send you instructions.</p>",
+        "id": 209007965,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599156618
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Translations/near/209007965\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"337529\">Diego Forichi</span> Please apply for a user account on <a href=\"https://localize.backdropcms.org\">https://localize.backdropcms.org</a>, then I'll enable the account later this evening or at the latest tomorrow around noon (european time) and will send you instructions.</p>\n</blockquote>\n<p>ThankYou</p>",
+        "id": 209011126,
+        "sender_full_name": "Diego Forichi",
+        "timestamp": 1599158150
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Translations/near/208990090\">said</a>:</p>\n<blockquote>\n<p>Hey <span class=\"user-mention silent\" data-user-id=\"337529\">Diego Forichi</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...you can start by reading the instructions here: <a href=\"https://localize.backdropcms.org/\">https://localize.backdropcms.org/</a></p>\n</blockquote>\n<p>thankyou</p>",
+        "id": 209011203,
+        "sender_full_name": "Diego Forichi",
+        "timestamp": 1599158172
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Translations/near/208979005\">said</a>:</p>\n<blockquote>\n<p>Hi <span class=\"user-mention silent\" data-user-id=\"337529\">Diego Forichi</span> wait a bit until <span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> is back here in the chat. He will give you instructions.</p>\n</blockquote>\n<p>thankyou</p>",
+        "id": 209011218,
+        "sender_full_name": "Diego Forichi",
+        "timestamp": 1599158181
+    },
+    {
+        "content": "<p>New language template files for the 1.18. release are now on <a href=\"https://localize.backdropcms.org\">https://localize.backdropcms.org</a>.</p>",
+        "id": 223357241,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1611139333
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ++</p>",
+        "id": 223371823,
+        "sender_full_name": "klonos",
+        "timestamp": 1611149333
+    },
+    {
+        "content": "<p>grabienski** leveled up! (Karma: 15)</p>",
+        "id": 223371824,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1611149333
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> - did you see this?<br>\n<a href=\"https://forum.backdropcms.org/forum/scandinavian-translations\">https://forum.backdropcms.org/forum/scandinavian-translations</a></p>",
+        "id": 230963331,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616117781
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Thanks! Yes, I saw the post. As she was asking for people interested in <strong>making</strong> Scandinavian translations, I didn't chime in. However, maybe it's helpful when I post information about the translation website. I can reply later this day.</p>",
+        "id": 230985377,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616139158
+    }
+]

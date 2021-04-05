@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>I have a PR ready that should make it so there are no PHP errors when using Backdrop on PHP 7.4.</p>",
+        "id": 195464741,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588016049
+    },
+    {
+        "content": "<p>If someone could review it, that would be great.</p>",
+        "id": 195464778,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588016072
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4308\" title=\"https://github.com/backdrop/backdrop-issues/issues/4308\">https://github.com/backdrop/backdrop-issues/issues/4308</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4308\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4308\" title=\"PHP 7.4: Notice: Trying to access array offset on value of type &lt;int, null&gt; · Issue #4308 · backdrop/backdrop-issues\">PHP 7.4: Notice: Trying to access array offset on value of type &lt;int, null&gt; · Issue #4308 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug There are a few places where we check the first character of a string or int using the array access syntax. As of PHP 7.4 this now gives an error notice. We should convert ea...</div></div></div>",
+        "id": 195464797,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588016087
+    },
+    {
+        "content": "<p>I just got another question about Backdrop compatibility with PHP 7.4. I don't think we have anywhere that clearly answers this question.</p>",
+        "id": 211312088,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601064894
+    },
+    {
+        "content": "<p>I understand that the answer is \"yes.\"</p>",
+        "id": 211312112,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601064904
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/579\">https://github.com/backdrop-ops/backdropcms.org/issues/579</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/579\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/579\" title=\"PHP Compatibility Chart · Issue #579 · backdrop-ops/backdropcms.org\">PHP Compatibility Chart · Issue #579 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Should we have something on BackdropCMS.org that addresses PHP compatibility not just on old versions of PHP, but on the most recent versions? There was a question on Twitter about Backdrop compati...</div></div></div>",
+        "id": 211312157,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601064935
+    },
+    {
+        "content": "<p>I think someone needs to run the tests in PHP 7.4 and confirm. Then maybe we can update the website</p>",
+        "id": 211320283,
+        "sender_full_name": "Herb",
+        "timestamp": 1601069473
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> did that, because Arch updated his version of PHP and he couldn't run Backdrop until he fixed all the problems: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4308\">https://github.com/backdrop/backdrop-issues/issues/4308</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4308\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4308\" title=\"PHP 7.4: Notice: Trying to access array offset on value of type &lt;int, null&gt; · Issue #4308 · backdrop/backdrop-issues\">PHP 7.4: Notice: Trying to access array offset on value of type &lt;int, null&gt; · Issue #4308 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug There are a few places where we check the first character of a string or int using the array access syntax. As of PHP 7.4 this now gives an error notice. We should convert ea...</div></div></div>",
+        "id": 211321030,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601069898
+    },
+    {
+        "content": "<p>Ah yes it's all there</p>",
+        "id": 211327585,
+        "sender_full_name": "Herb",
+        "timestamp": 1601075096
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/PHP.207.2E4/near/211321030\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> did that, because Arch updated his version of PHP and he couldn't run Backdrop until he fixed all the problems: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4308\">https://github.com/backdrop/backdrop-issues/issues/4308</a></p>\n</blockquote>\n<p>Thank goodness, because I have to update my servers this week.<br>\nElisabeth</p>",
+        "id": 211645789,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601396550
+    }
+]

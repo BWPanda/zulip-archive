@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>In a custom module that is building a custom block, how can I add contextual links beyond the basic \"Configure block\" link that is added by default? I <a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/contextual/contextual.api.php\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/contextual/contextual.api.php\">looked in the api file</a> for the Contextual links module but it's not clear to me from that.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/contextual/contextual.api.php\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/contextual/contextual.api.php\" target=\"_blank\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 189028810,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582644293
+    },
+    {
+        "content": "<p>Try <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_menu_contextual_links_alter/1\" target=\"_blank\" title=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_menu_contextual_links_alter/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_menu_contextual_links_alter/1</a></p>",
+        "id": 189031423,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1582645781
+    },
+    {
+        "content": "<p>Thanks -- taking a look now.</p>",
+        "id": 189031833,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582646028
+    },
+    {
+        "content": "<p>When I add that hook to a custom module, it fires for all contextual links on the page I'm currently viewing. I'm having trouble seeing how to target only the block I've created.</p>",
+        "id": 189033072,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582646820
+    },
+    {
+        "content": "<p><span aria-label=\"looking\" class=\"emoji emoji-1f440\" role=\"img\" title=\"looking\">:looking:</span> <a href=\"https://www.drupal.org/docs/7/administering-drupal-7-site/working-with-contextual-links#s-adding-new-contextual-links\" target=\"_blank\" title=\"https://www.drupal.org/docs/7/administering-drupal-7-site/working-with-contextual-links#s-adding-new-contextual-links\">https://www.drupal.org/docs/7/administering-drupal-7-site/working-with-contextual-links#s-adding-new-contextual-links</a></p>",
+        "id": 189033252,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582646951
+    },
+    {
+        "content": "<p>hook_menu_contextual_links_alter() will only work to modify existing contextual links, not create new ones.</p>",
+        "id": 189036508,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1582649126
+    },
+    {
+        "content": "<p>I think that Drupal doc should be a good place to start, with the caveat that some things might be different in Backdrop.</p>",
+        "id": 189036634,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1582649208
+    },
+    {
+        "content": "<p>I got it working by following the Drupal docs linked above, using both <code>hook_block_view_alter()</code> and <code>hook_menu()</code>.</p>",
+        "id": 189135811,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582737722
+    }
+]

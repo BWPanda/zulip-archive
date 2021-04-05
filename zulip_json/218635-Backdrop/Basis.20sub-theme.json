@@ -1,0 +1,452 @@
+[
+    {
+        "content": "<p>I'm considering to build a contrib sub-theme of <em>Basis</em>, holding not more than (1) the <code>.info</code> file, (2) an empty <code>skin-custom.css</code>, and (3) a README file. This would make sub-theming a lot easier, in my opinion.</p>",
+        "id": 197422363,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589380932
+    },
+    {
+        "content": "<p>Now, I'm looking for a good theme name which reflects the relation of <em>Basis</em> as the base theme and the sub-theme. I'm sort of struggling with the term <strong>sub</strong> (which probably represents the concept of inheritance) because using a sub-theme, you build <strong>on top</strong> of a base theme.</p>",
+        "id": 197423452,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589381415
+    },
+    {
+        "content": "<p>I'm interested in feedback which concept should be represented in the theme name: (a) being a <strong>sub</strong>-theme, or (b) being something which builds <strong>on top</strong> of the base theme?</p>",
+        "id": 197424128,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589381670
+    },
+    {
+        "content": "<p>I think that depends on who it is you believe the target audience is. If you think it is people who are familiar with theming in Drupal, then (a). Otherwise, (b) might be better. Or you could go with (c), and ignore what the name should represent, but clearly document what it is for at the very top of the README file. <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197424845,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589381973
+    },
+    {
+        "content": "<p>Probably not only people who are familiar with theming in Drupal, so (b) might be better. Here some first ideas:</p>\n<ul>\n<li>Basis =&gt; Cover</li>\n<li>Basis =&gt; Skin (problem, there's a <code>skin.css</code> in <em>Basis</em>)</li>\n<li>Basis =&gt; Topping</li>\n</ul>\n<p>Other ideas? What do you (all) think? Also interested in feedback because I'm not a native English speaker.</p>",
+        "id": 197425542,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589382234
+    },
+    {
+        "content": "<blockquote>\n<p>Or you could go with (c), and ignore what the name should represent ...</p>\n</blockquote>\n<p>Sure, that will be my fallback strategy!</p>",
+        "id": 197425952,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589382407
+    },
+    {
+        "content": "<p>Rather than think about it in terms of either <strong>sub</strong> or <strong>on top</strong>, what about <strong>extend</strong> (which I think would address both ideas in one), and coming up with a name that represents that?</p>",
+        "id": 197429048,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589383599
+    },
+    {
+        "content": "<p>Extending the theme, yes, sounds interesting! Do you have a term in mind (not the perfect one, just as an example)?</p>",
+        "id": 197431002,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589384380
+    },
+    {
+        "content": "<p>I keep meaning to make a drush command to do this, but then i don't; ... carry on;</p>",
+        "id": 197431677,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589384594
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> To make sub-themes, or to come up with names? <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span><span aria-label=\"big smile\" class=\"emoji emoji-1f604\" role=\"img\" title=\"big smile\">:big_smile:</span></p>",
+        "id": 197431908,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589384673
+    },
+    {
+        "content": "<p>Sorry, Olaf, I do not have anything that comes to mind.</p>",
+        "id": 197431934,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589384685
+    },
+    {
+        "content": "<p>I like <code>cover</code> as a name ... <code>cover</code> all your bases <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span>  in the README.md you can say <code>cover</code> extends the basis theme;</p>",
+        "id": 197432109,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589384748
+    },
+    {
+        "content": "<p>Duvet?</p>",
+        "id": 197432341,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589384794
+    },
+    {
+        "content": "<p>\"All you Basis are belong to us\"?</p>",
+        "id": 197432669,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589384880
+    },
+    {
+        "content": "<p>Duvet sounds nice, didn't know the term.</p>",
+        "id": 197434587,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589385607
+    },
+    {
+        "content": "<p>Is it common, or kind of exotic?</p>",
+        "id": 197434713,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589385665
+    },
+    {
+        "content": "<p>\"Duvet\" is common in English I believe ...but it must derive from French ...at least it sound like it.</p>",
+        "id": 197434886,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385739
+    },
+    {
+        "content": "<p>I was thinking that \"Basic\" is a good candidate based on your description <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ...but it seems that this namespace is take in <a href=\"http://d.org\">d.org</a>: <a href=\"https://www.drupal.org/project/structure\">https://www.drupal.org/project/structure</a><br>\n...I have a habit of looking up the definition/etymology of words, and their origin (I'm a Google/Wikipedia freak <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ) ...also like looking up synonyms etc. Perhaps these will give you an idea.<br>\nSo, I like these various definitions of \"base\", which originates from the Greek word \"basis\":</p>\n<blockquote>\n<p>the lowest part or edge of something, especially the part on which it rests or is supported.</p>\n</blockquote>",
+        "id": 197434898,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385744
+    },
+    {
+        "content": "<blockquote>\n<p>the underlying support or foundation for an idea, argument, or process</p>\n</blockquote>",
+        "id": 197434930,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385759
+    },
+    {
+        "content": "<blockquote>\n<p>the part of a column between the shaft and pedestal or pavement. (in architecture)</p>\n</blockquote>",
+        "id": 197435006,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385804
+    },
+    {
+        "content": "<p>So you could have the Basis, and then a \"Pillar\" built on top of it.</p>",
+        "id": 197435083,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385840
+    },
+    {
+        "content": "<p>...<code>pillar</code> is not taken in <a href=\"http://d.org\">d.org</a>: <a href=\"https://www.drupal.org/project/pillar\">https://www.drupal.org/project/pillar</a></p>",
+        "id": 197435210,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385881
+    },
+    {
+        "content": "<p>Duvet, in Canada at least, means a specific kind of bed covering</p>",
+        "id": 197435215,
+        "sender_full_name": "Herb",
+        "timestamp": 1589385884
+    },
+    {
+        "content": "<p>That's what it means in OZ as well.</p>",
+        "id": 197435252,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385900
+    },
+    {
+        "content": "<p>I was right; it is French:</p>",
+        "id": 197435312,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385933
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/hXdmA6d_bxwKquzPyhNt7vm5/Screen-Shot-2020-05-13-at-7.05.23-pm.png\">Screen-Shot-2020-05-13-at-7.05.23-pm.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/hXdmA6d_bxwKquzPyhNt7vm5/Screen-Shot-2020-05-13-at-7.05.23-pm.png\" title=\"Screen-Shot-2020-05-13-at-7.05.23-pm.png\"><img src=\"/user_uploads/18319/hXdmA6d_bxwKquzPyhNt7vm5/Screen-Shot-2020-05-13-at-7.05.23-pm.png\"></a></div>",
+        "id": 197435334,
+        "sender_full_name": "klonos",
+        "timestamp": 1589385944
+    },
+    {
+        "content": "<blockquote>\n<p>pillar is not taken in <a href=\"http://d.org\">d.org</a></p>\n</blockquote>\n<p><code>cover</code> and <code>duvet</code> are also available</p>",
+        "id": 197435536,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589386013
+    },
+    {
+        "content": "<p><span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 197435561,
+        "sender_full_name": "klonos",
+        "timestamp": 1589386025
+    },
+    {
+        "content": "<p>I hope this helps come up with a name:</p>",
+        "id": 197436369,
+        "sender_full_name": "klonos",
+        "timestamp": 1589386327
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/4rYJ3FldNStC-O2jVSe2pyph/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/4rYJ3FldNStC-O2jVSe2pyph/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/4rYJ3FldNStC-O2jVSe2pyph/image.png\"></a></div>",
+        "id": 197436381,
+        "sender_full_name": "klonos",
+        "timestamp": 1589386333
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>, interesting! I guess however, pillar is too specific.</p>",
+        "id": 197436417,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589386346
+    },
+    {
+        "content": "<p>Sounds like what is placed on top of a \"base\" is called a \"shaft\"</p>",
+        "id": 197436451,
+        "sender_full_name": "klonos",
+        "timestamp": 1589386360
+    },
+    {
+        "content": "<p>Not taken: <a href=\"https://www.drupal.org/project/shaft\">https://www.drupal.org/project/shaft</a></p>",
+        "id": 197436474,
+        "sender_full_name": "klonos",
+        "timestamp": 1589386370
+    },
+    {
+        "content": "<blockquote>\n<p>There are only two hard things in Computer Science: cache invalidation and naming things.</p>\n</blockquote>",
+        "id": 197436741,
+        "sender_full_name": "klonos",
+        "timestamp": 1589386476
+    },
+    {
+        "content": "<p>...or:</p>\n<blockquote>\n<p>There are 2 hard problems in computer science: cache invalidation, naming things, and off-by-1 errors.</p>\n</blockquote>",
+        "id": 197436782,
+        "sender_full_name": "klonos",
+        "timestamp": 1589386499
+    },
+    {
+        "content": "<p>That's the one.</p>",
+        "id": 197436818,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589386511
+    },
+    {
+        "content": "<blockquote>\n<p>There are 5 hard problems in computer science: cache invalidation, naming things, off-by-1 errors, and people who cannot count.</p>\n</blockquote>",
+        "id": 197436911,
+        "sender_full_name": "klonos",
+        "timestamp": 1589386555
+    },
+    {
+        "content": "<p>Thanks for all your input so far!</p>",
+        "id": 197440866,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589388275
+    },
+    {
+        "content": "<p>Sometimes people go for what we call double-barrelled family names, e.g. Smith-Jones. Perhaps you could do this with Basis and your subtheme could be Olaf-Basis, or similar.</p>",
+        "id": 197476561,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1589403382
+    },
+    {
+        "content": "<blockquote>\n<p>double-barrelled family names ...</p>\n</blockquote>\n<p>Nice idea: Sub-Basis, Basis-Sub, Basis-Cover ... Or wait, I also like Smith-Jones <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197478296,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589404301
+    },
+    {
+        "content": "<p><code>thesis</code>?</p>",
+        "id": 197478613,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589404463
+    },
+    {
+        "content": "<p>ie. the basis of your argument is developed into a thesis</p>",
+        "id": 197478636,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589404472
+    },
+    {
+        "content": "<p>ReBasis</p>",
+        "id": 197478757,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589404537
+    },
+    {
+        "content": "<p><code>proof</code></p>",
+        "id": 197479098,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589404724
+    },
+    {
+        "content": "<p><code>qed</code></p>",
+        "id": 197479112,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589404731
+    },
+    {
+        "content": "<p><code>basis-starter</code> the sour dough of themes.</p>",
+        "id": 197479143,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589404745
+    },
+    {
+        "content": "<p><em>Thesis</em> is brilliant, also because of the ending! Will people expect too much of it?</p>",
+        "id": 197480633,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589405600
+    },
+    {
+        "content": "<p>I mean, basically it will be an empty theme.</p>",
+        "id": 197480748,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589405668
+    },
+    {
+        "content": "<p>Though, depends on the README ... that could become quite elaborated.</p>",
+        "id": 197480852,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589405749
+    },
+    {
+        "content": "<p><span aria-label=\"writing\" class=\"emoji emoji-270d\" role=\"img\" title=\"writing\">:writing:</span> and the wiki, I suppose</p>",
+        "id": 197481237,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589405970
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> It sounds to me like what you're proposing is \"Basis Unloaded.\" :-)</p>\n<p>But I'd suggest (as a resident newbie to Backdrop), don't do anything too clever. As a new guy, I went shopping for themes and ended up subtheming Basis myself because it had the best documentation—which is to say, I frequently got lost quickly looking at the others. You can help people like me by naming it \"Basis NoCSS,\" which makes it very clear how it differs as a base theme from regular Basis (also considered a base theme, yes?).</p>",
+        "id": 197753455,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1589577367
+    },
+    {
+        "content": "<p>Thanks for your feedback, <span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> ! I'd say the theme would differ from regular <em>Basis</em> as it provides the space to extend <em>Basis</em>. In this respect, I see <em>Basis</em> as a base theme (and also because I find it very suitable as a starting point, together with the core layouts including Bootstrap 4 classes). However, in contrast to other base themes, <em>Basis</em> is even usable without any changes, in this respect I wouldn't call it 'only' a base theme.</p>",
+        "id": 197867575,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589747545
+    },
+    {
+        "content": "<p>Regarding the name: \"Basis NoCSS\" would reflect the starting point quite good (even if other aspects like JavaScript or template files aren't covered) but once people add their own CSS, the name might be misleading.</p>",
+        "id": 197867799,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589747996
+    },
+    {
+        "content": "<p>However, the discussion is very inspiring! E.g., at the beginning, I didn't consider to choose a composed name which contains \"Basis\" like \"Basis Starter\", but it might help to get the idea at first sight. However, personally I like figurative names like \"Thesis\" or \"Cover\". I guess I'll think again about it!</p>",
+        "id": 197868406,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589748842
+    },
+    {
+        "content": "<p>Hey, I've made an initial release of ... tadaaaa: <strong>Thesis</strong>! Here it is: <a href=\"https://backdropcms.org/project/thesis\">https://backdropcms.org/project/thesis</a></p>",
+        "id": 199267032,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590859351
+    },
+    {
+        "content": "<p>So the question is now, to use Thesis, do you hack it, or subtheme it? <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 199267877,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1590860599
+    },
+    {
+        "content": "<p>I'd say, hack it. If you want to subtheme, Basis should be the base theme, not Thesis.</p>",
+        "id": 199268008,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590860772
+    },
+    {
+        "content": "<p>Which raises the question of Thesis updates. There won't be many, apart of the README.</p>",
+        "id": 199268040,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590860850
+    },
+    {
+        "content": "<p>That's also the reason for not having more directories, like <code>templates</code>. Would make updating difficult, when people hack Thesis, add own templates etc.</p>",
+        "id": 199268108,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590860957
+    },
+    {
+        "content": "<p>Well, actually updating will however be a mess. Not sure if clear update notes will help. Who reads them? So, Thesis may be good for starters, but it's for sure limited. Here are the current alternatives that I know of: <a href=\"https://github.com/backdrop-contrib/thesis#alternatives-to-thesis\">https://github.com/backdrop-contrib/thesis#alternatives-to-thesis</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/thesis#alternatives-to-thesis\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/thesis#alternatives-to-thesis\" title=\"backdrop-contrib/thesis\">backdrop-contrib/thesis</a></div><div class=\"message_embed_description\">Thesis extends Basis, the default theme in Backdrop. - backdrop-contrib/thesis</div></div></div>",
+        "id": 199268572,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590861824
+    },
+    {
+        "content": "<p>I've created a Basis sub-theme, but it doesn't appear to be loading the components folder from Basis.  Is there something I need to add to the .info file. so that it loads it, or do I need to copy that folder over?</p>",
+        "id": 207557510,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597948310
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> - have you see this blog post?<br>\n<a href=\"https://backdropcms.org/news/build-sub-theme-basis-default-frontend-theme-backdrop\">https://backdropcms.org/news/build-sub-theme-basis-default-frontend-theme-backdrop</a></p>",
+        "id": 207557753,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597948432
+    },
+    {
+        "content": "<p>If this does not answer your question, we should update that post.</p>",
+        "id": 207557792,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597948443
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Basis.20sub-theme/near/207557792\">said</a>:</p>\n<blockquote>\n<p>If this does not answer your question, we should update that post.</p>\n</blockquote>\n<p>Nope it doesn't.  Reading that article (and the original from the api site, it seems that it should be loading all the css in the components folder of basis theme and it's not doing that (on Safari or Chrome on  a mac, even after I flush the caches).   (see original article and this article  number 12) - the base css in the css folder is loading, just nothing in the components folder.   my sub-theme has only 1 css file (page_style.css) which should not override any of the original basis files, so that I can be careful what I use. colors subdirectory is copied over.<br>\nInfo file is:  <br>\n\"type = theme<br>\nname = XXX Basis<br>\ndescription = XXX Basis Custom Sub-Theme for XXX Environmental.<br>\nbackdrop = 1.x<br>\nbase_theme = basis</p>\n<p>; Add theme CSS files<br>\nstylesheets[all][] = css/page_style.css<br>\nstylesheets[all][] = css/colors.css</p>\n<p>; We need at least one setting for the theme settings page to appear in the<br>\n; menu. Color module provides our defaults, so we just register a dummy setting.<br>\nsettings[color] = true\"</p>",
+        "id": 207559786,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597949473
+    },
+    {
+        "content": "<p>Darn. I'm getting ready for meeting in a few minutes, but if you haven't solved this by later today. I'll try to provide something helpful.</p>",
+        "id": 207560072,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597949617
+    },
+    {
+        "content": "<p>Try to remove underscore sign from \"base_theme\", to be \"base theme\". - <a href=\"https://backdropcms.org/news/build-sub-theme-basis-default-frontend-theme-backdrop#A5\">https://backdropcms.org/news/build-sub-theme-basis-default-frontend-theme-backdrop#A5</a></p>",
+        "id": 207560274,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1597949712
+    },
+    {
+        "content": "<p>Yeah, that seems that it might be it <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 207560692,
+        "sender_full_name": "klonos",
+        "timestamp": 1597949918
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Basis.20sub-theme/near/207560274\">said</a>:</p>\n<blockquote>\n<p>Try to remove underscore sign from \"base_theme\", to be \"base theme\". - <a href=\"https://backdropcms.org/news/build-sub-theme-basis-default-frontend-theme-backdrop#A5\">https://backdropcms.org/news/build-sub-theme-basis-default-frontend-theme-backdrop#A5</a></p>\n</blockquote>\n<p>ARGGHH!  That was it.   Talk about a typo. I must have read through that file 20 times.  Thanks!!!!</p>",
+        "id": 207561697,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597950439
+    },
+    {
+        "content": "<p>YEAH!!!!!!</p>",
+        "id": 207562029,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597950609
+    },
+    {
+        "content": "<p>Okay, I must be missing something here because it's 10 pm, the dog is barking and I'm exhausted.  I can see the menu dropdown code in the css for Basis, but there's no submenus?  Am I missing something or should I switch to a different theme before I get too far in here.  I usually use other themes, but Basis worked for this company, so it's my first time customizing it.</p>",
+        "id": 207594780,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597975987
+    },
+    {
+        "content": "<p>I think I figured it out, but it's going to have to wait till morning.  I have the primary navigation menu in the header and I have to move all the dropdown code from menu-dropdown to header-menu, but I could wrong.</p>",
+        "id": 207595181,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597976608
+    },
+    {
+        "content": "<p>Hm, usually there are submenus. Have you checked the menu settings via the Layout / Block UI?</p>",
+        "id": 207623686,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598009309
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Basis.20sub-theme/near/207623686\">said</a>:</p>\n<blockquote>\n<p>Hm, usually there are submenus. Have you checked the menu settings via the Layout / Block UI?</p>\n</blockquote>\n<p>In Basis, the primary navigation menu is usually below the header.  I moved it to the header and the header menu is not set up to have dropdowns.   I will need to change that.</p>",
+        "id": 207644086,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1598021830
+    },
+    {
+        "content": "<p>Found a better way to do it.  Rather than use the menu in header block.  I moved the position of the primary navigation block next to the header for this theme, instead of below it, via css.  That way it captures all the dropdown functionality I need without the extra coding.  Much simpler.   DUH!</p>",
+        "id": 207655805,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1598027884
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Basis.20sub-theme/near/207655805\">said</a>:</p>\n<blockquote>\n<p>Found a better way to do it.  Rather than use the menu in header block.  I moved the position of the primary navigation block next to the header for this theme, instead of below it, via css.  That way it captures all the dropdown functionality I need without the extra coding.  Much simpler.   DUH!</p>\n</blockquote>\n<p>Just some info for anyone else that does this - it does require some theming this way to customize (changing breakpoints, etc.), but a heck of a lot less than adding dropdown capability to another menu. Although that may be something I need to do in the future, just not this site.</p>",
+        "id": 207682887,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1598042800
+    }
+]

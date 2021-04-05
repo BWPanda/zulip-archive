@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>I haven't had a chance to dig into spam prevention, but wanted to throw my two cents out there.</p>\n<p>On Drupal 7, I run two spam prevention modules in tandom and get virtually zero spam.</p>\n<p>Botcha<br>\nHoneypot</p>\n<p>I've been testing both recaptcha v2 and v3 and have found it to be an utter joke for spam prevention.</p>\n<p>Botcha does experience a bug with pages that require JavaScript to run on them (not exactly sure what the problem is) but outside of that, I have had 20 or so sites over the years running this combination and get very little spam. Maybe several per month.</p>\n<p>I've never had anyone complain about their messages not getting received, or problems with submissions.</p>\n<p>If someone ever wants to tackle spam prevention, I would recommend looking at those two modules to see if you can reverse engineer why the combination of them is so effective.</p>\n<p>Oh, one complaint from users: they can't register because they autofill and blow through it too quickly. I simply tell them to not use autofill.</p>",
+        "id": 217054804,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605643395
+    },
+    {
+        "content": "<p>Autofill is becoming more and more popular I think (what with passwords needing to be stronger, the rise of online password managers, more browsers offering this feature, etc.). That's why I don't like Honeypot. I prefer Antibot.</p>",
+        "id": 217059203,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605645531
+    },
+    {
+        "content": "<p>Antibot... I even started using it on old D7 projects, replacing captcha and honeypot.</p>",
+        "id": 217091923,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1605669299
+    },
+    {
+        "content": "<p>I'll check it out.</p>\n<p>Keep in mind that registration/login pages are the main ones that suffer from timegate types of prevention.</p>\n<p>Webforms and comments usually do not.</p>\n<p>If antibot is a solid alternative, then that's a good route but if it doesn't work all that well either, I'm suggesting to look into the botcha and Honeypot combo because I have 20+ sites under my belt that says it does work to a ~95% degree of effectiveness.</p>",
+        "id": 217132617,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605705479
+    },
+    {
+        "content": "<p>What's \"botcha\"? Is it on Backdrop too?</p>",
+        "id": 217144510,
+        "sender_full_name": "Herb",
+        "timestamp": 1605711273
+    },
+    {
+        "content": "<p>\"BOTCHA is a highly configurable non-CAPTCHA spam protection framework.\" <a href=\"https://www.drupal.org/project/botcha\">https://www.drupal.org/project/botcha</a> It's been mostly unmaintained for many years.</p>",
+        "id": 217173341,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1605722541
+    },
+    {
+        "content": "<p>I have a large, busy site I have maintained for several years that used Botcha for a while. Then we ran into a problem that was causing non-spam form submissions to be rejected. After many hours of pouring through the code and the issue queue, I was not able to come up with a reasonable solution to the problem (though I found and fixed many other smaller bugs in the process). Part of the problem is that the module is coded to work around the D7 hook system to use OOP in such a way that the code is convoluted and hard to follow. We ended up limiting its use in favor of Honeypot.</p>",
+        "id": 217173610,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1605722674
+    },
+    {
+        "content": "<p>I had all sorts of problems with Botcha too in the beginning. I found that only using one recipe was needed in combination with Honeypot to stop the spam. I don't remember off the top of my head which one, but I think it was the Honeypot recipe on Botcha. So I was basically running two Honeypot methods from two modules.</p>",
+        "id": 217320182,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605814864
+    },
+    {
+        "content": "<p>Update: been running antibot (in addition to honeypot and recaptchav3 and haven't had any spam.</p>\n<p>I need to disable captch... Things to do.</p>\n<p>Thanks for the heads up <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span></p>",
+        "id": 219700317,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607766258
+    }
+]

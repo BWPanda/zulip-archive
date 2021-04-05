@@ -1,0 +1,206 @@
+[
+    {
+        "content": "<p>You know, it would be really nice if we could have block descriptions or administrative titles, even for standard block.  It would be very handy to know what's in a particular section of a layout for a page.  HERO BLOCK or Custom Text, really doesn't tell me anything.  Services, Testimonials, Contact, Team, etc.  are a heck of a lot more useful, especially when they are all the same kind of block (example - HERO BLOCK).  GAH...</p>",
+        "id": 207592037,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597971865
+    },
+    {
+        "content": "<p>I'm having the same issue right now. I had a layout last night with several \"Custom Blocks\" and I could not tell them apart in the layout UI. </p>\n<p>I was planning to look for an issue in the issue queue on this topic and found: <a href=\"https://github.com/backdrop/backdrop-issues/issues/692\">https://github.com/backdrop/backdrop-issues/issues/692</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/692\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/692\" title=\"[UX] Make block and layout titles required and allow them to be hidden. · Issue #692 · backdrop/backdrop-issues\">[UX] Make block and layout titles required and allow them to be hidden. · Issue #692 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is basically the same as Make the block title required and allow it to be hidden for D8, but applied to both block titles and layout page titles. D7 (&lt;none&gt; required to hide title): D8 (...</div></div></div>",
+        "id": 207592589,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597972565
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> - I just learned (and you might be able to use this), that if you make your custom block \"reusable,\" you have the option to add an administrative title and description.</p>",
+        "id": 207592608,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597972619
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20Request/near/207592608\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> - I just learned (and you might be able to use this), that if you make your custom block \"reusable,\" you have the option to add an administrative title and description.</p>\n</blockquote>\n<p>Yep, I have this same problem on every site I've converted so far.  It's annoying, and I don't want to make every block reusable, nor do I want every block custom.   Why can't we have an administrative title/description on every block?  I only have approximately 40 or more sites to either convert to backdrop or Wordpress.  Why should I have to edit a block on a layout to figure out what I put there?</p>",
+        "id": 207592876,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597973010
+    },
+    {
+        "content": "<p>There's also <a href=\"https://github.com/backdrop/backdrop-issues/issues/2288\">https://github.com/backdrop/backdrop-issues/issues/2288</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2288\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2288\" title=\"[UX] Replace the default description of custom blocks with an excerpt from the block content. · Issue #2288 · backdrop/backdrop-issues\">[UX] Replace the default description of custom blocks with an excerpt from the block content. · Issue #2288 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I realize that the issue title makes it sound like a feature request, but this is in fact a UX bug... If one adds more than one custom blocks in a layout and they leave their display title blank, t...</div></div></div>",
+        "id": 207593075,
+        "sender_full_name": "klonos",
+        "timestamp": 1597973233
+    },
+    {
+        "content": "<p>^^ it even has a pull request <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 207593131,
+        "sender_full_name": "klonos",
+        "timestamp": 1597973294
+    },
+    {
+        "content": "<p>...meh <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span>  ...it's so old that the PR sandbox is broken. The branch has conflicts, so it isn't easy to just restart the sandbox.</p>",
+        "id": 207593161,
+        "sender_full_name": "klonos",
+        "timestamp": 1597973375
+    },
+    {
+        "content": "<p>...I'll get to it eventually.</p>",
+        "id": 207593167,
+        "sender_full_name": "klonos",
+        "timestamp": 1597973394
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20Request/near/207593167\">said</a>:</p>\n<blockquote>\n<p>...I'll get to it eventually.</p>\n</blockquote>\n<p>Soon - pretty pretty please!!!!!!! (with sugar on top).  I have a lot more sites to do next year and this is driving me crazy.</p>",
+        "id": 207593241,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597973517
+    },
+    {
+        "content": "<p>To clarify, by \"get to it\" I meant resolve the conflicts and re-launch the sandbox for testing. ...in order for that to get into core, we'd need to have consensus (which from the ticket history I see that we don't). ...otherwise, you'll need to be applying my PR as a patch to your sites <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span></p>",
+        "id": 207593318,
+        "sender_full_name": "klonos",
+        "timestamp": 1597973640
+    },
+    {
+        "content": "<p>...or perhaps someone can turn that into a contrib module? <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 207593371,
+        "sender_full_name": "klonos",
+        "timestamp": 1597973687
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> - I don't want to pressure you, BUT...</p>\n<p>Posting a comment on an existing issue like this in the issue queue, saying that you are experiencing the same problem someone else reported, is actually helpful and often leads to an issue getting more attention. I've done it a number of times and on occasion, my additional comment has motivated folks to complete the task and fix something that had been lingering for years. </p>\n<p>Having said that, it doesn't always happen that way...</p>",
+        "id": 207593397,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597973733
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20Request/near/207593318\">said</a>:</p>\n<blockquote>\n<p>To clarify, by \"get to it\" I meant resolve the conflicts and re-launch the sandbox for testing. ...in order for that to get into core, we'd need to have consensus (which from the ticket history I see that we don't). ...otherwise, you'll need to be applying my PR as a patch to your sites <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span></p>\n</blockquote>\n<p>I'm pretty flexible, but no way in h(&amp;(*&amp;&amp;&amp;^^^^% do I need to see the description for 'Hero Block' or 'Custom Block' a bazillion times in layouts.  It's useless.  I'd rather see an administrative title or description, or teaser of block body than that.</p>",
+        "id": 207593442,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597973767
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20Request/near/207593371\">said</a>:</p>\n<blockquote>\n<p>...or perhaps someone can turn that into a contrib module? <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n</blockquote>\n<p>I'd take it as a contrib module in a heartbeat!!!  I'd write it even, if I had time to pull the code and clean it up (maybe in October, but sure as heck not now)</p>",
+        "id": 207593477,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597973856
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20Request/near/207593397\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> - I don't want to pressure you, BUT...</p>\n<p>Posting a comment on an existing issue like this in the issue queue, saying that you are experiencing the same problem someone else reported, is actually helpful and often leads to an issue getting more attention. I've done it a number of times and on occasion, my additional comment has motivated folks to complete the task and fix something that had been lingering for years. </p>\n<p>Having said that, it doesn't always happen that way...</p>\n</blockquote>\n<p>That I will do tomorrow - but which issue to post the comment on?  The one from 2017 doesn't look like it's coherent any more?  Or open up a new comment?</p>",
+        "id": 207593527,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597973934
+    },
+    {
+        "content": "<blockquote>\n<p>That I will do tomorrow - but which issue to post the comment on? The one from 2017 doesn't look like it's coherent any more? Or open up a new comment?</p>\n</blockquote>\n<p>Actually, that is a good question. I'm sorting through a few of these issues right now and some seem to be pretty outdated.</p>",
+        "id": 207593552,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597973983
+    },
+    {
+        "content": "<p>I don't think we need a new issue, but we might want to figure out which is most relevent.</p>",
+        "id": 207593601,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597974008
+    },
+    {
+        "content": "<p>The issue I linked to seems outdated. The issue <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> referenced is better, but might not be the solution you prefer.</p>",
+        "id": 207593634,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597974064
+    },
+    {
+        "content": "<p>Oh boy ...there's plenty of those issues (so there may be overlap) <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 207593704,
+        "sender_full_name": "klonos",
+        "timestamp": 1597974161
+    },
+    {
+        "content": "<p>...here's another one: <a href=\"https://github.com/backdrop/backdrop-issues/issues/1703\">https://github.com/backdrop/backdrop-issues/issues/1703</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1703\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1703\" title=\"[UX] All custom blocks with no display title have &quot;Custom block&quot; as admin title and no way to customize that. · Issue #1703 · backdrop/backdrop-issues\">[UX] All custom blocks with no display title have \"Custom block\" as admin title and no way to customize that. · Issue #1703 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">As per issue title. According to @jenlampton in #1522 and #1523, there must have been a field there available for setting an admin title. I don&#39;t see any such field any more. Regression perhaps...</div></div></div>",
+        "id": 207593710,
+        "sender_full_name": "klonos",
+        "timestamp": 1597974168
+    },
+    {
+        "content": "<p>OK. I know it's different, but I don't see a layout page title type anywhere in the UI anymore. AND, there is another issue that also talks about the layout page title type and the block title together.</p>",
+        "id": 207593812,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597974359
+    },
+    {
+        "content": "<p>But, don't worry. Get your work done. This can wait.</p>",
+        "id": 207593854,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597974370
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> - <a href=\"https://github.com/backdrop/backdrop-issues/issues/4325\">https://github.com/backdrop/backdrop-issues/issues/4325</a> (just to add to the noise) :-)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4325\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4325\" title=\"Add admin title / description for pre-made blocks such as hero or menu for layout UI · Issue #4325 · backdrop/backdrop-issues\">Add admin title / description for pre-made blocks such as hero or menu for layout UI · Issue #4325 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">There is no admin title for non-custom blocks when adding to a layout, so there can be multiple blocks with the same name in the layout UI and no easy way to distinguish between them. Example: Hero...</div></div></div>",
+        "id": 207594587,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597975634
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20Request/near/207594587\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> - <a href=\"https://github.com/backdrop/backdrop-issues/issues/4325\">https://github.com/backdrop/backdrop-issues/issues/4325</a> (just to add to the noise) :-)</p>\n</blockquote>\n<p>I think I bitch about this issue every time I start on a new site... I could add a comment to it ;-)</p>",
+        "id": 207594660,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597975780
+    },
+    {
+        "content": "<p>i dont get this issue. dont blocks have admin titles?</p>",
+        "id": 207597242,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597980135
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Not for non-custom blocks (e.g. hero block)</p>",
+        "id": 207597256,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597980217
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  - And they only have admin titles if you make them reusable.</p>",
+        "id": 207597322,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597980341
+    },
+    {
+        "content": "<p>ok, probably need sleep. On Hero blocks isnt that the \"Display title\"</p>",
+        "id": 207597434,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597980554
+    },
+    {
+        "content": "<p>That's the title displayed on the frontend. We're wanting a 'label' that's only displayed in the admin/layouts UI.</p>",
+        "id": 207597440,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597980590
+    },
+    {
+        "content": "<p>e.g. you might want a hero block with just an image on your frontapge, so the 'Display title' has to be empty. But then there's no way of setting an admin label to be displayed in the layouts UI so you know <em>which</em> hero block that is (you might have several).</p>",
+        "id": 207597497,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597980694
+    },
+    {
+        "content": "<p>Ah this is for blocks where you dont want a title on the frontend</p>",
+        "id": 207597548,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597980761
+    },
+    {
+        "content": "<p>Regarding block issues in general, I think <a href=\"https://github.com/backdrop/backdrop-issues/issues/4325\">https://github.com/backdrop/backdrop-issues/issues/4325</a> and <a href=\"https://github.com/backdrop/backdrop-issues/issues/1703\">https://github.com/backdrop/backdrop-issues/issues/1703</a> should be merged into a (new?) issue titled \"Provide an admin label for <em>all</em> blocks\"</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4325\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4325\" title=\"Add admin title / description for pre-made blocks such as hero or menu for layout UI · Issue #4325 · backdrop/backdrop-issues\">Add admin title / description for pre-made blocks such as hero or menu for layout UI · Issue #4325 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">There is no admin title for non-custom blocks when adding to a layout, so there can be multiple blocks with the same name in the layout UI and no easy way to distinguish between them. Example: Hero...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1703\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1703\" title=\"[UX] All custom blocks with no display title have &quot;Custom block&quot; as admin title and no way to customize that. · Issue #1703 · backdrop/backdrop-issues\">[UX] All custom blocks with no display title have \"Custom block\" as admin title and no way to customize that. · Issue #1703 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">As per issue title. According to @jenlampton in #1522 and #1523, there must have been a field there available for setting an admin title. I don&#39;t see any such field any more. Regression perhaps...</div></div></div>",
+        "id": 207597583,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597980838
+    },
+    {
+        "content": "<p>Tada: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4558\">https://github.com/backdrop/backdrop-issues/issues/4558</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4558\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4558\" title=\"[UX] Allow *all* blocks to have an admin label · Issue #4558 · backdrop/backdrop-issues\">[UX] Allow *all* blocks to have an admin label · Issue #4558 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need If you create a custom block in a layout, but you don&#39;t want it to be reusable, there&#39;s no way to give that block an admin label that&#39;s not displayed on the fron...</div></div></div>",
+        "id": 207598175,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597981646
+    },
+    {
+        "content": "<p>Just proposed a new feature request for Backdrop core which might just help prevent the world from ending... <a href=\"https://github.com/backdrop/backdrop-issues/issues/4879\">https://github.com/backdrop/backdrop-issues/issues/4879</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4879\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4879\" title=\"Better Book navigation links · Issue #4879 · backdrop/backdrop-issues\">Better Book navigation links · Issue #4879 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need You&#39;re reading through Backdrop&#39;s User Guide, currently the Managing comments page. After you&#39;ve read though the page, there&#39;s a handy link at the bottom to ...</div></div></div>",
+        "id": 222945937,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610757649
+    }
+]

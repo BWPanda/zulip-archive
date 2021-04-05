@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> It's of course unrelated to <code>bee</code> but I am testing this out and it made me think of the <code>bee</code> project. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span><br>\n<a href=\"https://www.beekeeperstudio.io/\">https://www.beekeeperstudio.io/</a></p>",
+        "id": 231683949,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616610050
+    },
+    {
+        "content": "<p>Thanks for that <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ....I used to use <a href=\"https://www.heidisql.com\">https://www.heidisql.com</a> and some free verisons of <a href=\"https://www.navicat.com\">https://www.navicat.com</a> on Windows. Then when I switched to MacOS for work, I started using <a href=\"http://sequelpro.com\">http://sequelpro.com</a>. ...Beekeeper Studio seems cool + it's open-source <span aria-label=\"heart\" class=\"emoji emoji-2764\" role=\"img\" title=\"heart\">:heart:</span></p>",
+        "id": 231685082,
+        "sender_full_name": "klonos",
+        "timestamp": 1616610443
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> oooh, I've been looking for a better SQL manager. The one I use: MySQL ... I forget the name, but it's the official one, crashes too often</p>",
+        "id": 231731615,
+        "sender_full_name": "Herb",
+        "timestamp": 1616632745
+    },
+    {
+        "content": "<p>What are SQL managers for? Maybe I don't do enough database stuff, but whenever I need to use/access the DB I just use phpMyAdmin...</p>",
+        "id": 231731750,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616632860
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> AFAIK phpMyAdmin implies that it is installed on the server. With SQL GUIs, you basically get an ssh tunnel into any server you have such access to (even local instances), and can then connect to the SQL instance. The features are basically the same as phpMyAdmin.</p>",
+        "id": 231732746,
+        "sender_full_name": "klonos",
+        "timestamp": 1616633659
+    },
+    {
+        "content": "<p>Have you tried <a href=\"https://www.adminer.org\">https://www.adminer.org</a>? Just one PHP file, plus one CSS for taste. Place it under password protected directory and you are done.</p>",
+        "id": 231732857,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1616633765
+    },
+    {
+        "content": "<p>I had to use that once on a project. Didn't like it. Couldn't get used to the interface after using phpMyAdmin...</p>",
+        "id": 231733886,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616634537
+    },
+    {
+        "content": "<p>I personally prefer to avoid such monsters even when I work with dragon.</p>",
+        "id": 231735515,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1616636040
+    },
+    {
+        "content": "<p><strong>Is someone talking about me?</strong></p>",
+        "id": 231735517,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1616636040
+    },
+    {
+        "content": "<p>You can access remote databases with phpMyAdmin, but it requires opening up the port to outside access, if it isn't already. There is also a way to remotely access securely.</p>\n<p><a href=\"https://stackoverflow.com/questions/16801573/how-to-access-remote-server-with-local-phpmyadmin-client\">https://stackoverflow.com/questions/16801573/how-to-access-remote-server-with-local-phpmyadmin-client</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/16801573/how-to-access-remote-server-with-local-phpmyadmin-client\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/16801573/how-to-access-remote-server-with-local-phpmyadmin-client\" title=\"How to access remote server with local phpMyAdmin client?\">How to access remote server with local phpMyAdmin client?</a></div><div class=\"message_embed_description\">Assuming there is a remote server and I have phpMyAdmin client installed localy on my computer. How can I access this server and manage it via phpMyAdmin client? Is that possible?</div></div></div>",
+        "id": 231736246,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1616636671
+    },
+    {
+        "content": "<p>Huh! <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 231736965,
+        "sender_full_name": "klonos",
+        "timestamp": 1616637296
+    },
+    {
+        "content": "<p>With Lando or other local dev I often use an SQL manager but recently found out how to add phpmyadmin as a Lando service so that's an option.</p>",
+        "id": 231819601,
+        "sender_full_name": "Herb",
+        "timestamp": 1616685314
+    }
+]

@@ -1,0 +1,96 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Admin.20email.20notifications.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html">Admin email notifications</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="193060359"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/193060359" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#193060359">(Apr 06 2020 at 15:39)</a>:</h4>
+<p>What's the current/recommended way to send an email notification to an admin when content is submitted?</p>
+
+
+
+<a name="193060493"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/193060493" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#193060493">(Apr 06 2020 at 15:40)</a>:</h4>
+<p>Rules? Or I see a few different "Notify" modules? Or is this functionality in core?</p>
+
+
+
+<a name="193066012"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/193066012" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#193066012">(Apr 06 2020 at 16:22)</a>:</h4>
+<p>fwiw; on <a href="http://b.org" title="http://b.org">b.org</a> we do a custom module</p>
+
+
+
+<a name="193086863"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/193086863" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#193086863">(Apr 06 2020 at 19:04)</a>:</h4>
+<p><a href="https://github.com/backdrop-contrib/trigger_actions" title="https://github.com/backdrop-contrib/trigger_actions">https://github.com/backdrop-contrib/trigger_actions</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/trigger_actions" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/trigger_actions" title="backdrop-contrib/trigger_actions">backdrop-contrib/trigger_actions</a></div><div class="message_embed_description">The Trigger Actions module provides the ability to cause actions to run when certain triggers take place on your site. - backdrop-contrib/trigger_actions</div></div></div>
+
+
+
+<a name="193207593"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/193207593" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#193207593">(Apr 07 2020 at 15:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> I was on phone yesterday, that's why I just posted the link to the Trigger Actions module. AFAIK, it replaces the former Trigger / Actions core functionality which was removed from Backdrop.</p>
+
+
+
+<a name="193207684"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/193207684" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#193207684">(Apr 07 2020 at 15:45)</a>:</h4>
+<p>Thanks, I'll investigate that.</p>
+
+
+
+<a name="198047558"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/198047558" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#198047558">(May 19 2020 at 10:41)</a>:</h4>
+<p>Has someone a site at hand where visitor registration is enabled? (See <code>admin/config/people/settings</code>: Who can register accounts? Visitors, but administrator approval is required.) I'm trying to reproduce an issue posted in the forum (<a href="https://forum.backdropcms.org/forum/empty-email-send-administrator-created-new-user-account">https://forum.backdropcms.org/forum/empty-email-send-administrator-created-new-user-account</a>). On my test site a new user gets notified about the account pending approval, but the admin doesn't get a notification about the new registration. Do these admin notifications work for anyone?</p>
+
+
+
+<a name="198069768"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/198069768" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#198069768">(May 19 2020 at 14:01)</a>:</h4>
+<p>One way to test this is by enabling Reroute Email. (Or setting up Mailhog with Lando) Then you can just check the logs instead of emails</p>
+
+
+
+<a name="198072024"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/198072024" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#198072024">(May 19 2020 at 14:16)</a>:</h4>
+<p>yes; i use <code>mailhog</code></p>
+
+
+
+<a name="198084394"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/198084394" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#198084394">(May 19 2020 at 15:36)</a>:</h4>
+<p>Thanks for the <em>Reroute Email</em> hint, very useful! Interesting test results:</p>
+<ol>
+<li>
+<p>The mail <code>user_register_pending_approval_admin</code> is sent to the E-mail address configured on <code>admin/config/system/site-information</code>. In a way, that makes sense, but the help text of the form element is quite misleading: "The <strong>From</strong> address in automated e-mails ...". I had entered a <em>no-reply</em> mail address, which makes sense for a <em>From</em> address but not for a real one of the admin.</p>
+</li>
+<li>
+<p>As stated in the forum issue, the mail notification is indeed sent, but with empty subject and empty body.</p>
+</li>
+</ol>
+
+
+
+<a name="198085274"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20email%20notifications/near/198085274" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20email.20notifications.html#198085274">(May 19 2020 at 15:42)</a>:</h4>
+<p><code>mailhog</code> <a href="https://youtu.be/Hd4nGYmFYDk">YouTube - Introduction to Lando</a></p>
+<div class="youtube-video message_inline_image"><a data-id="Hd4nGYmFYDk" href="https://youtu.be/Hd4nGYmFYDk"><img src="https://i.ytimg.com/vi/Hd4nGYmFYDk/default.jpg"></a></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

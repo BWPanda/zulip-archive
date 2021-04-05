@@ -1,0 +1,176 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/moving.20from.20D6.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html">moving from D6</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="190028001"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190028001" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190028001">(Mar 08 2020 at 21:06)</a>:</h4>
+<p>I'm moving a pretty simple site from Drupal 6 to Backdrop tomorrow. <br>
+has anyone done work on an upgrade path directly from D6 to Backdrop? I thought I read/heard something somewhere about that. <br>
+If so, this would be a good site to test that process on<br>
+if not, I'll do the d6-&gt;d7-&gt;backdrop path</p>
+
+
+
+<a name="190028011"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190028011" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190028011">(Mar 08 2020 at 21:07)</a>:</h4>
+<p>I am unaware of any direct D6 to Backdrop CMS path. I did one such upgrade and went through Drupal 7.</p>
+
+
+
+<a name="190028055"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190028055" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190028055">(Mar 08 2020 at 21:08)</a>:</h4>
+<p>nod<br>
+that's what I've done in the past.</p>
+
+
+
+<a name="190030120"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190030120" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190030120">(Mar 08 2020 at 22:13)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@Jen Lampton</span> has done and recommended the D6 -&gt; D7 -&gt; Backdrop path several times, so I assume that's the canonical way.</p>
+
+
+
+<a name="190032147"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190032147" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190032147">(Mar 08 2020 at 23:17)</a>:</h4>
+<p>...and to be more specific it's D6/7 -&gt; D7 latest -&gt; Backdrop</p>
+
+
+
+<a name="190032188"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190032188" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190032188">(Mar 08 2020 at 23:18)</a>:</h4>
+<p>...in other words, even when you are doing D7 -&gt; Backdrop, you should first upgrade to latest version of D7 core and contrib, run db updates, then finally move to Backdrop</p>
+
+
+
+<a name="190033111"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190033111" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> James Nylen <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190033111">(Mar 08 2020 at 23:54)</a>:</h4>
+<p>I built 1 Drupal site way back in the day, D5 I think. How much work is involved in doing a typical upgrade from 6 -&gt; 7 -&gt; Backdrop, is breakage expected or does everything mostly "just work"?</p>
+
+
+
+<a name="190033750"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190033750" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190033750">(Mar 09 2020 at 00:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="269235">@James Nylen</span> - Well, I'm skeptical that everything will "just work" the first time through the process. But, that doesn't mean that it will be really hard either. <a href="https://backdropcms.org/upgrade-from-drupal" target="_blank" title="https://backdropcms.org/upgrade-from-drupal">https://backdropcms.org/upgrade-from-drupal</a></p>
+<p>"We recommend using Drupal's built-in upgrade path to go from from Drupal 6 to Drupal 7 (which could be tricky), and then Backdrop's Built-in path to go from Drupal 7 to Backdrop CMS (which should be easy). Currently, there are no tools available to upgrade a Drupal 6 site directly to Backdrop."</p>
+
+
+
+<a name="190033763"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190033763" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190033763">(Mar 09 2020 at 00:15)</a>:</h4>
+<p>It might be worth just giving it a try to see how many errors you get (or if you get any). You might get lucky. I think it depends a lot on how complicated your D6 site is.</p>
+
+
+
+<a name="190034767"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190034767" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> James Nylen <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190034767">(Mar 09 2020 at 00:49)</a>:</h4>
+<p>ok so 6 to 7 is the harder part</p>
+
+
+
+<a name="190037131"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190037131" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190037131">(Mar 09 2020 at 02:11)</a>:</h4>
+<p>Yup. D6 -&gt; D7 should take more time/effort; then D7 -&gt; Backdrop should take less time/effort (and for that matter much less than what D7 -&gt; D8 would)</p>
+
+
+
+<a name="190047101"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190047101" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190047101">(Mar 09 2020 at 07:58)</a>:</h4>
+<p><span class="user-mention" data-user-id="259074">@ericfg</span> Depending on the complexity of your D6 site it might be easier to import content to Backdrop directly. Haven't done that yet, though.<br>
+I did several D6 to D7 migrations (I wouldn't call that "upgrade") with the help of the Feeds module, but I also needed Feeds Tamper for that.</p>
+
+
+
+<a name="190055264"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190055264" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190055264">(Mar 09 2020 at 10:22)</a>:</h4>
+<p>I agree with <span class="user-mention" data-user-id="256738">@indigoxela</span> that using Feeds might be easier in some cases.</p>
+
+
+
+<a name="190097122"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190097122" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190097122">(Mar 09 2020 at 17:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="259074">@ericfg</span> If the site you want in Backdrop is identical to the one you had in D6, I recommend going through D7 first. If you rebuild / import you'll loose all the configurations. If, however, you are doing a re-architecture and/or rebrand, sometimes the rebuild approach can be faster (especially if you don't need all the content that's on the D6 site)</p>
+
+
+
+<a name="190097232"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190097232" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190097232">(Mar 09 2020 at 17:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="269235">@James Nylen</span> ^^ that was for you.</p>
+
+
+
+<a name="190097261"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190097261" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190097261">(Mar 09 2020 at 17:46)</a>:</h4>
+<p>I have some scripts that can help with upgrades from D6 (D6 insert module -&gt; B ckeditor embedded images, etc) at <a href="https://github.com/jenlampton/upgradenotes" target="_blank" title="https://github.com/jenlampton/upgradenotes">https://github.com/jenlampton/upgradenotes</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/jenlampton/upgradenotes" style="background-image: url(https://avatars3.githubusercontent.com/u/397895?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/jenlampton/upgradenotes" target="_blank" title="jenlampton/upgradenotes">jenlampton/upgradenotes</a></div><div class="message_embed_description">Notes for upgrading from Drupal 6 and Drupal 7 to Backdrop CMS - jenlampton/upgradenotes</div></div></div>
+
+
+
+<a name="190097393"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190097393" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190097393">(Mar 09 2020 at 17:48)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> I had missed <span class="user-mention" data-user-id="269235">@James Nylen</span> 's question and was ansering <span class="user-mention" data-user-id="259074">@ericfg</span> 's from before -- same advice though! :D</p>
+
+
+
+<a name="190097459"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190097459" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190097459">(Mar 09 2020 at 17:49)</a>:</h4>
+<p>Oh, hah! I missed Eric's question from before, but I knew about James'. :D</p>
+
+
+
+<a name="190112195"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/190112195" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#190112195">(Mar 09 2020 at 20:09)</a>:</h4>
+<p>thanks for the feedback everyone. <br>
+turns out that this is actually Drupal 5, this is gonna take a while. sigh</p>
+
+
+
+<a name="191909868"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/191909868" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#191909868">(Mar 26 2020 at 16:19)</a>:</h4>
+<p>Jason,</p>
+<p>You can go directly from D6 to Backdrop if you do it as a migration and export the data, then import to Backdrop using feeds.  We've done it this way pretty successfully.  I've got one in development now that I've had to put on the back burner because it's a nonpaying job, but we had no problems.  I'm in the look and feel stage with that one - the export/import went well.   I always do migrations because we're typically redesigning / updating the site at the same time.  D6 layout/design is pretty outdated now.  Also - safer.    Just a note,  I changed content types in D6 before I exported so that I could streamline.  For example - Simplenews newsletters became articles.  (I stopped using simplenews so these are back issues).  <br>
+D6 - node export is the module used.   Also, no desire to mess with live production sites while in development.</p>
+<p>Elisabeth  </p>
+<p><span class="user-mention silent" data-user-id="256627">oadaeh (Jason Flatt)</span> <a href="#narrow/stream/218635-Backdrop/topic/moving.20from.20D6/near/190030120" title="#narrow/stream/218635-Backdrop/topic/moving.20from.20D6/near/190030120">said</a>:</p>
+<blockquote>
+<p>@_<strong>Jen Lampton</strong> has done and recommended the D6 -&gt; D7 -&gt; Backdrop path several times, so I assume that's the canonical way.</p>
+</blockquote>
+
+
+
+<a name="191910227"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/191910227" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#191910227">(Mar 26 2020 at 16:21)</a>:</h4>
+<p>Definitely do a migration, not an upgrade.  Too messy and it will be faster.  I believe you can use node export in D5 as well.  We upgraded all our D5 sites over 10 years ago now, so I don't really remember.</p>
+<p>Elisabeth</p>
+<p><span class="user-mention silent" data-user-id="259074">ericfg</span> <a href="#narrow/stream/218635-Backdrop/topic/moving.20from.20D6/near/190112195" title="#narrow/stream/218635-Backdrop/topic/moving.20from.20D6/near/190112195">said</a>:</p>
+<blockquote>
+<p>thanks for the feedback everyone. <br>
+turns out that this is actually Drupal 5, this is gonna take a while. sigh</p>
+</blockquote>
+
+
+
+<a name="192193424"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/moving%20from%20D6/near/192193424" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/moving.20from.20D6.html#192193424">(Mar 29 2020 at 20:47)</a>:</h4>
+<p>luckily the site was two simple content types and only one view <br>
+it took a while to sort the d5-&gt;d6 step, probably should have gone a data migration route, will probably do that if I have to do something like this again. <br>
+but once in d6, thanks to the fact that there were no complex views that would have had to be rebuilt in d7, the process went fast. Was done in a couple hours. <br>
+the d7 site is what's online now, as we learn our way around how theme and layouts work in backdrop</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

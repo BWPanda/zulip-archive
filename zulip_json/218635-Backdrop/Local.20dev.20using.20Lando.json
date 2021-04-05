@@ -1,0 +1,284 @@
+[
+    {
+        "content": "<p>About a week or so ago, I've mentioned in Gitter that I am having trouble running tests on my local (Lando) ...I have tried manually setting <code>$base_url</code> in my <code>settings.php</code> but that did not work. @larsdesigns then mentioned that I should try setting <code>$base_url</code> to the http version (I was trying the https), but I tried that just now, and it still does not work for me <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>",
+        "id": 184841470,
+        "sender_full_name": "klonos",
+        "timestamp": 1578216686
+    },
+    {
+        "content": "<p>...getting errors like the following:</p>",
+        "id": 184841517,
+        "sender_full_name": "klonos",
+        "timestamp": 1578216727
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span>FAIL: GET http://3638.lndo.site:8080/?trigger_actions_on_watchdog=actions_loop_test_log returned 0 (0 bytes).\n</pre></div>",
+        "id": 184841520,
+        "sender_full_name": "klonos",
+        "timestamp": 1578216735
+    },
+    {
+        "content": "<p>So far I haven't experienced that when running tests in Lando. I haven't used the cli though. Are you? <span class=\"user-mention\" data-user-id=\"256729\">@Gregory Netsas</span></p>",
+        "id": 184841585,
+        "sender_full_name": "Herb",
+        "timestamp": 1578216882
+    },
+    {
+        "content": "<p>Running them from the UI at the moment. ...I usually file PRs and then try to fix tests as they fail in ZenCI, but thought I'd start doing things \"properly\" this year <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 184841651,
+        "sender_full_name": "klonos",
+        "timestamp": 1578216966
+    },
+    {
+        "content": "<p>...just thought that it might be a generic problem with local setups.</p>",
+        "id": 184841665,
+        "sender_full_name": "klonos",
+        "timestamp": 1578217020
+    },
+    {
+        "content": "<blockquote>\n<p>I'm sure there will be a messy period when we figure out where things go. Looks like \"replies\" don't \"move\" when the original is assigned a different topic</p>\n</blockquote>\n<p>Hmm, lets see...</p>",
+        "id": 184842081,
+        "sender_full_name": "klonos",
+        "timestamp": 1578217707
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@Gregory Netsas</span> <a href=\"http://i.imgur.com/6BW2pvX.png\" target=\"_blank\" title=\"http://i.imgur.com/6BW2pvX.png\">http://i.imgur.com/6BW2pvX.png</a></p>\n<div class=\"message_inline_image\"><a href=\"http://i.imgur.com/6BW2pvX.png\" target=\"_blank\" title=\"http://i.imgur.com/6BW2pvX.png\"><img src=\"https://uploads.zulipusercontent.net/2a074c0981d1636dd667ebd70df2f17e22fe8902/687474703a2f2f692e696d6775722e636f6d2f364257327076582e706e67\"></a></div>",
+        "id": 184848517,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578230143
+    },
+    {
+        "content": "<p>No problem for me (testing via UI with Lando)</p>",
+        "id": 184848566,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578230205
+    },
+    {
+        "content": "<p>I should also mention that my local test sites also have a port number in them (because I am also running <a href=\"https://github.com/amazeeio/pygmy\" target=\"_blank\" title=\"https://github.com/amazeeio/pygmy\">https://github.com/amazeeio/pygmy</a> for work), so not sure if that's an issue or not.</p>",
+        "id": 184862402,
+        "sender_full_name": "klonos",
+        "timestamp": 1578254412
+    },
+    {
+        "content": "<p>I've killed the pygmy deamon, and then restarted lando, which has caused the local site URL to be generated w/o a port. This seems to have had considerably better results (only 8 failures, instead of 100s)</p>",
+        "id": 184864487,
+        "sender_full_name": "klonos",
+        "timestamp": 1578257851
+    },
+    {
+        "content": "<p><a href=\"https://github.com/lando/lando/issues/1\" target=\"_blank\" title=\"https://github.com/lando/lando/issues/1\">lando/lando#1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/lando/lando/issues/1\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/lando/lando/issues/1\" target=\"_blank\" title=\"Add Lando by RobLoach · Pull Request #1 · lando/lando\">Add Lando by RobLoach · Pull Request #1 · lando/lando</a></div><div class=\"message_embed_description\">GitHub is home to over 40 million developers working together to host and review code, manage projects, and build software together.</div></div></div>",
+        "id": 185246873,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578598382
+    },
+    {
+        "content": "<blockquote>\n<p><a href=\"https://github.com/lando/lando/issues/1\" target=\"_blank\" title=\"https://github.com/lando/lando/issues/1\">lando/lando#1</a></p>\n</blockquote>\n<p>for lando it is linking to PRs ... <span aria-label=\"confused\" class=\"emoji emoji-1f615\" role=\"img\" title=\"confused\">:confused:</span></p>",
+        "id": 185247039,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578598480
+    },
+    {
+        "content": "<p>That's because Lando doesn't have an issue <code>#1</code>. Issues and PRs are numbered together, and the first thing created in Lando repo seems to be a PR.</p>",
+        "id": 185247368,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578598669
+    },
+    {
+        "content": "<p>Backdrop's different because we've separated PRs and issues into two different repos (for core anyway).</p>",
+        "id": 185247451,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578598699
+    },
+    {
+        "content": "<p><a href=\"https://github.com/lando/lando/issues/1929\" target=\"_blank\" title=\"https://github.com/lando/lando/issues/1929\">lando/lando#1929</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/lando/lando/issues/1929\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/lando/lando/issues/1929\" target=\"_blank\" title=\"lando db-import does not respect drupal db host setting · Issue #1929 · lando/lando\">lando db-import does not respect drupal db host setting · Issue #1929 · lando/lando</a></div><div class=\"message_embed_description\">Summary I believe db-import used to work on multi-sites without specifying --host but now it does not. Details I am attempting to import a database into a drupal multisite where I have a database c...</div></div></div>",
+        "id": 185247482,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578598729
+    },
+    {
+        "content": "<p>^ That links to issue</p>",
+        "id": 185247512,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578598748
+    },
+    {
+        "content": "<p>cool daddio;</p>",
+        "id": 185247556,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578598775
+    },
+    {
+        "content": "<p>@**BWPanda (Peter)++</p>",
+        "id": 185247580,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578598788
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ++</p>",
+        "id": 185247653,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578598812
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>++</p>",
+        "id": 185247663,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578598823
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre</span> But if you do notice any issues with the linking do let me know. This is how it's setup: <a href=\"http://i.imgur.com/B2VUGPi.png\" target=\"_blank\" title=\"http://i.imgur.com/B2VUGPi.png\">http://i.imgur.com/B2VUGPi.png</a></p>\n<div class=\"message_inline_image\"><a href=\"http://i.imgur.com/B2VUGPi.png\" target=\"_blank\" title=\"http://i.imgur.com/B2VUGPi.png\"><img src=\"https://uploads.zulipusercontent.net/523bf37d2afefd11581c41cd029b799b88c5773e/687474703a2f2f692e696d6775722e636f6d2f423256554750692e706e67\"></a></div>",
+        "id": 185247668,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578598832
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@Jason Flatt</span> ++</p>",
+        "id": 185247685,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578598851
+    },
+    {
+        "content": "<p>Hmm, I don't think that was supposed to be for me.</p>",
+        "id": 185249167,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578599846
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> ++</p>",
+        "id": 185249176,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578599862
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> is still working on dragonbot</p>",
+        "id": 185249314,
+        "sender_full_name": "Herb",
+        "timestamp": 1578599954
+    },
+    {
+        "content": "<p>I think <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre</span>'s just trying to wake the dragon...</p>",
+        "id": 185249326,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578599964
+    },
+    {
+        "content": "<p>yep; just #mucking aboot;</p>",
+        "id": 185249359,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578599990
+    },
+    {
+        "content": "<p>Sounds dangerous</p>",
+        "id": 185249365,
+        "sender_full_name": "Herb",
+        "timestamp": 1578599996
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><span class=\"x\">print &#39;better late than never&#39;;</span>\n</pre></div>",
+        "id": 185249440,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578600013
+    },
+    {
+        "content": "<p>Don't wake the dragon. <span aria-label=\"shock\" class=\"emoji emoji-1f628\" role=\"img\" title=\"shock\">:shock:</span></p>",
+        "id": 185250158,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578600469
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> ...I have 2 questions for you:</p>",
+        "id": 187748182,
+        "sender_full_name": "klonos",
+        "timestamp": 1581231656
+    },
+    {
+        "content": "<ol>\n<li>is it possible to have Lando always use the latest Backdrop drush version from <a href=\"https://github.com/backdrop-contrib/drush/releases\" target=\"_blank\" title=\"https://github.com/backdrop-contrib/drush/releases\">https://github.com/backdrop-contrib/drush/releases</a> (instead of us having to file PRs against <a href=\"https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js\" target=\"_blank\" title=\"https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js\">https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js</a>)</li>\n</ol>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/drush/releases\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/drush/releases\" target=\"_blank\" title=\"backdrop-contrib/drush\">backdrop-contrib/drush</a></div><div class=\"message_embed_description\">A set of commands and boot class for Drush and Backdrop CMS. - backdrop-contrib/drush</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js\" target=\"_blank\" title=\"lando/lando\">lando/lando</a></div><div class=\"message_embed_description\">A local development and DevOps tool for all your projects that is fast, easy, powerful and liberating - lando/lando</div></div></div>",
+        "id": 187748192,
+        "sender_full_name": "klonos",
+        "timestamp": 1581231685
+    },
+    {
+        "content": "<ol start=\"2\">\n<li>How do I update my local version of Lando, to use the latest Backdrop recipe, w/o having to wait for the next official release of Lando?</li>\n</ol>",
+        "id": 187748194,
+        "sender_full_name": "klonos",
+        "timestamp": 1581231689
+    },
+    {
+        "content": "<p>You might be able to manually install it in the webroot under /drush. I haven't tried though. And that doesn't answer your question about the recipe</p>",
+        "id": 187759855,
+        "sender_full_name": "Herb",
+        "timestamp": 1581256595
+    },
+    {
+        "content": "<ol>\n<li>Yes; set the <code>backdrush: 1.x-1.x</code> in your<code>.lando.yml</code> file</li>\n</ol>",
+        "id": 187760869,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1581258711
+    },
+    {
+        "content": "<ol start=\"2\">\n<li>Not really in any practical sense (you'd either have to hack lando our write your own custom plugin recipe)</li>\n</ol>",
+        "id": 187760921,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1581258784
+    },
+    {
+        "content": "<p>I ended up doing something like this in the script I use:<br>\n<code>BACKDRUSH=\"$(curl -sL https://api.github.com/repos/backdrop-contrib/drush/releases/latest | jq -r '.tag_name')\"</code> ...and then <code>sed -i '' -e \"s/'?.?.?'/'${BACKDRUSH}'/g\" .lando.yml</code></p>",
+        "id": 187768413,
+        "sender_full_name": "klonos",
+        "timestamp": 1581273752
+    },
+    {
+        "content": "<p>^^ this grabs the latest tag from the (Backdrop) drush repo, and then sets its value in the .lando.yml file for me.</p>",
+        "id": 187768432,
+        "sender_full_name": "klonos",
+        "timestamp": 1581273833
+    },
+    {
+        "content": "<p>If you are an <a href=\"http://amazee.io\" target=\"_blank\" title=\"http://amazee.io\">amazee.io</a> user  you might like: <a href=\"https://stories.amazee.io/announcing-lando-integration-for-lagoon-8e2cde9e9276\" target=\"_blank\" title=\"https://stories.amazee.io/announcing-lando-integration-for-lagoon-8e2cde9e9276\">https://stories.amazee.io/announcing-lando-integration-for-lagoon-8e2cde9e9276</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stories.amazee.io/announcing-lando-integration-for-lagoon-8e2cde9e9276\" style=\"background-image: url(https://miro.medium.com/max/1120/1*2OCXmmwN-HpnErdecV50xw.jpeg)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stories.amazee.io/announcing-lando-integration-for-lagoon-8e2cde9e9276\" target=\"_blank\" title=\"Announcing Lando Integration for Lagoon\">Announcing Lando Integration for Lagoon</a></div><div class=\"message_embed_description\">Until now, Lagoon users have been reliant on a suite of local dev tools, including our own homespun open source tool, Pygmy. As…</div></div></div>",
+        "id": 191020503,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1584554972
+    },
+    {
+        "content": "<p>The GovCMS platform our agency is operating along with Amazee and the Aussie Dept. of Finance in on Lagoon. o yay! <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 191071863,
+        "sender_full_name": "klonos",
+        "timestamp": 1584593587
+    },
+    {
+        "content": "<p>I was going to ask what an 'AFT' release was (<a href=\"https://github.com/lando/lando/releases/tag/v3.0.0-aft.2\" target=\"_blank\" title=\"https://github.com/lando/lando/releases/tag/v3.0.0-aft.2\">https://github.com/lando/lando/releases/tag/v3.0.0-aft.2</a>), but then I found out: <a href=\"https://github.com/lando/lando/issues/2048#issuecomment-599216279\" target=\"_blank\" title=\"https://github.com/lando/lando/issues/2048#issuecomment-599216279\">https://github.com/lando/lando/issues/2048#issuecomment-599216279</a> <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/lando/lando/releases/tag/v3.0.0-aft.2\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/lando/lando/releases/tag/v3.0.0-aft.2\" target=\"_blank\" title=\"lando/lando\">lando/lando</a></div><div class=\"message_embed_description\">A local development and DevOps tool for all your projects that is fast, easy, powerful and liberating - lando/lando</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/lando/lando/issues/2048#issuecomment-599216279\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/lando/lando/issues/2048#issuecomment-599216279\" target=\"_blank\" title=\"What does &quot;aft&quot; mean inside the version? · Issue #2048 · lando/lando\">What does \"aft\" mean inside the version? · Issue #2048 · lando/lando</a></div><div class=\"message_embed_description\">Might be a silly question, but what does aft mean in v3.0.0-aft.1? Are those releases supposed to be as equal as stable as a release candidate?</div></div></div>",
+        "id": 191244389,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584712145
+    },
+    {
+        "content": "<p><a href=\"https://github.com/lando/lando/releases/tag/v3.0.0-rrc.1\" target=\"_blank\" title=\"https://github.com/lando/lando/releases/tag/v3.0.0-rrc.1\">https://github.com/lando/lando/releases/tag/v3.0.0-rrc.1</a><br>\nI'm guessing \"Really, Really Close\"...? <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/lando/lando/releases/tag/v3.0.0-rrc.1\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/lando/lando/releases/tag/v3.0.0-rrc.1\" target=\"_blank\" title=\"lando/lando\">lando/lando</a></div><div class=\"message_embed_description\">A local development and DevOps tool for all your projects that is fast, easy, powerful and liberating - lando/lando</div></div></div>",
+        "id": 191400372,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584889379
+    },
+    {
+        "content": "<p>I am currently using Lando v3.0.0-rc.22 - I see that v3.0.0-rrc.1 is available. RC = release candidate. What does RRC stand for?</p>",
+        "id": 192154532,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1585453520
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ^</p>",
+        "id": 192155477,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585455356
+    },
+    {
+        "content": "<p>(Meaning, see my messages above in this topic)</p>",
+        "id": 192155521,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585455446
+    },
+    {
+        "content": "<p>yeah; <code>really really close</code> :)</p>",
+        "id": 192178602,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1585494164
+    }
+]

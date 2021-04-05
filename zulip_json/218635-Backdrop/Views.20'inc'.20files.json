@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>Should it be necessary to manually use <code>module_load_include</code> to load a Views <code>.inc</code> file from a module, or is that supposed to happen automatically?</p>",
+        "id": 203873035,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594753238
+    },
+    {
+        "content": "<p>Reference: <a href=\"https://github.com/backdrop-contrib/replicate_ui/issues/1#issuecomment-658361240\">https://github.com/backdrop-contrib/replicate_ui/issues/1#issuecomment-658361240</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/replicate_ui/issues/1#issuecomment-658361240\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/replicate_ui/issues/1#issuecomment-658361240\" title=\"Actions · Issue #1 · backdrop-contrib/replicate_ui\">Actions · Issue #1 · backdrop-contrib/replicate_ui</a></div><div class=\"message_embed_description\">We need to figure out what can be done for actions and VBO (I believe we should see &quot;Replicate&quot; as an action in the content menu, for example). From @jenlampton on Zulip: we still have ho...</div></div></div>",
+        "id": 203874477,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594753959
+    },
+    {
+        "content": "<p>Did you use hook_autoload_info()? As far as I know, that hook is necessary.</p>",
+        "id": 203925640,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594799759
+    },
+    {
+        "content": "<p>I know how to add classes to hook_autoload_info -- can you add the main views.inc file there as well? <br>\n<a href=\"https://github.com/backdrop-contrib/replicate_ui/issues/1#issuecomment-658398661\">https://github.com/backdrop-contrib/replicate_ui/issues/1#issuecomment-658398661</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/replicate_ui/issues/1#issuecomment-658398661\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/replicate_ui/issues/1#issuecomment-658398661\" title=\"Actions · Issue #1 · backdrop-contrib/replicate_ui\">Actions · Issue #1 · backdrop-contrib/replicate_ui</a></div><div class=\"message_embed_description\">We need to figure out what can be done for actions and VBO (I believe we should see &quot;Replicate&quot; as an action in the content menu, for example). From @jenlampton on Zulip: we still have ho...</div></div></div>",
+        "id": 203943363,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594812877
+    }
+]

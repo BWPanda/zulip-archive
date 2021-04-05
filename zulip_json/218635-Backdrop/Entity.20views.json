@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Just saw this issue someone raised about Profiles not being available to Views (<a href=\"https://github.com/backdrop-contrib/profile/issues/4\">https://github.com/backdrop-contrib/profile/issues/4</a>). And realised that I always assumed that any new Entity would be immediately available to Views, like in D7 via Entity API. Seems though we didnt port that functionality. Should we?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/profile/issues/4\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/profile/issues/4\" title=\"Profile Fields are not seen in Views · Issue #4 · backdrop-contrib/profile\">Profile Fields are not seen in Views · Issue #4 · backdrop-contrib/profile</a></div><div class=\"message_embed_description\">I am using Backdrop version 1.15.x-dev and Profile version 1.x-1.0.5 I am trying to use a View to display a couple of fields from a Profile I have created for one Role of my users. I am not talking...</div></div></div>",
+        "id": 226572145,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1613507510
+    },
+    {
+        "content": "<p>I think we should. ...my expectation is that anything that's possible in D7 should also be in Backdrop; otherwise we are not providing an easy upgrade path to people.</p>",
+        "id": 226575187,
+        "sender_full_name": "klonos",
+        "timestamp": 1613509033
+    },
+    {
+        "content": "<p>...and by \"anything\" I mean the important bits of course ...I'd hate to bring back Overlay <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 226575277,
+        "sender_full_name": "klonos",
+        "timestamp": 1613509081
+    },
+    {
+        "content": "<p>So is the lost ability referred to  in the issue because of something not ported in the Profile module, or something not ported in Backdrop core?</p>",
+        "id": 226575836,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613509324
+    },
+    {
+        "content": "<p>I believe it was something we missed when integrating Entity API into core.</p>",
+        "id": 226575947,
+        "sender_full_name": "klonos",
+        "timestamp": 1613509371
+    },
+    {
+        "content": "<p>When I read the issue, I thought the solution would be to make the relevant declarations via Views hooks for the Profile tables. But would that eventually conflict with the functionality porting of the Entity functionality?</p>",
+        "id": 226576469,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613509621
+    },
+    {
+        "content": "<blockquote>\n<p>And realised that I always assumed that any new Entity would be immediately available to Views, like in D7 via Entity API. Seems though we didnt port that functionality. Should we?</p>\n</blockquote>\n<p>In D7, new entities were never automatically available to Views, even by depending on the Entity API module. Those entities needed to have special elements from the Entity API added to their entity_info() array to integrate with Views.<br>\nFor example: 'views controller class' =&gt; 'EntityDefaultViewsController',</p>",
+        "id": 226577366,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613510046
+    },
+    {
+        "content": "<p><a href=\"https://git.drupalcode.org/project/entity/-/blob/7.x-1.x/views/entity.views.inc#L355\">https://git.drupalcode.org/project/entity/-/blob/7.x-1.x/views/entity.views.inc#L355</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/entity/-/blob/7.x-1.x/views/entity.views.inc#L355\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/entity/-/blob/7.x-1.x/views/entity.views.inc#L355\" title=\"views/entity.views.inc · 7.x-1.x · project / entity\">views/entity.views.inc · 7.x-1.x · project / entity</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/entity</div></div></div>",
+        "id": 226577770,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613510231
+    },
+    {
+        "content": "<p>So, apologies, this is a totally new area of detail for me, but as the recently minted maintainer of Profile, I guess it falls to me to see if this can be implemented (although a PR from someone who knows what they're doing would be most welcome; and if not that, any tips/pointers appreciated).</p>",
+        "id": 226579286,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613510943
+    }
+]

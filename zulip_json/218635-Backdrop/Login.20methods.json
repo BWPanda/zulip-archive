@@ -1,0 +1,170 @@
+[
+    {
+        "content": "<p>I can't login to a test site anymore, getting a blank page with a \"Call to undefined method AnonymousUser::bundle()\" error. I suspect that's because of a (Organic Groups) block on the default layout.</p>\n<p>Question: How can I log in (to remove the block) without using the default layout? Drush isn't available for the site in question. Or, how can I remove the block without logging in? Any ideas?</p>",
+        "id": 220370847,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608297710
+    },
+    {
+        "content": "<p>Outch... Do you have ssh access? The layout is a json file in the config directory, so you might be able to remove the block with a text editor. This is not for the faint-hearted, though...</p>",
+        "id": 220377568,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608301679
+    },
+    {
+        "content": "<p>could just copy the OOTB default layout to allow you to login then paste back the offending code once youve logged in.</p>",
+        "id": 220378327,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608302062
+    },
+    {
+        "content": "<p>Thanks for the hints! I've removed the suspected block from the layout config file but that didn't help. Thought there might also be something in the database (no idea if Organic Groups saves some block related things there).</p>",
+        "id": 220381861,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608303779
+    },
+    {
+        "content": "<p>Hm... tricky. Do you have direct access to the database? Like phpmyadmin? The enabled/disabled state of modules gets written to the \"system\" table...</p>",
+        "id": 220382270,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608303966
+    },
+    {
+        "content": "<p><code>SELECT * FROM `system` WHERE `name` LIKE 'og%' </code> should show the enabled (sub-)modules.</p>",
+        "id": 220382442,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608304054
+    },
+    {
+        "content": "<p>Yes, I have database access. Do you recommend to disable OG (submodules) and then try to log in and just remove the block?</p>",
+        "id": 220383366,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608304487
+    },
+    {
+        "content": "<p>I thought, the block is already gone? Before that you could also try to have a look at dblog entries, maybe that helps a bit to identify the root cause.</p>",
+        "id": 220383644,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608304651
+    },
+    {
+        "content": "<p>Well, I'm not sure if it was gone, couldn't verify because of the blank page.</p>",
+        "id": 220383782,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608304705
+    },
+    {
+        "content": "<p><code>SELECT * FROM `watchdog` WHERE `severity` &lt;  5</code><br>\nDoes that shed a light on it?</p>",
+        "id": 220383954,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608304788
+    },
+    {
+        "content": "<p>Ah, you might have removed the block, but maybe it's still in the cache.</p>",
+        "id": 220384052,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608304830
+    },
+    {
+        "content": "<p>Ehm... do you have backup? I know, that question comes a little late <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> </p>\n<p>Another <em>possible</em> solution: <code>TRUNCATE TABLE `cache_page`;</code></p>",
+        "id": 220384319,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608304968
+    },
+    {
+        "content": "<p>Re watchdog, interesting, that's the message in the database: <code>%type: !message in %function (line %line of %file)</code> <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 220384508,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608305074
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> I guess this means there is still work to be done on OG <span aria-label=\"stuck out tongue closed eyes\" class=\"emoji emoji-1f61d\" role=\"img\" title=\"stuck out tongue closed eyes\">:stuck_out_tongue_closed_eyes:</span></p>",
+        "id": 220384570,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608305111
+    },
+    {
+        "content": "<p>Garbage, right, the values are serialized in column variables. A bit complicated...</p>",
+        "id": 220384636,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608305161
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>  Yes, I guess ;-) (Btw, are you still interested to work on it?)</p>",
+        "id": 220384746,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608305195
+    },
+    {
+        "content": "<p>I'd suggest to run truncate table cache_page (like above), to flush the page cache.</p>",
+        "id": 220384867,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608305262
+    },
+    {
+        "content": "<p>the watchdog message is in a blob field. dont recall the name</p>",
+        "id": 220384963,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608305291
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>, it's right there but I couldn't see the content. Have downloaded the file, here's the (sanitized) content:</p>\n<p><code>a:6:{s:5:\"%type\";s:5:\"Error\";s:8:\"!message\";s:48:\"Call to undefined method AnonymousUser::bundle()\";s:9:\"%function\";s:24:\"FieldBlock-&gt;getContent()\";s:5:\"%file\";s:83:\"PATH-TO/core/modules/field/field.block.inc\";s:5:\"%line\";i:89;s:14:\"severity_level\";i:3;}</code></p>",
+        "id": 220385648,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608305611
+    },
+    {
+        "content": "<p>might be a field block acting up then? recommend just paste in the OOTB code for default layout. backup your current code then paste it back in if you can log in.</p>",
+        "id": 220385947,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608305754
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Already tried that, didn't work. I've just also disabled Organic Groups, cleared page cache via phpMyAdmin and cleared browser cache. Still getting the same error, strange!</p>",
+        "id": 220386539,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608305987
+    },
+    {
+        "content": "<p>hmm, might have to resort to black magic. you got some blood and some feathers and an old bible?</p>",
+        "id": 220386722,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608306055
+    },
+    {
+        "content": "<p>Hehe, sure!</p>",
+        "id": 220386772,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608306076
+    },
+    {
+        "content": "<p>Here it is: Will reinstall the site later from scratch, which is no problem in this case, just a test site.</p>",
+        "id": 220386864,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608306113
+    },
+    {
+        "content": "<p>seriously i've run out of ideas, sorry.</p>",
+        "id": 220386937,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608306125
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> yes, still planning to work on OG further but in January most likely.</p>",
+        "id": 220387019,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608306160
+    },
+    {
+        "content": "<p>NP <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  Luckily it's not a production site.</p>",
+        "id": 220387258,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608306249
+    },
+    {
+        "content": "<p>Great <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>, good to hear!</p>",
+        "id": 220387309,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608306277
+    }
+]

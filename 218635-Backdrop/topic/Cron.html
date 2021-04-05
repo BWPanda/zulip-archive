@@ -1,0 +1,62 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Cron.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cron.html">Cron</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="214620069"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cron/near/214620069" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cron.html#214620069">(Oct 26 2020 at 19:12)</a>:</h4>
+<p>What's the best way to break "Attempting to re-run cron while it is already running." on a Backdrop site?</p>
+
+
+
+<a name="214622031"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cron/near/214622031" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cron.html#214622031">(Oct 26 2020 at 19:31)</a>:</h4>
+<p>By "break", do you mean stop? I think the biggest thing to look for is a long running process within a short cron window.</p>
+
+
+
+<a name="214622297"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cron/near/214622297" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cron.html#214622297">(Oct 26 2020 at 19:33)</a>:</h4>
+<p>I mean end whatever process is stalled to allow cron to run again. Or does this just continue running until it's complete? Where do I see which cron processes are currently running?</p>
+
+
+
+<a name="214622769"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cron/near/214622769" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cron.html#214622769">(Oct 26 2020 at 19:37)</a>:</h4>
+<p>Okay, site in question runs cron okay now. I guess I misinterpreted that warning to mean something was stalled rather than just that it was still processing.</p>
+
+
+
+<a name="214623012"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cron/near/214623012" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cron.html#214623012">(Oct 26 2020 at 19:39)</a>:</h4>
+<p>If you grep the config files for cron, do you see anything there? I'm so used to Elysia Cron over the last few years, I'm not even sure how Drupal does it.</p>
+
+
+
+<a name="214657588"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cron/near/214657588" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cron.html#214657588">(Oct 27 2020 at 03:19)</a>:</h4>
+<p>I didn't see anything that looked relevant. Some searching on D7 turned up a variable that doesn't seem to exist in Backdrop; maybe it's become a state.</p>
+
+
+
+<a name="214669074"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cron/near/214669074" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cron.html#214669074">(Oct 27 2020 at 07:53)</a>:</h4>
+<p>Yes, cron_key and cron_last are in the state db table. It this (...re-run cron while it is already...) happened just once, ignore it. If it happens regularly, check if your cron jobs runs often enough (and regularly) and also check your modules for their <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_cron/1">hook_cron()</a> - and try to figure out, which one runs so long.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

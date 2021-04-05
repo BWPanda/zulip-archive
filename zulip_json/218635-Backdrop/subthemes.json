@@ -1,0 +1,554 @@
+[
+    {
+        "content": "<p>I'm having trouble with what seems to me to be basic subtheming; I'm wondering if I've forgotten the basics!</p>\n<p>I want to create a bunch of subthemes of a contrib theme that only differs by a single CSS file.  When I create it, I can see in Chrome Dev Tools that the CSS file is being picked up, but it's being overridden by the parent theme's CSS file.  Isn't that the opposite of what's supposed to happen?</p>\n<p>When I copy the contrib theme and place the subthemes inside it, it works as expected.</p>\n<p>Am I missing something?  I know subthemes can be inside the parent theme's folder, but they don't have to be, do they?</p>",
+        "id": 219796947,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607916848
+    },
+    {
+        "content": "<p>The relevant bit in my .info file looks like this:</p>\n<div class=\"codehilite\"><pre><span></span><code>base theme = contrib_theme_machine_name\nstylesheets[all][] = mynewstyle.css\n</code></pre></div>",
+        "id": 219797174,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607917156
+    },
+    {
+        "content": "<p>No, they don't need to be in the base theme's directory.</p>",
+        "id": 219797185,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607917175
+    },
+    {
+        "content": "<p>Does a new stylesheet work? Is it only when overriding a base theme stylesheet that you have a problem?</p>",
+        "id": 219797274,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607917275
+    },
+    {
+        "content": "<p>I haven't explicitly tried it, but a new style <em>should</em> work.  The style is there, it's just being overridden by the original style.</p>",
+        "id": 219797311,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607917322
+    },
+    {
+        "content": "<p>Here's my .info file:<br>\n<a href=\"/user_uploads/18319/WE4DoOYLV_V-0zXyUde-m1LJ/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/WE4DoOYLV_V-0zXyUde-m1LJ/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/WE4DoOYLV_V-0zXyUde-m1LJ/image.png\"></a></div>",
+        "id": 219797339,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607917360
+    },
+    {
+        "content": "<p>And here's the body tag in dev tools: <a href=\"/user_uploads/18319/FutTAQfUWa9tKATAHaPdq4TT/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/FutTAQfUWa9tKATAHaPdq4TT/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/FutTAQfUWa9tKATAHaPdq4TT/image.png\"></a></div>",
+        "id": 219797352,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607917404
+    },
+    {
+        "content": "<p>OK, so the styles are being overridden, not the stylesheet itself...</p>",
+        "id": 219797358,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607917442
+    },
+    {
+        "content": "<p>Oh, I think I just figured it out -- the min version is overriding the regular one.</p>",
+        "id": 219797399,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607917456
+    },
+    {
+        "content": "<p>Are the base theme's stylesheets being loaded after the sub theme's in the HTML head somehow?</p>",
+        "id": 219797409,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607917500
+    },
+    {
+        "content": "<p>That seems unlikely.  I'm not doing anything fancy, I'm only adding the css in the theme's info file</p>",
+        "id": 219797472,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607917567
+    },
+    {
+        "content": "<p>I'm going to try doing the name thing with minimized files</p>",
+        "id": 219797553,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607917758
+    },
+    {
+        "content": "<p>I think I just figured out my mistake.</p>",
+        "id": 219797787,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918073
+    },
+    {
+        "content": "<p>Ah, I think it's because the Bootstrap CSS file is coming from a CDN...</p>",
+        "id": 219797789,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607918076
+    },
+    {
+        "content": "<p>That's not my current theory :)</p>",
+        "id": 219797797,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918095
+    },
+    {
+        "content": "<p>I changed the filename of the CSS file in the subtheme.</p>",
+        "id": 219797808,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918118
+    },
+    {
+        "content": "<p>I figured the styles would take precedence over the same styles, but now I realize that's naive.</p>",
+        "id": 219797820,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918156
+    },
+    {
+        "content": "<p>I should leave the filename alone, that way Backdrop will squeeze the original out of the array, so it doesn't have to override it -- the original will be gone.  (I think...)</p>",
+        "id": 219797897,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918256
+    },
+    {
+        "content": "<p>If you want to completely remove a base theme stylesheet, then yes, you need to use the same name. But I just tested this with a simple sub-theme of bootstrap_lite and even a custom CSS file's CSS is being overridden...</p>",
+        "id": 219797978,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607918348
+    },
+    {
+        "content": "<p>Does that feel like a bug to you?</p>",
+        "id": 219797988,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918385
+    },
+    {
+        "content": "<p>I suspect it's specific to Bootstrap Lite...</p>",
+        "id": 219798041,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607918407
+    },
+    {
+        "content": "<p>Yeah, look at this:</p>\n<div class=\"codehilite\" data-code-language=\"HTML\"><pre><span></span><code><span class=\"p\">&lt;</span><span class=\"nt\">style</span> <span class=\"na\">media</span><span class=\"o\">=</span><span class=\"s\">\"all\"</span><span class=\"p\">&gt;</span>\n<span class=\"p\">@</span><span class=\"k\">import</span> <span class=\"nt\">url</span><span class=\"o\">(</span><span class=\"s2\">\"http://sandbox.lndo.site/themes/bootstrap_lite/css/style.css?qlb9rk\"</span><span class=\"o\">)</span><span class=\"p\">;</span>\n<span class=\"p\">@</span><span class=\"k\">import</span> <span class=\"nt\">url</span><span class=\"o\">(</span><span class=\"s2\">\"http://sandbox.lndo.site/themes/test/test.css?qlb9rk\"</span><span class=\"o\">)</span><span class=\"p\">;</span>\n<span class=\"p\">&lt;/</span><span class=\"nt\">style</span><span class=\"p\">&gt;</span>\n<span class=\"p\">&lt;</span><span class=\"nt\">link</span> <span class=\"na\">rel</span><span class=\"o\">=</span><span class=\"s\">\"stylesheet\"</span> <span class=\"na\">href</span><span class=\"o\">=</span><span class=\"s\">\"//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\"</span> <span class=\"na\">media</span><span class=\"o\">=</span><span class=\"s\">\"all\"</span> <span class=\"p\">/&gt;</span>\n<span class=\"p\">&lt;</span><span class=\"nt\">link</span> <span class=\"na\">rel</span><span class=\"o\">=</span><span class=\"s\">\"stylesheet\"</span> <span class=\"na\">href</span><span class=\"o\">=</span><span class=\"s\">\"https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css\"</span> <span class=\"na\">media</span><span class=\"o\">=</span><span class=\"s\">\"all\"</span> <span class=\"p\">/&gt;</span>\n<span class=\"p\">&lt;</span><span class=\"nt\">style</span> <span class=\"na\">media</span><span class=\"o\">=</span><span class=\"s\">\"all\"</span><span class=\"p\">&gt;</span>\n<span class=\"p\">@</span><span class=\"k\">import</span> <span class=\"nt\">url</span><span class=\"o\">(</span><span class=\"s2\">\"http://sandbox.lndo.site/themes/bootstrap_lite/css/overrides.css?qlb9rk\"</span><span class=\"o\">)</span><span class=\"p\">;</span>\n<span class=\"p\">&lt;/</span><span class=\"nt\">style</span><span class=\"p\">&gt;</span>\n</code></pre></div>\n<p>Bootstrap's CDN-based CSS is being loaded after my 'test' theme's CSS (and thereby overriding it).</p>",
+        "id": 219798230,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607918669
+    },
+    {
+        "content": "<p>sunnoafbitch <span aria-label=\"scream\" class=\"emoji emoji-1f631\" role=\"img\" title=\"scream\">:scream:</span></p>",
+        "id": 219798345,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918802
+    },
+    {
+        "content": "<p>I specifically want to override bootstrap.css</p>",
+        "id": 219798392,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918875
+    },
+    {
+        "content": "<p>I think you'll need to open an issue for Bootstrap Lite, asking to change the way they add their CDN CSS. They do it in <a href=\"https://github.com/backdrop-contrib/bootstrap_lite/blob/1.x-1.x/template.php#L10\">hook_css_alter()</a> and even though they set a negative weight, it doesn't seem to have any affect on where the CSS is loaded. I suspect they should instead be calling <code>backdrop_add_css()</code> in a different function...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/blob/1.x-1.x/template.php#L10\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/blob/1.x-1.x/template.php#L10\" title=\"backdrop-contrib/bootstrap_lite\">backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">Bootstrap Lite - a Backdrop Bootstrap-based theme: - backdrop-contrib/bootstrap_lite</div></div></div>",
+        "id": 219798474,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607918972
+    },
+    {
+        "content": "<p>It actually says this in \"admin/appearance/settings/bootstrap_lite\"</p>\n<p>\"Use BootstrapCDN to serve the Bootstrap framework files. Enabling this setting will prevent this theme from attempting to load any Bootstrap framework files locally.\"</p>",
+        "id": 219798479,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607918979
+    },
+    {
+        "content": "<p>So if I disable the CDN (which there's an option to do) it should work the way I was expecting it to.</p>",
+        "id": 219798573,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607919089
+    },
+    {
+        "content": "<p>And that does</p>",
+        "id": 219798578,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607919108
+    },
+    {
+        "content": "<p>Yes, it's only the CDN thing that's causing the issue. And it seems there's an existing issue in the queue for this: <a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/13\">https://github.com/backdrop-contrib/bootstrap_lite/issues/13</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/13\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/13\" title=\"CSS file loading in wrong order? · Issue #13 · backdrop-contrib/bootstrap_lite\">CSS file loading in wrong order? · Issue #13 · backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">Not being sure whether this is an issue with the Bootstrap Lite theme, or with Backdrop core, I&#39;m posting this issue here, hoping someone can help. I did a fresh Backdrop install with &quot;Boo...</div></div></div>",
+        "id": 219798647,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607919194
+    },
+    {
+        "content": "<p>I'm relieved to know that I hadn't forgotten basic sub-theming as much as it seemed!</p>",
+        "id": 219798715,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607919245
+    },
+    {
+        "content": "<p>I added my suggestion of a fix to that issue. Not that that theme has a maintainer to implement it though... Perhaps a <span class=\"user-group-mention\" data-user-group-id=\"2152\">@Bug Squad</span> member...?</p>",
+        "id": 219798937,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607919581
+    },
+    {
+        "content": "<p>I'm desperate to fix it, it's key to my whole plan.  I think I'm going to fork it, and monkeywrench the CDN.</p>",
+        "id": 219799685,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607920616
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> if you can get someone to file a PR for <a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/13\">https://github.com/backdrop-contrib/bootstrap_lite/issues/13</a> or you manage to file a PR yourself, then if people test and say it's RTBC, then finally someone from the Bug Squad can merge the change.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/13\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/13\" title=\"CSS file loading in wrong order? · Issue #13 · backdrop-contrib/bootstrap_lite\">CSS file loading in wrong order? · Issue #13 · backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">Not being sure whether this is an issue with the Bootstrap Lite theme, or with Backdrop core, I&#39;m posting this issue here, hoping someone can help. I did a fresh Backdrop install with &quot;Boo...</div></div></div>",
+        "id": 219857823,
+        "sender_full_name": "klonos",
+        "timestamp": 1607960116
+    },
+    {
+        "content": "<p>That sounds like something I should be able to confidently say I can do; let me give it a shot.</p>",
+        "id": 219857997,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607960193
+    },
+    {
+        "content": "<p>After reading that thread, I'm less confident.  I didn't see a patch the solved the issue.  When you say \"file a PR\" does that imply fixing the problem first?  It's possible I could do that -- the code looks like stuff I understand -- but I'd have to dive into it with more commitment.</p>\n<p>In the meantime, I think I can solve my practical problem by adding a template.php file to each subtheme with this bit in it:</p>\n<div class=\"codehilite\"><pre><span></span><code>&lt;?php\n/**\n * Implements hook_css_alter().\n */\nfunction NAMEOFYOURSUBTHEME_css_alter(&amp;$css) {\n  // Add overrides.\n  $theme_path = backdrop_get_path(&#39;theme&#39;, &#39;NAMEOFYOURSUBTHEME&#39;);\n  $override = $theme_path . &#39;/css/suboverride.css&#39;;\n  $css[$override] = array(\n    &#39;data&#39; =&gt; $override,\n    &#39;type&#39; =&gt; &#39;file&#39;,\n    &#39;every_page&#39; =&gt; TRUE,\n    &#39;media&#39; =&gt; &#39;all&#39;,\n    &#39;preprocess&#39; =&gt; TRUE,\n    &#39;group&#39; =&gt; CSS_THEME,\n    &#39;browsers&#39; =&gt; array(&#39;IE&#39; =&gt; TRUE, &#39;!IE&#39; =&gt; TRUE),\n    &#39;weight&#39; =&gt; 1,\n  );\n}\n</code></pre></div>",
+        "id": 219859965,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607961086
+    },
+    {
+        "content": "<p>Btw, the driving force behind what I'm doing is to make BootSwatch themes easily available.  At some point it would be nice to fix the code in Bootstrap_lite that allows a user to select a bootswatch theme, but for usability reasons I want to implement my workaround anyway.</p>",
+        "id": 219860465,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607961278
+    },
+    {
+        "content": "<p>Yes <span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> ...a PR that fixes the issue means that you've fixed it on your local fist <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...I mean a \"proper\" way that fixes the original issue you are having here (making sure that the CDN-based CSS file is loaded before any subtheme CSS, so that the subtheme CSS takes priority)</p>",
+        "id": 219863947,
+        "sender_full_name": "klonos",
+        "timestamp": 1607962464
+    },
+    {
+        "content": "<p>Ok, in that case it's something I could probably do \"if given enough time\" but unlikely to do given the time I have.  I thought the problem was already solved and just needed to be packaged up.</p>",
+        "id": 219865972,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607963348
+    },
+    {
+        "content": "<p>Alternatively, you can solicit the help of others, or see it there's anyone willing to become a maintainer of that theme. That way, they will fix things for everyone using it.</p>",
+        "id": 219866478,
+        "sender_full_name": "klonos",
+        "timestamp": 1607963546
+    },
+    {
+        "content": "<p>In the meantime: I think I need a little help implementing the phptemplate solution above.  Besides substituting in the subtheme names, I think (but I'm not sure) that I need to specific the specific CSS files that should use the local version?</p>\n<p>Specifically, this line:</p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">$override = $theme_path . '/css/suboverride.css';</span>\n</code></pre></div>\n<p>Does that only affect files named \"suboverride.css\" ? So I should replace \"suboverride.css\" with the name of the file I want to override?  Or is this doing something more general, and suboverride.css is a name of something somewhere else within Backdrop?</p>",
+        "id": 219866561,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607963585
+    },
+    {
+        "content": "<p>I'm conducting a GovCMS training this week, so I need to focus on that. Then I would like to focus on the 1.18.0 core release as much as possible, so I cannot help with contrib as much ATM. Sorry.</p>",
+        "id": 219866871,
+        "sender_full_name": "klonos",
+        "timestamp": 1607963717
+    },
+    {
+        "content": "<p>...btw: <a href=\"https://backdropcms.org/project/usage/bootstrap_lite\">https://backdropcms.org/project/usage/bootstrap_lite</a> shows 140 sites using that theme, and the number has been steadily growing over time.</p>",
+        "id": 219866920,
+        "sender_full_name": "klonos",
+        "timestamp": 1607963747
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> BTW, I recently filed a simple PR for Bootstrap Lite that fixed the Bootswatch issue...</p>",
+        "id": 219893506,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607975471
+    },
+    {
+        "content": "<p>I can merge PRs for it if other people test. Ideally we'd need a new maintainer. I found the theme not quite up to snuff so I've stayed away from it. (I'm happy to just customize Basis myself).</p>",
+        "id": 219904441,
+        "sender_full_name": "Herb",
+        "timestamp": 1607981255
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/subthemes/near/219893506\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256664\">Luke McCormick</span> BTW, I recently filed a simple PR for Bootstrap Lite that fixed the Bootswatch issue...</p>\n</blockquote>\n<p>I just tested it, and it seemed to solve <a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/19\">https://github.com/backdrop-contrib/bootstrap_lite/issues/19</a>.  So...I guess I should RTBC it?</p>\n<p>It revealed at least one more problem -- it looks to me like the fonts aren't being downloaded -- but I imagine I should open another issue for that one?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/19\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/19\" title=\"Update API URL · Issue #19 · backdrop-contrib/bootstrap_lite\">Update API URL · Issue #19 · backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">The Bootswatch page is basically empty, because the API URL it's trying to call is old and doesn't work anymore. The current API URL is: https://bootswatch.com/api/4.json</div></div></div>",
+        "id": 219912633,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607985564
+    },
+    {
+        "content": "<p>(The Bootswatch page is populated now, which is pretty delightful)</p>",
+        "id": 219912678,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607985599
+    },
+    {
+        "content": "<p>So, umm...How do I RTBC it?</p>",
+        "id": 219915205,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607987152
+    },
+    {
+        "content": "<p>You can type RTBC in a comment. Update labels too</p>",
+        "id": 219919463,
+        "sender_full_name": "Herb",
+        "timestamp": 1607989939
+    },
+    {
+        "content": "<p>I added a comment; I don't seem to be able to add an \"RTBC\" label: <a href=\"/user_uploads/18319/sGWWloTJoOu2LHhg8zewGcsR/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/sGWWloTJoOu2LHhg8zewGcsR/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/sGWWloTJoOu2LHhg8zewGcsR/image.png\"></a></div>",
+        "id": 219920752,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607990740
+    },
+    {
+        "content": "<p>There probably isn't  a label for that. they have to be added per project.</p>",
+        "id": 219923268,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1607992401
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> do you think the fonts issue is unrelated?</p>",
+        "id": 219927362,
+        "sender_full_name": "Herb",
+        "timestamp": 1607995615
+    },
+    {
+        "content": "<p>I'll say (without a lot of confidence) that it might be a similar case of a changed URL for the fonts</p>",
+        "id": 219927468,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607995693
+    },
+    {
+        "content": "<p>There's a setting for Font Awesome</p>",
+        "id": 219927510,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607995748
+    },
+    {
+        "content": "<p>Let's see if this line goes anywhere: </p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">  if ($font_awesome = theme_get_setting('bootstrap_lite_font_awesome')) {</span>\n<span class=\"x\">    $awesome = 'https://maxcdn.bootstrapcdn.com/font-awesome/' . $font_awesome . '/css/font-awesome.min.css';</span>\n</code></pre></div>",
+        "id": 219927656,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607995876
+    },
+    {
+        "content": "<p>Well, it looks like we get something at both <br>\n<a href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css\">https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css</a> <br>\nand <br>\n<a href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</a></p>",
+        "id": 219927875,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607996079
+    },
+    {
+        "content": "<p>However, I do see this in the DevTools console: </p>\n<p>GET <a href=\"http://netdna.bootstrapcdn.com/bootswatch/3.3.5/sketchy/bootstrap.min.css\">http://netdna.bootstrapcdn.com/bootswatch/3.3.5/sketchy/bootstrap.min.css</a> net::ERR_ABORTED 403 (Forbidden)</p>",
+        "id": 219928118,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607996372
+    },
+    {
+        "content": "<p>(Sketchy has a super-obvious look I figured would be easy to see)</p>\n<p><a href=\"/user_uploads/18319/eqgbhfFnQKgJRTG6rmRs8MZ9/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/eqgbhfFnQKgJRTG6rmRs8MZ9/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/eqgbhfFnQKgJRTG6rmRs8MZ9/image.png\"></a></div>",
+        "id": 219928238,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607996492
+    },
+    {
+        "content": "<p>bootstrapcdn seems a bit sketchy too. I'm getting errors <a href=\"https://www.bootstrapcdn.com/\">https://www.bootstrapcdn.com/</a></p>",
+        "id": 219937287,
+        "sender_full_name": "Herb",
+        "timestamp": 1608006976
+    },
+    {
+        "content": "<p>So: I've reached MVP (or at least first public release) of the little project I've been working on this week:</p>\n<p><a href=\"https://github.com/backdrop-contrib/bootswatch_collection\">https://github.com/backdrop-contrib/bootswatch_collection</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootswatch_collection\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootswatch_collection\" title=\"backdrop-contrib/bootswatch_collection\">backdrop-contrib/bootswatch_collection</a></div><div class=\"message_embed_description\">All available Bootswatch themes, implemented as Bootstrap Lite subthemes - backdrop-contrib/bootswatch_collection</div></div></div>",
+        "id": 220042649,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608066525
+    },
+    {
+        "content": "<p>I'm curious to see what people think about it.</p>",
+        "id": 220042689,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608066556
+    },
+    {
+        "content": "<p>Cool. Did you have to build them all individually, or is that repo generated automatically somehow?</p>",
+        "id": 220044465,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608067441
+    },
+    {
+        "content": "<p>I built them individually, with a lot of help from Emacs.</p>",
+        "id": 220049827,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608070165
+    },
+    {
+        "content": "<p>Wow. Someone I know who actually uses Emacs.</p>",
+        "id": 220050440,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1608070404
+    },
+    {
+        "content": "<p>The “Mac” in EMACS stands for “macros” — I use them extensively. I create crazy programs on the fly that crawl through hundreds of files doing all sorts of wacky things.</p>",
+        "id": 220052257,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608071379
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> ++</p>",
+        "id": 220072677,
+        "sender_full_name": "klonos",
+        "timestamp": 1608088179
+    },
+    {
+        "content": "<p>mccormick** kudos (Karma: 3)</p>",
+        "id": 220072678,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608088179
+    },
+    {
+        "content": "<p>(deleted)</p>",
+        "id": 220087062,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1608106228
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Regarding the FontAwesome URLs for Bootstrap Lite, you might want to see how the Font Awesome module includes the CSS, might be useful here too... <a href=\"https://github.com/backdrop-contrib/font_awesome/blob/6036029096a68d029bd08791c4fa0f55888526fe/font_awesome.module#L28\">https://github.com/backdrop-contrib/font_awesome/blob/6036029096a68d029bd08791c4fa0f55888526fe/font_awesome.module#L28</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/font_awesome/blob/6036029096a68d029bd08791c4fa0f55888526fe/font_awesome.module#L28\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/font_awesome/blob/6036029096a68d029bd08791c4fa0f55888526fe/font_awesome.module#L28\" title=\"backdrop-contrib/font_awesome\">backdrop-contrib/font_awesome</a></div><div class=\"message_embed_description\">A simple module to include Font Awesome Icons via CSS classes for usage in your website - backdrop-contrib/font_awesome</div></div></div>",
+        "id": 220097481,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608113480
+    },
+    {
+        "content": "<p>this is really cool <span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span>. really cool.</p>",
+        "id": 220107505,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608120557
+    },
+    {
+        "content": "<p>one non-theme issue is to remember <a href=\"http://bcms.org\">bcms.org</a> has issues when there isn't a root info file. if you release, it'll probably list your project from the first info file it finds.</p>",
+        "id": 220107691,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608120702
+    },
+    {
+        "content": "<p>Well, that project is a first. ...we never had a collection of (sub)themes within a single project before ...might be worth using that project and also <a href=\"https://github.com/backdrop-contrib/radix_layouts\">https://github.com/backdrop-contrib/radix_layouts</a> as test cases, to make sure that core can properly handle these situations.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/radix_layouts\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/radix_layouts\" title=\"backdrop-contrib/radix_layouts\">backdrop-contrib/radix_layouts</a></div><div class=\"message_embed_description\">Responsive layouts for Backdrop CMS. Contribute to backdrop-contrib/radix_layouts development by creating an account on GitHub.</div></div></div>",
+        "id": 220109175,
+        "sender_full_name": "klonos",
+        "timestamp": 1608121649
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/subthemes/near/220107691\">said</a>:</p>\n<blockquote>\n<p>one non-theme issue is to remember <a href=\"http://bcms.org\">bcms.org</a> has issues when there isn't a root info file. if you release, it'll probably list your project from the first info file it finds.</p>\n</blockquote>\n<p>I'm considering including a fork of Bootstrap Lite within Bootswatch Collection, mostly to simplify the experience for my intended audience.  If I do that, I can put more project-wide information into its .info file.</p>",
+        "id": 220127785,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608131706
+    },
+    {
+        "content": "<p>Can't wait to test this. I just haven't had time yet.</p>",
+        "id": 220167810,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1608150168
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick (cellear)</span> - Is there anything special that needs to be done to enable these themes? <a href=\"https://github.com/backdrop-contrib/bootswatch_collection/issues/2\">https://github.com/backdrop-contrib/bootswatch_collection/issues/2</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootswatch_collection/issues/2\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootswatch_collection/issues/2\" title=\"Instructions · Issue #2 · backdrop-contrib/bootswatch_collection\">Instructions · Issue #2 · backdrop-contrib/bootswatch_collection</a></div><div class=\"message_embed_description\">I&#39;ve downloaded them as a collection into the themes folder and tried enabling them individually. I don&#39;t think that they are working as intended and there are not yet any instructions on h...</div></div></div>",
+        "id": 220202035,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1608173798
+    },
+    {
+        "content": "<p>Bootstrap lite needs to be available</p>",
+        "id": 220202074,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608173859
+    },
+    {
+        "content": "<p>I've enabled bootstrap lite, but not made it default and I've switching between the other themes, but nothing much is happening. I am making them the default theme.</p>",
+        "id": 220202277,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1608174074
+    },
+    {
+        "content": "<p>OK, got them working. I had to turn off compression and/or aggregation.</p>",
+        "id": 220202409,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1608174211
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Good to know!</p>",
+        "id": 220204769,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608177332
+    },
+    {
+        "content": "<p>Are you getting fonts?</p>",
+        "id": 220204889,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608177491
+    },
+    {
+        "content": "<p>I wasn't. But, once I turned off aggregation, I think I was.</p>",
+        "id": 220206216,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1608179439
+    },
+    {
+        "content": "<p>Was that a cache issue?</p>",
+        "id": 220206769,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608180215
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> - Clearing cache does not help. I isolated \"aggregate and compress css files\" as the problem. <br>\n<a href=\"https://github.com/backdrop-contrib/bootswatch_collection/issues/3\">https://github.com/backdrop-contrib/bootswatch_collection/issues/3</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootswatch_collection/issues/3\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootswatch_collection/issues/3\" title=\"Does not work with &quot;Aggregate and compress CSS files&quot; · Issue #3 · backdrop-contrib/bootswatch_collection\">Does not work with \"Aggregate and compress CSS files\" · Issue #3 · backdrop-contrib/bootswatch_collection</a></div><div class=\"message_embed_description\">Instructions on how to reproduce: Spin up a new site Add Bootswatch Collection of themes to /themes directory Enable Bootstrap Lite (leave Basis as default theme) Enable a Bootswatch theme and make...</div></div></div>",
+        "id": 220208174,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1608182288
+    },
+    {
+        "content": "<p>I think I know why.</p>\n<p>In my template.php, I overrode bootstrap.css:</p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\"> $override = $theme_path . '/css/bootstrap.css';</span>\n</code></pre></div>\n<p>...but not bootstrap.min.css</p>\n<p>I'm guessing Backdrop grabs the minimized file when it compresses and aggregates?</p>",
+        "id": 220261415,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608220657
+    },
+    {
+        "content": "<p>I dug up a few links about the origin of Bootswatch, and it's all pretty interesting.  I'll be incorporating various things I'm learning from it into this project (if I keep it) and others.</p>\n<p><a href=\"https://thomaspark.co/2012/02/introducing-bootswatch/\">https://thomaspark.co/2012/02/introducing-bootswatch/</a></p>\n<p><a href=\"https://www.smashingmagazine.com/2013/03/customizing-bootstrap/\">https://www.smashingmagazine.com/2013/03/customizing-bootstrap/</a></p>\n<p><a href=\"https://github.com/thomaspark/bootswatch\">https://github.com/thomaspark/bootswatch</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.smashingmagazine.com/2013/03/customizing-bootstrap/\" style=\"background-image: url(https://www.smashingmagazine.com/)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.smashingmagazine.com/2013/03/customizing-bootstrap/\" title=\"How To Customize Twitter’s Bootstrap — Smashing Magazine\">How To Customize Twitter’s Bootstrap — Smashing Magazine</a></div><div class=\"message_embed_description\">Twitter’s Bootstrap has taken off like a rocket since its release a year ago. The popular CSS framework supplies a responsive grid system, pre-styled components and JavaScript plugins to a parade of websites.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/thomaspark/bootswatch\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/900407?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/thomaspark/bootswatch\" title=\"thomaspark/bootswatch\">thomaspark/bootswatch</a></div><div class=\"message_embed_description\">Themes for Bootstrap. Contribute to thomaspark/bootswatch development by creating an account on GitHub.</div></div></div>",
+        "id": 220409982,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608315743
+    },
+    {
+        "content": "<p>At the end of the Smashing Magazine article is a paragraph that references a number of interesting-sounding tools, most of which seem to now be gone.  That's not surprising, since they were presumably written for earlier version of Bootstrap, and they probably all used LESS and not SASS.   I wonder if there are similar tools available that work with current versions?</p>\n<blockquote>\n<p>Several third-party generators are also available on the Web. Unlike the official generator, they provide live previews as you adjust variables. Bootswatchr organizes itself by variable, and StyleBootstrap by component. BootTheme adds a roll-the-dice feature to randomize your values. If lady luck isn’t on your side, Lavish can generate a theme from any image you provide, and PaintStrap from existing color schemes.</p>\n</blockquote>",
+        "id": 220410263,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608315902
+    },
+    {
+        "content": "<p>Here's one: <a href=\"https://bootstrap.build/\">https://bootstrap.build/</a></p>",
+        "id": 220410563,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608316079
+    },
+    {
+        "content": "<p>Unfortunately <a href=\"https://bootstrap.build/license\">https://bootstrap.build/license</a></p>",
+        "id": 220412164,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608316894
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/subthemes/near/220412164\">said</a>:</p>\n<blockquote>\n<p>Unfortunately <a href=\"https://bootstrap.build/license\">https://bootstrap.build/license</a></p>\n</blockquote>\n<p>Wait, why? Is there something there that's incompatible with ours?</p>",
+        "id": 220449000,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608345020
+    },
+    {
+        "content": "<p>Everything <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...things you can't do:</p>\n<ul>\n<li><strong>Redistribute</strong> or resell our themes and templates or source files.</li>\n<li>...</li>\n<li>Create templates, themes and plugins for sale <strong>or free distribution</strong>.</li>\n</ul>",
+        "id": 220449180,
+        "sender_full_name": "klonos",
+        "timestamp": 1608345325
+    },
+    {
+        "content": "<p>...so it seems that a person can use these freely for their site, or their customers' sites, BUT you cannot base any distributable project (feee or otherwise) using them <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 220449313,
+        "sender_full_name": "klonos",
+        "timestamp": 1608345559
+    },
+    {
+        "content": "<p>Wow. How oddly restrictive. I wonder what their angle is?  Are they selling something?</p>",
+        "id": 220454506,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608354838
+    },
+    {
+        "content": "<p>Trying to wrap my head around this: <a href=\"http://paintstrap.com/gallery/\">http://paintstrap.com/gallery/</a> (including trying looking at the licensing to see if there are any problems there)</p>",
+        "id": 220496852,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608427910
+    }
+]

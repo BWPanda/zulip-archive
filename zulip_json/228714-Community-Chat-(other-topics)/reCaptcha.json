@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Hi guys, one more question. What kind of captcha do you prefer for your sites? In my Drupal 6 site I had the embedded captcha and it was easily hacked from robots a couple of years ago... Yes robots with optical recognition! So for my new site now I'm considering using reCaptcha but as I read in the Backdrop module description <a href=\"/user_uploads/18319/XoFnzMm2W5fFa4w8vgWzqPte/image.png\">image.png</a> <br>\nHave you used it? Does it really have problems currently?</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/XoFnzMm2W5fFa4w8vgWzqPte/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/XoFnzMm2W5fFa4w8vgWzqPte/image.png\"></a></div>",
+        "id": 231803095,
+        "sender_full_name": "cptX",
+        "timestamp": 1616680189
+    },
+    {
+        "content": "<p>If I use a captcha at all (usually Honeypot or Antibot instead), I prefer Captcha Riddler, <a href=\"https://backdropcms.org/project/riddler\">https://backdropcms.org/project/riddler</a>.</p>",
+        "id": 231803931,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616680485
+    },
+    {
+        "content": "<p>I have a D6 site with 1000-1500 visitors per day for the last 10 years. I have hundreds of hacker attacks (robots mainly) everyday. Honeypot is doing some job. Antibot is doing some too. Fail2ban is doing some in server level and drupal lever (the logs go to the system and the fail2ban blocks the ip). The drupal Captcha as I said was hacked at one point with robots using image recognition. Just read the Captcha Riddler description and I wouldn't like to make custom riddles. I just want a simple to install and configure system and especially simple for the visitors to use... From my experience as a user in other sites I could say reCaptcha is nice enough. Other options beyond Captcha, reCaptcha and Captcha Riddler?</p>",
+        "id": 231805430,
+        "sender_full_name": "cptX",
+        "timestamp": 1616680980
+    },
+    {
+        "content": "<p>If Antibot doesn't do the job... what sort of hacks are successful? Click workers? (real humans that work for little money)</p>\n<p>Knowing who/what slips through can help to decide for the best strategy. There are some more options in Backdrop.</p>",
+        "id": 231830283,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616688742
+    },
+    {
+        "content": "<p>I personally am in position to write robots which are using javascipt (phantomjs, casperjs, puppeteer) so I wouldn't be trusting antibot too much... I was considering image captchas with distortion safer but a couple of years ago they were hacked too to my complete surprise. I increased the noise to a point that even humans couldn't decrypt the letters. Imagine the frustration of the users... So I'm looking for something more recent and advanced behind the scenes. Isn't the recaptcha a good option? Never used it so I'm asking for opinions. Do you have sites with a lot of user interaction? What are your experiences</p>",
+        "id": 231831360,
+        "sender_full_name": "cptX",
+        "timestamp": 1616689202
+    },
+    {
+        "content": "<p>That wasn't actually my question. The anti-spam strategy needs to change regularly, they get better - we (site owners, admins) get better. What are these bot/humans/whatever trying to achieve on your site? Posting spam content? Post some cross site scripting stuff, hack your site completely...?</p>",
+        "id": 231834373,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616690274
+    },
+    {
+        "content": "<p>And by the way: if you want to try out reCaptcha - just go for it. Figure out if it solves things for you. <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span> Maybe yes, maybe no.</p>",
+        "id": 231834629,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616690360
+    },
+    {
+        "content": "<p>I haven't had any problems with recaptcha.</p>",
+        "id": 231840912,
+        "sender_full_name": "Herb",
+        "timestamp": 1616692559
+    },
+    {
+        "content": "<p>Googles recaptcha is junk. Recaptcha v3 is even worse.</p>\n<p>I personally use honeypot and antibot together and get zero spam. Can't vouch for the hacking side of it though.</p>",
+        "id": 231856547,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1616698426
+    },
+    {
+        "content": "<p>I don't like reCaptcha because of the way it lets Google track visitors and just gives them more control of users data. That's just me though.</p>",
+        "id": 231860324,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616699870
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>  Some robots post comments, some are using  contact forms to send spams, talking about the robots that cracked the captcha...</p>",
+        "id": 231862599,
+        "sender_full_name": "cptX",
+        "timestamp": 1616700598
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> It could help to use different strategies, for instance reCaptcha for contact forms, antibot + riddler for comments. Or, if the comments usually contain similar words or links, use content evaluation with something like the protected_forms module or maybe akismet. You probably have to try out the combinations of modules yourself. I'm also not a fan of reCaptcha (user annoyance and privacy), by the way, but if it's the only thing that helps...</p>",
+        "id": 231919144,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616738526
+    }
+]

@@ -1,0 +1,128 @@
+[
+    {
+        "content": "<p>Could anyone tell me what should be the versions for the modules on the <code>/admin/modules</code> page? See <a href=\"https://github.com/backdrop/backdrop-issues/issues/5002\">https://github.com/backdrop/backdrop-issues/issues/5002</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/5002\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/5002\" title=\"Version format for the contributed modules on the Modules page · Issue #5002 · backdrop/backdrop-issues\">Version format for the contributed modules on the Modules page · Issue #5002 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">All is good for the core modules on the Modules page (admin/modules) as their versions always contain the Backdrop&#39;s version first and the module version after the hyphen, for example 1.19.x-de...</div></div></div>",
+        "id": 230468049,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615878607
+    },
+    {
+        "content": "<p>Dammit, can't seem to find the documentation, either. It's semver..., for instance 1.x-1.0.1 (core-major.minor.patch).</p>",
+        "id": 230471561,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615881241
+    },
+    {
+        "content": "<p>This is the best I could find: <a href=\"https://backdropcms.org/releases\">https://backdropcms.org/releases</a></p>\n<p>Basically for contrib, before the hyphen is the core version, and after is the versioning described on this page.</p>",
+        "id": 230473261,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615881898
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Version.20format.20for.20the.20modules/near/230471561\">said</a>:</p>\n<blockquote>\n<p>Dammit, can't seem to find the documentation, either. It's semver..., for instance 1.x-1.0.1 (core-major.minor.patch).</p>\n</blockquote>\n<p>So then the version numbers that show like 3.x-dev or 2.x-dev are wrong?</p>",
+        "id": 230473307,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615881915
+    },
+    {
+        "content": "<p>Ooops, where did you see 3.x-dev or 2.x-dev? Yes, that should actually be \"1.x-dev\" for a branch named 1.x-1.x - at least, that's how I handle things.</p>",
+        "id": 230473771,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615882078
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Version.20format.20for.20the.20modules/near/230473771\">said</a>:</p>\n<blockquote>\n<p>Ooops, where did you see 3.x-dev or 2.x-dev? Yes, that should actually be \"1.x-dev\" for a branch named 1.x-1.x - at least, that's how I handle things.</p>\n</blockquote>\n<p>Please read <a href=\"https://github.com/backdrop/backdrop-issues/issues/5002\">https://github.com/backdrop/backdrop-issues/issues/5002</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/5002\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/5002\" title=\"Version format for the contributed modules on the Modules page · Issue #5002 · backdrop/backdrop-issues\">Version format for the contributed modules on the Modules page · Issue #5002 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">All is good for the core modules on the Modules page (admin/modules) as their versions always contain the Backdrop&#39;s version first and the module version after the hyphen, for example 1.19.x-de...</div></div></div>",
+        "id": 230473904,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615882114
+    },
+    {
+        "content": "<p>Or this <a href=\"https://github.com/backdrop-ops/contrib#releases\">https://github.com/backdrop-ops/contrib#releases</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib#releases\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib#releases\" title=\"backdrop-ops/contrib\">backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Apply to join the contributed code developer team. - backdrop-ops/contrib</div></div></div>",
+        "id": 230474220,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615882229
+    },
+    {
+        "content": "<p>Fro example, if you git clone better_exposed_filters , then it shows 3.x-dev because the default branch is 1.x-3.x.</p>",
+        "id": 230474265,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615882265
+    },
+    {
+        "content": "<p>Hm... weird, module Better Exposed Filters has a properly named branch. I suspect, the misunderstanding is on my side...</p>\n<p>HA! Sure, BEF has 1.x-3.x, hence what you see is 3.x-dev.</p>",
+        "id": 230474409,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615882349
+    },
+    {
+        "content": "<p>What the system was supposed to show for modules like better_exposed_filters? 1.x-3.x-dev?</p>",
+        "id": 230474427,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615882360
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Version.20format.20for.20the.20modules/near/230474409\">said</a>:</p>\n<blockquote>\n<p>HA! Sure, BEF has 1.x-3.x, hence what you see is 3.x-dev</p>\n</blockquote>\n<p>and is that right? no Backdrop core version?</p>",
+        "id": 230474488,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615882409
+    },
+    {
+        "content": "<p>I don't think that the system should add the core version to the module dev version. The core version should be clear OOTB.</p>",
+        "id": 230474491,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615882412
+    },
+    {
+        "content": "<p>But don't you think it looks weird for some modules to show versions like <code>3.x-dev</code> while most of other modules show <code>1.x-</code> in the beginning?</p>",
+        "id": 230474642,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615882507
+    },
+    {
+        "content": "<p>In other words, if <code>3.x-dev</code> is correct, then  your saying:</p>\n<blockquote>\n<p>It's semver..., for instance 1.x-1.0.1 (core-major.minor.patch).</p>\n</blockquote>\n<p>doesn't hold. You see what I mean?</p>",
+        "id": 230474720,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615882562
+    },
+    {
+        "content": "<p>Hm... It's the module's major version...</p>\n<p>Obviously it is a bit ambiguous, as we both had to think for a moment, if that's correct. <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 230474780,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615882605
+    },
+    {
+        "content": "<p>I think it's a bug, and it should be <code>1.x-3.x-dev</code> and not just <code>3.x-dev</code> cause it really looks strange as if it's for Backdrop version 3.x</p>",
+        "id": 230474920,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615882695
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> an you re-tag <a href=\"https://github.com/backdrop/backdrop-issues/issues/5002\">https://github.com/backdrop/backdrop-issues/issues/5002</a> as a bug, please?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/5002\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/5002\" title=\"Version format for the contributed modules on the Modules page · Issue #5002 · backdrop/backdrop-issues\">Version format for the contributed modules on the Modules page · Issue #5002 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">All is good for the core modules on the Modules page (admin/modules) as their versions always contain the Backdrop&#39;s version first and the module version after the hyphen, for example 1.19.x-de...</div></div></div>",
+        "id": 230479067,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615885209
+    },
+    {
+        "content": "<p>And if this will be re-tagged as a bug, then the question remains should the Modules page display versions for the contributed modules in form of core-major.minor.patch or should they contain information only for module itself in form of major.minor.patch without indicating Backdrop core?</p>",
+        "id": 230479456,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615885386
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> I'm currently doing some recherche, to provide some screenshots (for clarity) ... there are some inconsistencies, it seems, which justifies the \"bug\" label.</p>",
+        "id": 230479670,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615885510
+    },
+    {
+        "content": "<p><span aria-label=\"thumbs up\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"thumbs up\">:thumbs_up:</span></p>",
+        "id": 230479746,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615885555
+    },
+    {
+        "content": "<p>Also, I'm just wondering while for the official releases we are showing versions like 1.x-1.0.0, 1.x-1.2.0 wouldn't be displaying versions like 1.x-1.x, 1.x-2.x for development branches just enough? Why the system has to add the -dev suffix and displaying them as 1.x-1.x-dev, 1.x-2.x-dev instead?</p>",
+        "id": 230481426,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615886425
+    }
+]

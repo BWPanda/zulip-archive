@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>In a Backdrop site (upgraded from D7), the token <code>[random:number]</code> doesn't work. In Backdrop, <em>Random</em> tokens aren't available in the Token browser.  In D7 I had used the token as a default value in a webform text field, and I need it for the Backdrop site, too. Does anyone have a idea how to add Random tokens to Backdrop?</p>",
+        "id": 211773243,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601478172
+    },
+    {
+        "content": "<p>Ooops, right, no random tokens. And no contrib module either providing them... At least, none that I found.</p>\n<p>You can add custom token types in a module using <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_token_info/1\">hook_token_info</a>.</p>\n<p>These one's are missing in backdrop: <a href=\"https://git.drupalcode.org/project/token/-/blob/7.x-1.x/token.tokens.inc#L346\">https://git.drupalcode.org/project/token/-/blob/7.x-1.x/token.tokens.inc#L346</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/token/-/blob/7.x-1.x/token.tokens.inc#L346\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/token/-/blob/7.x-1.x/token.tokens.inc#L346\" title=\"token.tokens.inc · 7.x-1.x · project / token\">token.tokens.inc · 7.x-1.x · project / token</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/token</div></div></div>",
+        "id": 211775432,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601478928
+    },
+    {
+        "content": "<p>Thanks for the hint, <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> ! Well, when it comes to coding, I'm not sure how to do it right. I've written a custom module with the code below. As a result, random tokens are available in the Token browser (yay!) ... but not displayed as default value in the Webform text field. What am I missing?</p>\n<div class=\"codehilite\"><pre><span></span><code>/**\n * Implements hook_token_info().\n */\nfunction custom_random_tokens_token_info() {\n  $info[&#39;types&#39;][&#39;random&#39;] = array(\n    &#39;name&#39; =&gt; t(&#39;Random&#39;),\n    &#39;description&#39; =&gt; (&#39;Tokens related to random data.&#39;),\n  );\n  $info[&#39;tokens&#39;][&#39;random&#39;][&#39;number&#39;] = array(\n    &#39;name&#39; =&gt; t(&#39;Number&#39;),\n    &#39;description&#39; =&gt; t(&#39;A random number from 0 to @max.&#39;, array(&#39;@max&#39; =&gt; mt_getrandmax())),\n  );\n  $info[&#39;tokens&#39;][&#39;random&#39;][&#39;hash&#39;] = array(\n    &#39;name&#39; =&gt; t(&#39;Hash&#39;),\n    &#39;description&#39; =&gt; t(&#39;A random hash. The possible hashing algorithms are: @hash-algos.&#39;, array(&#39;@hash-algos&#39; =&gt; implode(&#39;, &#39;, hash_algos()))),\n    &#39;dynamic&#39; =&gt; TRUE,\n  );\n\n  return $info;\n}\n</code></pre></div>",
+        "id": 211779508,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601480467
+    },
+    {
+        "content": "<p>Okay, below is what I missed. When I add it to the module file, it works! Thanks again, <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span></p>\n<div class=\"codehilite\"><pre><span></span><code>/**\n * Implements hook_tokens().\n */\nfunction custom_random_tokens_tokens($type, $tokens, array $data = array(), array $options = array()) {\n  $replacements = array();\n\n  if ($type == &#39;random&#39;) {\n    foreach ($tokens as $name =&gt; $original) {\n      switch ($name) {\n        case &#39;number&#39;:\n          $replacements[$original] = mt_rand();\n          break;\n      }\n    }\n\n    // [custom:hash:*] dynamic token.\n    if ($hash_tokens = token_find_with_prefix($tokens, &#39;hash&#39;)) {\n      $algos = hash_algos();\n      foreach ($hash_tokens as $name =&gt; $original) {\n        if (in_array($name, $algos)) {\n          $replacements[$original] = hash($name, backdrop_random_bytes(55));\n        }\n      }\n    }\n  }\n\nreturn $replacements;\n}\n</code></pre></div>",
+        "id": 211783813,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601482138
+    },
+    {
+        "content": "<p>At first sight, it didn't work but then I recalled there is the magical \"Flush all cashes\" link ;-)</p>",
+        "id": 211784010,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601482214
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Random.20token/near/211784010\">said</a>:</p>\n<blockquote>\n<p>At first sight, it didn't work but then I recalled there is the magical \"Flush all cashes\" link ;-)</p>\n</blockquote>\n<p>That gets all of us!!!</p>",
+        "id": 211784139,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601482266
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ++</p>",
+        "id": 211789796,
+        "sender_full_name": "klonos",
+        "timestamp": 1601484939
+    },
+    {
+        "content": "<p>grabienski** :-) (Karma: 13)</p>",
+        "id": 211789797,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601484940
+    },
+    {
+        "content": "<p>...if these tokens were in the 7.x Token module and not in Backdrop, then they should be. Can you please open an issue for it if that's the case <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ?</p>",
+        "id": 211789941,
+        "sender_full_name": "klonos",
+        "timestamp": 1601485005
+    },
+    {
+        "content": "<p>Good idea, <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , will do.</p>",
+        "id": 211818128,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601498808
+    }
+]

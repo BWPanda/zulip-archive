@@ -1,0 +1,392 @@
+[
+    {
+        "content": "<p>Anyone who uses Paragraphs, I'd love some pre-release testing on this latest branch which merges in upstream changes:<br>\n<a href=\"https://github.com/backdrop-contrib/paragraphs/issues/51\" target=\"_blank\" title=\"https://github.com/backdrop-contrib/paragraphs/issues/51\">https://github.com/backdrop-contrib/paragraphs/issues/51</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/issues/51\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/issues/51\" target=\"_blank\" title=\"Merge in upstream changes · Issue #51 · backdrop-contrib/paragraphs\">Merge in upstream changes · Issue #51 · backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">Changes from Drupal 7 should be merged in.</div></div></div>",
+        "id": 189958500,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583560086
+    },
+    {
+        "content": "<p>I use it on <code>howtobackdrop.com</code> i'll give it whirl; probably tomorrow</p>",
+        "id": 189968686,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1583583284
+    },
+    {
+        "content": "<p>Just curious if you ever got to do this testing <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> – I'd love at least one WFM before I make the new release.</p>",
+        "id": 191035312,
+        "sender_full_name": "Laryn",
+        "timestamp": 1584562198
+    },
+    {
+        "content": "<p>I never did; I'm a bad bad boy <span aria-label=\"shadow\" class=\"emoji emoji-1f464\" role=\"img\" title=\"shadow\">:shadow:</span></p>",
+        "id": 191037844,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1584563421
+    },
+    {
+        "content": "<p>No shaming here. <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 191038569,
+        "sender_full_name": "Laryn",
+        "timestamp": 1584563796
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I encountered a bug w/ paragraphs on one of my sites <a href=\"https://github.com/backdrop-contrib/paragraphs/issues/54\" target=\"_blank\" title=\"https://github.com/backdrop-contrib/paragraphs/issues/54\">https://github.com/backdrop-contrib/paragraphs/issues/54</a> and in trying to give STR I downloaded the latest <code>1.x-1.x</code> w/ backdrop <code>1.x</code> but the bug was not reproducable under those circumstances</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/issues/54\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/issues/54\" target=\"_blank\" title=\"Scheduling a node for publication in the future fails if it has a paragraph field on it. · Issue #54 · backdrop-contrib/paragraphs\">Scheduling a node for publication in the future fails if it has a paragraph field on it. · Issue #54 · backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">When scheduling a node w/ a paragraphs field to be published in the future it fails: gff ~/code/aturnintime/htb (master) └─ $ ∴ lando.dev drush cron Error: Call to undefined function entity_revisio...</div></div></div>",
+        "id": 191353923,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1584808217
+    },
+    {
+        "content": "<p>that is to say i've kicked the tires a bit on the latest <code>HEAD</code> of the paragraphs module and I was able to create paragraphs, add a paragraph field to a content type; make content of that type, and schedule it</p>",
+        "id": 191353950,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1584808268
+    },
+    {
+        "content": "<p>I know that is not exhuastive testing of your changes, but seems good so far!</p>",
+        "id": 191353971,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1584808313
+    },
+    {
+        "content": "<p>paragraphs <code>tests</code> depends on d7 features module; <span aria-label=\"ghost\" class=\"emoji emoji-1f47b\" role=\"img\" title=\"ghost\">:ghost:</span></p>",
+        "id": 191360440,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1584816374
+    },
+    {
+        "content": "<p>Ha, I am pretty sure tests have not been touched yet.</p>",
+        "id": 191369299,
+        "sender_full_name": "Laryn",
+        "timestamp": 1584831187
+    },
+    {
+        "content": "<p>I'm testing a patch that adds the ability to edit Paragraphs individually via contextual links, but running into an issue with accessing the host entity details at various points when saving and checking access. Anyone with some knowledge to drop, could you take a peek? <em>(special cc: to <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> who originally ported Paragraphs)</em> <a href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\" title=\"https://github.com/backdrop-contrib/paragraphs/issues/60\">https://github.com/backdrop-contrib/paragraphs/issues/60</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\" title=\"Allow contextual editing of separate Paragraph items · Issue #60 · backdrop-contrib/paragraphs\">Allow contextual editing of separate Paragraph items · Issue #60 · backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">I have been meaning to see if I could figure out how to allow editing of individual Paragraph items via contextual link rather than requiring the entire node to be loaded. (For example, if one item...</div></div></div>",
+        "id": 194546591,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587219151
+    },
+    {
+        "content": "<p>I think this is functional now and allows Paragraphs to be edited separately from the host entity (node, term, user, etc.) via contextual link. Anyone care to test this branch and/or glance over the code for a quick review?<br>\n<a href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\" title=\"https://github.com/backdrop-contrib/paragraphs/issues/60\">https://github.com/backdrop-contrib/paragraphs/issues/60</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\" title=\"Allow contextual editing of separate Paragraph items · Issue #60 · backdrop-contrib/paragraphs\">Allow contextual editing of separate Paragraph items · Issue #60 · backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">I have been meaning to see if I could figure out how to allow editing of individual Paragraph items via contextual link rather than requiring the entire node to be loaded. (For example, if one item...</div></div></div>",
+        "id": 194889531,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587533027
+    },
+    {
+        "content": "<p>Anyone else noticing a (relatively) recent regression with Paragraphs where an image uploaded into the WYSIWYG on a text field does not get marked as permanent? (So it disappears unexpectedly when cron runs later)</p>",
+        "id": 203846942,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594740267
+    },
+    {
+        "content": "<p>I haven't noticed but there have been changes to core around marking files as permanent or not. So I wouldn't be surprised</p>",
+        "id": 203852436,
+        "sender_full_name": "Herb",
+        "timestamp": 1594742884
+    },
+    {
+        "content": "<p>BTW, why we do not have an option to change status of file from the list for trusted user? Update: found <a href=\"https://github.com/backdrop/backdrop-issues/issues/3825\">#3825</a>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3825\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3825\" title=\"Add a &quot;Make Permanent&quot; action for the manage files listing · Issue #3825 · backdrop/backdrop-issues\">Add a \"Make Permanent\" action for the manage files listing · Issue #3825 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need I just ran into an issue where I wanted to manually mark a bunch of temporary files as permanent, but the only way I could do that was with a database query. I&#39;d love to...</div></div></div>",
+        "id": 203854007,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1594743674
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Paragraphs/near/203846942\">said</a>:</p>\n<blockquote>\n<p>Anyone else noticing a (relatively) recent regression with Paragraphs where an image uploaded into the WYSIWYG on a text field does not get marked as permanent? (So it disappears unexpectedly when cron runs later)</p>\n</blockquote>\n<p>Eek -- haven't noticed that, but I'll keep an eye out for it! I'm putting Paragraphs through its paces these days.</p>",
+        "id": 204010467,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1594845856
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Got to test this just now and I see somewhat similar behavior. Uploaded an image into a paragraph text field via the WYSIWYG, and when I check the Manage Files admin page that image status is \"Temporary.\" However I've run cron and cleared caches  5+ times and the image is still present.</p>",
+        "id": 204029479,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1594858257
+    },
+    {
+        "content": "<p>I'll let you know if I notice it disappear after some future cron run!</p>",
+        "id": 204029590,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1594858341
+    },
+    {
+        "content": "<p>I think garbage collection happens after 6 hours or so... Let me know. And especially if you figure out a fix. <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 204029837,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594858549
+    },
+    {
+        "content": "<p>Yes, that is correct. It takes 6 hours before the temp files would be removed.</p>",
+        "id": 204030044,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1594858698
+    },
+    {
+        "content": "<p>Ah. So they'll disappear soon then! Sigh.</p>",
+        "id": 204034272,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1594862545
+    },
+    {
+        "content": "<p>Oh <span aria-label=\"face palm\" class=\"emoji emoji-1f926\" role=\"img\" title=\"face palm\">:face_palm:</span> ...there have been reports of data loss by multiple customers in the GovCMS Platform (not linked to Paragraphs specifically though - D8 in general), and we were forced to disable the automatic garbage collection platform-wide. See this D8 change record, introduced in D8.4, and follow all linked issues relating to data loss: <a href=\"https://www.drupal.org/node/2891902\">Files that have no remaining usages are no longer deleted by default</a></p>",
+        "id": 204037032,
+        "sender_full_name": "klonos",
+        "timestamp": 1594865510
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> I saw your PR to convert Paragraph bundles/types to CMI -- awesome, thanks! I'll try to look at it today. Have you seen this issue, or have any ideas? I'm stuck... <br>\n<a href=\"https://github.com/backdrop-contrib/paragraphs/issues/65\">https://github.com/backdrop-contrib/paragraphs/issues/65</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/issues/65\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/issues/65\" title=\"Images uploaded into Paragraph WYSIWYG text field disappear · Issue #65 · backdrop-contrib/paragraphs\">Images uploaded into Paragraph WYSIWYG text field disappear · Issue #65 · backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">Reported to me from two different sites now, and sounds very similar to #14 but that fix is still included and it was working fine until recently, so it must be something different. Images uploaded...</div></div></div>",
+        "id": 205255157,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595952139
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> ++</p>",
+        "id": 205255171,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595952147
+    },
+    {
+        "content": "<p>garrigos** Props to you for all your hard work. (Karma: 2)</p>",
+        "id": 205255172,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1595952147
+    },
+    {
+        "content": "<p>I just left a comment on the Paragraph bundles -&gt; CMI pull request.</p>",
+        "id": 205257209,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595953121
+    },
+    {
+        "content": "<p>answered. thanks.</p>",
+        "id": 205268867,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1595959013
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Paragraphs/near/205257209\">said</a>:</p>\n<blockquote>\n<p>I just left a comment on the Paragraph bundles -&gt; CMI pull request.</p>\n</blockquote>\n<p>Just pushed a commit with a fix.</p>",
+        "id": 205335302,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596015497
+    },
+    {
+        "content": "<p>If anyone uses Paragraphs to allow site editors to build rich pages in a structured way, you may be interested in the branch of Paragraphs that I'm working on in my spare time... It is in a bit of a rough form currently but will allow some manipulation of Paragraphs individually instead of requiring the entire node to be edited (for example). This can be handy on pages with a lot of Paragraphs.<br>\n<a href=\"/user_uploads/18319/4313Lv9KkyhJhDTDA1-qLZAN/paragraphs-separate-edit.gif\">paragraphs-separate-edit.gif</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/4313Lv9KkyhJhDTDA1-qLZAN/paragraphs-separate-edit.gif\" title=\"paragraphs-separate-edit.gif\"><img src=\"/user_uploads/18319/4313Lv9KkyhJhDTDA1-qLZAN/paragraphs-separate-edit.gif\"></a></div>",
+        "id": 222498160,
+        "sender_full_name": "Laryn",
+        "timestamp": 1610487429
+    },
+    {
+        "content": "<p>Looks promising! (No time to test these days, unfortunately.)</p>",
+        "id": 222499295,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1610488051
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Nice! Paragraphs meets inline editor <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span> What theme are you using? It looks good too!</p>",
+        "id": 222502367,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610489552
+    },
+    {
+        "content": "<p>Could be <a href=\"https://backdropcms.org/project/snazzy\">https://backdropcms.org/project/snazzy</a> (the theme).</p>",
+        "id": 222503252,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1610489857
+    },
+    {
+        "content": "<p>Yes, that's Snazzy.</p>",
+        "id": 222504211,
+        "sender_full_name": "Laryn",
+        "timestamp": 1610490195
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> those <code>info</code> messages should be <code>status</code> (success) instead.</p>",
+        "id": 222518813,
+        "sender_full_name": "klonos",
+        "timestamp": 1610500060
+    },
+    {
+        "content": "<p>Anybody have some favorite examples of how Paragraphs can be used? I am trying to cobble together a presentation for Backdrop LIVE and may have time for some quick examples at the beginning or end of whatever I come up with to demo. (I think I will include a demo of the current status of the WIP branch for front end modal edits)</p>",
+        "id": 229553291,
+        "sender_full_name": "Laryn",
+        "timestamp": 1615323740
+    },
+    {
+        "content": "<p>Paragraphs module as used to make <a href=\"https://www.nyexpress.us/faq\">https://www.nyexpress.us/faq</a></p>",
+        "id": 229555925,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615324778
+    },
+    {
+        "content": "<p>My colleagues and I are experimenting this week with using paragraphs on a Backdrop CMS project. This is the first time we've used paragraphs for Backdrop. Hopefullly, we'll have something we can share by end of the week.</p>",
+        "id": 229557083,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615325274
+    },
+    {
+        "content": "<p>If it's helpful.</p>",
+        "id": 229557132,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615325287
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I used Paragraphs for the Photograph fields in the Species Index here: <a href=\"https://www.surg.org.au/species\">https://www.surg.org.au/species</a> (e.g.: <a href=\"https://www.surg.org.au/species/bony-fish-families/chaetodontidae/chaetodon/vagabundus\">https://www.surg.org.au/species/bony-fish-families/chaetodontidae/chaetodon/vagabundus</a>)<br>\nEach Species node can have multiple photographs, which are paragraphs containing multiple fields (photographer, date, depth, etc.).</p>",
+        "id": 229557782,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615325553
+    },
+    {
+        "content": "<p>And Paragraphs are used here for the individual product attributes/options: <a href=\"https://nannyjo.anderson.mx/products/toddlers-bibs-waterproof\">https://nannyjo.anderson.mx/products/toddlers-bibs-waterproof</a> (i.e. each design in the dropdown matches a photo and can be marked as 'low-stock' or not - all using Paragraphs).</p>",
+        "id": 229558341,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615325773
+    },
+    {
+        "content": "<p>Title + Body to create structured sub containers of content</p>\n<p>Title + Table to create a structured table field</p>\n<p>Title + Body + Image to create a structured container with info and an image</p>\n<p>I'll use specific paragraphs on content types where some of the pages might need the paragraph and others don't. For example product variations. (The overall concept is simple, variations themselves are indepth)</p>\n<p>The great thing about paragraphs is being able to structure information without requiring every page to have the exact same structure of information.</p>\n<p>Side thought: it would be cool to merge bricks and paragraphs together somehow... Paragraphs for the backend and bricks for the UI or something.</p>",
+        "id": 229598824,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615348291
+    },
+    {
+        "content": "<p><a href=\"https://www.greengallery.co.il\">https://www.greengallery.co.il</a> - whole site is built as approach to test Paragraphs types by customer.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.greengallery.co.il\" style=\"background-image: url(https://www.greengallery.co.il/files/og_images/Dalia_Meiri_-_Green_Gallery-_chairs.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.greengallery.co.il\" title=\"The Green Gallry in Arsuf - environmental art\">The Green Gallry in Arsuf - environmental art</a></div><div class=\"message_embed_description\">The outdoor gallery in the fields of Arsuf Kedem, Israel, displays land art works and environmental art by local and international artists. The artwork is changing accordimg to the seasons and the moods of the forces of nature.</div></div></div>",
+        "id": 229604474,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1615352972
+    },
+    {
+        "content": "<p><a href=\"https://www.sean-wants-to-be-messi.com\">https://www.sean-wants-to-be-messi.com</a> - another example.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.sean-wants-to-be-messi.com\" style=\"background-image: url(https://www.sean-wants-to-be-messi.com/files/og_images/messi-book-sm-white_0.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.sean-wants-to-be-messi.com\" title=\"Sean Wants To Be Messi - soccer books\">Sean Wants To Be Messi - soccer books</a></div><div class=\"message_embed_description\">Award winning children's book series</div></div></div>",
+        "id": 229604851,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1615353262
+    },
+    {
+        "content": "<p>These are awesome sites <span class=\"user-mention\" data-user-id=\"268468\">@findlabnet(Vladimir)</span> ++</p>",
+        "id": 229607373,
+        "sender_full_name": "klonos",
+        "timestamp": 1615355700
+    },
+    {
+        "content": "<p><strong>findlabnet(vladimir)</strong> thanks for all you do (Karma: 1)</p>",
+        "id": 229607374,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1615355700
+    },
+    {
+        "content": "<p>...have you considered adding them to <a href=\"https://backdropcms.org/showcase\">https://backdropcms.org/showcase</a> ?</p>",
+        "id": 229607399,
+        "sender_full_name": "klonos",
+        "timestamp": 1615355721
+    },
+    {
+        "content": "<p>Yes.</p>",
+        "id": 229607620,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1615355956
+    },
+    {
+        "content": "<p><span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> ...I guess it's a matter of finding time for it, right?</p>",
+        "id": 229607754,
+        "sender_full_name": "klonos",
+        "timestamp": 1615356055
+    },
+    {
+        "content": "<p>...do you have access to create content in <a href=\"http://backdropcms.org\">backdropcms.org</a>?</p>",
+        "id": 229607785,
+        "sender_full_name": "klonos",
+        "timestamp": 1615356081
+    },
+    {
+        "content": "<p><del>No, I haven't . </del> Yes, I have.</p>",
+        "id": 229607868,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1615356135
+    },
+    {
+        "content": "<p>Looks like you got plenty of examples, but I have a bunch on a larger D7 site if you need any more.</p>",
+        "id": 229696468,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615393932
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Maybe have a look at <a href=\"https://paragraphs.site-showcase.com\">https://paragraphs.site-showcase.com</a> (built with D7).</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://paragraphs.site-showcase.com\" style=\"background-image: url(http://paragraphs.site-showcase.com/sites/default/files/logo-og.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://paragraphs.site-showcase.com\" title=\"Paragraphs Demo\">Paragraphs Demo</a></div><div class=\"message_embed_description\">Demonstrates what is possible with the Paragraphs module in Drupal with the help of Classy Paragraphs, Edgy and Paragraphs Pack.</div></div></div>",
+        "id": 229710383,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615398320
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I'd like to test the Paragraphs editorial enhancements. Do you prefer one of these branches?</p>\n<ul>\n<li><a href=\"https://github.com/backdrop-contrib/paragraphs/tree/issue-60\">https://github.com/backdrop-contrib/paragraphs/tree/issue-60</a></li>\n<li><a href=\"https://github.com/backdrop-contrib/paragraphs/tree/issue-60-dropbutton\">https://github.com/backdrop-contrib/paragraphs/tree/issue-60-dropbutton</a></li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/tree/issue-60\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/tree/issue-60\" title=\"backdrop-contrib/paragraphs\">backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">Paragraphs module to control your content flow. Contribute to backdrop-contrib/paragraphs development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/tree/issue-60-dropbutton\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/tree/issue-60-dropbutton\" title=\"backdrop-contrib/paragraphs\">backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">Paragraphs module to control your content flow. Contribute to backdrop-contrib/paragraphs development by creating an account on GitHub.</div></div></div>",
+        "id": 230731294,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616001539
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> Use <code>issue-60-dropbutton</code> -- the other is an earlier draft that tried to use contextual links but I ended up liking the dropbuttons better, and being able to get the modals working.</p>",
+        "id": 230733191,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616002255
+    },
+    {
+        "content": "<p>Thanks, <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> - I've started to play around with <code>issue-60-dropbutton</code>. What's the best place to post issues specific to this branch? <a href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\">https://github.com/backdrop-contrib/paragraphs/issues/60</a> for the time being?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/issues/60\" title=\"Allow contextual editing of separate Paragraph items · Issue #60 · backdrop-contrib/paragraphs\">Allow contextual editing of separate Paragraph items · Issue #60 · backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">I have been meaning to see if I could figure out how to allow editing of individual Paragraph items via contextual link rather than requiring the entire node to be loaded. (For example, if one item...</div></div></div>",
+        "id": 230855765,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616071393
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> Feel free to create a new issue if it doesn't fit into an existing one. If you have permission you can also assign it to the new Project I just set up in the repo to test out: <a href=\"https://github.com/backdrop-contrib/paragraphs/projects/1\">https://github.com/backdrop-contrib/paragraphs/projects/1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/projects/1\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/projects/1\" title=\"backdrop-contrib/paragraphs\">backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">Paragraphs module to control your content flow. Contribute to backdrop-contrib/paragraphs development by creating an account on GitHub.</div></div></div>",
+        "id": 230863683,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616074590
+    },
+    {
+        "content": "<p>I think, it fits in the <code>60</code> issue. Let me start there, as long as the thread doesn't become too bloated.</p>",
+        "id": 230864779,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616074982
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> or other Paragraphs experts, I've another question. Do you use Paragraphs with content translation? I didn't find information how it's supposed to work in D7 or Backdrop.</p>",
+        "id": 230872043,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616077582
+    },
+    {
+        "content": "<p>PS: Out of the box, when I translate an English page with paragraphs to German, on the German page all paragraphs are just gone. So, the approach would be to just add new ones to the German page?</p>",
+        "id": 230872175,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616077644
+    },
+    {
+        "content": "<p>I think you need to use this module to allow translation to work more seamlessly: <br>\n<a href=\"https://github.com/backdrop-contrib/replicate_paragraphs\">https://github.com/backdrop-contrib/replicate_paragraphs</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/replicate_paragraphs\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/replicate_paragraphs\" title=\"backdrop-contrib/replicate_paragraphs\">backdrop-contrib/replicate_paragraphs</a></div><div class=\"message_embed_description\">Manage the cloning of paragraphs_item entities and fields. - backdrop-contrib/replicate_paragraphs</div></div></div>",
+        "id": 230875572,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616078847
+    },
+    {
+        "content": "<p>And the <code>Paragraphs - Internationalization</code> submodule of <code>Paragraphs</code> of course!</p>",
+        "id": 230875813,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616078936
+    },
+    {
+        "content": "<p>Thank you! Guess I should look to the submodule list before, next time.</p>",
+        "id": 230876799,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616079261
+    },
+    {
+        "content": "<p>Quickly tested <code>Paragraphs - Internationalization</code>, works good at first sight (for new nodes with Paragraphs, i.e. content created after enabling the submodule).</p>",
+        "id": 231290016,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616409774
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I'd suggest to mention the submodules in the README, or would you prefer in the Wiki?</p>",
+        "id": 231290182,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616409871
+    },
+    {
+        "content": "<p>Maybe we can mention in the readme and give more info in the wiki if needed?</p>",
+        "id": 231312668,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616420992
+    }
+]

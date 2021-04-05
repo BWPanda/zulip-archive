@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p><a href=\"/user_uploads/18319/iddPD5q3Tu_aPFTKTUC5SBHS/Screenshot-from-2020-10-26-22-08-17.png\">Screenshot-from-2020-10-26-22-08-17.png</a>  I'm working on an English/French site upgrade from Drupal 7. Has anyone else noticed that the language switcher doesn't display the language name in the native language? It does that in D7 where it's \"Français\" but in Backdrop it says \"French\". Need an option to translate the name as well. But it can't be with locale since we actually want it translated on the <em>English</em> side and on the French side it should say \"English\". Clear as mud?</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/iddPD5q3Tu_aPFTKTUC5SBHS/Screenshot-from-2020-10-26-22-08-17.png\" title=\"Screenshot-from-2020-10-26-22-08-17.png\"><img src=\"/user_uploads/18319/iddPD5q3Tu_aPFTKTUC5SBHS/Screenshot-from-2020-10-26-22-08-17.png\"></a></div>",
+        "id": 214654659,
+        "sender_full_name": "Herb",
+        "timestamp": 1603764743
+    },
+    {
+        "content": "<p>I see now... D7 (via i18n?) has an extra field in the language settings: Native language name. <a href=\"/user_uploads/18319/zeq7jBJMBuQfpBQwRePRgQsK/Screenshot-from-2020-10-26-22-19-14.png\">Screenshot-from-2020-10-26-22-19-14.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/zeq7jBJMBuQfpBQwRePRgQsK/Screenshot-from-2020-10-26-22-19-14.png\" title=\"Screenshot-from-2020-10-26-22-19-14.png\"><img src=\"/user_uploads/18319/zeq7jBJMBuQfpBQwRePRgQsK/Screenshot-from-2020-10-26-22-19-14.png\"></a></div>",
+        "id": 214655057,
+        "sender_full_name": "Herb",
+        "timestamp": 1603765227
+    },
+    {
+        "content": "<p>For now I can just change the main Language name. I don't think that'll be a problem</p>",
+        "id": 214655094,
+        "sender_full_name": "Herb",
+        "timestamp": 1603765287
+    },
+    {
+        "content": "<p>Yes, I noticed that, too. That solution is probably okay for many cases.</p>",
+        "id": 214657668,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603768848
+    },
+    {
+        "content": "<blockquote>\n<p>Has anyone else noticed that the language switcher doesn't display the language name in the native language?</p>\n</blockquote>\n<p>Sure, see <a href=\"https://github.com/backdrop/backdrop-issues/issues/4511\">this issue</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4511\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4511\" title=\"Language names not translated to their native names · Issue #4511 · backdrop/backdrop-issues\">Language names not translated to their native names · Issue #4511 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">One thing baffles me: the language names themselves are not translated. With one notable exception: the installer uses the native name. Everywhere else the English names appear (language select lis...</div></div></div>",
+        "id": 214669187,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1603785345
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> thanks for pointing that out. I often miss things in the queue</p>",
+        "id": 214687939,
+        "sender_full_name": "Herb",
+        "timestamp": 1603798852
+    }
+]

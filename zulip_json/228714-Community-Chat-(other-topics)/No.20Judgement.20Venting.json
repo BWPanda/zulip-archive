@@ -1,0 +1,92 @@
+[
+    {
+        "content": "<p>**Rant<br>\nOne of the major things I hate about Open Source, is that a lot of people want something added or changed, but the people who have the permission to make the changes, won't make up their mind and just get it done.</p>\n<p>Years of going back and forth, tweaking something until everyone is blue in the face, only to watch it sit there with no one willing to make the call.</p>\n<p>\"Just pick a direction and go! If it doesn't work, it doesn't work! Fix it and move on!\"</p>\n<p>Thinking about an issue is good, but overthinking tends to be at the core of a lot of open source projects.<br>\n**End Rant</p>\n<p>Disclaimer: This is not directed at the backdrop community or anyone within it, but rather my experiences over the last two decades of watching project issues sit idle for years with no resolution. <a href=\"http://Schema.org\">Schema.org</a> specifically, brought up these feelings if you were wondering.</p>",
+        "id": 218260446,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606725998
+    },
+    {
+        "content": "<p><span aria-label=\"rofl\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rofl\">:rofl:</span> doesn't this also apply to democracy in general?</p>",
+        "id": 218261285,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1606726630
+    },
+    {
+        "content": "<p>Even in a democracy, \"somebody\" makes a decision. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 218338938,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606767008
+    },
+    {
+        "content": "<p>Part of this problem is related to how software was traditionally built with the idea that everything needed to be planned out before implementing. I try to always find a way to make a minimal viable solution and iterate. Much easier once you get feedback on an existing implementation</p>",
+        "id": 218374675,
+        "sender_full_name": "Herb",
+        "timestamp": 1606790589
+    },
+    {
+        "content": "<p>I think that's a good approach <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span></p>\n<p>\"You can't change the direction of a ship that hasn't left the dock.\"</p>\n<p>I think the biggest difficulty most have is deciding on the destination. By the time they figure it out, they had enough time to visit both destinations <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 218375392,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606791516
+    },
+    {
+        "content": "<p>I also like taking baby steps ...as they say: \"perfection is the enemy of getting things done\" <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 218376156,
+        "sender_full_name": "klonos",
+        "timestamp": 1606792427
+    },
+    {
+        "content": "<blockquote>\n<p>I think the biggest difficulty most have is deciding on the destination</p>\n</blockquote>\n<p>...or if the ship is the best means of transportation <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 218376318,
+        "sender_full_name": "klonos",
+        "timestamp": 1606792576
+    },
+    {
+        "content": "<p>Hey, I don't mind baby steps. Plan your work and work the plan.</p>\n<p>Over on that schema issue, there's 15-20 people all saying \"yes I need this\" and not a peep from the maintainers in months. In that case, there's no plan, no feedback from the maintainer, no \"do research and follow back up\", just a black hole. It's very frustrating.</p>",
+        "id": 218387852,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606808010
+    },
+    {
+        "content": "<blockquote>\n<p>there's 15-20 people all saying \"yes I need this\" and not a peep from the maintainers in months</p>\n</blockquote>\n<p>Yeah, that's frustrating. But it might have different reasons:</p>\n<ul>\n<li>Nobody's actively working on that project anymore</li>\n<li>They (silently) disagree, but don't want to officially reject something many people want</li>\n<li>They have internal problems/discussions</li>\n</ul>\n<p>BTW, your frustration reminds me of some Mozilla (Thunderbird) Issues that were open for more than a decade and still aren't worked on. This behavior is sometimes called \"mozillic\".</p>",
+        "id": 218389741,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1606809776
+    },
+    {
+        "content": "<p>Heya <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> ...I used to be a fanatic Thunderbird + Lightning user myself ...was also tracking their bugzilla queues and trying to help/test ...but then Drupal happened to me, and I switched hobbies <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 218393254,
+        "sender_full_name": "klonos",
+        "timestamp": 1606812301
+    },
+    {
+        "content": "<p>This topic does bring up a good point in \"how could we combat this within Backdrop?\" I don't have any suggestions off hand, but it's something to think about.</p>",
+        "id": 218402631,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606818108
+    },
+    {
+        "content": "<blockquote>\n<p>This topic does bring up a good point in \"how could we combat this within Backdrop?\"</p>\n</blockquote>\n<p>It might depend on the root cause of problems. Most Open Source projects struggle with a lack of human resources. That's unfortunately something we can't do much about it. Maybe trying to better focus on important things - but... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 218421283,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1606829364
+    },
+    {
+        "content": "<p>Yeah, important things aren't always the fun ones, and since open source depends on people contributing their spare time, it's hard to focus <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 218425515,
+        "sender_full_name": "klonos",
+        "timestamp": 1606831446
+    },
+    {
+        "content": "<p>In regards to this project I think we've managed to avoid it by, one, having a regular release schedule (instead of only releasing when we thought we had enough). And, two, by making it easy to submit changes by using GitHub and PRs</p>",
+        "id": 218510468,
+        "sender_full_name": "Herb",
+        "timestamp": 1606878412
+    },
+    {
+        "content": "<p>It helps that the community is still relatively small.</p>",
+        "id": 218514881,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606884231
+    }
+]

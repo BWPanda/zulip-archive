@@ -1,0 +1,116 @@
+[
+    {
+        "content": "<p>I made this comment on a thread in Github, but I'd like to bounce it around here on Zulip as well:</p>\n<blockquote>\n<p>I think the previous experience of people coming to Backdrop from Drupal is so different from those coming from the rest of the world that we'll never be able to find a single solution that works for both. We've been trying (I think) to not disrupt the views of those coming from Drupal too much, while that has been the source of most of our users, but that will probably (hopefully?) change at some point.</p>\n<p>My feeling is that we should diverge from Drupal more, and treat Drupal transfers as a special case, with some sort of \"Hey Drupal people, here is what you need to know\" content. And then optimize the experience for people who have never used Drupal.</p>\n</blockquote>",
+        "id": 221411743,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1609613037
+    },
+    {
+        "content": "<p>This seems reasonable</p>",
+        "id": 221412954,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609614777
+    },
+    {
+        "content": "<blockquote>\n<p>My feeling is that we should diverge from Drupal more...</p>\n</blockquote>\n<p>I agree.</p>",
+        "id": 221413424,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609615409
+    },
+    {
+        "content": "<p>I'm not opposed to it and welcome it. My thought is to bring Drupal 7 folks over, then over time begin to change it to be less Drupalish. Invite the D7 users to something they are familiar with then with their help, mold BD into its own.</p>",
+        "id": 221416021,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609619409
+    },
+    {
+        "content": "<p>I added my comments in the github issue where you posted it. <span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick (cellear)</span> </p>\n<p>It's not clear to me if this was simply a general comment OR if it indicates any specific opposition to the PR in question. <a href=\"https://github.com/backdrop/backdrop-issues/issues/4849\">https://github.com/backdrop/backdrop-issues/issues/4849</a></p>\n<p>I think that PR helps everyone, even if motivated by a desire to help Drupal 7 users specifically.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4849\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4849\" title=\"[UX] Replace the current default &quot;Promoted Content&quot; block with a page on Home page · Issue #4849 · backdrop/backdrop-issues\">[UX] Replace the current default \"Promoted Content\" block with a page on Home page · Issue #4849 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need We&#39;ve had a number of frustrated users report problems understanding how to use the home page layout in Backdrop CMS. Coming from Drupal, many users assume the need to c...</div></div></div>",
+        "id": 221417385,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609621602
+    },
+    {
+        "content": "<p>As opposed to muddying up issue 4849, I'm posting my thoughts here. I started the thought on git in case it sounds a little out of place:</p>\n<p>I think long term we should offer two, maybe 3 base profiles OOTB.</p>\n<p>1) A site that is almosy ready to go, it just needs content.</p>\n<ul>\n<li>Home page with a content block or content node (this issue)</li>\n<li>About page (already in the current profile)</li>\n<li>Contact page (do we use the basic Drupal contact form?)</li>\n<li>etc</li>\n</ul>\n<p>2) A mock-up site that is a sandbox for new users. Lots of organized pages with tags, views, pictures etc. Sometimes having a working environment you can tinker with and not worry about messing up is a great way to learn. I could imagine a \"reset\" button that would take a person back to the choose profile option and blow away all of the sandbox profile stuff and re-initialize it for a site or bare bones profile.</p>\n<p>3) A bare bones site where nothing is configured (minimal profile in Drupal terms)</p>\n<p>Now, I would put this profile page as a separate page during install and list the options as cards (like how you choose layout templates) with a title and brief description of who it's for.</p>\n<p>Ok, so all of that to address @BWPanda suggestion of a view to show latest content, I would add this to the \"sandbox\" profile, not the standard \"site\" profile.</p>\n<p>Thinking about profiles, why not distinguish BD away from Drupal by offering \"profiles\" at  install where someone can choose a community created profile? Modules, Themes, Profiles. I kinda hijacked the thread but wanted to give something to think about in the various discussions floating around.</p>",
+        "id": 221418453,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609623104
+    },
+    {
+        "content": "<p>Oh another thought to the sandbox profile, the sandbox profile is downloaded upon install (not actually bundled with core).</p>\n<p>Then if we start pushing for community profiles, there can be an option to search for and install during a new BD install.</p>",
+        "id": 221418688,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609623443
+    },
+    {
+        "content": "<p>One thing at a time though, let's get the home page content piece figured out <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 221418752,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609623544
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Previous.20Drupal.20users.20vs.20everybody.20else/near/221418453\">said</a>:</p>\n<blockquote>\n<p>2) A mock-up site that is a sandbox for new users. Lots of organized pages with tags, views, pictures etc. Sometimes having a working environment you can tinker with and not worry about messing up is a great way to learn. I could imagine a \"reset\" button that would take a person back to the choose profile option and blow away all of the sandbox profile stuff and re-initialize it for a site or bare bones profile.</p>\n</blockquote>\n<p>It's been a while since I've looked at it, but I believe Joomla has something like this.</p>\n<p>This also seems in line with what Wix and SquareSpace do.</p>",
+        "id": 221419488,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1609624643
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> here's a list of a few issues that I believe are related to some of your thoughts above:<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/3763\">https://github.com/backdrop/backdrop-issues/issues/3763</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3763\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3763\" title=\"Add 'recipe' project type to Backdrop · Issue #3763 · backdrop/backdrop-issues\">Add 'recipe' project type to Backdrop · Issue #3763 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is a spin-off of backdrop-ops/backdropcms.org#46 specifically for proposing a new project type for Backdrop: recipes. With Backdrop supporting modules for functionality, themes for styling, la...</div></div></div>",
+        "id": 221419914,
+        "sender_full_name": "klonos",
+        "timestamp": 1609625187
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/1561\">https://github.com/backdrop/backdrop-issues/issues/1561</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1561\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1561\" title=\"[UX] Convert the &quot;Install from a URL&quot; text field to a text area to allow installing multiple projects in one go. · Issue #1561 · backdrop/backdrop-issues\">[UX] Convert the \"Install from a URL\" text field to a text area to allow installing multiple projects in one go. · Issue #1561 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Not sure if getting the Project Browser in core would render this page redundant, but we could convert the text field to a text area supporting multiple URLs in separate lines and we could allow up...</div></div></div>",
+        "id": 221419919,
+        "sender_full_name": "klonos",
+        "timestamp": 1609625204
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/1591\">https://github.com/backdrop/backdrop-issues/issues/1591</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1591\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1591\" title=\"Allow install profiles to be run after site creation · Issue #1591 · backdrop/backdrop-issues\">Allow install profiles to be run after site creation · Issue #1591 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">It seems potentially useful to allow install profiles to be run, not only at site creation, but also at any point afterwards. That would make them useful for publishing &quot;recipes&quot; which wo...</div></div></div>",
+        "id": 221419924,
+        "sender_full_name": "klonos",
+        "timestamp": 1609625220
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/2946\">https://github.com/backdrop/backdrop-issues/issues/2946</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2946\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2946\" title=\"[UX] Out of The Box experience initiative · Issue #2946 · backdrop/backdrop-issues\">[UX] Out of The Box experience initiative · Issue #2946 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In DrupalCon Dublin 2016, there was this session by Angie Byron titled &quot;How our competitors are kicking Drupal&#39;s ass (and what we can do about it)&quot;. Now, there&#39;s and official init...</div></div></div>",
+        "id": 221419930,
+        "sender_full_name": "klonos",
+        "timestamp": 1609625233
+    },
+    {
+        "content": "<p>...and there's also this meta-issue: <a href=\"https://github.com/backdrop/backdrop-issues/issues/1998\">https://github.com/backdrop/backdrop-issues/issues/1998</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1998\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1998\" title=\"[META] Install profiles · Issue #1998 · backdrop/backdrop-issues\">[META] Install profiles · Issue #1998 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Install profiles are discussed in the following issues: #156 Make the &quot;Minimal&quot; install profile hidden #496 Create the database at installation time if possible #519 Create placeholder co...</div></div></div>",
+        "id": 221419942,
+        "sender_full_name": "klonos",
+        "timestamp": 1609625274
+    },
+    {
+        "content": "<p>...perhaps you can break your thoughts/ideas down, and chime in on the respective issue? ...perhaps create a different issue if the existing ones don't quite match 100% with your ideas.</p>",
+        "id": 221420008,
+        "sender_full_name": "klonos",
+        "timestamp": 1609625331
+    },
+    {
+        "content": "<blockquote>\n<p>It's been a while since I've looked at it, but I believe Joomla has something like this.</p>\n</blockquote>\n<p>So I downloaded Joomla, and they do!</p>\n<p>When you install, you get the option to include one of four different sets of sample data:</p>",
+        "id": 221486854,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1609731962
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/FNBE2V9sqgND0HMNR2-6dJU6/Screen-Shot-2021-01-03-at-1.23.26-AM.png\">Screen-Shot-2021-01-03-at-1.23.26-AM.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/FNBE2V9sqgND0HMNR2-6dJU6/Screen-Shot-2021-01-03-at-1.23.26-AM.png\" title=\"Screen-Shot-2021-01-03-at-1.23.26-AM.png\"><img src=\"/user_uploads/18319/FNBE2V9sqgND0HMNR2-6dJU6/Screen-Shot-2021-01-03-at-1.23.26-AM.png\"></a></div>",
+        "id": 221486907,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1609732063
+    },
+    {
+        "content": "<p>This is what the \"Learn Joomla\" choice gives you:</p>\n<p><a href=\"/user_uploads/18319/s--D_6w0RffzO6uP0TcqufAg/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/s--D_6w0RffzO6uP0TcqufAg/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/s--D_6w0RffzO6uP0TcqufAg/image.png\"></a></div>",
+        "id": 221487255,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1609732565
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick (cellear)</span> - Check out this issue. You might want to post that screenshot in this issue.<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/3126\">https://github.com/backdrop/backdrop-issues/issues/3126</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3126\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3126\" title=\"[meta] Introduce new core install profiles for common uses (wordpress, portfolio, and more) · Issue #3126 · backdrop/backdrop-issues\">[meta] Introduce new core install profiles for common uses (wordpress, portfolio, and more) · Issue #3126 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Right now, we have a very one-size-fits-all experience out of the box with Backdrop, despite the fact that the standard install profile is not terribly applicable to anyone in particular. In order ...</div></div></div>",
+        "id": 221489652,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609736525
+    }
+]

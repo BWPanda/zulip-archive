@@ -1,0 +1,326 @@
+[
+    {
+        "content": "<p>I'd love some further feedback on this question regarding the creation of Drupal 7 \"stub module\" versions of dependencies that the Backdrop version has, in order to allow upgrades to proceed more smoothly. Is this something we should encourage? Where should the stub modules be stored? (The namespaces would conflict with the actual Backdrop version of these modules in <code>-contrib</code>).</p>",
+        "id": 211553239,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601328827
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/ubercart/issues/235\">https://github.com/backdrop-contrib/ubercart/issues/235</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ubercart/issues/235\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ubercart/issues/235\" title=\"Migration Dependences · Issue #235 · backdrop-contrib/ubercart\">Migration Dependences · Issue #235 · backdrop-contrib/ubercart</a></div><div class=\"message_embed_description\">This is related to #225, but deals with the situation where we are migrating from a Drupal Ubercart installation. The migration instructions say to leave migrated modules enabled in Drupal when you...</div></div></div>",
+        "id": 211553308,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601328851
+    },
+    {
+        "content": "<p>Is there a Backdrop Ubercart distribution?</p>",
+        "id": 211554013,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601329257
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> - My reading is that the term \"distribution\" was used very loosely here to refer to the Ubercart module, which includes a bunch of sub-modules. But, someone can correct me.</p>",
+        "id": 211556029,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601330451
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> - We don't have any officially sanctioned distributions, do we? Are you aware of any unofficial \"distributions\" that are available (beyond distributions being used by individuals for their own use).</p>",
+        "id": 211556804,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601330943
+    },
+    {
+        "content": "<p>I have heard folks talking about them, but I don't know of any off hand.</p>",
+        "id": 211556849,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601330986
+    },
+    {
+        "content": "<p>A \"distribution\" would require another project type in contrib <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ...various alternatives have been discussed in the past; here's a few related issues I'm aware of (notice the two-digit ones?): <a href=\"https://github.com/backdrop/backdrop-issues/issues/46\">#46</a> <a href=\"https://github.com/backdrop/backdrop-issues/issues/99\">#99</a> <a href=\"https://github.com/backdrop/backdrop-issues/issues/3763\">#3763</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/46\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/46\" title=\"How to contribute to Backdrop? · Issue #46 · backdrop/backdrop-issues\">How to contribute to Backdrop? · Issue #46 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Maybe not the right place to ask but I&#39;m wondering how contrib will work for Backdrop. For example I&#39;ve got two themes for D7 on drupal.org. Would it be a simple case of modifying them and ...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/99\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/99\" title=\"Define aims and outstanding technical tasks for distro support and Features-style config packages in core · Issue #99 · backdrop/backdrop-issues\">Define aims and outstanding technical tasks for distro support and Features-style config packages in core · Issue #99 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Some interrelated issues with Drupal 7: On its own, a core Drupal install does practically nothing. Few if any sites run just the core. Rather than becoming more accessible, Drupal site development...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3763\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3763\" title=\"Add 'recipe' project type to Backdrop · Issue #3763 · backdrop/backdrop-issues\">Add 'recipe' project type to Backdrop · Issue #3763 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is a spin-off of backdrop-ops/backdropcms.org#46 specifically for proposing a new project type for Backdrop: recipes. With Backdrop supporting modules for functionality, themes for styling, la...</div></div></div>",
+        "id": 211557949,
+        "sender_full_name": "klonos",
+        "timestamp": 1601331698
+    },
+    {
+        "content": "<p>Yep, but someone could create a public distribution and share it on their personal github page. I'm wondering if there are any known instances of that.? I've considering sharing my own personal distribution, but then I'd have to clean it up.</p>",
+        "id": 211558080,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601331791
+    },
+    {
+        "content": "<p>Also, someone creating a custom, complex profile might call it a distribution, which is what I was imaging happened.</p>",
+        "id": 211558297,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601331934
+    },
+    {
+        "content": "<p>I think \"distribution\" is getting off course from what the actual question at hand is -- any thoughts on that? Is it a good idea to create stub drupal versions of Backdrop modules to make upgrades go more smoothly? Which repo should they be kept in?</p>",
+        "id": 211562354,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601334730
+    },
+    {
+        "content": "<p>Well, I wasn't sure if something already existed or not, and so I was asking about it before posting on the main topic.</p>",
+        "id": 211574743,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601346972
+    },
+    {
+        "content": "<p>Not to worry, just trying to reel the conversion back. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 211577120,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601349885
+    },
+    {
+        "content": "<p>The stub modules sound like a useful thing but I'm not sure about putting them in the module. What happens if someone installs ubercart via the browser?</p>",
+        "id": 211607377,
+        "sender_full_name": "Herb",
+        "timestamp": 1601378378
+    },
+    {
+        "content": "<p>Right, that's my concern, the names will conflict with actual modules on the site. What's a better suggestion as to where to store them?</p>",
+        "id": 211611472,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601381198
+    },
+    {
+        "content": "<p>Would it work to wrap them in a .zip archive to hide them? Only unzip and move if you're migrating from Drupal.</p>",
+        "id": 211617136,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1601384548
+    },
+    {
+        "content": "<p>Hi, bugfolder. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 211617137,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601384549
+    },
+    {
+        "content": "<p>I'm not sure if I get it right, but does <a href=\"https://github.com/backdrop/backdrop-issues/issues/2200\">this Issue (fixed)</a> improve the situation? Or is this unrelated?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2200\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2200\" title=\"[UX] Project Installer: Submodules not available to be enabled during the last step. · Issue #2200 · backdrop/backdrop-issues\">[UX] Project Installer: Submodules not available to be enabled during the last step. · Issue #2200 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Part of #1288 Use case: I want to be able to quickly install Devel in order to be able to generate sample content for demoing Backdrop. Process: I find the module through Project Installer, I add i...</div></div></div>",
+        "id": 211619038,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601385544
+    },
+    {
+        "content": "<p>I don't think it's the same situation</p>",
+        "id": 211619731,
+        "sender_full_name": "Herb",
+        "timestamp": 1601385907
+    },
+    {
+        "content": "<p>I think it's a common issue: a bunch of modules rely on entity_plus which isn't in d7.</p>",
+        "id": 211619836,
+        "sender_full_name": "Herb",
+        "timestamp": 1601385956
+    },
+    {
+        "content": "<p>But I guess I don't understand fully. What happens if you put entity_plus there before running update?</p>",
+        "id": 211619936,
+        "sender_full_name": "Herb",
+        "timestamp": 1601385999
+    },
+    {
+        "content": "<p>I belief, now I get it... It's actually pretty crafty to trick those \"stub\" modules into Drupal in order to have all modules still enabled after the upgrade. - I hope it's correct that the data updates themselves do run properly, the only problem is that bunches of modules got disabled.</p>\n<p>A quick thought: wouldn't it be sufficient to trick some db entries into the system table to let Backdrop \"think\" those modules are enabled. Or even freakier, create a hook_prepare_upgrade() where modules can inject stuff (alright, that's bananas <span aria-label=\"banana\" class=\"emoji emoji-1f34c\" role=\"img\" title=\"banana\">:banana:</span> ).</p>",
+        "id": 211625412,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601388340
+    },
+    {
+        "content": "<p>Could <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21update.inc/function/update_module_enable/1\">update_module_enable()</a> be helpful here?</p>",
+        "id": 211627383,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601389208
+    },
+    {
+        "content": "<p>If the problem is how to hide the Drupal stub modules from Backdrop, is there a way of telling Backdrop \"don't look for modules in this subdirectory\"? Like in some systems, putting the directory name in parentheses.</p>",
+        "id": 211648439,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1601397637
+    },
+    {
+        "content": "<p>Is it really absolutely necessary to have the modules enabled during the migration though? If UC is causing this issue couldnt you run the migration with it and submodules all off then enable and run updates?</p>",
+        "id": 211649925,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1601398320
+    },
+    {
+        "content": "<p>There's a bunch of submodules. The concept as described in the upgrade instructions that boil down to \"prepare your db, run update.php once, and presto, your Backdrop site is up and running\" was pretty nice. The alternative would be \"run update.php, then go find all the modules that were disabled during the update process, re-enable them.\" (And then run update.php again for the re-enabled modules?)</p>",
+        "id": 211655176,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1601400443
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span>  <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Most of this is a result of how ubercart labels the sub modules (ie. any special characters).  The easiest way to deal with it is to download ubercart manually and edit the info files, then upload it to your site and run the updates.  It works without any issues that way.  Ubercart has the same problem on Drupal 7 - it's not unique to Backdrop and the solution is NOT to hide the submodules, but to fix them, because you will have issues with Ubercart if you don't fix it.  Everything will look normal and not return errors, but stuff just won't work.  It doesn't take that long to remove anything but dashes.   I have about 10 ubercart sites, split between backdrop and D7 and we just do the same thing for both and have not had any issues.  There is supposedly a server fix you can do, but I looked at it and it opened up the server to security risks.</p>",
+        "id": 211664047,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601404254
+    },
+    {
+        "content": "<p>Interesting. Have you got a link to that issue please?</p>",
+        "id": 211665399,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1601404805
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart.20upgrade.20question/near/211665399\">said</a>:</p>\n<blockquote>\n<p>Interesting. Have you got a link to that issue please?</p>\n</blockquote>\n<p>Several - it's not a new issue:  <br>\n<a href=\"https://www.drupal.org/node/2665152\">https://www.drupal.org/node/2665152</a><br>\n<a href=\"https://www.drupal.org/project/ubercart/issues/2429297\">https://www.drupal.org/project/ubercart/issues/2429297</a></p>\n<p>You can see my comment at the bottom of issue 2429297</p>",
+        "id": 211667034,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601405493
+    },
+    {
+        "content": "<p>Never heard of that issue but I think we're rid of brackets in the package names anyway at this point!</p>",
+        "id": 211669694,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601406601
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> Can you say more about how <code>update_module_enable</code> could work for the issue at hand?</p>",
+        "id": 211669837,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601406654
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart.20upgrade.20question/near/211669694\">said</a>:</p>\n<blockquote>\n<p>Never heard of that issue but I think we're rid of brackets in the package names anyway at this point!</p>\n</blockquote>\n<p>Ubercart and one or two others are the only place I've encountered it.  Most people just don't use special characters for names. Ubercart was the only one in wide use and it did not cause an issue in PHP 5.3 and below.</p>",
+        "id": 211669891,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601406675
+    },
+    {
+        "content": "<blockquote>\n<p>There's a bunch of submodules. The concept as described in the upgrade instructions that boil down to \"prepare your db, run update.php once, and presto, your Backdrop site is up and running\" was pretty nice. The alternative would be \"run update.php, then go find all the modules that were disabled during the update process, re-enable them.\" (And then run update.php again for the re-enabled modules?)</p>\n</blockquote>\n<p>Consider my point as an alternative suggestion to the stub modules. In either case youre going to have to special-case UC. Long term, from a Backdrop ecosystem point of view, I think recommending that UC be disabled during migration is a more palatable solution going forward than the logistics of throwaway stub Drupal modules.</p>",
+        "id": 211673249,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1601408222
+    },
+    {
+        "content": "<p>Do the official instructions say to leave the modules active, or to disable them? (Looking now)</p>",
+        "id": 211673398,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601408288
+    },
+    {
+        "content": "<p>Excellent find those 2 <a href=\"http://d.org\">d.org</a> issues <span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> ++</p>",
+        "id": 211673471,
+        "sender_full_name": "klonos",
+        "timestamp": 1601408339
+    },
+    {
+        "content": "<p>garbeil** <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span>  <span aria-label=\"heart\" class=\"emoji emoji-2764\" role=\"img\" title=\"heart\">:heart:</span> (Karma: 3)</p>",
+        "id": 211673472,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601408339
+    },
+    {
+        "content": "<p>...yeah, I also believe that the stubbornness of the maintainers of UC 7.x is beyond reasoning ...they could spare hours, $$$ loss, and trouble from potentially 1000s of site owners simply by renaming the module package labels, and they refuse to do it, waiting for a core fix ...in D7, which is basically unmaintained, and for anything to get in it takes years and years <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span></p>",
+        "id": 211673796,
+        "sender_full_name": "klonos",
+        "timestamp": 1601408501
+    },
+    {
+        "content": "<p>I guess it doesn't say to disable all non-core modules specifically. Maybe I'm thinking of the instructions to upgrade from D6 to D7...</p>",
+        "id": 211673913,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601408543
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart.20upgrade.20question/near/211673796\">said</a>:</p>\n<blockquote>\n<p>...yeah, I also believe that the stubbornness of the maintainers of UC 7.x is beyond reasoning ...they could spare hours, $$$ loss, and trouble from potentially 1000s of site owners simply by renaming the module package labels, and they refuse to do it, waiting for a core fix ...in D7, which is basically unmaintained, and for anything to get in it takes years and years <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span></p>\n</blockquote>\n<p>It's even worse than that - they propose that the fix should be done at the server level by basically lowering security (letting SuHOSIN allow special characters).  Imagine asking your hosting provider to lower server security in this day and age. It takes less than 20 minutes to change all the info files to remove the special characters and it has NO adverse impact.</p>",
+        "id": 211682948,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601412981
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart.20upgrade.20question/near/211669837\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> Can you say more about how <code>update_module_enable</code> could work for the issue at hand?</p>\n</blockquote>\n<p>To be honest, I'm confused again. My initial thought was that the problem is that the tree modules that don't exist in Drupal aren't enabled when running the update, causing all depending modules to be disabled after upgrade.<br>\nSo an update hook that enables these modules in Backdrop before doing anything else would help. (Core does that, too.)</p>\n<p>But now I read about the problems with brackets (the Backdrop versions don't seem to use brackets in package names, though) and I'm not sure anymore if enabling modules in an update hook would really solve anything. I didn't try it.</p>",
+        "id": 211721304,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601448319
+    },
+    {
+        "content": "<p>I think the bracket issue is solved in that the backdrop version doesn't have brackets anymore.</p>",
+        "id": 211750857,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601468509
+    },
+    {
+        "content": "<p>Where would the update hook go? If a module has unmet dependencies does its update hook even run?</p>",
+        "id": 211751169,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601468673
+    },
+    {
+        "content": "<p>In this case it is also layered because there is a rules dependency and rules depends on entity_plus and entity_ui.</p>",
+        "id": 211751235,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601468741
+    },
+    {
+        "content": "<p>In theory... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> <code>update_module_enable</code> would go to a <code>hook_update_N</code> - which is tricky in your case. The \"core\" ubercart module is one of those that do not exist in Drupal and should get enabled. I'm not familiar with ubercart and it looks pretty complex. Do all submodules require the main (core) module?</p>",
+        "id": 211751908,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601469120
+    },
+    {
+        "content": "<p>Backdrop Ubercart modules also require the (non-Ubercart) entity_plus and entity_ui modules to be enabled (because they are required by Rules, which Ubercart needs); those don't exist in Drupal (and weren't required by Drupal Ubercart).</p>",
+        "id": 211768450,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1601476275
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> Yes, that's how I understood this thread. These two aren't that tricky, though, as they could get enabled via the hook I mentioned. The main ubercart module is trickier. It would be the one that should enable the necessary modules (that aren't present in Drupal), but is itself not present in Drupal. ( <span aria-label=\"chicken\" class=\"emoji emoji-1f414\" role=\"img\" title=\"chicken\">:chicken:</span> and <span aria-label=\"egg\" class=\"emoji emoji-1f95a\" role=\"img\" title=\"egg\">:egg:</span> )</p>",
+        "id": 211769248,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601476601
+    },
+    {
+        "content": "<p>Gotcha. Presumably Backdrop figures out the enabled-module dependency tree before deciding what update hooks to call, though, right?</p>",
+        "id": 211770749,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1601477178
+    },
+    {
+        "content": "<p>We've already changed things somewhat from the drupal version in creating a main ubercart module and hiding a handful of core/required ubercart modules from the ui. These are automatically enabled or disabled when activating or deactivating the new 'ubercart' module. This is much less confusing in the project installer.</p>",
+        "id": 211780131,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601480738
+    },
+    {
+        "content": "<p>But my question is the same as <span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> -- missing dependencies would mean no update hooks in ubercart would be fired (I think?)</p>",
+        "id": 211780133,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601480738
+    },
+    {
+        "content": "<p>The hidden modules (which are present in drupal) have a dependency on the new 'ubercart' module, but I see your point <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> in that the main ubercart module presents another issue. Another stub needed? <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 211780392,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601480848
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart.20upgrade.20question/near/211751908\">said</a>:</p>\n<blockquote>\n<p>In theory... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> <code>update_module_enable</code> would go to a <code>hook_update_N</code> - which is tricky in your case. The \"core\" ubercart module is one of those that do not exist in Drupal and should get enabled. I'm not familiar with ubercart and it looks pretty complex. Do all submodules require the main (core) module?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>  - For ubercart, yes. And some submodules are dependent on other submodules.  And disabling submodules in ubercart can cause data loss in the shop.  It's a pain, but a very good small store, so totally worth the bits of aggravation.</p>",
+        "id": 211782825,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601481802
+    },
+    {
+        "content": "<p>File issues if you have suggestions on how to reduce aggravation <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 211795179,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601487459
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Maybe ask someone to bring this up during the dev meeting...?</p>",
+        "id": 211816512,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601498070
+    },
+    {
+        "content": "<p>Updates also run for disabled modules - referring to <a href=\"https://github.com/backdrop/backdrop/blob/0035d2af3ac569de2788b53384d85d8ca7e9ba58/core/includes/update.inc#L941\">this comment</a></p>\n<p>An entry in the system table seems to be necessary, though. That's when <code>update_module_enable</code> could be helpful. Or maybe not. I think someone would have to figure out the right place to run <code>update_module_enable</code> for the (new) core ubercart module.</p>\n<p>The three stub modules for D7 might be an easier solution.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/0035d2af3ac569de2788b53384d85d8ca7e9ba58/core/includes/update.inc#L941\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/0035d2af3ac569de2788b53384d85d8ca7e9ba58/core/includes/update.inc#L941\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 211880376,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601540174
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart.20upgrade.20question/near/211795179\">said</a>:</p>\n<blockquote>\n<p>File issues if you have suggestions on how to reduce aggravation <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>\n</blockquote>\n<p>Will do as soon as I have time.   Remove all special characters from info files :-).</p>",
+        "id": 211911254,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601559642
+    }
+]

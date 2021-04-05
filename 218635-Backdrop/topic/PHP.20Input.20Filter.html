@@ -1,0 +1,81 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/PHP.20Input.20Filter.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html">PHP Input Filter</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="202265692"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202265692" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202265692">(Jun 29 2020 at 01:50)</a>:</h4>
+<p>PHP input in a field, as a formatter. I cannot seem to find this in backdrop. Has it been removed? (Compared to D7)</p>
+
+
+
+<a name="202265870"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202265870" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202265870">(Jun 29 2020 at 01:57)</a>:</h4>
+<p>Ah, I found this. That is too bad. <a href="https://forum.backdropcms.org/forum-topic/need-php-filter-backdrop">https://forum.backdropcms.org/forum-topic/need-php-filter-backdrop</a> . While I agree it can open security holes, I feel it should be up to the site devs. So I guess Ill just have to work around it.</p>
+
+
+
+<a name="202308613"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202308613" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202308613">(Jun 29 2020 at 13:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="311204">@Eric Vander Wal</span> there might be a contrib module out there to help you with that</p>
+
+
+
+<a name="202314476"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202314476" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202314476">(Jun 29 2020 at 14:13)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> , thanks. I didnt see any, maybe I missed them. I am a bit of a PHP noob, but I was thinking to write a custom module that creates a block in code, and runs the PHP there. I am using the graphs module to create graphs from PHP rather than views.</p>
+
+
+
+<a name="202322699"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202322699" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202322699">(Jun 29 2020 at 15:01)</a>:</h4>
+<p>While I agree that we probably don't want an official contrib module that allows someone to insert PHP into a filter, we could probably put something into the forum topic that allows you to create a block to do that.</p>
+
+
+
+<a name="202337590"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202337590" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202337590">(Jun 29 2020 at 16:50)</a>:</h4>
+<p>I see there is a built in block called "Execute PHP<br>
+Dangerous! Execute arbitrary PHP code from a block. Requires the Execute PHP code permission." I didn't check in the existing blocks before.</p>
+
+
+
+<a name="202337752"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202337752" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202337752">(Jun 29 2020 at 16:51)</a>:</h4>
+<p>I started writing a custom module for block display. My first module, so I might as well see it to the end however :)</p>
+
+
+
+<a name="202343824"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202343824" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202343824">(Jun 29 2020 at 17:36)</a>:</h4>
+<p>Why does PHP abuse arrays so badly :P</p>
+
+
+
+<a name="202347450"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202347450" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202347450">(Jun 29 2020 at 18:06)</a>:</h4>
+<p>That block is from the Devel module. It probably isn't generally available to all users without giving them dangerous permissions.</p>
+
+
+
+<a name="202347731"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20Input%20Filter/near/202347731" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20Input.20Filter.html#202347731">(Jun 29 2020 at 18:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> , ah I see. Thank you. I did end up making it by code. Now I am sure I will have some code questions, lol.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

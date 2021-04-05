@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>Anyone able to comment on whether we need to use Backdrop's wrapper functions over PHP's core functions, or can we just use PHP's for performance reasons? See info here: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2655#issuecomment-571107350\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/2655#issuecomment-571107350\">https://github.com/backdrop/backdrop-issues/issues/2655#issuecomment-571107350</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2655#issuecomment-571107350\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2655#issuecomment-571107350\" target=\"_blank\" title=\"Fix ordering issues in admin menu · Issue #2655 · backdrop/backdrop-issues\">Fix ordering issues in admin menu · Issue #2655 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Status update (6th Jan) The PR is passing all tests and seems to be working nicely. Previous iterations of the PR have been marked as &#39;works for me&#39; by a few users, though maybe a full revi...</div></div></div>",
+        "id": 184898764,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578310739
+    },
+    {
+        "content": "<p>TL;DR: <code>backdrop_strtolower()</code> vs <code>strtolower()</code></p>",
+        "id": 184898847,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578310820
+    },
+    {
+        "content": "<p>I think we just didn't want a regression which seems like you've achieved. Making it even faster is a bonus</p>",
+        "id": 184912861,
+        "sender_full_name": "Herb",
+        "timestamp": 1578322779
+    }
+]

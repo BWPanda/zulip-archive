@@ -1,0 +1,53 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Docker.20images.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Docker.20images.html">Docker images</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217885321"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Docker%20images/near/217885321" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Docker.20images.html#217885321">(Nov 25 2020 at 13:42)</a>:</h4>
+<p>Who's looking after our Docker images after all? <span class="user-mention" data-user-id="256705">@Herb</span> was it you that raised your hand for that task? ...reason I'm asking is <a href="https://github.com/backdrop/backdrop-issues/issues/4747">https://github.com/backdrop/backdrop-issues/issues/4747</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4747" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4747" title="empty configuration directory when attempting docker install · Issue #4747 · backdrop/backdrop-issues">empty configuration directory when attempting docker install · Issue #4747 · backdrop/backdrop-issues</a></div><div class="message_embed_description">When I attempt to start a docker instance of backdrop, I get an error similar to the following: Exception: The configuration directory in settings.php is specified as &#39;./files/config_a1614e8130...</div></div></div>
+
+
+
+<a name="217891560"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Docker%20images/near/217891560" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Docker.20images.html#217891560">(Nov 25 2020 at 14:32)</a>:</h4>
+<p>@klonos I was just volunteering for the update. I don't use the docker image so not really sure how it all fits together</p>
+
+
+
+<a name="221721923"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Docker%20images/near/221721923" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Docker.20images.html#221721923">(Jan 06 2021 at 00:44)</a>:</h4>
+<p>I've been working on getting backdrop running in docker, and I've managed to get it working but I'd like Backdrops "Database configuration" page to be pre-populated during the installation process and I'm looking for suggestions on how to approach this please?</p>
+<p><a href="https://hub.docker.com/r/kgolding/backdrop">https://hub.docker.com/r/kgolding/backdrop</a></p>
+
+
+
+<a name="221723890"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Docker%20images/near/221723890" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Docker.20images.html#221723890">(Jan 06 2021 at 01:19)</a>:</h4>
+<p>I'm not familiar with Docker, but I know that Lando does this by setting the <code>BACKDROP_SETTINGS</code> environment variable... See <a href="https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js">https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js</a> and <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21bootstrap.inc/function/backdrop_settings_initialize/1">https://api.backdropcms.org/api/backdrop/core%21includes%21bootstrap.inc/function/backdrop_settings_initialize/1</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js" style="background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js" title="lando/lando">lando/lando</a></div><div class="message_embed_description">A development tool for all your projects that is fast, easy, powerful and liberating - lando/lando</div></div></div>
+
+
+
+<a name="221723973"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Docker%20images/near/221723973" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Docker.20images.html#221723973">(Jan 06 2021 at 01:20)</a>:</h4>
+<p>Note however that this approach <em>bypasses</em> the database configuration step of the installer, not just prepopulates it...</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

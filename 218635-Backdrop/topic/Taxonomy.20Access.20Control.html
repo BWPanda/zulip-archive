@@ -1,0 +1,76 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html">Taxonomy Access Control</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="218467470"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218467470" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218467470">(Dec 01 2020 at 19:10)</a>:</h4>
+<p>I will need this for an upcoming project so I have ported TAC. It took a bit of banging my head to figure some parts out but I think the basic functionality is working. I haven't been able to do anything with an upgrade path yet. The difficulty will be that Role IDs disappear and needing to use those before they go away to convert to the new format... Testing and help would be much appreciated if anyone else is interested or has a need coming up:<br>
+<a href="https://github.com/backdrop-contrib/taxonomy_access">https://github.com/backdrop-contrib/taxonomy_access</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/taxonomy_access" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/taxonomy_access" title="backdrop-contrib/taxonomy_access">backdrop-contrib/taxonomy_access</a></div><div class="message_embed_description">Access control for user roles based on taxonomy categories (vocabulary, terms). - backdrop-contrib/taxonomy_access</div></div></div>
+
+
+
+<a name="218510590"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218510590" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218510590">(Dec 02 2020 at 03:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> the role IDs don't necessarily disappear. They are still numbers if upgrading from Drupal. But just numbers as strings rather than integers</p>
+
+
+
+<a name="218510639"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218510639" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218510639">(Dec 02 2020 at 03:10)</a>:</h4>
+<p>And any new roles are likely to be words</p>
+
+
+
+<a name="218594529"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218594529" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218594529">(Dec 02 2020 at 17:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> Another question. I see that the role IDs are preserved in the config as the name (just as a string, as you said) but the same doesn't seem to be true of vocabularies. Are the <code>vid</code> values lost in an upgrade?</p>
+
+
+
+<a name="218597478"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218597478" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218597478">(Dec 02 2020 at 18:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span>, I dealt with this issue when porting uc_price_per_role. Although the old role IDs get converted to strings with the same integer value, rid 1 gets converted to role 'anonymous' and rid 2 gets converted to role 'authenticated' (note that there are constants BACKDROP_ANONYMOUS_ROLE and BACKDROP_AUTHENTICATED_ROLE). The implementation of uc_price_per_role_update_1000() might be a useful example for how to deal with the conversion.</p>
+
+
+
+<a name="218597615"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218597615" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218597615">(Dec 02 2020 at 18:19)</a>:</h4>
+<p>Thanks! I'll check it out.</p>
+
+
+
+<a name="218599116"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218599116" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218599116">(Dec 02 2020 at 18:29)</a>:</h4>
+<p>Very helpful <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span>  <span class="user-mention" data-user-id="335929">@bugfolder</span> ++</p>
+
+
+
+<a name="218599117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218599117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218599117">(Dec 02 2020 at 18:29)</a>:</h4>
+<p><strong>bugfolder</strong> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> (Karma: 3)</p>
+
+
+
+<a name="218635767"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Access%20Control/near/218635767" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Access.20Control.html#218635767">(Dec 02 2020 at 23:36)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> not sure about the vid.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

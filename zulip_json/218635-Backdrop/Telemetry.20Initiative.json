@@ -1,0 +1,92 @@
+[
+    {
+        "content": "<p>I volunteered to help move the telemetry initiative forward and I've been thinking about the best way to organize initiatives. Since, both of our existing initiatives are big enough to involve items that are not specific to core, I'm inclined to create a meta issue in the <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a> issue queue and even use the wiki there to help with documentation. </p>\n<p>Then we can create core specific issues in the core issue queue, as needed, and link to them from the META.</p>",
+        "id": 213724758,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603053641
+    },
+    {
+        "content": "<p>Any thoughts or feedback? (I'm working on this now)</p>",
+        "id": 213724768,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603053663
+    },
+    {
+        "content": "<p>For now, I updated the current Telemetry issue with a link to WIKI page that I plan to use an initiative summary. I may open a new META later, but first I'd like feedback on my summary of this issue. I'm also interested in who might be willing to help write code for this initiative (see summary for more info).</p>\n<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/285#issuecomment-711436307\">https://github.com/backdrop/backdrop-issues/issues/285#issuecomment-711436307</a><br>\n<a href=\"https://github.com/backdrop-ops/backdropcms.org/wiki/Telemetry-Initiative\">https://github.com/backdrop-ops/backdropcms.org/wiki/Telemetry-Initiative</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/285#issuecomment-711436307\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/285#issuecomment-711436307\" title=\"[META] Telemetry: (anonymously) collect useful data · Issue #285 · backdrop/backdrop-issues\">[META] Telemetry: (anonymously) collect useful data · Issue #285 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Telemetry: (anonymously) collect useful data so that we can make better-informed decisions about what should go into (or be removed from) backdrop core. I remember the endless debates of whether a ...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/wiki/Telemetry-Initiative\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/wiki/Telemetry-Initiative\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 213730481,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603061858
+    },
+    {
+        "content": "<p>Wow, lots of activity on the telemetry initiative this weekend. Thanks team!!!!!<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/285\">https://github.com/backdrop/backdrop-issues/issues/285</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/285\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/285\" title=\"[META] Telemetry: (anonymously) collect useful data · Issue #285 · backdrop/backdrop-issues\">[META] Telemetry: (anonymously) collect useful data · Issue #285 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Telemetry: (anonymously) collect useful data so that we can make better-informed decisions about what should go into (or be removed from) backdrop core. I remember the endless debates of whether a ...</div></div></div>",
+        "id": 213822901,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603130465
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ++</p>",
+        "id": 213866211,
+        "sender_full_name": "klonos",
+        "timestamp": 1603156518
+    },
+    {
+        "content": "<p><strong>stpaultim</strong> :-) (Karma: 30)</p>",
+        "id": 213866212,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1603156518
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ++</p>",
+        "id": 213866911,
+        "sender_full_name": "klonos",
+        "timestamp": 1603157432
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> GG (Karma: 12)</p>",
+        "id": 213866912,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1603157432
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> ++</p>",
+        "id": 213866915,
+        "sender_full_name": "klonos",
+        "timestamp": 1603157437
+    },
+    {
+        "content": "<p><strong>quicksketch</strong> thanks for all you do (Karma: 3)</p>",
+        "id": 213866916,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1603157437
+    },
+    {
+        "content": "<p>So, I chat with my sister today who works for Google to see what her thoughts were on the best approach for collecting errors and phoning them home, as brought up in the weekly meeting.</p>\n<p>Her suggestion was to collect the top generated errors and send them off once per day, or maybe once per week and then aggregate them but she agreed that it would give the devs insight into problems they aren't able to see right now.</p>\n<p>I think it would require some tweaking to get a nice balance between data and not overwhelming the receiving server, but my intention was to provide almost real-time data on release stability initially for core and later contribs.</p>\n<p>Maybe this idea is a moot point due to the automated testing I understand to be coming, however, I know the tests can only go so far and real-world data is the real benchmark in my mind.</p>",
+        "id": 216583242,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605258452
+    },
+    {
+        "content": "<p>I finally did some testing on the PR for telemetry and will be updating the issue today during Sprint.</p>",
+        "id": 221412202,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609613672
+    },
+    {
+        "content": "<p>There's a telemetry meeting right now, I think, but I can't find the notice.  If there is one, where can I find it?</p>",
+        "id": 224920030,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1612292684
+    },
+    {
+        "content": "<p>This was a miscommunication on my part. I had posted a meeting on the Google Cal, but never announced it to anyone. Luke, was too smart for his own good and discovered my mistake.</p>",
+        "id": 224927430,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612295892
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Telemetry.20Initiative/near/224927430\">said</a>:</p>\n<blockquote>\n<p>Luke, was too smart for his own good and discovered my mistake.</p>\n</blockquote>\n<p>At best it was one of Luke's accidentally-created robots, and Luke isn't even smart enough to know which one it was!</p>",
+        "id": 224927592,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1612295983
+    }
+]

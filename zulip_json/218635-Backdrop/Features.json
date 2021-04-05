@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p>Anyone have experience with D7 Features module? I'm looking to migrate a D7 site that has a few custom Features and I want to get rid of Features and its dependencies, but keep the functionality (views, content types, settings, etc.)...</p>",
+        "id": 213230135,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602631637
+    },
+    {
+        "content": "<p>Don’t we all :)</p>",
+        "id": 213230154,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1602631657
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> there is this: <a href=\"https://www.drupal.org/project/unfeaturize\">https://www.drupal.org/project/unfeaturize</a><br>\n<span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> also wrote a blog post / gave a presentation on what you're asking for, but I cannot locate it.</p>",
+        "id": 213231105,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1602632518
+    },
+    {
+        "content": "<p>Yeah I found that, but it seems to only refer to content types... My features have all sorts of stuff.</p>",
+        "id": 213231534,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602632930
+    },
+    {
+        "content": "<p>I think it'll probably just be easier to setup a new Backdrop site from scratch and migrate things manually... (for this site anyway)</p>",
+        "id": 213231556,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602632954
+    },
+    {
+        "content": "<p>As long as all the things in your feature are in the database (and not only in code) an upgrade from Drupal 7 should work normally. I usually just disable my feature modules in D7 and confirm everything is still there... then, update.php!</p>",
+        "id": 213231653,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1602633028
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Features/near/213231534\">said</a>:</p>\n<blockquote>\n<p>Yeah I found that, but it seems to only refer to content types... My features have all sorts of stuff.</p>\n</blockquote>\n<p>Feeds!!!  I'm thinking at one point I should (we should as a group) write an article on when to upgrade vs. migrate using Feeds.</p>",
+        "id": 213232406,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602633695
+    },
+    {
+        "content": "<p>Yep. This site has ~700 'Product' nodes which were/are imported from the client's SAGE database using a CSV file and Feeds in D7. So we're just going to use Feeds for them in Backdrop too. The rest of the site consists of about 5 other nodes, which I'll just copy over by hand <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 213232687,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602633906
+    },
+    {
+        "content": "<p>copy over by hand ++</p>",
+        "id": 213273933,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1602674369
+    },
+    {
+        "content": "<p>hand kudos (Karma: 1)</p>",
+        "id": 213273934,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1602674369
+    },
+    {
+        "content": "<p>The Unfeaturize module was mentioned in <a href=\"https://api.backdropcms.org/documentation/upgrading-from-drupal-7\">https://api.backdropcms.org/documentation/upgrading-from-drupal-7</a>. I just linkified the mention to it, so it'd be easier for people to know what we are talking about.</p>",
+        "id": 213407754,
+        "sender_full_name": "klonos",
+        "timestamp": 1602759381
+    },
+    {
+        "content": "<p>I finally remembered where I had seen Jen's presentation on sites w/o Features and found it: <a href=\"https://www.youtube.com/watch?v=Rvywmim87DE&amp;list=PLpeDXSh4nHjRa80iIpiO7iFncC9nO5l6f&amp;index=94\">YouTube - DrupalCon Seattle 2019: A world without features - save time by managing exportables</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"Rvywmim87DE\" href=\"https://www.youtube.com/watch?v=Rvywmim87DE&amp;list=PLpeDXSh4nHjRa80iIpiO7iFncC9nO5l6f&amp;index=94\"><img src=\"https://i.ytimg.com/vi/Rvywmim87DE/default.jpg\"></a></div>",
+        "id": 213421935,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1602767452
+    },
+    {
+        "content": "<p>Okay, I just went and re-watched/listened to it, and it doesn't apply to <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>'s situation, like I thought it did.</p>",
+        "id": 213425021,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1602768535
+    },
+    {
+        "content": "<p>maybe we should create a Features Converter module for upgrades.</p>",
+        "id": 213427348,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1602769564
+    }
+]

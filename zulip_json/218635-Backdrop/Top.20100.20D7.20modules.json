@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> - in case you didn't find this: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/674\" title=\"https://github.com/backdrop-ops/backdropcms.org/issues/674\">https://github.com/backdrop-ops/backdropcms.org/issues/674</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/674\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/674\" title=\"Update - Top 100 Drupal 7 modules · Issue #674 · backdrop-ops/backdropcms.org\">Update - Top 100 Drupal 7 modules · Issue #674 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">I know that this page does get updated from time from time to time. I&#39;m just wondering if there is any process or instructions for this or if it just happens when someone randomly thinks about ...</div></div></div>",
+        "id": 192726568,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1585861680
+    },
+    {
+        "content": "<p><a href=\"https://backdropcms.org/upgrade-from-drupal/top-100-drupal-7-modules\" title=\"https://backdropcms.org/upgrade-from-drupal/top-100-drupal-7-modules\">https://backdropcms.org/upgrade-from-drupal/top-100-drupal-7-modules</a></p>",
+        "id": 192726645,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1585861708
+    },
+    {
+        "content": "<p><span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 192726768,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1585861780
+    },
+    {
+        "content": "<p>Should Libraries API be changed to be 'Replaced by core alternative'?</p>",
+        "id": 192726902,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1585861832
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> <a href=\"#narrow/stream/218635-Backdrop/topic/weekly.20meetings/near/192726902\" title=\"#narrow/stream/218635-Backdrop/topic/weekly.20meetings/near/192726902\">said</a>:</p>\n<blockquote>\n<p>Should Libraries API be changed to be 'Replaced by core alternative'?</p>\n</blockquote>\n<p>Good question. <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ??</p>",
+        "id": 192728298,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1585862527
+    },
+    {
+        "content": "<p>There's nothing in core that's an alternative...  contrib projects are doing the legwork on that one. I don't know?</p>",
+        "id": 192728603,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1585862679
+    },
+    {
+        "content": "<p>I believe that <code>hook_library_info()</code> and <code>hook_library_info_alter()</code> were added to core so that we didn't need the Libraries API module. Most of the time, that was all that modules in D7 were using anyway.</p>",
+        "id": 192747234,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1585875304
+    },
+    {
+        "content": "<p>I think the only part that is missing in Backdrop is the UI.</p>",
+        "id": 192747250,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1585875349
+    }
+]

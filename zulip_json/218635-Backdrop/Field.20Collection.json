@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Anyone aware of work to port Field Collection module from D7?  How does it relate to multifield (if at all)?</p>",
+        "id": 230735020,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1616002856
+    },
+    {
+        "content": "<p>Early chatter about a migration path from FC to Paragraphs: <a href=\"https://github.com/backdrop-contrib/paragraphs/issues/53\">https://github.com/backdrop-contrib/paragraphs/issues/53</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/issues/53\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/issues/53\" title=\"Upgrade from Drupal 7 field collection into paragraphs · Issue #53 · backdrop-contrib/paragraphs\">Upgrade from Drupal 7 field collection into paragraphs · Issue #53 · backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">I'm interested in working on an upgrade path from Drupal 7 field collection. Is anyone else working on this, and if so, can we collaborate or would others be willing to help me test?</div></div></div>",
+        "id": 230735520,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616003028
+    },
+    {
+        "content": "<p>Hmm...I feel like those aren't the same thing. :) But I'll read...</p>",
+        "id": 230735625,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1616003058
+    },
+    {
+        "content": "<p>From my experience, multifield is a much better solution for the things that I used to use field collection for.</p>",
+        "id": 230736073,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1616003229
+    },
+    {
+        "content": "<p>I do agree that they serve a very different purpose to Paragraphs.</p>",
+        "id": 230736144,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1616003250
+    },
+    {
+        "content": "<p>I just posted (really poorly) on that issue.  Its one of those conceptual differences that's hard to explain even if you use both extensively. :)</p>",
+        "id": 230736336,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1616003314
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> Did you do a migration at all from Field Collection to Multifield?  Or did you just start from scratch...</p>",
+        "id": 230736483,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1616003360
+    },
+    {
+        "content": "<p>(also weird...that issue I just replied to was from almost exactly a year ago (tomorrow))</p>",
+        "id": 230736623,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1616003408
+    },
+    {
+        "content": "<p>Currently, I only get paid to work on D7, so I have not had to migrate anything yet. I have used field collection on D7 and multifield on some personal Backdrop sites that I use to keep track of stuff and it just seems like a much better and cleaner experience.</p>",
+        "id": 230737195,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1616003619
+    },
+    {
+        "content": "<p>I haven't used FC so don't have an opinion on it. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 230739605,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616004405
+    },
+    {
+        "content": "<p>I've found a few places where it's pretty essential to build out custom stuff.  I've used it alot so I could just manually build something rather than using a contrib module.</p>",
+        "id": 230739744,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1616004467
+    },
+    {
+        "content": "<p>FYI <a href=\"https://www.drupal.org/project/fc2m\">https://www.drupal.org/project/fc2m</a></p>",
+        "id": 230743980,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616006087
+    }
+]

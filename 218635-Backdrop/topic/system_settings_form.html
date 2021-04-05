@@ -1,0 +1,255 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/system_settings_form.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html">system_settings_form</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="212221348"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212221348" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212221348">(Oct 04 2020 at 12:32)</a>:</h4>
+<p>I'm in the process of converting a D7 module and need some more help please <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+<p>in the settings file, [mymodule].settings there is a setting for the node types available and once selected allows the module to interact with the said node type.  When the module has first been initialised the settings look like this:-</p>
+<div class="codehilite"><pre><span></span><code>&quot;nodeownership_node_types&quot;: {
+    &quot;member_pages&quot;: 0,
+    &quot;page&quot;: 0,
+    &quot;post&quot;: 0,
+    &quot;webform&quot;: 0
+},
+</code></pre></div>
+
+
+<p>On the admin form, when an option is selected and when the form is saved via system_settings_form($form) the update looks like this...</p>
+<div class="codehilite"><pre><span></span><code>&quot;nodeownership_node_types&quot;: {
+    &quot;member_pages&quot;: &quot;member_pages&quot;,
+    &quot;page&quot;: 0,
+    &quot;post&quot;: 0,
+    &quot;webform&quot;: 0
+},
+</code></pre></div>
+
+
+<p>Is should, of course, be a 1 being boolean.</p>
+<p>In system_settings_form_submit() it says </p>
+<p>"If you want node type configure style handling of your checkboxes, add an array_filter value to your form."</p>
+<p>I've looked at array_filter and i'm not sure where to go from here... I've done various searches in the big G and looked at the PHP manual, and also "how to use array_filter()" etc... but not sure where to go from here.</p>
+<p>Has anyone else created a solution and if so, can you point me in the right direction, for example... "Go look at xyz module which solves this problem" <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+<p>Thanks in advance.</p>
+
+
+
+<a name="212221960"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212221960" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212221960">(Oct 04 2020 at 12:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="302871">@Steve Moorhouse</span> Maybe it's easier if you provide a link to your code. You seem to expect a true/false result but get a string value instead, which makes me think that you have something else where you should have a checkbox form element. - Or you override the value somewhere...</p>
+
+
+
+<a name="212222191"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222191" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212222191">(Oct 04 2020 at 12:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> </p>
+<p>The code is a simple form....</p>
+<p>/**</p>
+<ul>
+<li>
+<p>Implementation of admin setting page.<br>
+ *</p>
+</li>
+<li>
+<p>@return array $form</p>
+</li>
+<li>
+<p>array of form elements<br>
+ */<br>
+function nodeownership_admin_settings($form, &amp;$form_state) {</p>
+<p>// Load settings<br>
+$config = config('nodeownership.settings');</p>
+<p>$form['#config'] = 'nodeownership.settings';</p>
+<p>$node_types = node_type_get_names();</p>
+<p>$form['nodeownership_node_types'] = array(<br>
+  '#type' =&gt; 'checkboxes',<br>
+  '#title' =&gt; t('Content types which can be claimed for ownership'),<br>
+  '#options' =&gt; $node_types,<br>
+  '#default_value' =&gt; $config-&gt;get('nodeownership_node_types'),<br>
+);</p>
+</li>
+</ul>
+<p>//  Other text fields removed.</p>
+<p>$form = system_settings_form($form);<br>
+  return $form;</p>
+
+
+
+<a name="212222336"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222336" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212222336">(Oct 04 2020 at 12:59)</a>:</h4>
+<p>Ah, OK, the options (<code>$node_types</code>) are constructed with node_type_get_names() - which returns strings...</p>
+
+
+
+<a name="212222397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212222397">(Oct 04 2020 at 13:01)</a>:</h4>
+<p>You could use backdrop_map_assoc() for that. Here's an <a href="https://api.backdropcms.org/form_api#checkboxes">example</a></p>
+
+
+
+<a name="212222571"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222571" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212222571">(Oct 04 2020 at 13:06)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222336">said</a>:</p>
+<blockquote>
+<p>Ah, OK, the options (<code>$node_types</code>) are constructed with node_type_get_names() - which returns strings...</p>
+</blockquote>
+<p>Many thanks...  I assumed node_type_get_names() returned an array lol... Note to self, never assume <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span>  p.s.  this isn't my code so I assumed the original author did it right <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="212222590"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222590" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212222590">(Oct 04 2020 at 13:07)</a>:</h4>
+<p>Wait, maybe I'm wrong, I just realized, I read the wrong api page...</p>
+
+
+
+<a name="212222651"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222651" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212222651">(Oct 04 2020 at 13:09)</a>:</h4>
+<p>But still you get a string where you wanted to get a bool.</p>
+
+
+
+<a name="212222990"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222990" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212222990">(Oct 04 2020 at 13:17)</a>:</h4>
+<p>Try that: <code>$node_types = array_keys(node_type_get_names());</code> (untested)</p>
+
+
+
+<a name="212223034"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212223034" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212223034">(Oct 04 2020 at 13:18)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222590">said</a>:</p>
+<blockquote>
+<p>Wait, maybe I'm wrong, I just realized, I read the wrong api page...</p>
+</blockquote>
+<p>Lol, not to worry... it didn't work... and when printing the $node_type to the screen it is an array <span aria-label="frown" class="emoji emoji-1f641" role="img" title="frown">:frown:</span></p>
+<p>Array<br>
+(<br>
+    [member_pages] =&gt; Member Pages<br>
+    [page] =&gt; Page<br>
+    [post] =&gt; Post<br>
+    [webform] =&gt; Webform<br>
+)</p>
+<p>But, at least now I know why it's putting the text in the settings.</p>
+
+
+
+<a name="212223540"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212223540" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212223540">(Oct 04 2020 at 13:32)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222990">said</a>:</p>
+<blockquote>
+<p>Try that: <code>$node_types = array_keys(node_type_get_names());</code> (untested)</p>
+</blockquote>
+<p>Nope, didn't work...</p>
+<p>(Talking to myself.....)<br>
+So, if we just loaded the node_types from the settings, it would ignore any new node types added...  so, we need a way to compare the results from node_type_get_names() which should return an array of current node names... with the settings, then update the $node_types to reflect the settings from $config-&gt;get('nodeownership_node_types')</p>
+<p>So, I've taken the original code... which replaces the value with 0...</p>
+<p>Now how do I compare arrays <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="212224148"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212224148" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212224148">(Oct 04 2020 at 13:49)</a>:</h4>
+<p>So, the checkboxes can't have a key value of 0, so I guess I'm looking too deep into it lol... and it seems to work so, hey ho. </p>
+<p>Thanks for your help <span class="user-mention" data-user-id="256738">@indigoxela</span></p>
+
+
+
+<a name="212238653"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212238653" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212238653">(Oct 04 2020 at 19:49)</a>:</h4>
+<p><span class="user-mention" data-user-id="302871">@Steve Moorhouse</span> I've used <code>array_filter</code> in a form before, just can't find example ATM. I believe you just need to add: <code>$form['array_filter'] = TRUE;</code> (that's from memory and unconfirmed).</p>
+
+
+
+<a name="212239662"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212239662" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212239662">(Oct 04 2020 at 20:17)</a>:</h4>
+<p>This was the only example I found in core: <a href="https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/book/book.admin.inc#L69">https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/book/book.admin.inc#L69</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/book/book.admin.inc#L69" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/book/book.admin.inc#L69" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="212239668"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212239668" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212239668">(Oct 04 2020 at 20:17)</a>:</h4>
+<p>And here's where it's processed: <a href="https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/system/system.module#L4353">https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/system/system.module#L4353</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/system/system.module#L4353" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/system/system.module#L4353" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="212239851"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212239851" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212239851">(Oct 04 2020 at 20:21)</a>:</h4>
+<p>Yep, thanks <span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> I just found this too (see the comments): <a href="https://api.drupal.org/api/drupal/modules%21system%21system.module/function/system_settings_form/7.x">https://api.drupal.org/api/drupal/modules%21system%21system.module/function/system_settings_form/7.x</a></p>
+
+
+
+<a name="212671928"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212671928" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#212671928">(Oct 08 2020 at 10:41)</a>:</h4>
+<p><span class="user-mention" data-user-id="302871">@Steve Moorhouse</span> perhaps you'd be interested to chime in on this issue I filed a while ago: <a href="https://github.com/backdrop/backdrop-issues/issues/2557">https://github.com/backdrop/backdrop-issues/issues/2557</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2557" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2557" title="[DX] Form API: checkboxes should be saving 1 or 0 instead of the #options key. · Issue #2557 · backdrop/backdrop-issues">[DX] Form API: checkboxes should be saving 1 or 0 instead of the #options key. · Issue #2557 · backdrop/backdrop-issues</a></div><div class="message_embed_description">So with this for example: $form[&#39;radios&#39;] = array( &#39;#type&#39; =&gt; &#39;radios&#39;, &#39;#title&#39; =&gt; t(&#39;A set of options&#39;), &#39;#options&#39; =&gt; array( 1 =&gt; t(&amp;#...</div></div></div>
+
+
+
+<a name="213166875"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/213166875" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#213166875">(Oct 13 2020 at 14:53)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256729">klonos</span> <a href="#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212671928">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="302871">Steve Moorhouse</span> perhaps you'd be interested to chime in on this issue I filed a while ago: <a href="https://github.com/backdrop/backdrop-issues/issues/2557">https://github.com/backdrop/backdrop-issues/issues/2557</a></p>
+</blockquote>
+<p>I did, five days ago :-)</p>
+
+
+
+<a name="213823868"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/213823868" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#213823868">(Oct 19 2020 at 18:08)</a>:</h4>
+<p>I've got a form with two submit handlers. It's using <code>system_settings_form</code> and a custom one. There's one form element that should not be saved to config. The issue is that <code>system_settings_form</code> is saving them all. According to <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1</a> you can add additional config files but there doesn't seem to be a way to ignore a form element entirely.</p>
+
+
+
+<a name="213823947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/213823947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#213823947">(Oct 19 2020 at 18:09)</a>:</h4>
+<p>Plan B is to just take out <code>system_settings_form</code> entirely and handle it in my other submit handler. But just wondering if there's a more elegant way</p>
+
+
+
+<a name="213835509"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/213835509" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#213835509">(Oct 19 2020 at 19:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> I would try adding my own submit handler to run before the system one, which just removes the unneeded value from <code>$form_state['values']</code>. That should prevent it being saved to config.</p>
+
+
+
+<a name="213875182"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/213875182" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#213875182">(Oct 20 2020 at 04:48)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/system_settings_form/near/213835509">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="256705">Herb</span> I would try adding my own submit handler to run before the system one, which just removes the unneeded value from <code>$form_state['values']</code>. That should prevent it being saved to config.</p>
+</blockquote>
+<p>Ah yes. That would work. I was thinking about it backwards - trying to get the custom submit handler <em>after</em> the system one and then removing it from config after. Your idea is better. The custom submit has to run anyway.</p>
+
+
+
+<a name="214001858"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/214001858" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#214001858">(Oct 21 2020 at 02:20)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> I'm curious as to the use case of this form element that needs to NOT be saved (sounds similar to the "special" <a href="https://api.backdropcms.org/form_api#value">https://api.backdropcms.org/form_api#value</a> form element) ...is it a calculated field or something?</p>
+
+
+
+<a name="214004840"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/system_settings_form/near/214004840" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/system_settings_form.html#214004840">(Oct 21 2020 at 03:29)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> the custom_breadcrumbs module has a form element that's basically a table that's used to change the weight of some sub modules. There's probably a better way to structure the whole form but I didn't want to spend too much time on it. In the end I didn't use the module at all</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

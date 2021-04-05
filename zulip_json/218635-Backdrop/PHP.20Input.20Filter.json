@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>PHP input in a field, as a formatter. I cannot seem to find this in backdrop. Has it been removed? (Compared to D7)</p>",
+        "id": 202265692,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593395451
+    },
+    {
+        "content": "<p>Ah, I found this. That is too bad. <a href=\"https://forum.backdropcms.org/forum-topic/need-php-filter-backdrop\">https://forum.backdropcms.org/forum-topic/need-php-filter-backdrop</a> . While I agree it can open security holes, I feel it should be up to the site devs. So I guess Ill just have to work around it.</p>",
+        "id": 202265870,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593395841
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> there might be a contrib module out there to help you with that</p>",
+        "id": 202308613,
+        "sender_full_name": "Herb",
+        "timestamp": 1593437428
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> , thanks. I didnt see any, maybe I missed them. I am a bit of a PHP noob, but I was thinking to write a custom module that creates a block in code, and runs the PHP there. I am using the graphs module to create graphs from PHP rather than views.</p>",
+        "id": 202314476,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593440037
+    },
+    {
+        "content": "<p>While I agree that we probably don't want an official contrib module that allows someone to insert PHP into a filter, we could probably put something into the forum topic that allows you to create a block to do that.</p>",
+        "id": 202322699,
+        "sender_full_name": "Herb",
+        "timestamp": 1593442899
+    },
+    {
+        "content": "<p>I see there is a built in block called \"Execute PHP<br>\nDangerous! Execute arbitrary PHP code from a block. Requires the Execute PHP code permission.\" I didn't check in the existing blocks before.</p>",
+        "id": 202337590,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593449427
+    },
+    {
+        "content": "<p>I started writing a custom module for block display. My first module, so I might as well see it to the end however :)</p>",
+        "id": 202337752,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593449492
+    },
+    {
+        "content": "<p>Why does PHP abuse arrays so badly :P</p>",
+        "id": 202343824,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593452163
+    },
+    {
+        "content": "<p>That block is from the Devel module. It probably isn't generally available to all users without giving them dangerous permissions.</p>",
+        "id": 202347450,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593454019
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> , ah I see. Thank you. I did end up making it by code. Now I am sure I will have some code questions, lol.</p>",
+        "id": 202347731,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593454185
+    }
+]

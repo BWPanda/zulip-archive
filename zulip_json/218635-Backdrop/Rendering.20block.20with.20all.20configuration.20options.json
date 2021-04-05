@@ -1,0 +1,14 @@
+[
+    {
+        "content": "<p>I rendered a primary navigation menu (can't just place a block) programmatically with the following code:</p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">  $menu_block = module_invoke('menu','block_view','main-menu');</span>\n<span class=\"x\">  print render($menu_block['content']);</span>\n</code></pre></div>\n<p>and it works just fine, except all the configuration options are lost. Does anyone happen to know how to programmatically render a block together with config options?</p>",
+        "id": 228859395,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1614895657
+    },
+    {
+        "content": "<p>I don't think there's a clean answer in there, but: <br>\n<a href=\"https://forum.backdropcms.org/forum/how-embed-block-templates\">https://forum.backdropcms.org/forum/how-embed-block-templates</a></p>",
+        "id": 228860293,
+        "sender_full_name": "Laryn",
+        "timestamp": 1614896007
+    }
+]

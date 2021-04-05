@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> and others, the description of the <code>'#type' =&gt; 'help'</code> form element in <a href=\"https://api.backdropcms.org/form_api#help\">https://api.backdropcms.org/form_api#help</a> says:</p>\n<blockquote>\n<p>Add some help text to the top of a page.</p>\n</blockquote>\n<p>That is not accurate, as the help element may be rendered anywhere on the form (and also controlled via its <code>#weight</code> property). Are you happy to change that to something like:</p>\n<blockquote>\n<p>Adds text and styles it as help text.</p>\n</blockquote>",
+        "id": 216712633,
+        "sender_full_name": "klonos",
+        "timestamp": 1605337966
+    },
+    {
+        "content": "<p>Sure, issue in the API queue?</p>",
+        "id": 216712903,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605338522
+    },
+    {
+        "content": "<p>Sure <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ...done: <a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/105\">https://github.com/backdrop-ops/api.backdropcms.org/issues/105</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/105\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/105\" title=\"Form API: update the description for the help element · Issue #105 · backdrop-ops/api.backdropcms.org\">Form API: update the description for the help element · Issue #105 · backdrop-ops/api.backdropcms.org</a></div><div class=\"message_embed_description\">The description of the &#39;#type&#39; =&gt; &#39;help&#39; form element in https://api.backdropcms.org/form_api#help says: Add some help text to the top of a page. That is not accurate, as the hel...</div></div></div>",
+        "id": 216713122,
+        "sender_full_name": "klonos",
+        "timestamp": 1605338901
+    },
+    {
+        "content": "<p>Is there style?</p>",
+        "id": 216747379,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1605384284
+    },
+    {
+        "content": "<p>There's an issue for it <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> <a href=\"https://github.com/backdrop/backdrop-issues/issues/4574\">https://github.com/backdrop/backdrop-issues/issues/4574</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4574\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4574\" title=\"Consistency in core themes: make sure that #help form elements and fieldset descriptions match the style of #description of the other form elements · Issue #4574 · backdrop/backdrop-issues\">Consistency in core themes: make sure that #help form elements and fieldset descriptions match the style of #description of the other form elements · Issue #4574 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I keep coming across this issue all over the admin UI. How things are being rendered currently: Text should have the same color:</div></div></div>",
+        "id": 216756099,
+        "sender_full_name": "klonos",
+        "timestamp": 1605396404
+    }
+]

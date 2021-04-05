@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>I was wondering about something to do with Backdrop v2.0.0... It's a release where we can finally make breaking changes and 'fix' lots of stuff. But what happens if we forget to make a certain, breaking change for v2.0.0? If we release 2.0.0 without that change, then realise what we forgot to do, can we add it to 2.0.1, or is it still considered a breaking change and therefore has to wait until the next major version (3.0.0)?</p>",
+        "id": 223693281,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611346478
+    },
+    {
+        "content": "<p>The way I interpret it is:</p>\n<ul>\n<li>if the change breaks things when moving from 1.x to 2.x then OK</li>\n<li>if the change breaks things when moving from 2.x.y to 2.x.z then not OK and needs to wait till 3.x</li>\n</ul>",
+        "id": 223726286,
+        "sender_full_name": "klonos",
+        "timestamp": 1611368338
+    },
+    {
+        "content": "<p>What if both? <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 223727241,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611369934
+    },
+    {
+        "content": "<p>I also wonder when a <code>2.x</code> branch will be created so we can start work on the plethora of new changes that need to be made...?</p>",
+        "id": 223740231,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611393679
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I don't think that we have any technical blockers on opening a 2.x branch. It will mean adding to the overhead of merging 1.x changes to more branches though.</p>",
+        "id": 223744737,
+        "sender_full_name": "klonos",
+        "timestamp": 1611400931
+    },
+    {
+        "content": "<p>I'm happy enough with 1.x</p>",
+        "id": 223766626,
+        "sender_full_name": "Herb",
+        "timestamp": 1611428825
+    },
+    {
+        "content": "<p>I say we don't even attempt to work on 2.x until after Drupal 7 EOL. Simply because it gives us more focus as a community on ensuring that there's a smooth upgrade from d7</p>",
+        "id": 223766790,
+        "sender_full_name": "Herb",
+        "timestamp": 1611428908
+    },
+    {
+        "content": "<p>There's not much on the current list that excites me for 2.x <a href=\"https://github.com/backdrop/backdrop-issues/milestone/2\">https://github.com/backdrop/backdrop-issues/milestone/2</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/milestone/2\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/milestone/2\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 223768057,
+        "sender_full_name": "Herb",
+        "timestamp": 1611429631
+    },
+    {
+        "content": "<p>Maybe some of them don't even need to wait for then. We've already made lots of progress on multilingual for instance</p>",
+        "id": 223768137,
+        "sender_full_name": "Herb",
+        "timestamp": 1611429685
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> It's also all of the <code>@deprecated</code> stuff that needs to be removed for <code>2.x</code>: <a href=\"https://github.com/backdrop/backdrop/search?q=deprecated&amp;type=code\">https://github.com/backdrop/backdrop/search?q=deprecated&amp;type=code</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/search?q=deprecated&amp;type=code\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/search?q=deprecated&amp;type=code\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 223775830,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611435708
+    },
+    {
+        "content": "<p>Yeah, that's the boring stuff. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 223790716,
+        "sender_full_name": "Herb",
+        "timestamp": 1611454825
+    }
+]

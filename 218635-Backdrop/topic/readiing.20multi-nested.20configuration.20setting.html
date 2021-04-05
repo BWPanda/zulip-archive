@@ -1,0 +1,88 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html">readiing multi-nested configuration setting</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="228618934"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/readiing%20multi-nested%20configuration%20setting/near/228618934" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html#228618934">(Mar 03 2021 at 16:12)</a>:</h4>
+<p>I'm trying to get the value of the multi-nested configuration value. The problem is when I read the whole config file first with </p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">$views_members = config('views.view.members');</span>
+</code></pre></div>
+<p>and then try to get to the value of specific configuration setting with </p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">$views_members-&gt;get(['display']['page']['display_options']['fields']['picture']));</span>
+</code></pre></div>
+<p>it never works. How do you, guys, get to the multilevel configuration?</p>
+
+
+
+<a name="228619778"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/readiing%20multi-nested%20configuration%20setting/near/228619778" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html#228619778">(Mar 03 2021 at 16:16)</a>:</h4>
+<p>To be honest, I never tried to deal with a view by config file. Rather than parsing the file, I'd load the view (as object) and handle things with its methods. But maybe that's not possible in your use-case?</p>
+
+
+
+<a name="228620461"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/readiing%20multi-nested%20configuration%20setting/near/228620461" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html#228620461">(Mar 03 2021 at 16:20)</a>:</h4>
+<p><code>$views_members-&gt;get('display.page.display_options.fields.picture');</code>?</p>
+
+
+
+<a name="228651297"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/readiing%20multi-nested%20configuration%20setting/near/228651297" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html#228651297">(Mar 03 2021 at 19:22)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256757">docwilmot</span> <a href="#narrow/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting/near/228620461">said</a>:</p>
+<blockquote>
+<p><code>$views_members-&gt;get('display.page.display_options.fields.picture');</code>?</p>
+</blockquote>
+<p>Works like a charm! Thank you!</p>
+
+
+
+<a name="228651538"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/readiing%20multi-nested%20configuration%20setting/near/228651538" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html#228651538">(Mar 03 2021 at 19:24)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting/near/228619778">said</a>:</p>
+<blockquote>
+<p>To be honest, I never tried to deal with a view by config file. Rather than parsing the file, I'd load the view (as object) and handle things with its methods. But maybe that's not possible in your use-case?</p>
+</blockquote>
+<p>Yea, I needed to manipulate with the configuration value, not only reading, but also setting. So the way <span class="user-mention" data-user-id="256757">@docwilmot</span> pointed works perfectly.</p>
+
+
+
+<a name="228656306"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/readiing%20multi-nested%20configuration%20setting/near/228656306" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html#228656306">(Mar 03 2021 at 19:53)</a>:</h4>
+<p>Yep, config files use <code>.</code> to separate nested levels.</p>
+<blockquote>
+<p>The config option may contain periods to indicate levels within the config file.</p>
+</blockquote>
+<p><a href="https://docs.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/config_get/1">https://docs.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/config_get/1</a></p>
+
+
+
+<a name="228668472"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/readiing%20multi-nested%20configuration%20setting/near/228668472" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting.html#228668472">(Mar 03 2021 at 21:07)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting/near/228656306">said</a>:</p>
+<blockquote>
+<p>Yep, config files use <code>.</code> to separate nested levels.</p>
+<blockquote>
+<p>The config option may contain periods to indicate levels within the config file.</p>
+</blockquote>
+<p><a href="https://docs.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/config_get/1">https://docs.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/config_get/1</a></p>
+</blockquote>
+<p>I remember reading that once, however it doesn't fixate in your mind until you really hit the wall when actually coding.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

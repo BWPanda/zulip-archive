@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>Can someone please tell me what I'm doing wrong here:</p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">$test = array();</span>\n\n<span class=\"x\">function blah() {</span>\n<span class=\"x\">  global $test;</span>\n\n<span class=\"x\">  $test['yada'] = 'foobar';</span>\n<span class=\"x\">}</span>\n\n<span class=\"x\">dpm($test); // shows `array()`</span>\n<span class=\"x\">blah();</span>\n<span class=\"x\">dpm($test); // shows `array()`, expecting `array('yada' =&gt; 'foobar')`</span>\n</code></pre></div>",
+        "id": 217472334,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605915530
+    },
+    {
+        "content": "<p>Does test need to be declared global outside the function?</p>",
+        "id": 217474400,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605917438
+    },
+    {
+        "content": "<p>Ah, apparently it does! Seems I've been doing it wrong all this time <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span> I thought just specifying a variable outside of a function would do that, but I guess not...</p>",
+        "id": 217477052,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605920528
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++</p>",
+        "id": 217477055,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605920534
+    },
+    {
+        "content": "<p><strong>laryn</strong> Cheers (Karma: 13)</p>",
+        "id": 217477057,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1605920534
+    },
+    {
+        "content": "<p>Hmm, actually,according to <a href=\"https://www.php.net/manual/en/language.variables.scope.php#language.variables.scope.global\">https://www.php.net/manual/en/language.variables.scope.php#language.variables.scope.global</a> I shouldn't need to use the <code>global</code>keyword outside of the function...</p>",
+        "id": 217485876,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605936054
+    },
+    {
+        "content": "<p>And indeed adding the <code>global</code> keyword doesn't work for the problem I'm having.</p>",
+        "id": 217493888,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605951737
+    },
+    {
+        "content": "<p>Now that karma you gave me feels ill-gotten.</p>",
+        "id": 217501226,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605964087
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++ now it fixed?</p>",
+        "id": 217511820,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1605981898
+    },
+    {
+        "content": "<p><strong>laryn</strong> thanks for all you do (Karma: 14)</p>",
+        "id": 217511821,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1605981898
+    }
+]

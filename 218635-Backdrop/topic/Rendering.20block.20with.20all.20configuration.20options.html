@@ -1,0 +1,37 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Rendering.20block.20with.20all.20configuration.20options.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Rendering.20block.20with.20all.20configuration.20options.html">Rendering block with all configuration options</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="228859395"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Rendering%20block%20with%20all%20configuration%20options/near/228859395" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Rendering.20block.20with.20all.20configuration.20options.html#228859395">(Mar 04 2021 at 22:07)</a>:</h4>
+<p>I rendered a primary navigation menu (can't just place a block) programmatically with the following code:</p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">  $menu_block = module_invoke('menu','block_view','main-menu');</span>
+<span class="x">  print render($menu_block['content']);</span>
+</code></pre></div>
+<p>and it works just fine, except all the configuration options are lost. Does anyone happen to know how to programmatically render a block together with config options?</p>
+
+
+
+<a name="228860293"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Rendering%20block%20with%20all%20configuration%20options/near/228860293" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Rendering.20block.20with.20all.20configuration.20options.html#228860293">(Mar 04 2021 at 22:13)</a>:</h4>
+<p>I don't think there's a clean answer in there, but: <br>
+<a href="https://forum.backdropcms.org/forum/how-embed-block-templates">https://forum.backdropcms.org/forum/how-embed-block-templates</a></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

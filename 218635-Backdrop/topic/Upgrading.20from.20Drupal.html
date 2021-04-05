@@ -1,0 +1,445 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html">Upgrading from Drupal</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="189727060"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/189727060" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#189727060">(Mar 04 2020 at 19:40)</a>:</h4>
+<p>On <a href="https://backdropcms.org/upgrade-from-drupal" target="_blank" title="https://backdropcms.org/upgrade-from-drupal">https://backdropcms.org/upgrade-from-drupal</a> it says:</p>
+<blockquote>
+<p>If you are running an install profile other than the core 'standard' profile, make sure you have a Backdrop version of that profile, or switch to the standard profile in Drupal 7.</p>
+</blockquote>
+<p>How does one 'switch' install profiles in Drupal?</p>
+
+
+
+<a name="189727138"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/189727138" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#189727138">(Mar 04 2020 at 19:41)</a>:</h4>
+<p>And why is this necessary?</p>
+
+
+
+<a name="189727866"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/189727866" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#189727866">(Mar 04 2020 at 19:49)</a>:</h4>
+<p>this is the how-to that I've followed in the past when I wanted to switch from a non-standard profile back to standard <a href="https://www.davehall.com.au/blog/dave/2012/09/12/switching-installation-profiles-existing-drupal-sites" target="_blank" title="https://www.davehall.com.au/blog/dave/2012/09/12/switching-installation-profiles-existing-drupal-sites">https://www.davehall.com.au/blog/dave/2012/09/12/switching-installation-profiles-existing-drupal-sites</a></p>
+<p>for me, the reason was to move away from modules stored in the profile directory and back to a less complex setup of everything in sites/all/modules . I sorta hate installation profiles in general so I find it easier to maintain a project long term if that complexity is not in my way</p>
+
+
+
+<a name="189764213"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/189764213" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#189764213">(Mar 05 2020 at 06:37)</a>:</h4>
+<p>Ok, considering the way to 'switch' profiles is to just make sure the new profile is enabled, then change the config value to the new one, and considering my old install profile doesn't include any modules, I'm going to assume it's safe to skip this step...</p>
+
+
+
+<a name="190426014"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/190426014" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#190426014">(Mar 12 2020 at 18:20)</a>:</h4>
+<p>Is there anything resembling an upgrade path for panels layouts?</p>
+
+
+
+<a name="190426338"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/190426338" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#190426338">(Mar 12 2020 at 18:23)</a>:</h4>
+<p>nvm, I found <a href="https://github.com/backdrop/backdrop-issues/issues/3680" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/3680">https://github.com/backdrop/backdrop-issues/issues/3680</a> which doesn't have it listed as being available</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3680" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3680" target="_blank" title="[META] Add upgrade paths for modules now integrated into core · Issue #3680 · backdrop/backdrop-issues">[META] Add upgrade paths for modules now integrated into core · Issue #3680 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This is a meta issue to track the upgrade path for modules that have been moved into core, or integrated into existing system modules. #3687 | Admin Menu (moved into core, renamed to Admin Bar modu...</div></div></div>
+
+
+
+<a name="191635173"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191635173" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191635173">(Mar 24 2020 at 16:19)</a>:</h4>
+<p>Hi Everybody.  I have a question about Features.</p>
+
+
+
+<a name="191635526"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191635526" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191635526">(Mar 24 2020 at 16:21)</a>:</h4>
+<p>(avoiding ranting about my hate of features and wondering if I can help)</p>
+
+
+
+<a name="191635612"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191635612" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191635612">(Mar 24 2020 at 16:22)</a>:</h4>
+<p>I seem to remember someone (<span class="user-mention" data-user-id="263951">@jenlampton</span>  comes to mind) describing a module or technique to move functionality that had been burned into Features back into the database.  But I've scoured the internet for this info and come up empty.  Can anybody point me to where/how to do it?</p>
+
+
+
+<a name="191635683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191635683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191635683">(Mar 24 2020 at 16:22)</a>:</h4>
+<p>yep, jen released an unfeatureize module, I've had success with it<br>
+looking for url</p>
+
+
+
+<a name="191635789"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191635789" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191635789">(Mar 24 2020 at 16:23)</a>:</h4>
+<p><a href="https://www.drupal.org/project/unfeaturize" target="_blank" title="https://www.drupal.org/project/unfeaturize">https://www.drupal.org/project/unfeaturize</a></p>
+
+
+
+<a name="191635928"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191635928" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191635928">(Mar 24 2020 at 16:24)</a>:</h4>
+<p>Super duper awesome!</p>
+
+
+
+<a name="191635989"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191635989" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191635989">(Mar 24 2020 at 16:24)</a>:</h4>
+<p>Quick 2nd question, only connected in that it's relevant to a job interview I have in 1/2 hour:</p>
+
+
+
+<a name="191636072"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191636072" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191636072">(Mar 24 2020 at 16:25)</a>:</h4>
+<p>Do D7 views translate OK when you migrate to Backdrop?</p>
+
+
+
+<a name="191636326"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191636326" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191636326">(Mar 24 2020 at 16:26)</a>:</h4>
+<p>I think they do as long as they're in the DB.</p>
+
+
+
+<a name="191636486"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191636486" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191636486">(Mar 24 2020 at 16:27)</a>:</h4>
+<p>Great.  I assumed they did to.  BUT: I had assumed they would translate to D8, and was TOTALLY FLOORED to discover yesterday that they don't!</p>
+
+
+
+<a name="191636648"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191636648" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191636648">(Mar 24 2020 at 16:28)</a>:</h4>
+<p>The <em>Official</em> <em>Recommended</em> process for converting views from D7 to D8 is: RECREATE THEM BY HAND!</p>
+
+
+
+<a name="191636695"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191636695" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191636695">(Mar 24 2020 at 16:28)</a>:</h4>
+<p>I mean, holy cow.  <em>This</em> is a giant competitive advantage for us.</p>
+
+
+
+<a name="191642775"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191642775" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191642775">(Mar 24 2020 at 17:09)</a>:</h4>
+<p>Unfeaturize!</p>
+
+
+
+<a name="191643218"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191643218" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191643218">(Mar 24 2020 at 17:12)</a>:</h4>
+<p>I just had the need to "unfeaturize" a few weeks ago and found a patch for the features module that worked pretty nicely. Didn't know about the module, didn't find it in any of my searches. Will keep that in mind.</p>
+
+
+
+<a name="191664923"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191664923" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191664923">(Mar 24 2020 at 20:04)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> ++</p>
+
+
+
+<a name="191664925"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191664925" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191664925">(Mar 24 2020 at 20:04)</a>:</h4>
+<p><strong>jenlampton</strong> 1000% (Karma: 3)</p>
+
+
+
+<a name="191665158"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191665158" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191665158">(Mar 24 2020 at 20:07)</a>:</h4>
+<p>BTW, there's <a href="https://www.drupal.org/project/view_migration" target="_blank" title="https://www.drupal.org/project/view_migration">https://www.drupal.org/project/view_migration</a> but no activity for a couple of years now, and still in alpha <span aria-label="thumbs down" class="emoji emoji-1f44e" role="img" title="thumbs down">:thumbs_down:</span></p>
+
+
+
+<a name="191676634"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191676634" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191676634">(Mar 24 2020 at 21:44)</a>:</h4>
+<p>Even if the View is in Features you can still upgrade it to Backdrop. The View is still in the db too, from my experience</p>
+
+
+
+<a name="191677289"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191677289" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191677289">(Mar 24 2020 at 21:49)</a>:</h4>
+<p>Only if the view is overridden. If the feature is in a clean state, the view is not in the database.</p>
+
+
+
+<a name="191929593"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191929593" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191929593">(Mar 26 2020 at 18:31)</a>:</h4>
+<p>I'm super excited by this.  I think this is a major competitive advantage Backdrop has over D8, which we should document, improve, and promote.</p>
+
+
+
+<a name="191930631"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/191930631" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#191930631">(Mar 26 2020 at 18:39)</a>:</h4>
+<p>Backdrop has at least <em>four</em> giant advantages over D8 when it comes to migrating from D7:<br>
+1) Themes are much easier to migrate<br>
+2) Modules are <em>wildly</em> easier to migrate<br>
+3) Views are easy to migrate in Backdrop and <em>impossible</em> to migrate in D7.<br>
+4) The author of the UnFeaturize module is on our team :) </p>
+<p>If we could make the case that migrating from Backdrop to D8 is no harder (or perhaps even easier) than migrating from D7 to D8, I think we could generate tremendous interest.</p>
+<p>(I'm working on something intended to make it easier to migrate from Backdrop to D8)</p>
+
+
+
+<a name="192096705"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/192096705" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#192096705">(Mar 28 2020 at 00:51)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> ++</p>
+
+
+
+<a name="192096706"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/192096706" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#192096706">(Mar 28 2020 at 00:51)</a>:</h4>
+<p>mccormick** Props to you for all your hard work. (Karma: 1)</p>
+
+
+
+<a name="206911546"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206911546" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206911546">(Aug 14 2020 at 09:22)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/Outreach/near/198292503">said</a>:</p>
+<blockquote>
+<p>Here's the blog post I promised: <a href="https://packweb.eu/blog/migrating-drupal-7-backdrop-cms">https://packweb.eu/blog/migrating-drupal-7-backdrop-cms</a></p>
+</blockquote>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> Interesting read! In section "Upgrade" you recommend to install a vanilla Backdrop site before doing other tasks and running <code>update.php</code>. Any particular reason for the difference to <a href="https://backdropcms.org/upgrade-from-drupal">https://backdropcms.org/upgrade-from-drupal</a>, Step 3, which recommends to run the installer later?</p>
+
+
+
+<a name="206915151"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206915151" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206915151">(Aug 14 2020 at 10:15)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> I'm not sure I understand your question... I suggest running <code>update.php</code> in step 8 of the 'Upgrade' process, while <a href="http://b.org">b.org</a> suggests running it in their step 7 of their 'Upgrade' process. Same same, right?</p>
+
+
+
+<a name="206916766"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206916766" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206916766">(Aug 14 2020 at 10:41)</a>:</h4>
+<p>You're right, wasn't clear enough, I guess it's more the order of the "other steps", specifically when to run the installer but also other things. Let's compare...</p>
+
+
+
+<a name="206916812"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206916812" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206916812">(Aug 14 2020 at 10:42)</a>:</h4>
+<p>Official docs:</p>
+<ul>
+<li>Download Backdrop and extract the files</li>
+<li>Create the database</li>
+<li>DON'T run the installer</li>
+<li>Copy the files directory from Drupal</li>
+<li>Import the Drupal 7 database</li>
+<li>Update the Backdrop settings.php file</li>
+<li>RUN the installer</li>
+<li>Download Backdrop contributed modules</li>
+<li>Visit update.php</li>
+</ul>
+
+
+
+<a name="206916830"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206916830" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206916830">(Aug 14 2020 at 10:42)</a>:</h4>
+<p>FTR, mine was based on <span class="user-mention" data-user-id="263951">@jenlampton</span>'s one, when she did a meeting about it once...</p>
+
+
+
+<a name="206916833"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206916833" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206916833">(Aug 14 2020 at 10:42)</a>:</h4>
+<p>Your article:</p>
+<ul>
+<li>Download and extract Backdrop</li>
+<li>Setup a database</li>
+<li>Configure 'settings.php'</li>
+<li>RUN the installer</li>
+<li>Download Backdrop modules</li>
+<li>Delete everything in Backdrop's 'active' config directory</li>
+<li>Replace 'files' directory (except 'config')</li>
+<li>Replace the Backdrop database</li>
+<li>Visit update.php</li>
+</ul>
+
+
+
+<a name="206916853"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206916853" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206916853">(Aug 14 2020 at 10:42)</a>:</h4>
+<p>I see!</p>
+
+
+
+<a name="206916954"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206916954" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206916954">(Aug 14 2020 at 10:44)</a>:</h4>
+<p>I'm having a site which I want to upgrade to D7. As I did it only once before (with my own site), I'm trying to wrap my head around the various instructions.</p>
+
+
+
+<a name="206916993"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206916993" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206916993">(Aug 14 2020 at 10:45)</a>:</h4>
+<p>Here's Jen's ones: <a href="http://bit.ly/2TiW4x4">bit.ly/2TiW4x4</a></p>
+<div class="message_embed"><a class="message_embed_image" href="http://bit.ly/2TiW4x4" style="background-image: url(https://lh6.googleusercontent.com/CW4SLCFts4ENlGqsDyCz7fb0AE9Y0WuQmvafF_ceDDhJ0s7YxXBZbs98c3aUT3JSYZd7OQJweg=w1200-h630-p)"></a><div class="data-container"><div class="message_embed_title"><a href="http://bit.ly/2TiW4x4" title="SVF Upgrade">SVF Upgrade</a></div><div class="message_embed_description">StoneValleyFarm.com Drupal 7 to Backdrop CMS upgrade Link to this document: http://bit.ly/2TiW4x4  Backdrop CMS is a simple, lightweight, and easy-to-use Content Management System for building professional websites. 	 Backdrop is a fork of Drupal 7. It introduces Configuration Management, adds a ...</div></div></div>
+
+
+
+<a name="206916996"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206916996" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206916996">(Aug 14 2020 at 10:45)</a>:</h4>
+<p>I adapted them for my own needs obviously</p>
+
+
+
+<a name="206917062"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917062" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917062">(Aug 14 2020 at 10:46)</a>:</h4>
+<p>Thanks! I also want to write my own notes, in my own words which I fully understand without having to think about them too much every time in the future.</p>
+
+
+
+<a name="206917066"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917066" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917066">(Aug 14 2020 at 10:46)</a>:</h4>
+<p>Yeah, there's probably lots of different ways to do it. Ultimately, just make sure you have a full backup of everything before you start, then you can start over and try different ideas as much as you want <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="206917130"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917130" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917130">(Aug 14 2020 at 10:47)</a>:</h4>
+<p>Yep! I guess I'll copy the D7 site first and will then upgrade the copy.</p>
+
+
+
+<a name="206917337"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917337" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917337">(Aug 14 2020 at 10:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> How do you treat the <code>files</code> directory? With my last upgrade, I had some issues because I just copied <code>sites/default/files</code> from Drupal to <code>files</code> in Backdrop.</p>
+
+
+
+<a name="206917385"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917385" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917385">(Aug 14 2020 at 10:52)</a>:</h4>
+<p>The docs recommend to create a symlink then, but that's not possible on every hosting service. But I also don't like the alternative ("Place the files in the same location they were in Drupal"). Do you know of any other alternative?</p>
+
+
+
+<a name="206917476"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917476" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917476">(Aug 14 2020 at 10:53)</a>:</h4>
+<p>My sites are all multisites (D7 and Backdrop), so I just moves files from one files dir to the other (that's why it's good to setup a blank Backdrop site first so you don't have any issues with directories, permissions, etc.)</p>
+
+
+
+<a name="206917551"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917551" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917551">(Aug 14 2020 at 10:54)</a>:</h4>
+<p>Setup Backdrop, make sure everything works, then copy over Drupal stuff and see what (if anything) breaks. You might need to do a search &amp; replace in the DB to change occurances of the old files path to the new one.</p>
+
+
+
+<a name="206917724"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917724" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917724">(Aug 14 2020 at 10:56)</a>:</h4>
+<p>I can't really remember what I've done in the past. The current site I'm migrating was too hard to upgrade (it was a D6 site that was updated to D7, so there's lots of old stuff in there). I decided it's easier to setup a new Backdrop site and import content with Feeds this time.</p>
+
+
+
+<a name="206917738"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917738" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917738">(Aug 14 2020 at 10:57)</a>:</h4>
+<blockquote>
+<p>do a search &amp; replace in the DB</p>
+</blockquote>
+<p>Hm, I guess, I have too less experience to do so, scared to break more things then!</p>
+
+
+
+<a name="206917759"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917759" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917759">(Aug 14 2020 at 10:57)</a>:</h4>
+<p>Backups are your friend. I'm no good with SQL, so I just use phpMyAdmin for that.</p>
+
+
+
+<a name="206917897"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206917897" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206917897">(Aug 14 2020 at 10:59)</a>:</h4>
+<p>So, Feeds was working well?</p>
+
+
+
+<a name="206918042"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206918042" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206918042">(Aug 14 2020 at 11:01)</a>:</h4>
+<p>So far. Takes a lot longer though (setting up data export view in D7, setting up content type in Backdrop with appropriate fields, setting up feed importer in Backdrop, importing, debugging, writing PHP code to do the more tedious things (exploding a comma-separated list of values into a multi-valued field, etc.)</p>
+
+
+
+<a name="206918166"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206918166" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206918166">(Aug 14 2020 at 11:03)</a>:</h4>
+<p>Ah, good to know! Will continue the upgrade approach then in this case. Thanks for your help!</p>
+
+
+
+<a name="206918226"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206918226" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206918226">(Aug 14 2020 at 11:04)</a>:</h4>
+<p>Anytime (unless I'm asleep <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> )</p>
+
+
+
+<a name="206920243"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206920243" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206920243">(Aug 14 2020 at 11:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> Another question: in the "Preparation" section of your upgrade instructions you mention "Ported" modules twice:</p>
+<p><code>7</code> 'Ported' modules: Disable, but don't uninstall, all modules in the 'Port' category. Leave them in the filesystem.<br>
+(...)<br>
+<code>12</code> 'Ported' modules: Delete all modules in the 'Port' category from the filesystem. Don't disable or uninstall them.</p>
+<p>Is one of them actually the "Contrib" category?</p>
+
+
+
+<a name="206920997"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/206920997" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#206920997">(Aug 14 2020 at 11:47)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> You are right! 12 should be contrib.</p>
+
+
+
+<a name="207390405"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/207390405" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#207390405">(Aug 19 2020 at 10:17)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> What do you think: Preparing a D7 site for the upgrade to Backdrop, do I even disable, uninstall and remove Drupal core modules which are removed in Backdrop? E.g. "Overlay".</p>
+
+
+
+<a name="207390972"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/207390972" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#207390972">(Aug 19 2020 at 10:23)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> I think so. Otherwise there's a chance there might be cruft left over in the database, since Backdrop probably doesn't have the code to remove all that itself.</p>
+
+
+
+<a name="207391113"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/207391113" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#207391113">(Aug 19 2020 at 10:25)</a>:</h4>
+<p>Thanks! That's what I'd assumed as well.</p>
+
+
+
+<a name="207391136"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/207391136" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#207391136">(Aug 19 2020 at 10:25)</a>:</h4>
+<p><span aria-label="thumbs up" class="emoji emoji-1f44d" role="img" title="thumbs up">:thumbs_up:</span> The less code there is to migrate, the less chance of problems <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="207405990"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/207405990" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#207405990">(Aug 19 2020 at 13:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> On your upgrades, did you also remove the D7 "Dashboard" module? Not sure because Backdrop as of 1.13 has the new Dashboard module.</p>
+
+
+
+<a name="207407274"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/207407274" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#207407274">(Aug 19 2020 at 13:29)</a>:</h4>
+<p>Not sure, but I think so. Basically, the only reason you wouldn't uninstall something before migrating is because Backdrop needs the settings/configuration and/or you don't want data loss. In the case of a dashboard module, I don't think there's any setting to migrate, and no data to lose...</p>
+
+
+
+<a name="207407713"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/207407713" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#207407713">(Aug 19 2020 at 13:33)</a>:</h4>
+<p>Sounds reasonable! Will try to remember this: Does Backdrop need configuration or data of the module in question?</p>
+
+
+
+<a name="207407737"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Upgrading%20from%20Drupal/near/207407737" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Upgrading.20from.20Drupal.html#207407737">(Aug 19 2020 at 13:33)</a>:</h4>
+<p>Thanks again, <span class="user-mention" data-user-id="256607">@BWPanda</span> !</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

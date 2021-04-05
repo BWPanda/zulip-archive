@@ -1,0 +1,72 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Managing.20patches.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html">Managing patches</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="197599299"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20patches/near/197599299" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html#197599299">(May 14 2020 at 18:38)</a>:</h4>
+<p>Wondering how people are managing patches for their projects. Looking for best practices though there are bound to be different necessary approaches. Some sites have composer, some use drush make, some have manual approach, ...</p>
+
+
+
+<a name="197599674"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20patches/near/197599674" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html#197599674">(May 14 2020 at 18:40)</a>:</h4>
+<p>Ha! Don't hate on me, but I hack core <span aria-label="shock" class="emoji emoji-1f628" role="img" title="shock">:shock:</span> There are two features I wanted to test/use before they were/are merged into core, so I just applied the patches to core manually (and left the patch files in the root dir to remind me), and then once I update core the new version will include them so it will automatically fix itself <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> <span aria-label="fingers crossed" class="emoji emoji-1f91e" role="img" title="fingers crossed">:fingers_crossed:</span></p>
+
+
+
+<a name="197601268"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20patches/near/197601268" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html#197601268">(May 14 2020 at 18:51)</a>:</h4>
+<p>We have a directory where we keep all the patches we apply to core or contrib, along with a README which describes each patch, why it is included, and any relevant links for more info (like an issue).</p>
+
+
+
+<a name="197603166"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20patches/near/197603166" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html#197603166">(May 14 2020 at 19:05)</a>:</h4>
+<p>One more recipe - <a href="https://www.jenlampton.com/blog/sustainable-development-workflow-patching">https://www.jenlampton.com/blog/sustainable-development-workflow-patching</a></p>
+
+
+
+<a name="197603442"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20patches/near/197603442" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html#197603442">(May 14 2020 at 19:08)</a>:</h4>
+<p>That's not too dissimilar to how we do it.</p>
+
+
+
+<a name="197613923"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20patches/near/197613923" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html#197613923">(May 14 2020 at 20:32)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256627">oadaeh (Jason Flatt)</span> <a href="#narrow/stream/218635-Backdrop/topic/Managing.20patches/near/197601268">said</a>:</p>
+<blockquote>
+<p>We have a directory where we keep all the patches we apply to core or contrib, along with a README which describes each patch, why it is included, and any relevant links for more info (like an issue).</p>
+</blockquote>
+<p>Similar here, but I do the write up on an online board, including description of the update method (which varies between sites and hosting services) and links to the corresponding issues on <a href="http://d.org">d.org</a> or <a href="http://b.org">b.org</a>.</p>
+
+
+
+<a name="197622929"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20patches/near/197622929" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html#197622929">(May 14 2020 at 21:50)</a>:</h4>
+<p>The agency I work for uses composer. ...for the few and not-so-active personal sites I have, I used to do it "manually" as most of you mentioned: keep the patch files in a directory, and repeat applying them with each upgrade.</p>
+
+
+
+<a name="197628858"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20patches/near/197628858" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20patches.html#197628858">(May 14 2020 at 22:57)</a>:</h4>
+<p>We've got a debate at my company whether to just have a directory of patches or make files. I'm leaning towards latter. Right now we have the former.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

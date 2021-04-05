@@ -1,0 +1,116 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html">Why I hate Drupal 8</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="186774862"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186774862" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186774862">(Jan 28 2020 at 11:47)</a>:</h4>
+<p>D7:<br>
+<code>$internal_link = l(t('Book admin'), 'admin/structure/book');</code></p>
+<p>D8:</p>
+<div class="codehilite"><pre><span></span><span class="x">use Drupal\Core\Link;</span>
+<span class="x">use Drupal\Core\Url;</span>
+<span class="x">$url = Url::fromRoute(&#39;book.admin&#39;);</span>
+<span class="x">$internal_link = Link::fromTextAndUrl(t(&#39;Book admin&#39;), $url)-&gt;toString();</span>
+</pre></div>
+
+
+<p><span aria-label="rolling eyes" class="emoji emoji-1f644" role="img" title="rolling eyes">:rolling_eyes:</span></p>
+
+
+
+<a name="186775187"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186775187" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186775187">(Jan 28 2020 at 11:51)</a>:</h4>
+<p><code>Url::fromRoute('book.admin')</code><br>
+What the heck is a 'route'!? And why can't I just link to a URL?<br>
+<span aria-label="expressionless" class="emoji emoji-1f611" role="img" title="expressionless">:expressionless:</span> <span aria-label="gun" class="emoji emoji-1f52b" role="img" title="gun">:gun:</span></p>
+
+
+
+<a name="186780845"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186780845" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Attila Vasas <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186780845">(Jan 28 2020 at 13:15)</a>:</h4>
+<p>Maybe: <a href="https://www.drupal.org/docs/8/api/routing-system/introductory-drupal-8-routes-and-controllers-example" target="_blank" title="https://www.drupal.org/docs/8/api/routing-system/introductory-drupal-8-routes-and-controllers-example">https://www.drupal.org/docs/8/api/routing-system/introductory-drupal-8-routes-and-controllers-example</a></p>
+
+
+
+<a name="186786432"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186786432" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186786432">(Jan 28 2020 at 14:18)</a>:</h4>
+<p>The concept of a route is pretty common with other libraries such as Node and Laravel. Though I can see how it can be confusing</p>
+
+
+
+<a name="186786782"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186786782" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186786782">(Jan 28 2020 at 14:22)</a>:</h4>
+<p>Yes, routes are confusing, but my main pain point with D8 is the complexity added (IMO, unnecessarily). What was one line of code in D7 becomes 4 lines in D8. Another example is the deprecation of <code>arg()</code>: <a href="https://www.drupal.org/node/2274705" target="_blank" title="https://www.drupal.org/node/2274705">https://www.drupal.org/node/2274705</a> (read the first few comments on that page)</p>
+
+
+
+<a name="186786981"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186786981" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186786981">(Jan 28 2020 at 14:24)</a>:</h4>
+<p>As one commenter alluded to, D8 is going in the opposite direction to other software, specifically jQuery with its "Write less, do more" motto.</p>
+
+
+
+<a name="186787043"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186787043" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186787043">(Jan 28 2020 at 14:25)</a>:</h4>
+<p>(Drupal seems to have adopted a "Write more, do the same" motto <span aria-label="laughing" class="emoji emoji-1f606" role="img" title="laughing">:laughing:</span> )</p>
+
+
+
+<a name="186787136"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186787136" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186787136">(Jan 28 2020 at 14:26)</a>:</h4>
+<p>I recall a Drupalcon presentation making a similar point. By someone who worked heavily on menu system in Drupal 7 and 8. Can't recall who exactly</p>
+
+
+
+<a name="186794169"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186794169" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186794169">(Jan 28 2020 at 15:38)</a>:</h4>
+<p>I seem to recall that those routes also required some YAML code. Am I not remembering that correctly? I stopped doing anything with D8 about 3 years ago.</p>
+
+
+
+<a name="186800818"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186800818" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186800818">(Jan 28 2020 at 16:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> Yes, I think if you create your own menu items you need YAML code to do so.</p>
+
+
+
+<a name="186804122"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186804122" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186804122">(Jan 28 2020 at 17:15)</a>:</h4>
+<p>I think it's for creating a route, not referencing one. The yaml makes that step easier</p>
+
+
+
+<a name="186829473"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186829473" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186829473">(Jan 28 2020 at 21:10)</a>:</h4>
+<p>this thread made me smile. thanks</p>
+
+
+
+<a name="186829474"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/186829474" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#186829474">(Jan 28 2020 at 21:10)</a>:</h4>
+<p>Hi, ericfg. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions.</p>
+
+
+
+<a name="187469341"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20I%20hate%20Drupal%208/near/187469341" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20I.20hate.20Drupal.208.html#187469341">(Feb 05 2020 at 16:28)</a>:</h4>
+<p>Aww, thank you guys ...always good to have a laugh at things D8 does "so much better" then D7 <span aria-label="tongue" class="emoji emoji-1f445" role="img" title="tongue">:tongue:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

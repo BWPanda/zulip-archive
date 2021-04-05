@@ -1,0 +1,638 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> look at this tweet... although it's about funding web development, Ryan (Drupal Commerce inventor) mentions a good point with interoperable code (which is also true for Backdrop), and is real problem in Wordpress and others <a href=\"https://twitter.com/nmdmatt/status/1316562816246181888\">https://twitter.com/nmdmatt/status/1316562816246181888</a></p>\n<div class=\"inline-preview-twitter\"><div class=\"twitter-tweet\"><a href=\"https://twitter.com/nmdmatt/status/1316562816246181888\"><img class=\"twitter-avatar\" src=\"https://pbs.twimg.com/profile_images/986712414761766912/3LRfmYzD_normal.jpg\"></a><p>Lately, I have been wondering: are gated releases one way to sustainably maintain open source projects? (aka, has the WordPress plugin ecosystem been right all along)\n\n<a href=\"https://t.co/f62a1ZrbYn\">https://mglaman.dev/blog/solving-open-source-funding-through-gated-releases</a></p><span>- Matt Glaman (@nmdmatt)</span></div></div><p>[Edit: on Twitter, not in Matt's blog]</p>",
+        "id": 216888938,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1605541611
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span>  yes, it is valuable point.</p>",
+        "id": 216892521,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1605543057
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> I'm tempted to go off on a tangent about funding Backdrop based on Matt's comments that you linked to.</p>",
+        "id": 217145715,
+        "sender_full_name": "Herb",
+        "timestamp": 1605711759
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> even with a dictionary, I do not understand your comment... does Matt's comment encourage you to invest more or to invest less?</p>",
+        "id": 217146632,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1605712142
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> my tangent was about Matt's comment about gated releases as a way to have sustainable open source projects. I think Backdrop devs will be faced with this question as well. Especially once D7 is EOL</p>",
+        "id": 217146987,
+        "sender_full_name": "Herb",
+        "timestamp": 1605712286
+    },
+    {
+        "content": "<p>Especially since Backdrop is focused on small to medium businesses and organizations which makes it harder to fund the \"toolkits\" that Drupal has focused on a lot.</p>",
+        "id": 217147158,
+        "sender_full_name": "Herb",
+        "timestamp": 1605712355
+    },
+    {
+        "content": "<p>OK, I see your point. I also find the idea interesting, especially compared to the paid plugin model, which creates reverse incentives, I agree with Ryan. BTW Matt has left Centarro a few days ago, I really like him and his contributions to Drupal and Open Source, he is an important voice for me in this discussion.</p>",
+        "id": 217148287,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1605712815
+    },
+    {
+        "content": "<p>Sorry, but what are \"gated releases\"? ...what are we talking about?</p>",
+        "id": 217150331,
+        "sender_full_name": "klonos",
+        "timestamp": 1605713595
+    },
+    {
+        "content": "<p>It's a proposition from Matt Glaman, how to fund Drupal Commerce (he's a maintainer) in a more sustainable way, especially maintaining modules (even more than creating them, abandoned modules are a big issue in DC). Basically you pay for getting the latest release. I do not propose this for Backdrop, I just shared the link because Ryan adressed a current WP problem with their current payment model (developers don't care about interoperability), which Backdrop (and Drupal) have not.</p>",
+        "id": 217151996,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1605714240
+    },
+    {
+        "content": "<p>Instead of gated releases, backdrop could look first into providing some additional services for a price. Sort of how Jetpack works in WordPress. Such as providing a backup service.</p>",
+        "id": 217179571,
+        "sender_full_name": "Herb",
+        "timestamp": 1605725476
+    },
+    {
+        "content": "<p>I firmly believe that the best road to sustainability and growth for Backdrop is to monetize the system. Finding the balance between hobby sites / very small businesses and businesses willing to pay is the tough part.</p>\n<p>I love the \"free\" part of Drupal, but I do not love the stagnant, always living in dev part of Drupal.</p>",
+        "id": 217320979,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605815232
+    },
+    {
+        "content": "<p>I firmly believe that $$$ should stay out of Backdrop core and offical contrib projects! ...I will stop contributing if that ever happens.</p>",
+        "id": 217346398,
+        "sender_full_name": "klonos",
+        "timestamp": 1605829696
+    },
+    {
+        "content": "<p>...one of the things I absolutely loath in Drupal-land is the DA and their eagerness to make $$$ out of everything (which includes years of unpaid work of community members)</p>",
+        "id": 217346468,
+        "sender_full_name": "klonos",
+        "timestamp": 1605829794
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> noted</p>\n<p>Monetization brings pain, but it also brings growth in areas that wouldn't normally grow.</p>\n<p>I'm not necessarily advocating for it. It's simply an observation of many free, open source projects and watching the ones that monetize, flourish and the ones that don't, either have a very nasty culture or become overshadowed or irrelevant.</p>\n<p>I just noticed your comment about core and I would be fine with BD keeping monetization out of core and core contribs \"unless\" a \"Pay for newest\" subscription model was implemented where those paying get the latest major release first and the free version gets one version behind. What is classified as major can be up for debate. Another option is enterprises vs free which seems to be a popular model.</p>\n<p>My case for monetization is less about core and more about creating contrib projects where people can continue to make money on a project they've worked on. Drupal has proven it's model is bad for the community with it's countless number of \"dead\" projects with countless issues in the queue and no word from the author to fix them.</p>\n<p>Backdrop can simply make some money on the back end of this to help support the furthering of core.</p>\n<p>I may have said this already, but a non-profit that isn't making a profit, is closed. That's a quote by someone way smarter than me, but they're right. Non-profits have costs and overhead and donations or grants can only go so far.</p>\n<p>At the end of the day, core folks need to afford food on the table and so does the community at large.</p>",
+        "id": 217360760,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605846308
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Have a read of this: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3757\">https://github.com/backdrop/backdrop-issues/issues/3757</a> Not sure if it's worth re-opening, but certainly might give you an insight into what's been discussed previously...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3757\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3757\" title=\"Allow (optionally) monetising Backdrop core/contrib projects · Issue #3757 · backdrop/backdrop-issues\">Allow (optionally) monetising Backdrop core/contrib projects · Issue #3757 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;m currently researching Elementary OS as a potential new desktop OS for myself, and I&#39;m interested in their monetisation feature whereby developers can get rewarded for their work. From w...</div></div></div>",
+        "id": 217361307,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605846938
+    },
+    {
+        "content": "<p>I'll take a look <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> . I know I'm late to the party when it comes to these discussions. Forgive me.</p>\n<p>I guess my question isn't \"how can Backdrop make money from core\", but rather \"how can Backdrop make money because of core\".</p>",
+        "id": 217361875,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605847496
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> that person that made that quote is not necessarily any smarter than you or me; they are just a better sales person (not good in my books by the way) ...I personally have no other way to express how disappointed I would feel if we monetized anything related to Backdrop CMS core/contrib other than repeat a specific part of your comments, but replace the word \"non-profit\" with \"belief\" or  \"cause\" or \"friends\" ...so, if I were to say \"a cause that isn't making a profit, is no worthy cause\" or \"friends that are not making you money are not worth having\" or \"if believing in your god isn't making you money, you shouldn't believe in him/her\" then I would not feel proud of myself as a human being. ...I'm perfectly fine with people making profit via professional services around Backdrop (building and supporting sites) or providing paid-for contrib, so long as that does not live in the official repos of Backdrop.</p>",
+        "id": 217363666,
+        "sender_full_name": "klonos",
+        "timestamp": 1605849537
+    },
+    {
+        "content": "<p>...as I also mentioned in the other thread, we need to keep true to <a href=\"https://backdropcms.org/philosophy\">https://backdropcms.org/philosophy</a> ...referring mainly to the 8th principle, and in specific to \"All code included with Backdrop has always been -- and always will be -- Free and Open Source.\" ...having \"gated releases\" is not that at all.</p>",
+        "id": 217363955,
+        "sender_full_name": "klonos",
+        "timestamp": 1605849916
+    },
+    {
+        "content": "<p>...one of the things that has greatly upset me in Drupal-land is that the DA announced on behalf of the entire Drupal community that \"the community will not be providing support for D7\" ...so they have basically made that decision on our behalf, without allowing those of the community that did want to provide support to do so, and then on top of that they shamelessly went on and started offering a paid plan for LTS support, part of the profit from which will also pay for their salary ...lets just say that I find it totally unfair for people like that to be taking advantage of all the work that many many others before them have put into a project, without any fee. Are these guys smarter for swooping in and wanting to make a profit off of the free software that others have helped build and off of the community from which they are excluding members? ...no, they aren't smarter, they are just opportunists (not for lack of other words for it, just my manners won't allow me to speak it out loud <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> )</p>",
+        "id": 217364285,
+        "sender_full_name": "klonos",
+        "timestamp": 1605850338
+    },
+    {
+        "content": "<p>...I'm open to monetary donations which will need to go against the needs of the project (server and domain costs, services like google campaigns if there is no comparable free alternative etc.), but that's about it.</p>",
+        "id": 217364363,
+        "sender_full_name": "klonos",
+        "timestamp": 1605850444
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> some interesting discussion. I will agree with the statement that this discussion should not divide people.</p>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> where does your hate for monetization come from and why the strong stance not to compromise?</p>\n<p>I should mention, I love free stuff and the Drupal model is what made me fall in love with it. However, 15yrs working with it and I see the problems derided from a lack of monetization, which is why I bring it up.</p>",
+        "id": 217369852,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605857940
+    },
+    {
+        "content": "<p>There are other opportunities to make money with Open Source. We shouldn't go the WP route. Selling services/work/expertise is fine and works for me, selling code feels totally wrong.</p>\n<p>This part of the B philosophy is very appealing to me:</p>\n<blockquote>\n<p>Freedom: Remain Free and Open Source. Open Source has the ability to change the world for the better. All code included with Backdrop is under an Open Source license that allows anyone to use it free of charge, ...</p>\n</blockquote>\n<p>I should note that I'm active in other communities that promote the Free Software philosophy.</p>",
+        "id": 217369952,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605858063
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I don't necessarily see it as selling code, but rather selling your time involved in creating that code.</p>\n<p>There's no difference between charging a client $1500 for the \"code\" vs charging 100 people $15 for the \"code\".  Look at it as charging for the service of time invested to create a product.</p>",
+        "id": 217370073,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605858236
+    },
+    {
+        "content": "<blockquote>\n<p>There's no difference between charging a client $1500 for the \"code\" vs charging 100 people $15 for the \"code\".</p>\n</blockquote>\n<p>There is. Backdrop code is licensed with GPLv2. We can not sell it and we shouldn't. I do <em>not</em> sell code. I sell services.</p>",
+        "id": 217370226,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605858390
+    },
+    {
+        "content": "<p>Right. So spending time to write code is not a service?</p>",
+        "id": 217370314,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605858507
+    },
+    {
+        "content": "<p>BTW, nobody take any of this personally. I argue, to understand.</p>",
+        "id": 217370468,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605858670
+    },
+    {
+        "content": "<blockquote>\n<p>nobody take any of this personally. I argue, to understand.</p>\n</blockquote>\n<p>Understood <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> And you might have realized that your suggestions don't find much support here in the chat.</p>",
+        "id": 217370554,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605858745
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code>Understood :wink: And you might have realized that your suggestions don&#39;t find much support here in the chat.\n</code></pre></div>\n<p>Yeah... Lol I'm getting ganged up on haha! I can take it. I've got thick skin ;-)</p>",
+        "id": 217370677,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605858858
+    },
+    {
+        "content": "<blockquote>\n<p>...ganged up on...</p>\n</blockquote>\n<p>That wasn't by intention. It just seems that there's good consensus on the Backdrop philosophy, and your proposed direction is too far outside of it.</p>",
+        "id": 217370940,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605859112
+    },
+    {
+        "content": "<p>Oh, BTW, it shouldn't be necessary to have \"thick skin\" here in the chat. If you feel like it is - sorry for that.</p>",
+        "id": 217371410,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605859472
+    },
+    {
+        "content": "<p>Re making money, I agree Backdrop should be and stay free. That wouldn't prevent us or others from paying people who \"write code as a service\" (or do other things for Backdrop).</p>",
+        "id": 217375355,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1605862631
+    },
+    {
+        "content": "<p>Are there zero options to keeping backdrop and contribs free but allowing the community to financially support each other with it?</p>",
+        "id": 217379563,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605865601
+    },
+    {
+        "content": "<p>What about my idea in that issue I linked to? I suggested asking for a 'donation' when people download Backdrop or a contrib project. Inspired by Elementary OS's app store system.</p>",
+        "id": 217379721,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605865706
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/Qu3DumvXPQO8xx86t8dpfxHD/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/Qu3DumvXPQO8xx86t8dpfxHD/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/Qu3DumvXPQO8xx86t8dpfxHD/image.png\"></a></div>",
+        "id": 217379943,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605865853
+    },
+    {
+        "content": "<p>They make it look like you have to pay for stuff, until you realise you can enter $0 and download it for free. I don't recommend that.</p>",
+        "id": 217379971,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605865891
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/HXGLyiblP50Wpa5qgswHunsa/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/HXGLyiblP50Wpa5qgswHunsa/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/HXGLyiblP50Wpa5qgswHunsa/image.png\"></a></div>",
+        "id": 217380053,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605865929
+    },
+    {
+        "content": "<p>We could make ours $0 by default, but it shows people they can enter any other amount and donate to Backdrop in that way.</p>",
+        "id": 217380097,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605865961
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> honestly, I like that idea. It's optional, and unobtrusive.</p>\n<p>Not everyone feels ethical or good about themselves by taking something for free and not giving back in return.</p>",
+        "id": 217380182,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605866025
+    },
+    {
+        "content": "<p>Does the donation approach actually work? Several projects use it, but I'm not sure if it's really useful to collect money.</p>",
+        "id": 217380205,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605866039
+    },
+    {
+        "content": "<p>I've run across blog posts where people talk about monetizing with Google ads. For grins, they setup a donation link and end up making more off donations than they do the ads.</p>\n<p>Every once in a while, you will find a YouTube or twitch star that talks about the donations they receive. A buddy I personally know got $3000 from one guy because my buddy mentioned needing a new computer for his steaming channel.</p>\n<p>Is every project going to see donations? No. But I believe if it were available, it would get used.</p>",
+        "id": 217380602,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605866244
+    },
+    {
+        "content": "<p>I'd call it \"tips\" instead of donations.</p>",
+        "id": 217380838,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605866371
+    },
+    {
+        "content": "<p>The donation approach doesn't work when you don't offer it <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 217380852,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605866380
+    },
+    {
+        "content": "<p><a href=\"https://www.forbes.com/sites/jasonevangelho/2019/09/03/paying-for-linux-distros-and-foss-software-successful-elementary-os\">https://www.forbes.com/sites/jasonevangelho/2019/09/03/paying-for-linux-distros-and-foss-software-successful-elementary-os</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.forbes.com/sites/jasonevangelho/2019/09/03/paying-for-linux-distros-and-foss-software-successful-elementary-os\" style=\"background-image: url(https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fblogs-images.forbes.com%2Fjasonevangelho%2Ffiles%2F2019%2F09%2Fpurchase-elementary-OS.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.forbes.com/sites/jasonevangelho/2019/09/03/paying-for-linux-distros-and-foss-software-successful-elementary-os\" title=\"Charging Money For Linux Distros And Open Source Software? It's More Successful Than You Think\">Charging Money For Linux Distros And Open Source Software? It's More Successful Than You Think</a></div><div class=\"message_embed_description\">The founder of elementary OS shares two experiences that may change how users and other Linux distributions think about donation models.</div></div></div>",
+        "id": 217381072,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605866500
+    },
+    {
+        "content": "<blockquote>\n<p>\"When we switched over from having a 'Donate' button right next to the download button, to having that 'pay what you want including $0' format, the amount of revenue we were making increased by 10x,\" Foré shares. \"That small design change increased revenue a ton.\"</p>\n</blockquote>",
+        "id": 217381141,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605866526
+    },
+    {
+        "content": "<p>Oh that's crazy...</p>",
+        "id": 217381210,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605866572
+    },
+    {
+        "content": "<p>I will say, setting the (right) expectation for monetization will be a lot easier now than say 5 years from now when the userbase is a lot bigger and more resistant to change.</p>",
+        "id": 217381382,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605866673
+    },
+    {
+        "content": "<blockquote>\n<p>The donation approach doesn't work when you don't offer it</p>\n</blockquote>\n<p>Hehe, fair point.</p>\n<p>If I get it right, elementaryOS formerly had the same approach as <a href=\"https://backdropcms.org/contribute\">B has now</a>, but the button next to the download link turned out to be way more successful. That's worth consideration.</p>",
+        "id": 217381777,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605866910
+    },
+    {
+        "content": "<p>It's something that can always be tested and quantified. If after a certain time, the general consensus is that it doesn't work, or maybe it just isn't accepted as a whole, it can simply go away.</p>",
+        "id": 217381825,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605866946
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> As I understand it, Elementary OS had a Donate button next to their Download button. When they removed the Donate button in favour of their current 'Pay what you want' button, their donations/payments increased ten-fold.</p>",
+        "id": 217381998,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605867029
+    },
+    {
+        "content": "<p>Backdrop's Donate button is hidden away. So there's much to be improved there.</p>",
+        "id": 217382029,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605867049
+    },
+    {
+        "content": "<blockquote>\n<p>Backdrop's Donate button is hidden away</p>\n</blockquote>\n<p>That's true.</p>\n<blockquote>\n<p>...'Pay what you want' button...</p>\n</blockquote>\n<p>So it was the change in wording that caused the increase? Interesting.<br>\nHow could this fit the requirements of Software Freedom Conservancy?</p>",
+        "id": 217382522,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605867329
+    },
+    {
+        "content": "<p>It's not just a change in wording, see the screenshots above (or just visit <a href=\"https://elementary.io/\">https://elementary.io/</a>) They have a 'purchase' button and you select the amount you want to pay for the OS. If you enter '0', then you can download it for free.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://elementary.io/\" style=\"background-image: url(https://elementary.io/images/preview.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://elementary.io/\" title=\"The fast, open, and privacy-respecting replacement for Windows and macOS ⋅ elementary OS\">The fast, open, and privacy-respecting replacement for Windows and macOS ⋅ elementary OS</a></div><div class=\"message_embed_description\">The fast, open, and privacy-respecting replacement for Windows and macOS</div></div></div>",
+        "id": 217382738,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605867461
+    },
+    {
+        "content": "<blockquote>\n<p>How could this fit the requirements of Software Freedom Conservancy?</p>\n</blockquote>\n<p>What are their requirements?</p>",
+        "id": 217383060,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605867612
+    },
+    {
+        "content": "<blockquote>\n<blockquote>\n<p>How could this fit the requirements of Software Freedom Conservancy?</p>\n</blockquote>\n<p>What are their requirements?</p>\n</blockquote>\n<p>I don't know, that's why I ask. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 217383129,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605867663
+    },
+    {
+        "content": "<p>I think the way it can fit the conservancy is by showing a message at the payment collection screen something like: \"Payment for this module is a donation (tip) to the author and not a sale of goods.\" I would word it better than that with more time but that's the idea.</p>",
+        "id": 217383153,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605867678
+    },
+    {
+        "content": "<p>Another thought... I think this can work for core, but modules and themes usually get installed via the UI inside an install. I don't think it's possible to include a payment button there.</p>\n<p>A more prominent &lt;strike&gt;donation&lt;/strike&gt; \"Pay what you want\" button next to the download link on b-org should be feasible, though.</p>",
+        "id": 217384270,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605868391
+    },
+    {
+        "content": "<p>If <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> or <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> are serious about this and/or just want to discuss it further outside of Zulip (where it's likely to get lost/forgotten), I encourage you to add your thoughts here: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3757\">https://github.com/backdrop/backdrop-issues/issues/3757</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3757\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3757\" title=\"Allow (optionally) monetising Backdrop core/contrib projects · Issue #3757 · backdrop/backdrop-issues\">Allow (optionally) monetising Backdrop core/contrib projects · Issue #3757 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;m currently researching Elementary OS as a potential new desktop OS for myself, and I&#39;m interested in their monetisation feature whereby developers can get rewarded for their work. From w...</div></div></div>",
+        "id": 217384657,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605868628
+    },
+    {
+        "content": "<p>I can re-open that issue if you think it's worth it.</p>",
+        "id": 217384719,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605868669
+    },
+    {
+        "content": "<p>I think it's worth it.</p>",
+        "id": 217384889,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605868745
+    },
+    {
+        "content": "<p>Is that the only formal discussion on the topic?</p>",
+        "id": 217384938,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605868771
+    },
+    {
+        "content": "<p>Actually, it wasn't really a discussion. More of a polite \"hard no\"</p>",
+        "id": 217385117,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605868861
+    },
+    {
+        "content": "<p>It's the only one I know of... There's also <a href=\"https://github.com/backdrop/backdrop-issues/issues/2419\">https://github.com/backdrop/backdrop-issues/issues/2419</a> but it's slightly different (and apparently I forgot to press the Close button on that one...)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2419\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2419\" title=\"(Opinion) Allow &quot;Commercial&quot; Module Development · Issue #2419 · backdrop/backdrop-issues\">(Opinion) Allow \"Commercial\" Module Development · Issue #2419 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">(This may fall under the &quot;requesting new features&quot; category) I&#39;m sure the key developers of Backdrop have considered this already but it is just my opinion that allowing &quot;Commerc...</div></div></div>",
+        "id": 217385151,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605868879
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Some agree, some don't. THat's why we need more feedback and discussion.</p>",
+        "id": 217385480,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605869088
+    },
+    {
+        "content": "<p>The second one doesn't seem to fit - it's about \"Commercial\" Module Development, which I also oppose to.<br>\nThe first one also (sort of).</p>\n<p>What we're currently discussing here is a change in how we ask for donations. Hm. New issue?</p>",
+        "id": 217385545,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605869140
+    },
+    {
+        "content": "<p>(<span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> You're in the US right? Are you up late, or up early? <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span> )</p>",
+        "id": 217385562,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605869153
+    },
+    {
+        "content": "<p>I'm up late <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 217385638,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605869184
+    },
+    {
+        "content": "<p>Night owl.</p>",
+        "id": 217385657,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605869199
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I linked to the first issue because that's where I first proposed the idea inspired by Elementary's payment system. Since there was hard opposition to other ideas in that issue, maybe we can just refine the focus of it a bit...?</p>",
+        "id": 217385711,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605869245
+    },
+    {
+        "content": "<p>I'll agree we need to get this in formal discussions. Zulip is great for getting the ball rolling though and hashing many ideas over a short period.</p>",
+        "id": 217385723,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605869260
+    },
+    {
+        "content": "<p>But happy to have a new issue if you think that's better.</p>",
+        "id": 217385810,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605869309
+    },
+    {
+        "content": "<blockquote>\n<p>But happy to have a new issue if you think that's better.</p>\n</blockquote>\n<p>Personally, I do. Better start a new issue, which has a different focus anyway, than revive one, that clearly had disagreement - on something else.<br>\nBut we should refer to those two issues and point out clearly, that the new one tries to achieve something different.</p>",
+        "id": 217386124,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605869555
+    },
+    {
+        "content": "<p>Sure. Want to do the honours?</p>",
+        "id": 217386158,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605869587
+    },
+    {
+        "content": "<p>Yeah, the pattern I'm seeing around monetization is a hard no. I would like to at least see discussion on what it could look like.</p>\n<p>It honestly scares me when a core member threatens to leave without at least exploring options or at the very least, explaining why they are passionate about opposing an issue.</p>",
+        "id": 217386178,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605869604
+    },
+    {
+        "content": "<blockquote>\n<p>Want to do the honours?</p>\n</blockquote>\n<p>I'm never afraid to open an issue. <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span> <a href=\"https://github.com/backdrop/backdrop-issues/issues/4767\">https://github.com/backdrop/backdrop-issues/issues/4767</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4767\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4767\" title=\"Try to get more donations by re-thinking the way Backdrop gathers them · Issue #4767 · backdrop/backdrop-issues\">Try to get more donations by re-thinking the way Backdrop gathers them · Issue #4767 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">There has been a longer discussion in our Zulip chat regarding how we could improve the way Backdrop collects donations. Currently the Donate button is hidden away on a subpage. Suggestions have be...</div></div></div>",
+        "id": 217386652,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605869889
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> I'm also a night owl and chronic insomniac <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 217392016,
+        "sender_full_name": "klonos",
+        "timestamp": 1605873640
+    },
+    {
+        "content": "<p>Well I'm not, so I'm off to bed <span aria-label=\"big smile\" class=\"emoji emoji-1f604\" role=\"img\" title=\"big smile\">:big_smile:</span></p>",
+        "id": 217392063,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605873683
+    },
+    {
+        "content": "<p>Rest well <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> <span aria-label=\"zzz\" class=\"emoji emoji-1f4a4\" role=\"img\" title=\"zzz\">:zzz:</span></p>",
+        "id": 217392076,
+        "sender_full_name": "klonos",
+        "timestamp": 1605873703
+    },
+    {
+        "content": "<p>...I have moved the discussion re monetization to a separate thread from \"Why Backdrop?\" ...I hope that that's OK with everyone.</p>",
+        "id": 217392083,
+        "sender_full_name": "klonos",
+        "timestamp": 1605873710
+    },
+    {
+        "content": "<p>...I'm OK with donations and making it more prominent in the <a href=\"http://b.org\">b.org</a> main page <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 217392166,
+        "sender_full_name": "klonos",
+        "timestamp": 1605873749
+    },
+    {
+        "content": "<p>...not sure about \"tips\" though. ...could that mean that once some contributors have received some $$ they will then not be motivated/incentivized to contribute as much UNLESS they first receive $$$? ...I'm honestly concerned about that.</p>",
+        "id": 217392269,
+        "sender_full_name": "klonos",
+        "timestamp": 1605873834
+    },
+    {
+        "content": "<p>...and if we accept donations/tips, then who do the $$ go to? ...the current maintainer? ...past creators/maintainers?</p>",
+        "id": 217392332,
+        "sender_full_name": "klonos",
+        "timestamp": 1605873866
+    },
+    {
+        "content": "<p>...I feel that that would open a big can of worms <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span></p>",
+        "id": 217392365,
+        "sender_full_name": "klonos",
+        "timestamp": 1605873885
+    },
+    {
+        "content": "<p>I feel that we should be asking for enough donations to keep our servers/domain running. Other than that, we shouldn't need much.</p>",
+        "id": 217392452,
+        "sender_full_name": "klonos",
+        "timestamp": 1605873959
+    },
+    {
+        "content": "<p>...and say we at some point need paid services by somebody, then managing donation $$ could become questionable. Who is responsible for selecting the provider? ...will that be done in a transparent way, or will people thing that some are getting \"kick-backs\"?</p>",
+        "id": 217392573,
+        "sender_full_name": "klonos",
+        "timestamp": 1605874056
+    },
+    {
+        "content": "<p>...I say stay away from $$$ when it comes to this wonderful cause that we have going on.</p>",
+        "id": 217392644,
+        "sender_full_name": "klonos",
+        "timestamp": 1605874093
+    },
+    {
+        "content": "<p>Yep, exactly my points.</p>\n<p>And paying individuals might actually violate Software Freedom Conservancy - that still needs to be clarified.</p>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> why not adding a comment on the issue? <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 217392660,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605874107
+    },
+    {
+        "content": "<p>Oh, I'll do that too <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 217392689,
+        "sender_full_name": "klonos",
+        "timestamp": 1605874130
+    },
+    {
+        "content": "<p>...I had a rough couple of weeks at work, so I need to go kill some aliens first <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 217393908,
+        "sender_full_name": "klonos",
+        "timestamp": 1605875007
+    },
+    {
+        "content": "<p>...well not so much killing, rather than conquering space via strategy <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 217393994,
+        "sender_full_name": "klonos",
+        "timestamp": 1605875055
+    },
+    {
+        "content": "<blockquote>\n<p>so I need to go kill some aliens first</p>\n</blockquote>\n<p>Sure, \"execute\" them. <span aria-label=\"rofl\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rofl\">:rofl:</span></p>",
+        "id": 217394063,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605875116
+    },
+    {
+        "content": "<p>Good one <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span></p>",
+        "id": 217394253,
+        "sender_full_name": "klonos",
+        "timestamp": 1605875277
+    },
+    {
+        "content": "<p>...I'll apply some filters first ...so that I execute the right ones.</p>",
+        "id": 217394321,
+        "sender_full_name": "klonos",
+        "timestamp": 1605875305
+    },
+    {
+        "content": "<p>Uh-uh, seems that I opened a big can of worms with the link to the tweet... again, it was because of Ryans remarks about Drupal interoperability, not to propose Matt's idea to be good for Backdrop. I support the majority of <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> 's points above. Happy weekend to you all:-)</p>",
+        "id": 217394498,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1605875419
+    },
+    {
+        "content": "<p>Happy weekend all <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...it's been a while that I said that I love you all <span aria-label=\"heart\" class=\"emoji emoji-2764\" role=\"img\" title=\"heart\">:heart:</span> (you too <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> ...not ganging up on you)</p>",
+        "id": 217394622,
+        "sender_full_name": "klonos",
+        "timestamp": 1605875512
+    },
+    {
+        "content": "<p>...for the benefit of others here, the context for the kill/execute \"inside joke\" is <a href=\"https://github.com/backdrop/backdrop-issues/issues/4702\">https://github.com/backdrop/backdrop-issues/issues/4702</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4702\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4702\" title=\"[UX][D8] VBO: Change &quot;Execute&quot; to &quot;Apply to selected items&quot; · Issue #4702 · backdrop/backdrop-issues\">[UX][D8] VBO: Change \"Execute\" to \"Apply to selected items\" · Issue #4702 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is related to #4701 Long-time Drupal/Backdrop users may be familiar with how bulk operations work, but for new users it is not immediately apparent that the &quot;select action&quot; select me...</div></div></div>",
+        "id": 217394726,
+        "sender_full_name": "klonos",
+        "timestamp": 1605875573
+    },
+    {
+        "content": "<p>Happy weekend <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> </p>\n<p>A lively discussion is never a problem. <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 217394772,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605875602
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> and <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> should we move that issue over to <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues\">https://github.com/backdrop-ops/backdropcms.org/issues</a> instead?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 217396201,
+        "sender_full_name": "klonos",
+        "timestamp": 1605876511
+    },
+    {
+        "content": "<blockquote>\n<p>should we move that issue...</p>\n</blockquote>\n<p>Do you think it's misplaced in backdrop/backdrop-issues?</p>",
+        "id": 217399274,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605878347
+    },
+    {
+        "content": "<p>@klonos I'm not advocating for gated releases per se, but I don't think it breaks the philosophy of free and open source. The code would still be freely available on github. But I think there are other ways to help make BD financially sustainable. Such as with an equivalent to Jetpack - add-on services for example</p>",
+        "id": 217411603,
+        "sender_full_name": "Herb",
+        "timestamp": 1605884600
+    },
+    {
+        "content": "<p>At some point I'll move some thoughts to the issue but I'm lazy.</p>",
+        "id": 217412798,
+        "sender_full_name": "Herb",
+        "timestamp": 1605885100
+    },
+    {
+        "content": "<p>One other example: CiviCRM offers paid long term support releases for those who can't upgrade to the latest releases but still need security updates. I'm not sure how that would look for Backdrop but it's another model that fits within free and open source</p>",
+        "id": 217413059,
+        "sender_full_name": "Herb",
+        "timestamp": 1605885213
+    },
+    {
+        "content": "<blockquote>\n<p>Backdrop code is licensed with GPLv2. We can not sell it and we shouldn't.</p>\n</blockquote>\n<p>The GPL does not prevent people from charging money for their code.</p>",
+        "id": 217435495,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1605894482
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/monetizing.20Backdrop/near/217399274\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>should we move that issue...</p>\n</blockquote>\n<p>Do you think it's misplaced in backdrop/backdrop-issues?</p>\n</blockquote>\n<p>It's my (personal) understanding that we prefer to use backdrop/backdrop-issues for code related issues only AND that we use backdrop-ops/backdropcms.org for anything related to the codebase for <a href=\"http://backdropcms.org\">backdropcms.org</a>, policy issues, or community issues. </p>\n<p>However, I don't know that there is any official policy around this. It's not 100% clear from this page, where this specific discussion would go: <a href=\"https://backdropcms.org/resources/backdrop-cms-github\">https://backdropcms.org/resources/backdrop-cms-github</a></p>",
+        "id": 217443441,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605898452
+    },
+    {
+        "content": "<p>I have many thoughts on this entire discussion, but I don't have time right now. ;-)</p>",
+        "id": 217443818,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605898643
+    },
+    {
+        "content": "<p>Maybe we need a new git area for formal discussion? backdrop-ops/discussion ?</p>",
+        "id": 217451791,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605902408
+    },
+    {
+        "content": "<blockquote>\n<p>Maybe we need a new git area for formal discussion? backdrop-ops/discussion ?</p>\n</blockquote>\n<p>My concern right now is that we have too many different places for discussions for people to keep up with. Before we add any new places to discuss, we need a better way to map them out so that people can find the right place.</p>",
+        "id": 217452949,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605902996
+    }
+]

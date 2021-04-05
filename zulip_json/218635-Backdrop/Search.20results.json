@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>What's the best way to adjust the search results listing? (In this case, I want to remove the author name/link). <br>\n<a href=\"/user_uploads/18319/Iy70j99ZAXw5v5FePHrh7XAx/Screen-Shot-2020-04-29-at-11.54.42-AM.jpg\" title=\"Screen-Shot-2020-04-29-at-11.54.42-AM.jpg\">Screen-Shot-2020-04-29-at-11.54.42-AM.jpg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/Iy70j99ZAXw5v5FePHrh7XAx/Screen-Shot-2020-04-29-at-11.54.42-AM.jpg\" title=\"Screen-Shot-2020-04-29-at-11.54.42-AM.jpg\"><img src=\"/user_uploads/18319/Iy70j99ZAXw5v5FePHrh7XAx/Screen-Shot-2020-04-29-at-11.54.42-AM.jpg\"></a></div>",
+        "id": 195739582,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588179363
+    },
+    {
+        "content": "<p>Is it just to create a template override in my theme in <a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/search/templates/search-results.tpl.php\" title=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/search/templates/search-results.tpl.php\">this file</a> or is it possible through the UI?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/search/templates/search-results.tpl.php\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/search/templates/search-results.tpl.php\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 195739761,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588179451
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I've done something similar here: <a href=\"https://panda.id.au/search/node/test\" title=\"https://panda.id.au/search/node/test\">https://panda.id.au/search/node/test</a><br>\nTo achieve that, I have this code in my theme's <code>template.php</code> file:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"x\">/**</span>\n<span class=\"x\"> * Overrides template_preprocess_search_results().</span>\n<span class=\"x\"> */</span>\n<span class=\"x\">function [THEME]_preprocess_search_results(&amp;$variables) {</span>\n<span class=\"x\">  foreach ($variables[&#39;search_results&#39;] as &amp;$result) {</span>\n<span class=\"x\">    $result[&#39;info&#39;] = $result[&#39;url&#39;];</span>\n<span class=\"x\">  }</span>\n<span class=\"x\">}</span>\n</code></pre></div>\n\n\n<p>Maybe that helps you make the changes you need...?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://panda.id.au/search/node/test\" style=\"background-image: url(https://panda.id.au/sites/panda/themes/panda/images/road.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://panda.id.au/search/node/test\" title=\"Search\">Search</a></div><div class=\"message_embed_description\">https://panda.id.au/posts/ammo-testing-results</div></div></div>",
+        "id": 195746520,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588182675
+    },
+    {
+        "content": "<p>Thanks! This line in the <code>foreach</code> looks like it will do it:</p>\n<p><code>$result['info'] = $result['info_split']['date'];</code></p>",
+        "id": 195762004,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588190214
+    },
+    {
+        "content": "<p>Use Views?</p>",
+        "id": 195779592,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588200465
+    },
+    {
+        "content": "<p>Or the good old “display: none;”</p>",
+        "id": 195880469,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1588270818
+    }
+]

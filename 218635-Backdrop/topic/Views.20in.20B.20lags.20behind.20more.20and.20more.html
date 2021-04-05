@@ -1,0 +1,58 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Views.20in.20B.20lags.20behind.20more.20and.20more.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20in.20B.20lags.20behind.20more.20and.20more.html">Views in B lags behind more and more</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="221123690"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20in%20B%20lags%20behind%20more%20and%20more/near/221123690" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20in.20B.20lags.20behind.20more.20and.20more.html#221123690">(Dec 29 2020 at 10:03)</a>:</h4>
+<p>I tried to figure out what I could do to let views in Backdrop catch up with D7. But that's such a huge task that I don't even know where to start.</p>
+<p>We have this <a href="https://github.com/backdrop/backdrop-issues/issues/3853">daunting meta issue</a>. But in the meantime there are two more views releases for D7:</p>
+<ul>
+<li><a href="https://www.drupal.org/project/views/releases/7.x-3.24-rc1">https://www.drupal.org/project/views/releases/7.x-3.24-rc1</a></li>
+<li><a href="https://www.drupal.org/project/views/releases/7.x-3.24">https://www.drupal.org/project/views/releases/7.x-3.24</a></li>
+</ul>
+<p>How can we ever catch up? Or if we're not able to: how can we avoid to fall behind even more?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3853" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3853" title="crossport views commits from 7.x-3.22 - 7.x-3.23 · Issue #3853 · backdrop/backdrop-issues">crossport views commits from 7.x-3.22 - 7.x-3.23 · Issue #3853 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Has separate issues/PRs: #4075 | e19e3546 | Issue #2900405 by collinhaines, jenlampton, sano, paulbeaney, jyraya: Undefined index in views_handler_filter-&gt;store_exposed_input(). #4075 | ddaeddc3...</div></div></div>
+
+
+
+<a name="221124475"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20in%20B%20lags%20behind%20more%20and%20more/near/221124475" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20in.20B.20lags.20behind.20more.20and.20more.html#221124475">(Dec 29 2020 at 10:19)</a>:</h4>
+<p>And that we always have to keep an eye on the regressions introduced by previous releases doesn't make it easier. Triage alone would take a long time. Fixing and reviewing... oh dear.</p>
+
+
+
+<a name="221140026"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20in%20B%20lags%20behind%20more%20and%20more/near/221140026" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20in.20B.20lags.20behind.20more.20and.20more.html#221140026">(Dec 29 2020 at 15:02)</a>:</h4>
+<p>How about a spike to triage them?</p>
+<p>(I volunteer to take a crack at this one <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span> <a href="https://www.drupal.org/node/3097632">https://www.drupal.org/node/3097632</a> )</p>
+
+
+
+<a name="221163356"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20in%20B%20lags%20behind%20more%20and%20more/near/221163356" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20in.20B.20lags.20behind.20more.20and.20more.html#221163356">(Dec 29 2020 at 20:13)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> we have a decent process for managing releases of Drupal core / contrib -- not great because we obviously aren't doing a good job of keeping up, but the create/review process is actually less work than it seems.</p>
+
+
+
+<a name="221163509"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20in%20B%20lags%20behind%20more%20and%20more/near/221163509" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20in.20B.20lags.20behind.20more.20and.20more.html#221163509">(Dec 29 2020 at 20:15)</a>:</h4>
+<p>We can do many of the commits from a Drupal project in a single PR for core (which is different than our usual process of one commit per PR)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,104 @@
+[
+    {
+        "content": "<p>Another permissions adjustment request for a contrib repo:<br>\n<a href=\"https://github.com/backdrop-ops/contrib/issues/464\">https://github.com/backdrop-ops/contrib/issues/464</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/464\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/464\" title=\"Maintainer change request · Issue #464 · backdrop-ops/contrib\">Maintainer change request · Issue #464 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Can someone with appropriate permissions adjust the Github settings for search_api? @earlyburg is listed as a maintainer at this point but does not have write access. See: backdrop-contrib/search_a...</div></div></div>",
+        "id": 216882111,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605538839
+    },
+    {
+        "content": "<p>Done <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...thanks <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> for reaching out via Zulip ...it's the best way to get a hold of me <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 216951010,
+        "sender_full_name": "klonos",
+        "timestamp": 1605571887
+    },
+    {
+        "content": "<p>As discussed in recent dev meetings, the PMC is currently voting on a new permissions policy for Github contrib projects. I posted the policy here:</p>\n<p><a href=\"https://forum.backdropcms.org/forum/proposed-github-permissions-policy\">https://forum.backdropcms.org/forum/proposed-github-permissions-policy</a></p>",
+        "id": 219166969,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1607397249
+    },
+    {
+        "content": "<p>Sounds good</p>",
+        "id": 219167174,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607397488
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - I should have maintainer access on:<br>\n<a href=\"https://github.com/backdrop-contrib/views_bootstrap\">https://github.com/backdrop-contrib/views_bootstrap</a><br>\n<a href=\"https://github.com/backdrop-contrib/configurable_block_style\">https://github.com/backdrop-contrib/configurable_block_style</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/views_bootstrap\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/views_bootstrap\" title=\"backdrop-contrib/views_bootstrap\">backdrop-contrib/views_bootstrap</a></div><div class=\"message_embed_description\">This module provides a set of styles for the Views module. It allows you to create responsive Bootstrap 3.x components, such as grids, carousels, tabs, and tables, all within the configuration sett...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/configurable_block_style\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/configurable_block_style\" title=\"backdrop-contrib/configurable_block_style\">backdrop-contrib/configurable_block_style</a></div><div class=\"message_embed_description\">Ability to style blocks through UI. Contribute to backdrop-contrib/configurable_block_style development by creating an account on GitHub.</div></div></div>",
+        "id": 219743552,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1607833821
+    },
+    {
+        "content": "<p>Is this the official list of permissions now: <a href=\"https://forum.backdropcms.org/forum/proposed-github-permissions-policy\">https://forum.backdropcms.org/forum/proposed-github-permissions-policy</a> ? If so, I can try updating repos where I already have admin access... (e.g. one I just looked at only gives 'write' access to the Security team (whereas that forum post says they should have 'admin' access...))</p>",
+        "id": 219746208,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607838967
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> yes, maintainers should have \"admin\" access now <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 219750404,
+        "sender_full_name": "klonos",
+        "timestamp": 1607846825
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I've fixed your access for those 2 repos ...can you please check and confirm that you have the access you need now?</p>",
+        "id": 219750563,
+        "sender_full_name": "klonos",
+        "timestamp": 1607847062
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> ++</p>",
+        "id": 219752477,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607850221
+    },
+    {
+        "content": "<p><strong>klonos</strong> leveled up! (Karma: 11)</p>",
+        "id": 219752479,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1607850221
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> you already have admin access on those repos</p>",
+        "id": 219774356,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1607885629
+    },
+    {
+        "content": "<p>Ah, as mentioned in the other channel, @klonos came to the rescue. I have gone through about half of contrib fixing permissions, but I'm tempted to spend time writing the automatic-fixer now instead. If anyone nedds access before that is done I think this channel is a great place to ask!</p>",
+        "id": 219774756,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1607886158
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - I didn't. But, <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> took care of it.</p>",
+        "id": 219774867,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1607886287
+    },
+    {
+        "content": "<p>Yeah, sorry I clicked the link from my inbox and replied. Then I saw the other channel's convo later. whoopsie</p>",
+        "id": 219774890,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1607886333
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I started the zoom room</p>",
+        "id": 219774929,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1607886363
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> or @jenlampton Could you check that I have maintainer access on <a href=\"https://github.com/backdrop-contrib/special_menu_items\">https://github.com/backdrop-contrib/special_menu_items</a>? I was trying to push a commit and got access denied.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/special_menu_items\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/special_menu_items\" title=\"backdrop-contrib/special_menu_items\">backdrop-contrib/special_menu_items</a></div><div class=\"message_embed_description\">Enables creating placeholder and separator menu items. - backdrop-contrib/special_menu_items</div></div></div>",
+        "id": 223270668,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611080983
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> now you do <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 223304138,
+        "sender_full_name": "klonos",
+        "timestamp": 1611094535
+    }
+]

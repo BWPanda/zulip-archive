@@ -1,0 +1,68 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html">Header region in Layout</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="230806920"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Header%20region%20in%20Layout/near/230806920" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> tkcent <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html#230806920">(Mar 18 2021 at 02:57)</a>:</h4>
+<p>Just curious how entrenched the header region is in Layouts.  I am the one porting the UIkit theme and was thinking about ditching the header region and making it a little more granular in how you control the menu, logo and site name blocks.</p>
+
+
+
+<a name="230807310"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Header%20region%20in%20Layout/near/230807310" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html#230807310">(Mar 18 2021 at 03:03)</a>:</h4>
+<p>@tkcent - I may not be aware of every possible pitfall here, but if you are already creating a custom layout in the theme, I would expect that you can do anything you want with the header region - as long as the user does not switch layouts to a core layout or a contrib layout that does not contain your overrides.</p>
+
+
+
+<a name="230807500"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Header%20region%20in%20Layout/near/230807500" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html#230807500">(Mar 18 2021 at 03:06)</a>:</h4>
+<p>All of the core layouts include a header region, but I don't think there is any other behind the scenes magic happening in that region. I can't think of anything that will break if that region is gone or replaced.</p>
+
+
+
+<a name="230807599"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Header%20region%20in%20Layout/near/230807599" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html#230807599">(Mar 18 2021 at 03:08)</a>:</h4>
+<p>Keep in mind - that I am often wrong.</p>
+
+
+
+<a name="230808599"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Header%20region%20in%20Layout/near/230808599" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> tkcent <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html#230808599">(Mar 18 2021 at 03:25)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256570">@StPaulTim</span> - I'm give a try and see how it works.  The header block doesn't have a way to configure the menus like the Primary Navigation block and other menu blocks do.</p>
+
+
+
+<a name="230808847"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Header%20region%20in%20Layout/near/230808847" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> tkcent <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html#230808847">(Mar 18 2021 at 03:29)</a>:</h4>
+<p>And thanks to <span class="user-mention" data-user-id="258586">@quicksketch</span> for the pointer to system_menu_block_build().  The only problem with that approach is either I hardcode the config or add menu configuration options to the theme settings.    Seems easier to just use menu blocks since they are configurable already.</p>
+
+
+
+<a name="230829498"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Header%20region%20in%20Layout/near/230829498" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html#230829498">(Mar 18 2021 at 08:46)</a>:</h4>
+<p>Hi <span class="user-mention" data-user-id="273888">@tkcent</span> I used the UIKit theme a lot, but with a lot of customization (legacy issues with former D7 customers)... I used it with and without a header.tpl.php, really depends on the design complexity. So your goal is to have a 1:1 port of the theme, or pretty close at least?</p>
+
+
+
+<a name="230864642"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Header%20region%20in%20Layout/near/230864642" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> tkcent <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Header.20region.20in.20Layout.html#230864642">(Mar 18 2021 at 13:42)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> - Pretty close to a 1:1 port of the theme.  Sorry you missed the quick demo I gave during Backdrop Live of the progress I've made so far!  I've got a lot on my plate right now but I'm hoping to get something out next week for public consumption.  Looking to put it up on Github.  I'll keep you posted.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

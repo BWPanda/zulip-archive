@@ -1,0 +1,236 @@
+[
+    {
+        "content": "<p>I just set up a custom layout for a particular page, and once again had to consult documentation and jump around between half a dozen pages before I figured out what I had gotten wrong. (This after I accidentally put new blocks on my entire site because I didn't realize I was editing the default page.) </p>\n<p>There are a couple places where things can happen automagically in Backdrop, and this strikes me that it should be one of them. How about a contextual menu on a page, or a new tab on the Layout editor, that says \"Enable custom layout for this page/the referring page\". That should clone the existing layout, set it to only work on the existing path, maybe name it [Referring Page Title] Layout, and drop me back into the Layout editor.</p>\n<p>Even better: when I go to the Layout editor from a particular screen, why not put a drop menu next to the Layout title so I can switch layouts on the fly? Put \"add new...\" on the bottom and life is easy. </p>\n<p>I'll add, FWIW, that every time I have to do this, I completely forget that I want the Path field to be node/% and that the specific path is a Visibility condition.</p>",
+        "id": 214536833,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603693006
+    },
+    {
+        "content": "<p>I frequently forget to check back here, so if you need me to clarify, make sure I'm notified here.</p>",
+        "id": 214536862,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603693068
+    },
+    {
+        "content": "<p>I don't think it's quite ready for prime-time, but I believe <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> has a start to this \"per page layout\" idea with the 2.x branch of the <code>Layout nodes</code> module. <a href=\"https://github.com/backdrop-contrib/layout_nodes\">https://github.com/backdrop-contrib/layout_nodes</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/layout_nodes\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/layout_nodes\" title=\"backdrop-contrib/layout_nodes\">backdrop-contrib/layout_nodes</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/layout_nodes development by creating an account on GitHub.</div></div></div>",
+        "id": 214588703,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603726195
+    },
+    {
+        "content": "<p>See the comment here:<br>\n<a href=\"https://github.com/backdrop-contrib/layout_nodes/issues/1#issuecomment-482918587\">https://github.com/backdrop-contrib/layout_nodes/issues/1#issuecomment-482918587</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/layout_nodes/issues/1#issuecomment-482918587\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/layout_nodes/issues/1#issuecomment-482918587\" title=\"Provide setting so other content types can have individual layouts · Issue #1 · backdrop-contrib/layout_nodes\">Provide setting so other content types can have individual layouts · Issue #1 · backdrop-contrib/layout_nodes</a></div><div class=\"message_embed_description\">Might be useful to provide this as a setting on the content type edit form. I realize it might mean restructuring things a bit.</div></div></div>",
+        "id": 214588713,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603726200
+    },
+    {
+        "content": "<p>Alex Finnarn also created something similar, but coming at it from a different angle: <a href=\"https://github.com/alexfinnarn/node_layout\">https://github.com/alexfinnarn/node_layout</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/alexfinnarn/node_layout\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/3640707?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/alexfinnarn/node_layout\" title=\"alexfinnarn/node_layout\">alexfinnarn/node_layout</a></div><div class=\"message_embed_description\">Layouts per node on the Backdrop. . Contribute to alexfinnarn/node_layout development by creating an account on GitHub.</div></div></div>",
+        "id": 214589721,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603726619
+    },
+    {
+        "content": "<p>Just read the descriptions on both. To me it seems like <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> module is easier to use than Alex's</p>",
+        "id": 214612085,
+        "sender_full_name": "Herb",
+        "timestamp": 1603735723
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> I'm sure that you'd be interested in these issues that are against core:</p>\n<ul>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/1131\">https://github.com/backdrop/backdrop-issues/issues/1131</a></li>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/2894\">https://github.com/backdrop/backdrop-issues/issues/2894</a></li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1131\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1131\" title=\"[UX][D8] Create/select layout for a specific page from the content add/edit form. · Issue #1131 · backdrop/backdrop-issues\">[UX][D8] Create/select layout for a specific page from the content add/edit form. · Issue #1131 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is the &quot;sibling&quot; issue of #2894 and part of the #345 meta-issue. Also part of #378. See #1131 (comment) for details/screenshots. Original issue summary Related to #1126 I would like ...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2894\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2894\" title=\"[UX][D8] Create/select layout for specific content type from the content type add/edit form. · Issue #2894 · backdrop/backdrop-issues\">[UX][D8] Create/select layout for specific content type from the content type add/edit form. · Issue #2894 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is the &quot;sibling&quot; issue of #1131 and part of the #345 meta-issue. Also part of #378. See #2894 (comment) for details/screenshots. The Field Layout experimental module in D8 core seems...</div></div></div>",
+        "id": 214647933,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757157
+    },
+    {
+        "content": "<p>Yeah, see, this is what I was talking about on the call. There’s a presumption that I can read and understand GitHub threads. I sort of kind of can, but I got to docwilmot’s comment about layouts and templates and was completely lost. </p>\n<p>Nor is it clear what I should do with this information. Scroll to the end and add my uninformed comments? That seems presumptuous.</p>",
+        "id": 214648189,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603757394
+    },
+    {
+        "content": "<p>...and a couple more related to the <code>node/%</code> thingy:</p>\n<ul>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/4496\">https://github.com/backdrop/backdrop-issues/issues/4496</a></li>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/2306\">https://github.com/backdrop/backdrop-issues/issues/2306</a></li>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/3530\">https://github.com/backdrop/backdrop-issues/issues/3530</a></li>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/3531\">https://github.com/backdrop/backdrop-issues/issues/3531</a></li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4496\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4496\" title=\"[UX] Layout contexts are hard to understand - Document things in a way that makes sense · Issue #4496 · backdrop/backdrop-issues\">[UX] Layout contexts are hard to understand - Document things in a way that makes sense · Issue #4496 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">As per our discussion during the dev meeting last week, I am starting this issue as a follow-up to #3750 The goal is to collect all the various very helpful explanations that people have provided a...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2306\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2306\" title=\"[UX] Display all available blocks (with instructions on how to get them) · Issue #2306 · backdrop/backdrop-issues\">[UX] Display all available blocks (with instructions on how to get them) · Issue #2306 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">None of the layouts that we ship with core has node/% as path, thus people trying to add a field as a block won&#39;t be able to figure it out unless they have good knowledge of the internals of la...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3530\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3530\" title=\"Ship core with a layout that uses node/% as context · Issue #3530 · backdrop/backdrop-issues\">Ship core with a layout that uses node/% as context · Issue #3530 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">#2306 started out with this as one of the proposed solutions, but has changed direction over time... None of the layouts that we ship with core has node/% as path, thus people trying to add a field...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3531\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3531\" title=\"Ship core with a layout that uses user/% as context · Issue #3531 · backdrop/backdrop-issues\">Ship core with a layout that uses user/% as context · Issue #3531 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This was brought up in #2306, and is a sibling feature request to #3530 and #3648. We should ship core with a layout that uses user/% as context, since it is easier for beginners to tweak layouts r...</div></div></div>",
+        "id": 214648192,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757396
+    },
+    {
+        "content": "<p>I don’t think you get how incomprehensible this all looks if you’re not drinking the GitHub Kool Aid.</p>",
+        "id": 214648294,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603757457
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> ...yeah, sorry about that. The assumption is that you read the thread and try to understand the issue, the proposed solutions, the feedback others have provided ...if you don't do that, then the gist of it is that \"we're working on it\" <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 214648333,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757502
+    },
+    {
+        "content": "<p>...I'm interested to know what makes GitHub issue threads so intimidating though. In my eyes, they aren't any different than our forum posts.</p>",
+        "id": 214648420,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757585
+    },
+    {
+        "content": "<p>...I am thinking that this might be \"bad rep\" that GitHub/GitLab have as being dev tools ...they are just forum threads that have dev goodies on top. If people focus on reading the comments, and seeing the screenshots that are attached, then they are same as forum comments. Right?</p>",
+        "id": 214648560,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757727
+    },
+    {
+        "content": "<p>I think the way layouts work in general is a little opaque.  We may want to find a way to make them more usable in general.</p>",
+        "id": 214648565,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1603757746
+    },
+    {
+        "content": "<p>I feel you both <span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> and <span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span></p>",
+        "id": 214648623,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757776
+    },
+    {
+        "content": "<p>...we're working as fast as possible to simplify things.</p>",
+        "id": 214648634,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757790
+    },
+    {
+        "content": "<p>...it just boils down to Layouts being similar in complexity as Views.</p>",
+        "id": 214648646,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757810
+    },
+    {
+        "content": "<p>...and equally powerful too!</p>",
+        "id": 214648653,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757820
+    },
+    {
+        "content": "<p>Don’t work too fast! Simplicity is hard to add in.</p>",
+        "id": 214648660,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1603757824
+    },
+    {
+        "content": "<p>Normal people don’t write things like “this was brought up in 2306 and is a sibling to 3530 and 3648.” It means that no matter how much I read, I assume I’m missing something. </p>\n<p>Besides, I’m not a dev. My intent with a feature request is to say “I want this,” then let y’all figure it out. Most of the time they go ignored in most other software, so I’m not expecting you to drop everything for me. It’s just nice to have it noted.</p>",
+        "id": 214648756,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603757936
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> for example, would something like that help in reminding you that in order to be able to get fields as block in a layout, you need to add the <code>node/%</code> thing?</p>",
+        "id": 214648765,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757945
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/8uXWlpZrmInfp73ndFWG6xDw/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/8uXWlpZrmInfp73ndFWG6xDw/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/8uXWlpZrmInfp73ndFWG6xDw/image.png\"></a></div>",
+        "id": 214648768,
+        "sender_full_name": "klonos",
+        "timestamp": 1603757948
+    },
+    {
+        "content": "<p>I haven’t used field blocks at all, so I would never see that alert. What I wanted was a page with a couple View blocks on it, and what I briefly got was an entire website with a couple View blocks on it.</p>",
+        "id": 214648873,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603758049
+    },
+    {
+        "content": "<p>(Which ties into my prior issue that I still don’t see how to create a useful dev/stage/prod system.)</p>",
+        "id": 214648917,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603758100
+    },
+    {
+        "content": "<p>...it is totally fine to skip things you don't relate to nor understand, and focus on the comments that your feedback would be really valuable. ...the above screenshot is mentioned in this comment for example: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2306#issuecomment-461671278\">https://github.com/backdrop/backdrop-issues/issues/2306#issuecomment-461671278</a> ...and the person that suggests/implements that change (in that case myself) would love feedback/thoughts.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2306#issuecomment-461671278\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2306#issuecomment-461671278\" title=\"[UX] Display all available blocks (with instructions on how to get them) · Issue #2306 · backdrop/backdrop-issues\">[UX] Display all available blocks (with instructions on how to get them) · Issue #2306 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">None of the layouts that we ship with core has node/% as path, thus people trying to add a field as a block won&#39;t be able to figure it out unless they have good knowledge of the internals of la...</div></div></div>",
+        "id": 214648928,
+        "sender_full_name": "klonos",
+        "timestamp": 1603758112
+    },
+    {
+        "content": "<blockquote>\n<p>I got to docwilmot’s comment about layouts and templates and was completely lost. </p>\n</blockquote>\n<p><span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span> <br>\nSorry <span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span>. I'm laughing because I read your initial comment in this thread when you posted it and again just now and I still can't figure out what you're asking/saying. English is a fickle thing. Would love to help though; maybe try explaining again please?</p>",
+        "id": 214649034,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1603758191
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"294810\">Jeff Porten</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214648873\">said</a>:</p>\n<blockquote>\n<p>I haven’t used field blocks at all, so I would never see that alert. What I wanted was a page with a couple View blocks on it, and what I briefly got was an entire website with a couple View blocks on it.</p>\n</blockquote>\n<p>...was that because you missed to set visibility conditions? I'm wondering how we could improve that bit <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 214649055,
+        "sender_full_name": "klonos",
+        "timestamp": 1603758223
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214649034\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>I got to docwilmot’s comment about layouts and templates and was completely lost. </p>\n</blockquote>\n<p><span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span> <br>\nSorry <span class=\"user-mention silent\" data-user-id=\"294810\">Jeff Porten</span>. I'm laughing because I read your initial comment in this thread when you posted it and again just now and I still can't figure out what you're asking/saying. English is a fickle thing. Would love to help though; maybe try explaining again please?</p>\n</blockquote>\n<p>No worries, it's just a comment you made in 2016 that derailed me from the thread. I'm sure if I went back and really concentrated, I'd figure it out.</p>",
+        "id": 214649147,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603758305
+    },
+    {
+        "content": "<blockquote>\n<p>Besides, I’m not a dev. My intent with a feature request is to say “I want this,” then let y’all figure it out. Most of the time they go ignored in most other software, so I’m not expecting you to drop everything for me. It’s just nice to have it noted.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> - This is all fine and you are welcome to submit ideas and request without going into Github. However, you should also feel free to comment on issues in Github without having to fully understand the issue. If you see an issue about a topic that interests you, feel free to post your support for the idea and or provide information about your use case. </p>\n<p>Whether or not you have read the entire issue (or understand it), adding thoughts and context is helpful and helps move an issue along. Yes, Github can be intimidating. But, the more voices and opinions that we get in Github issues, the more information we have to make decisions. </p>\n<p>NOTE: I used to feel the same way that you did and it took me a while to get over it. So I understand.</p>\n<p>I got started by saying things like - \"I might not understand this issue, but this is what I need/think? Here is my opinion (for what it's worth).\"</p>",
+        "id": 214649163,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603758331
+    },
+    {
+        "content": "<p>Having said all this though, would it be reasonable to say that the only \"good\" explanation for layouts is the Backdrop docs?</p>",
+        "id": 214649230,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1603758395
+    },
+    {
+        "content": "<p>Maybe they need some more breaking down and re-explaining</p>",
+        "id": 214649241,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1603758412
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> There's a basic issue here that you're presuming that all Backdrop users are also Backdrop volunteers. And in fact, it's fine to have a culture that promotes that—it's why I showed up for the Documentation talk, because I see how much work you're all doing and want to do my bit.</p>\n<p>But <em>at the moment</em> I'm in Zulip or reading docs, I'm here to solve a problem, and that problem is top of mind. Asking me to switch gears and become a Backdrop volunteer <em>at that moment</em> is the worst possible time. And when the answer to a feature request is, \"if you familiarize yourself with the five years of discussions we've had on this topic, you can usefully contribute,\" that's factually correct, but it's not helpful.</p>\n<p>Sorry if this sounds churlish—it's not meant to be. I really wish I had the time to learn the style here, and be less intimidated by GitHub threads, but these are the facts on the ground.</p>",
+        "id": 214649312,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603758493
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> - Of course, look where that lead me. Maybe you don't want to follow that path. ;-)</p>",
+        "id": 214649314,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603758495
+    },
+    {
+        "content": "<p>Hey, I understand. If you don't have time, that's fine. I'm just saying that you should not feel intimidated or feel the need to read/understand everything to comment.</p>",
+        "id": 214649362,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603758561
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214649314\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"294810\">Jeff Porten</span> - Of course, look where that lead me. Maybe you don't want to follow that path. ;-)</p>\n</blockquote>\n<p>Hey, it's always a good thing to become a valued member of a tech community. It's just that I already have four jobs. :-)</p>",
+        "id": 214649374,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603758569
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> - I'm just grateful for the input that you have provided and have no intention to pressure you into anything more than what your comfortable with and/or have time for.</p>",
+        "id": 214649454,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603758636
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"294810\">Jeff Porten</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214648873\">said</a>:</p>\n<blockquote>\n<p>I haven’t used field blocks at all, so I would never see that alert. What I wanted was a page with a couple View blocks on it, and what I briefly got was an entire website with a couple View blocks on it.</p>\n</blockquote>\n<p>The easiest way to handle that is visibility restrictions  (in the block under conditions) on the views blocks, so that they only show up on the pages you want them to.  Have a separate layout for that page just to show a block would make things more complicated, not less.</p>",
+        "id": 214718456,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603813375
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214718456\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"294810\">Jeff Porten</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214648873\">said</a>:</p>\n<blockquote>\n<p>I haven’t used field blocks at all, so I would never see that alert. What I wanted was a page with a couple View blocks on it, and what I briefly got was an entire website with a couple View blocks on it.</p>\n</blockquote>\n<p>The easiest way to handle that is visibility restrictions  (in the block under conditions) on the views blocks, so that they only show up on the pages you want them to.  Have a separate layout for that page just to show a block would make things more complicated, not less.</p>\n</blockquote>\n<p>Easier, yes, but since it's modified off the default template, if I did that for all my pages with special blocks the default template would become hopelessly complicated.</p>",
+        "id": 214785974,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1603848008
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"294810\">Jeff Porten</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214785974\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214718456\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"294810\">Jeff Porten</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Feature.20request.3A.20easier.20one-off.20layouts/near/214648873\">said</a>:</p>\n<blockquote>\n<p>I haven’t used field blocks at all, so I would never see that alert. What I wanted was a page with a couple View blocks on it, and what I briefly got was an entire website with a couple View blocks on it.</p>\n</blockquote>\n<p>The easiest way to handle that is visibility restrictions  (in the block under conditions) on the views blocks, so that they only show up on the pages you want them to.  Have a separate layout for that page just to show a block would make things more complicated, not less.</p>\n</blockquote>\n<p>Easier, yes, but since it's modified off the default template, if I did that for all my pages with special blocks the default template would become hopelessly complicated.</p>\n</blockquote>\n<p>You may want to create several templates - see if there are any commonalities in structure for the pages that have special blocks.  I normally have at least 2 templates, one for the home page and one for the rest of the pages.   If you just have special blocks and they're all in the same area, it's not really an issue, you just have a list of blocks in one part of the layout.  Not terribly complicated. I have that for one site.  Also, you may want to look at the views - are you using multiple views where you could be using one and using a filter to control the content based on the current page?  It's hard to know how to help you without more details, such as what the views are showing...</p>",
+        "id": 214848280,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603897270
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>It would be cool to have some attention on the (seemingly increasing) filter module bugs.</p>\n<p>Is anyone here willing to join a bug hunting sprint?<br>\nOr is anyone willing to advocate for filter module fixes in the weekly dev meeting?</p>\n<p>At least it would be nice if the problems with the filter module could get some attention in the next dev weekly.</p>\n<p>The most recent bugs:<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4419\">https://github.com/backdrop/backdrop-issues/issues/4419</a><br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4407\">https://github.com/backdrop/backdrop-issues/issues/4407</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4419\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4419\" title=\"Regression in text filter format overview submit when disabled formats exist · Issue #4419 · backdrop/backdrop-issues\">Regression in text filter format overview submit when disabled formats exist · Issue #4419 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When at least one format is disabled and the filter format overview form gets submitted (changing the weight of a format), an additional empty format gets created, causing se...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4407\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4407\" title=\"Ordering text formats no longer works · Issue #4407 · backdrop/backdrop-issues\">Ordering text formats no longer works · Issue #4407 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">When trying to re-order the text formats on /admin/config/content/formats, they revert back to their old order on Save: This is on Backdrop v1.16.0. The row weights show the correct values, but in ...</div></div></div>",
+        "id": 198577750,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590317551
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I've added the bug milestone label to both issues. Once there are PRs for them that are in a \"near-ready state\", we'll be able to add them to the 1.16.2 milestone (see <a href=\"https://backdropcms.org/user-guide/adding-milestones-issues\">https://backdropcms.org/user-guide/adding-milestones-issues</a> for details on how setting a milestone works)</p>",
+        "id": 198578197,
+        "sender_full_name": "klonos",
+        "timestamp": 1590318331
+    },
+    {
+        "content": "<p>Although at some point I'd like us to discuss being able to add issues like that straight to the next bug milestone, so to have more visibility.</p>",
+        "id": 198578252,
+        "sender_full_name": "klonos",
+        "timestamp": 1590318422
+    },
+    {
+        "content": "<p>...I think that the \"It must have a recent pull-request in a near-ready state.\" condition should apply to tasks - not to bugs ...at least not serious ones, as these feel that they should go straight to the next bug milestone.</p>",
+        "id": 198578313,
+        "sender_full_name": "klonos",
+        "timestamp": 1590318543
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Good point. Want to make an issue for that? <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 198578581,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590319002
+    },
+    {
+        "content": "<p>Would that need to be a PMC decision you think <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ? ...or file it against <a href=\"https://github.com/backdrop-ops/backdropcms.org\">https://github.com/backdrop-ops/backdropcms.org</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 198579272,
+        "sender_full_name": "klonos",
+        "timestamp": 1590320288
+    },
+    {
+        "content": "<p>I think the latter</p>",
+        "id": 198580819,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590322896
+    },
+    {
+        "content": "<p>I don't think so. It says: \"In order for an issue to remain tagged for the next bug fix release, it <strong>must meet all of the criteria below</strong>:\" I.e. Issues still need two seperate people to mark it as a bug, and also a PR in 'near-ready' state (in addition to the core committer).</p>",
+        "id": 198657711,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590405684
+    },
+    {
+        "content": "<p>Yeah ...see how I removed my last comments <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 198657721,
+        "sender_full_name": "klonos",
+        "timestamp": 1590405697
+    },
+    {
+        "content": "<p>I think opening an issue adding such an exception would be a good idea though.</p>",
+        "id": 198657848,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590405767
+    },
+    {
+        "content": "<p>Yup, already on it...</p>",
+        "id": 198657857,
+        "sender_full_name": "klonos",
+        "timestamp": 1590405779
+    },
+    {
+        "content": "<p>...done: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/688\">https://github.com/backdrop-ops/backdropcms.org/issues/688</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/688\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/688\" title=\"Policy: Only require PRs for tasks for setting the bug milestone - not for bugs · Issue #688 · backdrop-ops/backdropcms.org\">Policy: Only require PRs for tasks for setting the bug milestone - not for bugs · Issue #688 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">This came up in Zulip after @indigoxela requested attention to be drawn to these 2 issues for the 1.16.2 bug release: backdrop/backdrop-issues#4419 backdrop/backdrop-issues#4407 I believe that such...</div></div></div>",
+        "id": 198657979,
+        "sender_full_name": "klonos",
+        "timestamp": 1590405873
+    }
+]

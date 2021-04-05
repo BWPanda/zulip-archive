@@ -1,0 +1,164 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"*\">@all</span> - in these \"times\", how come the WebRTC #BigBlueButton module - <a href=\"https://www.drupal.org/project/bbb\">https://www.drupal.org/project/bbb</a> has not already been #ported to BD? (BBB is getting quite important for both Moodle, NextCloud and Wordpress projects that focus on open source solutions.)</p>\n<p>I just quick-tested with the update of the info file:</p>\n<ul>\n<li>no errors, installs fine, no log messages</li>\n<li>on creating the content type to use with it in BD, all fields appear, BUT nothing in the BigBlueButton vertical tab above the Submit button actually gets saved in the DB. BD saves the node without any errors, but on reload, all those BBB related fields are empty.</li>\n</ul>\n<p>Backdrop should be in that \"club\", for sure. And \"right now\" is the moment, if there ever was such a thing as a \"moment\" for WebRTC / online screen sharing / online collaboration, etc., etc....</p>\n<p>Is it possible that this is just a very small missing piece to get to work?</p>",
+        "id": 202754695,
+        "sender_full_name": "LeeteqXV",
+        "timestamp": 1593731855
+    },
+    {
+        "content": "<p>Hi, LeeteqXV. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 202754696,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1593731855
+    },
+    {
+        "content": "<p>@Dragonbot help</p>",
+        "id": 202754882,
+        "sender_full_name": "LeeteqXV",
+        "timestamp": 1593732041
+    },
+    {
+        "content": "<p>!&lt;factoid&gt; - play back a factoid<br>\n&lt;thing&gt;++ - give thing some karma<br>\n[item]++ or [user]++ | Adds karma<br>\ndragonbot adapter - Reply with the adapter<br>\ndragonbot add issue [IssuePath] - Add an issue to our 'needs attention' list<br>\ndragonbot add issue [IssuePath] - Add an issue to our 'needs attention' list<br>\ndragonbot alias &lt;factoid&gt; = &lt;factoid&gt;<br>\ndragonbot attention - How to add an issue to 'needs attention' list<br>\ndragonbot attention - How to add an issue to 'needs attention' list<br>\ndragonbot delete reminder &lt;action&gt; - Delete reminder matching &lt;action&gt; (exact match required)<br>\ndragonbot drop &lt;factoid&gt; - permanently forget a factoid<br>\ndragonbot echo &lt;text&gt; - Reply back with &lt;text&gt;<br>\ndragonbot factoids - get a link to the raw factoid data<br>\ndragonbot forget &lt;factoid&gt; - forget a factoid<br>\ndragonbot help - Displays all of the help commands that this bot knows about.<br>\ndragonbot help &lt;query&gt; - Displays all help commands that match &lt;query&gt;.<br>\ndragonbot karma &lt;thing&gt; - check thing's karma (if &lt;thing&gt; is omitted, show the top 5)<br>\ndragonbot karma best [n] - show the top n (default: 5)<br>\ndragonbot karma best [n] - top [n]<br>\ndragonbot karma empty &lt;thing&gt; - empty a thing's karma<br>\ndragonbot karma worst [n] - bottom [n]<br>\ndragonbot karma worst [n] - show the bottom n (default: 5)<br>\ndragonbot learn &lt;factoid&gt; = &lt;details&gt; - learn a new factoid<br>\ndragonbot learn &lt;factoid&gt; =~ s/expression/replace/gi - edit a factoid<br>\ndragonbot list all factoids - list all factoids<br>\ndragonbot map me &lt;query&gt; - Returns a map view of the area returned by <code>query</code>.<br>\ndragonbot ping - Reply with pong<br>\ndragonbot pug bomb N - get N pugs<br>\ndragonbot pug me - Receive a pug<br>\ndragonbot remember &lt;factoid&gt; - remember a factoid<br>\ndragonbot remind me (on &lt;date&gt;|in &lt;time&gt;) to/that &lt;action&gt; - Set a reminder in &lt;time&gt; to do an &lt;action&gt; &lt;time&gt; is in the format 1 day, 2 hours, 5 minutes etc. Time segments are optional, as are commas<br>\ndragonbot remind show - Shows a list of current reminders ('show reminders' will also work)<br>\ndragonbot remove issue - Remove your 'needs attetion' issue<br>\ndragonbot remove issue - Remove your 'needs attetion' issue<br>\ndragonbot schedule [add|new] \"&lt;cron pattern&gt;(,&lt;utc offset&gt;)\" &lt;message&gt; - Schedule a message that runs recurrently.<br>\ndragonbot schedule [add|new] \"&lt;datetime pattern&gt;\" &lt;message&gt; - Schedule a message that runs on a specific date and time<br>\ndragonbot schedule [add|new] #&lt;room&gt; \"&lt;cron pattern&gt;(,&lt;utc offset&gt;)\" &lt;message&gt; - Schedule a message to a specific room that runs recurrently<br>\ndragonbot schedule [add|new] #&lt;room&gt; \"&lt;datetime pattern&gt;\" &lt;message&gt; - Schedule a message to a specific room that runs on a specific date and time<br>\ndragonbot schedule [cancel|del|delete|remove] &lt;id&gt; - Cancel the schedule<br>\ndragonbot schedule [upd|update] &lt;id&gt; &lt;message&gt; - Update scheduled message<br>\ndragonbot schedule env - Show hubot schedule environments<br>\ndragonbot schedule list #&lt;room&gt; - List all scheduled messages for specified room<br>\ndragonbot schedule list - List all scheduled messages for current room<br>\ndragonbot schedule list all - List all scheduled messages for any rooms<br>\ndragonbot search &lt;substring&gt; - list factoids which match (by factoid key or result)<br>\ndragonbot show needs attention - Show a list of issues that need your attention<br>\ndragonbot show needs attention - Show a list of issues that need your attention<br>\ndragonbot the rules - Make sure hubot still knows the rules.<br>\ndragonbot time - Reply with current time<br>\ndragonbot translate me &lt;phrase&gt; - Searches for a translation for the &lt;phrase&gt; and then prints that bad boy out.<br>\ndragonbot translate me from &lt;source&gt; into &lt;target&gt; &lt;phrase&gt; - Translates &lt;phrase&gt; from &lt;source&gt; into &lt;target&gt;. Both &lt;source&gt; and &lt;target&gt; are optional<br>\ndragonbot welcome - Shows welcome message<br>\ndragonbot welcome - Shows welcome message</p>",
+        "id": 202754883,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1593732041
+    },
+    {
+        "content": "<p>hi <span class=\"user-mention\" data-user-id=\"269952\">@LeeteqXV</span>  and welcome to Zulip. It sounds like BBB is pretty close and wouldn't need much work.</p>",
+        "id": 202763054,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1593742732
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269952\">@LeeteqXV</span> I've not used BBB but an experimenting with a new module to integrate Jitsi: <a href=\"https://github.com/backdrop-contrib/jitsi\">https://github.com/backdrop-contrib/jitsi</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/jitsi\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/jitsi\" title=\"backdrop-contrib/jitsi\">backdrop-contrib/jitsi</a></div><div class=\"message_embed_description\">Easily add Jitsi Meet video conferences to Backdrop CMS. - backdrop-contrib/jitsi</div></div></div>",
+        "id": 202765500,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593746819
+    },
+    {
+        "content": "<p>If you try it out let me know what you think</p>",
+        "id": 202765506,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593746835
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269952\">@LeeteqXV</span> I'm not arguing, but <a href=\"https://www.drupal.org/project/bbb\">https://www.drupal.org/project/bbb</a> shows only 225 sites using that module.</p>",
+        "id": 202765507,
+        "sender_full_name": "klonos",
+        "timestamp": 1593746844
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269952\">@LeeteqXV</span>  I want to port the BBB module this summer. I know BBB, but I haven't got BBB test server with Greenlight.</p>",
+        "id": 202769408,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1593753137
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> ++</p>",
+        "id": 202789475,
+        "sender_full_name": "klonos",
+        "timestamp": 1593772445
+    },
+    {
+        "content": "<p>vasas** 1000% (Karma: 1)</p>",
+        "id": 202789476,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1593772445
+    },
+    {
+        "content": "<p>I have got a BBB test server <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span> : <code>docker pull bigbluebutton/bigbluebutton</code><br>\n<code>docker run --rm -p 80:80/tcp -p 1935:1935 -p 3478:3478 -p 3478:3478/udp bigbluebutton/bigbluebutton -h 192.168.1.7</code></p>",
+        "id": 203099849,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1594127618
+    },
+    {
+        "content": "<p><span aria-label=\"fireworks\" class=\"emoji emoji-1f386\" role=\"img\" title=\"fireworks\">:fireworks:</span>  A new ported module is published: Big Blue Button module <a href=\"https://backdropcms.org/project/bbb\">https://backdropcms.org/project/bbb</a> <span aria-label=\"fireworks\" class=\"emoji emoji-1f386\" role=\"img\" title=\"fireworks\">:fireworks:</span><br>\n<span class=\"user-mention\" data-user-id=\"269952\">@LeeteqXV</span></p>",
+        "id": 203249383,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1594202275
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> ++</p>",
+        "id": 203303732,
+        "sender_full_name": "klonos",
+        "timestamp": 1594232633
+    },
+    {
+        "content": "<p>vasas** go team. (Karma: 2)</p>",
+        "id": 203303733,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1594232634
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> ++</p>",
+        "id": 203304826,
+        "sender_full_name": "LeeteqXV",
+        "timestamp": 1594233152
+    },
+    {
+        "content": "<p>vasas** 1000% (Karma: 3)</p>",
+        "id": 203304827,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1594233152
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> , I have implemented your new module and it works right out of the box. Excellent and thanx a bunch. I will add some more info related to this and my take on the perspectives for Backdrop here shortly/within this week.</p>",
+        "id": 203305150,
+        "sender_full_name": "LeeteqXV",
+        "timestamp": 1594233313
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269952\">@LeeteqXV</span> I am very happy, thank You! <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span> Note: I will be on vacation from July 13-25.</p>",
+        "id": 203332949,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1594248381
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> It would be worth trying to figure out how to get the new BBB module listed here: <a href=\"https://bigbluebutton.org/integrations/\">https://bigbluebutton.org/integrations/</a></p>",
+        "id": 204244272,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595011880
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Good idea, thanks!: <a href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180\">https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/230228?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180\" title=\"New integration - Backdrop CMS · Issue #180 · bigbluebutton/bigbluebutton.github.io\">New integration - Backdrop CMS · Issue #180 · bigbluebutton/bigbluebutton.github.io</a></div><div class=\"message_embed_description\">BigBlueButton has got a new integration with Backdrop CMS: https://backdropcms.org/project/bbb Please add it to the list of integrations: https://bigbluebutton.org/integrations/ Thanks!</div></div></div>",
+        "id": 205009953,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1595693392
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> ++</p>",
+        "id": 205022613,
+        "sender_full_name": "klonos",
+        "timestamp": 1595713019
+    },
+    {
+        "content": "<p>vasas** :-) (Karma: 4)</p>",
+        "id": 205022614,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1595713019
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  or somebody. Please help in a license problem: <a href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180\">https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180</a><br>\nThe ported 7.x-1.x branch of BBB Drupal module hasn't got License.txt file.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/230228?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180\" title=\"New integration - Backdrop CMS · Issue #180 · bigbluebutton/bigbluebutton.github.io\">New integration - Backdrop CMS · Issue #180 · bigbluebutton/bigbluebutton.github.io</a></div><div class=\"message_embed_description\">BigBlueButton has got a new integration with Backdrop CMS: https://backdropcms.org/project/bbb Please add it to the list of integrations: https://bigbluebutton.org/integrations/ Thanks!</div></div></div>",
+        "id": 205157780,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1595877804
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> <a href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180#issuecomment-664593137\">https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180#issuecomment-664593137</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180#issuecomment-664593137\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/230228?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/bigbluebutton/bigbluebutton.github.io/issues/180#issuecomment-664593137\" title=\"New integration - Backdrop CMS · Issue #180 · bigbluebutton/bigbluebutton.github.io\">New integration - Backdrop CMS · Issue #180 · bigbluebutton/bigbluebutton.github.io</a></div><div class=\"message_embed_description\">BigBlueButton has got a new integration with Backdrop CMS: https://backdropcms.org/project/bbb Please add it to the list of integrations: https://bigbluebutton.org/integrations/ Thanks! Suggested e...</div></div></div>",
+        "id": 205158466,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595878202
+    },
+    {
+        "content": "<p>Thank You <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++</p>",
+        "id": 205162019,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1595880295
+    },
+    {
+        "content": "<p><strong>laryn</strong> kudos (Karma: 10)</p>",
+        "id": 205162020,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1595880296
+    }
+]

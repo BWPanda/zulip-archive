@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>The <code>even</code> / <code>odd</code> class names of the Backdrop field display seem strange to me:</p>\n<div class=\"codehilite\"><pre><span></span><code>&lt;div class=&quot;field ...&gt;\n  &lt;div class=&quot;field-items&quot;&gt;\n    &lt;div class=&quot;field-item even&quot;&gt;...&lt;/div&gt;\n    &lt;div class=&quot;field-item odd&quot;&gt;...&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</code></pre></div>\n<p>Shouldn't the first field item have the class <code>odd</code>, and the second <code>even</code>?</p>",
+        "id": 216215468,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1605017251
+    },
+    {
+        "content": "<p>Are you starting the counting from 0 or 1? <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 216236185,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605025691
+    },
+    {
+        "content": "<p>Well, at least Views starts with 1: <code>&lt;div class=\"views-row views-row-1 odd first ...\"&gt;</code></p>",
+        "id": 216240054,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1605027307
+    },
+    {
+        "content": "<p>FWIW, I would also expect the first rendered row to be starting with \"odd\".</p>",
+        "id": 216265316,
+        "sender_full_name": "klonos",
+        "timestamp": 1605038195
+    }
+]

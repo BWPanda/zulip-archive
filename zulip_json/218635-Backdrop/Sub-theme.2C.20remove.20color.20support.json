@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I was considering to provide color support for a sub-theme of <em>Basis</em>. Out of the box, I see the <em>Basis</em> color settings in my sub-theme. Then I wanted to provide a subset of the settings, e.g. only header and footer background but that seems to be complicated. So for now I want to just remove color support for the sub-theme, so that it doesn't show the settings coming from <em>Basis</em>. Does anyone know how to do it?</p>",
+        "id": 202615803,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593632938
+    },
+    {
+        "content": "<p>Try setting <code>settings[color] = false</code> in the .info file of the theme ...see: <a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/themes/basis/basis.info#L44\">https://github.com/backdrop/backdrop/blob/1.x/core/themes/basis/basis.info#L44</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/themes/basis/basis.info#L44\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/themes/basis/basis.info#L44\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 202636912,
+        "sender_full_name": "klonos",
+        "timestamp": 1593647486
+    },
+    {
+        "content": "<p><code>settings[color] = false</code> doesn't do anything.</p>\n<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>  I didn't find a way to achieve this (getting rid of a base modules color settings), but I'm also interested. Reading the color module's code makes me think that it's impossible. The base theme's settings are always merged regardless of what the sub theme sets or unsets. At best one can produce php notices...</p>",
+        "id": 202654367,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593671559
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4463\">https://github.com/backdrop/backdrop-issues/issues/4463</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4463\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4463\" title=\"[DX] Allow sub-themes to disable color support inherited by their parent theme · Issue #4463 · backdrop/backdrop-issues\">[DX] Allow sub-themes to disable color support inherited by their parent theme · Issue #4463 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This was brought up in Zulip: https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Sub-theme.2C.20remove.20color.20support @olafgrabienski I was considering to provide color support ...</div></div></div>",
+        "id": 202654891,
+        "sender_full_name": "klonos",
+        "timestamp": 1593672163
+    },
+    {
+        "content": "<p><span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 202654894,
+        "sender_full_name": "klonos",
+        "timestamp": 1593672167
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Thanks for your feedback and the new issue in the queue. So let’s continue there!</p>",
+        "id": 202658597,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593675453
+    },
+    {
+        "content": "<p>Maybe <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> can provide some feedback there, but he's currently out of town, so it will be next week before he can chime in.</p>",
+        "id": 202691833,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593698401
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Is this port completed/functional to your knowledge? <a href=\"https://github.com/backdrop-contrib/search_api\">https://github.com/backdrop-contrib/search_api</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/search_api\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/search_api\" title=\"backdrop-contrib/search_api\">backdrop-contrib/search_api</a></div><div class=\"message_embed_description\">Provides a generic API for modules offering search capabilities - backdrop-contrib/search_api</div></div></div>",
+        "id": 200414410,
+        "sender_full_name": "Laryn",
+        "timestamp": 1591795070
+    },
+    {
+        "content": "<p>Someone asked me if they could include PDF content in search results, so was considering porting this one: <br>\n<a href=\"https://www.drupal.org/project/search_api_attachments\">https://www.drupal.org/project/search_api_attachments</a></p>",
+        "id": 200414777,
+        "sender_full_name": "Laryn",
+        "timestamp": 1591795245
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I only did the initial raw port, to help get this started. I dont think its ready yet. There havent been any new PRs against my initial crude work.</p>",
+        "id": 200435791,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591804561
+    },
+    {
+        "content": "<p>Got it -- thanks.</p>",
+        "id": 200436125,
+        "sender_full_name": "Laryn",
+        "timestamp": 1591804641
+    },
+    {
+        "content": "<p>I tested it recently. Seemed to mostly work but couldn't get it to appear in views</p>",
+        "id": 200494988,
+        "sender_full_name": "Herb",
+        "timestamp": 1591835267
+    },
+    {
+        "content": "<p>I'm trying to use Search API (with the DB backend) for a new site, but I can't get it working. I'm assuming you need Views in order to get the actual search field and results page, and so if the Views integration isn't working then I'm assuming the whole module doesn't work...?</p>",
+        "id": 211695921,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601420654
+    },
+    {
+        "content": "<p>Or does anyone have it working on Backdrop yet?</p>",
+        "id": 211695928,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601420666
+    },
+    {
+        "content": "<p>I got a search box working using just Views and a Combine Fields Filter. Seems to do the trick for now. Might re-visit Search API once it's working better.</p>",
+        "id": 211704123,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601427637
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I didn't get it fully working a while back either. You got it working with Search API or without?</p>",
+        "id": 211710183,
+        "sender_full_name": "Herb",
+        "timestamp": 1601434953
+    },
+    {
+        "content": "<p>I mean I got Search API mostly working with the db submodule. The config looked right, the view seemed right but just wouldn't work fully. I didn't need to use it so I quit trying</p>",
+        "id": 211710289,
+        "sender_full_name": "Herb",
+        "timestamp": 1601435104
+    },
+    {
+        "content": "<p>I got search functionality on my site working, without Search API (I ended up uninstalling it).</p>",
+        "id": 211711103,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601436065
+    },
+    {
+        "content": "<p>I just setup a view that included all fields I wanted to show on the results page and/or be used for searching in (e.g. 'indexed'), then used a Combine Fields Filter to have a single search box that searched the values of all those fields.</p>",
+        "id": 211711184,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601436125
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Search.20API/near/211711184\">said</a>:</p>\n<blockquote>\n<p>I just setup a view that included all fields I wanted to show on the results page and/or be used for searching in (e.g. 'indexed'), then used a Combine Fields Filter to have a single search box that searched the values of all those fields.</p>\n</blockquote>\n<p>That's odd.  I haven't had any problems with just using the basic search module as is.  It works on all the Backdrop sites I have live so far.  But then, I only search title or body fields, no custom.</p>",
+        "id": 211780743,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601481000
+    },
+    {
+        "content": "<p>My reason for needing an alternative to core search is the ability to search for, say, 'docum' and have results with 'documentation' appear. Core search doesn't do this, but Search API does, and Views filtering has a 'contains' filter which does this.</p>",
+        "id": 211815871,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601497747
+    },
+    {
+        "content": "<p>However, we need better search in the long term (core or contrib). I was pretty happy with Search API in D7 because of </p>\n<ul>\n<li>search for partial words</li>\n<li>narrow search results</li>\n<li>search autocomplete (some customers really need this)</li>\n<li>hide certain content or content type</li>\n<li>regex (e.g. remove some characters in search string) </li>\n</ul>\n<p>But in the past, the demand for this was not very high within the community... but maybe this has changed in the meantime...?</p>",
+        "id": 212062029,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1601638181
+    },
+    {
+        "content": "<p>Search API is pretty close to working</p>",
+        "id": 212076067,
+        "sender_full_name": "Herb",
+        "timestamp": 1601646323
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> re excluding content types, doesn't <a href=\"https://github.com/backdrop/backdrop-issues/issues/4197\">https://github.com/backdrop/backdrop-issues/issues/4197</a> help?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4197\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4197\" title=\"[UX] Add configuration to exclude node types from search indexing · Issue #4197 · backdrop/backdrop-issues\">[UX] Add configuration to exclude node types from search indexing · Issue #4197 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Here is the excerpt from https://github.com/backdrop-contrib/search_index_options: The core search module scans all the available content, regardless of whether some content...</div></div></div>",
+        "id": 212722395,
+        "sender_full_name": "klonos",
+        "timestamp": 1602177526
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"367848\">@earlyburg</span> oh, you seem to have worked on Search API, cool... Now the error on installation has gone. But I do not finde the search api database module anymore, so no Service Class available. Or do I miss something...? <a href=\"/user_uploads/18319/E0F68eboRn1PruMsQfv45Egf/Screenshot-2020-12-22-at-17.05.04.png\">Screenshot-2020-12-22-at-17.05.04.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/E0F68eboRn1PruMsQfv45Egf/Screenshot-2020-12-22-at-17.05.04.png\" title=\"Screenshot-2020-12-22-at-17.05.04.png\"><img src=\"/user_uploads/18319/E0F68eboRn1PruMsQfv45Egf/Screenshot-2020-12-22-at-17.05.04.png\"></a></div>",
+        "id": 220705099,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1608653131
+    },
+    {
+        "content": "<p>Hello  <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> <br>\nI have been discussing the issue with <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  who currently is the sole maintainer, having him add me as a maintainer. Once this is done I'll do an official release. The code found here:<br>\n<a href=\"https://github.com/backdrop-contrib/search_api_db\">https://github.com/backdrop-contrib/search_api_db</a><br>\ndoes work. Also there is another module here:<br>\n<a href=\"https://github.com/backdrop-contrib/search_api_solr\">https://github.com/backdrop-contrib/search_api_solr</a><br>\nthat will allow you to create a service class based on an Apache Solr installation.<br>\n<a href=\"https://lucene.apache.org/solr/\">https://lucene.apache.org/solr/</a><br>\nDocwilmot and I understand the importance of this module and we are working hard to get a release done.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/search_api_db\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/search_api_db\" title=\"backdrop-contrib/search_api_db\">backdrop-contrib/search_api_db</a></div><div class=\"message_embed_description\">Provides a database based implementation of the Search API - backdrop-contrib/search_api_db</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/search_api_solr\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/search_api_solr\" title=\"backdrop-contrib/search_api_solr\">backdrop-contrib/search_api_solr</a></div><div class=\"message_embed_description\">This module provides an implementation of the Search API which uses an Apache Solr search server for indexing and searching. - backdrop-contrib/search_api_solr</div></div></div>",
+        "id": 220711952,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1608656836
+    },
+    {
+        "content": "<p>just sent you a pm I think..</p>",
+        "id": 220712071,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1608656896
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"367848\">@earlyburg</span> ++</p>",
+        "id": 220719797,
+        "sender_full_name": "klonos",
+        "timestamp": 1608661765
+    },
+    {
+        "content": "<p><strong>earlyburg</strong> GG (Karma: 1)</p>",
+        "id": 220719798,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608661765
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ++</p>",
+        "id": 220719803,
+        "sender_full_name": "klonos",
+        "timestamp": 1608661770
+    },
+    {
+        "content": "<p><strong>docwilmot</strong> leveled up! (Karma: 17)</p>",
+        "id": 220719804,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608661770
+    },
+    {
+        "content": "<p>...and <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ++ for the testing and feedback <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 220719832,
+        "sender_full_name": "klonos",
+        "timestamp": 1608661789
+    },
+    {
+        "content": "<p><strong>mazze.ch</strong> <span aria-label=\"pancakes\" class=\"emoji emoji-1f95e\" role=\"img\" title=\"pancakes\">:pancakes:</span> (Karma: 11)</p>",
+        "id": 220719833,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608661789
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"367848\">@earlyburg</span> thanks for the good work on it!</p>",
+        "id": 220867992,
+        "sender_full_name": "Herb",
+        "timestamp": 1608814120
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"367848\">@earlyburg</span> ++</p>",
+        "id": 220868015,
+        "sender_full_name": "Herb",
+        "timestamp": 1608814161
+    },
+    {
+        "content": "<p><strong>earlyburg</strong> <span aria-label=\"pancakes\" class=\"emoji emoji-1f95e\" role=\"img\" title=\"pancakes\">:pancakes:</span> (Karma: 2)</p>",
+        "id": 220868016,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608814161
+    },
+    {
+        "content": "<p>I've been trying to test and report possible fixes too</p>",
+        "id": 220868036,
+        "sender_full_name": "Herb",
+        "timestamp": 1608814202
+    }
+]

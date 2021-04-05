@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>As a library website with multiple locations, I've always been interested in modules like Office Hours but never used them.  <a href=\"https://www.drupal.org/project/office_hours\" target=\"_blank\" title=\"https://www.drupal.org/project/office_hours\">https://www.drupal.org/project/office_hours</a>  I downloaded the D7 version and made the changes to the .info file and it magically works in a Backdrop site.  I'm not sure if there's anything else to change beyond making it work.</p>",
+        "id": 185228900,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1578587448
+    },
+    {
+        "content": "<p>I haven't looked at this module. Backdrop allows deprecated variables from d7 but to be fully Backdrop compatible might need to convert variables to config</p>",
+        "id": 185229462,
+        "sender_full_name": "Herb",
+        "timestamp": 1578587721
+    },
+    {
+        "content": "<p>In searching the .module file there is one instance of variable_get.  If that's what you're looking for.</p>",
+        "id": 185229933,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1578587986
+    },
+    {
+        "content": "<p>That, but also variable_set().</p>",
+        "id": 185230278,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578588140
+    },
+    {
+        "content": "<p>The variable_get is all that's there.  I guess another question is that a dependency in D7 was date_api.  Was that included in the Date module in Backdrop core?  The only thing that appears to not be working is that I need to enter the time using the 24 hour format but then it displays a.m. and p.m. but when using the 12 hour format to enter in the fields it doesn't work.</p>",
+        "id": 185231304,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1578588763
+    },
+    {
+        "content": "<p>should be able to remove date_api dependency.</p>",
+        "id": 185232393,
+        "sender_full_name": "Herb",
+        "timestamp": 1578589312
+    },
+    {
+        "content": "<p>If there are any <code>module_exists</code> for date_api you can remove those and see if it works better</p>",
+        "id": 185232482,
+        "sender_full_name": "Herb",
+        "timestamp": 1578589346
+    },
+    {
+        "content": "<p>I removed the dependency to get it to turn on.  Don't find any of those module_exists yet.  I'll keep messing with it.  I'm just amazed it worked this easily!  Especially not being a php developer...yet.</p>",
+        "id": 185232840,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1578589519
+    },
+    {
+        "content": "<p>When I search the whole module I see <code>variable_get</code>, <code>variable_set</code>, <code>variable_del</code></p>",
+        "id": 185232862,
+        "sender_full_name": "Herb",
+        "timestamp": 1578589537
+    },
+    {
+        "content": "<p>I think it wouldn't take too much work to convert fully</p>",
+        "id": 185232892,
+        "sender_full_name": "Herb",
+        "timestamp": 1578589561
+    },
+    {
+        "content": "<p>Ah, I was searching individual files not the whole thing.</p>",
+        "id": 185233006,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1578589614
+    }
+]

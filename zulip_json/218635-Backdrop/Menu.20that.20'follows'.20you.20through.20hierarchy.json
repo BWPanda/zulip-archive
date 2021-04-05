@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p>Is there a module (or way of configuring core's functionality) that let's you display a menu that 'follows' you through the hierarchy? As an example, consider the following menu:</p>\n<div class=\"codehilite\"><pre><span></span><code>Level 1-A\n- Level 2-A\n- Level 2-B\n  - Level 3-A\n  - Level 3-B\n- Level 2-C\nLevel 1-B\nLevel 1-C\n</code></pre></div>\n<p>Initially only <code>Level 1-*</code> links are displayed. When you click <code>Level 1-A</code> then you see only the <code>Level 2-*</code> links. When you click <code>Level 2-B</code> then you see only <code>Level 3-A</code> and <code>Level 3-B</code>.</p>",
+        "id": 231591689,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616569737
+    },
+    {
+        "content": "<p>In other words, all links at or above the current one are hidden.</p>",
+        "id": 231591720,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616569774
+    },
+    {
+        "content": "<p>I don't know the answer, but for curiosity: How do you go back to a higher level when these links aren't displayed?</p>",
+        "id": 231605467,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616578805
+    },
+    {
+        "content": "<p>Breadcrumbs, back button, etc. Same as any other link on a website.</p>",
+        "id": 231605713,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616578925
+    },
+    {
+        "content": "<p>I see! On <a href=\"https://drupal.stackexchange.com/questions/100937/three-level-menu-how-to-show-only-the-children-of-the-current-page\">Drupal Answers</a> someone says, the Menu Block module provides some options to achieve it. I guess that part of Menu Block didn't make it in Backdrop, might give an idea for a separate module, though.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://drupal.stackexchange.com/questions/100937/three-level-menu-how-to-show-only-the-children-of-the-current-page\" style=\"background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://drupal.stackexchange.com/questions/100937/three-level-menu-how-to-show-only-the-children-of-the-current-page\" title=\"Three level menu: How to show only the children of the current page?\">Three level menu: How to show only the children of the current page?</a></div><div class=\"message_embed_description\">A three level menu:\n\n  Item 1\n    Item A\n        Item X\n        Item Y\n        Item Z\n    Item B\n        Item Xx\n        Item Yx\n        Item Zx\n    Item C\n        Item Xy\r\nWhen viewing the \"Item 1...</div></div></div>",
+        "id": 231606626,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616579399
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> if I get your question right, you're searching for something that the D7 menu_block module provided: \"Make the starting level follow the active menu item.\" I'm not aware of a module, that provides this for Backdrop yet.</p>",
+        "id": 231607339,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616579783
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>! I knew I had seen a \"Make the starting level follow the active menu item\" option somewhere before. Seems it was in that D7 module.</p>",
+        "id": 231607374,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616579807
+    },
+    {
+        "content": "<p>The module you are looking for <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> is most likely <a href=\"https://www.drupal.org/project/hierarchical_select\">https://www.drupal.org/project/hierarchical_select</a></p>",
+        "id": 231614794,
+        "sender_full_name": "klonos",
+        "timestamp": 1616583390
+    },
+    {
+        "content": "<p>...not sure if there was an equivalent for menus.</p>",
+        "id": 231614873,
+        "sender_full_name": "klonos",
+        "timestamp": 1616583426
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Thanks, but <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> and <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> were right that it was Menu Block, of which Backdrop has a (hidden) port: <a href=\"https://github.com/docwilmot/menu_block\">https://github.com/docwilmot/menu_block</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/docwilmot/menu_block\" style=\"background-image: url(https://avatars.githubusercontent.com/u/1042283?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/docwilmot/menu_block\" title=\"docwilmot/menu_block\">docwilmot/menu_block</a></div><div class=\"message_embed_description\">Contribute to docwilmot/menu_block development by creating an account on GitHub.</div></div></div>",
+        "id": 231615062,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616583544
+    },
+    {
+        "content": "<p>Right <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 231615093,
+        "sender_full_name": "klonos",
+        "timestamp": 1616583561
+    },
+    {
+        "content": "<p>...wasn't that functionality included in core though?</p>",
+        "id": 231615114,
+        "sender_full_name": "klonos",
+        "timestamp": 1616583585
+    },
+    {
+        "content": "<p>...I thought so.</p>",
+        "id": 231615118,
+        "sender_full_name": "klonos",
+        "timestamp": 1616583590
+    },
+    {
+        "content": "<p>...OK, only the \"Maximum depth\" feature seems to have been merged into core ...what you are after is the \"Make the starting level follow the active menu item\" feature I guess.</p>",
+        "id": 231615450,
+        "sender_full_name": "klonos",
+        "timestamp": 1616583734
+    },
+    {
+        "content": "<p>Yep</p>",
+        "id": 231616146,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616584048
+    },
+    {
+        "content": "<p>Yes, that part wasn't included. At some point I thought I needed to port it but then realized I didn't need it</p>",
+        "id": 231887454,
+        "sender_full_name": "Herb",
+        "timestamp": 1616712002
+    }
+]

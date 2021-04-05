@@ -1,0 +1,164 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html">SSL on updates server</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="199274009"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199274009" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199274009">(May 30 2020 at 20:10)</a>:</h4>
+<p><code>curl -I https://updates.backdropcms.org/
+curl: (60) SSL certificate problem: certificate has expired</code></p>
+
+
+
+<a name="199276472"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199276472" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199276472">(May 30 2020 at 21:21)</a>:</h4>
+<p>Am getting an error searching for a module from within Backdrop <code>Status message
+Encountered an error when trying to fetch results from Backdrop. Error 0 : Error opening socket ssl://projects.backdropcms.org:443</code> which might be related?</p>
+
+
+
+<a name="199276473"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199276473" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199276473">(May 30 2020 at 21:21)</a>:</h4>
+<p>Hi, Kevin Golding. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>
+<p>Here is a short (3 min) video to help you navigate Zulip. <a href="https://youtu.be/DN8YL2MrsSU">https://youtu.be/DN8YL2MrsSU</a></p>
+<div class="youtube-video message_inline_image"><a data-id="DN8YL2MrsSU" href="https://youtu.be/DN8YL2MrsSU"><img src="https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg"></a></div>
+
+
+
+<a name="199277737"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199277737" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199277737">(May 30 2020 at 21:56)</a>:</h4>
+<p>@all anyone else having an SSL issue with update server? I haven't checked</p>
+
+
+
+<a name="199280183"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199280183" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199280183">(May 30 2020 at 23:04)</a>:</h4>
+<p>I just did a <code>CHECK MANUALLY</code> on <code>/admin/reports/updates</code> from one of my sites and no error for me.</p>
+
+
+
+<a name="199291688"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199291688" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199291688">(May 31 2020 at 05:27)</a>:</h4>
+<p>After 2020-05-31 11:00 UTC one site cannot get update information. An example from dblog: <br>
+HTTP request to <a href="https://updates.backdropcms.org/release-history/bueditor/1.x?site_key=...&amp;version=1.x-2.1&amp;list=bueditor">https://updates.backdropcms.org/release-history/bueditor/1.x?site_key=...&amp;version=1.x-2.1&amp;list=bueditor</a> failed with error: Error opening socket ssl://updates.backdropcms.org:443.<br>
+Server - Linode Dallas, TX, USA (Debian 8 LTS)</p>
+
+
+
+<a name="199295622"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199295622" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199295622">(May 31 2020 at 07:40)</a>:</h4>
+<p>Hm... Can't reproduce a problem here. Neither on command line nor with a real browser.</p>
+<p><code>openssl s_client -connect updates.backdropcms.org:443</code></p>
+<p>The Commodo certificate shows as being valid until 6. October 2020, 23:59:59 GMT</p>
+
+
+
+<a name="199296250"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199296250" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199296250">(May 31 2020 at 08:04)</a>:</h4>
+<p>This is only one site running on old but fully updated version  of Debian - 8.11. Sites on Debian 9 get update info as usual, but even from such server if I try "curl" - I see same certificate problem report.</p>
+
+
+
+<a name="199296651"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199296651" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199296651">(May 31 2020 at 08:21)</a>:</h4>
+<p>I don't have a Debian 8 anymore, the oldest I have is 9 (Stretch). And on a Debian 9 I could reproduce the problem with <strong>curl</strong> (and only curl). I bet that's rather a curl bug than a problem with Backdrop. On Debian Buster (10) everything works fine.</p>
+
+
+
+<a name="199296839"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199296839" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199296839">(May 31 2020 at 08:28)</a>:</h4>
+<p>A quick thought on this: the TLS version? Recent clients (command line or graphical) are using Protocol  : TLSv1.3. Maybe the older curl versions aren't aware of this?</p>
+
+
+
+<a name="199297648"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199297648" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199297648">(May 31 2020 at 08:59)</a>:</h4>
+<p>Probably this is really kind of problem from old software, but curiously: what changed just yesterday?</p>
+
+
+
+<a name="199298007"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199298007" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199298007">(May 31 2020 at 09:10)</a>:</h4>
+<p>There seems to be a problem. I gave ssllabs a try - and that shows the certificate as expired as of yesterday:</p>
+<p><a href="https://www.ssllabs.com/ssltest/analyze.html?d=updates.backdropcms.org">https://www.ssllabs.com/ssltest/analyze.html?d=updates.backdropcms.org</a></p>
+<p>Details:<br>
+<a href="/user_uploads/18319/4oQGA2DCy97Fl2abRB6WJDYz/screenshot-expired-cert.png">screenshot-expired-cert.png</a> </p>
+<div class="message_inline_image"><a href="/user_uploads/18319/4oQGA2DCy97Fl2abRB6WJDYz/screenshot-expired-cert.png" title="screenshot-expired-cert.png"><img src="/user_uploads/18319/4oQGA2DCy97Fl2abRB6WJDYz/screenshot-expired-cert.png"></a></div><p>Are some dev-ops around? Could someone please restart nginx? Some processes still seem to have the old cert loaded.</p>
+
+
+
+<a name="199298532"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199298532" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199298532">(May 31 2020 at 09:28)</a>:</h4>
+<p>Related info - <a href="https://news.ycombinator.com/item?id=23362759">https://news.ycombinator.com/item?id=23362759</a></p>
+
+
+
+<a name="199300407"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199300407" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199300407">(May 31 2020 at 10:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@Nate Lampton</span> or <span class="user-mention" data-user-id="268294">@larsdesigns</span> please see above about old cert</p>
+
+
+
+<a name="199313921"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199313921" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alexandr <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199313921">(May 31 2020 at 17:29)</a>:</h4>
+<p>I have the same problem both on shared hosting Jino and on OpenServer. Does it depend on the region? In Russia, we have a lot of sites under the ban in recent years.<br>
+<a href="/user_uploads/18319/ZA7xsWaqpKkNSJ-Lizio81TS/Jino-Backdrop-443.JPG">Jino-Backdrop-443.JPG</a> <a href="/user_uploads/18319/3AXNNgknJi4k6e2uH_wXSqgt/OpenServer-Backdrop-443.JPG">OpenServer-Backdrop-443.JPG</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/ZA7xsWaqpKkNSJ-Lizio81TS/Jino-Backdrop-443.JPG" title="Jino-Backdrop-443.JPG"><img src="/user_uploads/18319/ZA7xsWaqpKkNSJ-Lizio81TS/Jino-Backdrop-443.JPG"></a></div><div class="message_inline_image"><a href="/user_uploads/18319/3AXNNgknJi4k6e2uH_wXSqgt/OpenServer-Backdrop-443.JPG" title="OpenServer-Backdrop-443.JPG"><img src="/user_uploads/18319/3AXNNgknJi4k6e2uH_wXSqgt/OpenServer-Backdrop-443.JPG"></a></div>
+
+
+
+<a name="199313922"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199313922" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199313922">(May 31 2020 at 17:29)</a>:</h4>
+<p>Hi, Alexandr. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>
+<p>Here is a short (3 min) video to help you navigate Zulip. <a href="https://youtu.be/DN8YL2MrsSU">https://youtu.be/DN8YL2MrsSU</a></p>
+<div class="youtube-video message_inline_image"><a data-id="DN8YL2MrsSU" href="https://youtu.be/DN8YL2MrsSU"><img src="https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg"></a></div>
+
+
+
+<a name="199314181"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199314181" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199314181">(May 31 2020 at 17:37)</a>:</h4>
+<p><span class="user-mention" data-user-id="307798">@Alexandr</span> problem is not specific for a region, if you prefer read on Russian: <a href="https://www.opennet.ru/opennews/art.shtml?num=53061">https://www.opennet.ru/opennews/art.shtml?num=53061</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://www.opennet.ru/opennews/art.shtml?num=53061" style="background-image: url(https://www.opennet.ru/opennet_192tg.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://www.opennet.ru/opennews/art.shtml?num=53061" title="Устаревание корневого сертификата AddTrust привело к массовым сбоям">Устаревание корневого сертификата AddTrust привело к массовым сбоям</a></div><div class="message_embed_description">30 мая истёк 20-летний срок действия корневого сертификата  AddTrust , который  применялся   для формирования перекрёстной подписи (cross-signed) в сертификатах  одного из крупнейших удостоверяющих центров Sectigo (Comodo). Перекрёстная подпись позволяла обеспечить совместимость с устаревшими устройствами, в хранилище корневых сертификатов которых не был добавлен новый корневой сертификат USERTRust</div></div></div>
+
+
+
+<a name="199314450"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199314450" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alexandr <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199314450">(May 31 2020 at 17:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="268468">@Vladimir</span> thanks for fast reply! I think I get it :)</p>
+
+
+
+<a name="199321131"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199321131" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199321131">(May 31 2020 at 21:03)</a>:</h4>
+<p>Hi Folks! Thanks for the heads-up. I'll take a look.</p>
+
+
+
+<a name="199322245"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199322245" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199322245">(May 31 2020 at 21:41)</a>:</h4>
+<p>We're affected by <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/10228/14/sectigo-root-certificate-expiring-may-30-2020/">https://www.namecheap.com/support/knowledgebase/article.aspx/10228/14/sectigo-root-certificate-expiring-may-30-2020/</a> While our direct cert has not yet expired, the root certificate that qualifies ours expired yesterday. Weird that would happen at all. I'll reissue the cert</p>
+
+
+
+<a name="199323229"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/SSL%20on%20updates%20server/near/199323229" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/SSL.20on.20updates.20server.html#199323229">(May 31 2020 at 22:13)</a>:</h4>
+<p>Root certificates are fixed with updated versions . Increased our cipher security as well so we're now A rated. Thanks <span class="user-mention" data-user-id="268468">@Vladimir</span> for raising this issue! <a href="/user_uploads/18319/JkJB2MtLqeqUJ0FP50VO1FYP/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/JkJB2MtLqeqUJ0FP50VO1FYP/image.png" title="image.png"><img src="/user_uploads/18319/JkJB2MtLqeqUJ0FP50VO1FYP/image.png"></a></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

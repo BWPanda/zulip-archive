@@ -1,0 +1,170 @@
+[
+    {
+        "content": "<p>I am just realizing that users do not see other streams until they join them. To see other available streams, you need to search for them OR click on the cog wheel in the Streams block. </p>\n<p><a href=\"/user_uploads/18319/6pGgO-GOv_WWCDHYYyaTY-Sc/Zulip_-_Backdrop_CMS.png\" target=\"_blank\" title=\"Zulip_-_Backdrop_CMS.png\">Zulip_-_Backdrop_CMS.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/6pGgO-GOv_WWCDHYYyaTY-Sc/Zulip_-_Backdrop_CMS.png\" target=\"_blank\" title=\"Zulip_-_Backdrop_CMS.png\"><img src=\"/user_uploads/18319/6pGgO-GOv_WWCDHYYyaTY-Sc/Zulip_-_Backdrop_CMS.png\"></a></div>",
+        "id": 184861067,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578252210
+    },
+    {
+        "content": "<p>Or click 'Add streams' in the left sidebar under the Streams section</p>",
+        "id": 184861118,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578252275
+    },
+    {
+        "content": "<p>I think there's a setting to make streams default or something like that</p>",
+        "id": 184861530,
+        "sender_full_name": "Herb",
+        "timestamp": 1578252937
+    },
+    {
+        "content": "<p>Yes, currently 'General' is the default stream everyone's automatically subscribed to</p>",
+        "id": 184861573,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578252985
+    },
+    {
+        "content": "<p><a href=\"#narrow/stream/218635-General/topic/new.20streams/near/184861920\" title=\"#narrow/stream/218635-General/topic/new.20streams/near/184861920\">https://backdrop.zulipchat.com/#narrow/stream/218635-General/topic/new.20streams/near/184861920</a></p>",
+        "id": 184861925,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578253611
+    },
+    {
+        "content": "<p>So the solution would then be to have a bot that notifies people in <a class=\"stream\" data-stream-id=\"218635\" href=\"/#narrow/stream/218635-General\">#General</a> whenever there is a new stream created, I guess.</p>",
+        "id": 184862488,
+        "sender_full_name": "klonos",
+        "timestamp": 1578254602
+    },
+    {
+        "content": "<p>I thought that's what the Notification Bot was supposed to do in the 'new streams' topic...</p>",
+        "id": 184862636,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578254837
+    },
+    {
+        "content": "<div class=\"message_inline_image\"><a href=\"http://i.imgur.com/OqXkldK.png\" target=\"_blank\" title=\"http://i.imgur.com/OqXkldK.png\"><img src=\"https://uploads.zulipusercontent.net/f532981293d1fe661b2dd89501f11a6c890cadbf/687474703a2f2f692e696d6775722e636f6d2f4f71586b6c644b2e706e67\"></a></div>",
+        "id": 184862701,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578254924
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Are you able to look into this for us?</p>",
+        "id": 184862711,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578254955
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> - I changed settings to provide notifications of new streams.</p>",
+        "id": 184863491,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578256273
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I was shown all of the four streams that existed when I joined, but maybe that was only because I was joining.</p>",
+        "id": 184865656,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578259494
+    },
+    {
+        "content": "<p>Ah, maybe it was, because now I see there are others I did not know about.</p>",
+        "id": 184865695,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578259550
+    },
+    {
+        "content": "<p>Hmm, I can see now with many streams and threads, it could actually get confusing to keep up on what is going on, despite the ability to separate them.</p>",
+        "id": 184865770,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578259658
+    },
+    {
+        "content": "<p>I like to think of topics as tags on forums/blogs. In that sense, I know that they may end up being many, but they are very helpful for filtering lengthy streams (hence makes it easier to catch up, by focusing only on the topics that may interest you) ...it is worth mentioning that topics seem to be automatically hidden after a certain period ...until there is activity in them again.</p>",
+        "id": 184865948,
+        "sender_full_name": "klonos",
+        "timestamp": 1578259912
+    },
+    {
+        "content": "<p>We could get rid of some/most streams if it's not working well. Could keep it mostly centralized</p>",
+        "id": 184867914,
+        "sender_full_name": "Herb",
+        "timestamp": 1578262950
+    },
+    {
+        "content": "<p>Yes, right now anyone can create Stream. We can limit that. We could have only a few streams.</p>",
+        "id": 184868657,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578264222
+    },
+    {
+        "content": "<p>I think at this point adopting a wait and see attitude (and ignoring my whining) would be good.</p>",
+        "id": 184869215,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578265097
+    },
+    {
+        "content": "<p>We could create a special stream for whining...</p>",
+        "id": 184869861,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578266189
+    },
+    {
+        "content": "<p>I agree that less is more for now. Don't want people feeling overwhelmed when trying Zulip for first time. I also suggest limiting stream creation to admins.</p>",
+        "id": 184872697,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578271887
+    },
+    {
+        "content": "<p>Just a test message. Sorry for clutter.</p>",
+        "id": 184873799,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578274099
+    },
+    {
+        "content": "<p>Can topics that are added to a stream be moved to another stream? (Maybe admin only functionality, but I don't see it)</p>",
+        "id": 185258756,
+        "sender_full_name": "Laryn",
+        "timestamp": 1578605798
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I have admin access and am not seeing any option to move topics. Given how topics are really like tags, I suspect that this is not possible. But, I'm not sure.</p>",
+        "id": 185259570,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578606352
+    },
+    {
+        "content": "<p>What do folks think about adding a new Outreach stream? I've got two topics I'd like to create there already!</p>",
+        "id": 187692825,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581121312
+    },
+    {
+        "content": "<p>I think we were holding off for a bit on creating new streams until we got the hang of things. But really no hard and fast rules. I think <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> can create them</p>",
+        "id": 187693527,
+        "sender_full_name": "Herb",
+        "timestamp": 1581122154
+    },
+    {
+        "content": "<p>Gotcha Herb. I'm cool with holding on an Outreach stream for now if we're generally holding off on them for a while! :)</p>",
+        "id": 187693741,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581122414
+    },
+    {
+        "content": "<p>We were thinking that we would lock down the streams for now, so our limited traffic didn't get too fragmented.</p>",
+        "id": 187694620,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581123752
+    },
+    {
+        "content": "<p>But, we certainly can add them.</p>",
+        "id": 187694627,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581123775
+    },
+    {
+        "content": "<p>I'm not sure if others intend on continuing to use Zulip should the PMC decide <em>not</em> to go ahead with it, but if/when they do make it official then maybe we can open an issue to discuss what streams would be most beneficial separated from General (e.g. I agree with Outreach being separate, maybe also Infrastructure (<a href=\"http://B.org\" target=\"_blank\" title=\"http://B.org\">B.org</a>, <a href=\"http://api.B.org\" target=\"_blank\" title=\"http://api.B.org\">api.B.org</a>, <a href=\"http://forum.B.org\" target=\"_blank\" title=\"http://forum.B.org\">forum.B.org</a>, etc.)...).</p>",
+        "id": 187701636,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581136578
+    }
+]

@@ -1,0 +1,227 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html">containerd causes high CPU usage</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="201920879"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201920879" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201920879">(Jun 25 2020 at 00:38)</a>:</h4>
+<p>I have a new laptop and I installed Lando (and, as a result, Docker), and now when I boot up my fan start whirring away because a process called <code>containerd</code> is using up almost all of my CPU resources. Note that this is before starting any Lando sites. I realise this probably isn't the best place to ask for help in working out why this is and how to stop it, but maybe someone here experienced the same thing, or maybe someone can point me to where best to ask for help with this... (not sure whether it's a Lando thing, Docker thing, or something else)?</p>
+
+
+
+<a name="201925948"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201925948" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201925948">(Jun 25 2020 at 02:15)</a>:</h4>
+<p>I can't help much but knowing the OS would make it easier for others. I'm guessing containerd is a Docker thing</p>
+
+
+
+<a name="201926012"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201926012" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201926012">(Jun 25 2020 at 02:16)</a>:</h4>
+<p>Linux is my OS, specifically Linux Mint 19.3</p>
+
+
+
+<a name="201951326"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201951326" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201951326">(Jun 25 2020 at 10:11)</a>:</h4>
+<p><code>docker ps</code> show anything running?</p>
+
+
+
+<a name="201951673"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201951673" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201951673">(Jun 25 2020 at 10:15)</a>:</h4>
+<p>also does <code>sudo service docker restart</code> help at all?</p>
+
+
+
+<a name="201951997"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201951997" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201951997">(Jun 25 2020 at 10:20)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> I just restarted my computer to test this (had killed the process manually before). <code>docker ps</code> shows only headings, no data. and restarting docker doesn't do anything for the fan/high CPU usage of <code>containerd</code>.</p>
+
+
+
+<a name="201952040"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201952040" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201952040">(Jun 25 2020 at 10:21)</a>:</h4>
+<p>Interestingly, after restarting and then running <code>top</code>, other processes show they've been running for a minute or two (correct), while <code>containerd</code> shows it's been running for over 2 hrs (not correct)...</p>
+
+
+
+<a name="201952043"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201952043" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201952043">(Jun 25 2020 at 10:21)</a>:</h4>
+<p>and <code>service docker stop</code> lets cpu and fan go back to normal?</p>
+
+
+
+<a name="201952149"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201952149" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201952149">(Jun 25 2020 at 10:23)</a>:</h4>
+<p>Mmm, nope. Stopping docker doesn't stop the <code>containerd</code> process or the fan...</p>
+
+
+
+<a name="201952162"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201952162" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201952162">(Jun 25 2020 at 10:23)</a>:</h4>
+<p>huh;</p>
+
+
+
+<a name="201952228"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201952228" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201952228">(Jun 25 2020 at 10:24)</a>:</h4>
+<p>I'm assuming the <code>time+</code> column in <code>top</code> is the running time...? 'Cause now it says over 5 hours for that process (just in the time I've been typing this).</p>
+
+
+
+<a name="201952232"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201952232" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201952232">(Jun 25 2020 at 10:24)</a>:</h4>
+<p><a href="https://community.linuxmint.com/software/view/containerd">https://community.linuxmint.com/software/view/containerd</a></p>
+
+
+
+<a name="201952365"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201952365" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201952365">(Jun 25 2020 at 10:27)</a>:</h4>
+<p>Hmm, interesting that it only started happening after I installed Docker/Lando though....</p>
+
+
+
+<a name="201952619"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201952619" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201952619">(Jun 25 2020 at 10:31)</a>:</h4>
+<p>Is this a thing you have <a href="https://github.com/ubuntu/microk8s/issues/500#issuecomment-642368118">https://github.com/ubuntu/microk8s/issues/500#issuecomment-642368118</a> ?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/ubuntu/microk8s/issues/500#issuecomment-642368118" style="background-image: url(https://repository-images.githubusercontent.com/132732601/e3882d80-e367-11e9-8177-a6d5ec3eaff3)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/ubuntu/microk8s/issues/500#issuecomment-642368118" title="High CPU usage by gvfs-udisks2-vo which is caused by microk8s · Issue #500 · ubuntu/microk8s">High CPU usage by gvfs-udisks2-vo which is caused by microk8s · Issue #500 · ubuntu/microk8s</a></div><div class="message_embed_description">Please run microk8s.inspect and attach the generated tarball to this issue. inspection-report-20190610_165704.tar.gz We appreciate your feedback. Thank you for using microk8s. top shows: 2293 khteh...</div></div></div>
+
+
+
+<a name="201953088"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201953088" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201953088">(Jun 25 2020 at 10:38)</a>:</h4>
+<p>Nope. Never heard of that repo/name, and can't stop <code>gvfs-udisks2-volume-monitor</code> as it doesn't exist.</p>
+
+
+
+<a name="201953572"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201953572" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201953572">(Jun 25 2020 at 10:45)</a>:</h4>
+<p>does <code>service containerd stop</code> alleviate the problem?</p>
+
+
+
+<a name="201954213"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201954213" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201954213">(Jun 25 2020 at 10:53)</a>:</h4>
+<p>Yes, process disappears from <code>top</code> report and fan slows down and stops too.</p>
+
+
+
+<a name="201954782"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201954782" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201954782">(Jun 25 2020 at 11:00)</a>:</h4>
+<p>Any way to find out what starts a process in the first place? Like is it part of a program/app, if so, which one?</p>
+
+
+
+<a name="201958871"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/201958871" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#201958871">(Jun 25 2020 at 11:52)</a>:</h4>
+<p>something to do with managing <code>runc</code>, but i don't know what that is</p>
+
+
+
+<a name="202036597"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202036597" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202036597">(Jun 25 2020 at 23:13)</a>:</h4>
+<p>Not sure if this is related, but got this message when starting a Lando site:</p>
+<div class="codehilite"><pre><span></span><code>Using an unsupported version of DOCKER ENGINE
+   You have version 18.0.0 but Lando wants something in the 18.09.3 - 19.04.0 range.
+   If you have purposefully installed an unsupported version and know what you are doing
+   you can probably ignore this warning. If not we recommend you use a supported version
+   as this ensures we can provide the best support and stability.
+   https://docs.docker.com/engine/install/
+</code></pre></div>
+
+
+<p>Yet when I run <code>docker -v</code> I get: <code>Docker version 19.03.12, build 48a66213fe</code><br>
+I installed Docker using the <a href="https://get.docker.com/">https://get.docker.com/</a> script.</p>
+
+
+
+<a name="202039897"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202039897" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202039897">(Jun 26 2020 at 00:05)</a>:</h4>
+<p>Maybe there's two instances installed?</p>
+
+
+
+<a name="202041128"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202041128" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202041128">(Jun 26 2020 at 00:23)</a>:</h4>
+<p>Don't think so, <code>whereis docker</code> only shows one executable, but then I'm not familiar with Docker...</p>
+
+
+
+<a name="202041535"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202041535" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202041535">(Jun 26 2020 at 00:29)</a>:</h4>
+<p>I think <code>whereis</code> will only show you the first on on the path. I would use <code>find</code> or <code>locate</code> to see if there was another one lurking about that some app is hardwired to use.</p>
+
+
+
+<a name="202041779"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202041779" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202041779">(Jun 26 2020 at 00:33)</a>:</h4>
+<p>Still can't find anything that would indicate duplicates....</p>
+
+
+
+<a name="202058193"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202058193" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202058193">(Jun 26 2020 at 07:02)</a>:</h4>
+<p>I'd suggest to completely purge docker and start fresh. Something seems fishy with your install (18.0.0 vs 19.03.12). I'd also recommend to use your distro's package manager and not that script. I'm not using mint but I'm pretty sure it ships with a docker package.</p>
+
+
+
+<a name="202058978"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202058978" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202058978">(Jun 26 2020 at 07:16)</a>:</h4>
+<p>A quick thought... you might have had the older package (18.x) installed before, but then the script unpacked the newer one over it...?<br>
+What does <code>dpkg -l | grep  containerd</code> show? (Ehm... Mint has dpkg - right?)</p>
+
+
+
+<a name="202072195"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202072195" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202072195">(Jun 26 2020 at 10:08)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> Yes, have <code>dpkg</code>. It shows one result for <code>containerd.io    1.2.13-2</code> (not sure what's up with that version number though)...</p>
+
+
+
+<a name="202073509"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202073509" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202073509">(Jun 26 2020 at 10:25)</a>:</h4>
+<p>I'm afraid I can't help much because I never used Mint and have no clue, what's the current version of <code>containerd.io</code> in that distro (and docker-runc) But I'd still recommend to purge all docker packages and give your distro version a try. Just to make sure that all dependencies are correct and only one version is installed. - If there is a distro version.</p>
+
+
+
+<a name="202218729"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202218729" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202218729">(Jun 28 2020 at 04:11)</a>:</h4>
+<p>Due to other issues with my laptop, I've just done a fresh install of Linux Mint 20 (which has fixed said issues!) Now I'm trying to setup Lando. I first did what <span class="user-mention" data-user-id="256738">@indigoxela</span> suggested and first installed Docker from the Software Centre. It says it's version 19.03.8, but is called '<a href="http://docker.io">docker.io</a>'. When I then go to install Lando v3.0.5 it says "Dependency is not satisfiable: docker-ce" So I guess that answers the question about installing the version of Docker from the Software Centre...</p>
+<div class="message_embed"><a class="message_embed_image" href="http://docker.io" style="background-image: url(https://www.docker.com/sites/default/files/social/docker_facebook_share.png)"></a><div class="data-container"><div class="message_embed_title"><a href="http://docker.io" title="Empowering App Development for Developers | Docker">Empowering App Development for Developers | Docker</a></div><div class="message_embed_description">Learn how Docker helps developers bring their ideas to life by conquering the complexity of app development.</div></div></div>
+
+
+
+<a name="202226644"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202226644" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202226644">(Jun 28 2020 at 08:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> I see, lando forces you to install the version provided by <a href="http://docker.com">docker.com</a> (I never used lando). You have no choice then, I guess. Purge your distri's version (<code>docker.io</code>) and try to get the docker-ce version running. Maybe it's easier on Mint 20, possibly because of dependencies... (?)</p>
+<div class="message_embed"><a class="message_embed_image" href="http://docker.com" style="background-image: url(https://www.docker.com/sites/default/files/social/docker_facebook_share.png)"></a><div class="data-container"><div class="message_embed_title"><a href="http://docker.com" title="Empowering App Development for Developers | Docker">Empowering App Development for Developers | Docker</a></div><div class="message_embed_description">Learn how Docker helps developers bring their ideas to life by conquering the complexity of app development.</div></div></div>
+
+
+
+<a name="202233652"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202233652" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202233652">(Jun 28 2020 at 11:59)</a>:</h4>
+<p>All good. I removed <code>docker.io</code> and installed it instead via their instructions. Unlike last time where I used the quick script, this time I did it manually by adding the repo, etc. And since I had to change it to reference the Ubuntu version instead of the Mint version, I guess that's where the automated script mucked up.</p>
+
+
+
+<a name="202233663"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/containerd%20causes%20high%20CPU%20usage/near/202233663" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/containerd.20causes.20high.20CPU.20usage.html#202233663">(Jun 28 2020 at 11:59)</a>:</h4>
+<p>Thanks for the help/support all!</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

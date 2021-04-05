@@ -1,0 +1,129 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/279369-B-Infrastructure/topic/Documentation.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/index.html">B Infrastructure</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html">Documentation</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="232350417"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232350417" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232350417">(Mar 29 2021 at 23:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> The Docs site already has the content type Handbook Page setup as the Book child type. Since you can only have one content type set as Book child types, then we can't use Books for the migrated Documentation... Unless we re-do the migration to importthe nodes into the Handbook Page content type instead...?</p>
+
+
+
+<a name="232351444"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232351444" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232351444">(Mar 29 2021 at 23:30)</a>:</h4>
+<p>I was thinking though... Books are really only useful because of the pager-type links at the bottom that let you navigate between pages. Otherwise, adding nodes to a menu provides the same functionality of being able to sort and re-arrange them, and display them in a hierarchy. What if we just used the menu for organisation of documentation, and possibly wrote a new contrib module that provided pager-type links for navigating between nodes in a menu hierarchy?</p>
+
+
+
+<a name="232351510"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232351510" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232351510">(Mar 29 2021 at 23:31)</a>:</h4>
+<p>I'd be fine with that too. Is there value to maintaining the two separate types?</p>
+
+
+
+<a name="232351800"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232351800" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232351800">(Mar 29 2021 at 23:34)</a>:</h4>
+<p>I don't think there's a point having a separate content type, especially since the Handbook Page content type has existing documentation on the Docs site that'll be merged with the migrated nodes anyway.</p>
+
+
+
+<a name="232351828"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232351828" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232351828">(Mar 29 2021 at 23:34)</a>:</h4>
+<p>I'll re-do the migration for now to use the existing content type, and open an issue for my idea re. books/menus.</p>
+
+
+
+<a name="232354941"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232354941" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232354941">(Mar 30 2021 at 00:13)</a>:</h4>
+<p>Migration feed has been updated, and I also fixed this issue of missing formatting in the migrated Body field.</p>
+
+
+
+<a name="232355047"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232355047" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232355047">(Mar 30 2021 at 00:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> Inline images are now working, however they're referencing the images on <a href="http://B.org">B.org</a> (which means they can't be edited via CKEditor). Do you have a recommended way to move images over and update the inline URLs to them?</p>
+
+
+
+<a name="232360373"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232360373" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232360373">(Mar 30 2021 at 01:29)</a>:</h4>
+<p>Hm, I could do that in an update handler. I bet most of those images pre-date inline image handling on <a href="http://b.org">b.org</a> too.</p>
+
+
+
+<a name="232360522"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232360522" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232360522">(Mar 30 2021 at 01:32)</a>:</h4>
+<p>I've just copied the <code>inline-images</code> folder from B.org's <code>files</code> directory to Docs' one.</p>
+
+
+
+<a name="232360564"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232360564" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232360564">(Mar 30 2021 at 01:32)</a>:</h4>
+<p>I was about to look into Feeds Tamper...</p>
+
+
+
+<a name="232361047"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232361047" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232361047">(Mar 30 2021 at 01:39)</a>:</h4>
+<p>I also setup a cron job to re-copy that folder every 12 hours (in case there are changes)</p>
+
+
+
+<a name="232361389"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232361389" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232361389">(Mar 30 2021 at 01:45)</a>:</h4>
+<p>Ok, think I got it working with Feeds Tamper</p>
+
+
+
+<a name="232361411"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232361411" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232361411">(Mar 30 2021 at 01:45)</a>:</h4>
+<p>E.g. <a href="https://docs.backdropcms.org/documentation/backdrop-cms-user-guide">https://docs.backdropcms.org/documentation/backdrop-cms-user-guide</a></p>
+
+
+
+<a name="232361651"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232361651" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232361651">(Mar 30 2021 at 01:48)</a>:</h4>
+<p>Hmm, those images still can't be edited via CKEditor... Not sure how to fix that.</p>
+
+
+
+<a name="232361667"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232361667" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232361667">(Mar 30 2021 at 01:48)</a>:</h4>
+<p>Probably not a major issue though.</p>
+
+
+
+<a name="232363170"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232363170" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232363170">(Mar 30 2021 at 02:10)</a>:</h4>
+<p>Ok, so I've made a start on this, see <a href="https://docs.backdropcms.org/documentation/getting-started">https://docs.backdropcms.org/documentation/getting-started</a> (bottom of the right sidebar menu). I created blank (for now) book pages for the sections, and am then going through the migrated content and editing it up update the book settings and menu settings.</p>
+
+
+
+<a name="232363283"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232363283" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232363283">(Mar 30 2021 at 02:12)</a>:</h4>
+<p>The problem is I need to do both - add it to the appropriate book/parent, and add it to the appropriate menu/parent. These two things seem very similar, and it feels like I'm duplicating work. So I'm going to stop here for now, and file an issue about making menus act more like books, then we'll only need to edit each node to update the menu settings, and won't have to worry about books anymore.</p>
+
+
+
+<a name="232365816"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/279369-B%20Infrastructure/topic/Documentation/near/232365816" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/279369-B-Infrastructure/topic/Documentation.html#232365816">(Mar 30 2021 at 02:52)</a>:</h4>
+<p>Moving this conversation back to the issue queue: <a href="https://github.com/backdrop-ops/backdropcms.org/issues/747#issuecomment-809865025">https://github.com/backdrop-ops/backdropcms.org/issues/747#issuecomment-809865025</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/issues/747#issuecomment-809865025" style="background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/issues/747#issuecomment-809865025" title="Setup new docs.backdropcms.org website for *all* documentation · Issue #747 · backdrop-ops/backdropcms.org">Setup new docs.backdropcms.org website for *all* documentation · Issue #747 · backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">The Idea I made a comment about Backdrop&#39;s documentation a while ago. Now I&#39;d like to expand upon it and make an official request for my suggestions... Let&#39;s setup a new (Backdrop-power...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

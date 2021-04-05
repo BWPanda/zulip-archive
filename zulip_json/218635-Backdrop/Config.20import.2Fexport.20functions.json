@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>There are functions for syncing (importing) config (<a href=\"https://docs.backdropcms.org/api/backdrop/core%21modules%21config%21config.sync.inc/1\">https://docs.backdropcms.org/api/backdrop/core%21modules%21config%21config.sync.inc/1</a>) but are there equivalent functions for <em>exporting</em> config? I'm not referring to the export single/full forms, since they let you <em>download</em> config files from the site. I'm looking for a way to export config from 'active' to 'staging'...</p>",
+        "id": 231717590,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616623797
+    },
+    {
+        "content": "<p>Other than using the drush command? I'm not sure</p>",
+        "id": 231731763,
+        "sender_full_name": "Herb",
+        "timestamp": 1616632872
+    },
+    {
+        "content": "<p>Drush just copies files on the filesystem. It also does that with config-import, even though there are dedicated functions for that that do a lot more (e.g. calling hooks that run on import). So not using Drush as the 'ideal' in this situation...</p>",
+        "id": 231731945,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616633035
+    },
+    {
+        "content": "<p>Worked it out I think:</p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">$staging = config_get_config_storage('staging');</span>\n<span class=\"x\">$staging-&gt;deleteAll();</span>\n\n<span class=\"x\">$active = config_get_config_storage('active');</span>\n<span class=\"x\">foreach ($active-&gt;listAll() as $name) {</span>\n<span class=\"x\">  $data = $active-&gt;read($name);</span>\n<span class=\"x\">  $staging-&gt;write($name, $data);</span>\n<span class=\"x\">}</span>\n</code></pre></div>",
+        "id": 231754989,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616655262
+    },
+    {
+        "content": "<p>Seems about right.</p>",
+        "id": 231755873,
+        "sender_full_name": "klonos",
+        "timestamp": 1616655985
+    },
+    {
+        "content": "<p>Yes, that should work. What's the use case out of curiosity?</p>",
+        "id": 231839234,
+        "sender_full_name": "Herb",
+        "timestamp": 1616691973
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> <a href=\"https://github.com/backdrop-contrib/bee/issues/114\">https://github.com/backdrop-contrib/bee/issues/114</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bee/issues/114\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bee/issues/114\" title=\"Add `config-import` and `config-export` commands · Issue #114 · backdrop-contrib/bee\">Add `config-import` and `config-export` commands · Issue #114 · backdrop-contrib/bee</a></div><div class=\"message_embed_description\">config-import and config-export commands should copy config JSON files between active and staging directories.</div></div></div>",
+        "id": 231860520,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616699937
+    }
+]

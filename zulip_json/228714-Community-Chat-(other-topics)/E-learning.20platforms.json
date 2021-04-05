@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p>Can anyone of you recommend an open source e-learning platform? Main requirement: easy to understand without trainings (for users). The ones I know are either awkwardly complicated to use and/or need too much of resources.</p>",
+        "id": 191467103,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1584967394
+    },
+    {
+        "content": "<p>Moodle?</p>\n<p>I haven't looked at moodle in 10 years, but someone asked a similar question on Twitter a few days ago and several people mentioned Moodle.</p>",
+        "id": 191538120,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1584998402
+    },
+    {
+        "content": "<p><a href=\"https://moodle.org/\" target=\"_blank\" title=\"https://moodle.org/\">https://moodle.org/</a></p>",
+        "id": 191538173,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1584998416
+    },
+    {
+        "content": "<p>I also have no recent first person experience here, but did see with interest at one point that Canvas spun off an open-source \"Community\" version of Canvas: <a href=\"https://github.com/instructure/canvas-lms\" target=\"_blank\" title=\"https://github.com/instructure/canvas-lms\">https://github.com/instructure/canvas-lms</a><br>\nI have no info on usage or feedback on usability, but it looks like it is actively maintained based on commit history.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/instructure/canvas-lms\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/515326?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/instructure/canvas-lms\" target=\"_blank\" title=\"instructure/canvas-lms\">instructure/canvas-lms</a></div><div class=\"message_embed_description\">The open LMS by Instructure, Inc. Contribute to instructure/canvas-lms development by creating an account on GitHub.</div></div></div>",
+        "id": 191540834,
+        "sender_full_name": "Laryn",
+        "timestamp": 1584999840
+    },
+    {
+        "content": "<p>Moodle - how didn't I remember that! It seems relatively easy to use and runs even on a Raspi, so the requirements shouldn't be too high. Canvas LMS looks just like another resources hog. Not that they mention anything like that their installation doku - but I know some of the components they use. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 191578909,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585039240
+    },
+    {
+        "content": "<p>I have no idea how it compares, but one org I work with has been using moodle for years<br>\nwith students that come in with nearly 0 computer experience, with teachers, many that are new to teaching<br>\nand I have little knowledge of how moodle works but I've been able to keep it running</p>",
+        "id": 191628383,
+        "sender_full_name": "ericfg",
+        "timestamp": 1585064232
+    },
+    {
+        "content": "<p>and FYI: on my covid days to-do list is a small module to allow for integration between moodle and backdropcms (starting from the sorta working moodle connector module for drupal7</p>",
+        "id": 191628796,
+        "sender_full_name": "ericfg",
+        "timestamp": 1585064391
+    },
+    {
+        "content": "<p>That's interesting, what's the benefit of an integration? In other words: what are the roles for both, Moodle and Backdrop in your concept?</p>",
+        "id": 191632612,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585065819
+    },
+    {
+        "content": "<p>in the system in question, all courses are recored long-term in drupal/civicrm (hopefully soon to move to backdrop/civicrm). moodle gets refreshed often due to various organizational reasons. <br>\nso integration is:<br>\n1: being able to register students in Baz la (what we call the civi/drupal tool in this organization); class is setup in moodle, class id is entered in bazla, students automatically registered for the correct classes in moodle<br>\n2: exposing moodle class information to views so students when they log into bazla see a block with relevant info (upcoming sessions, things that are due, links to the moodle classes they are in)<br>\n3: possibly pulling final class grades into bazla from moodle</p>",
+        "id": 191633649,
+        "sender_full_name": "ericfg",
+        "timestamp": 1585066206
+    },
+    {
+        "content": "<p>so transcripts/long term records for reporting, etc are all stored in backdrop (drupal7) and civicrm . but moodle can be used for day to day classes</p>",
+        "id": 191633856,
+        "sender_full_name": "ericfg",
+        "timestamp": 1585066291
+    },
+    {
+        "content": "<p>Fancy...</p>",
+        "id": 191634378,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585066495
+    },
+    {
+        "content": "<p>one goal was to detach LMS from the tool that is used for everything long term. So they could in theory swap out moodle for sakai if the teachers wanted to. allow for things to move at different speeds for the services that are delivered to students which might change rapidly, and the tool for administrative use which needs to stay consistent</p>",
+        "id": 191634387,
+        "sender_full_name": "ericfg",
+        "timestamp": 1585066500
+    },
+    {
+        "content": "<p>one of the things i like most about moodle, is that I never ever have to fight with it. somehow, it has just worked out of the box for everything they've needed so far. I'm sure that's because the teachers are willing to live with problems and work around them without complaining (a social reality of the project that I have tried to change)</p>",
+        "id": 191634888,
+        "sender_full_name": "ericfg",
+        "timestamp": 1585066691
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> During my time at university of Hamburg we used to use <a href=\"https://www.commsy.net\" title=\"https://www.commsy.net\">https://www.commsy.net</a> (info in German). It's not a classical e-learning platform, but worked really well. It's open source but the main developers provide it also as a service, and I guess the documentation for self-hosted installations isn't very good.</p>",
+        "id": 191808048,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1585168796
+    }
+]

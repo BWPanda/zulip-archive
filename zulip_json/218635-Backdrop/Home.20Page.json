@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>Quote from github issue queue (<span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> ) - talking about default home page setting</p>\n<blockquote>\n<p>even for experienced Drupal users where every single one of them is expecting to have to go change it. Instead, it should very rarely be changed because the OOTB experience is the most ideal for most situations</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> - I know what your talking about in Drupal 7, but I think that the Backdrop CMS layout system largely addresses this issue for me. I seldom change change the home page path anymore, because the home page layout is so flexible that I can do almost anything I want with it. </p>\n<p>If I want a node on the front page, I drop a node block onto the front page. If I want a view on the front page, I drop a view block onto the front page layout. I have a hard time thinking of a reason why I would want to change the default home page in Backdrop (unlike Drupal 7).</p>",
+        "id": 221165364,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609274752
+    },
+    {
+        "content": "<p>Now, I would agree - that this might not be obvious to users coming from Drupal 7. Wrapping my head around layouts was the most difficult thing for me while adjusting to Backdrop. But, having used the layout system for a while, I really like having a home page layout and don't see why I would change the default home page (which I think would be confusing to users later on).</p>",
+        "id": 221165571,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609274919
+    },
+    {
+        "content": "<p>Having said that, I think it is unnecessarily confusing for users that choose to change their default home page.</p>",
+        "id": 221165644,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609274985
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> right. I feel like it's half-way there but the experience of \"what to expect\" is what is kind of throwing things off.</p>\n<p>If it were me, I would add a description on the site default page that says something like \"Before you change your home page, you might want to edit the existing home page layout at [link to home layout]</p>\n<p>I think if we can address the problem where single page layouts are living in the same space as multi-page layouts, this will become a lot more clear for most people.</p>",
+        "id": 221167775,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609276569
+    },
+    {
+        "content": "<p>Also looking at the OOTB layout page, it would also be good to separate the layouts based on /admin links vs non /admin links. For example the Dashboard is a single page layout that only manipulates things on the /admin backend. That should be separated away from front facing layouts like /home</p>\n<p>Site Layouts</p>\n<ul>\n<li>Page Layouts</li>\n<li>Multi-Page Layouts</li>\n</ul>\n<p>Admin Layouts</p>\n<ul>\n<li>Page Layouts</li>\n<li>Multi-Page Layouts (this could probably be omitted completely)</li>\n</ul>",
+        "id": 221168296,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609276941
+    },
+    {
+        "content": "<p>I'll be curious about what folks think of this idea. Something like this was discussed after the meetings today and I wanted to give it a try to see what other folks think. I welcome feedback and ideas for improvement.<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4849\">https://github.com/backdrop/backdrop-issues/issues/4849</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4849\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4849\" title=\"[UX] Replace the current default &quot;Promoted Content&quot; block with a page on Home page · Issue #4849 · backdrop/backdrop-issues\">[UX] Replace the current default \"Promoted Content\" block with a page on Home page · Issue #4849 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need We&#39;ve had a number of frustrated users report problems understanding how to use the home page layout in Backdrop CMS. Coming from Drupal, many users assume the need to c...</div></div></div>",
+        "id": 221339320,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609484258
+    },
+    {
+        "content": "<p>Nice! Looks like we both edited the issue labels at the same time, so it seems I removed your label. I'll let you re-add it <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span></p>",
+        "id": 221339556,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609484662
+    }
+]

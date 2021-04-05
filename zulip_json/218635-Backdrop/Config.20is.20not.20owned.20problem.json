@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Hey you CMI gurus out there, how to fix \"The configuration blabla is not owned by any module.\"? What is expected? The config file contains a \"_module\" hint.</p>",
+        "id": 200216045,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591704914
+    },
+    {
+        "content": "<p>Was a module removed and config still existed?</p>",
+        "id": 200216793,
+        "sender_full_name": "Herb",
+        "timestamp": 1591705446
+    },
+    {
+        "content": "<p>Or a module no longer had a config_info hook?</p>",
+        "id": 200216833,
+        "sender_full_name": "Herb",
+        "timestamp": 1591705479
+    },
+    {
+        "content": "<p>No, I added a brand new config file. Here's the failing test: <a href=\"https://zen.ci/backdrop/backdrop/test/test-php53-backdrop_backdrop_3163-39a00de\">https://zen.ci/backdrop/backdrop/test/test-php53-backdrop_backdrop_3163-39a00de</a></p>",
+        "id": 200216890,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591705496
+    },
+    {
+        "content": "<p>Ah, garbage... the config hook... Thanks a lot! <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 200216995,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591705522
+    }
+]

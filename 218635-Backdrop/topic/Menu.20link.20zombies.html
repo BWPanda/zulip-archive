@@ -1,0 +1,66 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Menu.20link.20zombies.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20link.20zombies.html">Menu link zombies</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="221447210"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20link%20zombies/near/221447210" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20link.20zombies.html#221447210">(Jan 03 2021 at 11:40)</a>:</h4>
+<p>It seems like <span class="user-mention" data-user-id="330989">@Phil Ward</span> opened another can of worms... <span aria-label="stuck out tongue wink" class="emoji emoji-1f61c" role="img" title="stuck out tongue wink">:stuck_out_tongue_wink:</span> Can someone here answer what the correct behavior would be for a menu item that switches from type MENU_NORMAL_ITEM to MENU_CALLBACK?</p>
+<p>Should the item get deleted from db table "menu_links", or should its value in column hidden get updated to <code>-1</code>?<br>
+<a href="https://github.com/backdrop/backdrop-issues/issues/4844">https://github.com/backdrop/backdrop-issues/issues/4844</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4844" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4844" title="Fix layout and views menu items get undeletable but stay visible once created · Issue #4844 · backdrop/backdrop-issues">Fix layout and views menu items get undeletable but stay visible once created · Issue #4844 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Problem When creating a menu item through a layout &quot;menu settings&quot; on a single URL path, it creates a &quot;hard coded&quot; link that persists even after removing that link from the menu...</div></div></div>
+
+
+
+<a name="221450752"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20link%20zombies/near/221450752" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20link.20zombies.html#221450752">(Jan 03 2021 at 13:19)</a>:</h4>
+<p>It turned out that there's already a Drupal patch available, so I used that for my PR. It <em>deletes</em> the item from the menu_links table.</p>
+
+
+
+<a name="221466351"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20link%20zombies/near/221466351" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20link.20zombies.html#221466351">(Jan 03 2021 at 19:21)</a>:</h4>
+<p>Aha! ... <span class="user-mention" data-user-id="258586">@quicksketch</span> noticed this with the deprecated menu items for the old update pages when he was reviewing my PR for <a href="https://github.com/backdrop/backdrop-issues/issues/2714#issuecomment-753546534">https://github.com/backdrop/backdrop-issues/issues/2714#issuecomment-753546534</a> yesterday ...these links have been converted (in code) from <code>'type' =&gt; MENU_LOCAL_TASK,</code> to <code>'type' =&gt; MENU_CALLBACK,</code></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2714#issuecomment-753546534" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2714#issuecomment-753546534" title="[UX] Merge all the &quot;Update core/module/theme/layout&quot; pages into a single page. · Issue #2714 · backdrop/backdrop-issues">[UX] Merge all the "Update core/module/theme/layout" pages into a single page. · Issue #2714 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Describe your issue or idea Currently, in the &quot;Available Updates report&quot; page, the site admin can see which projects have updates, but the actions they can do are limited to a) downloadin...</div></div></div>
+
+
+
+<a name="221466413"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20link%20zombies/near/221466413" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20link.20zombies.html#221466413">(Jan 03 2021 at 19:22)</a>:</h4>
+<p>...I could not reproduce this issue in the PR sandboxes, since the installation happened with my changes, before these deprecated menu items ever existed.</p>
+
+
+
+<a name="221466420"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20link%20zombies/near/221466420" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20link.20zombies.html#221466420">(Jan 03 2021 at 19:23)</a>:</h4>
+<p>...so the issue would never occur on new sites, but it would happen on existing sites that got updated.</p>
+
+
+
+<a name="221466473"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20link%20zombies/near/221466473" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20link.20zombies.html#221466473">(Jan 03 2021 at 19:24)</a>:</h4>
+<p>...I was meant to write an update hook that would get rid of these "ghost" menu entries, so thanks <span class="user-mention" data-user-id="256738">@indigoxela</span> for the research and finding the existing Drupal issues <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="221467274"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20link%20zombies/near/221467274" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20link.20zombies.html#221467274">(Jan 03 2021 at 19:43)</a>:</h4>
+<p>Y'all are amazing <span aria-label="sparkling heart" class="emoji emoji-1f496" role="img" title="sparkling heart">:sparkling_heart:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

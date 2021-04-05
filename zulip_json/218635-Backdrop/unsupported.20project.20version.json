@@ -1,0 +1,122 @@
+[
+    {
+        "content": "<p>Can anyone please point me to an unsupported version of a project? ...need it for testing purposes for <a href=\"https://github.com/backdrop/backdrop-issues/issues/2714\">https://github.com/backdrop/backdrop-issues/issues/2714</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2714\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2714\" title=\"[UX] Merge all the &quot;Update core/module/theme/layout&quot; pages into a single page. · Issue #2714 · backdrop/backdrop-issues\">[UX] Merge all the \"Update core/module/theme/layout\" pages into a single page. · Issue #2714 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea Currently, in the &quot;Available Updates report&quot; page, the site admin can see which projects have updates, but the actions they can do are limited to a) downloadin...</div></div></div>",
+        "id": 219473286,
+        "sender_full_name": "klonos",
+        "timestamp": 1607608113
+    },
+    {
+        "content": "<p>I have two contrib modules that should be marked unsupported (one redesigned and the other just renamed). Is there a recipe for making this mark? Key / value in .info file?</p>",
+        "id": 219490011,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607615088
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> you need to make a request either in <a href=\"https://github.com/backdrop-ops/contrib/issues\">https://github.com/backdrop-ops/contrib/issues</a> or here in Zulip, and one of the Bug Squad members or a <a href=\"http://b.org\">b.org</a> admin will mark the release as unsupported for you ...you can also request to set a major version as the recommended:</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues\" title=\"backdrop-ops/contrib\">backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Apply to join the contributed code developer team. - backdrop-ops/contrib</div></div></div>",
+        "id": 219499643,
+        "sender_full_name": "klonos",
+        "timestamp": 1607618769
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/-zokgoqRYxzszTc3yHCpByK8/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/-zokgoqRYxzszTc3yHCpByK8/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/-zokgoqRYxzszTc3yHCpByK8/image.png\"></a></div>",
+        "id": 219499690,
+        "sender_full_name": "klonos",
+        "timestamp": 1607618784
+    },
+    {
+        "content": "<p>...which projects/versions do you need to be marked as unsupported?</p>",
+        "id": 219499743,
+        "sender_full_name": "klonos",
+        "timestamp": 1607618803
+    },
+    {
+        "content": "<p>What exactly mean \"unsupported\"? In my case - discontinued because replaced with other module, in both README.md this status described from start.<br>\n<a href=\"https://backdropcms.org/project/base_meta\">https://backdropcms.org/project/base_meta</a><br>\n<a href=\"https://backdropcms.org/project/login_whitelist\">https://backdropcms.org/project/login_whitelist</a></p>",
+        "id": 219502006,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607619680
+    },
+    {
+        "content": "<p>Let me see what I can do...</p>",
+        "id": 219502210,
+        "sender_full_name": "klonos",
+        "timestamp": 1607619749
+    },
+    {
+        "content": "<p>How about this?:<br>\n<a href=\"/user_uploads/18319/4_qwfNAqi1z_FZdZQkPE2Iox/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/4_qwfNAqi1z_FZdZQkPE2Iox/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/4_qwfNAqi1z_FZdZQkPE2Iox/image.png\"></a></div>",
+        "id": 219502980,
+        "sender_full_name": "klonos",
+        "timestamp": 1607620075
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/FaVLR7uPjjdVeObOGourOlX2/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/FaVLR7uPjjdVeObOGourOlX2/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/FaVLR7uPjjdVeObOGourOlX2/image.png\"></a></div>",
+        "id": 219503187,
+        "sender_full_name": "klonos",
+        "timestamp": 1607620167
+    },
+    {
+        "content": "<p>Not sure. What should be done for? (I'm offline for 2 hours from now.)</p>",
+        "id": 219505659,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607621291
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , as I see you have already implemented your approach. But a link to README.md is very much needed in the message line to inform the user of an alternative at least.</p>",
+        "id": 219775047,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607886523
+    },
+    {
+        "content": "<p>Hello <span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> ...it's not \"my\" approach. All I've done is to mark these projects as unsupported in <a href=\"http://b.org\">b.org</a>. The warning shown is what is shown by Backdrop by default. ...I see what you mean though, but this would be a new feature: to allow unsupported Backdrop modules/themes/layouts to show a custom message instead.</p>",
+        "id": 219778564,
+        "sender_full_name": "klonos",
+        "timestamp": 1607890134
+    },
+    {
+        "content": "<p>That way message just scares a person without any valuable information. Not human friendly at all.</p>",
+        "id": 219779376,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607890965
+    },
+    {
+        "content": "<p>Yeah, I get that ...but this is the same message that Drupal shows for unsupported projects AFAIK. ...we aren't doing anything special/different in Backdrop ...but we should <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 219779478,
+        "sender_full_name": "klonos",
+        "timestamp": 1607891063
+    },
+    {
+        "content": "<p>Moreover,  \"Not secure\" error sign it is not just a warning(and wrong in this case), it is call to action.</p>",
+        "id": 219779581,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607891174
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , please revert back your changes. This status message is completely wrong for existing users.</p>",
+        "id": 219803426,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607925798
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> ,  any chance you seen my request?</p>",
+        "id": 219880270,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607969602
+    },
+    {
+        "content": "<p>Yup, ...I'll vert the changes now and will let you know when done.</p>",
+        "id": 219880770,
+        "sender_full_name": "klonos",
+        "timestamp": 1607969835
+    },
+    {
+        "content": "<p>...should be done now.</p>",
+        "id": 219880950,
+        "sender_full_name": "klonos",
+        "timestamp": 1607969908
+    },
+    {
+        "content": "<p>Thank you!</p>",
+        "id": 219881480,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607970198
+    }
+]

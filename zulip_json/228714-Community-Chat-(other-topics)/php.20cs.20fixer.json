@@ -1,0 +1,146 @@
+[
+    {
+        "content": "<p>I'm having a hard time configuring php cs fixer to follow backdrop's coding standards. I found a setting which follows that standard except by allowing else and elseif on a new line. Any one found a solution for this? Thanks.</p>",
+        "id": 202779238,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593764780
+    },
+    {
+        "content": "<p>To be honest, I'm using the Drupal version for phpcbf (<code>\"drupal/coder\": \"^8.3\"</code>). I also have <code>\"backdrop/coder\": \"^1.0\"</code> for the checks. For both versions (installed via composer) I have different shell wrapper scripts using different parameters. Maybe not the most elegant solution, but works fine for me. And it wasn't too complicated to get it running.</p>",
+        "id": 202779947,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593765315
+    },
+    {
+        "content": "<p>I'll give a try to it. Let's see how it goes with lando... Thanks.</p>",
+        "id": 202789854,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593772768
+    },
+    {
+        "content": "<p>I don't manage to use nor php cs fixer nor phpcbf with VS Code on lando. I can install the plugings and the sniffers, but not any of the Backdrop (from coder review) nor Drupal rules. Maybe <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> might give me a clue?</p>",
+        "id": 202816834,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593791306
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> </p>\n<p><code>lando composer require backdrop/coder</code></p>\n<p>in your <code>.lando.yml</code> file:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"nt\">tooling</span><span class=\"p\">:</span>\n  <span class=\"nt\">phpcs</span><span class=\"p\">:</span>\n    <span class=\"nt\">service</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">appserver</span>\n    <span class=\"nt\">cmd</span><span class=\"p\">:</span>\n      <span class=\"p p-Indicator\">-</span> <span class=\"s\">&quot;/app/vendor/bin/phpcs</span><span class=\"nv\"> </span><span class=\"s\">-n</span><span class=\"nv\"> </span><span class=\"s\">--report=full</span><span class=\"nv\"> </span><span class=\"s\">--standard=Backdrop</span><span class=\"nv\"> </span><span class=\"s\">--ignore=vendor/*,README.md</span><span class=\"nv\"> </span><span class=\"s\">--extensions=install,module,php,inc,theme&quot;</span>\n</code></pre></div>",
+        "id": 202873569,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593868769
+    },
+    {
+        "content": "<p>thanks <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> I was doing it right, but just slightly different. I see what was the problem. First, I also installed drupal/coder, which installed a different version of php_codesniffer. Installing only backdrop/coder fixed that. But also, I needed to set Backdrop as standard with </p>\n<div class=\"codehilite\"><pre><span></span><code>lando phpcs --config-set installed_paths /app/vendor/backdrop/coder/coder_sniffer\n</code></pre></div>\n\n\n<p>otherwise I got:</p>\n<div class=\"codehilite\"><pre><span></span><code>ERROR: the &quot;Backdrop&quot; coding standard is not installed. The installed coding standards are MySource, PEAR, PHPCS, PSR1, PSR2, Squiz and Zend\n</code></pre></div>\n\n\n<p>Now it works. However, I got this:</p>\n<div class=\"codehilite\"><pre><span></span><code>UPGRADE TO PHP_CODESNIFFER 2.0 TO FIX ERRORS AUTOMATICALLY\n</code></pre></div>\n\n\n<p>And what I really wanted was an automatic fix. Tried to update php_codesniffer to 2.0.0 but got:</p>\n<div class=\"codehilite\"><pre><span></span><code>Your requirements could not be resolved to an installable set of packages.\n\n  Problem 1\n    - backdrop/coder 1.0.1 requires squizlabs/php_codesniffer &gt;=1.4.6,&lt;2.0.0 -&gt; satisfiable by squizlabs/php_codesniffer[1.4.6, 1.4.7, 1.4.8, 1.5.0, 1.5.0RC1, 1.5.0RC2, 1.5.0RC3, 1.5.0RC4, 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.x-dev] but these conflict with your requirements or minimum-stability.\n</code></pre></div>\n\n\n<p>So, got stuck again. Any way to get the code automatically fixed to Backdrop standards with VS Code and lando? Not yet?</p>",
+        "id": 202876786,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593873916
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> and <span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span> ...I was getting the same error as well, and running the <code>lando phpcs --config-set installed_paths</code> command made that go away:</p>\n<div class=\"codehilite\"><pre><span></span><code>→ lando phpcs\nERROR: the &quot;Backdrop&quot; coding standard is not installed. The installed coding standards are PEAR, PHPCS, Zend, PSR2, MySource, Squiz and PSR1\n→ lando phpcs --config-set installed_paths /app/docroot/vendor/backdrop/coder/coder_sniffer\nConfig value &quot;installed_paths&quot; added successfully\n</code></pre></div>",
+        "id": 202877819,
+        "sender_full_name": "klonos",
+        "timestamp": 1593875527
+    },
+    {
+        "content": "<p>...when running <code>lando phpcs</code> now though, I get no output. Is that normal? ...does it take some time to produce something?</p>",
+        "id": 202877833,
+        "sender_full_name": "klonos",
+        "timestamp": 1593875575
+    },
+    {
+        "content": "<p>This is my command:</p>\n<div class=\"codehilite\"><pre><span></span><code>lando phpcs --standard=Backdrop www/modules/node_feedback/node_feedback.module\n</code></pre></div>\n\n\n<p>and got some results:</p>\n<div class=\"codehilite\"><pre><span></span><code>FILE: /app/www/modules/node_feedback/node_feedback.module\n--------------------------------------------------------------------------------\nFOUND 11 ERROR(S) AFFECTING 9 LINE(S)\n--------------------------------------------------------------------------------\n   2 | ERROR | You must use &quot;/**&quot; style comments for a file comment\n   3 | ERROR | No space before comment text; expected &quot;// TODO edit this&quot; but\n     |       | found &quot;//TODO edit this&quot;\n   3 | ERROR | Inline comments must end in full-stops, exclamation marks, or\n     |       | question marks\n  73 | ERROR | else must start on a new line\n 246 | ERROR | Closing brace indented incorrectly; expected 2 spaces, found 4\n 277 | ERROR | elseif must start on a new line\n 282 | ERROR | else must start on a new line\n 317 | ERROR | Inline comments must end in full-stops, exclamation marks, or\n     |       | question marks\n 385 | ERROR | Missing parameter type at position 1\n 391 | ERROR | No space before comment text; expected &quot;// TODO implement edit\n     |       | actions on feedbacks&quot; but found &quot;//TODO implement edit actions\n     |       | on feedbacks&quot;\n 391 | ERROR | Inline comments must end in full-stops, exclamation marks, or\n     |       | question marks\n--------------------------------------------------------------------------------\nUPGRADE TO PHP_CODESNIFFER 2.0 TO FIX ERRORS AUTOMATICALLY\n--------------------------------------------------------------------------------\n</code></pre></div>",
+        "id": 202877916,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593875725
+    },
+    {
+        "content": "<p>This is what I was doing different from <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> suggestion: I put all the options in the lando command, not in the lando config file. I leave the lando config file with:</p>\n<div class=\"codehilite\"><pre><span></span><code>phpcs:\n    service: appserver\n    cmd: /app/vendor/bin/phpcs\n</code></pre></div>",
+        "id": 202877976,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593875810
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> no output means no coding standards violations</p>",
+        "id": 202880030,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593878752
+    },
+    {
+        "content": "<p>I wish <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 202880078,
+        "sender_full_name": "klonos",
+        "timestamp": 1593878772
+    },
+    {
+        "content": "<p>...it seems that the command is still running. I don't return back to where I can enter new commands.</p>",
+        "id": 202880108,
+        "sender_full_name": "klonos",
+        "timestamp": 1593878834
+    },
+    {
+        "content": "<p>...I need to control+C</p>",
+        "id": 202880117,
+        "sender_full_name": "klonos",
+        "timestamp": 1593878848
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> a few people have asked for the automatic fixing; i originally pinned the phpcs verston to keep support for php 5.3, but now i don't thing people that are running php 5.3 are running phpcs in backdrop land ... so i'm not opposed to upping the version and adjusting the code standards to work w/ new version, but I'm not going to jump on that immediately either ... if you wanna give it a shot: <a href=\"https://github.com/serundeputy/coder\">https://github.com/serundeputy/coder</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/serundeputy/coder\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/6763671?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/serundeputy/coder\" title=\"serundeputy/coder\">serundeputy/coder</a></div><div class=\"message_embed_description\">Developer tool which reviews your code identifying coding style problems and where updates to the API are required. - serundeputy/coder</div></div></div>",
+        "id": 202880171,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593878893
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> having to <code>ctrl+c</code> is not expected behaviour;</p>",
+        "id": 202880193,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593878932
+    },
+    {
+        "content": "<p>will do. thanks.</p>",
+        "id": 202880218,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593878983
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> perhaps you did not provide a file path for <code>phpcs</code> check, i.e.</p>\n<p>wrong: <code>phpcs</code><br>\nright: <code>phpcs modules/custom/blah/blah.module</code></p>",
+        "id": 202880479,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593879315
+    },
+    {
+        "content": "<p>Yup, that's what's happened <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...I thought no path = check everything</p>",
+        "id": 202880490,
+        "sender_full_name": "klonos",
+        "timestamp": 1593879354
+    },
+    {
+        "content": "<p><code>phpcs .</code></p>",
+        "id": 202882405,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593882018
+    },
+    {
+        "content": "<p>I personally prefer to fix the things myself. That is one automation I have never gotten used to.</p>",
+        "id": 202882430,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593882047
+    },
+    {
+        "content": "<p><a href=\"https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.0.0a1\">https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.0.0a1</a></p>\n<blockquote>\n<ul>\n<li>Added support for only checking files that have been locally modified or added in a git repo<ul>\n<li>Use <code>--filter=gitmodified</code> to check these files</li>\n</ul>\n</li>\n</ul>\n</blockquote>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.0.0a1\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/997547?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.0.0a1\" title=\"Release 3.0.0a1 · squizlabs/PHP_CodeSniffer\">Release 3.0.0a1 · squizlabs/PHP_CodeSniffer</a></div><div class=\"message_embed_description\">This is the first alpha release of the 3.0.0 version, and is a large refactoring of the code base. It breaks backwards compatibility for all custom sniffs and custom reports. An upgrade guide for s...</div></div></div>",
+        "id": 202882733,
+        "sender_full_name": "klonos",
+        "timestamp": 1593882506
+    },
+    {
+        "content": "<p>^^ this is something we decided we'd like to have, as I recall from a previous weekly meeting.</p>",
+        "id": 202882811,
+        "sender_full_name": "klonos",
+        "timestamp": 1593882606
+    },
+    {
+        "content": "<p>...ideally, it could do only changed lines too.</p>",
+        "id": 202882825,
+        "sender_full_name": "klonos",
+        "timestamp": 1593882637
+    }
+]

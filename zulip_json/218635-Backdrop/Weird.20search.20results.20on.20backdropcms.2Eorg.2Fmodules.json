@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I did a minor update to one of my modules (Me Aliases), then went to verify that the update was showing on the modules search page...and boy, was it, ten times on the page:<br>\n<a href=\"https://backdropcms.org/modules?s=Me+Aliases\">https://backdropcms.org/modules?s=Me+Aliases</a><br>\nI've never seen this with any other module search. Any ideas why?<br>\nAnd a related question: what's the best place to post issues related to <a href=\"http://backdropcms.org\">backdropcms.org</a> pages?</p>",
+        "id": 220396684,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1608310092
+    },
+    {
+        "content": "<blockquote>\n<p>what's the best place to post issues related to <a href=\"http://backdropcms.org\">backdropcms.org</a> pages?</p>\n</blockquote>\n<p><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues\">https://github.com/backdrop-ops/backdropcms.org/issues</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 220401910,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608312180
+    },
+    {
+        "content": "<p>and i see the same you do re the multiple listings. tried searching for other modules, no other one does this. weird</p>",
+        "id": 220401992,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608312217
+    },
+    {
+        "content": "<p>Thanks. Issue submitted: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/736\">https://github.com/backdrop-ops/backdropcms.org/issues/736</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/736\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/736\" title=\"Module Search returns the same module multiple times · Issue #736 · backdrop-ops/backdropcms.org\">Module Search returns the same module multiple times · Issue #736 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">A search for the \"Me Aliases\" module by title returns 10 entries for the same module: https://backdropcms.org/modules?s=Me+Aliases Haven't seen this with any other module.</div></div></div>",
+        "id": 220403530,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1608312932
+    },
+    {
+        "content": "<p>We had a short discussion on search yesterday where the exact name wasn't showing, but single words did. Maybe they messed with it last night and now it's all goofy?</p>",
+        "id": 220403877,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1608313076
+    },
+    {
+        "content": "<p>I was still seeing that behavior earlier today.</p>",
+        "id": 220404658,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1608313425
+    },
+    {
+        "content": "<p>I posted on that behavior, too: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/737\">https://github.com/backdrop-ops/backdropcms.org/issues/737</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/737\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/737\" title=\"Module Search should match on module title but doesn't · Issue #737 · backdrop-ops/backdropcms.org\">Module Search should match on module title but doesn't · Issue #737 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Role Help (role_help) is a Backdrop module: https://backdropcms.org/project/role_help But a search on &quot;Role Help&quot; on the Modules page doesn&#39;t return it: https://backdropcms.org/module...</div></div></div>",
+        "id": 220412247,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1608316924
+    }
+]

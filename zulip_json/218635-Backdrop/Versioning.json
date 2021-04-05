@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>I was going to make a new minor release of Entity Plus after the latest PR was merged (thanks @earlyburg!) and was curious: we are at <code>1.0.9</code> right now. Can I do <code>1.0.10</code> or should I do <code>1.1.0</code>? (There is already a <code>1.0.1</code> if that makes a difference).</p>",
+        "id": 216459987,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605183466
+    },
+    {
+        "content": "<p>It might depend on how \"big\" the changelog/release is. If it's just a minor thing, my feeling is that <code>1.0.10</code> is the best choice. Feedback by someone with better understanding of the Backdrop packaging system might be helpful, though.</p>",
+        "id": 216464671,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605186552
+    },
+    {
+        "content": "<p>I don't think that there is any problem with versions like 1.0.999999... or anything that would cause the packaging script to fail because of that. I agree with <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> re if small changes and tiny bug fixes, then go with the bug number increment; if more substantial changes, then minor number; if major refactoring or backwards incompatible changes, then up the major number. In general <a href=\"https://semver.org\">https://semver.org</a> should help <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 216470584,
+        "sender_full_name": "klonos",
+        "timestamp": 1605189376
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> don't confuse it with metric! <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 216513422,
+        "sender_full_name": "Herb",
+        "timestamp": 1605208027
+    },
+    {
+        "content": "<p>I was going to start musing about metric here but I'll leave it for community chat</p>",
+        "id": 216514454,
+        "sender_full_name": "Herb",
+        "timestamp": 1605208531
+    }
+]

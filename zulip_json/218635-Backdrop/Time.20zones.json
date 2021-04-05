@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p>I'm working on a fun extension of a Backdrop site -- a sub-section for a virtual conference. (Layouts make sub-sections with modified branding sooo easy). Anyway, we've got a schedule showing that is a view pulling in a series of content items that contain dates and times. Naturally it displays in the site's default timezone. If/when users are registered they can set their own time zone, but before then, has anybody heard of a way to allow a \"change the time zone\" selection on the conference schedule page itself?</p>",
+        "id": 209144018,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599255981
+    },
+    {
+        "content": "<p>So anyone (even anonymous users) could choose which timezone to view the schedule in, even if it didn't save that setting long term.</p>",
+        "id": 209144044,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599256024
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> - I spun up a very simple site for Backdrop CMS LIVE exactly for these reasons. I got it working really well for users that are logged in, but I would love the option that you are talking about. An option for a non-authenticated user to set the display time zone.</p>",
+        "id": 209144285,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599256225
+    },
+    {
+        "content": "<p>I don't know of a way to do this, but I'm interested. I have an idea for a hack, but my idea is not that good.</p>",
+        "id": 209144308,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599256252
+    },
+    {
+        "content": "<p>I would like to talk to you about what you are doing if you have time this weekend or early next week.</p>",
+        "id": 209144323,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599256274
+    },
+    {
+        "content": "<p>I got to go offline now.</p>",
+        "id": 209144327,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599256281
+    },
+    {
+        "content": "<p>FYI - I didn't think to see if there is a Drupal 7 module for this. But, that would be a good place to start.</p>",
+        "id": 209144364,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599256321
+    },
+    {
+        "content": "<p>Will send a PM.</p>",
+        "id": 209144456,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599256406
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Time.20zones/near/209144364\">said</a>:</p>\n<blockquote>\n<p>FYI - I didn't think to see if there is a Drupal 7 module for this. But, that would be a good place to start.</p>\n</blockquote>\n<p>Yes, I have done a few quick searches but haven't seen anything yet. Something like an AJAX views exposed something-or-other.</p>",
+        "id": 209144571,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599256530
+    },
+    {
+        "content": "<p>I believe that setting the timezone (or any setting for that matter) for anonymous can only happen by storing it in their browser cookie/session.</p>",
+        "id": 209145996,
+        "sender_full_name": "klonos",
+        "timestamp": 1599257846
+    },
+    {
+        "content": "<p>There is not a 7.x but <a href=\"https://www.drupal.org/project/autotimezone\">https://www.drupal.org/project/autotimezone</a></p>",
+        "id": 209149440,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599261588
+    },
+    {
+        "content": "<p>Also this 7.x module and partial patch <a href=\"https://www.drupal.org/project/timezone_detect/issues/2174891\">https://www.drupal.org/project/timezone_detect/issues/2174891</a></p>",
+        "id": 209150098,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599262345
+    },
+    {
+        "content": "<p>Good find <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ...re <a href=\"https://www.drupal.org/project/timezone_detect\">https://www.drupal.org/project/timezone_detect</a> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 209154850,
+        "sender_full_name": "klonos",
+        "timestamp": 1599269105
+    },
+    {
+        "content": "<blockquote>\n<p>I believe that setting the timezone (or any setting for that matter) for anonymous can only happen by storing it in their browser cookie/session.</p>\n</blockquote>\n<p>It would also be helpful it were just something like an exposed filter on a view, but instead of filtering, it just converted all the time zones on that page to whichever time zone the user wanted to view them in. If that's easier than actually storing the time zone for the entire session.</p>",
+        "id": 209165142,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599288869
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> - It's not what you were looking for. But, my \"hacky\" solution to your time zone problem, was to automatically translate the session time into a hand full of common time zones and publish them on each node. I have some custom code that does the calculations for each session. At this point, we're not asking people to login yet, so they are not yet able to take advantage of Backdrops handling of time zones. </p>\n<p>I'm looking for a better solution, but this seems like it's one step in the right direction.<br>\n<a href=\"https://backdrop-live.backdropcms.org/session/welcome-introduction\">https://backdrop-live.backdropcms.org/session/welcome-introduction</a></p>",
+        "id": 209337511,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599526847
+    },
+    {
+        "content": "<p>Thanks. Thinking on this now and probably will start by porting <code>timezone_detect</code>.</p>",
+        "id": 209428367,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599591166
+    }
+]

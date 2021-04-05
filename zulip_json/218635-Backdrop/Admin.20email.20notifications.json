@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>What's the current/recommended way to send an email notification to an admin when content is submitted?</p>",
+        "id": 193060359,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586187593
+    },
+    {
+        "content": "<p>Rules? Or I see a few different \"Notify\" modules? Or is this functionality in core?</p>",
+        "id": 193060493,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586187641
+    },
+    {
+        "content": "<p>fwiw; on <a href=\"http://b.org\" title=\"http://b.org\">b.org</a> we do a custom module</p>",
+        "id": 193066012,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586190129
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/trigger_actions\" title=\"https://github.com/backdrop-contrib/trigger_actions\">https://github.com/backdrop-contrib/trigger_actions</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/trigger_actions\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/trigger_actions\" title=\"backdrop-contrib/trigger_actions\">backdrop-contrib/trigger_actions</a></div><div class=\"message_embed_description\">The Trigger Actions module provides the ability to cause actions to run when certain triggers take place on your site. - backdrop-contrib/trigger_actions</div></div></div>",
+        "id": 193086863,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586199874
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I was on phone yesterday, that's why I just posted the link to the Trigger Actions module. AFAIK, it replaces the former Trigger / Actions core functionality which was removed from Backdrop.</p>",
+        "id": 193207593,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586274264
+    },
+    {
+        "content": "<p>Thanks, I'll investigate that.</p>",
+        "id": 193207684,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586274310
+    },
+    {
+        "content": "<p>Has someone a site at hand where visitor registration is enabled? (See <code>admin/config/people/settings</code>: Who can register accounts? Visitors, but administrator approval is required.) I'm trying to reproduce an issue posted in the forum (<a href=\"https://forum.backdropcms.org/forum/empty-email-send-administrator-created-new-user-account\">https://forum.backdropcms.org/forum/empty-email-send-administrator-created-new-user-account</a>). On my test site a new user gets notified about the account pending approval, but the admin doesn't get a notification about the new registration. Do these admin notifications work for anyone?</p>",
+        "id": 198047558,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589884915
+    },
+    {
+        "content": "<p>One way to test this is by enabling Reroute Email. (Or setting up Mailhog with Lando) Then you can just check the logs instead of emails</p>",
+        "id": 198069768,
+        "sender_full_name": "Herb",
+        "timestamp": 1589896914
+    },
+    {
+        "content": "<p>yes; i use <code>mailhog</code></p>",
+        "id": 198072024,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589897803
+    },
+    {
+        "content": "<p>Thanks for the <em>Reroute Email</em> hint, very useful! Interesting test results:</p>\n<ol>\n<li>\n<p>The mail <code>user_register_pending_approval_admin</code> is sent to the E-mail address configured on <code>admin/config/system/site-information</code>. In a way, that makes sense, but the help text of the form element is quite misleading: \"The <strong>From</strong> address in automated e-mails ...\". I had entered a <em>no-reply</em> mail address, which makes sense for a <em>From</em> address but not for a real one of the admin.</p>\n</li>\n<li>\n<p>As stated in the forum issue, the mail notification is indeed sent, but with empty subject and empty body.</p>\n</li>\n</ol>",
+        "id": 198084394,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589902597
+    },
+    {
+        "content": "<p><code>mailhog</code> <a href=\"https://youtu.be/Hd4nGYmFYDk\">YouTube - Introduction to Lando</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"Hd4nGYmFYDk\" href=\"https://youtu.be/Hd4nGYmFYDk\"><img src=\"https://i.ytimg.com/vi/Hd4nGYmFYDk/default.jpg\"></a></div>",
+        "id": 198085274,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589902965
+    }
+]

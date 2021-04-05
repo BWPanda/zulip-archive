@@ -1,0 +1,134 @@
+[
+    {
+        "content": "<p>I'm moving a pretty simple site from Drupal 6 to Backdrop tomorrow. <br>\nhas anyone done work on an upgrade path directly from D6 to Backdrop? I thought I read/heard something somewhere about that. <br>\nIf so, this would be a good site to test that process on<br>\nif not, I'll do the d6-&gt;d7-&gt;backdrop path</p>",
+        "id": 190028001,
+        "sender_full_name": "ericfg",
+        "timestamp": 1583701588
+    },
+    {
+        "content": "<p>I am unaware of any direct D6 to Backdrop CMS path. I did one such upgrade and went through Drupal 7.</p>",
+        "id": 190028011,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1583701643
+    },
+    {
+        "content": "<p>nod<br>\nthat's what I've done in the past.</p>",
+        "id": 190028055,
+        "sender_full_name": "ericfg",
+        "timestamp": 1583701695
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@Jen Lampton</span> has done and recommended the D6 -&gt; D7 -&gt; Backdrop path several times, so I assume that's the canonical way.</p>",
+        "id": 190030120,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583705604
+    },
+    {
+        "content": "<p>...and to be more specific it's D6/7 -&gt; D7 latest -&gt; Backdrop</p>",
+        "id": 190032147,
+        "sender_full_name": "klonos",
+        "timestamp": 1583709456
+    },
+    {
+        "content": "<p>...in other words, even when you are doing D7 -&gt; Backdrop, you should first upgrade to latest version of D7 core and contrib, run db updates, then finally move to Backdrop</p>",
+        "id": 190032188,
+        "sender_full_name": "klonos",
+        "timestamp": 1583709497
+    },
+    {
+        "content": "<p>I built 1 Drupal site way back in the day, D5 I think. How much work is involved in doing a typical upgrade from 6 -&gt; 7 -&gt; Backdrop, is breakage expected or does everything mostly \"just work\"?</p>",
+        "id": 190033111,
+        "sender_full_name": "James Nylen",
+        "timestamp": 1583711642
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269235\">@James Nylen</span> - Well, I'm skeptical that everything will \"just work\" the first time through the process. But, that doesn't mean that it will be really hard either. <a href=\"https://backdropcms.org/upgrade-from-drupal\" target=\"_blank\" title=\"https://backdropcms.org/upgrade-from-drupal\">https://backdropcms.org/upgrade-from-drupal</a></p>\n<p>\"We recommend using Drupal's built-in upgrade path to go from from Drupal 6 to Drupal 7 (which could be tricky), and then Backdrop's Built-in path to go from Drupal 7 to Backdrop CMS (which should be easy). Currently, there are no tools available to upgrade a Drupal 6 site directly to Backdrop.\"</p>",
+        "id": 190033750,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1583712869
+    },
+    {
+        "content": "<p>It might be worth just giving it a try to see how many errors you get (or if you get any). You might get lucky. I think it depends a lot on how complicated your D6 site is.</p>",
+        "id": 190033763,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1583712927
+    },
+    {
+        "content": "<p>ok so 6 to 7 is the harder part</p>",
+        "id": 190034767,
+        "sender_full_name": "James Nylen",
+        "timestamp": 1583714989
+    },
+    {
+        "content": "<p>Yup. D6 -&gt; D7 should take more time/effort; then D7 -&gt; Backdrop should take less time/effort (and for that matter much less than what D7 -&gt; D8 would)</p>",
+        "id": 190037131,
+        "sender_full_name": "klonos",
+        "timestamp": 1583719914
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"259074\">@ericfg</span> Depending on the complexity of your D6 site it might be easier to import content to Backdrop directly. Haven't done that yet, though.<br>\nI did several D6 to D7 migrations (I wouldn't call that \"upgrade\") with the help of the Feeds module, but I also needed Feeds Tamper for that.</p>",
+        "id": 190047101,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1583740717
+    },
+    {
+        "content": "<p>I agree with <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> that using Feeds might be easier in some cases.</p>",
+        "id": 190055264,
+        "sender_full_name": "Herb",
+        "timestamp": 1583749359
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"259074\">@ericfg</span> If the site you want in Backdrop is identical to the one you had in D6, I recommend going through D7 first. If you rebuild / import you'll loose all the configurations. If, however, you are doing a re-architecture and/or rebrand, sometimes the rebuild approach can be faster (especially if you don't need all the content that's on the D6 site)</p>",
+        "id": 190097122,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1583775918
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269235\">@James Nylen</span> ^^ that was for you.</p>",
+        "id": 190097232,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583775982
+    },
+    {
+        "content": "<p>I have some scripts that can help with upgrades from D6 (D6 insert module -&gt; B ckeditor embedded images, etc) at <a href=\"https://github.com/jenlampton/upgradenotes\" target=\"_blank\" title=\"https://github.com/jenlampton/upgradenotes\">https://github.com/jenlampton/upgradenotes</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/jenlampton/upgradenotes\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/397895?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/jenlampton/upgradenotes\" target=\"_blank\" title=\"jenlampton/upgradenotes\">jenlampton/upgradenotes</a></div><div class=\"message_embed_description\">Notes for upgrading from Drupal 6 and Drupal 7 to Backdrop CMS - jenlampton/upgradenotes</div></div></div>",
+        "id": 190097261,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1583776015
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> I had missed <span class=\"user-mention\" data-user-id=\"269235\">@James Nylen</span> 's question and was ansering <span class=\"user-mention\" data-user-id=\"259074\">@ericfg</span> 's from before -- same advice though! :D</p>",
+        "id": 190097393,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1583776088
+    },
+    {
+        "content": "<p>Oh, hah! I missed Eric's question from before, but I knew about James'. :D</p>",
+        "id": 190097459,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583776148
+    },
+    {
+        "content": "<p>thanks for the feedback everyone. <br>\nturns out that this is actually Drupal 5, this is gonna take a while. sigh</p>",
+        "id": 190112195,
+        "sender_full_name": "ericfg",
+        "timestamp": 1583784567
+    },
+    {
+        "content": "<p>Jason,</p>\n<p>You can go directly from D6 to Backdrop if you do it as a migration and export the data, then import to Backdrop using feeds.  We've done it this way pretty successfully.  I've got one in development now that I've had to put on the back burner because it's a nonpaying job, but we had no problems.  I'm in the look and feel stage with that one - the export/import went well.   I always do migrations because we're typically redesigning / updating the site at the same time.  D6 layout/design is pretty outdated now.  Also - safer.    Just a note,  I changed content types in D6 before I exported so that I could streamline.  For example - Simplenews newsletters became articles.  (I stopped using simplenews so these are back issues).  <br>\nD6 - node export is the module used.   Also, no desire to mess with live production sites while in development.</p>\n<p>Elisabeth  </p>\n<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/moving.20from.20D6/near/190030120\" title=\"#narrow/stream/218635-Backdrop/topic/moving.20from.20D6/near/190030120\">said</a>:</p>\n<blockquote>\n<p>@_<strong>Jen Lampton</strong> has done and recommended the D6 -&gt; D7 -&gt; Backdrop path several times, so I assume that's the canonical way.</p>\n</blockquote>",
+        "id": 191909868,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585239581
+    },
+    {
+        "content": "<p>Definitely do a migration, not an upgrade.  Too messy and it will be faster.  I believe you can use node export in D5 as well.  We upgraded all our D5 sites over 10 years ago now, so I don't really remember.</p>\n<p>Elisabeth</p>\n<p><span class=\"user-mention silent\" data-user-id=\"259074\">ericfg</span> <a href=\"#narrow/stream/218635-Backdrop/topic/moving.20from.20D6/near/190112195\" title=\"#narrow/stream/218635-Backdrop/topic/moving.20from.20D6/near/190112195\">said</a>:</p>\n<blockquote>\n<p>thanks for the feedback everyone. <br>\nturns out that this is actually Drupal 5, this is gonna take a while. sigh</p>\n</blockquote>",
+        "id": 191910227,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585239719
+    },
+    {
+        "content": "<p>luckily the site was two simple content types and only one view <br>\nit took a while to sort the d5-&gt;d6 step, probably should have gone a data migration route, will probably do that if I have to do something like this again. <br>\nbut once in d6, thanks to the fact that there were no complex views that would have had to be rebuilt in d7, the process went fast. Was done in a couple hours. <br>\nthe d7 site is what's online now, as we learn our way around how theme and layouts work in backdrop</p>",
+        "id": 192193424,
+        "sender_full_name": "ericfg",
+        "timestamp": 1585514837
+    }
+]

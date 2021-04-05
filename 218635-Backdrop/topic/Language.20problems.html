@@ -1,0 +1,108 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Language.20problems.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html">Language problems</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="230154843"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230154843" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230154843">(Mar 13 2021 at 10:54)</a>:</h4>
+<p>Maybe it's just me... I read this comment several times, but am not able to figure out what it means. It seems that (google)translate did a bad job here. Can anyone help me understanding that comment? <a href="https://github.com/backdrop/backdrop-issues/issues/4941#issuecomment-797806110">https://github.com/backdrop/backdrop-issues/issues/4941#issuecomment-797806110</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4941#issuecomment-797806110" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4941#issuecomment-797806110" title="[UX] Manage blocks interface cannot be used with keyboard navigation · Issue #4941 · backdrop/backdrop-issues">[UX] Manage blocks interface cannot be used with keyboard navigation · Issue #4941 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug We received an email today from someone who is struggling with the manage blocks interface because they can not see. (The following is from a non-English speaker) Hi. I can n...</div></div></div>
+
+
+
+<a name="230164762"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230164762" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230164762">(Mar 13 2021 at 14:04)</a>:</h4>
+<p>Here's how I'm reading that comment <span class="user-mention" data-user-id="256738">@indigoxela</span> :</p>
+<ul>
+<li>"Let's create a special block." -&gt; "When creating a custom block"...</li>
+<li>The configuration of this block is very limited. It cannot be configured without going to the layouts page and adding it to a region. (this makes sense as is)</li>
+<li>"For example, if the block is only shown on certain pages." -&gt; "Let's assume that the block needs to be shown only on specific pages"</li>
+<li>"For example, the contract will be added to the user registration form." - &gt; They need a "contract" or "terms of use" piece of text to be shown in the user registration page, in the form of a custom block.</li>
+<li>"I can't do this directly in the custom block insertion area." -&gt; they mean that there is now way to add the block to a layout/page from <code>/admin/structure/block/add</code><br>
+...sounds to me like a separate problem (so pretty much out of scope for that issue), but the person already mentioned that:<blockquote>
+<p>It's not about accessibility. It's a general problem.</p>
+</blockquote>
+</li>
+</ul>
+
+
+
+<a name="230164816"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230164816" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230164816">(Mar 13 2021 at 14:05)</a>:</h4>
+<p>...so we should ask them to either create a separate issue for that, or we should create one for them, and ask them to avoid mixing discussions about other issues, as it confuses people reading the thread of comments.</p>
+
+
+
+<a name="230164990"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230164990" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230164990">(Mar 13 2021 at 14:08)</a>:</h4>
+<p>...as far as the actual problem they are reporting, it is a matter of workflow I think. They have chosen to create a custom block from that dedicated form in <code>/admin/structure/block/add</code>, which will make that block available in the "add block" dialog, whereas they could have chosen to add that block via the block management UI on a specific layout instead <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span> ...perhaps we can support both of these workflows?</p>
+
+
+
+<a name="230166182"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230166182" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230166182">(Mar 13 2021 at 14:29)</a>:</h4>
+<p>Still struggling to understand the problem ... that it's about workflow seems reasonable to me, though. Maybe the trouble is, that they still try it "the Drupal way"?<br>
+A new issue might make sense. Hopefully we figure out in that issue, if there's something we can do code-wise to make things easier, or if support is sufficient.</p>
+
+
+
+<a name="230166250"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230166250" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230166250">(Mar 13 2021 at 14:30)</a>:</h4>
+<p>Oh, and many thanks for your "translation" <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> <span class="user-mention" data-user-id="256729">@klonos</span> ++</p>
+
+
+
+<a name="230166251"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230166251" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230166251">(Mar 13 2021 at 14:30)</a>:</h4>
+<p><strong>klonos</strong> - Dragon Fire (Karma: 15)</p>
+
+
+
+<a name="230167566"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230167566" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230167566">(Mar 13 2021 at 14:55)</a>:</h4>
+<blockquote>
+<p>Maybe the trouble is, that they still try it "the Drupal way"?</p>
+</blockquote>
+<p>Yup, I think that that's the case <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="230172566"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230172566" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230172566">(Mar 13 2021 at 16:11)</a>:</h4>
+<p>unfortunately, i dont understand either. hopefully he can find someone who can translate for him better than google can.</p>
+
+
+
+<a name="230193388"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230193388" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230193388">(Mar 13 2021 at 22:11)</a>:</h4>
+<p>Pardon, wrong window. I'll try to help the guy.</p>
+
+
+
+<a name="230193549"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230193549" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230193549">(Mar 13 2021 at 22:13)</a>:</h4>
+<p>(deleted)</p>
+
+
+
+<a name="230196539"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Language%20problems/near/230196539" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Language.20problems.html#230196539">(Mar 13 2021 at 23:13)</a>:</h4>
+<p>I wish I noticed that thread long time ago. Didn't have time to have all the issues on my radar. For posterity, if any Turkish-speaking person is encountering problems in using Backdrop, just send them my way and I'll try my best to help.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

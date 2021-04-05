@@ -1,0 +1,86 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Core.20Accessibility.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html">Core Accessibility</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="230229161"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230229161" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230229161">(Mar 14 2021 at 10:27)</a>:</h4>
+<p>I thought I would start a new thread for this, as thoughts come up.</p>
+
+
+
+<a name="230229407"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230229407" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230229407">(Mar 14 2021 at 10:32)</a>:</h4>
+<p>The admin bar, 'Menu Search' input field is missing a label.</p>
+
+
+
+<a name="230229412"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230229412" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230229412">(Mar 14 2021 at 10:32)</a>:</h4>
+<p>You can see an explanation and sample solution listed here: <a href="https://blog.pope.tech/2020/02/28/missing-form-label-search/">https://blog.pope.tech/2020/02/28/missing-form-label-search/</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://blog.pope.tech/2020/02/28/missing-form-label-search/" style="background-image: url(https://blog.pope.tech/wp-content/uploads/2020/02/image-15.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://blog.pope.tech/2020/02/28/missing-form-label-search/" title="Missing Form Label - Site Search example - Pope Tech Blog">Missing Form Label - Site Search example - Pope Tech Blog</a></div><div class="message_embed_description">Real world example on the Missing Form Label Error found on a site search form and possible solution.</div></div></div>
+
+
+
+<a name="230229417"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230229417" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230229417">(Mar 14 2021 at 10:32)</a>:</h4>
+<p>This code specifically</p>
+<div class="codehilite"><pre><span></span><code>&lt;input placeholder=&quot;Menu search&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; type=&quot;search&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-search&quot;&gt;
+</code></pre></div>
+
+
+
+<a name="230229643"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230229643" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230229643">(Mar 14 2021 at 10:36)</a>:</h4>
+<p>That should be an easy fix (either with label or with aria-label, didn't look at the code yet). Mind to open an issue for that?</p>
+
+
+
+<a name="230229655"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230229655" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230229655">(Mar 14 2021 at 10:37)</a>:</h4>
+<p>Therefore the change should be to add an ID to the class. And create a seperate label field, which is hidden using CSS, but shown using a screen reader. Then if a device for some reason doesnt use area-label, it should still show</p>
+
+
+
+<a name="230229657"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230229657" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230229657">(Mar 14 2021 at 10:37)</a>:</h4>
+<div class="codehilite"><pre><span></span><code>&lt;label for=&quot;menuSearch&quot; class=&quot;sr-only&quot;&gt;Administration Bar Menu Search&lt;/label&gt;
+&lt;input id=&quot;menuSearch&quot; placeholder=&quot;Menu search&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; type=&quot;search&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-search&quot;&gt;
+</code></pre></div>
+
+
+
+<a name="230229663"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230229663" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230229663">(Mar 14 2021 at 10:37)</a>:</h4>
+<p>Sure, I will give it a try :)</p>
+
+
+
+<a name="230230418"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230230418" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230230418">(Mar 14 2021 at 10:53)</a>:</h4>
+<p>Thank you for the suggestion. Ive added it here: <a href="https://github.com/backdrop/backdrop-issues/issues/4997">https://github.com/backdrop/backdrop-issues/issues/4997</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4997" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4997" title="Backdrop Admin Bar Menu Search Input Field - Accessibility Suggestion · Issue #4997 · backdrop/backdrop-issues">Backdrop Admin Bar Menu Search Input Field - Accessibility Suggestion · Issue #4997 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need The backdrop CMS admin bar has an input field for Menu Search. Currently, this input field has no label. &lt;input placeholder=&quot;Menu search&quot; autocomplete=&quot;off...</div></div></div>
+
+
+
+<a name="230234764"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Core%20Accessibility/near/230234764" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Core.20Accessibility.html#230234764">(Mar 14 2021 at 12:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="311204">@Eric Vander Wal</span> You're welcome! Happy testing, a pull request exists now. If you need any help with our sandboxes, just ask.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

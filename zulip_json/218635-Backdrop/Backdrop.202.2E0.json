@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p>...then next major will be Backdrop 2.0.0, which would be a new 2.x branch ...not until many years from now. <span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> see <a href=\"https://backdropcms.org/roadmap\">https://backdropcms.org/roadmap</a></p>",
+        "id": 231612088,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582005
+    },
+    {
+        "content": "<blockquote>\n<p>Backdrop 2.0 will NOT be released before January 15th, 2024.</p>\n</blockquote>",
+        "id": 231612125,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582022
+    },
+    {
+        "content": "<p>And upgrading to Backdrop 2.0 will be straightforward or we will end with a dead updated site like drupal?</p>",
+        "id": 231612394,
+        "sender_full_name": "cptX",
+        "timestamp": 1616582137
+    },
+    {
+        "content": "<p>Also <span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> do note that not all open issues that are \"slated\" for the 1.18.2 milestone need to be fixed. ...when we decide that we need to release 1.18.2, we'll include all merged fixes, and then move any open issues to the next bug fix milestone 1.18.3</p>",
+        "id": 231612424,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582156
+    },
+    {
+        "content": "<p>Re Backdrop 2.0, there may be some breaking changes, but see this:</p>\n<blockquote>\n<p>Backdrop version 1 will continue to be supported until Backdrop version 3 is released.</p>\n</blockquote>",
+        "id": 231612645,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582257
+    },
+    {
+        "content": "<p>We don't plan to include \"major\" changes in our architecture, like what happened with D8 (you know, switching to composer/symfony etc.)</p>",
+        "id": 231612802,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582354
+    },
+    {
+        "content": "<p>...see <a href=\"https://backdropcms.org/philosophy\">https://backdropcms.org/philosophy</a> and note our <code>#1</code> principle:</p>\n<blockquote>\n<p>Easier updates: Backwards compatibility is important.</p>\n</blockquote>",
+        "id": 231612916,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582404
+    },
+    {
+        "content": "<p>Yes but in order to switch to BD 3 you need to first convert to BD 2. So I'm not sure if it will possible to upgrade to BD 3 directly. Anyway I thought Backdrop's strategy is to have future compatibility so I hope transition to BD 2 will not be so hard.</p>",
+        "id": 231612968,
+        "sender_full_name": "cptX",
+        "timestamp": 1616582433
+    },
+    {
+        "content": "<p>I understand though that major enhancements require major changes<br>\nJumping to too many off topics now but just a last question. Is it in the milestone the plan to include a cache de-validation mechanism to use for the logged in users as D8 is doing, so caching only parts of the page that haven't changed?</p>",
+        "id": 231613062,
+        "sender_full_name": "cptX",
+        "timestamp": 1616582486
+    },
+    {
+        "content": "<p>I imagine that there will be some work required, and we will automate things as much as possible. If it makes you feel a bit better about it, we have been developing new features in 1.x since 2013, which will make it 10+ years in 2024 (if we don't push 2.x even further into the future).</p>",
+        "id": 231613208,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582560
+    },
+    {
+        "content": "<p>I had a lot of frustration with D8/D9 evolvement and unfortunately I have an active site still running Drupal 6. Was too hard to convert to D8/D9. Now I hope I'll successfully convert it to BD</p>",
+        "id": 231613445,
+        "sender_full_name": "cptX",
+        "timestamp": 1616582684
+    },
+    {
+        "content": "<blockquote>\n<p>όποιος καεί με το χυλό φυσά και το γιαούρτι</p>\n</blockquote>",
+        "id": 231613626,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582773
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> exactly</p>",
+        "id": 231613696,
+        "sender_full_name": "cptX",
+        "timestamp": 1616582811
+    },
+    {
+        "content": "<p>I feel you <span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> ...but that's the main reason why Backdrop exists ...to provide a home for those that are frustrated with D8/9</p>",
+        "id": 231613707,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582816
+    },
+    {
+        "content": "<p>This topic was moved here from <a class=\"stream-topic\" data-stream-id=\"228714\" href=\"/#narrow/stream/228714-Community-Chat-.28other-topics.29/topic/Backdrop.202.2E0\">#Community Chat (other topics) &gt; Backdrop 2.0</a> by <span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span></p>",
+        "id": 231614583,
+        "sender_full_name": "Notification Bot",
+        "timestamp": 1616583284
+    },
+    {
+        "content": "<blockquote>\n<p>Is it in the milestone the plan to include a cache de-validation mechanism to use for the logged in users as D8 is doing, so caching only parts of the page that haven't changed?</p>\n</blockquote>\n<p>Do you mean this?:<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4127\">https://github.com/backdrop/backdrop-issues/issues/4127</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4127\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4127\" title=\"[PS][D8] Advanced Drupal Caching (a.k.a. cache tags and cache max-age) · Issue #4127 · backdrop/backdrop-issues\">[PS][D8] Advanced Drupal Caching (a.k.a. cache tags and cache max-age) · Issue #4127 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need A website’s cache is only useful if it has the necessary content on hand to satisfy visitors’ requests. Pantheon’s granular cache control enables developers and site owners ...</div></div></div>",
+        "id": 231627991,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1616590557
+    }
+]

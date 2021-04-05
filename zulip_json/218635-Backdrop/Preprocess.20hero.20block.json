@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Is there a way to preprocess a hero block? Can't seem to get it working. layout.theme.inc claims that <code>template_preprocess_block__layout__hero()</code> would work but that's never called at all.</p>\n<p>As an example:</p>\n<div class=\"codehilite\"><pre><span></span><code>function MYTHEME_preprocess_block__layout__hero(&amp;$variables) {\n  die(&#39;this runs&#39;);/* it doesn&#39;t */\n}\n</code></pre></div>\n\n\n<p><a href=\"https://github.com/backdrop/backdrop/blob/045e765a54bb9de29ef6ce44ffaa0a5c70938408/core/modules/layout/layout.theme.inc#L403\">https://github.com/backdrop/backdrop/blob/045e765a54bb9de29ef6ce44ffaa0a5c70938408/core/modules/layout/layout.theme.inc#L403</a></p>\n<p>It seems template_preprocess_block() only works for legacy blocks.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/045e765a54bb9de29ef6ce44ffaa0a5c70938408/core/modules/layout/layout.theme.inc#L403\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/045e765a54bb9de29ef6ce44ffaa0a5c70938408/core/modules/layout/layout.theme.inc#L403\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 201849835,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593007000
+    },
+    {
+        "content": "<p>UPDATE: silly me! It was a setting via ui that prevented the hook from working. Everything's fine <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 201851647,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593007839
+    },
+    {
+        "content": "<p>Huh, what setting is that?</p>",
+        "id": 201859409,
+        "sender_full_name": "Herb",
+        "timestamp": 1593011047
+    },
+    {
+        "content": "<p>Configurable block style: style setting from contrib module (configurable_block_style) was set to \"configurable\".</p>",
+        "id": 201863419,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593012716
+    },
+    {
+        "content": "<p>huh; so that setting in that module prevents other themes/modules from using that hook ... prolly not a great pattern.</p>",
+        "id": 201864525,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593013246
+    },
+    {
+        "content": "<p>Nope. Maybe we need a new issue for this?</p>",
+        "id": 201917695,
+        "sender_full_name": "Herb",
+        "timestamp": 1593042528
+    },
+    {
+        "content": "<p>It might be worth it. BTW, not only the contrib module prevents the preprocess hook, the \"Dynamic\" setting (core) does, too. The hook only seems to run when \"Standard\" is selected. I currently don't have the time to dig deeper, though...</p>",
+        "id": 201937097,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593067602
+    },
+    {
+        "content": "<p>Maybe just create an issue for core and leave it for someone else</p>",
+        "id": 201973893,
+        "sender_full_name": "Herb",
+        "timestamp": 1593094214
+    }
+]

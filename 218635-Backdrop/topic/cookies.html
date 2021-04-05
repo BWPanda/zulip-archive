@@ -1,0 +1,83 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/cookies.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html">cookies</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="220133600"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220133600" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> earlyburg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220133600">(Dec 16 2020 at 15:58)</a>:</h4>
+<p>I noticed that when I access a vanilla install of Backdrop, there are two session cookies and a google analytics cookie:<br>
+[_ga] =&gt; GA1.2.877217365.1601902998<br>
+Is this from one of the CDNs we use, or just to track Backdrop usage statistics?<br>
+They were only set for a logged in user.<br>
+Thanks for any information, I appreciate it.</p>
+
+
+
+<a name="220134858"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220134858" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220134858">(Dec 16 2020 at 16:08)</a>:</h4>
+<p>Two session cookies are normal, but for sure Backdrop core adds no google analytics cookies. Which modules do you have installed?</p>
+
+
+
+<a name="220135360"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220135360" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> earlyburg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220135360">(Dec 16 2020 at 16:12)</a>:</h4>
+<p>no contrib modules at all.<br>
+I'm perplexed. <span aria-label="neutral" class="emoji emoji-1f610" role="img" title="neutral">:neutral:</span><br>
+Thank you, I appreciate the info.</p>
+
+
+
+<a name="220136112"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220136112" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220136112">(Dec 16 2020 at 16:15)</a>:</h4>
+<p>Maybe you can figure out more if you delete all cookies (flush all browser cache, too) and log in again?</p>
+<p>Another thought - do you have a custom theme? Or is that vanilla core, too?</p>
+
+
+
+<a name="220136122"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220136122" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220136122">(Dec 16 2020 at 16:15)</a>:</h4>
+<p>Very odd <span aria-label="thinking" class="emoji emoji-1f914" role="img" title="thinking">:thinking:</span> ...Backdrop is definitely not adding any GA cookies.</p>
+
+
+
+<a name="220137425"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220137425" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220137425">(Dec 16 2020 at 16:24)</a>:</h4>
+<p>This might be a long shot, but what about the hosting environment?</p>
+
+
+
+<a name="220138034"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220138034" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220138034">(Dec 16 2020 at 16:28)</a>:</h4>
+<p>And yet another thought... Is that Backdrop site on a subdomain?</p>
+
+
+
+<a name="220138189"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220138189" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> earlyburg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220138189">(Dec 16 2020 at 16:29)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span>  yes<br>
+Let me check a few things on the server and on my google analytics account and I'll update this thread</p>
+
+
+
+<a name="220140366"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cookies/near/220140366" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> earlyburg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cookies.html#220140366">(Dec 16 2020 at 16:46)</a>:</h4>
+<p>Im using Firefox Developer edition and when I deleted the cookie in question it dissappeared everywhere it was showing up (two different domains)<br>
+This is still perplexing, but it does not seem to be a Backdrop issue. Thanks, all.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

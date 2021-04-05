@@ -1,0 +1,200 @@
+[
+    {
+        "content": "<p>I keep getting an undefined issue message <br>\n\"Notice: Undefined index: base in _color_rewrite_stylesheet() (line 691 of  ****/core/modules/color/color.module).\" when I flush all caches.  It's very annoying.  Any idea how to remedy this?</p>",
+        "id": 206481533,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597076929
+    },
+    {
+        "content": "<p>What theme are you using?</p>",
+        "id": 206482293,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597077340
+    },
+    {
+        "content": "<p>If you don't need/want to use the Color module module, then a quick fix could be to turn it off. Otherwise, I suspect that something is missing from the color.inc file in the theme.</p>",
+        "id": 206482470,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597077442
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> </p>\n<p>I am using a custom sub-theme of corporate KISS and it was working until the last update.  I do need the color module.  Any suggestions? There is no color.inc file in the theme.</p>",
+        "id": 206482914,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597077681
+    },
+    {
+        "content": "<p>Is there a color.inc in your theme?</p>",
+        "id": 206483166,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597077827
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483166\">said</a>:</p>\n<blockquote>\n<p>Is there a color.inc in your theme?</p>\n</blockquote>\n<p>Nope.  It's not in the base theme and hadn't needed it before.  Do I need to create one and how do I do so?</p>",
+        "id": 206483286,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597077882
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> - I started to debug that same problem yesterday, but got interrupted. I'll try to get back to it today and let you know what I find.</p>",
+        "id": 206483373,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597077931
+    },
+    {
+        "content": "<p>Were you able to change color settings on the theme  before?</p>",
+        "id": 206483397,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597077945
+    },
+    {
+        "content": "<p>When you say it worked until the last update, are you talking about core update OR theme update?</p>",
+        "id": 206483474,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597077976
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483373\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> - I started to debug that same problem yesterday, but got interrupted. I'll try to get back to it today and let you know what I find.</p>\n</blockquote>\n<p>Thank you <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> .  Glad to see I'm not the only one running into this.</p>",
+        "id": 206483480,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597077982
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483474\">said</a>:</p>\n<blockquote>\n<p>When you say it worked until the last update, are you talking about core update OR theme update?</p>\n</blockquote>\n<p>Core update.  There hasn't been a theme update in a long time for this one.</p>",
+        "id": 206483522,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597078005
+    },
+    {
+        "content": "<p>Ahhh, I was assuming that I had done something to create this problem on my site, but maybe it's also related to core update. I'll look into that theory as well.</p>",
+        "id": 206483630,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597078061
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483397\">said</a>:</p>\n<blockquote>\n<p>Were you able to change color settings on the theme  before?</p>\n</blockquote>\n<p>There are no color settings on theme to change, <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> .   It's all handled via css.   I'm not using the color module with the theme, but with another module.</p>",
+        "id": 206483633,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597078063
+    },
+    {
+        "content": "<p>You have a module that depends on the Color module?</p>",
+        "id": 206483846,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597078170
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Do you know when the issue started?</p>",
+        "id": 206483978,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597078222
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483846\">said</a>:</p>\n<blockquote>\n<p>You have a module that depends on the Color module?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span>,  now that I look at it, I don't think I am anymore. I think that module was something that I experimented with and deleted because I went in another direction.</p>",
+        "id": 206484097,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597078287
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483978\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> Do you know when the issue started?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> - middle to end of last week. It was very recent. I'm going to try and disable the color module and see what happens.</p>",
+        "id": 206484210,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597078341
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206484210\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483978\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> Do you know when the issue started?</p>\n</blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span>  @Joseph Flatt, - middle to end of last week for me after I ran updates. It was very recent. I'm going to try and disable the color module and see what happens.</p>\n</blockquote>",
+        "id": 206484281,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597078387
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> and <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> , when I disable the color module, the message goes away.  I'll leave it disabled for now.  Thanks!!</p>",
+        "id": 206484474,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597078477
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> - I noticed the problem yesterday. I just updated core last week.</p>",
+        "id": 206484484,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597078485
+    },
+    {
+        "content": "<p>BUT, I am seeing the problem with my contrib theme Tatsu and I noticed the problem while making other changes, so I assumed it was something I did.</p>",
+        "id": 206484537,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597078512
+    },
+    {
+        "content": "<p>I am using the color module, so I need to figure it out.</p>",
+        "id": 206484561,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597078525
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> , I am using that theme on another site as well, but I haven't had to touch it in a while so I don't know if it's happening there.</p>",
+        "id": 206484698,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597078576
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I think that the issue is happening more because of the change so that we regenerate color files when clearing caches. The error is coming from the fact that the color module requires that one of the color sets is named 'base', and then it generates it every time the files are regenerated.</p>",
+        "id": 206485313,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597078868
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> You should try commenting out  the 'blend_target' setting from your color.inc. We made color blending optional in a release a while back, and the color blending  is what is looking for fields with a specific name.</p>",
+        "id": 206486032,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597079230
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> - I'll try that now</p>",
+        "id": 206487295,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597079962
+    },
+    {
+        "content": "<p>I created this issue in the forum to document the issue and solution: <a href=\"https://forum.backdropcms.org/forum/undefined-index-base-%C2%A0colorrewritestylesheet\">https://forum.backdropcms.org/forum/undefined-index-base-%C2%A0colorrewritestylesheet</a></p>",
+        "id": 206490822,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597081684
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span>  Is there anything that needs to be done in core to address this issue? More informative error message or anything? Or is this just up to theme maintainers to address on their own?</p>",
+        "id": 206490897,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597081733
+    },
+    {
+        "content": "<p>I think that we should probably have a better way of telling theme developers about potential problems, but I am not sure if we can fix this directly because that would be an API change.</p>",
+        "id": 206491138,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1597081875
+    },
+    {
+        "content": "<p>Without actually \"fixing the problem\" could we add a clearer error message that communicates to theme developers how to address the problem?</p>",
+        "id": 206491751,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597082183
+    },
+    {
+        "content": "<p>Just a thought...</p>",
+        "id": 206491780,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597082199
+    },
+    {
+        "content": "<p>Like adding relevant comments to color.inc at the appropriate location(s)?</p>",
+        "id": 206492123,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1597082379
+    },
+    {
+        "content": "<p>See also: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4463\">https://github.com/backdrop/backdrop-issues/issues/4463</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4463\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4463\" title=\"[DX] Allow sub-themes to disable color support inherited by their parent theme · Issue #4463 · backdrop/backdrop-issues\">[DX] Allow sub-themes to disable color support inherited by their parent theme · Issue #4463 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This was brought up in Zulip: https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Sub-theme.2C.20remove.20color.20support @olafgrabienski I was considering to provide color support ...</div></div></div>",
+        "id": 206545375,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1597129244
+    }
+]

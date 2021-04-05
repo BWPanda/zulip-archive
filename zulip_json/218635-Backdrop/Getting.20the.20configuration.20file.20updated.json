@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>Hello Backdroppers! I am trying to figure out how to push changes to the configuration file of an already enabled contributed module with the release of next version. I usually use hook_update_N() function in .install for database updates, however this time there is no database changes, but the configuration file needs to get updates. Any hints would be appreciated!</p>",
+        "id": 200755134,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1592036009
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> hook_update_N() is the right place for that. You load the configuration, apply the changes, save the file - done.</p>",
+        "id": 200755939,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1592037269
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated/near/200755939\">said</a>:</p>\n<blockquote>\n<p>Hi <span class=\"user-mention silent\" data-user-id=\"258960\">Alan Mels</span> hook_update_N() is the right place for that. You load the configuration, apply the changes, save the file - done.</p>\n</blockquote>\n<p>Thanks for confirmation. I thought so, but then seeing the code section of the API page (<a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_N/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_N/1</a>) mentions only DB updates , I wanted to make sure.</p>",
+        "id": 200756131,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1592037722
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> here an example how I did it - <a href=\"https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install\">https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install\" title=\"backdrop-contrib/ip_blocking\">backdrop-contrib/ip_blocking</a></div><div class=\"message_embed_description\">Enables blocking of IP addresses. Contribute to backdrop-contrib/ip_blocking development by creating an account on GitHub.</div></div></div>",
+        "id": 200756716,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1592038862
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> Regarding the API documentation - you're right, CMI isn't mentioned there at all. It should be. Mind to file an Issue for that?</p>",
+        "id": 200756968,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1592039328
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated/near/200756716\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"258960\">Alan Mels</span> here an example how I did it - <a href=\"https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install\">https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install</a></p>\n</blockquote>\n<p>Thanks. I have no DB updates, but lot's of updates for config files.</p>",
+        "id": 200757231,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1592039819
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated/near/200756968\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"258960\">Alan Mels</span> Regarding the API documentation - you're right, CMI isn't mentioned there at all. It should be. Mind to file an Issue for that?</p>\n</blockquote>\n<p>Sure, I will.</p>",
+        "id": 200757235,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1592039833
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> in my example update hook used for config file, not for DB.</p>",
+        "id": 200757822,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1592040872
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated/near/200757822\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"258960\">Alan Mels</span> in my example update hook used for config file, not for DB.</p>\n</blockquote>\n<p>I know Vladimir. The problem is my new config file is huge, and I am afriad I will have to convert json to PHP array to get this done. I hoped there's an easier way</p>",
+        "id": 200758181,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1592041443
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span>  Maybe <code>config_sync_file()</code> function: <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21config%21config.sync.inc/function/config_sync_file/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21config%21config.sync.inc/function/config_sync_file/1</a><br>\nYou must to call <code>backdrop_flush_all_caches()</code> after <code>config_sync_file()</code>: <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21config%21config.admin.inc/function/config_import_single_form_submit/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21config%21config.admin.inc/function/config_import_single_form_submit/1</a></p>",
+        "id": 200806620,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1592123552
+    }
+]

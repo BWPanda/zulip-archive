@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>I wasn't able to find any existing issue for this, but would be very odd if nobody noticed it: when you create/edit taxonomy terms, you can add a description, and that description uses CKEditor, with the ability to add images. Bugs:</p>\n<ul>\n<li>you may select an existing image, but there is no option in the \"Insert image\" dialog to upload a new image <span aria-label=\"thumbs down\" class=\"emoji emoji-1f44e\" role=\"img\" title=\"thumbs down\">:thumbs_down:</span> </li>\n<li>existing images can be added to the description of terms, and they can be viewed, so they are saved properly, but the usage count for the image file does not get incremented. This means that if the \"main\" image gets deleted from everywhere else it is being used, eventually its usage count will reach 0, despite the fact that it is being used in one or more term descriptions ...eventually, garbage collection will kick in, and it will delete the actual file, which will result in data loss <span aria-label=\"thumbs down\" class=\"emoji emoji-1f44e\" role=\"img\" title=\"thumbs down\">:thumbs_down:</span> <span aria-label=\"thumbs down\" class=\"emoji emoji-1f44e\" role=\"img\" title=\"thumbs down\">:thumbs_down:</span> </li>\n</ul>\n<p>So, is there any existing issue for this that I couldn't find?</p>",
+        "id": 231092038,
+        "sender_full_name": "klonos",
+        "timestamp": 1616189076
+    },
+    {
+        "content": "<p>Does the image get marked as permanent, or just stays temporary until the next garbage cleanup?</p>",
+        "id": 231094993,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616190886
+    },
+    {
+        "content": "<p>Never thought about the ability to put images into the description of a Taxonomy but I don't see why it shouldn't be allowed, so if it's doing as you describe, definitely a bug.</p>",
+        "id": 231096688,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1616191864
+    },
+    {
+        "content": "<p>@laryn you aren't presented with an option to upload any images in the description field when creating/editing a taxonomy term - only allowed to reuse existing ones: <br>\n<a href=\"/user_uploads/18319/39Z7GAnOFe0b_HLT_6snxNd6/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/39Z7GAnOFe0b_HLT_6snxNd6/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/39Z7GAnOFe0b_HLT_6snxNd6/image.png\"></a></div>",
+        "id": 231118157,
+        "sender_full_name": "klonos",
+        "timestamp": 1616211171
+    },
+    {
+        "content": "<p>See? ^^ ...only the \"Select from library\" tab is available <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span> <br>\n...as such, you need to upload at least one image via some other way first (either from a node, or the \"+ Add file\" link). And that makes the image permanent.</p>",
+        "id": 231118165,
+        "sender_full_name": "klonos",
+        "timestamp": 1616211183
+    },
+    {
+        "content": "<p>...here's an issue for the first bug: <a href=\"https://github.com/backdrop/backdrop-issues/issues/5007\">https://github.com/backdrop/backdrop-issues/issues/5007</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/5007\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/5007\" title=\"Taxonomy terms &quot;Description&quot; field: &quot;The &quot;Insert image&quot; dialog does not provide the option to upload an image · Issue #5007 · backdrop/backdrop-issues\">Taxonomy terms \"Description\" field: \"The \"Insert image\" dialog does not provide the option to upload an image · Issue #5007 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Steps To Reproduce To reproduce the behavior: On a vanilla installation of Backdrop, head to the &quot;Tags&quot; vocabulary, to add a taxonomy term -&gt; /admin/structure/taxonomy/tags/add Click t...</div></div></div>",
+        "id": 231118644,
+        "sender_full_name": "klonos",
+        "timestamp": 1616211753
+    },
+    {
+        "content": "<p>...and here's the issue for the second one: <a href=\"https://github.com/backdrop/backdrop-issues/issues/5016\">https://github.com/backdrop/backdrop-issues/issues/5016</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/5016\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/5016\" title=\"Image files added to the &quot;Description&quot; field of taxonomy terms or the &quot;Block content&quot; field in custom blocks do not get a usage count · Issue #5016 · backdrop/backdrop-issues\">Image files added to the \"Description\" field of taxonomy terms or the \"Block content\" field in custom blocks do not get a usage count · Issue #5016 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This issue here is related to #5007 Steps To Reproduce To reproduce the behavior: In a vanilla installation of Backdrop, go to admin/content/files and use the &quot;+ Add file&quot; link to upload ...</div></div></div>",
+        "id": 231155680,
+        "sender_full_name": "klonos",
+        "timestamp": 1616257413
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> that's the issue I lost and had to retype ^^</p>",
+        "id": 231155685,
+        "sender_full_name": "klonos",
+        "timestamp": 1616257430
+    }
+]

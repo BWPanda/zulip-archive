@@ -1,0 +1,194 @@
+[
+    {
+        "content": "<p>I have a new laptop and I installed Lando (and, as a result, Docker), and now when I boot up my fan start whirring away because a process called <code>containerd</code> is using up almost all of my CPU resources. Note that this is before starting any Lando sites. I realise this probably isn't the best place to ask for help in working out why this is and how to stop it, but maybe someone here experienced the same thing, or maybe someone can point me to where best to ask for help with this... (not sure whether it's a Lando thing, Docker thing, or something else)?</p>",
+        "id": 201920879,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593045531
+    },
+    {
+        "content": "<p>I can't help much but knowing the OS would make it easier for others. I'm guessing containerd is a Docker thing</p>",
+        "id": 201925948,
+        "sender_full_name": "Herb",
+        "timestamp": 1593051347
+    },
+    {
+        "content": "<p>Linux is my OS, specifically Linux Mint 19.3</p>",
+        "id": 201926012,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593051414
+    },
+    {
+        "content": "<p><code>docker ps</code> show anything running?</p>",
+        "id": 201951326,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593079890
+    },
+    {
+        "content": "<p>also does <code>sudo service docker restart</code> help at all?</p>",
+        "id": 201951673,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593080139
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> I just restarted my computer to test this (had killed the process manually before). <code>docker ps</code> shows only headings, no data. and restarting docker doesn't do anything for the fan/high CPU usage of <code>containerd</code>.</p>",
+        "id": 201951997,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593080433
+    },
+    {
+        "content": "<p>Interestingly, after restarting and then running <code>top</code>, other processes show they've been running for a minute or two (correct), while <code>containerd</code> shows it's been running for over 2 hrs (not correct)...</p>",
+        "id": 201952040,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593080486
+    },
+    {
+        "content": "<p>and <code>service docker stop</code> lets cpu and fan go back to normal?</p>",
+        "id": 201952043,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593080489
+    },
+    {
+        "content": "<p>Mmm, nope. Stopping docker doesn't stop the <code>containerd</code> process or the fan...</p>",
+        "id": 201952149,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593080595
+    },
+    {
+        "content": "<p>huh;</p>",
+        "id": 201952162,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593080621
+    },
+    {
+        "content": "<p>I'm assuming the <code>time+</code> column in <code>top</code> is the running time...? 'Cause now it says over 5 hours for that process (just in the time I've been typing this).</p>",
+        "id": 201952228,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593080679
+    },
+    {
+        "content": "<p><a href=\"https://community.linuxmint.com/software/view/containerd\">https://community.linuxmint.com/software/view/containerd</a></p>",
+        "id": 201952232,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593080684
+    },
+    {
+        "content": "<p>Hmm, interesting that it only started happening after I installed Docker/Lando though....</p>",
+        "id": 201952365,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593080840
+    },
+    {
+        "content": "<p>Is this a thing you have <a href=\"https://github.com/ubuntu/microk8s/issues/500#issuecomment-642368118\">https://github.com/ubuntu/microk8s/issues/500#issuecomment-642368118</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/ubuntu/microk8s/issues/500#issuecomment-642368118\" style=\"background-image: url(https://repository-images.githubusercontent.com/132732601/e3882d80-e367-11e9-8177-a6d5ec3eaff3)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/ubuntu/microk8s/issues/500#issuecomment-642368118\" title=\"High CPU usage by gvfs-udisks2-vo which is caused by microk8s · Issue #500 · ubuntu/microk8s\">High CPU usage by gvfs-udisks2-vo which is caused by microk8s · Issue #500 · ubuntu/microk8s</a></div><div class=\"message_embed_description\">Please run microk8s.inspect and attach the generated tarball to this issue. inspection-report-20190610_165704.tar.gz We appreciate your feedback. Thank you for using microk8s. top shows: 2293 khteh...</div></div></div>",
+        "id": 201952619,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593081064
+    },
+    {
+        "content": "<p>Nope. Never heard of that repo/name, and can't stop <code>gvfs-udisks2-volume-monitor</code> as it doesn't exist.</p>",
+        "id": 201953088,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593081492
+    },
+    {
+        "content": "<p>does <code>service containerd stop</code> alleviate the problem?</p>",
+        "id": 201953572,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593081914
+    },
+    {
+        "content": "<p>Yes, process disappears from <code>top</code> report and fan slows down and stops too.</p>",
+        "id": 201954213,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593082403
+    },
+    {
+        "content": "<p>Any way to find out what starts a process in the first place? Like is it part of a program/app, if so, which one?</p>",
+        "id": 201954782,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593082820
+    },
+    {
+        "content": "<p>something to do with managing <code>runc</code>, but i don't know what that is</p>",
+        "id": 201958871,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593085971
+    },
+    {
+        "content": "<p>Not sure if this is related, but got this message when starting a Lando site:</p>\n<div class=\"codehilite\"><pre><span></span><code>Using an unsupported version of DOCKER ENGINE\n   You have version 18.0.0 but Lando wants something in the 18.09.3 - 19.04.0 range.\n   If you have purposefully installed an unsupported version and know what you are doing\n   you can probably ignore this warning. If not we recommend you use a supported version\n   as this ensures we can provide the best support and stability.\n   https://docs.docker.com/engine/install/\n</code></pre></div>\n\n\n<p>Yet when I run <code>docker -v</code> I get: <code>Docker version 19.03.12, build 48a66213fe</code><br>\nI installed Docker using the <a href=\"https://get.docker.com/\">https://get.docker.com/</a> script.</p>",
+        "id": 202036597,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593126823
+    },
+    {
+        "content": "<p>Maybe there's two instances installed?</p>",
+        "id": 202039897,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593129939
+    },
+    {
+        "content": "<p>Don't think so, <code>whereis docker</code> only shows one executable, but then I'm not familiar with Docker...</p>",
+        "id": 202041128,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593130994
+    },
+    {
+        "content": "<p>I think <code>whereis</code> will only show you the first on on the path. I would use <code>find</code> or <code>locate</code> to see if there was another one lurking about that some app is hardwired to use.</p>",
+        "id": 202041535,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593131385
+    },
+    {
+        "content": "<p>Still can't find anything that would indicate duplicates....</p>",
+        "id": 202041779,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593131612
+    },
+    {
+        "content": "<p>I'd suggest to completely purge docker and start fresh. Something seems fishy with your install (18.0.0 vs 19.03.12). I'd also recommend to use your distro's package manager and not that script. I'm not using mint but I'm pretty sure it ships with a docker package.</p>",
+        "id": 202058193,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593154971
+    },
+    {
+        "content": "<p>A quick thought... you might have had the older package (18.x) installed before, but then the script unpacked the newer one over it...?<br>\nWhat does <code>dpkg -l | grep  containerd</code> show? (Ehm... Mint has dpkg - right?)</p>",
+        "id": 202058978,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593155761
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> Yes, have <code>dpkg</code>. It shows one result for <code>containerd.io    1.2.13-2</code> (not sure what's up with that version number though)...</p>",
+        "id": 202072195,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593166080
+    },
+    {
+        "content": "<p>I'm afraid I can't help much because I never used Mint and have no clue, what's the current version of <code>containerd.io</code> in that distro (and docker-runc) But I'd still recommend to purge all docker packages and give your distro version a try. Just to make sure that all dependencies are correct and only one version is installed. - If there is a distro version.</p>",
+        "id": 202073509,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593167108
+    },
+    {
+        "content": "<p>Due to other issues with my laptop, I've just done a fresh install of Linux Mint 20 (which has fixed said issues!) Now I'm trying to setup Lando. I first did what <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> suggested and first installed Docker from the Software Centre. It says it's version 19.03.8, but is called '<a href=\"http://docker.io\">docker.io</a>'. When I then go to install Lando v3.0.5 it says \"Dependency is not satisfiable: docker-ce\" So I guess that answers the question about installing the version of Docker from the Software Centre...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://docker.io\" style=\"background-image: url(https://www.docker.com/sites/default/files/social/docker_facebook_share.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://docker.io\" title=\"Empowering App Development for Developers | Docker\">Empowering App Development for Developers | Docker</a></div><div class=\"message_embed_description\">Learn how Docker helps developers bring their ideas to life by conquering the complexity of app development.</div></div></div>",
+        "id": 202218729,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593317509
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> I see, lando forces you to install the version provided by <a href=\"http://docker.com\">docker.com</a> (I never used lando). You have no choice then, I guess. Purge your distri's version (<code>docker.io</code>) and try to get the docker-ce version running. Maybe it's easier on Mint 20, possibly because of dependencies... (?)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://docker.com\" style=\"background-image: url(https://www.docker.com/sites/default/files/social/docker_facebook_share.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://docker.com\" title=\"Empowering App Development for Developers | Docker\">Empowering App Development for Developers | Docker</a></div><div class=\"message_embed_description\">Learn how Docker helps developers bring their ideas to life by conquering the complexity of app development.</div></div></div>",
+        "id": 202226644,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593333359
+    },
+    {
+        "content": "<p>All good. I removed <code>docker.io</code> and installed it instead via their instructions. Unlike last time where I used the quick script, this time I did it manually by adding the repo, etc. And since I had to change it to reference the Ubuntu version instead of the Mint version, I guess that's where the automated script mucked up.</p>",
+        "id": 202233652,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593345543
+    },
+    {
+        "content": "<p>Thanks for the help/support all!</p>",
+        "id": 202233663,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593345555
+    }
+]

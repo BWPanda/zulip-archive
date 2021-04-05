@@ -1,0 +1,45 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/error.20with.20hook_install_tasks.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20with.20hook_install_tasks.html">error with hook_install_tasks</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="205942326"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20with%20hook_install_tasks/near/205942326" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20with.20hook_install_tasks.html#205942326">(Aug 04 2020 at 18:28)</a>:</h4>
+<p>I'm using this hook_install_tasks() in a new profile and got an error:</p>
+<div class="codehilite"><pre><span></span><code>Error: Call to undefined function lock_acquire() in state_initialize() (line 1278 of /app/www/core/includes/bootstrap.inc).
+</code></pre></div>
+
+
+<p>It is triggered by the state_get() function within the hook example code. Could it be that the file /core/includes/lock.in (where that lock_acquire() function is) is not included during install??</p>
+
+
+
+<a name="205944697"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20with%20hook_install_tasks/near/205944697" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20with.20hook_install_tasks.html#205944697">(Aug 04 2020 at 18:45)</a>:</h4>
+<p>I see that you can not use state_get() function as there is no semaphore table at this point, anyway, so it's not a problem with having <a href="http://lock.in">lock.in</a> file included.</p>
+<p>In Drupal 7 they use a variable_get() to set a batch_processing variable (<a href="https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_install_tasks/7.x">https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_install_tasks/7.x</a>). this has been changed to state_get during the port of the core. Is this something never checked before?</p>
+
+
+
+<a name="205946402"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20with%20hook_install_tasks/near/205946402" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20with.20hook_install_tasks.html#205946402">(Aug 04 2020 at 18:58)</a>:</h4>
+<p>created an issue <a href="https://github.com/backdrop/backdrop-issues/issues/4518">https://github.com/backdrop/backdrop-issues/issues/4518</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4518" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4518" title="state_get triggers and error during profile install · Issue #4518 · backdrop/backdrop-issues">state_get triggers and error during profile install · Issue #4518 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug Working on a new profile, I wanted to implement the hook_install_tasks() function as it&#39;s shown in the api docs (https://api.backdropcms.org/api/backdrop/core%21modules%2...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

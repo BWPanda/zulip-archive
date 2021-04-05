@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>I have two pages in Backdrop; an About node and a Testimonials view. Rather than adding Testimonials to the main menu, I'd like to display it on the About page as a seperate tab (e.g. click About in menu go to page with two tab; first selected is About node, second is Testimonials and shows that view when clicked). These would be seperate from the View/Edit/etc. tabs, don't want to mess with those. Any ideas how best to do this?</p>",
+        "id": 196869938,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588926731
+    },
+    {
+        "content": "<p>Not at the computer atm, but Field Group?</p>",
+        "id": 196885389,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1588938381
+    },
+    {
+        "content": "<p>That just groups fields through, right?</p>",
+        "id": 196885599,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588938540
+    },
+    {
+        "content": "<p>Oh yes, sure! I guess I didn't really think about your question, sorry!</p>",
+        "id": 196887091,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1588939637
+    },
+    {
+        "content": "<p>In Drupal, there is the Quick Tabs module, <a href=\"https://www.drupal.org/project/quicktabs\" title=\"https://www.drupal.org/project/quicktabs\">https://www.drupal.org/project/quicktabs</a>.</p>",
+        "id": 196887352,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1588939803
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> You already said you don't want to mess with main tabs, but maybe this is interesting, though:<br>\n<a href=\"https://drupal.stackexchange.com/questions/20904/menu-secondary-tabs\" title=\"https://drupal.stackexchange.com/questions/20904/menu-secondary-tabs\">https://drupal.stackexchange.com/questions/20904/menu-secondary-tabs</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://drupal.stackexchange.com/questions/20904/menu-secondary-tabs\" style=\"background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://drupal.stackexchange.com/questions/20904/menu-secondary-tabs\" title=\"Menu secondary tabs\">Menu secondary tabs</a></div><div class=\"message_embed_description\">How do I create secondary local tasks with hook_menu in Drupal 7?\n\nFor instance, if I wanted to add a new tab to a node, that presented multiple tasks beneath it?\r\nView\nEdit\nUpdate\n\nPrice\nPhoto\nPerson</div></div></div>",
+        "id": 196887967,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1588940299
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> <a href=\"https://www.drupal.org/project/node_tab\" title=\"https://www.drupal.org/project/node_tab\">https://www.drupal.org/project/node_tab</a> is also an interesting implementation, but the module is still in beta, w/o any new release since 2013, and its usage count is ~150 sites.</p>",
+        "id": 196888561,
+        "sender_full_name": "klonos",
+        "timestamp": 1588940691
+    },
+    {
+        "content": "<p>...quicktabs on the other hand seems to be popular, with close to 60k sites using the 7.x version. Perhaps it's worth porting over.</p>",
+        "id": 196888701,
+        "sender_full_name": "klonos",
+        "timestamp": 1588940766
+    }
+]

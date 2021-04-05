@@ -1,0 +1,278 @@
+[
+    {
+        "content": "<p>Hi guys, I need some help/guidance/opinion in a difficulty I'm facing. I have struggled for several hours to modify the css files in order to have my language selection flags/links placed nicely in my site. Please check the pictures.<br>\n<a href=\"/user_uploads/18319/sB-SOEjYvTUfI1MIKCrZq5YC/image.png\">image.png</a><br>\n<a href=\"/user_uploads/18319/mMr3UPM1CfsVtH_y6NCxnes-/image.png\">image.png</a><br>\n<a href=\"/user_uploads/18319/BJxGjkfHGjB-TrX19VeiTePK/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/sB-SOEjYvTUfI1MIKCrZq5YC/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/sB-SOEjYvTUfI1MIKCrZq5YC/image.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/mMr3UPM1CfsVtH_y6NCxnes-/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/mMr3UPM1CfsVtH_y6NCxnes-/image.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/BJxGjkfHGjB-TrX19VeiTePK/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/BJxGjkfHGjB-TrX19VeiTePK/image.png\"></a></div><p>The problem is that without modifying the structure of the divs in the page, the result will never be correct. For example in mobile version if I open the menu it goes to the lower part of the menu. Currently this is how I have achieved what you see</p>\n<div class=\"codehilite\"><pre><span></span><code>.l-header-inner {\nposition: relative;\n}\n\n.block-locale-language {\nposition: absolute;\nbottom: 0;\nright: 30px;\n}\n</code></pre></div>\n<p>With the relative-absolute aproach I need to have the .block-locale-language actually inside the .block-system-main-menu otherwise it will never work correctly. How can I achieve this? At the moment both .block-locale-language and  .block-system-main-menu are at the same level under the .l-header-inner so this doesn't work. I need the .block-locale-language to be nested inside  .block-system-main-menu. The backdrop block system allows only serial placement of these blocks!</p>\n<p>I have tried several other approaches, including floating divs to the right, to the left, display: inline etc. but no method achieves what I need. The only way to do this is if I could print the language switcher inside the menu div!<br>\nOf course there is the option to use javascript but I would like to avoid this</p>",
+        "id": 231284212,
+        "sender_full_name": "cptX",
+        "timestamp": 1616406562
+    },
+    {
+        "content": "<p>What if instead of absolute positioning you just gave the language block a negative bottom margin on mobile to make it sit next to the menu toggle? Then it won't drop down when the menu expands.</p>",
+        "id": 231286671,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616407923
+    },
+    {
+        "content": "<p>Not possible because when changing the width of the screen this margin will not be the same, it changes depending of the position of the rest items</p>",
+        "id": 231288243,
+        "sender_full_name": "cptX",
+        "timestamp": 1616408847
+    },
+    {
+        "content": "<p>What's the order of blocks in the layout?</p>",
+        "id": 231288291,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616408875
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/8viTn-O8j3a8PgB3valITGUV/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/8viTn-O8j3a8PgB3valITGUV/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/8viTn-O8j3a8PgB3valITGUV/image.png\"></a></div>",
+        "id": 231288710,
+        "sender_full_name": "cptX",
+        "timestamp": 1616409105
+    },
+    {
+        "content": "<p>We can change the order as we want, but we cannot nest, and that's where the issue starts. Can I programmatically print the language links/icons inside the primary meny div?</p>",
+        "id": 231289218,
+        "sender_full_name": "cptX",
+        "timestamp": 1616409337
+    },
+    {
+        "content": "<p>What if you move the language block above the navigation block and then just float it right...?</p>",
+        "id": 231289224,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616409339
+    },
+    {
+        "content": "<blockquote>\n<p>Can I programmatically print the language links/icons inside the primary meny div?</p>\n</blockquote>\n<p>Probably, but I'm sure there's an easier way to do what you want.</p>",
+        "id": 231289375,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616409410
+    },
+    {
+        "content": "<p>This happens with float functionality. As you see the menu is not expanding to the whole screen width and this produces usability issues<br>\n<a href=\"/user_uploads/18319/-qu07h0nwVGPd7fWR6fzW2sK/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/-qu07h0nwVGPd7fWR6fzW2sK/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/-qu07h0nwVGPd7fWR6fzW2sK/image.png\"></a></div>",
+        "id": 231289444,
+        "sender_full_name": "cptX",
+        "timestamp": 1616409454
+    },
+    {
+        "content": "<p>Yeah true... Can you now position absolutely and give it a higher z-index, or does that muck up the floating right?</p>",
+        "id": 231289567,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616409513
+    },
+    {
+        "content": "<p>So only absolute positioning can leave the menu intact. The float affects it's width. The absolute positioning actually would work really good if I could have the menu to be the parent of the language block</p>",
+        "id": 231289603,
+        "sender_full_name": "cptX",
+        "timestamp": 1616409546
+    },
+    {
+        "content": "<p>I don't think I can combine float and absolute... Absolute positioning removes the item completely from the existing structure</p>",
+        "id": 231289829,
+        "sender_full_name": "cptX",
+        "timestamp": 1616409657
+    },
+    {
+        "content": "<p>I'm still sure there must be an easier way, but to answer your original question, here's the code that renders the Language Switcher block: <a href=\"https://docs.backdropcms.org/api/backdrop/core%21modules%21locale%21locale.module/function/locale_block_view/1\">https://docs.backdropcms.org/api/backdrop/core%21modules%21locale%21locale.module/function/locale_block_view/1</a></p>",
+        "id": 231290473,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616410038
+    },
+    {
+        "content": "<p>It essentially just calls <code>theme('links__locale_block', $variables)</code>, so you can probably do that yourself by overriding the navigation block.</p>",
+        "id": 231290574,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616410083
+    },
+    {
+        "content": "<p>And then how can I modify the navigation block in order to include this code?</p>",
+        "id": 231290657,
+        "sender_full_name": "cptX",
+        "timestamp": 1616410143
+    },
+    {
+        "content": "<p>Probably <a href=\"https://docs.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.api.php/function/hook_block_view_MODULE_DELTA_alter/1\"><code>hook_block_view_MODULE_DELTA_alter()</code></a></p>",
+        "id": 231291244,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616410487
+    },
+    {
+        "content": "<p>Can I probably use a tpl file for this?</p>",
+        "id": 231291743,
+        "sender_full_name": "cptX",
+        "timestamp": 1616410764
+    },
+    {
+        "content": "<p>Sure: <code>block--system--main-menu.tpl.php</code></p>",
+        "id": 231291893,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616410831
+    },
+    {
+        "content": "<p>Copy <code>/core/modules/layout/templates/block.tpl.php</code>, rename to the above, then edit away.</p>",
+        "id": 231291972,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616410873
+    },
+    {
+        "content": "<p>Sorry I just need a bit more help. If I go with the approach of hook_block_view_MODULE_DELTA_alter() I  need to create a custom module and then inside the hook function I need to call the locale_block_view($type) function?<br>\nAnd if I go with the tpl approach what function do I need to call to present the language switcher?</p>",
+        "id": 231293710,
+        "sender_full_name": "cptX",
+        "timestamp": 1616411913
+    },
+    {
+        "content": "<p>what is this $type variable? <a href=\"/user_uploads/18319/RACsKUw85FRdvdwf0IpdH6tF/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/RACsKUw85FRdvdwf0IpdH6tF/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/RACsKUw85FRdvdwf0IpdH6tF/image.png\"></a></div>",
+        "id": 231293835,
+        "sender_full_name": "cptX",
+        "timestamp": 1616412000
+    },
+    {
+        "content": "<p>I just tested the <code>.tpl</code> approach by enbedding the 'powered by' block in the main menu block:</p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">&lt;div class=\"</span><span class=\"cp\">&lt;?php</span> <span class=\"k\">print</span> <span class=\"nb\">implode</span><span class=\"p\">(</span><span class=\"s1\">' '</span><span class=\"p\">,</span> <span class=\"nv\">$classes</span><span class=\"p\">);</span> <span class=\"cp\">?&gt;</span><span class=\"x\">\"</span><span class=\"cp\">&lt;?php</span> <span class=\"k\">print</span> <span class=\"nx\">backdrop_attributes</span><span class=\"p\">(</span><span class=\"nv\">$attributes</span><span class=\"p\">);</span> <span class=\"cp\">?&gt;</span><span class=\"x\">&gt;</span>\n<span class=\"x\">  </span><span class=\"cp\">&lt;?php</span> <span class=\"k\">print</span> <span class=\"nx\">theme</span><span class=\"p\">(</span><span class=\"s1\">'system_powered_by'</span><span class=\"p\">);</span> <span class=\"cp\">?&gt;</span><span class=\"x\"></span>\n\n<span class=\"x\">  </span><span class=\"cp\">&lt;?php</span> <span class=\"k\">print</span> <span class=\"nx\">render</span><span class=\"p\">(</span><span class=\"nv\">$title_prefix</span><span class=\"p\">);</span> <span class=\"cp\">?&gt;</span><span class=\"x\"></span>\n<span class=\"x\">  </span><span class=\"cp\">&lt;?php</span> <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nv\">$title</span><span class=\"p\">)</span><span class=\"o\">:</span> <span class=\"cp\">?&gt;</span><span class=\"x\"></span>\n<span class=\"x\">    &lt;h2 class=\"block-title\"&gt;</span><span class=\"cp\">&lt;?php</span> <span class=\"k\">print</span> <span class=\"nv\">$title</span><span class=\"p\">;</span> <span class=\"cp\">?&gt;</span><span class=\"x\">&lt;/h2&gt;</span>\n<span class=\"x\">  </span><span class=\"cp\">&lt;?php</span> <span class=\"k\">endif</span><span class=\"p\">;</span> <span class=\"cp\">?&gt;</span><span class=\"x\"></span>\n<span class=\"x\">  </span><span class=\"cp\">&lt;?php</span> <span class=\"k\">print</span> <span class=\"nx\">render</span><span class=\"p\">(</span><span class=\"nv\">$title_suffix</span><span class=\"p\">);</span> <span class=\"cp\">?&gt;</span><span class=\"x\"></span>\n\n<span class=\"x\">  &lt;div class=\"block-content\"&gt;</span>\n<span class=\"x\">    </span><span class=\"cp\">&lt;?php</span> <span class=\"k\">print</span> <span class=\"nx\">render</span><span class=\"p\">(</span><span class=\"nv\">$content</span><span class=\"p\">);</span> <span class=\"cp\">?&gt;</span><span class=\"x\"></span>\n<span class=\"x\">  &lt;/div&gt;</span>\n<span class=\"x\">&lt;/div&gt;</span>\n</code></pre></div>",
+        "id": 231294230,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616412246
+    },
+    {
+        "content": "<p>So you'd so the same, except you'd call <code>theme('links__locale_block', $variables)</code> instead of <code>theme('system_powered_by')</code></p>",
+        "id": 231294285,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616412285
+    },
+    {
+        "content": "<p>The <code>$type</code> variable is the block's delta. In this case, it looks to be some sort of language type: <a href=\"https://docs.backdropcms.org/api/backdrop/core%21modules%21locale%21locale.module/function/locale_block_info/1\">https://docs.backdropcms.org/api/backdrop/core%21modules%21locale%21locale.module/function/locale_block_info/1</a> (I'm not very familiar with Language/Locale module).</p>",
+        "id": 231294679,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616412569
+    },
+    {
+        "content": "<p>&lt;?php print theme('links__locale_block', $variables); ?&gt;  doesn't work! I suspect the $variables are not populated at that point</p>",
+        "id": 231294703,
+        "sender_full_name": "cptX",
+        "timestamp": 1616412591
+    },
+    {
+        "content": "<p>Yes, you'll need to populate <code>$variables</code> yourself.</p>",
+        "id": 231294775,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616412615
+    },
+    {
+        "content": "<p>I don't know how to do it... Also, I'm concerned about the efficiency of all these modifications, as this switcher will be in every page.</p>",
+        "id": 231295534,
+        "sender_full_name": "cptX",
+        "timestamp": 1616413069
+    },
+    {
+        "content": "<p>Ok, I played around with it, and I was able to do this easily by:</p>\n<ul>\n<li>Moving language block before menu block in layout</li>\n<li>Adding CSS to language block: <code>float: right;</code></li>\n<li>Add CSS to menu block: <code>clear: none;</code></li>\n</ul>",
+        "id": 231296619,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616413695
+    },
+    {
+        "content": "<p>I had this solution almost since the beginning but it is not working correctly in all cases. If you try either as logged-in or as non-logged-in user you will see that in some cases you can see the flags at the correct place but you cannot click on them!! At the beginning when I did it like this I though the job was done but later realized all the issues, so it is not so simple as it looks... Then I used z-index 1000 to solve it and then found the issues with the logged-in/out users. You should also check both pc view and mobile view. They behave differently with your float:right solution.</p>\n<p>For example in the following screenshot I'm using your suggestion as logged-out user and flags are not clickable.<br>\n<a href=\"user_uploads/18319/i8rA1G_WPo-xjU8sxEVeu__v/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"user_uploads/18319/i8rA1G_WPo-xjU8sxEVeu__v/image.png\" title=\"image.png\"><img src=\"user_uploads/18319/i8rA1G_WPo-xjU8sxEVeu__v/image.png\"></a></div><p>But in mobile version again as a logged-out user flags are clickable<br>\n<a href=\"user_uploads/18319/4LeH2WSfnpu1hpfvCSdXCjC4/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"user_uploads/18319/4LeH2WSfnpu1hpfvCSdXCjC4/image.png\" title=\"image.png\"><img src=\"user_uploads/18319/4LeH2WSfnpu1hpfvCSdXCjC4/image.png\"></a></div>",
+        "id": 231348319,
+        "sender_full_name": "cptX",
+        "timestamp": 1616432963
+    },
+    {
+        "content": "<p>can you send us a screenshot because I have done some more modification of the flags (using language icons with custom flags) and maybe these produce more issues in my system.</p>",
+        "id": 231348745,
+        "sender_full_name": "cptX",
+        "timestamp": 1616433120
+    },
+    {
+        "content": "<p>Where can I set the breakpoints of the width of the layout depending on the width of the screen and how can I modify different css parameters depending of the width? Is this possible with the basis and thesis themes?</p>",
+        "id": 231349728,
+        "sender_full_name": "cptX",
+        "timestamp": 1616433478
+    },
+    {
+        "content": "<p>I opened a forum topic about this here if you want to take part in that discussion <a href=\"https://forum.backdropcms.org/forum/language-linksflags-positioning\">https://forum.backdropcms.org/forum/language-linksflags-positioning</a></p>",
+        "id": 231361581,
+        "sender_full_name": "cptX",
+        "timestamp": 1616438039
+    },
+    {
+        "content": "<p>It's a bit tricky when adding more blocks to the header. I've done it with adding language switcher and the search block. But I end up disabling the header block settings for adding a second menu</p>",
+        "id": 231410757,
+        "sender_full_name": "Herb",
+        "timestamp": 1616463676
+    },
+    {
+        "content": "<blockquote>\n<p>Where can I set the breakpoints of the width of the layout depending on the width of the screen and how can I modify different css parameters depending of the width?</p>\n</blockquote>\n<p>It should be possible via custom CSS. Can you give an example which breakpoint and/or css parameter you want to modify?</p>",
+        "id": 231438876,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616489879
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> For example I would like the width of the whole page to be wider and maybe the right column too. I'm using the Moscone Flipped layout. I found some relative parameters like \"@media (min-width: 34em)\" in /core/themes/basis/css/skin.css . Is this the file that controls the width breakpoints and the general column widths?</p>",
+        "id": 231511604,
+        "sender_full_name": "cptX",
+        "timestamp": 1616521008
+    },
+    {
+        "content": "<p>Will have a look later this evening or tomorrow.</p>",
+        "id": 231517929,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616523409
+    },
+    {
+        "content": "<blockquote>\n<p>For example I would like the width of the whole page to be wider and maybe the right column too.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> In Moscone Flipped, three elements with the <code>.container</code> class seem to be responsible for the width:</p>\n<p>&lt;div class=\"l-header-inner container ...\"&gt;<br>\n&lt;div class=\"l-wrapper-inner container ...\"&gt;<br>\n&lt;div class=\"l-footer-inner container ...\"&gt;</p>\n<p>So, you could override the <code>max-width</code> definitions of  <code>.container</code> in a sub-theme's file for custom CSS. I think they're defined in different media queries like the following in <code>core/modules/layout/css/grid-flexbox.css</code>:</p>\n<div class=\"codehilite\"><pre><span></span><code>@media (min-width: 75em) {\n  .container {\n    max-width: 72.25rem;\n  }\n}\n</code></pre></div>",
+        "id": 231550015,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616536467
+    },
+    {
+        "content": "<p>(Assuming that by \"the whole page wider\" you mean the inner containers.)</p>",
+        "id": 231550396,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616536659
+    },
+    {
+        "content": "<p>Probably it makes sense to add at least one media query for screens wider than 75em (usually 1200px) in this case. Example</p>\n<div class=\"codehilite\"><pre><span></span><code>@media (min-width: 80em) {\n  .container {\n    max-width: 78rem;\n  }\n}\n</code></pre></div>",
+        "id": 231551122,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616536998
+    },
+    {
+        "content": "<blockquote>\n<p>... and maybe the right column too</p>\n</blockquote>\n<p>To change the sidebar width, you could override the <code>col-md-9</code> (content) and <code>col-md-3</code> (sidebar) definitions (from the same <code>grid-flexbox.css</code>).</p>",
+        "id": 231551871,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616537354
+    },
+    {
+        "content": "<p>Another approach: Use different <code>col-md</code> classes in a custom Layout template to get other content vs. sidebar dimensions, e.g. 8:4 instead of 9:3. In the template, it would be something like <code>l-content col-md-8</code> and <code>l-sidebar col-md-4</code>.</p>",
+        "id": 231552451,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616537710
+    },
+    {
+        "content": "<p>I guess, there are different ways to use a custom Layout template. I usually copy the directory <code>moscone_flipped</code> provided by core to the <code>layouts</code> folder (see <a href=\"https://github.com/backdrop/backdrop/tree/1.x/layouts\">https://github.com/backdrop/backdrop/tree/1.x/layouts</a>). Then, I rename the folder, its files, and occurrences within the files from <code>moscone_flipped</code> to something like <code>moscone_flipped_custom</code>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/tree/1.x/layouts\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/tree/1.x/layouts\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 231553300,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616538182
+    },
+    {
+        "content": "<p>Thanks <strong>Olaf Grabienski</strong> for the thorough answer!</p>",
+        "id": 231559250,
+        "sender_full_name": "cptX",
+        "timestamp": 1616541890
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I have searched for my Slogan string in the translation interface and it wasn't there. Where can I find this corresponding bug fix?</p>",
+        "id": 231559404,
+        "sender_full_name": "cptX",
+        "timestamp": 1616541968
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> in order to modify the grid-flexbox.css I need to copy the whole file to my theme or just modify settings in my theme's css?</p>",
+        "id": 231636849,
+        "sender_full_name": "cptX",
+        "timestamp": 1616594000
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> Yes, as an experiment, put the following example definition in <code>skin-thesis.css</code>:</p>\n<div class=\"codehilite\"><pre><span></span><code>@media (min-width: 80em) {\n  .container {\n    max-width: 78rem;\n  }\n}\n</code></pre></div>\n<p>It should increase the width of the <code>container</code> sections on wider screens.</p>",
+        "id": 231643548,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616596293
+    }
+]

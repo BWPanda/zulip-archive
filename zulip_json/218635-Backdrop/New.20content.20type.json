@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>Tadaaaaaa! I've finally made the feature request for a new content type in Backdrop: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4903\">https://github.com/backdrop/backdrop-issues/issues/4903</a>. Would be happy to get feedback over there.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4903\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4903\" title=\"Add a block content type · Issue #4903 · backdrop/backdrop-issues\">Add a block content type · Issue #4903 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need With &#39;existing content&#39; blocks and &#39;hidden-path&#39; content, Backdrop provides a powerful alternative to custom blocks: fieldable, translatable as any other con...</div></div></div>",
+        "id": 223840492,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1611528726
+    },
+    {
+        "content": "<p>New title for the request: \"Add a 'hidden-path' content type for content blocks\"</p>",
+        "id": 223841007,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1611529500
+    },
+    {
+        "content": "<p>Personally, I would love to see a generic \"type\" that can have an alias path field added to it. When I brought this up, I was told there is too much old code that would cause major rewrites to have to happen so it was pretty much a hard no.</p>\n<p>But anywho, I do like the approach Drupal took with converting blocks to entities which allows fieldable blocks. I think Backdrop makes it a LOT easier to handle fieldable content with layouts though so a content type could always be used for this proposed purpose. I guess I'm good either way?</p>\n<p>I wouldn't mind seeing core handle a few basic blocks OOTB though like an image block for quick galleries, a table block etc. <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> said we should just build them using content types and views, but I don't like that approach due to the overhead to make it work. 30+ min to create a gallery using a content type, views, configuration etc vs 25 seconds to upload 10 images and place the block done.</p>\n<p>As usual I'm hijacking the topic with random ideas. Props <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> for the request <span aria-label=\"blush\" class=\"emoji emoji-1f60a\" role=\"img\" title=\"blush\">:blush:</span></p>",
+        "id": 223841905,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611530730
+    },
+    {
+        "content": "<blockquote>\n<p>As usual I'm hijacking the topic with random ideas.</p>\n</blockquote>\n<p>Never mind, we're used to your talent to completely miss the point of an issue or topic. <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 223872116,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611566810
+    },
+    {
+        "content": "<blockquote>\n<p>Never mind, we're used to your talent to completely miss the point of an issue or topic. <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>\n</blockquote>\n<p>Just like we're all used to you're passive aggressive nonsense <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span>.</p>",
+        "id": 223953925,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611605769
+    },
+    {
+        "content": "<p>Like my \"talent\" to create chaos in the form of dozens of issues + working on multiple PRs on GitLab. (sorry)</p>",
+        "id": 223955043,
+        "sender_full_name": "klonos",
+        "timestamp": 1611606442
+    },
+    {
+        "content": "<blockquote>\n<p>Just like we're all used to you're passive aggressive nonsense</p>\n</blockquote>\n<p>Right. <span aria-label=\"smirk\" class=\"emoji emoji-1f60f\" role=\"img\" title=\"smirk\">:smirk:</span></p>",
+        "id": 224003405,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611644759
+    }
+]

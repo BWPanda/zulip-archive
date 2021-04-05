@@ -1,0 +1,327 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html">PHP 5.3 failing tests</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="214294062"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214294062" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214294062">(Oct 23 2020 at 10:00)</a>:</h4>
+<p>Can anyone out there explain why this is failing on 5.3? <a href="https://github.com/backdrop/backdrop/pull/3380">https://github.com/backdrop/backdrop/pull/3380</a></p>
+<p>Off-and-on-and-off-and-on didn't help. No problem on a (local) 5.6, but 5.3 keeps throwing 500 errors. WHY?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/pull/3380" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/pull/3380" title="Issue #3047: Add setting to add phone number field to contact forms by BWPanda · Pull Request #3380 · backdrop/backdrop">Issue #3047: Add setting to add phone number field to contact forms by BWPanda · Pull Request #3380 · backdrop/backdrop</a></div><div class="message_embed_description">Fixes backdrop/backdrop-issues#3047
+Replaces #3374</div></div></div>
+
+
+
+<a name="214294214"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214294214" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214294214">(Oct 23 2020 at 10:02)</a>:</h4>
+<p>BTW: it's not the tests alone, it really throws 500: <a href="http://3380.backdrop.backdrop.qa.backdropcms.org/contact">http://3380.backdrop.backdrop.qa.backdropcms.org/contact</a></p>
+
+
+
+<a name="214327549"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214327549" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214327549">(Oct 23 2020 at 15:25)</a>:</h4>
+<p>Could it be the <code>empty($config-&gt;get('phone'))</code>? I believe <code>empty()</code> complains if it gets non-variable results.</p>
+
+
+
+<a name="214328416"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214328416" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214328416">(Oct 23 2020 at 15:32)</a>:</h4>
+<p>In either case actually, there are several <code>$config-&gt;get('phone')</code>; may be best store that once in a variable.</p>
+
+
+
+<a name="214328617"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214328617" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214328617">(Oct 23 2020 at 15:34)</a>:</h4>
+<p>What does "non-variable result" mean? If config didn't find anything, it returns NULL, <code>empty(NULL)</code> is TRUE.</p>
+
+
+
+<a name="214328846"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214328846" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214328846">(Oct 23 2020 at 15:36)</a>:</h4>
+<p>The most frustrating thing (for <span class="user-mention" data-user-id="256607">@BWPanda</span> mostly) is, that it works fine on 7.0. And I also verified that it works on 5.6. (locally). We're both clueless, what breaks it in 5.3.</p>
+
+
+
+<a name="214331347"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214331347" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214331347">(Oct 23 2020 at 15:58)</a>:</h4>
+<p>I think <span class="user-mention" data-user-id="256757">@docwilmot</span> might be on to something. Worth testing by changing that. First output it to a variable and then check if it's empty</p>
+
+
+
+<a name="214331360"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214331360" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214331360">(Oct 23 2020 at 15:58)</a>:</h4>
+<p>Worth a try</p>
+
+
+
+<a name="214331532"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214331532" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214331532">(Oct 23 2020 at 16:00)</a>:</h4>
+<p>too late, already tested. the error is "Can't use method return value in write context", which is essentially the same as what I suggested.</p>
+
+
+
+<a name="214415281"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/214415281" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#214415281">(Oct 24 2020 at 08:21)</a>:</h4>
+<p>Ha! Thanks a million, <span class="user-mention" data-user-id="256757">@docwilmot</span>. This is something that changed in 5.5, hence not reproducible on 5.6.</p>
+
+
+
+<a name="223097504"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223097504" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223097504">(Jan 18 2021 at 09:35)</a>:</h4>
+<p>Curious what the rationale is on still  supporting 5.3?</p>
+
+
+
+<a name="223097799"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223097799" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223097799">(Jan 18 2021 at 09:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> I believe it's something to do with lots of web hosts and/or operating systems still including PHP 5.x as their default, out-of-the-box version. Since Backdrop wants to support the majority of users (especially those on shared hosting), that means supporting these older PHP versions. That's my understanding at least.</p>
+
+
+
+<a name="223127905"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223127905" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223127905">(Jan 18 2021 at 14:43)</a>:</h4>
+<p>If we follow the WP minimum version we'll probably cover most hosts. I bet most hosts will upgrade when WP forces them to.</p>
+
+
+
+<a name="223128158"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223128158" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223128158">(Jan 18 2021 at 14:45)</a>:</h4>
+<p>Looks like PHP 5.6 is the minimum version for WordPress now</p>
+
+
+
+<a name="223128898"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223128898" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223128898">(Jan 18 2021 at 14:52)</a>:</h4>
+<p>CentOS 7 (which will be supported until June 30th, 2024) still supports PHP 5.4, which has been the marker used in the past: <a href="https://wiki.centos.org/About/Product#fndef-a91b3c0c287c782f9af063daff9e64b566d648c7-2">https://wiki.centos.org/About/Product#fndef-a91b3c0c287c782f9af063daff9e64b566d648c7-2</a></p>
+
+
+
+<a name="223136152"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223136152" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223136152">(Jan 18 2021 at 15:47)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> There's a (sort of) ongoing discussion re raising the min version, for instance: <a href="https://github.com/backdrop/backdrop-issues/issues/4712">https://github.com/backdrop/backdrop-issues/issues/4712</a> and duplicate(s). But I suppose, the discussion has stalled a bit.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4712" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4712" title="Backdrop does not run on PHP 5.3.3 (or PHP 5.3.2?) · Issue #4712 · backdrop/backdrop-issues">Backdrop does not run on PHP 5.3.3 (or PHP 5.3.2?) · Issue #4712 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug In the requirements section on bakdropcms.org we clearly state that you need to be running PHP 5.3.2 or higher to run Backdrop. I have a server running two Drupal 7 sites (an...</div></div></div>
+
+
+
+<a name="223152232"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223152232" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223152232">(Jan 18 2021 at 18:34)</a>:</h4>
+<p>Thanks all. I'll be in that boat to agree to raise it for the reason that it's too much overhead for a small community to have to maintain.</p>
+<p>I'll note that from my experience, a lot of hosting environments might still offer it, some even out of the box, but they have gotten a LOT better with offering a way to choose multiple versions of PHP (including the latest) which means for a wide variety of people, changing it is a piece of cake.</p>
+<p>The biggest problem is what is run for the control panel. This affects drush,  composer and other PHP CLI stuff and isn't possible to change without upgrading the control panel.</p>
+<p>When Backdrop was forked 6 years ago, the ability to choose was just starting to roll out from control panels and hosting companies. Now it's pretty common place. HostGator for example was stuck on cPanel v56 about 5 years ago, but they had their own in-house version of choosing PHP (which wasn't introduced to cPanel until around v70 I think).</p>
+<p>So one thought before raising this, points back to telemetry. Once that can be implemented it will give a better direction on which versions to support.</p>
+
+
+
+<a name="223152397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223152397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223152397">(Jan 18 2021 at 18:36)</a>:</h4>
+<p>Can we/should we put in a long-term deprecation warning, if there's not one already?</p>
+
+
+
+<a name="223167507"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223167507" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223167507">(Jan 18 2021 at 22:02)</a>:</h4>
+<p>I guess one reason to support PHP 5.3 is to make upgrades from D7 more easy. D7 still supports PHP 5.3 (even if not recommended), see <a href="https://www.drupal.org/docs/7/system-requirements/php-requirements">https://www.drupal.org/docs/7/system-requirements/php-requirements</a>.</p>
+
+
+
+<a name="223186637"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223186637" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223186637">(Jan 19 2021 at 04:34)</a>:</h4>
+<p>I do like the idea of being able to support D7 for a while... I have found that D7 and many modules work great on PHP 7.2 &amp; 7.3  (jury is out on 7.4 as I just recently started testing it) 7+ is still a bit bugged for some older modules, but there's usually patches to fix them.</p>
+<p>Sites that have a lot of custom code might be more concerned with this but if a dev is moving from D7 to something else (like Backdrop) and it has a lot of custom code, the devs  probably understand it's time to update the code anyway. Makes me think we need to add PHP telemetry to the D7 BUS module at some point.</p>
+
+
+
+<a name="223186671"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223186671" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223186671">(Jan 19 2021 at 04:35)</a>:</h4>
+<blockquote>
+<p>Can we/should we put in a long-term deprecation warning, if there's not one already?</p>
+</blockquote>
+<p>Would 2.0 be a good candidate for this?</p>
+
+
+
+<a name="223336126"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223336126" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223336126">(Jan 20 2021 at 06:15)</a>:</h4>
+<p>I don't think we need to support 5.3 in order to provide a good upgrade path from d7. The philosophy of Backdrop is to support for the 80% of users. Most users probably have little to no custom code.</p>
+
+
+
+<a name="223340799"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223340799" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223340799">(Jan 20 2021 at 07:50)</a>:</h4>
+<p>I agree. I think that we should be supporting 5.6, and anything lower than that (down to 5.3) should be "best efforts".</p>
+
+
+
+<a name="223354334"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223354334" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223354334">(Jan 20 2021 at 10:27)</a>:</h4>
+<blockquote>
+<p>I don't think we need to support 5.3 in order to provide a good upgrade path from d7. (...) Most users probably have little to no custom code.</p>
+</blockquote>
+<p>I wasn't referring to custom code but about D7 sites running on a server with PHP 5.3 trying to uprade on the same server.</p>
+
+
+
+<a name="223430439"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223430439" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223430439">(Jan 20 2021 at 20:27)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> you really think there's a high percentage of hosting platforms that are locked at 5.3? From my experience, 5.3 is being dropped as being an option on a lot of hosting platforms.</p>
+<blockquote>
+<p>I think that we should be supporting 5.6, and anything lower than that (down to 5.3) should be "best efforts".</p>
+</blockquote>
+<p>What about bumping it up to 7 as the minimum with anything 5 being best efforts? Keep in mind, by the time a decision is made and implemented, there will be less people on 5.</p>
+<p>If the thought is to dump 5.3 fairly soon, then yeah a 5.6 minimum makes sense with a 7 minimum coming in say 1-2 years.</p>
+
+
+
+<a name="223431090"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223431090" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223431090">(Jan 20 2021 at 20:32)</a>:</h4>
+<p>I know I'll get some funny faces on this one, but the way I look at it, there's only a handful of people who are actually maintaining the code base for a whole bunch of people who aren't. I get that the software needs to be compatible for the community, but the community also consists of that very small group that has to maintain it. In my mind, it helps the community more by reducing the overhead requirements than it does making it more compatible with outdated languages. If the backwards compatibility requirement is gone, more time can be spent moving things forward. If the team was bigger, it would make more sense to devote time to a larger requirement window. Just my opinion <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="223431207"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223431207" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223431207">(Jan 20 2021 at 20:33)</a>:</h4>
+<p>I like the logic.  I don't know if it's controlling, but it's certainly a valid point.</p>
+
+
+
+<a name="223434330"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223434330" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223434330">(Jan 20 2021 at 20:58)</a>:</h4>
+<p>I hope that some of these opinions get registered in Github, where they will be easier to find when the time comes to make a decision. <br>
+<a href="https://github.com/backdrop/backdrop-issues/issues/4712">https://github.com/backdrop/backdrop-issues/issues/4712</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4712" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4712" title="Backdrop does not run on PHP 5.3.3 (or PHP 5.3.2?) · Issue #4712 · backdrop/backdrop-issues">Backdrop does not run on PHP 5.3.3 (or PHP 5.3.2?) · Issue #4712 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug In the requirements section on bakdropcms.org we clearly state that you need to be running PHP 5.3.2 or higher to run Backdrop. I have a server running two Drupal 7 sites (an...</div></div></div>
+
+
+
+<a name="223435011"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223435011" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223435011">(Jan 20 2021 at 21:02)</a>:</h4>
+<p>I know it's not a perfect 1:1 with Backdrop's user base but if we borrow CiviCRM's telemetry data to see a real world example of how many people might be in this PHP 5.3 situation. Of 11439 sites: 9808 (PHP7+); 1080 (php 5.6); 551 (other, presumably &lt;5.6). That's roughly 5% on PHP &lt; 5.6 or 14% on PHP &lt; 7.x.<br>
+<a href="https://stats.civicrm.org/?tab=technology">https://stats.civicrm.org/?tab=technology</a></p>
+
+
+
+<a name="223435603"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223435603" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223435603">(Jan 20 2021 at 21:07)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> I guess no high percentage on 5.3. I see it more as a ‚political‘ question if Backdrop should have higher requirements than D7 when we promote the upgrade path from D7 to Backdrop. Personally, I‘m absolutely fine with a higher version required but we should have in mind it‘s also a statement.</p>
+
+
+
+<a name="223437867"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223437867" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223437867">(Jan 20 2021 at 21:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Good stuff</p>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> I guess I'm not seeing the political gain <span aria-label="grinning face with smiling eyes" class="emoji emoji-1f601" role="img" title="grinning face with smiling eyes">:grinning_face_with_smiling_eyes:</span>. It made since 4-6 years ago, but seeing how well D7 works on the latest versions of PHP, it's not much of a selling point any more.</p>
+
+
+
+<a name="223441674"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223441674" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223441674">(Jan 20 2021 at 21:56)</a>:</h4>
+<p>I have mixed feelings about this and will say that if it's really a burden for us to maintain some of the earlier versions of PHP 5.x, we should CONSIDER our support level and make adjustments.</p>
+<blockquote>
+<p>I guess I'm not seeing the political gain</p>
+</blockquote>
+<p>The Political gain is that Backdrop CMS has promoted itself (in my opinion) as taking care of the users that were left behind by Drupal 8. If we start promoting policies and/or requirements that are MORE restrictive than those supported by Drupal 7, we MIGHT be sending a counter message (that does not mean that we should never do it). </p>
+<p>The users still stuck on servers with PHP 5.3 are probably not going to Drupal 8. There is some risk that we loose any opportunity to bring them over to Backdrop if we make life harder for them than Drupal is. </p>
+<p>Having said that, it's an argument that must be balanced against other arguments - including the ongoing costs to our community (as mentioned by <span class="user-mention" data-user-id="330989">@Phil Ward</span> ).</p>
+<p>I suspect that we may need to change our support version before 2.0 (Remember Backdrop 2.0 will not come before Jan 2025). But, we may want to keep ourselves in line with Drupal 7 until Drupal 7 is no longer supported (Nov 2022). </p>
+<p>I'm undecided on this issue, listening to what others have to say.</p>
+
+
+
+<a name="223441909"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223441909" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223441909">(Jan 20 2021 at 21:58)</a>:</h4>
+<p>Also, while Drupal core does support earlier versions of PHP, some contrib modules don't. Which means that effectively it getting harder and harder to maintain old Drupal 7 sites on servers with very old versions of PHP.</p>
+
+
+
+<a name="223443945"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223443945" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223443945">(Jan 20 2021 at 22:09)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span> <a href="#narrow/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests/near/223441674">said</a>:</p>
+<blockquote>
+<p>...(Remember 2.0 will not come before Jan 2015).</p>
+</blockquote>
+<p>No, it definitely will not. It will come significantly after.</p>
+
+
+
+<a name="223445880"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223445880" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223445880">(Jan 20 2021 at 22:24)</a>:</h4>
+<p>I feel like the case for supporting old versions of PHP were valid 4-6 years ago but I'm not seeing the justification today.</p>
+<p>Anything before PHP 7.2 is EoL which means Backdrop is promoting the potential use of versions that could be security problems with the language that runs Backdrop. I'm not saying we shouldn't support older versions, but a lot of time (in the computer world) has passed even since 5.6.</p>
+<p>Does Drupals automated tests check full modules for PHP compatibility or is it just patches and commits? If there's a place to see which contribs are compatible with a given version of PHP, it might make things easier.</p>
+
+
+
+<a name="223445978"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223445978" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223445978">(Jan 20 2021 at 22:26)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span> <a href="#narrow/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests/near/223441674">said</a>:</p>
+<blockquote>
+<p>...(Remember 2.0 will not come before Jan 2015).</p>
+</blockquote>
+<p>Was this supposed to be 2025?</p>
+
+
+
+<a name="223446057"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223446057" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223446057">(Jan 20 2021 at 22:26)</a>:</h4>
+<blockquote>
+<p>Was this supposed to be 2025?</p>
+</blockquote>
+<p>Yes.</p>
+
+
+
+<a name="223446116"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223446116" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223446116">(Jan 20 2021 at 22:27)</a>:</h4>
+<p>Thanks, yeah that's a long way off to have to change requirements...</p>
+
+
+
+<a name="223448573"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223448573" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223448573">(Jan 20 2021 at 22:53)</a>:</h4>
+<blockquote>
+<p>No, it definitely will not. It will come significantly after.</p>
+</blockquote>
+<p>It took <span class="user-mention" data-user-id="330989">@Phil Ward</span> making my error explicit for me to appreciate the subtlety of this response. :-)</p>
+<p>I've corrected the original typo (in case anyone comes late and is confused).</p>
+
+
+
+<a name="223448680"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223448680" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223448680">(Jan 20 2021 at 22:54)</a>:</h4>
+<p>The current policy is that Backdrop CMS 2.0 will not be released before Jan 2025 (and certainly NOT before 2015).</p>
+
+
+
+<a name="223448922"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223448922" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223448922">(Jan 20 2021 at 22:56)</a>:</h4>
+<p>Wow, I just realised that that'll mean Backdrop will be 10 years old before we have our first new major version... <span aria-label="surprise" class="emoji emoji-1f62e" role="img" title="surprise">:surprise:</span></p>
+
+
+
+<a name="223452337"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223452337" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223452337">(Jan 20 2021 at 23:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> was the "wow" meant to be because you've realized how old Backdrop will be, or how old WE will be <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="223649209"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%205.3%20failing%20tests/near/223649209" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.205.2E3.20failing.20tests.html#223649209">(Jan 22 2021 at 14:41)</a>:</h4>
+<p>@laryn a better metric would be how many CiviCRM sites there are that are on the current release (5.33?) <em>and</em> are running PHP 5.3. I'm guessing the number is zero since there's no way to run it on 5.3.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

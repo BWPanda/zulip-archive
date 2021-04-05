@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>I just can't figure out, where this code is from: <a href=\"https://github.com/backdrop-contrib/leaflet/blob/1.x-1.x/libraries/leaflet/leaflet-measure.js\">https://github.com/backdrop-contrib/leaflet/blob/1.x-1.x/libraries/leaflet/leaflet-measure.js</a></p>\n<p>And the person who merged this unknown library it is gone. I suspect, I'll have to remove it from the module. Or does anyone else figure out, where this comes from (and which license it uses)?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/leaflet/blob/1.x-1.x/libraries/leaflet/leaflet-measure.js\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/leaflet/blob/1.x-1.x/libraries/leaflet/leaflet-measure.js\" title=\"backdrop-contrib/leaflet\">backdrop-contrib/leaflet</a></div><div class=\"message_embed_description\">Integration with the Leaflet map scripting library. - backdrop-contrib/leaflet</div></div></div>",
+        "id": 233073883,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617534502
+    },
+    {
+        "content": "<p>FTR: I found all the other ones and can properly attribute: <a href=\"https://github.com/backdrop-contrib/leaflet/tree/update-libraries/libraries/leaflet_plugins\">https://github.com/backdrop-contrib/leaflet/tree/update-libraries/libraries/leaflet_plugins</a></p>\n<p>But this leaflet-measure thing is impossible to find on Github and the git history is no help, either.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/leaflet/tree/update-libraries/libraries/leaflet_plugins\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/leaflet/tree/update-libraries/libraries/leaflet_plugins\" title=\"backdrop-contrib/leaflet\">backdrop-contrib/leaflet</a></div><div class=\"message_embed_description\">Integration with the Leaflet map scripting library. - backdrop-contrib/leaflet</div></div></div>",
+        "id": 233074061,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617534717
+    },
+    {
+        "content": "<p>You might have done this already but you could search the files in the Drupal module and related modules to see if you can trace it's origin that way.</p>",
+        "id": 233078146,
+        "sender_full_name": "Herb",
+        "timestamp": 1617539249
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I haven't looked too closely at the code but it seems similar to <a href=\"https://github.com/Qix-/color/blob/master/index.js\">https://github.com/Qix-/color/blob/master/index.js</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/Qix-/color/blob/master/index.js\" style=\"background-image: url(https://avatars.githubusercontent.com/u/885648?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/Qix-/color/blob/master/index.js\" title=\"Qix-/color\">Qix-/color</a></div><div class=\"message_embed_description\">:rainbow: Javascript color conversion and manipulation library - Qix-/color</div></div></div>",
+        "id": 233078601,
+        "sender_full_name": "Herb",
+        "timestamp": 1617539759
+    },
+    {
+        "content": "<p>Except the measure js is a lot longer. Oops. Does it contain multiple libraries cobbled together?</p>",
+        "id": 233078743,
+        "sender_full_name": "Herb",
+        "timestamp": 1617539915
+    },
+    {
+        "content": "<p>I was just randomly copying and searching some of the functions</p>",
+        "id": 233078752,
+        "sender_full_name": "Herb",
+        "timestamp": 1617539943
+    },
+    {
+        "content": "<p>Some of the functions seem to require external libraries which might not be included</p>",
+        "id": 233078857,
+        "sender_full_name": "Herb",
+        "timestamp": 1617540074
+    },
+    {
+        "content": "<p>I also searched in related Drupal modules, but no luck. As the code isn't actually used, I removed it. Maybe it was some experimental stuff in the early days, possibly quickly stuffed together... Anyway - as I can't figure out the source and license, I removed it. Nothing broke.</p>",
+        "id": 233078947,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617540163
+    },
+    {
+        "content": "<p>Good</p>",
+        "id": 233078978,
+        "sender_full_name": "Herb",
+        "timestamp": 1617540226
+    }
+]

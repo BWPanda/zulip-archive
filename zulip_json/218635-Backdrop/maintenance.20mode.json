@@ -1,0 +1,92 @@
+[
+    {
+        "content": "<p>Putting Drupal 7 website to maintenance mode using configuration overrides was pretty easy - by simply placing <code>$conf['maintenance_mode'] = 1;</code> in settings.php file. AFAIK in Backdrop the maintenance_mode is under domain of state, not configuration. Is there any easy way of keeping one of two environments (which constantly sync databases with each other) under the maintenance mode?</p>",
+        "id": 213401981,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1602755586
+    },
+    {
+        "content": "<p>For now after every sync, we are running:</p>\n<div class=\"codehilite\"><pre><span></span><code>brush sql-query &quot;UPDATE state SET value = &#39;b:1;&#39; WHERE name=&#39;maintenance_mode&#39;;&quot;\n</code></pre></div>\n\n\n<p>(since drush and b won't work with sql-queries for now).</p>\n<p>However, I hope there is a simpler way for putting one of the environments offline while pushing DB to it from another live enfironment</p>",
+        "id": 213404673,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1602757277
+    },
+    {
+        "content": "<p>Just've found this <a href=\"https://drupal.stackexchange.com/questions/229662/how-can-i-enforce-maintenance-mode-at-all-times-in-a-specific-environment\">https://drupal.stackexchange.com/questions/229662/how-can-i-enforce-maintenance-mode-at-all-times-in-a-specific-environment</a> Seems the issue for Drupal 8 also has not been resolved.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://drupal.stackexchange.com/questions/229662/how-can-i-enforce-maintenance-mode-at-all-times-in-a-specific-environment\" style=\"background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://drupal.stackexchange.com/questions/229662/how-can-i-enforce-maintenance-mode-at-all-times-in-a-specific-environment\" title=\"How can I enforce maintenance_mode at all times in a specific environment?\">How can I enforce maintenance_mode at all times in a specific environment?</a></div><div class=\"message_embed_description\">In Drupal 7, we could override the $conf variables in settings.php to force a site (e.g. development) in maintenance mode. In Drupal 8, this has changed to $config, but the maintenance mode variabl...</div></div></div>",
+        "id": 213405930,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1602758041
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> are you aware that <a href=\"https://api.backdropcms.org/change-records/any-config-value-can-be-overridden-via-settingsphp\">any config value can now be overridden via settings.php</a>?</p>",
+        "id": 213406327,
+        "sender_full_name": "klonos",
+        "timestamp": 1602758295
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/maintenance.20mode/near/213406327\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"258960\">Alan Mels</span> are you aware that <a href=\"https://api.backdropcms.org/change-records/any-config-value-can-be-overridden-via-settingsphp\">any config value can now be overridden via settings.php</a>?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> AFAIK maintenance_mode is not a configuration anymore, it's a state</p>",
+        "id": 213464061,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1602784657
+    },
+    {
+        "content": "<p>If someone will be interested I've just pushed <a href=\"https://github.com/backdrop-contrib/state_override\">https://github.com/backdrop-contrib/state_override</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/state_override\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/state_override\" title=\"backdrop-contrib/state_override\">backdrop-contrib/state_override</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/state_override development by creating an account on GitHub.</div></div></div>",
+        "id": 213743639,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1603083841
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> Looks like you have a typo in the function name: <a href=\"https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6\">https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6\" title=\"backdrop-contrib/state_override\">backdrop-contrib/state_override</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/state_override development by creating an account on GitHub.</div></div></div>",
+        "id": 213744738,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603085415
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/maintenance.20mode/near/213744738\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"258960\">Alan Mels</span> Looks like you have a typo in the function name: <a href=\"https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6\">https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6</a></p>\n</blockquote>\n<p>O ye, been trying to fix it by <a href=\"https://github.com/backdrop-contrib/state_override/pull/1\">https://github.com/backdrop-contrib/state_override/pull/1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/state_override/pull/1\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/state_override/pull/1\" title=\"Update state_override.module by alanmels · Pull Request #1 · backdrop-contrib/state_override\">Update state_override.module by alanmels · Pull Request #1 · backdrop-contrib/state_override</a></div><div class=\"message_embed_description\">Invoke the state_set function only if $config array is not empty.</div></div></div>",
+        "id": 213744751,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1603085451
+    },
+    {
+        "content": "<p>But have not enough permission</p>",
+        "id": 213744754,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1603085460
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> @klonos can either of you fix permissions on that project?</p>",
+        "id": 213802246,
+        "sender_full_name": "Herb",
+        "timestamp": 1603120919
+    },
+    {
+        "content": "<p>For state override? Yes, I just fixed that one...  lmk if anything else comes up. And sorry again -- we really need to get contrib clenaed up :(</p>",
+        "id": 213838089,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1603138072
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> ++ for putting that contrib module together...</p>",
+        "id": 214002161,
+        "sender_full_name": "klonos",
+        "timestamp": 1603247182
+    },
+    {
+        "content": "<p>mels** - Dragon Fire (Karma: 2)</p>",
+        "id": 214002162,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1603247182
+    },
+    {
+        "content": "<p>...it seems that this should be supported natively by core (although I would go with something like <code>$state['maintenance_mode'] = TRUE;</code> instead of <code>$config['state']['maintenance_mode'] = TRUE;</code>)</p>",
+        "id": 214002190,
+        "sender_full_name": "klonos",
+        "timestamp": 1603247256
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/maintenance.20mode/near/214002190\">said</a>:</p>\n<blockquote>\n<p>...it seems that this should be supported natively by core (although I would go with something like <code>$state['maintenance_mode'] = TRUE;</code> instead of <code>$config['state']['maintenance_mode'] = TRUE;</code>)</p>\n</blockquote>\n<p>That was my initial idea, however hook_boot didn't return @state declared in settings.php, but did return @config without issues.</p>",
+        "id": 214004831,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1603250958
+    }
+]

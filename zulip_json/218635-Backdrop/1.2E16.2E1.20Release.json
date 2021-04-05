@@ -1,0 +1,230 @@
+[
+    {
+        "content": "<p>Hey folks, as you may have seen, Drupal 7.70 was released today with two security fixes. We've coordinated fixes on the Backdrop side as well. We'll use this <del>stream</del> topic to go over the release process.</p>",
+        "id": 198241549,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590000798
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Do we have the  release checklist for 1.16.1? I made a new milestone for 1.15.3, even though there's only going to be the release checklist in it.</p>",
+        "id": 198241772,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590000903
+    },
+    {
+        "content": "<p>found you :)</p>",
+        "id": 198242354,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1590001147
+    },
+    {
+        "content": "<p>I'm not done yet but the issue is at <a href=\"https://github.com/backdrop/backdrop-issues/issues/4405\">https://github.com/backdrop/backdrop-issues/issues/4405</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4405\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4405\" title=\"Backdrop 1.16.1 Release checklist · Issue #4405 · backdrop/backdrop-issues\">Backdrop 1.16.1 Release checklist · Issue #4405 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for May 20, 2020 12noon PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @quicksketch Move all unfinished issues to the next bugfix release milesto...</div></div></div>",
+        "id": 198242774,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1590001336
+    },
+    {
+        "content": "<p>and for 1.15.3 <a href=\"https://github.com/backdrop/backdrop-issues/issues/4406\">https://github.com/backdrop/backdrop-issues/issues/4406</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4406\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4406\" title=\"Backdrop 1.15.3 Release checklist · Issue #4406 · backdrop/backdrop-issues\">Backdrop 1.15.3 Release checklist · Issue #4406 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for May 20, 2020 12noon PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @quicksketch Move all unfinished issues to the next bugfix release milesto...</div></div></div>",
+        "id": 198243651,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1590001791
+    },
+    {
+        "content": "<p>Merge request for 1.x (letting it run all tests): <a href=\"https://github.com/backdrop/backdrop/pull/3146\">https://github.com/backdrop/backdrop/pull/3146</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3146\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3146\" title=\"SA-CORE-2020 002 and 003 by quicksketch · Pull Request #3146 · backdrop/backdrop\">SA-CORE-2020 002 and 003 by quicksketch · Pull Request #3146 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Security fixes for SA-CORE-2020-002 and SA-CORE-2020-003.</div></div></div>",
+        "id": 198244571,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590002231
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> is the only change not in 1.15.3 the one for text formats?</p>",
+        "id": 198245400,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1590002648
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> 1.16.1 also includes the color module fix.</p>",
+        "id": 198245445,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590002680
+    },
+    {
+        "content": "<p>In other words, 1.15.3 only includes the 2 security fixes and nothing else.</p>",
+        "id": 198245502,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590002711
+    },
+    {
+        "content": "<p>Tags are cut<br>\n<a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.3\">https://github.com/backdrop/backdrop/releases/tag/1.15.3</a><br>\n<a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.1\">https://github.com/backdrop/backdrop/releases/tag/1.16.1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.3\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.3\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.1\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.1\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 198245868,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590002913
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <a href=\"https://github.com/backdrop/backdrop-issues/issues/4318\">#4318</a> is listed twice in the 1.16.1 changelog, but I don't have permission to edit the release description. Can you please do that?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4318\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4318\" title=\"Theme color settings: color input not aligned with its label when label is too long · Issue #4318 · backdrop/backdrop-issues\">Theme color settings: color input not aligned with its label when label is too long · Issue #4318 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Before: After: PR by @klonos: backdrop/backdrop#3084</div></div></div>",
+        "id": 198254194,
+        "sender_full_name": "klonos",
+        "timestamp": 1590007086
+    },
+    {
+        "content": "<p>...I was hoping to also get <a href=\"https://github.com/backdrop/backdrop-issues/issues/3930\">#3930</a> in, but oh well.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3930\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3930\" title=\"Seven: Fieldset labels overflow container when collapsed · Issue #3930 · backdrop/backdrop-issues\">Seven: Fieldset labels overflow container when collapsed · Issue #3930 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug The theme settings headers do not display well as seen in the basis theme. Steps To Reproduce On a fresh site, go to: /admin/appearance/settings/basis Close the TABS AND BREA...</div></div></div>",
+        "id": 198254302,
+        "sender_full_name": "klonos",
+        "timestamp": 1590007163
+    },
+    {
+        "content": "<p>...also <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span>  I thought that only Nate was in the Drupal Security Team, but in <a href=\"https://backdropcms.org/security/backdrop-sa-core-2020-002\">https://backdropcms.org/security/backdrop-sa-core-2020-002</a> you are also listed as a member in the \"Fixed By\" section.</p>",
+        "id": 198255363,
+        "sender_full_name": "klonos",
+        "timestamp": 1590007719
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/IpSztBHly0-Q9S0UYOc8A17Q/image.png\">image.png</a> <br>\nare these not usually marked as security releases in the Backdrop UI?</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/IpSztBHly0-Q9S0UYOc8A17Q/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/IpSztBHly0-Q9S0UYOc8A17Q/image.png\"></a></div>",
+        "id": 198537008,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590242295
+    },
+    {
+        "content": "<p>Hmm, interesting. Shouldn't it be recommending upgrading to 1.15.3 with the option of going to 1.16.1?</p>",
+        "id": 198537709,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1590243655
+    },
+    {
+        "content": "<p>I think it always represents the biggest semantic version, but I thought I remembered some indication of security in the event of a sec release, but I may be misremembering</p>",
+        "id": 198537777,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590243794
+    },
+    {
+        "content": "<p>You are right <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> ...there should be a security release indication in the updates list.</p>",
+        "id": 198540234,
+        "sender_full_name": "klonos",
+        "timestamp": 1590247869
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4416\">https://github.com/backdrop/backdrop-issues/issues/4416</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4416\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4416\" title=\"1.16.1 denoted as a regular update instead of a security update · Issue #4416 · backdrop/backdrop-issues\">1.16.1 denoted as a regular update instead of a security update · Issue #4416 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I just double-checked both 1.16.1 and 1.15.3 on b.org, and both release nodes are already marked as security releases:</div></div></div>",
+        "id": 198540688,
+        "sender_full_name": "klonos",
+        "timestamp": 1590248608
+    },
+    {
+        "content": "<p>thanks!</p>",
+        "id": 198540843,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590248854
+    },
+    {
+        "content": "<p><code>dpm($available['project_status']);</code> returns <code>published </code> instead of <code>insecure</code></p>",
+        "id": 198543260,
+        "sender_full_name": "klonos",
+        "timestamp": 1590253143
+    },
+    {
+        "content": "<p>that's on <a href=\"http://b.org\">b.org</a></p>",
+        "id": 198543314,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590253235
+    },
+    {
+        "content": "<p>?</p>",
+        "id": 198543317,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590253240
+    },
+    {
+        "content": "<p>so seems like a <a href=\"http://b.org\">b.org</a> bug i guess;</p>",
+        "id": 198543326,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590253263
+    },
+    {
+        "content": "<p>Yeah, I think that that's what <a href=\"http://b.org\">b.org</a> generates.</p>",
+        "id": 198543331,
+        "sender_full_name": "klonos",
+        "timestamp": 1590253269
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> you can use the new <code>lando pulldb</code> command to sync up your local DB</p>",
+        "id": 198543644,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590253721
+    },
+    {
+        "content": "<p>oh; nevermind you'd need to be on the branch (not merged yet)</p>",
+        "id": 198543651,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590253740
+    },
+    {
+        "content": "<p>...plus I was just trying the <code>dpm()</code> on a vanilla Backdrop site - not a local setup of <a href=\"http://b.org\">b.org</a> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 198543673,
+        "sender_full_name": "klonos",
+        "timestamp": 1590253800
+    },
+    {
+        "content": "<p>...I just saw what is being consumed - not what <a href=\"http://b.org\">b.org</a> generates.</p>",
+        "id": 198543726,
+        "sender_full_name": "klonos",
+        "timestamp": 1590253828
+    },
+    {
+        "content": "<p>oh; that is a different story then</p>",
+        "id": 198543739,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590253860
+    },
+    {
+        "content": "<p>I wanted to start helping with <a href=\"http://b.org\">b.org</a> for so long, but I never got to set it up on my local ...I noticed the commits that have added the Lando config, but never actually got to it. I  want to help by testing/reviewing  <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>'s <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/653\">https://github.com/backdrop-ops/backdropcms.org/issues/653</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/653\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/653\" title=\"Allow cropping profile photos · Issue #653 · backdrop-ops/backdropcms.org\">Allow cropping profile photos · Issue #653 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Profile photos are currently centred (I believe). It'd be nice to be able to crop them manually.</div></div></div>",
+        "id": 198543814,
+        "sender_full_name": "klonos",
+        "timestamp": 1590254012
+    },
+    {
+        "content": "<p>do it;</p>",
+        "id": 198543965,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590254247
+    },
+    {
+        "content": "<p>I've generated language files for the 1.16 release (based on 1.16.1), so Backdrop translations are now available for 1.16: <a href=\"https://localize.backdropcms.org/translate/downloads\">https://localize.backdropcms.org/translate/downloads</a></p>",
+        "id": 198684013,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590423356
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ++</p>",
+        "id": 198704416,
+        "sender_full_name": "klonos",
+        "timestamp": 1590443383
+    },
+    {
+        "content": "<p>grabienski** leveled up! (Karma: 3)</p>",
+        "id": 198704417,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1590443383
+    },
+    {
+        "content": "<p>I have finally found the time to make that side-by-side screenshot for the new text format UI, and write a bit on it. It is now published!: <a href=\"https://backdropcms.org/news/backdrop-cms-1161-100th-release\">https://backdropcms.org/news/backdrop-cms-1161-100th-release</a></p>",
+        "id": 199725914,
+        "sender_full_name": "klonos",
+        "timestamp": 1591264972
+    },
+    {
+        "content": "<p>(sorry for taking that long)</p>",
+        "id": 199725931,
+        "sender_full_name": "klonos",
+        "timestamp": 1591264980
+    },
+    {
+        "content": "<p>Very good blog post IMHO for the 1.16 release <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> (I was not aware of some of the improvements, or what they really mean:-)</p>",
+        "id": 199842690,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591341736
+    },
+    {
+        "content": "<p>Indeed great post!</p>",
+        "id": 199855602,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1591350966
+    }
+]

@@ -1,0 +1,233 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html">File permissions</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="231139522"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231139522" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231139522">(Mar 20 2021 at 11:03)</a>:</h4>
+<p>Hi guys, usually for my other drupal sites I have a script for fixing automatically the file permissions in the server. Do we have something similar for backdrop? Specifically I manually changed the permissions and ownership of some files making them the same as in drupal but I got this error when I tried to save the configuration of the language icons module</p>
+<p>Error<br>
+Failed to write configuration file: ./files/config_51ad21e943ab2ce097d2ac3a6fcb670e/active/languageicons.settings.json <br>
+<a href="/user_uploads/18319/_60mBiWkhHzCPMgBop_blZgd/image.png">image.png</a> </p>
+<div class="message_inline_image"><a href="/user_uploads/18319/_60mBiWkhHzCPMgBop_blZgd/image.png" title="image.png"><img src="/user_uploads/18319/_60mBiWkhHzCPMgBop_blZgd/image.png"></a></div><p>What is the correct ownership and permissions for the backdrop structure?</p>
+
+
+
+<a name="231139614"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231139614" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231139614">(Mar 20 2021 at 11:05)</a>:</h4>
+<p>I use the same permissions for Drupal 7 &amp; Backdrop</p>
+
+
+
+<a name="231139721"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231139721" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231139721">(Mar 20 2021 at 11:08)</a>:</h4>
+<div class="codehilite"><pre><span></span><code>find [ROOT] -type d -execdir chmod u=rwx,g=rxs,o= &quot;{}&quot; \;
+find [ROOT] -type f -execdir chmod u=rwX,g=r,o= &quot;{}&quot; \;
+
+find [ROOT]/files -type d -execdir chmod u=rwx,g=rwxs,o= &quot;{}&quot; \;
+find [ROOT]/files -type f -execdir chmod u=rw,g=rw,o= &quot;{}&quot; \;
+</code></pre></div>
+
+
+
+<a name="231139758"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231139758" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231139758">(Mar 20 2021 at 11:08)</a>:</h4>
+<p>OK thanks, as I am the owner of the whole file structure and the www-data is the group, I needed to give g+w rights to make it work. Now it's ok, although I would like to know the opinion of the others regarding a script that would automatically take care of this. </p>
+<p>Would the following script for drupal 6 be ok for backdrop?</p>
+
+
+
+<a name="231139908"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231139908" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231139908">(Mar 20 2021 at 11:11)</a>:</h4>
+<p>This is my script for Drupal 6</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nv">path</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="p">%/</span><span class="si">}</span>
+<span class="nv">user</span><span class="o">=</span><span class="si">${</span><span class="nv">2</span><span class="si">}</span>
+<span class="nv">group</span><span class="o">=</span><span class="s2">&quot;www-data&quot;</span>
+<span class="nv">help</span><span class="o">=</span><span class="s2">&quot;\nHelp: This script is used to fix permissions of a drupal installation\nyou need to provide the following arguments:\n\t 1) Path to your drupal installation\n\t 2) Username of the user that you want to give files/directories ownership\nNote: \&quot;www-data\&quot; (apache default) is assumed as the group the server is belonging to, if this is different you need to modify it manually by editing this script\n\nUsage: (sudo) bash </span><span class="si">${</span><span class="nv">0</span><span class="p">##*/</span><span class="si">}</span><span class="s2"> drupal_path user_name\n&quot;</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> ! -d <span class="s2">&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">/sites&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> ! -f <span class="s2">&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">/modules/system/system.module&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="nb">echo</span> <span class="s2">&quot;Please provide a valid drupal path&quot;</span>
+<span class="nb">echo</span> -e <span class="nv">$help</span>
+<span class="nb">exit</span>
+<span class="k">fi</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="si">${</span><span class="nv">user</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="s2">&quot;`id -un </span><span class="si">${</span><span class="nv">user</span><span class="si">}</span><span class="s2"> 2&gt; /dev/null`&quot;</span> !<span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">user</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="nb">echo</span> <span class="s2">&quot;Please provide a valid user&quot;</span>
+<span class="nb">echo</span> -e <span class="nv">$help</span>
+<span class="nb">exit</span>
+<span class="k">fi</span>
+
+<span class="nb">cd</span> <span class="nv">$path</span><span class="p">;</span>
+
+<span class="nb">echo</span> -e <span class="s2">&quot;Changing ownership of all contents of \&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">\&quot; :\n user =&gt; \&quot;</span><span class="si">${</span><span class="nv">user</span><span class="si">}</span><span class="s2">\&quot; \t group =&gt; \&quot;</span><span class="si">${</span><span class="nv">group</span><span class="si">}</span><span class="s2">\&quot;\n&quot;</span>
+chown -R <span class="si">${</span><span class="nv">user</span><span class="si">}</span>:<span class="si">${</span><span class="nv">group</span><span class="si">}</span> .
+<span class="nb">echo</span> <span class="s2">&quot;Changing permissions of all directories inside \&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">\&quot; to \&quot;750\&quot;...&quot;</span>
+find . -type d -exec chmod <span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>rx,o<span class="o">=</span> <span class="o">{}</span> <span class="se">\;</span>
+<span class="nb">echo</span> -e <span class="s2">&quot;Changing permissions of all files inside \&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">\&quot; to \&quot;640\&quot;...\n&quot;</span>
+find . -type f -exec chmod <span class="nv">u</span><span class="o">=</span>rw,g<span class="o">=</span>r,o<span class="o">=</span> <span class="o">{}</span> <span class="se">\;</span>
+
+<span class="nb">cd</span> <span class="nv">$path</span>/sites<span class="p">;</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Changing permissions of \&quot;files\&quot; directories in \&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">/sites\&quot; to \&quot;770\&quot;...&quot;</span>
+find . -type d -name files -exec chmod <span class="nv">ug</span><span class="o">=</span>rwx,o<span class="o">=</span> <span class="s1">&#39;{}&#39;</span> <span class="se">\;</span>
+<span class="nb">echo</span> <span class="s2">&quot;Changing permissions of all files inside all \&quot;files\&quot; directories in \&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">/sites\&quot; to \&quot;660\&quot;...&quot;</span>
+find . -name files -type d -exec find <span class="s1">&#39;{}&#39;</span> -type f <span class="se">\;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> FILE<span class="p">;</span> <span class="k">do</span> chmod <span class="nv">ug</span><span class="o">=</span>rw,o<span class="o">=</span> <span class="s2">&quot;</span><span class="nv">$FILE</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">done</span>
+<span class="nb">echo</span> <span class="s2">&quot;Changing permissions of all directories inside all \&quot;files\&quot; directories in \&quot;</span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">/sites\&quot; to \&quot;770\&quot;...&quot;</span>
+find . -name files -type d -exec find <span class="s1">&#39;{}&#39;</span> -type d <span class="se">\;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> DIR<span class="p">;</span> <span class="k">do</span> chmod <span class="nv">ug</span><span class="o">=</span>rwx,o<span class="o">=</span> <span class="s2">&quot;</span><span class="nv">$DIR</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">done</span>
+</code></pre></div>
+
+
+
+<a name="231140140"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231140140" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231140140">(Mar 20 2021 at 11:16)</a>:</h4>
+<p>If you have a Backdrop multisite setup, that should work. But if you have a single site in a Backdrop installation, then the files dir is <code>[ROOT]/files</code>, not <code>[ROOT]/sites/[SITE]/files</code>...</p>
+
+
+
+<a name="231140222"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231140222" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231140222">(Mar 20 2021 at 11:18)</a>:</h4>
+<p>Good point!</p>
+
+
+
+<a name="231140227"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231140227" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231140227">(Mar 20 2021 at 11:18)</a>:</h4>
+<p>Here's the script I use if it helps:</p>
+<div class="codehilite" data-code-language="Bash"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#</span>
+<span class="c1"># Peter's secure file permissions script.</span>
+<span class="c1">#</span>
+<span class="c1"># Based on: https://drupal.org/node/244924</span>
+
+<span class="c1"># Setup variables.</span>
+<span class="nv">user</span><span class="o">=[</span>USER<span class="o">]</span>
+<span class="nv">group</span><span class="o">=</span>www-data
+<span class="nv">files_paths</span><span class="o">=</span>sites/*/files
+
+<span class="c1"># Secure file permissions for the given directories.</span>
+secure<span class="o">()</span> <span class="o">{</span>
+        <span class="nv">cms_path</span><span class="o">=</span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+
+        <span class="c1"># Change permissions for directories and files.</span>
+        chown -R <span class="nv">$user</span>:<span class="nv">$group</span> <span class="nv">$cms_path</span>
+        find <span class="nv">$cms_path</span> -type d -execdir chmod <span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>rxs,o<span class="o">=</span> <span class="s2">"{}"</span> <span class="se">\+</span>
+        find <span class="nv">$cms_path</span> -type f -execdir chmod <span class="nv">u</span><span class="o">=</span>rwX,g<span class="o">=</span>r,o<span class="o">=</span> <span class="s2">"{}"</span> <span class="se">\+</span>
+
+        <span class="c1"># Change permissions for root `files` directory.</span>
+        <span class="k">if</span> <span class="o">[</span> -d <span class="nv">$cms_path</span>/files <span class="o">]</span>
+        <span class="k">then</span>
+                find <span class="nv">$cms_path</span>/files -type d -execdir chmod <span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>rwxs,o<span class="o">=</span> <span class="s2">"{}"</span> <span class="se">\+</span>
+                find <span class="nv">$cms_path</span>/files -type f -execdir chmod <span class="nv">u</span><span class="o">=</span>rw,g<span class="o">=</span>rw,o<span class="o">=</span> <span class="s2">"{}"</span> <span class="se">\+</span>
+        <span class="k">fi</span>
+
+        <span class="c1"># Change permissions for sites `files` directory.</span>
+        <span class="k">if</span> <span class="o">[</span> -d <span class="nv">$cms_path</span>/sites <span class="o">]</span>
+        <span class="k">then</span>
+                <span class="k">for</span> files_path <span class="k">in</span> <span class="nv">$cms_path</span>/<span class="nv">$files_paths</span>
+                <span class="k">do</span>
+                        find <span class="nv">$files_path</span> -type d -execdir chmod <span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>rwxs,o<span class="o">=</span> <span class="s2">"{}"</span> <span class="se">\+</span>
+                        find <span class="nv">$files_path</span> -type f -execdir chmod <span class="nv">u</span><span class="o">=</span>rw,g<span class="o">=</span>rw,o<span class="o">=</span> <span class="s2">"{}"</span> <span class="se">\+</span>
+                <span class="k">done</span>
+        <span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c1"># Secure Backdrop &amp; Drupal.</span>
+secure /var/www/backdrop1
+secure /var/www/drupal7
+</code></pre></div>
+
+
+
+<a name="231140426"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231140426" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231140426">(Mar 20 2021 at 11:22)</a>:</h4>
+<p>Thanks!</p>
+
+
+
+<a name="231201164"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231201164" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231201164">(Mar 21 2021 at 08:02)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> do we have all that documented anywhere? (the dos/api site ideally)</p>
+
+
+
+<a name="231203287"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231203287" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231203287">(Mar 21 2021 at 08:55)</a>:</h4>
+<p>This page maybe? <a href="https://backdropcms.org/file-permissions-and-ownership">https://backdropcms.org/file-permissions-and-ownership</a> To be honest I just made the script from the Drupal link at the top if my script. But I believe the <a href="http://B.org">B.org</a> page is a copy of that one...</p>
+
+
+
+<a name="231212557"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231212557" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231212557">(Mar 21 2021 at 12:09)</a>:</h4>
+<p>...so does <code>drush fix-permissions</code> basically do all that? ^^ (it should)</p>
+
+
+
+<a name="231237935"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231237935" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231237935">(Mar 21 2021 at 20:05)</a>:</h4>
+<p>Basically, yes: <a href="https://github.com/backdrop-contrib/backdrop-drush-extension/blob/1.x-1.x/commands/devops/fix-permissions.sh">https://github.com/backdrop-contrib/backdrop-drush-extension/blob/1.x-1.x/commands/devops/fix-permissions.sh</a></p>
+<p>However I use my own script because:</p>
+<ul>
+<li>Drush doesn't look like it handles Backdrop's root 'files' dir properly...?</li>
+<li>I set the 'setgid' permission on my directories (<a href="https://en.m.wikipedia.org/wiki/Setuid">https://en.m.wikipedia.org/wiki/Setuid</a>)</li>
+<li>I use the uppercase 'X' for conditional execution</li>
+</ul>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/backdrop-drush-extension/blob/1.x-1.x/commands/devops/fix-permissions.sh" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/backdrop-drush-extension/blob/1.x-1.x/commands/devops/fix-permissions.sh" title="backdrop-contrib/backdrop-drush-extension">backdrop-contrib/backdrop-drush-extension</a></div><div class="message_embed_description">A set of commands and boot class for Drush and Backdrop CMS. - backdrop-contrib/backdrop-drush-extension</div></div></div>
+
+
+
+<a name="231242216"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231242216" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231242216">(Mar 21 2021 at 21:26)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256607">@BWPanda</span> <span aria-label="pray" class="emoji emoji-1f64f" role="img" title="pray">:pray:</span> <br>
+There you go <span class="user-mention" data-user-id="390119">@cptX</span> ...if you have drush + <a href="https://github.com/backdrop-contrib/backdrop-drush-extension">https://github.com/backdrop-contrib/backdrop-drush-extension</a> installed on your server, then you can use the <code>drush fix-permissions</code> command <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/backdrop-drush-extension" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/backdrop-drush-extension" title="backdrop-contrib/backdrop-drush-extension">backdrop-contrib/backdrop-drush-extension</a></div><div class="message_embed_description">A set of commands and boot class for Drush and Backdrop CMS. - backdrop-contrib/backdrop-drush-extension</div></div></div>
+
+
+
+<a name="231280564"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231280564" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231280564">(Mar 22 2021 at 09:14)</a>:</h4>
+<p>Thank you all for your answers!</p>
+
+
+
+<a name="231280669"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231280669" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231280669">(Mar 22 2021 at 09:15)</a>:</h4>
+<p>By the way why should we install the backdrop-drush-extension in order to use drush? In drupal 6 I haven't installed any module, just used drush directly</p>
+
+
+
+<a name="231282077"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231282077" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231282077">(Mar 22 2021 at 09:29)</a>:</h4>
+<p>Drush is built for Drupal and, as such, many of the commands don't 'just work' for Backdrop. So the Backdrop Drush Extension (BDE) was created to bridge the gap between Drush and Backdrop. On my server, I have both D7 sites and Backdrop sites. I have Drush installed, which works for D7, and the BDE which works for Backdrop. Because BDE is an <em>extension</em> of Drush, there's no conflict and you can run both simultaneously. However some commands need to be prefixed with 'backdrop', such as <code>backdrop-config-import</code> (or <code>bcim</code>).</p>
+
+
+
+<a name="231282377"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231282377" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231282377">(Mar 22 2021 at 09:32)</a>:</h4>
+<p>Yes but I read in this module description that this will work only with a specific drush version. Isn't that a significant limitation if you have other drupal sites installed?<br>
+Also I think there is also brush, does this work without the module and has all the functionality drush provides?</p>
+
+
+
+<a name="231282716"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/File%20permissions/near/231282716" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/File.20permissions.html#231282716">(Mar 22 2021 at 09:35)</a>:</h4>
+<p>Ah yes. Backdrop's Drush requires Drush 8.x I believe. This is one of the limitations of Backdrop's Drush, and is one of the reasons Brush and Bee exist. Brush is more 'feature-complete', supporting most of the commands Drush does, while Bee was written specifically for Backdrop and so currently lacks many of Drush's features, but aims to become the de-facto standard and ultimately replace Drush/Brush for Backdrop sites.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

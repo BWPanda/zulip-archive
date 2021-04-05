@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>When you set exposed filters in a View, you can check a box to have the site \"remember\" the last filters, so when people come back to that View the exposed filters are pre-filled. Is there anything similar for Pager values? (e.g. if you click on a node on page 5, then click \"Back\" in your browser, can you end up back on page 5 instead of back to page 1?)</p>",
+        "id": 202359042,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593459863
+    },
+    {
+        "content": "<p>I think that is because you have  Use AJAX: set to Yes in your view.</p>",
+        "id": 202361472,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593461198
+    },
+    {
+        "content": "<p>Ah, maybe it was set on that View... I'll double check whether it's needed. I guess the question stands if anyone knows a way to \"remember\" that sort of thing. I was looking at this one as a potential: <a href=\"https://www.drupal.org/project/views_ajax_history\">https://www.drupal.org/project/views_ajax_history</a></p>",
+        "id": 202394417,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593491021
+    }
+]

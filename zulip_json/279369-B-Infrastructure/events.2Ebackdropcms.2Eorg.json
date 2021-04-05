@@ -1,0 +1,794 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> - <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> </p>\n<p>As far as I know, you are the folks that can help me push code to the live <a href=\"http://events.backdropcms.org\">events.backdropcms.org</a> site.</p>",
+        "id": 228304378,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632161
+    },
+    {
+        "content": "<p>Is anyone available to help me. I've pushed some code to the main branch of the repo.<br>\n<a href=\"https://github.com/backdrop-ops/events.backdropcms.org\">https://github.com/backdrop-ops/events.backdropcms.org</a></p>\n<p>I could use help getting it to the site.</p>\n<p>I would also like to talk about getting access to do this myself (for at least this one site).</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/events.backdropcms.org\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/events.backdropcms.org\" title=\"backdrop-ops/events.backdropcms.org\">backdrop-ops/events.backdropcms.org</a></div><div class=\"message_embed_description\">Backdrop LIVE events. Contribute to backdrop-ops/events.backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 228304617,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632249
+    },
+    {
+        "content": "<p>I suppose I can help with that.</p>",
+        "id": 228304812,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632332
+    },
+    {
+        "content": "<p>OK, now is a good time because I have help fix anything that breaks.</p>",
+        "id": 228304865,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632359
+    },
+    {
+        "content": "<p>NOTE: The site is not being used yet, so if something breaks it's not critical.</p>",
+        "id": 228304891,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632374
+    },
+    {
+        "content": "<p>We are hoping to start sending folks to this site as early as today.</p>",
+        "id": 228304951,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632402
+    },
+    {
+        "content": "<p>Should I perform <code>git pull origin master</code>?</p>",
+        "id": 228305083,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632439
+    },
+    {
+        "content": "<p>Or is there more needed?</p>",
+        "id": 228305098,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632446
+    },
+    {
+        "content": "<p>I think that is all you need to do, but I'm not sure if there is anything to the process that I am unaware of.</p>",
+        "id": 228305182,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632476
+    },
+    {
+        "content": "<p>The branch is \"main\", but you would have figured that out.</p>",
+        "id": 228305216,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632491
+    },
+    {
+        "content": "<p><code>events@www2 ~/r/www&gt; git remote -v\norigin  git@github.com:backdrop-ops/events.backdropcms.org.git (fetch)\norigin  git@github.com:backdrop-ops/events.backdropcms.org.git (push)\nevents@www2 ~/r/www&gt; git pull \nremote: Enumerating objects: 115, done.\nremote: Counting objects: 100% (101/101), done.\nremote: Compressing objects: 100% (46/46), done.\nremote: Total 79 (delta 34), reused 78 (delta 33), pack-reused 0\nUnpacking objects: 100% (79/79), done.\nFrom github.com:backdrop-ops/events.backdropcms.org\n   d9027ce..f5f66b9  main       -&gt; origin/main\nUpdating d9027ce..f5f66b9\nerror: The following untracked working tree files would be overwritten by merge:\n    config/live-active/smtp.settings.json\nPlease move or remove</code></p>",
+        "id": 228305365,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632530
+    },
+    {
+        "content": "<p>Looks like a problem</p>",
+        "id": 228305419,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632550
+    },
+    {
+        "content": "<p>`events@www2 ~/r/www&gt; git status<br>\nOn branch main<br>\nYour branch is up-to-date with 'origin/main'.<br>\nChanges not staged for commit:<br>\n  (use \"git add/rm &lt;file&gt;...\" to update what will be committed)<br>\n  (use \"git checkout -- &lt;file&gt;...\" to discard changes in working directory)</p>\n<div class=\"codehilite\"><pre><span></span><code>deleted:    ../config/live-active/antibot.settings.json\nmodified:   ../config/live-active/field.instance.registration.backdrop_live.field_full_name.json\nmodified:   ../config/live-active/layout.layout.home.json\nmodified:   ../config/live-active/system.core.json\nmodified:   ../config/live-active/user.role.administrator.json\nmodified:   ../config/live-active/user.role.authenticated.json\nmodified:   ../config/live-active/user.role.editor.json\ndeleted:    ../config/live-active/views_bootstrap.settings.json\n</code></pre></div>\n\n<p>Untracked files:<br>\n  (use \"git add &lt;file&gt;...\" to include in what will be committed)</p>\n<div class=\"codehilite\"><pre><span></span><code>../config/live-active/layout.layout.events.json\n../config/live-active/smtp.settings.json\n</code></pre></div>\n\n<p>`</p>",
+        "id": 228305442,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632557
+    },
+    {
+        "content": "<p>Ahh, I THINK if I export the config from the live site and commit it, that will solve that problem.</p>",
+        "id": 228305485,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632576
+    },
+    {
+        "content": "<p>okay</p>",
+        "id": 228305546,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632594
+    },
+    {
+        "content": "<p>Again, it's ok if we break something.</p>",
+        "id": 228305558,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632596
+    },
+    {
+        "content": "<p>That's fine</p>",
+        "id": 228305579,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632604
+    },
+    {
+        "content": "<p>Give me a couple of minutes.</p>",
+        "id": 228305581,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632605
+    },
+    {
+        "content": "<p>Let me know when it is ready. I will perform a git reset and then pull.</p>",
+        "id": 228305632,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614632632
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> - Please, try again.</p>",
+        "id": 228306038,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632791
+    },
+    {
+        "content": "<p>I don't usually keep my active config in GIT, but I think I can see how this works.</p>",
+        "id": 228306084,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614632816
+    },
+    {
+        "content": "<p>hello!</p>",
+        "id": 228306424,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614632980
+    },
+    {
+        "content": "<p>Nevermind the other message. You found us.</p>",
+        "id": 228306550,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633025
+    },
+    {
+        "content": "<p>:) eventually -- thank you Zulip for emailing me</p>",
+        "id": 228306594,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633039
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> is pulling some code for me.</p>",
+        "id": 228306626,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633055
+    },
+    {
+        "content": "<p>I am in the middle of a client site deploy - but after I do this want we should...  oh perfect!</p>",
+        "id": 228306637,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633064
+    },
+    {
+        "content": "<p>thank you <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span>  :)</p>",
+        "id": 228306655,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633070
+    },
+    {
+        "content": "<p>I've added the content access module, because permissions are not working on the registration module. I think I can have registration working in a few hours.</p>",
+        "id": 228306717,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633091
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/registration/issues/25\">https://github.com/backdrop-contrib/registration/issues/25</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/registration/issues/25\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/registration/issues/25\" title=\"Permissions Not Working? · Issue #25 · backdrop-contrib/registration\">Permissions Not Working? · Issue #25 · backdrop-contrib/registration</a></div><div class=\"message_embed_description\">I&#39;m experimenting with a registration form for events.backdropcms.org and initially we experimented with allowing anonymous users to register. We then decided that users should have to create a...</div></div></div>",
+        "id": 228306845,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633130
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> please never do a git reset, that could get us into a lot of trouble</p>",
+        "id": 228306858,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633135
+    },
+    {
+        "content": "<p>the config mgmt workflow is documented in the readme</p>",
+        "id": 228306893,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633146
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I committed the config that was live -- before you do a config sync we'll need to merge in the recent changes.</p>",
+        "id": 228307053,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633219
+    },
+    {
+        "content": "<p>Can you do a git pull compare locally?</p>",
+        "id": 228307078,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633231
+    },
+    {
+        "content": "<p>Well, I think I've done everything necessary. I went through the instructions in the README.</p>",
+        "id": 228307172,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633256
+    },
+    {
+        "content": "<p>yes, but there were changes on the live site so we cannot sync on live or those will be lost</p>",
+        "id": 228307197,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633274
+    },
+    {
+        "content": "<p>Yes, but I exported those changes on the LIVE site and included them in my code</p>",
+        "id": 228307238,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633292
+    },
+    {
+        "content": "<p>I cannot tell what's changed in staging because there are a lot of file-mode changes committed</p>",
+        "id": 228307330,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633326
+    },
+    {
+        "content": "<p>Can you please do a <code>git config core.fileMode false</code> so there are no more of those?</p>",
+        "id": 228307390,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633351
+    },
+    {
+        "content": "<p>Yes, I can. That is a problem I've been looking for a an answer to.</p>",
+        "id": 228307484,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633377
+    },
+    {
+        "content": "<p>:) I am going to pull locally and do the comparison</p>",
+        "id": 228307517,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633391
+    },
+    {
+        "content": "<p>I'll do that now and would be happy to redo my commit afterwards.</p>",
+        "id": 228307519,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633392
+    },
+    {
+        "content": "<p>please don't sync on live yet :)</p>",
+        "id": 228307527,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633398
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> it looks like the virtual user group config got committed. was that intentional?</p>",
+        "id": 228307701,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633481
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Do you want to talk about this on Jitsi. Because I can't keep up with you. :-)</p>",
+        "id": 228307872,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633538
+    },
+    {
+        "content": "<p>It was on the live site -- but NOT commited to staging</p>",
+        "id": 228307884,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633545
+    },
+    {
+        "content": "<p>so I don't think you exported config from live.</p>",
+        "id": 228307911,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633552
+    },
+    {
+        "content": "<p>yes ok one second :)</p>",
+        "id": 228307923,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633558
+    },
+    {
+        "content": "<p>Do you already have a link? <a href=\"http://forjit.si\">forjit.si</a>?</p>",
+        "id": 228308322,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614633701
+    },
+    {
+        "content": "<p><a href=\"https://meet.jit.si/935384022882982\">Click to join video call</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://meet.jit.si/935384022882982\" style=\"background-image: url(https://meet.jit.si/images/jitsilogo.png?v=1)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://meet.jit.si/935384022882982\" title=\"Jitsi Meet\">Jitsi Meet</a></div><div class=\"message_embed_description\">Join a WebRTC video conference powered by the Jitsi Videobridge</div></div></div>",
+        "id": 228308340,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614633713
+    },
+    {
+        "content": "<p>ok</p>",
+        "id": 228310692,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614634656
+    },
+    {
+        "content": "<p>Standing by if I can be of help.</p>",
+        "id": 228310819,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1614634701
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> - <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> is helping now. I think we got it.</p>",
+        "id": 228311400,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614635011
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - FYI, I figured out the problem and I think you speculcated that this might be an issue. </p>\n<p>The LIVE site is using the dev-active directory.</p>",
+        "id": 228313379,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614635872
+    },
+    {
+        "content": "<p>That's why it was picking up config that was not on the LIVE site.</p>",
+        "id": 228313457,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614635894
+    },
+    {
+        "content": "<p>Maybe not.</p>",
+        "id": 228314032,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614636104
+    },
+    {
+        "content": "<p>That would do it!</p>",
+        "id": 228314112,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614636127
+    },
+    {
+        "content": "<p>Well, I hadn't noticed the settings in .settings.local.php</p>",
+        "id": 228314183,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614636155
+    },
+    {
+        "content": "<p>There are conflicting settings.</p>",
+        "id": 228314221,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614636170
+    },
+    {
+        "content": "<p>I am not sure if settings.local.php will always override the settings in settings.php</p>",
+        "id": 228314377,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614636243
+    },
+    {
+        "content": "<p>Anyway, the site is having difficulty writing config files.</p>",
+        "id": 228314437,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614636252
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/279369-BD-Infrastructure/topic/events.2Ebackdropcms.2Eorg/near/228314377\">said</a>:</p>\n<blockquote>\n<p>I am not sure if settings.local.php will always override the settings in settings.php</p>\n</blockquote>\n<p>Should do.</p>",
+        "id": 228314584,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614636332
+    },
+    {
+        "content": "<p>There is a permissions problem on the <a href=\"http://events.backdropcms.org\">events.backdropcms.org</a> site. The site is unable to write config files.i</p>",
+        "id": 228316636,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614637091
+    },
+    {
+        "content": "<p>I think it might be an ownership issue in the config directory. But, I don't think I have permissions to chown.</p>",
+        "id": 228316698,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614637125
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> or <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> ?</p>",
+        "id": 228316728,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614637142
+    },
+    {
+        "content": "<p>I can look later. About to go out for Dr appointment.</p>",
+        "id": 228316864,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614637205
+    },
+    {
+        "content": "<p>pk</p>",
+        "id": 228316895,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614637217
+    },
+    {
+        "content": "<p>hi! I'm back :)</p>",
+        "id": 228317558,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614637494
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I just fixed the permissions issue.</p>",
+        "id": 228317791,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614637593
+    },
+    {
+        "content": "<p>Welcome</p>",
+        "id": 228317891,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614637638
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - Where did we leave things with content access module? It sounds like you would prefer I NOT use it, yet you did push it to production for me. So that leaves me with the Registration Account Creation module. I'll have to experiment with that.</p>",
+        "id": 228319269,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614638232
+    },
+    {
+        "content": "<p>OK, I'm confused, because access seems to be working now for Registration. Maybe one of your patches is working.</p>",
+        "id": 228321445,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614639288
+    },
+    {
+        "content": "<p>NOPE - My mistake. Access permissions are not working. I had applied a patch by DocWilmot that partially fixes the problem, but still generates errors.</p>",
+        "id": 228327547,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614642275
+    },
+    {
+        "content": "<p>I'm back. Need anything now?</p>",
+        "id": 228328263,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614642636
+    },
+    {
+        "content": "<p>No, I think we're fine. I now have access to pull code to the events site. So, I think I'll be good.</p>",
+        "id": 228332699,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614644893
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - I tried the \"registration_account_creation\" module, but I was uncomfortable with the process. I don't think that it was generating any confirmation message and I was concerned that users would not realize that they had created an account on the site. </p>\n<p>I am sure we could fix that, but I didn't have time and wanted to get registration ready. So, I went with the content access option. Users will need to create an account before they are able to register.</p>\n<p>Anyway, now they must create an account to register, so that will be clear.</p>",
+        "id": 228341175,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614650563
+    },
+    {
+        "content": "<p>Once permissions on the registration module are working better, we can rethink this configuration.</p>",
+        "id": 228341493,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614650786
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I've registered onthe Events site. Can I please have admin access now?</p>",
+        "id": 228342061,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614651217
+    },
+    {
+        "content": "<p>Also, should the site name be changed to \"Backdrop Events\" (missing 's' on the end)...?</p>",
+        "id": 228342074,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614651243
+    },
+    {
+        "content": "<p>Done</p>",
+        "id": 228342886,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614651854
+    },
+    {
+        "content": "<p>The PayPal donation form seems to be broken. <br>\n<a href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/7\">https://github.com/backdrop-ops/events.backdropcms.org/issues/7</a></p>\n<p>I think this will require the attention of <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <br>\n<a href=\"https://events.backdropcms.org/donate\">https://events.backdropcms.org/donate</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/7\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/7\" title=\"Donation Form is not working · Issue #7 · backdrop-ops/events.backdropcms.org\">Donation Form is not working · Issue #7 · backdrop-ops/events.backdropcms.org</a></div><div class=\"message_embed_description\">We have a donation form set up with PayPal, but it's not working. @jenlampton - Can you check this out and see what happened? Did I break it? If so, sorry. https://events.backdropcms.org/donate</div></div></div>",
+        "id": 228351086,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614658830
+    },
+    {
+        "content": "<p>Doesn't seem like I can help as the PayPal login details aren't in 1Password...</p>",
+        "id": 228352042,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614659581
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> the confirmation message is a setting in registration module. As is the text in the email the person recieves. I modified the allowed tokens for the email message to include the one-time-log-in link (though I have not figured out how to make it appear in the UI)</p>",
+        "id": 228459216,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614709221
+    },
+    {
+        "content": "<p>However, I'm fine with requiring that people log in first, and I'm happy to fix the permissions issue on the form itself if you'd rather go that route. Content access is on there now, I think, so this is lower priority than the paypal thing - so I'll check that first.</p>",
+        "id": 228459395,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614709296
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> did you create this stream? If so can you please correct the abbreviation? (Backdrop is B, not BD)</p>",
+        "id": 228469339,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614712958
+    },
+    {
+        "content": "<p>I set up this stream and just edited title. Still not sure if we should keep this stream, open to feedback.</p>",
+        "id": 228469691,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614713110
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> did post a PR to fix the permissions issue with Registration module. I'll look at making some updates when I have time. I just needed to get something working yesterday.</p>",
+        "id": 228469903,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614713166
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> it appears there is a problem with the backdrop paypal acccount? looking into it now</p>",
+        "id": 228487172,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614719737
+    },
+    {
+        "content": "<p>OK, thanks</p>",
+        "id": 228488898,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614720405
+    },
+    {
+        "content": "<p>Noticing that the donation form is still not working, but not to worried, because folks can still register for event without donating and we can ask them to donate later. They won't even know that the donation form is broken until after they are registered.</p>",
+        "id": 228509214,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614729408
+    },
+    {
+        "content": "<p>Only Two registrations so far, including Peter.</p>",
+        "id": 228509241,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614729423
+    },
+    {
+        "content": "<p>And I just did it to test, likely can't attend anyway</p>",
+        "id": 228509397,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614729504
+    },
+    {
+        "content": "<p>I never did get that code from nate...  trying to get it again from paypal.</p>",
+        "id": 228531951,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614744224
+    },
+    {
+        "content": "<p>Nate was supposed to make the change!</p>",
+        "id": 228532077,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614744307
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> this website looks fantastic. I can't believe how much work you've done!</p>",
+        "id": 228535103,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614746501
+    },
+    {
+        "content": "<p>Are you still working on the register now button in the header? Because it doesn't do anything right now.</p>",
+        "id": 228536044,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614747123
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> indicated earlier that he was confused about whether or not creating an account was also registering for the event, which is why I was not showing the \"register now\" button until you are logged in. BUT, I understand there are abetter ways to solve that problem.</p>",
+        "id": 228536189,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614747213
+    },
+    {
+        "content": "<p>I just want to make the process clear and understandable.</p>",
+        "id": 228536201,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614747225
+    },
+    {
+        "content": "<p>Things are still changing. So you must be still working.</p>",
+        "id": 228536692,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614747566
+    },
+    {
+        "content": "<p>I'm staying away from the site right now to avoid stepping on your toes.</p>",
+        "id": 228537151,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614747834
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  I'm assuming you're talking to <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ...? Might need to ping her to get her to see these messages.</p>",
+        "id": 228537240,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614747885
+    },
+    {
+        "content": "<p>thanks <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> :)</p>",
+        "id": 228537320,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614747936
+    },
+    {
+        "content": "<p>I didn't want to interrupt her work. Just leaving breadcrumbs for when she is done.</p>",
+        "id": 228537405,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614747988
+    },
+    {
+        "content": "<p>thanks <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I had not noticed that the block with the button was restricted by role...</p>",
+        "id": 228537808,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614748260
+    },
+    {
+        "content": "<p>working on the access denied page now.</p>",
+        "id": 228537818,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614748267
+    },
+    {
+        "content": "<p>okay - I added your message to the access denied page along with a log in block, so if people land there trying to register they'll be able to log in or create an account from there</p>",
+        "id": 228540444,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614750254
+    },
+    {
+        "content": "<p>Sounds good. i'll test soon.</p>",
+        "id": 228540467,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750288
+    },
+    {
+        "content": "<p>I'll test now.</p>",
+        "id": 228540470,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750292
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Excellent.</p>",
+        "id": 228540527,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750351
+    },
+    {
+        "content": "<p>Thanks for that much better solution</p>",
+        "id": 228540535,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750359
+    },
+    {
+        "content": "<p>You made some big improvements</p>",
+        "id": 228540585,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750368
+    },
+    {
+        "content": "<p>Thanks, just building on what you had done!</p>",
+        "id": 228541023,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614750724
+    },
+    {
+        "content": "<p>I'm going to be hands off for a while, but I started a \"participate\" page (that maybe I should unpublish...) <a href=\"https://events.backdropcms.org/participate\">https://events.backdropcms.org/participate</a> I was going to make this the node/add list for people to submit presentations + topic ideas</p>",
+        "id": 228541059,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614750766
+    },
+    {
+        "content": "<p>Nice start.</p>",
+        "id": 228541117,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750831
+    },
+    {
+        "content": "<p>Yeah, I'm not sure if we are ready yet. Which is not a good thing, 10 days before event</p>",
+        "id": 228541192,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750862
+    },
+    {
+        "content": "<p>I am thinking we might need to do the same thing we did last time, which is build the schedule ourselves.</p>",
+        "id": 228541209,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750887
+    },
+    {
+        "content": "<p>Based upon requests or suggestions on site or through Zulip.</p>",
+        "id": 228541230,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750911
+    },
+    {
+        "content": "<p>I don't think I have time to build scheduling tool.</p>",
+        "id": 228541264,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750941
+    },
+    {
+        "content": "<p>it worked last time :)</p>",
+        "id": 228541339,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614750977
+    },
+    {
+        "content": "<p>It did.</p>",
+        "id": 228541355,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614750993
+    },
+    {
+        "content": "<p>I would take your page and add a webform for folks to submit discussion topics or presentations. Then manually build out the schedule like last time.</p>",
+        "id": 228541416,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614751070
+    },
+    {
+        "content": "<p>I may be able to work on this tomorrow night.</p>",
+        "id": 228541478,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614751092
+    },
+    {
+        "content": "<p>I pushed the form states change live: <a href=\"https://events.backdropcms.org/events/backdrop-live-march-2021\">https://events.backdropcms.org/events/backdrop-live-march-2021</a></p>",
+        "id": 228862331,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614896850
+    },
+    {
+        "content": "<p>The \"participation\" field had been removed, but fortunately it was in staging config so it was easy to get back</p>",
+        "id": 228862357,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614896871
+    },
+    {
+        "content": "<p>It also looked like people were confused and had checked the \"lead a discussion\" box under \"volunteer\" instead of \"participate\" so I deleted the duplicate volunteer option (but updated all registrations to use the participate option)</p>",
+        "id": 228862492,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614896934
+    },
+    {
+        "content": "<p>I would love some QA to make sure it still makes sense?</p>",
+        "id": 228862509,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614896945
+    },
+    {
+        "content": "<p>I tested the registration form. It works great.Nice work on the conditional fields.</p>",
+        "id": 228887829,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614911857
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> and <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> the \"A friendly message?\" field in the donation form seems optional, but leaving it blank and clicking any of the donation buttons throws a \"Please enter a description\" error: <a href=\"/user_uploads/18319/LU8AIneNY391ERXeVsa4CABe/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/LU8AIneNY391ERXeVsa4CABe/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/LU8AIneNY391ERXeVsa4CABe/image.png\"></a></div>",
+        "id": 229067315,
+        "sender_full_name": "klonos",
+        "timestamp": 1615007834
+    },
+    {
+        "content": "<p>...minor thing, but still thought I'd report it anyway. Do we have control over that form, or is it paypal?</p>",
+        "id": 229067334,
+        "sender_full_name": "klonos",
+        "timestamp": 1615007866
+    },
+    {
+        "content": "<p>I'm pretty sure that is all coming from PayPal. <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> implemented it.</p>",
+        "id": 229067538,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615008046
+    },
+    {
+        "content": "<p>Cool. No biggie, but it would be better if it had a required red asterisk and all.</p>",
+        "id": 229067699,
+        "sender_full_name": "klonos",
+        "timestamp": 1615008170
+    },
+    {
+        "content": "<p>Both registering and donating seemed pretty straight-forward to me <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 229068108,
+        "sender_full_name": "klonos",
+        "timestamp": 1615008538
+    },
+    {
+        "content": "<p>I tried that remove the field, but the form stopped working.</p>",
+        "id": 229148449,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1615083981
+    }
+]

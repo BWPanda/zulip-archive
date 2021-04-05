@@ -1,0 +1,92 @@
+[
+    {
+        "content": "<p>It is for today (1.18.1)? <a href=\"https://www.drupal.org/sa-core-2021-001\">Drupal core - Critical - Third-party libraries - SA-CORE-2021-001</a></p>",
+        "id": 223412982,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1611166639
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268468\">@findlabnet(Vladimir)</span> I believe so. I haven't seen more chatter about this yet</p>",
+        "id": 223453486,
+        "sender_full_name": "Herb",
+        "timestamp": 1611186721
+    },
+    {
+        "content": "<p>My Drupal sites are now running Drupal 7.77 on MariaDB v5.5.5 <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 223469924,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611204595
+    },
+    {
+        "content": "<p>Oops. Now they're running Drupal 7.78. That's not as pretty a number...</p>",
+        "id": 223494752,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611227719
+    },
+    {
+        "content": "<p>So where are we?</p>",
+        "id": 223495202,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1611228041
+    },
+    {
+        "content": "<blockquote>\n<p>they're running Drupal 7.78. That's not as pretty a number...</p>\n</blockquote>\n<p>number fetishist? <span aria-label=\"rofl\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rofl\">:rofl:</span> </p>\n<p>But my actual question is: will B also get a security update soon? I suppose so...</p>",
+        "id": 223495278,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611228120
+    },
+    {
+        "content": "<p>No idea. Maybe one of these guys know...? <a href=\"https://github.com/orgs/backdrop-contrib/teams/security/members\">https://github.com/orgs/backdrop-contrib/teams/security/members</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/orgs/backdrop-contrib/teams/security/members\" style=\"background-image: url(https://github.githubassets.com/images/modules/open_graph/github-octocat.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/orgs/backdrop-contrib/teams/security/members\" title=\"Build software better, together\">Build software better, together</a></div><div class=\"message_embed_description\">GitHub is where people build software. More than 56 million people use GitHub to discover, fork, and contribute to over 100 million projects.</div></div></div>",
+        "id": 223495401,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611228202
+    },
+    {
+        "content": "<p><span class=\"user-group-mention\" data-user-group-id=\"2832\">@Security Team</span> Ping</p>",
+        "id": 223495419,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611228224
+    },
+    {
+        "content": "<p>Ping might not be enough, maybe Wake-on-Lan? <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span> No problem, I'm confident we'll know soon enough.</p>",
+        "id": 223495682,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611228393
+    },
+    {
+        "content": "<p><a href=\"https://github.com/kelseyhightower/nocode\">https://github.com/kelseyhightower/nocode</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/kelseyhightower/nocode\" style=\"background-image: url(https://avatars.githubusercontent.com/u/1123322?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/kelseyhightower/nocode\" title=\"kelseyhightower/nocode\">kelseyhightower/nocode</a></div><div class=\"message_embed_description\">The best way to write secure and reliable applications. Write nothing; deploy nowhere. - kelseyhightower/nocode</div></div></div>",
+        "id": 223535792,
+        "sender_full_name": "klonos",
+        "timestamp": 1611247389
+    },
+    {
+        "content": "<p>funyyyyyy <span aria-label=\"laughter tears\" class=\"emoji emoji-1f602\" role=\"img\" title=\"laughter tears\">:laughter_tears:</span></p>",
+        "id": 223535848,
+        "sender_full_name": "klonos",
+        "timestamp": 1611247412
+    },
+    {
+        "content": "<p><span aria-label=\"joy\" class=\"emoji emoji-1f602\" role=\"img\" title=\"joy\">:joy:</span><span aria-label=\"joy\" class=\"emoji emoji-1f602\" role=\"img\" title=\"joy\">:joy:</span></p>",
+        "id": 223538063,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611248348
+    },
+    {
+        "content": "<p>Hi everyone, we're working on a SA now.</p>",
+        "id": 223544977,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611251230
+    },
+    {
+        "content": "<p><a href=\"https://backdropcms.org/security/backdrop-sa-core-2021-001\">https://backdropcms.org/security/backdrop-sa-core-2021-001</a></p>",
+        "id": 223549408,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611253184
+    },
+    {
+        "content": "<blockquote>\n<p>Mitigation measures are available for admins who cannot immediately deploy the security update on their Drupal servers.</p>\n</blockquote>\n<blockquote>\n<p>To do that, they are advised to disable uploads of .tar, .tar.gz, .bz2, or .tlz files to temporarily mitigate the issue.</p>\n</blockquote>\n<p>This makes a lot more sense. I didn't see this explanation on the <a href=\"http://d.org\">d.org</a> notes... For context, I brought this up on Zoom before the weekly dev meeting.</p>\n<p><a href=\"https://www.bleepingcomputer.com/news/security/drupal-releases-fix-for-critical-vulnerability-with-known-exploits/\">https://www.bleepingcomputer.com/news/security/drupal-releases-fix-for-critical-vulnerability-with-known-exploits/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.bleepingcomputer.com/news/security/drupal-releases-fix-for-critical-vulnerability-with-known-exploits/\" style=\"background-image: url(https://www.bleepstatic.com/content/hl-images/2021/01/22/Drupal-headpic.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.bleepingcomputer.com/news/security/drupal-releases-fix-for-critical-vulnerability-with-known-exploits/\" title=\"Drupal releases fix for critical vulnerability with known exploits\">Drupal releases fix for critical vulnerability with known exploits</a></div><div class=\"message_embed_description\">Drupal has released a security update to address a critical vulnerability in a third-party library with documented or deployed exploits available in the wild.</div></div></div>",
+        "id": 223696724,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611348002
+    }
+]

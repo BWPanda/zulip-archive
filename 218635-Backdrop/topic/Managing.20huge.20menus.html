@@ -1,0 +1,128 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Managing.20huge.20menus.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html">Managing huge menus</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="197081678"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197081678" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197081678">(May 10 2020 at 22:11)</a>:</h4>
+<p>I'm trying to solve an issue with HUGE menus which result in timeouts when trying to edit their menu items (not looking to implement mega-menus here - just menus with 100s or 1000s of items in them). I know that there's <a href="https://www.drupal.org/project/bigmenu" title="https://www.drupal.org/project/bigmenu">https://www.drupal.org/project/bigmenu</a> but at some point, I think that there was a contrib module that would allow you to insert entire menus as menu items into a "master menu"; the result was that each "submenu" was managed separately, and the "master" menu had less items to deal with. Unfortunately, I cannot recall the name of that contrib, and I am not able to locate it. Perhaps others have either better memory or better google-fu than myself.</p>
+
+
+
+<a name="197082242"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197082242" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197082242">(May 10 2020 at 22:22)</a>:</h4>
+<p>...that contrib I'm talking about had a similar UI to <a href="https://www.drupal.org/project/menu_attach_block" title="https://www.drupal.org/project/menu_attach_block">https://www.drupal.org/project/menu_attach_block</a> and/or <a href="https://www.drupal.org/project/menu_views" title="https://www.drupal.org/project/menu_views">https://www.drupal.org/project/menu_views</a> (but it's neither of these 2 contrib).</p>
+
+
+
+<a name="197083780"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197083780" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197083780">(May 10 2020 at 22:57)</a>:</h4>
+<p>Ultimenu might be your thing</p>
+
+
+
+<a name="197166591"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197166591" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197166591">(May 11 2020 at 15:58)</a>:</h4>
+<p>Unfortunately not <span class="user-mention" data-user-id="269428">@mazze.ch</span> ...I am looking for a way to split menu item <em>management</em> into smaller chunks - not looking for a mega menu implementation.</p>
+
+
+
+<a name="197245974"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197245974" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197245974">(May 12 2020 at 08:27)</a>:</h4>
+<p>@klonos it's been years since I used the module for a D7 site... but I guess I could place several menus in several blocks and fit them together into one.</p>
+
+
+
+<a name="197246034"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197246034" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197246034">(May 12 2020 at 08:28)</a>:</h4>
+<p>NOT mega menu necessarly.</p>
+
+
+
+<a name="197281842"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197281842" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197281842">(May 12 2020 at 14:12)</a>:</h4>
+<p>@klonos If I get you right, you're searching for something like menu_block - <a href="https://www.drupal.org/project/menu_block">https://www.drupal.org/project/menu_block</a> I just realized, it's not yet ported to Backdrop. (I bet we'll need it) With that module it's easy to cut large menus in smaller chunks.</p>
+
+
+
+<a name="197282521"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197282521" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197282521">(May 12 2020 at 14:17)</a>:</h4>
+<p>Ah, wait, that's in core! <span class="user-mention" data-user-id="256729">@klonos</span> you should be able to do that with the "Starting level" and the "Maximum depth" setting of menu blocks.</p>
+
+
+
+<a name="197289096"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197289096" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197289096">(May 12 2020 at 15:03)</a>:</h4>
+<p>Thanks for chiming in <span class="user-mention" data-user-id="256738">@indigoxela</span> but also not exactly. The goal is not to split the menus during render time - it is to split the menu management UI. The original issue being that when there are too many items, there are errors about php <code>max_input_vars</code> (because there are too many checkboxes in the form).</p>
+
+
+
+<a name="197289451"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197289451" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197289451">(May 12 2020 at 15:05)</a>:</h4>
+<p>...also, FTR, I am not trying to solve an issue with Backdrop or a Backdrop site; this issue is coming up at work with various customers in the GovCMS Platform ...I am just trying to remember a contrib module that I vaguely recall being available for Drupal.</p>
+
+
+
+<a name="197289600"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197289600" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197289600">(May 12 2020 at 15:06)</a>:</h4>
+<p>...I remember coming across this module many many years ago, but I just cannot find it in <a href="http://d.org">d.org</a> any more.</p>
+
+
+
+<a name="197293293"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197293293" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197293293">(May 12 2020 at 15:28)</a>:</h4>
+<p>I know there was one for Taxonomy; Taxonomy Manager or something like that...</p>
+
+
+
+<a name="197293437"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197293437" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197293437">(May 12 2020 at 15:29)</a>:</h4>
+<p>Yeah: <a href="https://www.drupal.org/project/taxonomy_manager">https://www.drupal.org/project/taxonomy_manager</a></p>
+
+
+
+<a name="197296055"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197296055" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197296055">(May 12 2020 at 15:45)</a>:</h4>
+<p><code>hook_form_alter</code> is your friend.</p>
+
+
+
+<a name="197297306"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197297306" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197297306">(May 12 2020 at 15:53)</a>:</h4>
+<p>Yes <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> ...and the equivalent for menus is <a href="https://www.drupal.org/project/bigmenu">https://www.drupal.org/project/bigmenu</a> I guess.</p>
+
+
+
+<a name="197297784"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197297784" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197297784">(May 12 2020 at 15:56)</a>:</h4>
+<p>I know <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...trying to avoid that if there's a contrib that does that already. ...ideally, there'd be one with an interface like <a href="https://www.drupal.org/project/menu_views">https://www.drupal.org/project/menu_views</a> where you can select other menus to be "injected" as menu items into a "master" menu. That way, huge menus would be able to be "split" into smaller ones, which content editors would then be able to manage w/o getting fatals and timeouts.</p>
+
+
+
+<a name="197297927"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197297927" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197297927">(May 12 2020 at 15:57)</a>:</h4>
+<p>...perhaps this could be my first contrib module <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="197298076"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Managing%20huge%20menus/near/197298076" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Managing.20huge.20menus.html#197298076">(May 12 2020 at 15:58)</a>:</h4>
+<p>there you go ... <code>see a need, fill a need.</code></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

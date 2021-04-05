@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>I've been using a version of Chrome for the last year, and just switched back to Firefox. A site I'm in the process of theming looks weird in FF that looked fine in Chrome. It seems to have to do with <code>display: flex;</code> and widths (e.g. getting a center column to stretch the remaining width in a flexbox). Does anyone have any insights they can provide? This is really stumping me...</p>",
+        "id": 197110707,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589183216
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> is that site publicly accessible? Url?</p>",
+        "id": 197111706,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1589183850
+    },
+    {
+        "content": "<p>No, but if you think you can help I can give you the domain/IP to setup in your local hosts file...</p>",
+        "id": 197111892,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589183939
+    },
+    {
+        "content": "<p>I've been able to simulate what I'm trying to do in a CSS testing sandbox website thing, so FF and the CSS seems to work, so it must be an issue with my site specifically...</p>",
+        "id": 197111936,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589183976
+    },
+    {
+        "content": "<p>Hm. If it's not public it will be hard for me to help. A quick idea: maybe there are conflicting/interfering  css rules from your theme or a base theme?</p>",
+        "id": 197112387,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1589184205
+    },
+    {
+        "content": "<p>Yeah, I've been looking through them all (using FF's Developer Tools) and scrolling down on each element to see inherited/overridden styles, but can't see anything so far.</p>",
+        "id": 197112556,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589184331
+    },
+    {
+        "content": "<p>I was able to solve this by adding <code>justify-content: space-between;</code> to the container element. However that wasn't needed in Chrome, so I suspect it's a work-around instead of a fix...</p>",
+        "id": 197119885,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589189209
+    },
+    {
+        "content": "<p>Ok, after the above 'fix', I experienced further, similar problems with different parts of the site, but the above 'fix' didn't work for those. I'm thankful to sya however that I found and fixed the root cause and that my site now looks proper in Firefox and Chrome. The issue was that I'm using Seven as my base theme (it has nice form styling, etc.) and it has CSS which displays blocks as tables:</p>\n<div class=\"codehilite\"><pre><span></span><code>.block {\n  display: table;\n}\n</code></pre></div>\n\n\n<p>(I don't know why...)<br>\nSo wherever I had blocks as flexbox items, it was mucking up in FF. I simply changed blocks in flexbox to display as blocks and that fixed it:</p>\n<div class=\"codehilite\"><pre><span></span><code>.wrapper {\n  display: flex;\n\n  .block {\n    display: block;\n  }\n}\n</code></pre></div>\n\n\n<p>(I use SASS - gotta love that indenting!)</p>",
+        "id": 197148819,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589205560
+    }
+]

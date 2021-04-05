@@ -1,0 +1,218 @@
+[
+    {
+        "content": "<p>Hey everyone, I'm a Drupal developer and I'd like to take a closer look at Backdrop. It's been on my radar for a couple years now and it's great to see that its still going strong.</p>\n<p>One hesitation I have is that coming from Drupal 7 there are thousands of modules available, so you can do a lot without writing any custom code. I see you have a lot of the major modules ported over, but I'm wondering what Backdrop site builders do when they realize a module they're used to in Drupal 7 is not available. Is porting a module from D7 to Backdrop a huge deal? If someone wants to invest the time in porting one over are they responsible for maintaining it and backporting security updates?</p>",
+        "id": 203952986,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594818710
+    },
+    {
+        "content": "<p>I know that's a pretty broad question, but I'm curious to see how people handle that situation in \"the real world\". For example, I have a D7 site that uses views_conditional and mathfield to change the display of a view of the content is older than 48 hours. Neither of these modules are available in BD, so if I were to migrate I'd have to either port them or come up with some other way of doing that calculation and conditional display in the view.</p>",
+        "id": 203953300,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594818895
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"321437\">@sdubois</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...the TL;DR answer is that no, porting _simple_ D7 modules in Backdrop is not a huge deal at all. You can actually just change a line or 2 in the .info file of the D7 module, and chances are that it might just work like that. This does not apply to complex modules like Rules, or Webform for example. ...there is some work required, but that is usually converting things to use configuration management. ...there's also <a href=\"https://github.com/backdrop-contrib/coder_upgrade\">https://github.com/backdrop-contrib/coder_upgrade</a> which you can use to run the D7 module through, and coder_upgrade will automatically attempt to fix/port certain things for you.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/coder_upgrade\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/coder_upgrade\" title=\"backdrop-contrib/coder_upgrade\">backdrop-contrib/coder_upgrade</a></div><div class=\"message_embed_description\">Helps automate some/most of the work required to upgrade a module from Drupal to Backdrop 1.x - backdrop-contrib/coder_upgrade</div></div></div>",
+        "id": 203964450,
+        "sender_full_name": "klonos",
+        "timestamp": 1594824335
+    },
+    {
+        "content": "<p>Oh cool</p>",
+        "id": 203964557,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594824365
+    },
+    {
+        "content": "<p>Is that something you've done while building a site for a client? Realize you need a D7 module and port it yourself?</p>",
+        "id": 203964611,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594824395
+    },
+    {
+        "content": "<p>...in general, your other option is to raise a porting request for the D7 module in <a href=\"https://github.com/backdrop-ops/contrib/issues\">https://github.com/backdrop-ops/contrib/issues</a> and if there's demand for it, someone from the community might just take the time to port it <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues\" title=\"backdrop-ops/contrib\">backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Apply to join the contributed code developer team. - backdrop-ops/contrib</div></div></div>",
+        "id": 203964638,
+        "sender_full_name": "klonos",
+        "timestamp": 1594824408
+    },
+    {
+        "content": "<p>...no, I have not done that myself.</p>",
+        "id": 203964688,
+        "sender_full_name": "klonos",
+        "timestamp": 1594824431
+    },
+    {
+        "content": "<p>Have you looked through <a href=\"https://api.backdropcms.org/converting-modules-from-drupal\">https://api.backdropcms.org/converting-modules-from-drupal</a> at all <span class=\"user-mention\" data-user-id=\"321437\">@sdubois</span> ? ...and please don't stress if things there don't make sense to you; they're meant for developers <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span> ...but it should give you an idea of what's involved for porting more complex modules.</p>",
+        "id": 203964990,
+        "sender_full_name": "klonos",
+        "timestamp": 1594824578
+    },
+    {
+        "content": "<p>Yep I found that yesterday! Was interested in hearing what the experience is actually like for developers. That guide makes it sound pretty simple, but the devil is always in the details</p>",
+        "id": 203965085,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594824622
+    },
+    {
+        "content": "<p>...the main idea is that porting a D7 to Backdrop should require considerably less work than porting it to D8/9</p>",
+        "id": 203965129,
+        "sender_full_name": "klonos",
+        "timestamp": 1594824652
+    },
+    {
+        "content": "<p>yeah that seems clear</p>",
+        "id": 203965184,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594824677
+    },
+    {
+        "content": "<p>It is like what <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> said. It can be quick and easy or long and complicated, depending not only on the complexity of the module, but also on whether it uses things that are not in Backdrop, like CTools Plugins. I have ported a couple quick and easy ones, and it took only a few hours each, and that is mostly because I nit pick the details.</p>",
+        "id": 203965435,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1594824788
+    },
+    {
+        "content": "<p>BTW, I'm not saying that developing in Backdrop does not present any challenges at all ...just that a person that is comfortable with the code D7 used, they should also feel at home with Backdrop.</p>",
+        "id": 203965579,
+        "sender_full_name": "klonos",
+        "timestamp": 1594824850
+    },
+    {
+        "content": "<p>...yeah, the Mathfield module seems to be using CTools components <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>\n<ul>\n<li><a href=\"https://git.drupalcode.org/project/mathfield/-/blob/7.x-1.x/includes/mathfield.math_expr.inc\">https://git.drupalcode.org/project/mathfield/-/blob/7.x-1.x/includes/mathfield.math_expr.inc</a></li>\n<li><a href=\"https://git.drupalcode.org/project/mathfield/-/blob/7.x-1.x/mathfield.info#L7\">https://git.drupalcode.org/project/mathfield/-/blob/7.x-1.x/mathfield.info#L7</a></li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/mathfield/-/blob/7.x-1.x/includes/mathfield.math_expr.inc\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/mathfield/-/blob/7.x-1.x/includes/mathfield.math_expr.inc\" title=\"includes/mathfield.math_expr.inc · 7.x-1.x · project / mathfield\">includes/mathfield.math_expr.inc · 7.x-1.x · project / mathfield</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/mathfield</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/mathfield/-/blob/7.x-1.x/mathfield.info#L7\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/mathfield/-/blob/7.x-1.x/mathfield.info#L7\" title=\"mathfield.info · 7.x-1.x · project / mathfield\">mathfield.info · 7.x-1.x · project / mathfield</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/mathfield</div></div></div>",
+        "id": 203966197,
+        "sender_full_name": "klonos",
+        "timestamp": 1594825116
+    },
+    {
+        "content": "<p>views_conditional seems to be much simpler.</p>",
+        "id": 203966432,
+        "sender_full_name": "klonos",
+        "timestamp": 1594825208
+    },
+    {
+        "content": "<p>Does the fact that it uses ctools make it more difficult to port?</p>",
+        "id": 203966507,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594825235
+    },
+    {
+        "content": "<p>Depends on whether the specific CTools component is one of the many that have already been included in Backdrop core. ...not an expert on that though; it would need to be a try and see I guess.</p>",
+        "id": 203966741,
+        "sender_full_name": "klonos",
+        "timestamp": 1594825349
+    },
+    {
+        "content": "<p>It would need <a href=\"https://git.drupalcode.org/project/ctools/-/blob/7.x-1.x/includes/math-expr.inc\">https://git.drupalcode.org/project/ctools/-/blob/7.x-1.x/includes/math-expr.inc</a> to be ported as well.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/ctools/-/blob/7.x-1.x/includes/math-expr.inc\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/ctools/-/blob/7.x-1.x/includes/math-expr.inc\" title=\"includes/math-expr.inc · 7.x-1.x · project / ctools\">includes/math-expr.inc · 7.x-1.x · project / ctools</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/ctools</div></div></div>",
+        "id": 203969500,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1594826551
+    },
+    {
+        "content": "<p>In this case I think it might be easy. You might be able to take that one class from ctools and include it in the module. Ctools is a big grab bag of stuff. Some of it is now in core some needs to be done in a different way (like we did with feeds module) but this math module seems fairly limited so might be lucky.</p>",
+        "id": 203971392,
+        "sender_full_name": "Herb",
+        "timestamp": 1594827297
+    },
+    {
+        "content": "<p>Math is in core, ported from CTools: <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21evalmath.inc/class/EvalMath/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21evalmath.inc/class/EvalMath/1</a></p>",
+        "id": 203979910,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1594830960
+    },
+    {
+        "content": "<p>Yay!! <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span> ...well less work required to port the module then <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 203979995,
+        "sender_full_name": "klonos",
+        "timestamp": 1594830991
+    },
+    {
+        "content": "<p>Are people using Twig with backdrop at all?  Theres this project (<a href=\"https://www.drupal.org/project/tfd7\">https://www.drupal.org/project/tfd7</a>) and also I maintain a D7 that uses a custom Twig implementation</p>",
+        "id": 203980062,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594831023
+    },
+    {
+        "content": "<p>I don't think we do, but I don't think that we've removed the \"plug-ability\" of template engines either (although php is the default) <a href=\"https://github.com/backdrop/backdrop/tree/1.x/core/themes/engines/phptemplate\">https://github.com/backdrop/backdrop/tree/1.x/core/themes/engines/phptemplate</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/tree/1.x/core/themes/engines/phptemplate\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/tree/1.x/core/themes/engines/phptemplate\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 203980390,
+        "sender_full_name": "klonos",
+        "timestamp": 1594831180
+    },
+    {
+        "content": "<p>...perhaps <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> has more insight on what'd be possible (not sure if that'd be a good fit for core though): <a href=\"https://www.drupal.org/u/jenlampton\">https://www.drupal.org/u/jenlampton</a></p>\n<blockquote>\n<p>Jen Lampton served as a Drupal 8 core initiative lead for almost 2 years. In this role she worked with many other contributors to change the Drupal theme engine to from PHPTemplate to Twig. Her desire to make this change came from watching her students struggle to comprehend the Drupal theme layer. Twig was an attempt to make it easier to learn.</p>\n</blockquote>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.drupal.org/u/jenlampton\" style=\"background-image: url(https://www.drupal.org/files/user-pictures/picture-85586-1448401745.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.drupal.org/u/jenlampton\" title=\"jenlampton\">jenlampton</a></div><div class=\"message_embed_description\">Jen Lampton has been building websites since 1997, and participating in Open Source communities since 2006. She currently maintains several Open Source projects, and contributes to many others as it relates to the needs of her work.</div></div></div>",
+        "id": 203980825,
+        "sender_full_name": "klonos",
+        "timestamp": 1594831382
+    },
+    {
+        "content": "<p>cool. yeah the one site I run that has tfd7 works very well. i was surprised to see twig templates when i first worked on the site. that could be a cool option to provide. would still be able to be backwards compatable with d7  phptemplate themes but just provide another option to theme developers. </p>\n<p>twig is probably the only thing i really like in d8...</p>",
+        "id": 203982309,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594832207
+    },
+    {
+        "content": "<p>I'm not sure if it would be easy to port tfd7. In addition to adding another theme engine you might need to create your own layout templates.</p>",
+        "id": 203989626,
+        "sender_full_name": "Herb",
+        "timestamp": 1594835646
+    },
+    {
+        "content": "<p>Backdrop attempted to keep some things easy which meant dropping some flexibility in the code</p>",
+        "id": 203989662,
+        "sender_full_name": "Herb",
+        "timestamp": 1594835676
+    },
+    {
+        "content": "<p>Any other new comers to Backdrop that have questions today?</p>",
+        "id": 204008037,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1594844614
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"321437\">@sdubois</span> If you decide to port a D7 module to Backdrop, there's no requirement for you to continue maintaining it in the future. Obviously that's preferred, but you can just add a note to the README that the project is looking for maintainers and that's fine.</p>",
+        "id": 204014329,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1594847865
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"321437\">@sdubois</span> to answer your question about contrib: no - you are not entirely responsible for maintaining a module after you have ported it from Drupal. You need to be willing to work with the security team if there is an issue, but that does not mean that you need to do all the changes yourself, there are people here to help you. We have both a \"Bug Squad\" that can help fix problems, and a \"Security team\" that have commit access to all Backdrop contrib repositories.</p>",
+        "id": 204014338,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1594847871
+    },
+    {
+        "content": "<p>jynx ;)</p>",
+        "id": 204014347,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1594847876
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"321437\">@sdubois</span> and regarding Twig, I don't think anyone is using it with Backdrop, but there's no reason the D7 module wouldn't work in exactly the same way. IIRC that module will only use Twig when its own templates replace core's, so all templates (including layouts) would still use the PHPTemplate version until overridden.</p>",
+        "id": 204014754,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1594848072
+    },
+    {
+        "content": "<p>That said, we did apply some of the same theme system simplifications to Backdrop that went into Drupal 8 -- but we did what we could while maintaining as much backwards compatibility as possible (so, without Twig). I'm not sure why Twig was chosen for you project, but you may find that the changes included in Backdrop are enough of an improvement without it.</p>",
+        "id": 204015065,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1594848237
+    },
+    {
+        "content": "<p>thanks!</p>",
+        "id": 204018065,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594850275
+    },
+    {
+        "content": "<p>I did a quick-and-dirty D7 -&gt; Backdrop migration today and it worked pretty well. Theme is broken af, but all the content types, views, menus, etc. made it through in one piece.</p>",
+        "id": 204018154,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594850317
+    },
+    {
+        "content": "<p>I bet the theme would be mostly fixed by renaming page.tpl.php to layout.tpl.php ;)</p>",
+        "id": 204126831,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1594925706
+    }
+]

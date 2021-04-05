@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>If I want to reset a site completely and install it from scratch, I dump all the tables in the DB and delete everything in <code>/files/config_*/active/</code>. Is there then any way anything from the old version of the site can remain? Specifically caching or stuff like that?</p>",
+        "id": 185807583,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1579175687
+    },
+    {
+        "content": "<p>I ask because I'm testing an install profile, and I have a <code>print_r()</code> in the code that's run during the install tasks. Sometimes it prints out stuff, and sometimes not (mostly not). Wondering if it's a caching thing or something like that...?</p>",
+        "id": 185807683,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1579175768
+    },
+    {
+        "content": "<p>Anything cache-related would reside in the db AFAIK; so if you drop all the tables, then that should not be the culprit there. Not sure what could be wrong <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 187504017,
+        "sender_full_name": "klonos",
+        "timestamp": 1580943494
+    }
+]

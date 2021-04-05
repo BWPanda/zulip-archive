@@ -1,0 +1,176 @@
+[
+    {
+        "content": "<p>I've started a fork of the Backdrop Profile module to address this issue, <a href=\"https://github.com/backdrop-contrib/profile/issues/5\">https://github.com/backdrop-contrib/profile/issues/5</a>, and will be adding the importation of existing Profile2 profiles via hook_update_N(). But I see that the first implementation of hook_update_N in the module  is profile_update_10000(), not profile_update_1000(), as one would expect. </p>\n<p>The Backdrop API says: \"This upgrade compatibility also means that adhering to the naming convention of 1xxx for Backdrop updates is extremely important. Backdrop updates numbered greater than 6999 will have unexpected behavior, as they are reserved for Drupal 7 compatibility.\"</p>\n<p>So that's presumably a typo that made it into the original release and likely to cause badness at some point. So, I'm wondering now, what's the best way fix it? Seems like just restarting the numbering correctly might cause problems for the 6 known active installs (and 191 downloads). Any recommendations would be appreciated.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/profile/issues/5\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/profile/issues/5\" title=\"Upgrading from Drupal: Profile and Profile2 data not carried over · Issue #5 · backdrop-contrib/profile\">Upgrading from Drupal: Profile and Profile2 data not carried over · Issue #5 · backdrop-contrib/profile</a></div><div class=\"message_embed_description\">In upgrading an existing site that has both Profile and Profile2 data, neither type of profile is showing up in the Profile module after upgrade. Was upgrading (from either D7 module) intended to b...</div></div></div>",
+        "id": 214117949,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603316187
+    },
+    {
+        "content": "<p>Yes, changing that numbering would not be a good idea. I think the Profile module have to keep the mistake and continue from there, but I think the Profile2 module should be okay starting from the correct point, if it's a brand new port with no previous installed.</p>",
+        "id": 214118559,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603316596
+    },
+    {
+        "content": "<p>An alternative might be to include an update hook that updates the schema_version for that module and clears the cache afterward. That seems somewhat risky with active installs, but it might work.</p>",
+        "id": 214118795,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603316755
+    },
+    {
+        "content": "<p>That would definitely require lots of testing. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 214118891,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603316805
+    },
+    {
+        "content": "<p>we suggesting to create a new module called profile2?</p>",
+        "id": 214124234,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1603320160
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> By \"started a fork\", do you mean you're forking the module and intend to release another version in <code>backdrop-contrib</code>, or just that you're forking it to your own repo where you can fix then bug then open a PR against the main Profile module?</p>",
+        "id": 214124623,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603320500
+    },
+    {
+        "content": "<p>The latter. I'll prepare a PR after I've fixed the issue.</p>",
+        "id": 214124886,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603320692
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>, wasn't suggesting creating a new module, just adding the importation of Profile2 profiles to the Profile module that you already ported and that's already in the Backdrop modules collection.</p>",
+        "id": 214125008,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603320785
+    },
+    {
+        "content": "<p>Ah thats reasonable</p>",
+        "id": 214125069,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1603320840
+    },
+    {
+        "content": "<p>I believe I didnt really consider Profile2 to Profile upgrades actually.</p>",
+        "id": 214125302,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1603320988
+    },
+    {
+        "content": "<p>It was a selfish port: I needed this for a new project</p>",
+        "id": 214125331,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1603321017
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Hey, without selfish ports there'd be a lot less ports in general <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 214125375,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603321065
+    },
+    {
+        "content": "<p>I've got code working locally that does the upgrade; D7 Profile2 and BD Profile are basically the same. (It was a bit confusing at first because there's also D7 Profile, which stores its date entirely differently.) I'm working on an eventual D7-&gt;BD upgrade of an existing site, so I'm happy to see that the port exists, but need the migration of existing data (and figured others might too).</p>",
+        "id": 214125487,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603321146
+    },
+    {
+        "content": "<p>I was thinking through my idea about the schema_version, and I think there's really no way of doing that without manually modifying something. So either you're stuck with the 10000 update and hope it doesn't cause problems in the future, or you'll have to give people a list of manual changes to make to their sites to get it back to 1000.</p>",
+        "id": 214125845,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603321428
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span>, re your suggestion to \"keep the mistake and continue from there\" (with N=10001), I worry about the line \"Backdrop updates numbered greater than 6999 will have unexpected behavior, as they are reserved for Drupal 7 compatibility.\" Seems like designing for \"unexpected behavior\" would be a bit scary. But I'm at a bit of a loss for what to do instead.</p>",
+        "id": 214125914,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603321460
+    },
+    {
+        "content": "<p>I think that really only applies to updates 7000-7999. Past that, you're no longer in D7 land.</p>",
+        "id": 214125960,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603321520
+    },
+    {
+        "content": "<p>It would be safe to restart the update process at 1000 (the first update was simply and can safely be repeated). So if there were some safe way to clear the schema_version in the system table, then even existing sites could start over.</p>",
+        "id": 214126193,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603321684
+    },
+    {
+        "content": "<p>Does <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_last_removed/1\"><code>hook_update_last_removed()</code></a> help?</p>",
+        "id": 214126286,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603321788
+    },
+    {
+        "content": "<p>Is this too hacky? Restart the numbering of hook_update_N correctly from 1000. In hook_init, check for schema_version=10000, and if it exists, reset it. So then even existing installations will be prompted to run update.php, which will then run in the right order with the right numbering.</p>",
+        "id": 214126505,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603322036
+    },
+    {
+        "content": "<p>So, I think what I would probably do is create a special update page where someone could go click a button to do the update (because to do it automatically, you would have to create update 10001 to be seen, which would end up not actually fixing the problem). And then use whatever function is needed to post an error on the Status report page with a link to that special update page.</p>",
+        "id": 214126676,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603322169
+    },
+    {
+        "content": "<p>I see. And that avoids a superfluous db check that would happen forever with the hook_init approach.</p>",
+        "id": 214126816,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603322353
+    },
+    {
+        "content": "<p>Yep.</p>",
+        "id": 214127308,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603322855
+    },
+    {
+        "content": "<blockquote>\n<p>Does <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_last_removed/1\"><code>hook_update_last_removed()</code></a> help?</p>\n</blockquote>\n<p>That should work, no?</p>",
+        "id": 214130899,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1603325984
+    },
+    {
+        "content": "<p>No, I don't think that will work: <a href=\"https://github.com/backdrop/backdrop/blob/10167aae01ea19486e532871cfbaf238adebfa14/core/includes/update.inc#L664-L675\">https://github.com/backdrop/backdrop/blob/10167aae01ea19486e532871cfbaf238adebfa14/core/includes/update.inc#L664-L675</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/10167aae01ea19486e532871cfbaf238adebfa14/core/includes/update.inc#L664-L675\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/10167aae01ea19486e532871cfbaf238adebfa14/core/includes/update.inc#L664-L675\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 214132197,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603327278
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> 's suggestion of putting the check in the status report works neatly. No extra page is needed; at the same time the error is flagged in the status page via hook_requirements(), the check can fix the system table, so all that needs to be done is to tell the user to run update.php again.</p>",
+        "id": 214133113,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603328271
+    },
+    {
+        "content": "<p>This is a hard thing to solve. There only seem to be 6 sites using it. Maybe just do some hand-holding for each of them. If only we knew which site each was</p>",
+        "id": 214141260,
+        "sender_full_name": "Herb",
+        "timestamp": 1603339047
+    },
+    {
+        "content": "<p>Does this commit relate? (Separate module but similar issue)<br>\n<a href=\"https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce\">https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce\" title=\"#50: schema version fix · backdrop-contrib/paragraphs@03ba37b\">#50: schema version fix · backdrop-contrib/paragraphs@03ba37b</a></div><div class=\"message_embed_description\">Paragraphs module to control your content flow. Contribute to backdrop-contrib/paragraphs development by creating an account on GitHub.</div></div></div>",
+        "id": 214141433,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603339319
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Deleted those messages for you <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> In future, we can move messages between threads or streams if you post in the wrong place.</p>",
+        "id": 214141489,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603339421
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>, yes, that's the fix for this issue. Will use that. Thanks!</p>",
+        "id": 214190762,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1603375164
+    }
+]

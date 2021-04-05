@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>Hi Guys...,</p>\n<p>Just testing HybridAuth and on github...  <a href=\"https://github.com/backdrop-contrib/hybridauth/issues/8\">https://github.com/backdrop-contrib/hybridauth/issues/8</a></p>\n<p>laryn mentions about the SDK... but doesn't say which SDK... does anyone know where I get it from?  Is it a Facebook one?</p>\n<p>Thanks</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/hybridauth/issues/8\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/hybridauth/issues/8\" title=\"Facebook integration · Issue #8 · backdrop-contrib/hybridauth\">Facebook integration · Issue #8 · backdrop-contrib/hybridauth</a></div><div class=\"message_embed_description\">I&#39;ve tested this and got the basics working. One issue is that the Facebook SDK needs to be added separately. If we are able, I&#39;ll bundle it directly. (I&#39;m asking about whether their li...</div></div></div>",
+        "id": 215954712,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1604755306
+    },
+    {
+        "content": "<p>I think the SDK repo is linked from that issue. We probably need to fund a better place to have it manually uploaded though. Would appreciate testing and feedback!</p>",
+        "id": 215955789,
+        "sender_full_name": "Laryn",
+        "timestamp": 1604756831
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/HybridAuth/near/215955789\">said</a>:</p>\n<blockquote>\n<p>I think the SDK repo is linked from that issue. We probably need to fund a better place to have it manually uploaded though. Would appreciate testing and feedback!</p>\n</blockquote>\n<p>Ahhh got it... Thanks</p>",
+        "id": 215959742,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1604762873
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Do I need to create the User account \"First name\" and \"Last name\" fields?  or should the module create those?</p>\n<p>Just trying to add the Rules \"rules_change_user_info_on_creation\" Intergration.</p>",
+        "id": 215959798,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1604762951
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"302871\">Steve Moorhouse</span> <a href=\"#narrow/stream/218635-Backdrop/topic/HybridAuth/near/215959798\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> Do I need to create the User account \"First name\" and \"Last name\" fields?  or should the module create those?</p>\n<p>Just trying to add the Rules \"rules_change_user_info_on_creation\" Intergration.</p>\n</blockquote>\n<p>Yes you do... :-)</p>",
+        "id": 215960015,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1604763250
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> </p>\n<p>I've created the fields and the Rule saves... but on submitting the Register form I get the error...</p>\n<p>Error<br>\nCall to undefined method AnonymousUser::save() </p>\n<p>Any ideas</p>",
+        "id": 215960087,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1604763377
+    },
+    {
+        "content": "<p>I don't have an answer on the top of my head... Please take notes</p>",
+        "id": 215961935,
+        "sender_full_name": "Laryn",
+        "timestamp": 1604765992
+    }
+]

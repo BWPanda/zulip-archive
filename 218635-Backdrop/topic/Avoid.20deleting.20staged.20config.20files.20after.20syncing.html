@@ -1,0 +1,113 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html">Avoid deleting staged config files after syncing</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="201546335"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201546335" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201546335">(Jun 21 2020 at 18:10)</a>:</h4>
+<p>I'm proposing a small advanced setting to make it easier to use configuration with a git workflow. Especially where the config is in the repo and where live site is not writable (e.g. Pantheon, <a href="http://Platform.sh">Platform.sh</a>). <br>
+<a href="https://github.com/backdrop/backdrop-issues/issues/4447">https://github.com/backdrop/backdrop-issues/issues/4447</a></p>
+<div class="message_embed"><a class="message_embed_image" href="http://Platform.sh" style="background-image: url(https://platform.sh/images/meta/Facebook_v2.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="http://Platform.sh" title="PaaS for Multi-Cloud Hosting, Development, and Deployment with PHP, Java, Node.js, Ruby, Python, Golang">PaaS for Multi-Cloud Hosting, Development, and Deployment with PHP, Java, Node.js, Ruby, Python, Golang</a></div><div class="message_embed_description">The end-to-end web platform for agile teams. Build, evolve, and scale your website fleetâwith zero infrastructure management investment. Get hosting, CI/CD, automated updates, global 24x7 support. We support PHP, Node.js, Drupal, WordPress, Ruby, Golang, Python, MySQL, ElasticSearch, and more.</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4447" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4447" title="Provide advanced admin option to skip deleting config staging files after a config sync · Issue #4447 · backdrop/backdrop-issues">Provide advanced admin option to skip deleting config staging files after a config sync · Issue #4447 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need There&#39;s a long standing issue in Pantheon (and likely Platform.sh too) where the live code directory is locked. If a developer puts config into the repo it means that it...</div></div></div>
+
+
+
+<a name="201546343"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201546343" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201546343">(Jun 21 2020 at 18:11)</a>:</h4>
+<p>Wondering what others think. <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span></p>
+
+
+
+<a name="201551956"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201551956" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201551956">(Jun 21 2020 at 20:43)</a>:</h4>
+<p>I'm not very familiar with config management, but wouldn't exporting config after syncing make staging the same as live? So then staging isn't emptied but it also doesn't show any differences?</p>
+
+
+
+<a name="201568227"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201568227" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201568227">(Jun 22 2020 at 05:00)</a>:</h4>
+<p>We're working with more than one environment so don't want to typically export the config from live. Instead we would set it so the dev site's staging directory is populated by the dev site's config, it gets committed then deployed to live</p>
+
+
+
+<a name="201568310"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201568310" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201568310">(Jun 22 2020 at 05:03)</a>:</h4>
+<p>We would use the "figure 8" approach but we haven't had a chance to try it yet fully because of this limitation in Backdrop.</p>
+
+
+
+<a name="201625290"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201625290" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201625290">(Jun 22 2020 at 16:03)</a>:</h4>
+<p>it doesn't matter to me I don't figure 8</p>
+
+
+
+<a name="201657980"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201657980" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201657980">(Jun 22 2020 at 20:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> would you support this for core for people who might need it? I was also wondering if it would improve the workflow for <a href="http://Platform.sh">Platform.sh</a> for people who use that?</p>
+<div class="message_embed"><a class="message_embed_image" href="http://Platform.sh" style="background-image: url(https://platform.sh/images/meta/Facebook_v2.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="http://Platform.sh" title="PaaS for Multi-Cloud Hosting, Development, and Deployment with PHP, Java, Node.js, Ruby, Python, Golang">PaaS for Multi-Cloud Hosting, Development, and Deployment with PHP, Java, Node.js, Ruby, Python, Golang</a></div><div class="message_embed_description">The end-to-end web platform for agile teams. Build, evolve, and scale your website fleetâwith zero infrastructure management investment. Get hosting, CI/CD, automated updates, global 24x7 support. We support PHP, Node.js, Drupal, WordPress, Ruby, Golang, Python, MySQL, ElasticSearch, and more.</div></div></div>
+
+
+
+<a name="201725123"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201725123" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201725123">(Jun 23 2020 at 13:29)</a>:</h4>
+<p>i'm not opposed to it on <a href="http://p.sh">p.sh</a> I use the versioned staging approach; <a href="https://howtobackdrop.com/posts/backdrop-cms-project-starter">https://howtobackdrop.com/posts/backdrop-cms-project-starter</a></p>
+
+
+
+<a name="201727009"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201727009" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201727009">(Jun 23 2020 at 13:43)</a>:</h4>
+<p>fwiw; <a href="http://p.sh">p.sh</a> allows you to configure what directories are writable in <code>platform.app.yaml</code> so if you wanted your config to be writable you can add it into the <code>mounts</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">mounts</span><span class="p">:</span>
+    <span class="s">&#39;/web/files&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;shared:files/files&#39;</span>
+    <span class="s">&#39;/tmp&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;shared:files/tmp&#39;</span>
+    <span class="s">&#39;/config&#39;</span><span class="l l-Scalar l-Scalar-Plain">:&#39;shared:config&#39;</span>
+</code></pre></div>
+
+
+
+<a name="201780009"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201780009" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201780009">(Jun 23 2020 at 20:42)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span>! I should copy your Lando file</p>
+
+
+
+<a name="201792845"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201792845" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201792845">(Jun 23 2020 at 22:35)</a>:</h4>
+<p>I guess you can also configure which directories are writable with Pantheon too, but they end up as symlinks to the other filesystem</p>
+
+
+
+<a name="201792947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201792947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201792947">(Jun 23 2020 at 22:37)</a>:</h4>
+<p>I'm guessing <a href="http://p.sh">p.sh</a> won't make anything in the repo writable?</p>
+
+
+
+<a name="201844616"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201844616" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201844616">(Jun 24 2020 at 13:08)</a>:</h4>
+<p>I have <code>active</code> writable here <a href="https://github.com/Backdrop4Good/backdrop4good.org/blob/Test/.platform.app.yaml#L48">https://github.com/Backdrop4Good/backdrop4good.org/blob/Test/.platform.app.yaml#L48</a> (which is not in version control); i did not test setting <code>staging</code> as writable.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/Backdrop4Good/backdrop4good.org/blob/Test/.platform.app.yaml#L48" style="background-image: url(https://avatars0.githubusercontent.com/u/31367956?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/Backdrop4Good/backdrop4good.org/blob/Test/.platform.app.yaml#L48" title="Backdrop4Good/backdrop4good.org">Backdrop4Good/backdrop4good.org</a></div><div class="message_embed_description">Backdrop for Good site. Contribute to Backdrop4Good/backdrop4good.org development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="201846254"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Avoid%20deleting%20staged%20config%20files%20after%20syncing/near/201846254" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Avoid.20deleting.20staged.20config.20files.20after.20syncing.html#201846254">(Jun 24 2020 at 13:25)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> making only the active writable makes sense. Then staging is in the repo. And with my proposed PR it would not try to delete the staging files after they are synced</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

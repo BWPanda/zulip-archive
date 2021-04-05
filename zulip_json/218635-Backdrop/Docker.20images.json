@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Who's looking after our Docker images after all? <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> was it you that raised your hand for that task? ...reason I'm asking is <a href=\"https://github.com/backdrop/backdrop-issues/issues/4747\">https://github.com/backdrop/backdrop-issues/issues/4747</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4747\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4747\" title=\"empty configuration directory when attempting docker install · Issue #4747 · backdrop/backdrop-issues\">empty configuration directory when attempting docker install · Issue #4747 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">When I attempt to start a docker instance of backdrop, I get an error similar to the following: Exception: The configuration directory in settings.php is specified as &#39;./files/config_a1614e8130...</div></div></div>",
+        "id": 217885321,
+        "sender_full_name": "klonos",
+        "timestamp": 1606311768
+    },
+    {
+        "content": "<p>@klonos I was just volunteering for the update. I don't use the docker image so not really sure how it all fits together</p>",
+        "id": 217891560,
+        "sender_full_name": "Herb",
+        "timestamp": 1606314727
+    },
+    {
+        "content": "<p>I've been working on getting backdrop running in docker, and I've managed to get it working but I'd like Backdrops \"Database configuration\" page to be pre-populated during the installation process and I'm looking for suggestions on how to approach this please?</p>\n<p><a href=\"https://hub.docker.com/r/kgolding/backdrop\">https://hub.docker.com/r/kgolding/backdrop</a></p>",
+        "id": 221721923,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1609893866
+    },
+    {
+        "content": "<p>I'm not familiar with Docker, but I know that Lando does this by setting the <code>BACKDROP_SETTINGS</code> environment variable... See <a href=\"https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js\">https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js</a> and <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21bootstrap.inc/function/backdrop_settings_initialize/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21bootstrap.inc/function/backdrop_settings_initialize/1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/lando/lando/blob/master/plugins/lando-recipes/recipes/backdrop/builder.js\" title=\"lando/lando\">lando/lando</a></div><div class=\"message_embed_description\">A development tool for all your projects that is fast, easy, powerful and liberating - lando/lando</div></div></div>",
+        "id": 221723890,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609895949
+    },
+    {
+        "content": "<p>Note however that this approach <em>bypasses</em> the database configuration step of the installer, not just prepopulates it...</p>",
+        "id": 221723973,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609896041
+    }
+]

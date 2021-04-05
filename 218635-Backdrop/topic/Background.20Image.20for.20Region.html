@@ -1,0 +1,52 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Background.20Image.20for.20Region.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Background.20Image.20for.20Region.html">Background Image for Region</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217484867"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Background%20Image%20for%20Region/near/217484867" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Background.20Image.20for.20Region.html#217484867">(Nov 21 2020 at 04:51)</a>:</h4>
+<p>Does anyone know of a contrib module (or another alternative) to add a background image to a region (through the UI, without touching the CSS directly)?</p>
+
+
+
+<a name="217485276"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Background%20Image%20for%20Region/near/217485276" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Background.20Image.20for.20Region.html#217485276">(Nov 21 2020 at 05:02)</a>:</h4>
+<p>Hmm... The only thing I can think of is to output an image URL using Views, then change the template file to display it as a background image instead of an image element.</p>
+
+
+
+<a name="217485405"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Background%20Image%20for%20Region/near/217485405" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Background.20Image.20for.20Region.html#217485405">(Nov 21 2020 at 05:05)</a>:</h4>
+<p>We did something like this in D8 here: <a href="https://socialistsanddemocrats.eu/taxjustice">https://socialistsanddemocrats.eu/taxjustice</a> The images on the right of each section are background images. So a similar technique could be used in Backdrop for a region.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://socialistsanddemocrats.eu/taxjustice" style="background-image: url(https://socialistsanddemocrats.eu)"></a><div class="data-container"><div class="message_embed_title"><a href="https://socialistsanddemocrats.eu/taxjustice" title="Tax Justice | Socialists &amp; Democrats">Tax Justice | Socialists &amp; Democrats</a></div><div class="message_embed_description">The COVID-19 pandemic breakout caused both a health and socio-economic crisis that caught the world and its leaders by surprise. As part of national responses, member states granted tax facilities to companies and citizens. The recovery should be based on a just taxation system, and it is also an opportunity to close tax loopholes and continue the fight against tax evasion and tax avoidance.</div></div></div>
+
+
+
+<a name="217485520"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Background%20Image%20for%20Region/near/217485520" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Background.20Image.20for.20Region.html#217485520">(Nov 21 2020 at 05:08)</a>:</h4>
+<p>That's a nice  looking site. </p>
+<p>We have a way in Backdrop Core to add a background image to a block, but I'd like to be able to put a background image behind a region with multiple blocks through the UI.</p>
+
+
+
+<a name="217533142"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Background%20Image%20for%20Region/near/217533142" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Background.20Image.20for.20Region.html#217533142">(Nov 22 2020 at 04:05)</a>:</h4>
+<p>Yeah, I was also thinking perhaps using an image field block within a region. Then may it would work with some <code>z-index</code> and other CSS fiddling, to get the image to be shown underneath all other blocks within the region <span aria-label="thinking" class="emoji emoji-1f914" role="img" title="thinking">:thinking:</span> ...sounds like it could be done via templates, but if it needs to be changed via the admin UI, then sounds like contrib <span class="user-mention" data-user-id="256570">@StPaulTim</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

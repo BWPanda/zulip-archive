@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>Has anyone dealt with an invisible hamburger icon? Problem for iOS / Safari mobile devices only, other browsers show it as expected. Thanks in advance.</p>",
+        "id": 212696190,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1602166640
+    },
+    {
+        "content": "<p>Just took a look at one site on iOS/Safari - I see the hamburger menu</p>",
+        "id": 212700313,
+        "sender_full_name": "Herb",
+        "timestamp": 1602168322
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Invisible.20hamburger/near/212696190\">said</a>:</p>\n<blockquote>\n<p>Has anyone dealt with an invisible hamburger icon? Problem for iOS / Safari mobile devices only, other browsers show it as expected. Thanks in advance.</p>\n</blockquote>\n<p>Mine are fine, but I develop on iOS/Safari, and it's very theme dependent.  If you have the debugger, check the location.  I've found the best css uses position absolute with a top and right, and at least 2% padding to allow for the scroll bars.</p>\n<p>Here's a sample of css from one of my sites (bear in mind that it's very theme-dependent)<br>\n.menu-toggle-button  {<br>\n  position: absolute;<br>\n  top: -8em;<br>\n  right: 20%;<br>\n  z-index: 999;<br>\n  margin-top:1%;<br>\n  }</p>",
+        "id": 212700695,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602168482
+    },
+    {
+        "content": "<p>Debugging without Apple hardware (my case) is pretty problematic. Looks like I need to buy some kind of plan from <a href=\"http://browserstack.com\">browserstack.com</a>. Thanks!</p>",
+        "id": 212702305,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1602169083
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Invisible.20hamburger/near/212702305\">said</a>:</p>\n<blockquote>\n<p>Debugging without Apple hardware (my case) is pretty problematic. Looks like I need to buy some kind of plan from <a href=\"http://browserstack.com\">browserstack.com</a>. Thanks!</p>\n</blockquote>\n<p>Chrome's developer tools have a pretty good iOS emulator in their responsive design toolkit.  I use it too.  That's available on both PC and Linux.  No need to buy anything!  Also, it might be hidden because of the z-index!  That's important.</p>",
+        "id": 212702584,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602169177
+    },
+    {
+        "content": "<p>In Chrome on Linux all fine, same as in Firefox. Maybe tomorrow I'll be smarter ;-) Thank you!</p>",
+        "id": 212703212,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1602169419
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Invisible.20hamburger/near/212703212\">said</a>:</p>\n<blockquote>\n<p>In Chrome on Linux all fine, same as in Firefox. Maybe tomorrow I'll be smarter ;-) Thank you!</p>\n</blockquote>\n<p>Is the site accessible?  I can take a quick look at it if you want.</p>",
+        "id": 212703331,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602169462
+    },
+    {
+        "content": "<p>PM</p>",
+        "id": 212703980,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1602169693
+    },
+    {
+        "content": "<p>Maybe it's something (z-index?) in your theme? Which theme do you use? The only thing that comes to my mind is some conflicting css rule specially crafted for iOS, which doesn't strike on other os-es, but hides the button on iOS. (Wild guessing, though...)</p>",
+        "id": 212708414,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602171418
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Invisible.20hamburger/near/212708414\">said</a>:</p>\n<blockquote>\n<p>Maybe it's something (z-index?) in your theme? Which theme do you use? The only thing that comes to my mind is some conflicting css rule specially crafted for iOS, which doesn't strike on other os-es, but hides the button on iOS. (Wild guessing, though...)</p>\n</blockquote>\n<p>He's using a subtheme of Basis.  I just looked at his site.  I think the issue is in the js for the subtheme.  It doesn't look like it's toggling the element state correctly in the subtheme.  I have another site using Basis and it works fine on the iphone.  I made some debugging  suggestions (go back to Basis, reach out to subtheme developer if it isn't custom), start commenting stuff out, etc.  I'm betting if he switches back to Basis, the hamburger will work properly.</p>",
+        "id": 212711899,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602172872
+    },
+    {
+        "content": "<p>Thanks a lot all, I will try your suggestions!</p>",
+        "id": 212716753,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1602175005
+    }
+]

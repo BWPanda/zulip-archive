@@ -1,0 +1,434 @@
+[
+    {
+        "content": "<p>Just a note, I ran into the same issue I had with this new Ubercart install as I did on the last Ubercart install - where quantity does not appear in cart.  (Checking the boxes in product settings (Display an optional quantity field in 'Add to Cart) does not save - perhaps default this to 'true' as a permanent fix?).   The same fix works. (export ubercart product settings, change option to true, import) , but not really something I should have to do on every new install.</p>",
+        "id": 210172370,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600195674
+    },
+    {
+        "content": "<p>Best to report this in GitHub so someone will fix it</p>",
+        "id": 210197862,
+        "sender_full_name": "Herb",
+        "timestamp": 1600207879
+    },
+    {
+        "content": "<p>THANK YOU <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> and whoever else worked on the module!  This latest update of ubercart was the FIRST One where I didn't have to go in and update all the info files and remove special characters in order to get it to work.</p>",
+        "id": 214077475,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603297973
+    },
+    {
+        "content": "<p>I had a custom Drupal module for Ubercart made to use the Stripe Checkout API (as opposed to the existing modules that handle payments through the iframe on the site).</p>\n<p>If anybody is interested in porting this over to BDCMS, let me know and I'll figure out a way to share what I have. It is not currently publicly available.</p>",
+        "id": 215390926,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604358083
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> ...have you tried existing modules first? ...like <a href=\"https://github.com/backdrop-contrib/uc_stripe\">https://github.com/backdrop-contrib/uc_stripe</a> or <a href=\"https://github.com/backdrop-contrib/stripe\">https://github.com/backdrop-contrib/stripe</a> or <a href=\"https://github.com/backdrop-contrib/stripe_checkout\">https://github.com/backdrop-contrib/stripe_checkout</a> ...didn't these fit your use-case?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/uc_stripe\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/uc_stripe\" title=\"backdrop-contrib/uc_stripe\">backdrop-contrib/uc_stripe</a></div><div class=\"message_embed_description\">Ubercart payment gateway module for Stripe. Contribute to backdrop-contrib/uc_stripe development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/stripe\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/stripe\" title=\"backdrop-contrib/stripe\">backdrop-contrib/stripe</a></div><div class=\"message_embed_description\">This module provides a simple abstraction to use the Stripe PHP SDK. - backdrop-contrib/stripe</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/stripe_checkout\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/stripe_checkout\" title=\"backdrop-contrib/stripe_checkout\">backdrop-contrib/stripe_checkout</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/stripe_checkout development by creating an account on GitHub.</div></div></div>",
+        "id": 215393090,
+        "sender_full_name": "klonos",
+        "timestamp": 1604359725
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I have not. I should have checked if there were any Stripe modules out there already. Oops!</p>",
+        "id": 215393154,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604359789
+    },
+    {
+        "content": "<p>Curious who the main point of contact is for ubercart? I would love to get in on the discussions of moving it forward</p>",
+        "id": 215498699,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604431064
+    },
+    {
+        "content": "<p>That should be listed on the project's home page under Current Maintainers: <a href=\"https://github.com/backdrop-contrib/ubercart\">https://github.com/backdrop-contrib/ubercart</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ubercart\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ubercart\" title=\"backdrop-contrib/ubercart\">backdrop-contrib/ubercart</a></div><div class=\"message_embed_description\">A flexible but easy-to-use e-commerce system for Backdrop. - backdrop-contrib/ubercart</div></div></div>",
+        "id": 215499862,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1604431765
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> it shows longwave, which threw me for a loop. I didn't think he was in the Ubercart scene any more.</p>",
+        "id": 215500009,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604431839
+    },
+    {
+        "content": "<p>It looks like <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> is currently the busiest person there, so I would assume he is.</p>",
+        "id": 215500037,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1604431858
+    },
+    {
+        "content": "<p>I see longwave listed under Credits, not Current Maintainers.</p>",
+        "id": 215500120,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1604431892
+    },
+    {
+        "content": "<p>Yeah, the <a href=\"http://b.org\">b.org</a> site says</p>\n<p>CURRENT MAINTAINERS</p>\n<p>Robert Garrigós</p>\n<p>Laryn Kragt Bakker</p>",
+        "id": 215500368,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604432025
+    },
+    {
+        "content": "<p>Heh... Laryn... man I'm slow sometimes</p>",
+        "id": 215500551,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604432149
+    },
+    {
+        "content": "<p>Also, I would just create an issue in the queue (probably a meta issue) to start the discussion.</p>",
+        "id": 215500612,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1604432167
+    },
+    {
+        "content": "<p>Ok. Thanks!</p>",
+        "id": 215500687,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604432223
+    },
+    {
+        "content": "<p>Yes, sounds great!</p>",
+        "id": 215537441,
+        "sender_full_name": "Laryn",
+        "timestamp": 1604460401
+    },
+    {
+        "content": "<p>Has anyone used Ubercart in Backdrop for a store selling products with attributes/options and stock levels?</p>",
+        "id": 218139697,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606525272
+    },
+    {
+        "content": "<p>To me it seems that attributes/options and stock levels aren't compatible OOTB...</p>",
+        "id": 218139701,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606525289
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>, not yet in Backdrop, but we sell T-shirts at <a href=\"https://origamiusa.org/catalog\">https://origamiusa.org/catalog</a> (D7), using attributes/options for the shirt sizes. Each option has its own stock number, so the different shirt sizes are tracked individually in stock. We'll be migrating this store to Backdrop sometime in the next year (hence my recent contributions to uc_stock, uc_price_per_role, etc.). The intention is to have attributes/options/stock working the same in Backdrop as currently in D7.</p>",
+        "id": 218142215,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1606529535
+    },
+    {
+        "content": "<p>Yeah, from what I've seen so far in Backdrop, options don't have their own stock currently...</p>",
+        "id": 218142501,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606530115
+    },
+    {
+        "content": "<p>I'm basically wondering if I need this Drupal module ported over, for example: <a href=\"https://www.drupal.org/project/ubercart_attribute_stock\">https://www.drupal.org/project/ubercart_attribute_stock</a></p>",
+        "id": 218158860,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606560550
+    },
+    {
+        "content": "<p>Ugh! <a href=\"https://www.drupal.org/project/uc_option_image\">https://www.drupal.org/project/uc_option_image</a> doesn't exist for Backdrop yet. This is where I'm really starting to miss Drupal Commerce...</p>",
+        "id": 218159537,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606561761
+    },
+    {
+        "content": "<p>I don't know if you need that module, but I can affirm that the current Backdrop version of Ubercart does support stock tracking for individual options. I haven't yet ported all the modules needed for our store's move, but after upgrading it from D7 to the current version of UC on BD (1.x-3.13.0-rc2), I can confirm that the stock levels on individual T-shirt sizes came over in the upgrade, and if I administratively create an order that contains one of the tracked options, the stock is properly decremented on that option's SKU.</p>",
+        "id": 218174889,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1606587697
+    },
+    {
+        "content": "<p>Been thinking... What are some general thoughts on creating a hybrid of commerce and Ubercart?</p>\n<p>Ubercart is old and clunky but easy to use and commerce is an absolute PITA to work with all the way around. I've wished there was a better e-commerce experience that took some of the newer takeaways from commerce and implemented them into the simplicity of Ubercart.</p>\n<p>Personally, I hate commerce. It was never designed for end users or site builders (despite what anyone says).</p>\n<p>I use Ubercart on a regular basis and I think my biggest complaint is how the options/attributes work. It needs updated.</p>\n<p>Point is, if anyone is interested in this, I would love to be involved.</p>",
+        "id": 218258910,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606724846
+    },
+    {
+        "content": "<p>I'm working on a freebie commerce site ATM, and I tried Ubercart but it was too hard, not enough modules ported, etc. So I looked around and found <a href=\"http://Foxy.io\">Foxy.io</a>. I've decided to use it instead. As a result, I'm now building the products, attributes, options, etc. all in Backdrop (using Paragraphs for the attributes/options), and I'm loving that so much more. More freedom to decide how the structure works, etc. Point being that if we can leave as much stuff to core Backdrop as possible (i.e. content types, views, etc.) then just add on the commerce stuff, I think that's the best way forward.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://Foxy.io\" style=\"background-image: url(https://www.foxy.io/user/themes/default/images/defaults/default-facebook.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://Foxy.io\" title=\"Foxy.io | Flexible Ecommerce for Your Website\">Foxy.io | Flexible Ecommerce for Your Website</a></div><div class=\"message_embed_description\">Foxy’s hosted cart &amp; payment page allow you to sell anything, using your existing website or platform.</div></div></div>",
+        "id": 218261905,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606727053
+    },
+    {
+        "content": "<p>I had a look at Foxy some time ago, also at their competitor Snipcart (which is much more expensive). Good to hear that you have good experiences with Foxy, I still have to decide how to move on with my current D7 commerce clients. Basically, I also see the benefit to separate the checkout process.</p>",
+        "id": 218266370,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1606729947
+    },
+    {
+        "content": "<p>Ha, yeah I've literally been researching the differences between Foxy and SnipCart yesterday and today. For this site, there's not going to more than 100 orders/month or more than $700 in monthly revenue, so the monthly cost of the two is very similar. In the end I chose Foxy because their HTML code is based around <code>&lt;form&gt;</code> elements with hidden fields for the various values, compared with SnipCart's <code>&lt;button&gt;</code> element with attributes for the values. IMO a form element seems to make more sense. But I could have easily gone with SnipCart too. Both look good.</p>",
+        "id": 218266697,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606730174
+    },
+    {
+        "content": "<p>:-) But Snipcart has a 2% or similar fee on every purchase, don't they? My customers simply won't accept this. Foxy has some cents per order, not  a % charge, or has this changed in the meantime?</p>",
+        "id": 218268544,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1606731469
+    },
+    {
+        "content": "<p>Did you also have a look at this one? <a href=\"https://www.drupal.org/project/foxycart\">https://www.drupal.org/project/foxycart</a></p>",
+        "id": 218268636,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1606731512
+    },
+    {
+        "content": "<p>Foxy: $15/month + 0.5% transaction fee (min 1c, max 15c, no fee for first 100 transactions/month)<br>\nSnipCart: 2% transaction fee (unless you make &lt;$677/month, then it's $14/month fee)</p>",
+        "id": 218268923,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606731694
+    },
+    {
+        "content": "<p>So for my site, Foxy is $15/mth and SnipCart is $14/mth</p>",
+        "id": 218269023,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606731743
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Interesting! Looking forward to have a look at the site once it's ready.</p>",
+        "id": 218285432,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1606742796
+    },
+    {
+        "content": "<p>Re Ubercard vs. Commerce: I've tried the first Commerce 7.x version a long time ago, and never tried Ubercart. Never needed them so far, but for the 'typical' Backdrop people Ubercart seems to be more interesting.</p>",
+        "id": 218286272,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1606743274
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Which parts aren't working (well enough) in Ubercart? Are the main parts okay? Asking for a <em>possible</em> project next year.</p>",
+        "id": 218286480,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1606743384
+    },
+    {
+        "content": "<p>IMO and being a long-time Commerce user, Ubercart is quite impressive (however, I never did a real project). Compared to Commerce, there are some points missing, e.g. product variations with dedicated SKU and image, better discount functions. But for basic e-Commerce, it looks pretty awesome.</p>",
+        "id": 218296698,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1606748081
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> What <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> said. My site needed to have images associated with attributes/options and this required a third-party Drupal module that hasn't been ported to Backdrop yet. The same with assigning different stock levels to different attributes/options. All of which (I believe) was in Commerce core OOTB...</p>",
+        "id": 218334691,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606765020
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> I have both Ubercart and Commerce running on live sites. When I realized how to make every product a product on Ubercart by using entity reference and views jump menus to create variations, I stopped trying to use/learn Commerce.</p>\n<p>The nice thing about this approach is that I don't HAVE to make every product a product (line item) because of the UC attribute system.</p>\n<p>Commerce overcomplicated EVERYTHING about the platform. Stupid powerful? Yes. Customize everything? Mostly. Easy to use? No. Easy to setup? No. Easy to understand? No. It was made by programmers, for programmers.</p>\n<p>Ubercart on Drupal could have been made better to stay more with the times, but the maintainer has no interest in advancing it. Maybe this will be different on Backdrop.</p>",
+        "id": 218338111,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606766633
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>, as I mentioned above, assigning different stock levels to different attributes/options works out-of-the-box in Ubercart on Backdrop (no extra modules needed).</p>",
+        "id": 218341710,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1606768322
+    },
+    {
+        "content": "<p>Hmm, couldn't see that when I was looking...</p>",
+        "id": 218345429,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606770079
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart/near/218338111\">said</a>:</p>\n<blockquote>\n<p>Ubercart on Drupal could have been made better to stay more with the times, but the maintainer has no interest in advancing it. Maybe this will be different on Backdrop.</p>\n</blockquote>\n<p>Definitely open to advancing it and would love to review PRs. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> Regarding your comment about entity reference and jump menus -- sounds like it would be interesting to read, perhaps a blog post or module wiki page?</p>",
+        "id": 218346082,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606770364
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>, admittedly, it's hard to find. After you've created an attribute (e.g., \"Shirt size\") and set up a bunch of options (e.g., \"S\" thru \"XXXL\"), on the product edit page there are a bunch of sub-tabs. \"Attributes\" lets you add the attribute; \"Options\" lets you pick which options apply to this product; \"Adjustments\" lets you define alternate SKUs for each option. Then \"Stock\" will let you set stock levels for each of the alternate SKUs.</p>",
+        "id": 218352973,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1606774014
+    },
+    {
+        "content": "<p>If anyone has any thoughts to add to this thread in the forum, it would be helpful. I suspect that many people looking for commerce options for Backdrop CMS end up here.<br>\n<a href=\"https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms\">https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms</a></p>",
+        "id": 218357853,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1606776664
+    },
+    {
+        "content": "<blockquote>\n<p>Regarding your comment about entity reference and jump menus -- sounds like it would be interesting to read, perhaps a blog post or module wiki page?</p>\n</blockquote>\n<p>I second that <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> ...when you heve the time/energy of course <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span></p>",
+        "id": 218387035,
+        "sender_full_name": "klonos",
+        "timestamp": 1606807077
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> either a forum topic, or a \"How-to\" blog post on the matter seems fitting <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 218387118,
+        "sender_full_name": "klonos",
+        "timestamp": 1606807157
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I'm open to the idea of writing up a how-to.</p>\n<p>To pull it off, it basically takes:<br>\nParagraphs<br>\nViews<br>\nEntity Reference</p>\n<p>I'll have to see if Backdrop is up-to-snuff to make it work and I would honestly love a more direct approach specifically coded to do the same thing. It's just my no-coding self figured out the long-way-workaround <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<p>The one thing I haven't tried to figure out is I think it's CER (been a while since I researched it) which would sync two entity reference fields. Right now, I have to manually touch each product that references back to the other which is annoying. It would be nice if they knew about each other and if you add or remove from one, it adds or removes from all.</p>",
+        "id": 218388202,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606808392
+    },
+    {
+        "content": "<p>Oh, the other thing that would be great (and I haven't tried) is to do the same but with buttons instead of the views drop-down jump menu. Amazon, Newegg and many other stores have moved to this approach to switch between variant pages.</p>",
+        "id": 218388330,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606808517
+    },
+    {
+        "content": "<p>Check it in action: <a href=\"https://www.asphaltsealcoatingdirect.com/products/three-quarter-inch-brass-ball-valve-q104-043-00\">https://www.asphaltsealcoatingdirect.com/products/three-quarter-inch-brass-ball-valve-q104-043-00</a></p>\n<p>It's right above the add to cart pane as the drop-down.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.asphaltsealcoatingdirect.com/products/three-quarter-inch-brass-ball-valve-q104-043-00\" style=\"background-image: url(https://www.asphaltsealcoatingdirect.com/files/styles/galleryformatter_slide/public/dynamic/content/product/image/1654/0.75-inch-brass-ball-valve-overview-open.jpg?itok=xbGXJmhA)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.asphaltsealcoatingdirect.com/products/three-quarter-inch-brass-ball-valve-q104-043-00\" title=\"3/4 Inch Sealcoating Brass Housing Ball Valve Fitting Q104-043-00\">3/4 Inch Sealcoating Brass Housing Ball Valve Fitting Q104-043-00</a></div><div class=\"message_embed_description\">Durable 3/4\" sealcoating brass housing ball valve fitting for various sealcoating or fluid plumbing applications. Female NPT x Female NPT</div></div></div>",
+        "id": 218388430,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606808610
+    },
+    {
+        "content": "<p>Looks great <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> ...but what does CER mean?</p>",
+        "id": 218396739,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1606814484
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> I think <a href=\"https://www.drupal.org/project/cer\">Corresponding Entity References</a></p>",
+        "id": 218397133,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606814753
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> yup</p>",
+        "id": 218402063,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606817733
+    },
+    {
+        "content": "<p>Here's another possible option though I don't remember if I tried it: <a href=\"https://www.drupal.org/project/ref_field\">https://www.drupal.org/project/ref_field</a></p>",
+        "id": 218402169,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606817803
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Have you ever tried this module (which <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> linked above)? Is that similar to what you achieve with your setup? <a href=\"https://www.drupal.org/project/uc_option_image\">https://www.drupal.org/project/uc_option_image</a></p>",
+        "id": 218434165,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606835470
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I have not tried it, but I can tell you just by reading the description it is vastly different. (I do need to look into it though)</p>\n<p>That module deals with the attribute/option core UC module. It will allow different images per option. What I managed to do was create a completely different node page load based on the drop-down.</p>\n<p>Options are confined to the respective node whereas my variations change the physical node itself.</p>\n<p>Having variations on individual pages allows for \"each product is a line item\" which solves two problems: 1) Better SEO 2) Better identification for accounting software that requires every product to be a product.</p>\n<p>Having each product as its own line item for accounting purposes is precisely why Commerce went the route of \"every product is a product\" and they did away with options/attributes. It's the \"standard\" way of doing e-commerce however not every store needs this and it is way more complicated to maintain and setup than the UC attribute system.</p>\n<p>I personally like using attributes as a way to test a product. I can setup one page with attributes and test to see if I get any traction. If no, I don't waste a bunch of time. If yes, that tells me it's worth breaking each product out into its own node variant.</p>\n<p>The one problem with commerce OOTB is that they didn't create a \"bundled line item\". This means it isn't possible to have multiple line items housed within a single line item. There was somebody working on a contrib for this around the time I stopped focusing on commerce so I don't know it's status. Bundling line items would allow a store to offer \"made to order\" products where you customize a product based on individual components. </p>\n<p>Imagine wanting to sell a computer. You can sell each component separately so they need to be their own line item, but if you add those to a custom built computer, that computer needs a line item that houses the components. The way commerce is designed, the store owner has no idea if the components go inside the computer or if they are being purchased as individual components.</p>\n<p>Hehe went on a bit of a side tangent.</p>",
+        "id": 218465233,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606848781
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span></p>",
+        "id": 218469661,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606850982
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> \"the physical node itself\" hehe. I'd love to get a photo of a node in the wild if anyone has managed to capture one</p>",
+        "id": 218510841,
+        "sender_full_name": "Herb",
+        "timestamp": 1606878920
+    },
+    {
+        "content": "<p>Sorry for the tangent but wanted to mention I ported <a href=\"https://github.com/backdrop-contrib/foxycart\">https://github.com/backdrop-contrib/foxycart</a> even though I have no idea if I'll use it. Mainly because it was easy</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/foxycart\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/foxycart\" title=\"backdrop-contrib/foxycart\">backdrop-contrib/foxycart</a></div><div class=\"message_embed_description\">Integrate with Foxy e-commerce. Contribute to backdrop-contrib/foxycart development by creating an account on GitHub.</div></div></div>",
+        "id": 218510909,
+        "sender_full_name": "Herb",
+        "timestamp": 1606878992
+    },
+    {
+        "content": "<p>Wow! <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> ++</p>",
+        "id": 218511679,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606879694
+    },
+    {
+        "content": "<p><strong>herb</strong> Props to you for all your hard work. (Karma: 5)</p>",
+        "id": 218511680,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1606879694
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I'll try the FoxyCart module on my site and can fix bugs as I go if you're ok making me a maintainer... Saves creating a bunch of issues/PRs.</p>",
+        "id": 218512307,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606880585
+    },
+    {
+        "content": "<p>(already found one, plus a bunch of documentation updates)</p>",
+        "id": 218512316,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606880604
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I realized I forgot to put in the hook_config_info. I'll do it quick tomorrow or you can go ahead and do it</p>",
+        "id": 218512318,
+        "sender_full_name": "Herb",
+        "timestamp": 1606880607
+    },
+    {
+        "content": "<p>And needs a default settings file</p>",
+        "id": 218512327,
+        "sender_full_name": "Herb",
+        "timestamp": 1606880636
+    },
+    {
+        "content": "<p>And hook_autoload_info</p>",
+        "id": 218512369,
+        "sender_full_name": "Herb",
+        "timestamp": 1606880660
+    },
+    {
+        "content": "<p>Oops. Like I say it was easy... so long as I didn't try to use it</p>",
+        "id": 218512381,
+        "sender_full_name": "Herb",
+        "timestamp": 1606880690
+    },
+    {
+        "content": "<p>Feel free to add yourself as a maintainer. I suppose also add an issue so it's all in the open</p>",
+        "id": 218512405,
+        "sender_full_name": "Herb",
+        "timestamp": 1606880745
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/foxycart/pull/1\">https://github.com/backdrop-contrib/foxycart/pull/1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/foxycart/pull/1\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/foxycart/pull/1\" title=\"Add BWPanda as maintainer. by BWPanda · Pull Request #1 · backdrop-contrib/foxycart\">Add BWPanda as maintainer. by BWPanda · Pull Request #1 · backdrop-contrib/foxycart</a></div><div class=\"message_embed_description\">GitHub is home to over 50 million developers working together to host and review code, manage projects, and build software together.</div></div></div>",
+        "id": 218512408,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606880749
+    },
+    {
+        "content": "<p>Hmm, <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> you might need to give me permission to that repo. I can't merge the PR myself yet...</p>",
+        "id": 218512600,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606880973
+    },
+    {
+        "content": "<p>Done</p>",
+        "id": 218512965,
+        "sender_full_name": "Herb",
+        "timestamp": 1606881481
+    },
+    {
+        "content": "<p>Any Ubercart users out there, I'm interested in feedback on this issue: <br>\n<a href=\"https://github.com/backdrop-contrib/ubercart/issues/251\">https://github.com/backdrop-contrib/ubercart/issues/251</a></p>\n<p>The question is whether uninstalling Ubercart should completely remove the product content type (and related nodes). Drupal 7 does not do this on uninstall, but it does make sense to do it in terms of clean-up given that Ubercart creates that content type upon installation. Obviously the danger is that someone uninstalls Ubercart and loses content that they may not have realized was about to be deleted. </p>\n<p><a href=\"https://github.com/backdrop-contrib/ubercart/issues/251\">https://github.com/backdrop-contrib/ubercart/issues/251</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ubercart/issues/251\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ubercart/issues/251\" title=\"Remove content types and nodes on uninstall? · Issue #251 · backdrop-contrib/ubercart\">Remove content types and nodes on uninstall? · Issue #251 · backdrop-contrib/ubercart</a></div><div class=\"message_embed_description\">When module uc_product_kit is uninstalled, should the product_kit content type and and any nodes be removed during hook_uninstall()? Ditto for module uc_product and any of its product nodes? Looks ...</div></div></div>",
+        "id": 227197170,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613944877
+    },
+    {
+        "content": "<p>Hum... Yes if a sandbox, no if live site.</p>",
+        "id": 227200625,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613948024
+    },
+    {
+        "content": "<p>Do uninstall hooks allow for guided uninstall process? (same as when enabling modules with dependencies, you are asked to enable the dependencies) ...if there was a way to do that, then perhaps make it optional with a confirmation form.</p>",
+        "id": 227205613,
+        "sender_full_name": "klonos",
+        "timestamp": 1613953819
+    },
+    {
+        "content": "<p>Not that I'm aware of.</p>",
+        "id": 227210562,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613958785
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>Anyone know why my CSS changes aren't taking effect straight away? Normally I can make a change to the theme's CSS file, save, then reload the site to see the CSS take effect. But it's not working currently and I have to clear caches each time I make a change. All caching and aggregation on <code>admin/config/development/performance</code> is turned off...</p>",
+        "id": 213994643,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603238996
+    },
+    {
+        "content": "<p>Ha, apparently I've come across this before and filed an issue for it <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span> <a href=\"https://github.com/backdrop/backdrop-issues/issues/4086\">https://github.com/backdrop/backdrop-issues/issues/4086</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4086\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4086\" title=\"Changes to CSS not reflected until after cache clear · Issue #4086 · backdrop/backdrop-issues\">Changes to CSS not reflected until after cache clear · Issue #4086 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When all caching and aggregation is disabled, and you make a change to a theme&#39;s CSS file, the change isn&#39;t reflected on the site after a simple browser refresh, you ...</div></div></div>",
+        "id": 213994803,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603239144
+    },
+    {
+        "content": "<p>I think this is Color-module related. Updated the issue to reflect that.</p>",
+        "id": 213995649,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603240021
+    },
+    {
+        "content": "<p>Yes, if you are using the color module, you need to resave your color settings so it will regenerate the files.</p>",
+        "id": 214000269,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1603245076
+    },
+    {
+        "content": "<p>I thought we had an issue somewhere to regenerate the color files when caches are cleared, but I can't seem to find it atm</p>",
+        "id": 214000397,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1603245230
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> <a href=\"https://github.com/backdrop/backdrop-issues/issues/4295\">https://github.com/backdrop/backdrop-issues/issues/4295</a> I referenced that issue in my update.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4295\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4295\" title=\"[DX] Themes with color support: CSS changes not taking effect unless theme settings are re-saved. · Issue #4295 · backdrop/backdrop-issues\">[DX] Themes with color support: CSS changes not taking effect unless theme settings are re-saved. · Issue #4295 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need I just ran into a situation in which I made a css change and could not get it to take effect, regardless of how many times I cleared the browser cache or the Backdrop cache....</div></div></div>",
+        "id": 214001378,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603246240
+    }
+]

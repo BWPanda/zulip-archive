@@ -1,0 +1,65 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html">Linking to issues/PRs</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="186822158"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Linking%20to%20issues/PRs/near/186822158" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html#186822158">(Jan 28 2020 at 19:59)</a>:</h4>
+<p>So a while ago I setup Linkifiers in Zulip for automatic linking to GitHub issues and PRs. I had an issue with linking to any repo with a <code>.</code> in the name (e.g. <code>github.com/backdrop-ops/backdropcms.org</code>), so I sent an email to Zulip help. They just replied (apologising for the delay) and explained that <code>.</code> does indeed work in the Linkifier regex, I was just doing it wrong: I had <code>[a-zA-Z0-9_-.]</code> which it took <code>_-.</code> to mean <code>any character between _ and .</code> which isn't valid, so I couldn't do it. Zulip support pointed out I should simply do <code>[a-zA-Z0-9_.-]</code> instead which of course works. So I've updated the Linkifier regex and now you can link to any repo's issue/PR!</p>
+
+
+
+<a name="186822309"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Linking%20to%20issues/PRs/near/186822309" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html#186822309">(Jan 28 2020 at 20:00)</a>:</h4>
+<p>E.g. <a href="https://github.com/backdrop-ops/backdropcms.org/issues/123" target="_blank" title="https://github.com/backdrop-ops/backdropcms.org/issues/123">backdrop-ops/backdropcms.org#123</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/issues/123" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/issues/123" target="_blank" title="SEO: optimize the site for people looking for a CMS · Issue #123 · backdrop-ops/backdropcms.org">SEO: optimize the site for people looking for a CMS · Issue #123 · backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">Follow-up from #122</div></div></div>
+
+
+
+<a name="187469645"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Linking%20to%20issues/PRs/near/187469645" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html#187469645">(Feb 05 2020 at 16:31)</a>:</h4>
+<p>I believe that this would have also worked: <code>[a-zA-Z0-9_-\.]</code> <br>
+(<code>\</code>escapes dots)</p>
+
+
+
+<a name="187469856"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Linking%20to%20issues/PRs/near/187469856" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html#187469856">(Feb 05 2020 at 16:33)</a>:</h4>
+<p>...or <code>[a-zA-Z0-9_\.\-]</code></p>
+
+
+
+<a name="187471351"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Linking%20to%20issues/PRs/near/187471351" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html#187471351">(Feb 05 2020 at 16:49)</a>:</h4>
+<p>So how do we use it? Paste a link or type an issue id?</p>
+
+
+
+<a name="187472499"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Linking%20to%20issues/PRs/near/187472499" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html#187472499">(Feb 05 2020 at 17:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> Either. Pasting URLs will automatically make them clickable (as you'd expect) but if you know the issue number you can just write it after a hash sign: <code>#234</code> becomes <a href="https://github.com/backdrop/backdrop-issues/issues/234" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/234">#234</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/234" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/234" target="_blank" title="[Followup] Convert page.tpl.php to HTML5 · Issue #234 · backdrop/backdrop-issues">[Followup] Convert page.tpl.php to HTML5 · Issue #234 · backdrop/backdrop-issues</a></div><div class="message_embed_description">As per title, probably changes and discussion here is going to pend on usage of the new sectioning and grouping elements such as &lt; header &gt;, &lt; hgroup &gt; and &lt; footer &gt;.</div></div></div>
+
+
+
+<a name="187472625"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Linking%20to%20issues/PRs/near/187472625" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Linking.20to.20issues.2FPRs.html#187472625">(Feb 05 2020 at 17:02)</a>:</h4>
+<p>And any links will automatically trigger a preview/teaser to be shown too.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,1093 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Dragonbot.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html">Dragonbot</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="184841463"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184841463" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184841463">(Jan 05 2020 at 09:31)</a>:</h4>
+<p>At some point we'll need to see if dragonbot can be set up here.</p>
+
+
+
+<a name="184841534"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184841534" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184841534">(Jan 05 2020 at 09:33)</a>:</h4>
+<p>Yup ...and also set up the karma and forum notifications as well.</p>
+
+
+
+<a name="184864033"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184864033" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184864033">(Jan 05 2020 at 20:46)</a>:</h4>
+<p>I see <span class="user-mention" data-user-id="256358">@Jennifer Lampton</span> has added <span class="user-mention" data-user-id="256793">@Dragonbot</span> (doesn't seem to do anything yet though...)</p>
+
+
+
+<a name="184867060"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184867060" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184867060">(Jan 05 2020 at 22:01)</a>:</h4>
+<p>I'm trying to get a chatbot going. Have installed Hubot on a Heroku app. I'm getting this error in heroku logs:</p>
+<p>Not sure if this is enough for anyone to give me any suggestions.</p>
+<div class="codehilite"><pre><span></span>2020-01-05T22:03:08.000000+00:00 app[api]: Build succeeded
+2020-01-05T22:03:09.332709+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2020-01-05T22:03:09.396322+00:00 heroku[web.1]: Process exited with status 0
+2020-01-05T22:03:10.957496+00:00 heroku[web.1]: Starting process with command `bin/hubot -a zulip`
+2020-01-05T22:03:15.139887+00:00 app[web.1]: audited 213 packages in 1.641s
+2020-01-05T22:03:15.141877+00:00 app[web.1]: found 11 vulnerabilities (9 moderate, 2 high)
+2020-01-05T22:03:15.141880+00:00 app[web.1]: run `npm audit fix` to fix them, or `npm audit` for details
+2020-01-05T22:03:15.902399+00:00 heroku[web.1]: State changed from starting to up
+2020-01-05T22:03:15.678722+00:00 app[web.1]: Zulip API: Error parsing JSON: &lt;h1&gt;Bad Request (400)&lt;/h1&gt;
+2020-01-05T22:03:15.678986+00:00 app[web.1]: Zulip API Error: Request failed with status 400: &lt;h1&gt;Bad Request (400)&lt;/h1&gt;
+2020-01-05T22:03:15.681443+00:00 app[web.1]: [Sun Jan 05 2020 22:03:15 GMT+0000 (Coordinated Universal Time)] ERROR Error: Request failed with status 400: &lt;h1&gt;Bad Request (400)&lt;/h1&gt;
+2020-01-05T22:03:15.681446+00:00 app[web.1]: at Request._callback (/app/node_modules/zulip/lib/zulip.js:64:19)
+2020-01-05T22:03:15.681448+00:00 app[web.1]: at Request.self.callback (/app/node_modules/request/request.js:129:22)
+2020-01-05T22:03:15.681451+00:00 app[web.1]: at Request.emit (events.js:209:13)
+2020-01-05T22:03:15.681453+00:00 app[web.1]: at Request.&lt;anonymous&gt; (/app/node_modules/request/request.js:873:14)
+2020-01-05T22:03:15.681455+00:00 app[web.1]: at Request.emit (events.js:214:15)
+2020-01-05T22:03:15.681457+00:00 app[web.1]: at IncomingMessage.&lt;anonymous&gt; (/app/node_modules/request/request.js:824:12)
+2020-01-05T22:03:15.681459+00:00 app[web.1]: at IncomingMessage.emit (events.js:214:15)
+2020-01-05T22:03:15.681461+00:00 app[web.1]: at endReadableNT (_stream_readable.js:1178:12)
+2020-01-05T22:03:15.681463+00:00 app[web.1]: at processTicksAndRejections (internal/process/task_queues.js:80:21)
+</pre></div>
+
+
+
+<a name="184867708"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184867708" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184867708">(Jan 05 2020 at 22:16)</a>:</h4>
+<p>Have you set up the outgoing web hook?</p>
+
+
+
+<a name="184867761"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184867761" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184867761">(Jan 05 2020 at 22:18)</a>:</h4>
+<p>I've added the bot in the Zulip interface, if that is what you mean?</p>
+
+
+
+<a name="184867842"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184867842" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184867842">(Jan 05 2020 at 22:20)</a>:</h4>
+<p>I guess so. It seems like the bot isn't getting a proper response from Zulip so I thought maybe it's a config issue with the webhook</p>
+
+
+
+<a name="184872623"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184872623" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184872623">(Jan 06 2020 at 00:48)</a>:</h4>
+<p>@Dragonbot ping</p>
+
+
+
+<a name="184872624"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184872624" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184872624">(Jan 06 2020 at 00:48)</a>:</h4>
+<p>PONG</p>
+
+
+
+<a name="184872625"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184872625" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184872625">(Jan 06 2020 at 00:48)</a>:</h4>
+<p>@dragonbot pug me</p>
+
+
+
+<a name="184872626"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184872626" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184872626">(Jan 06 2020 at 00:48)</a>:</h4>
+<div class="message_inline_image"><a href="http://26.media.tumblr.com/tumblr_lruas6Ru8M1r2brlzo1_500.jpg" target="_blank" title="http://26.media.tumblr.com/tumblr_lruas6Ru8M1r2brlzo1_500.jpg"><img src="https://uploads.zulipusercontent.net/8a310b96f20e5fab682e5090f7ae57edc8f5d258/687474703a2f2f32362e6d656469612e74756d626c722e636f6d2f74756d626c725f6c72756173365275384d31723262726c7a6f315f3530302e6a7067"></a></div>
+
+
+
+<a name="184873457"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873457" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873457">(Jan 06 2020 at 01:17)</a>:</h4>
+<p><span aria-label="tada" class="emoji emoji-1f389" role="img" title="tada">:tada:</span></p>
+
+
+
+<a name="184873513"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873513" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873513">(Jan 06 2020 at 01:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> pug me</p>
+
+
+
+<a name="184873514"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873514" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873514">(Jan 06 2020 at 01:19)</a>:</h4>
+<div class="message_inline_image"><a href="http://28.media.tumblr.com/tumblr_ljczkiDmrM1qe3m7qo1_400.jpg" target="_blank" title="http://28.media.tumblr.com/tumblr_ljczkiDmrM1qe3m7qo1_400.jpg"><img src="https://uploads.zulipusercontent.net/38e17de2718e8d5ec4f354ea89af8fbb08c46296/687474703a2f2f32382e6d656469612e74756d626c722e636f6d2f74756d626c725f6c6a637a6b69446d724d317165336d37716f315f3430302e6a7067"></a></div>
+
+
+
+<a name="184873516"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873516" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873516">(Jan 06 2020 at 01:19)</a>:</h4>
+<p>Do we have karmas? <span class="user-mention" data-user-id="256570">@StPaulTim</span> ++</p>
+
+
+
+<a name="184873518"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873518" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873518">(Jan 06 2020 at 01:19)</a>:</h4>
+<p>...guess not yet.</p>
+
+
+
+<a name="184873520"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873520" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873520">(Jan 06 2020 at 01:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> help</p>
+
+
+
+<a name="184873521"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873521" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873521">(Jan 06 2020 at 01:19)</a>:</h4>
+<p>dragonbot adapter - Reply with the adapter<br>
+dragonbot animate me &lt;query&gt; - The same thing as <code>image me</code>, except adds a few parameters to try to return an animated GIF instead.<br>
+dragonbot echo &lt;text&gt; - Reply back with &lt;text&gt;<br>
+dragonbot help - Displays all of the help commands that this bot knows about.<br>
+dragonbot help &lt;query&gt; - Displays all help commands that match &lt;query&gt;.<br>
+dragonbot image me &lt;query&gt; - The Original. Queries Google Images for &lt;query&gt; and returns a random top result.<br>
+dragonbot map me &lt;query&gt; - Returns a map view of the area returned by <code>query</code>.<br>
+dragonbot mustache me &lt;url|query&gt; - Adds a mustache to the specified URL or query result.<br>
+dragonbot ping - Reply with pong<br>
+dragonbot pug bomb N - get N pugs<br>
+dragonbot pug me - Receive a pug<br>
+dragonbot the rules - Make sure hubot still knows the rules.<br>
+dragonbot time - Reply with current time<br>
+dragonbot translate me &lt;phrase&gt; - Searches for a translation for the &lt;phrase&gt; and then prints that bad boy out.<br>
+dragonbot translate me from &lt;source&gt; into &lt;target&gt; &lt;phrase&gt; - Translates &lt;phrase&gt; from &lt;source&gt; into &lt;target&gt;. Both &lt;source&gt; and &lt;target&gt; are optional<br>
+ship it - Display a motivation squirrel</p>
+
+
+
+<a name="184873566"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873566" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873566">(Jan 06 2020 at 01:20)</a>:</h4>
+<p>@klonos++</p>
+
+
+
+<a name="184873567"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873567" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873567">(Jan 06 2020 at 01:20)</a>:</h4>
+<p>klonos +1! (Karma: 1)</p>
+
+
+
+<a name="184873569"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873569" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873569">(Jan 06 2020 at 01:20)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> image me kitten</p>
+
+
+
+<a name="184873570"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873570" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873570">(Jan 06 2020 at 01:20)</a>:</h4>
+<p>Google Image Search API is no longer available. Please <a href="https://github.com/hubot-scripts/hubot-google-images#cse-setup-details" target="_blank" title="https://github.com/hubot-scripts/hubot-google-images#cse-setup-details">setup up Custom Search Engine API</a>.</p>
+
+
+
+<a name="184873571"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873571" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873571">(Jan 06 2020 at 01:20)</a>:</h4>
+<div class="message_inline_image"><a href="http://i.imgur.com/CzFTOkI.png" target="_blank" title="http://i.imgur.com/CzFTOkI.png"><img src="https://uploads.zulipusercontent.net/26d1b3e468f3b89538af6a2fee998e8866abffdc/687474703a2f2f692e696d6775722e636f6d2f437a46544f6b492e706e67"></a></div>
+
+
+
+<a name="184873572"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873572" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873572">(Jan 06 2020 at 01:20)</a>:</h4>
+<p>It's very sensitive. I don't think you can have space between user name and ++</p>
+
+
+
+<a name="184873582"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873582" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873582">(Jan 06 2020 at 01:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span>++</p>
+
+
+
+<a name="184873583"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873583" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873583">(Jan 06 2020 at 01:21)</a>:</h4>
+<p><strong>stpaultim</strong> is on the rise! (Karma: 1)</p>
+
+
+
+<a name="184873584"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873584" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873584">(Jan 06 2020 at 01:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span>++</p>
+
+
+
+<a name="184873585"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873585" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873585">(Jan 06 2020 at 01:21)</a>:</h4>
+<p><strong>stpaultim</strong> +1! (Karma: 2)</p>
+
+
+
+<a name="184873586"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873586" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873586">(Jan 06 2020 at 01:21)</a>:</h4>
+<p>Yup, space sensitivity it is.</p>
+
+
+
+<a name="184873625"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873625" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873625">(Jan 06 2020 at 01:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> snack</p>
+
+
+
+<a name="184873626"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873626" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873626">(Jan 06 2020 at 01:22)</a>:</h4>
+<p>And clearly, we've made no attempt to port prior scores.</p>
+
+
+
+<a name="184873627"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873627" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873627">(Jan 06 2020 at 01:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> botsnack</p>
+
+
+
+<a name="184873628"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873628" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873628">(Jan 06 2020 at 01:22)</a>:</h4>
+<p>We don't have any custom commands from prior Dragonbot yet.</p>
+
+
+
+<a name="184873629"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873629" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873629">(Jan 06 2020 at 01:22)</a>:</h4>
+<p>Kind of nice to wipe the slate clean every so often</p>
+
+
+
+<a name="184873634"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873634" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873634">(Jan 06 2020 at 01:23)</a>:</h4>
+<p>This is a fresh install with default settings.</p>
+
+
+
+<a name="184873636"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873636" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873636">(Jan 06 2020 at 01:23)</a>:</h4>
+<p>Well I'm impressed regardless</p>
+
+
+
+<a name="184873641"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873641" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873641">(Jan 06 2020 at 01:23)</a>:</h4>
+<p>Frankly, I'm impressed as well.</p>
+
+
+
+<a name="184873642"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873642" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873642">(Jan 06 2020 at 01:23)</a>:</h4>
+<p>I can finally interact with <span class="user-mention" data-user-id="256793">@Dragonbot</span> again</p>
+
+
+
+<a name="184873685"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873685" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873685">(Jan 06 2020 at 01:24)</a>:</h4>
+<p>FYI - There is a stream for just testing and playing with Dragonbot.</p>
+
+
+
+<a name="184873735"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184873735" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184873735">(Jan 06 2020 at 01:26)</a>:</h4>
+<p>Anyone can play with Dragonbot without cluttering channel.</p>
+
+
+
+<a name="184877918"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184877918" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184877918">(Jan 06 2020 at 03:48)</a>:</h4>
+<p>FYI - The free Heroku plan only allows Dragonbot to be awake 18 hours per day. Full time access requires paid plan. Dragonbot is currently scheduled to sleep for about 8 hours / day. In theory, activity in the chatroom will wake Dragonbot up, but it's not 100% clear to me how that works. If you try to speak to Dragonbot while sleeping, there may be no response on initial call. We'll have to see what happens. </p>
+<p>Anyways, for these reasons, Dragonbot might be a little flakey for the first few days, until we get used to the sleep pattern.</p>
+
+
+
+<a name="184877927"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184877927" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184877927">(Jan 06 2020 at 03:49)</a>:</h4>
+<p>For more info:<br>
+<a href="https://hubot.github.com/docs/deploying/heroku/" target="_blank" title="https://hubot.github.com/docs/deploying/heroku/">https://hubot.github.com/docs/deploying/heroku/</a> (see bottom of page)</p>
+<p>AND:<br>
+<a href="https://github.com/hubot-scripts/hubot-heroku-keepalive" target="_blank" title="https://github.com/hubot-scripts/hubot-heroku-keepalive">https://github.com/hubot-scripts/hubot-heroku-keepalive</a></p>
+
+
+
+<a name="184886283"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184886283" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184886283">(Jan 06 2020 at 07:56)</a>:</h4>
+<p>Dragonbot is built with Hubot and I just had a tiny PR merged into the Hubot plugin for Zulip. :-)</p>
+<p>I added a line to the README file. Not much, but it might be my first commit to an open source project other than Drupal or Backdrop CMS. <a href="https://github.com/zulip/hubot-zulip/pull/13" target="_blank" title="https://github.com/zulip/hubot-zulip/pull/13">https://github.com/zulip/hubot-zulip/pull/13</a></p>
+
+
+
+<a name="184911367"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184911367" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184911367">(Jan 06 2020 at 14:42)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span>++</p>
+
+
+
+<a name="184911425"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184911425" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184911425">(Jan 06 2020 at 14:43)</a>:</h4>
+<p>Hm, bot is probably sleeping.</p>
+
+
+
+<a name="184911535"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184911535" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184911535">(Jan 06 2020 at 14:44)</a>:</h4>
+<p>Yes, I'm starting to question the point of a bot that sleeps... Especially with some of us being in timezones when the bot sleeps most of our day.</p>
+
+
+
+<a name="184912743"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184912743" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184912743">(Jan 06 2020 at 14:58)</a>:</h4>
+<p>Perhaps it can be hosted where it doesn't have to sleep. Chip in for a paid tier, or on Backdrop's server?</p>
+
+
+
+<a name="184912769"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184912769" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184912769">(Jan 06 2020 at 14:58)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span>++</p>
+
+
+
+<a name="184917528"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184917528" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184917528">(Jan 06 2020 at 15:46)</a>:</h4>
+<p>I have no idea how bots work or what's required to host one, but if its not too much effort I'd consider it on my server. But then probably just as easy on Backdrop's server...</p>
+
+
+
+<a name="184951704"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184951704" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184951704">(Jan 06 2020 at 20:13)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> - Of course, it does not makes sense to have bot that needs to sleep. Right now, we're just working with the limitations of the particular server option I choose to experiment with. No decision has been made regarding longer term hosting. We tried Heroku, because we thought we could use it for free and reduce the number of Linodes that Backdrop is supporting.</p>
+<p>Right now, I'm trying to figure out the economical way of keeping it awake. It would appear that we either pay $7 / month for paid account or find a new host.</p>
+
+
+
+<a name="184951814"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184951814" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184951814">(Jan 06 2020 at 20:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> Sure <span aria-label="smile" class="emoji emoji-263a" role="img" title="smile">:smile:</span> What is actually hosted? Is it a software package, PHP file/script, etc.?</p>
+
+
+
+<a name="184951998"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184951998" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184951998">(Jan 06 2020 at 20:16)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span>  <br>
+It's <a href="https://hubot.github.com/" target="_blank" title="https://hubot.github.com/">https://hubot.github.com/</a><br>
+<a href="https://hubot.github.com/docs/" target="_blank" title="https://hubot.github.com/docs/">https://hubot.github.com/docs/</a></p>
+<p>It's installed with NPM.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://hubot.github.com/" style="background-image: url(https://hubot.github.com/assets/images/screenshots/dangerroom-full.png)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://hubot.github.com/" target="_blank" title="HUBOT">HUBOT</a></div><div class="message_embed_description">Hubot is your friendly robot sidekick. Install him in your company to dramatically improve employee efficiency.</div></div></div>
+
+
+
+<a name="184952735"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184952735" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184952735">(Jan 06 2020 at 20:25)</a>:</h4>
+<p>Probably won't offer to host it myself then. No experience with Node/NPM, etc. Wonder if it can be easily hosted on Backdrop's existing server...? To try and sandbox it from everything else on the server, wonder if we could set it up in Lando? I know Lando's docs say not to use it in production, the a chat bot isn't exactly mission-critical. Any thoughts on that <span class="user-mention" data-user-id="256583">@Geoff St. Pierre</span> ?</p>
+
+
+
+<a name="184952953"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184952953" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184952953">(Jan 06 2020 at 20:27)</a>:</h4>
+<p>I would not use lando for that</p>
+
+
+
+<a name="184952992"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184952992" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184952992">(Jan 06 2020 at 20:28)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> - Backdrop has been hosting it on our own server (Linode). This is really a policy discussion as much as a technical discussion. We hoped that moving it to Heroku would make it easier to allow access and reduce the infrastructure overhead.</p>
+
+
+
+<a name="184953017"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953017" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953017">(Jan 06 2020 at 20:28)</a>:</h4>
+<p>The bot used to live on the linode</p>
+
+
+
+<a name="184953075"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953075" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953075">(Jan 06 2020 at 20:29)</a>:</h4>
+<p>Was it always on its own server, or was it just that everything else got migrated to a new server and so the bot was left alone there?</p>
+
+
+
+<a name="184953152"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953152" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953152">(Jan 06 2020 at 20:30)</a>:</h4>
+<p>('Cause I don't think a separate Linode just for a chat bot is worth it)</p>
+
+
+
+<a name="184953185"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953185" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953185">(Jan 06 2020 at 20:30)</a>:</h4>
+<p>I think we need to get Jen and Nate involved in this discussion. I don't know the details.</p>
+
+
+
+<a name="184953187"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953187" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953187">(Jan 06 2020 at 20:30)</a>:</h4>
+<p>No same linode as everything else</p>
+
+
+
+<a name="184953208"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953208" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953208">(Jan 06 2020 at 20:31)</a>:</h4>
+<p>Ah, good to know</p>
+
+
+
+<a name="184953330"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953330" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953330">(Jan 06 2020 at 20:32)</a>:</h4>
+<p>It was moved to heroku I think mostly just became the people working on it didn't) don't have enough server access to really work on it on the linode</p>
+
+
+
+<a name="184953346"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953346" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953346">(Jan 06 2020 at 20:32)</a>:</h4>
+<p>(bottlenecks)</p>
+
+
+
+<a name="184953441"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953441" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953441">(Jan 06 2020 at 20:33)</a>:</h4>
+<p>Ok, so seems like if/when we get the bot working nicely (while it's awake), then we know it's ready to be moved back to server? Or something like that. Yes, Nate and Jen would be good to chime in. Need to get them in Zulip first <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="184953550"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953550" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953550">(Jan 06 2020 at 20:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre</span> - I understood that access was one issue, but I thought there was also an interest in shutting down that Linode. At the same time, I did not sense any urgency to move it, other than the access issue.</p>
+
+
+
+<a name="184953686"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953686" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953686">(Jan 06 2020 at 20:36)</a>:</h4>
+<p>I don't think that linode is shut down; one got shut down; but that was a move from eld php to php 7.2ish</p>
+
+
+
+<a name="184953857"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953857" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953857">(Jan 06 2020 at 20:39)</a>:</h4>
+<p>For decluttering, I wonder if the chatbot karma could be tied to the little thumbs up emoji instead of requiring separate <code>++</code> entries</p>
+
+
+
+<a name="184953905"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953905" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953905">(Jan 06 2020 at 20:39)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Oooh, that's clever!</p>
+
+
+
+<a name="184953989"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184953989" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184953989">(Jan 06 2020 at 20:40)</a>:</h4>
+<p>I see two linodes running in Backdrop's account...</p>
+
+
+
+<a name="184954610"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184954610" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184954610">(Jan 06 2020 at 20:47)</a>:</h4>
+<p>How about a magic wand emoji for giving karma and a lightening bolt for taking away <span aria-label="smirk" class="emoji emoji-1f60f" role="img" title="smirk">:smirk:</span></p>
+
+
+
+<a name="184954681"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184954681" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184954681">(Jan 06 2020 at 20:48)</a>:</h4>
+<p><span aria-label="laughing" class="emoji emoji-1f606" role="img" title="laughing">:laughing:</span></p>
+
+
+
+<a name="184955186"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184955186" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184955186">(Jan 06 2020 at 20:53)</a>:</h4>
+<p>Ha, great! Also good point -- we can make our own <code>++</code> and <code>--</code> emojis (if it is possible to tie karma to emojis). Can make little Drop emojis specific for this task perhaps?</p>
+
+
+
+<a name="184955278"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184955278" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184955278">(Jan 06 2020 at 20:54)</a>:</h4>
+<p>I don't think we need <code>--</code> karma do we?</p>
+
+
+
+<a name="184955362"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/184955362" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#184955362">(Jan 06 2020 at 20:55)</a>:</h4>
+<p>I guess if we detach karma from <code>++</code>/<code>--</code> chances we'll need to add/remove karma from random words is lessened. <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="185403183"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185403183" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185403183">(Jan 11 2020 at 20:00)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> pug me</p>
+
+
+
+<a name="185403184"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185403184" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185403184">(Jan 11 2020 at 20:00)</a>:</h4>
+<div class="message_inline_image"><a href="http://26.media.tumblr.com/tumblr_lji145OZao1qaa50yo1_500.jpg" target="_blank" title="http://26.media.tumblr.com/tumblr_lji145OZao1qaa50yo1_500.jpg"><img src="https://uploads.zulipusercontent.net/9d44518cfde2cc8136640b7e3ed2df557612ff67/687474703a2f2f32362e6d656469612e74756d626c722e636f6d2f74756d626c725f6c6a693134354f5a616f317161613530796f315f3530302e6a7067"></a></div>
+
+
+
+<a name="185403188"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185403188" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185403188">(Jan 11 2020 at 20:00)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> help</p>
+
+
+
+<a name="185403189"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185403189" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185403189">(Jan 11 2020 at 20:00)</a>:</h4>
+<p>!&lt;factoid&gt; - play back a factoid<br>
+[item]++ or [user]++ | Adds karma<br>
+dragonbot adapter - Reply with the adapter<br>
+dragonbot alias &lt;factoid&gt; = &lt;factoid&gt;<br>
+dragonbot ambush &lt;user name&gt;: &lt;message&gt;<br>
+dragonbot api - <a href="https://api.backdropcms.org/" target="_blank" title="https://api.backdropcms.org/">https://api.backdropcms.org/</a><br>
+dragonbot blog - <a href="https://backdropcms.org/news" target="_blank" title="https://backdropcms.org/news">https://backdropcms.org/news</a><br>
+dragonbot contrib - <a href="https://github.com/backdrop-ops/contrib" target="_blank" title="https://github.com/backdrop-ops/contrib">https://github.com/backdrop-ops/contrib</a><br>
+dragonbot drop &lt;factoid&gt; - permanently forget a factoid<br>
+dragonbot echo &lt;text&gt; - Reply back with &lt;text&gt;<br>
+dragonbot factoids - get a link to the raw factoid data<br>
+dragonbot forget &lt;factoid&gt; - forget a factoid<br>
+dragonbot help - Displays all of the help commands that this bot knows about.<br>
+dragonbot help &lt;query&gt; - Displays all help commands that match &lt;query&gt;.<br>
+dragonbot karma best [n] - top [n]<br>
+dragonbot karma worst [n] - bottom [n]<br>
+dragonbot learn &lt;factoid&gt; = &lt;details&gt; - learn a new factoid<br>
+dragonbot learn &lt;factoid&gt; =~ s/expression/replace/gi - edit a factoid<br>
+dragonbot list all factoids - list all factoids<br>
+dragonbot map me &lt;query&gt; - Returns a map view of the area returned by <code>query</code>.<br>
+dragonbot ping - Reply with pong<br>
+dragonbot pug bomb N - get N pugs<br>
+dragonbot pug me - Receive a pug<br>
+dragonbot remember &lt;factoid&gt; - remember a factoid<br>
+dragonbot respositories - <a href="https://backdropcms.org/resources/backdrop-cms-github" target="_blank" title="https://backdropcms.org/resources/backdrop-cms-github">https://backdropcms.org/resources/backdrop-cms-github</a><br>
+dragonbot search &lt;substring&gt; - list factoids which match (by factoid key or result)<br>
+dragonbot the rules - Make sure hubot still knows the rules.<br>
+dragonbot time - Reply with current time<br>
+dragonbot translate me &lt;phrase&gt; - Searches for a translation for the &lt;phrase&gt; and then prints that bad boy out.<br>
+dragonbot translate me from &lt;source&gt; into &lt;target&gt; &lt;phrase&gt; - Translates &lt;phrase&gt; from &lt;source&gt; into &lt;target&gt;. Both &lt;source&gt; and &lt;target&gt; are optional<br>
+dragonbot usage - <a href="https://backdropcms.org/project/usage" target="_blank" title="https://backdropcms.org/project/usage">https://backdropcms.org/project/usage</a><br>
+ship it - Display a motivation squirrel</p>
+
+
+
+<a name="185403397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185403397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185403397">(Jan 11 2020 at 20:06)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> Dragonbot's help is a bit inconsistent... 1. It mentions <code>dragonbot pug me</code>, but you have to type <code>@dragonbot</code> for it to work. 2. Some help items don't mention <code>dragonbot</code> at all.</p>
+<p>Is it possible to either remove all <code>dragonbot</code> prefixes from help and just list the unique commands, or else consistently use <code>@dragonbot</code> throughout the help items?</p>
+
+
+
+<a name="185546055"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185546055" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185546055">(Jan 13 2020 at 22:42)</a>:</h4>
+<p>Finally, someone triggered the welcome message. :-) <br>
+In theory, everyone gets this once. However, I added a few more folks to the active user list so that we don't see it too much as everyone logs on the first time, since I added this feature. Some existing users will get it, others won't. </p>
+<p>I welcome input on the content of the "Welcome" message.</p>
+
+
+
+<a name="185549040"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185549040" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185549040">(Jan 13 2020 at 23:20)</a>:</h4>
+<p>Maybe it could address the person by name/@tag...?</p>
+
+
+
+<a name="185549041"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185549041" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185549041">(Jan 13 2020 at 23:20)</a>:</h4>
+<p>Hi. Welcome to the Backdrop CMS community on Zulip.<br>
+I'm your friendly neighborhood Dragonbot.<br>
+Try '@Dragonbot help' for some things I can do.<br>
+There are lots of friendly humans that hang around here,<br>
+so please feel free to ask questions.</p>
+
+
+
+<a name="185549409"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185549409" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185549409">(Jan 13 2020 at 23:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> I'll work on that. Maybe later tonight.</p>
+
+
+
+<a name="185860435"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185860435" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185860435">(Jan 16 2020 at 21:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> remove issue</p>
+
+
+
+<a name="185860437"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185860437" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185860437">(Jan 16 2020 at 21:09)</a>:</h4>
+<p>Your issue is removed. Try '@dragonbot add issue [PathToIssue]' to add another.</p>
+
+
+
+<a name="185860488"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185860488" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185860488">(Jan 16 2020 at 21:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> add issue <a href="https://github.com/backdrop/backdrop-issues/issues/1928" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/1928">https://github.com/backdrop/backdrop-issues/issues/1928</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1928" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1928" target="_blank" title="Views UI: Fix &quot;Replacement patterns&quot; visibility for Global: Custom Text · Issue #1928 · backdrop/backdrop-issues">Views UI: Fix "Replacement patterns" visibility for Global: Custom Text · Issue #1928 · backdrop/backdrop-issues</a></div><div class="message_embed_description">In the views UI when adding a global text field I see the following description text: You may enter data from this view as per the &quot;Replacement patterns&quot; below. But there is no &quot;Repl...</div></div></div>
+
+
+
+<a name="185860489"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185860489" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185860489">(Jan 16 2020 at 21:09)</a>:</h4>
+<p>Added issue: <a href="https://github.com/backdrop/backdrop-issues/issues/1928" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/1928">https://github.com/backdrop/backdrop-issues/issues/1928</a></p>
+
+
+
+<a name="185860517"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185860517" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185860517">(Jan 16 2020 at 21:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> attention</p>
+
+
+
+<a name="185860518"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185860518" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185860518">(Jan 16 2020 at 21:09)</a>:</h4>
+<p>Here are some issues that need attention: </p>
+<p>BWPanda (Peter) : <a href="https://github.com/backdrop/backdrop-issues/issues/2655" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/2655">#2655</a> <br>
+Laryn : <a href="https://github.com/backdrop/backdrop-issues/issues/3792" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/3792">https://github.com/backdrop/backdrop-issues/issues/3792</a> <br>
+Olaf Grabienski : <a href="https://github.com/backdrop/backdrop-issues/issues/4158" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/4158">https://github.com/backdrop/backdrop-issues/issues/4158</a> <br>
+StPaulTim : <a href="https://github.com/backdrop/backdrop-issues/issues/1928" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/1928">https://github.com/backdrop/backdrop-issues/issues/1928</a> </p>
+<p>Add to list: '@Dragonbot add issue [path]'' <br>
+Remove your issue: '@Dragonbot remove issue' <br>
+Only one issue per user.</p>
+
+
+
+<a name="185862437"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185862437" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185862437">(Jan 16 2020 at 21:25)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> remove issue</p>
+
+
+
+<a name="185862438"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185862438" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185862438">(Jan 16 2020 at 21:25)</a>:</h4>
+<p>Your issue is removed. Try '@dragonbot add issue [PathToIssue]' to add another.</p>
+
+
+
+<a name="185906409"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185906409" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185906409">(Jan 17 2020 at 11:14)</a>:</h4>
+<p>@Dragonbot remove issue</p>
+
+
+
+<a name="185906410"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185906410" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185906410">(Jan 17 2020 at 11:14)</a>:</h4>
+<p>Your issue is removed. Try '@dragonbot add issue [PathToIssue]' to add another.</p>
+
+
+
+<a name="185906509"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185906509" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185906509">(Jan 17 2020 at 11:16)</a>:</h4>
+<p>Cool feature, adding and removing issues via the bot, <span class="user-mention" data-user-id="256570">@StPaulTim</span> ! Can closed issues be removed automatically? And if it's possible, should they?</p>
+
+
+
+<a name="185906548"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185906548" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185906548">(Jan 17 2020 at 11:17)</a>:</h4>
+<p>@dragonbot add issue <a href="https://github.com/backdrop/backdrop-issues/issues/2637" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/2637">https://github.com/backdrop/backdrop-issues/issues/2637</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2637" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2637" target="_blank" title="Transliteration doesn't respect site default language · Issue #2637 · backdrop/backdrop-issues">Transliteration doesn't respect site default language · Issue #2637 · backdrop/backdrop-issues</a></div><div class="message_embed_description">PR by @olafgrabienski: backdrop/backdrop#1849 PR by @quicksketch: backdrop/backdrop#1850 On a Backdrop 1.6.3 site which uses German as default language, transliteration for URL aliases and files ar...</div></div></div>
+
+
+
+<a name="185906549"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185906549" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185906549">(Jan 17 2020 at 11:17)</a>:</h4>
+<p>Added issue: <a href="https://github.com/backdrop/backdrop-issues/issues/2637" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/2637">https://github.com/backdrop/backdrop-issues/issues/2637</a></p>
+
+
+
+<a name="185906563"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185906563" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185906563">(Jan 17 2020 at 11:17)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> attention</p>
+
+
+
+<a name="185906564"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185906564" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185906564">(Jan 17 2020 at 11:17)</a>:</h4>
+<p>Here are some issues that need attention: </p>
+<p>Laryn : <a href="https://github.com/backdrop/backdrop-issues/issues/3792" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/3792">https://github.com/backdrop/backdrop-issues/issues/3792</a> <br>
+Olaf Grabienski : <a href="https://github.com/backdrop/backdrop-issues/issues/2637" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/2637">https://github.com/backdrop/backdrop-issues/issues/2637</a> <br>
+StPaulTim : <a href="https://github.com/backdrop/backdrop-issues/issues/1928" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/1928">https://github.com/backdrop/backdrop-issues/issues/1928</a> </p>
+<p>Add to list: '@Dragonbot add issue [path]'' <br>
+Remove your issue: '@Dragonbot remove issue' <br>
+Only one issue per user.</p>
+
+
+
+<a name="185906749"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185906749" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185906749">(Jan 17 2020 at 11:21)</a>:</h4>
+<blockquote>
+<p>Can closed issues be removed automatically? And if it's possible, should they?</p>
+</blockquote>
+<p>Yes please!</p>
+
+
+
+<a name="185941438"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185941438" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185941438">(Jan 17 2020 at 18:06)</a>:</h4>
+<blockquote>
+<p>Can closed issues be removed automatically? And if it's possible, should they?</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> &amp; <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span>  I agree that this would be useful. I am reasonably confident that it is possible. But, I don't know how to do it yet. </p>
+<p>I'll try to get this version of Dragonbot into a public repo this weekend and maybe someone can help me.</p>
+
+
+
+<a name="185941670"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185941670" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185941670">(Jan 17 2020 at 18:09)</a>:</h4>
+<p>Remember, that this <code>needs attention</code> queue is a simple feature built from scratch by me. And I'm a still a beginner at building chatbots.</p>
+
+
+
+<a name="185945704"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185945704" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185945704">(Jan 17 2020 at 18:56)</a>:</h4>
+<p>In <a href="#narrow/stream/218883-Code-Review/topic/Base.2Fsub.20install.20profiles/near/185941012" title="#narrow/stream/218883-Code-Review/topic/Base.2Fsub.20install.20profiles/near/185941012">https://backdrop.zulipchat.com/#narrow/stream/218883-Code-Review/topic/Base.2Fsub.20install.20profiles/near/185941012</a> <span class="user-mention" data-user-id="256570">@StPaulTim</span> said "I need to look at either removing the -- option or making it less easy to trigger accidentally." What about:</p>
+<ol>
+<li>What someone suggested previously: using reactions instead ( <span aria-label="thumbs up" class="emoji emoji-1f44d" role="img" title="thumbs up">:thumbs_up:</span> , <span aria-label="thumbs down" class="emoji emoji-1f44e" role="img" title="thumbs down">:thumbs_down:</span> )?</li>
+<li>Making it so that the <code>--</code> has to be next to the thing being down-karma'd (i.e. no space between)? That'll make it harder to do accidentally, though it will make an inconsistency with how <code>++</code> works (since we like having a space between a username and that)...</li>
+</ol>
+
+
+
+<a name="185945705"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185945705" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185945705">(Jan 17 2020 at 18:56)</a>:</h4>
+<p>the took a hit! Ouch. (Karma: -1)</p>
+
+
+
+<a name="185949263"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949263" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949263">(Jan 17 2020 at 19:39)</a>:</h4>
+<p>the++</p>
+
+
+
+<a name="185949264"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949264" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949264">(Jan 17 2020 at 19:39)</a>:</h4>
+<p>the leveled up! (Karma: 0)</p>
+
+
+
+<a name="185949359"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949359" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949359">(Jan 17 2020 at 19:40)</a>:</h4>
+<p>the --</p>
+
+
+
+<a name="185949360"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949360" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949360">(Jan 17 2020 at 19:40)</a>:</h4>
+<p>the - oops! Sorry about that. (Karma: -1)</p>
+
+
+
+<a name="185949412"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949412" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949412">(Jan 17 2020 at 19:40)</a>:</h4>
+<p>Hmm, I thought the minus signs needed to be against the letters without any spaces, but that does not seem to be true.</p>
+
+
+
+<a name="185949421"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949421" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949421">(Jan 17 2020 at 19:41)</a>:</h4>
+<p>the ++</p>
+
+
+
+<a name="185949422"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949422" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949422">(Jan 17 2020 at 19:41)</a>:</h4>
+<p>the Props to you for all your hard work. (Karma: 0)</p>
+
+
+
+<a name="185949433"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949433" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949433">(Jan 17 2020 at 19:41)</a>:</h4>
+<p>We are using an existing module for Hubot to mange plus plus. To change this behavior, I think I'd need to fork the project (it's a small simple project). That gives me pause, but very little pause, because I don't see much ongoing change or development happening.</p>
+
+
+
+<a name="185949473"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949473" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949473">(Jan 17 2020 at 19:41)</a>:</h4>
+<p>Yes, I fixed the problem with plus plus needed to be right next to an item.</p>
+
+
+
+<a name="185949543"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949543" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949543">(Jan 17 2020 at 19:42)</a>:</h4>
+<p>Which reminds me, I already forked the project.</p>
+
+
+
+<a name="185949544"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949544" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949544">(Jan 17 2020 at 19:42)</a>:</h4>
+<p>:-)</p>
+
+
+
+<a name="185949575"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949575" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949575">(Jan 17 2020 at 19:42)</a>:</h4>
+<p>I might just merge this code with the custom code I've already added.</p>
+
+
+
+<a name="185949623"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949623" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949623">(Jan 17 2020 at 19:43)</a>:</h4>
+<p>Maybe it would have been better to leave it needing to be right next to the item, then people could put in their double minus ems and it wouldn't down vote things.</p>
+
+
+
+<a name="185949631"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949631" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949631">(Jan 17 2020 at 19:43)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> Just a friendly reminder that you can chat with <span class="user-mention" data-user-id="256793">@Dragonbot</span> privately for testing, or use the #DragonbotTeam stream to avoid cluttering the main stream <span aria-label="smile" class="emoji emoji-263a" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="185949655"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185949655" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185949655">(Jan 17 2020 at 19:43)</a>:</h4>
+<p>I see.</p>
+
+
+
+<a name="185950902"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185950902" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185950902">(Jan 17 2020 at 19:59)</a>:</h4>
+<blockquote>
+<p>What someone suggested previously: using reactions instead</p>
+</blockquote>
+<p>I think this was my idea originally, and I still like it a lot, but realize also that sometimes people want to give karma to someone for something that isn't a direct comment the other person has made. Are we getting too far afield if we allow karma to be added/removed with <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> <span aria-label="-1" class="emoji emoji-1f44e" role="img" title="-1">:-1:</span>  and also allow it to be added with the <code>++</code> syntax (but not removed with <code>--</code>)?</p>
+
+
+
+<a name="185952194"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/185952194" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#185952194">(Jan 17 2020 at 20:12)</a>:</h4>
+<p><a href="#narrow/stream/218937-Dragonbot-Team/topic/Plus.20Plus" title="#narrow/stream/218937-Dragonbot-Team/topic/Plus.20Plus">Conversation moved here</a>.</p>
+
+
+
+<a name="187405852"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/187405852" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#187405852">(Feb 04 2020 at 22:09)</a>:</h4>
+<p>I'll try to get back to this. At a minimum, I think we should remove the -- behavior, it's just not necessary.</p>
+
+
+
+<a name="187405853"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/187405853" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#187405853">(Feb 04 2020 at 22:09)</a>:</h4>
+<p>the ???? (Karma: 0)</p>
+
+
+
+<a name="187405945"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/187405945" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#187405945">(Feb 04 2020 at 22:10)</a>:</h4>
+<p>That would be fine with me, so I stop cluttering up the chat window. ;)</p>
+
+
+
+<a name="188131024"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188131024" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188131024">(Feb 13 2020 at 17:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> What do you think about the initial "Welcome" message that Dragonbot sends to folks being sent in a private message? <br>
+Or is it actually a benefit for everyone to see those each time as a reminder that a person is new to Zulip (and perhaps the community)?</p>
+
+
+
+<a name="188131469"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188131469" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188131469">(Feb 13 2020 at 17:51)</a>:</h4>
+<p>It could also be a trigger to people already in the here to welcome a first time poster.</p>
+
+
+
+<a name="188131833"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188131833" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188131833">(Feb 13 2020 at 17:55)</a>:</h4>
+<p>^ Hiding it in a PM seems like a good idea to me!</p>
+
+
+
+<a name="188131920"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188131920" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188131920">(Feb 13 2020 at 17:56)</a>:</h4>
+<p>Oh, but Jason has a good point</p>
+
+
+
+<a name="188132039"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188132039" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188132039">(Feb 13 2020 at 17:57)</a>:</h4>
+<p>I think I agree with the PM idea. I think most people will be welcomed regardless due to the fact that we don't recognise them as a regular poster here. It may also be frustrating to newcomers who've come to ask a question to be 'singled out' as it were and welcomed by everyone... Maybe, I don't know <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="188132191"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188132191" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188132191">(Feb 13 2020 at 17:59)</a>:</h4>
+<p>I'm just thinking when I join a group temporarily to get help with something (e.g. Lando Slack or Tugboat Slack), I wouldn't probably want a welcome to the community message, or for a bunch of people to be welcoming me...</p>
+
+
+
+<a name="188132386"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188132386" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188132386">(Feb 13 2020 at 18:01)</a>:</h4>
+<p>My other thought was that the invitation to <code>@Dragonbot help</code> would then be in the context of a private message, too. Which is a good thing, I think.</p>
+
+
+
+<a name="188132401"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188132401" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188132401">(Feb 13 2020 at 18:01)</a>:</h4>
+<p>Yes!</p>
+
+
+
+<a name="188132762"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188132762" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188132762">(Feb 13 2020 at 18:05)</a>:</h4>
+<p>Good points, <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span></p>
+
+
+
+<a name="188138342"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188138342" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188138342">(Feb 13 2020 at 19:00)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> and others. I've considered the private message option, but I also like the occasional reminder to the group triggered by a new poster. Another option would be to have the individual welcome message appear in private message, but have a generic message that automatically pops up once a week with a generic message encouraging new people to participate and providing the dragonbot help reminder.</p>
+
+
+
+<a name="188138443"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188138443" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188138443">(Feb 13 2020 at 19:01)</a>:</h4>
+<p>If we had a scenario in which 3 or 4 people all post for the first time in a short period of time, it could be annoying to get that each time.</p>
+
+
+
+<a name="188138608"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188138608" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188138608">(Feb 13 2020 at 19:02)</a>:</h4>
+<p>So far, it's only been happening on occasion and I like the little reminders it provides for everyone and the indirect welcome it provides for new people who have not yet posted.</p>
+
+
+
+<a name="188138692"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188138692" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188138692">(Feb 13 2020 at 19:03)</a>:</h4>
+<blockquote>
+<p>have a generic message that automatically pops up once a week</p>
+</blockquote>
+<p>I don't like the sound of that... I think if people come here it's for a purpose. They're either here to say hi and introduce themselves, ask a question about something they're working on, or just luck and get a feel for things. I don't think they're going to need reminders to participate. If may even be off-putting...</p>
+
+
+
+<a name="188138832"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188138832" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188138832">(Feb 13 2020 at 19:04)</a>:</h4>
+<p>And certainly annoying for the rest of us after a while ("Ooh, a new message in Zulip! Oh, it's just the weekly reminder...")</p>
+
+
+
+<a name="188138834"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188138834" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188138834">(Feb 13 2020 at 19:04)</a>:</h4>
+<p>Well, I hear that opinion. But for me it's the opposite. :-)</p>
+
+
+
+<a name="188143955"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188143955" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188143955">(Feb 13 2020 at 19:55)</a>:</h4>
+<p>FWIW, Drupal Slack has a reminder every week (or every 2 weeks?) with a link to the code of conduct. We could have something like that: a message that reminds everyone to treat everyone else with respect + a link to the code of conduct + a reminder about the bot help command.</p>
+
+
+
+<a name="188143956"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188143956" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188143956">(Feb 13 2020 at 19:55)</a>:</h4>
+<p><a href="https://github.com/backdrop-ops/conduct/blob/master/code_of_conduct.md" target="_blank" title="https://github.com/backdrop-ops/conduct/blob/master/code_of_conduct.md">https://github.com/backdrop-ops/conduct/blob/master/code_of_conduct.md</a></p>
+
+
+
+<a name="188143999"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188143999" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188143999">(Feb 13 2020 at 19:55)</a>:</h4>
+<p>Amazing!! ^^</p>
+
+
+
+<a name="188144022"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188144022" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188144022">(Feb 13 2020 at 19:55)</a>:</h4>
+<p>Good bot!</p>
+
+
+
+<a name="188144042"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188144042" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188144042">(Feb 13 2020 at 19:56)</a>:</h4>
+<p>botsnack</p>
+
+
+
+<a name="188144046"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188144046" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188144046">(Feb 13 2020 at 19:56)</a>:</h4>
+<p><span aria-label="apple" class="emoji emoji-1f34e" role="img" title="apple">:apple:</span></p>
+
+
+
+<a name="188144054"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188144054" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188144054">(Feb 13 2020 at 19:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> botsnack</p>
+
+
+
+<a name="188144059"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188144059" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188144059">(Feb 13 2020 at 19:56)</a>:</h4>
+<p>Are you volunteering?</p>
+
+
+
+<a name="188144092"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188144092" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188144092">(Feb 13 2020 at 19:56)</a>:</h4>
+<p><span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="188144302"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188144302" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188144302">(Feb 13 2020 at 19:58)</a>:</h4>
+<p>I imagine those messages will be in a set topic...? If so, then people like me can mute that topic to avoid the unwanted noise <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> If not, I'd request as much for that reason.</p>
+
+
+
+<a name="188878072"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/188878072" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#188878072">(Feb 23 2020 at 18:09)</a>:</h4>
+<p>For anyone following the "Code Review" stream, I apologize for the experiment run amok. I experimented yesterday afternoon with scheduled messages to a stream. My experiments were going very well and I scheduled a message in the "Code Review" stream. </p>
+<p>Then after logging off, my experiment woke up without me around and took over the stream posting hundreds of messages. Apparently, our Dragonbot is conspiring with the robot revolution.</p>
+
+
+
+<a name="190241904"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190241904" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Wilbur Ince <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190241904">(Mar 11 2020 at 00:59)</a>:</h4>
+<p>Dragonbot is just too long, can we shorten that to db?</p>
+
+
+
+<a name="190241972"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190241972" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190241972">(Mar 11 2020 at 01:00)</a>:</h4>
+<p>Database?</p>
+
+
+
+<a name="190246271"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190246271" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190246271">(Mar 11 2020 at 02:52)</a>:</h4>
+<p>The dragon's name is "Drop" - we could use that: <a href="https://backdropcms.org/presskit#mascot" target="_blank" title="https://backdropcms.org/presskit#mascot">https://backdropcms.org/presskit#mascot</a></p>
+
+
+
+<a name="190246272"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190246272" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190246272">(Mar 11 2020 at 02:52)</a>:</h4>
+<p><strong>Is someone talking about me?</strong></p>
+
+
+
+<a name="190247460"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190247460" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190247460">(Mar 11 2020 at 03:21)</a>:</h4>
+<p>Do you know long and patiently I've waited for someone to trigger that response. :-)</p>
+
+
+
+<a name="190247720"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190247720" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190247720">(Mar 11 2020 at 03:27)</a>:</h4>
+<p>No</p>
+
+
+
+<a name="190258876"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190258876" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190258876">(Mar 11 2020 at 08:25)</a>:</h4>
+<p>You can just type <code>@dr</code> and then use the autocomplete to select the Dragonbot user without having to type out <code>Dragonbot</code> each time...</p>
+
+
+
+<a name="190278690"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190278690" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190278690">(Mar 11 2020 at 13:10)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> that's not the first time I've seen that response.</p>
+
+
+
+<a name="190317487"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190317487" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190317487">(Mar 11 2020 at 18:49)</a>:</h4>
+<p><span class="user-mention" data-user-id="256793">@Dragonbot</span> botsnack</p>
+
+
+
+<a name="190317488"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dragonbot/near/190317488" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dragonbot.html#190317488">(Mar 11 2020 at 18:49)</a>:</h4>
+<p><span aria-label="donut" class="emoji emoji-1f369" role="img" title="donut">:donut:</span> - donuts for everyone!</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

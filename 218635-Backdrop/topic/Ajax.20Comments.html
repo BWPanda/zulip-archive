@@ -1,0 +1,41 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Ajax.20Comments.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ajax.20Comments.html">Ajax Comments</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="198930282"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ajax%20Comments/near/198930282" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ajax.20Comments.html#198930282">(May 27 2020 at 18:12)</a>:</h4>
+<p>I started this port for a potential future need but am running a bit stuck. Anyone who might be interested and able to get me unstuck? The AJAX form does not seem to be getting inserted so it can't be loaded when you click "Add comment" or "Reply", etc. (I'm planning to squash merge the <code>port-cleanup</code> branch once I get things functional)<br>
+<a href="https://github.com/laryn/ajax_comments/tree/port-cleanup">https://github.com/laryn/ajax_comments/tree/port-cleanup</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/laryn/ajax_comments/tree/port-cleanup" style="background-image: url(https://avatars2.githubusercontent.com/u/871421?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/laryn/ajax_comments/tree/port-cleanup" title="laryn/ajax_comments">laryn/ajax_comments</a></div><div class="message_embed_description">Provides AJAX comments to Backdrop sites. Contribute to laryn/ajax_comments development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="207076221"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ajax%20Comments/near/207076221" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ajax.20Comments.html#207076221">(Aug 16 2020 at 15:37)</a>:</h4>
+<p>I'm working on the Ajax Comments module (testing and help welcome). I'm looking for a tip here -- it's supposed to give focus to the textarea when clicking "Reply" but it isn't working with Backdrop's CKEditor (if I turn the comment field to plaintext, it works). Anybody have a pointer as to why? e.g. <a href="https://github.com/backdrop-contrib/ajax_comments/blob/1.x-1.x/ajax_comments.module#L726">https://github.com/backdrop-contrib/ajax_comments/blob/1.x-1.x/ajax_comments.module#L726</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/ajax_comments/blob/1.x-1.x/ajax_comments.module#L726" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/ajax_comments/blob/1.x-1.x/ajax_comments.module#L726" title="backdrop-contrib/ajax_comments">backdrop-contrib/ajax_comments</a></div><div class="message_embed_description">Convert comment forms to Ajax. Contribute to backdrop-contrib/ajax_comments development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="207083160"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ajax%20Comments/near/207083160" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ajax.20Comments.html#207083160">(Aug 16 2020 at 18:31)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> it seems that when CKEditor is enabled, the textarea is "replaced" by a <code>.cke_wysiwyg_frame</code> iframe, so <code>ajax_command_invoke()</code>will need to be updated to account for that.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Anyone have any idea of how to clear a specific cache entry (not the global cache) when using node_save() in Backdrop. In D7  <a href=\"https://www.drupal.org/docs/7/administering-drupal-7-site/clearing-or-rebuilding-drupals-cache\">https://www.drupal.org/docs/7/administering-drupal-7-site/clearing-or-rebuilding-drupals-cache</a>  claims we can do <code>cache_clear_all('content:' . $nid, 'cache_content', TRUE);</code> but that table is empty on this particular Backdrop site. Might be because entity cache has been put into core.</p>",
+        "id": 209437106,
+        "sender_full_name": "Herb",
+        "timestamp": 1599595542
+    },
+    {
+        "content": "<p>But using <code>cache_clear_all($nid, 'cache_entity_node', TRUE);</code> doesn't work either - or maybe it clears that entry but it doesn't refresh cache if pages are cached for anonymous. Want a way to avoid <code>cache_clear_all()</code> but maybe I can't</p>",
+        "id": 209437311,
+        "sender_full_name": "Herb",
+        "timestamp": 1599595628
+    },
+    {
+        "content": "<p>Maybe have a look how <a href=\"https://www.drupal.org/project/flush_page_cache\">https://www.drupal.org/project/flush_page_cache</a> does it?</p>",
+        "id": 209438277,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599596095
+    },
+    {
+        "content": "<p>Or <a href=\"https://www.drupal.org/project/clear_single_page_cache\">https://www.drupal.org/project/clear_single_page_cache</a>?</p>",
+        "id": 209438398,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599596153
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I think you want to do something like <code>cache('entity_node')-&gt;delete($nid);</code></p>",
+        "id": 209510257,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1599658338
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> I'll give it a try. And clearing the entity cache will trigger clearing the page cache too?</p>",
+        "id": 209521258,
+        "sender_full_name": "Herb",
+        "timestamp": 1599662910
+    },
+    {
+        "content": "<p>No, you would have to do that separately. There is an issue to support cache tags, which would make that easier, but I don't think anyone has worked on it yet. <a href=\"https://github.com/backdrop/backdrop-issues/issues/4127\">https://github.com/backdrop/backdrop-issues/issues/4127</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4127\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4127\" title=\"[PS][D8] Advanced Drupal Caching (a.k.a. cache tags and cache max-age) · Issue #4127 · backdrop/backdrop-issues\">[PS][D8] Advanced Drupal Caching (a.k.a. cache tags and cache max-age) · Issue #4127 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need A website’s cache is only useful if it has the necessary content on hand to satisfy visitors’ requests. Pantheon’s granular cache control enables developers and site owners ...</div></div></div>",
+        "id": 209524649,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1599664233
+    },
+    {
+        "content": "<p>I was thinking that I could also fetch the path alias of the node and use that to clear the page cache, since it's using the alias as the key.</p>",
+        "id": 209583703,
+        "sender_full_name": "Herb",
+        "timestamp": 1599696359
+    },
+    {
+        "content": "<p>Anyway, I had ended up just clearing the entire cache so might need to wait until next time I work on something similar</p>",
+        "id": 209583776,
+        "sender_full_name": "Herb",
+        "timestamp": 1599696401
+    }
+]

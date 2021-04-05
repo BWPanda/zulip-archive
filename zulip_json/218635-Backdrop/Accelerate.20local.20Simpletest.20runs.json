@@ -1,0 +1,128 @@
+[
+    {
+        "content": "<p>I wonder what would be the trick to accelerate Simpletest runs on my local dev.</p>\n<p>Currently I have to run the same tests again and again (i18n test fixes) and as every run lasts for more than a minute, this is all soooo boring.<br>\nHow to get them running faster? More CPU cores? More memory? Any other tricks? (Disks are ssd.)</p>",
+        "id": 194534254,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587200319
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> has been doing a lot of test runs in his work with improving the test suites. Maybe he can share what he has been doing.</p>",
+        "id": 194545890,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1587218194
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> are you running through UI or command line; cli you can specify individual files, directories, or a specific test class to speed it up</p>",
+        "id": 194547230,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587220008
+    },
+    {
+        "content": "<p>If you are running them through the UI, try going to the simpletest settings and enabling the setting <code>cache installation profiles</code>.</p>",
+        "id": 194552893,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1587227634
+    },
+    {
+        "content": "<p>If that is still slow, I could take a look at the test to see how to speed it up.</p>",
+        "id": 194552952,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1587227702
+    },
+    {
+        "content": "<p>I'm running tests one by one through UI. I tried \"cache installation profiles\" but that didn't speed test runs up. Probably because I run only one at a time anyway. Hm. Any other tricks?</p>",
+        "id": 194584264,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587281809
+    },
+    {
+        "content": "<p>I'd run them via cli <a href=\"https://howtobackdrop.com/vid/enabling-and-running-tests-simpletest-module\" title=\"https://howtobackdrop.com/vid/enabling-and-running-tests-simpletest-module\">https://howtobackdrop.com/vid/enabling-and-running-tests-simpletest-module</a></p>",
+        "id": 194597104,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587302021
+    },
+    {
+        "content": "<p>Could be worth a try, but I neither use lando nor drush (could make it working with \"b\", I guess).</p>",
+        "id": 194597617,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587302800
+    },
+    {
+        "content": "<p>you don't need lando or drush;</p>",
+        "id": 194597710,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587302935
+    },
+    {
+        "content": "<p>just run the commands on cli omitting the <code>lando</code> preface</p>",
+        "id": 194597723,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587302949
+    },
+    {
+        "content": "<p>What version of Backdrop are you using? I just remembered that there was a bug that I fixed in <a href=\"https://github.com/backdrop/backdrop-issues/issues/4360\" title=\"https://github.com/backdrop/backdrop-issues/issues/4360\">https://github.com/backdrop/backdrop-issues/issues/4360</a> where the cache settings doesn't get saved.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4360\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4360\" title=\"Can't save the setting to use the installation profile cache · Issue #4360 · backdrop/backdrop-issues\">Can't save the setting to use the installation profile cache · Issue #4360 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Actual behavior When you change the value of the &#39;Cache installation profiles&#39; setting on /admin/config/development/testing/settings and click save, it is not saved. Expected behavior When ...</div></div></div>",
+        "id": 194612581,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1587322580
+    },
+    {
+        "content": "<p>If you want to try adding the setting manually, it's in simpletest.settings.json and the setting should be <code>\"simpletest_cache\": 1</code></p>",
+        "id": 194612652,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1587322705
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> using the cli seemed like a good idea, but... Tests don't run any faster that way (eventually some seconds, but not worth it)</p>",
+        "id": 194643276,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587369684
+    },
+    {
+        "content": "<p>the only other things i can think of are to </p>\n<ol>\n<li>\n<p>If these are new tests break them out into their own class(es) and then you can run just those not worrying about existing tests that are not changing</p>\n</li>\n<li>\n<p>Use the <code>--cache</code> flag on the cli (possibly preface the runs with <code>time</code> w/ and w/out <code>--cache</code> flag</p>\n</li>\n</ol>",
+        "id": 194662547,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587382521
+    },
+    {
+        "content": "<p>The problem is: these tests aren't new. I'm currently fixing all i18n (contrib module) tests. And I fix (and run) them one by one (one class at a time), so caching won't help much.</p>",
+        "id": 194666737,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587385379
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I had a similar question I think, and asked it here: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4306\" title=\"https://github.com/backdrop/backdrop-issues/issues/4306\">https://github.com/backdrop/backdrop-issues/issues/4306</a> The answer is basically that tests are already very fast (compared to what they could be otherwise), so not much more we can do to improve performance apparently...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4306\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4306\" title=\"Enhancing testing performance and include timer on all test executions · Issue #4306 · backdrop/backdrop-issues\">Enhancing testing performance and include timer on all test executions · Issue #4306 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I haven&#39;t timed it, but running tests (either via the Testing module in Backdrop or on GitHub when submitting a PR) seems to take a long time. I&#39;m wondering if there&#39;s a way of enhancin...</div></div></div>",
+        "id": 194667007,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1587385533
+    },
+    {
+        "content": "<p>I wouldn't say, tests are slow (one minute per class isn't all that bad). But this sums up, if trying to fix many in series. I was hoping for some nifty trick to speed them up, but ... OK, maybe there isn't any.</p>",
+        "id": 194682303,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587392893
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>  The caching should help quite a lot. Simpletest performs an installation of Backdrop for each test, which is what most of the time is spent on. If you get the caching working, then it keeps the install around and just copies the tables from the install cache.</p>",
+        "id": 194689817,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1587395921
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> I tried my luck with caching but it had no effect. As I already stated: I'm fixing one testing class at a time.</p>",
+        "id": 194690360,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587396128
+    },
+    {
+        "content": "<p>The cache is preserved between runs, so it should help even when only running one at a time</p>",
+        "id": 194691272,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1587396454
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> as I already stated: the cache had no effect, I already tried that.</p>",
+        "id": 194782547,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587463890
+    }
+]

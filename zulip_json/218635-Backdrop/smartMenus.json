@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>I'm wondering how hard it would be to have the smartMenus also include other blocks in the header when it's showing for small screens. Things like the user menu plus language switch links plus search block. This might require some JS trickery to include these blocks in the menu but only for smaller screens. </p>\n<p>I noticed that smartMenus supports a \"mega menu\" style that can hold arbitrary HTML. <a href=\"https://www.smartmenus.org/about/themes/\">https://www.smartmenus.org/about/themes/</a> Perhaps that might work.</p>",
+        "id": 217636582,
+        "sender_full_name": "Herb",
+        "timestamp": 1606143129
+    },
+    {
+        "content": "<blockquote>\n<p>I'm wondering how hard it would be to have the smartMenus also include other blocks</p>\n</blockquote>\n<p>Not sure about smartMenus but I've done things like that with, for instance, sidr. The actualy hard part might not be the implementation, though, but to get a (style?) change into core. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 217637633,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1606143630
+    },
+    {
+        "content": "<p>For now I'd just do it for one client site but might be a useful contrib module</p>",
+        "id": 217647201,
+        "sender_full_name": "Herb",
+        "timestamp": 1606147658
+    },
+    {
+        "content": "<p>Back in 2016 I raised this feature request, in order to take advantage of the mega menus feature already included in SmartMenus: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2208\">https://github.com/backdrop/backdrop-issues/issues/2208</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2208\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2208\" title=\"[DX][UX] Mega-menus in core · Issue #2208 · backdrop/backdrop-issues\">[DX][UX] Mega-menus in core · Issue #2208 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">So here&#39;s a crazy/cool thought: ...as pointed out in #2207, our recently added SmartMenus library (that handles core drop-down menus) also supports mega-menus: mega-menus in core for 1.6.0!!! ....</div></div></div>",
+        "id": 217705810,
+        "sender_full_name": "klonos",
+        "timestamp": 1606182146
+    },
+    {
+        "content": "<p>...the decision was to better leave it to contrib.</p>",
+        "id": 217705823,
+        "sender_full_name": "klonos",
+        "timestamp": 1606182165
+    },
+    {
+        "content": "<p>You were ahead of your time.</p>",
+        "id": 217708993,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1606185930
+    },
+    {
+        "content": "<blockquote>\n<p>...the decision was to better leave it to contrib.</p>\n</blockquote>\n<p>Boo... I've always wished (Drupal) would just take the bull by the horns and make the common stuff so billy badass that there was no reason to use contribs unless a contrib was so radically different it made sense to use contrib.</p>\n<p>Menus is one of those examples. I think most people just want to change the way menus look (css), not how they work (xyz contrib).</p>",
+        "id": 217870959,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606302559
+    },
+    {
+        "content": "<p>I can see it being complicated since smartMenus JS only affects a menu if the dropdown option is chosen in a block. What happens with the mega menu &lt;ul&gt; when someone switches to a different kind of menu display? Some things to work out there.</p>\n<p>My original question was more about how I wanted it to look on small screens so I'm not sure if megaMenus is the best option. I had noticed how in Bootstrap in D7 the other things in the header - search box, user menu also get hidden within the toggle. But not in Backdrop currently.</p>",
+        "id": 217896039,
+        "sender_full_name": "Herb",
+        "timestamp": 1606316825
+    }
+]

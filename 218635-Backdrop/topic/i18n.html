@@ -1,0 +1,686 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/i18n.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html">i18n</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="189972674"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/189972674" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#189972674">(Mar 07 2020 at 14:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> is attempting a heroic task with i18n module in contrib. Encouraging anyone with multilingual site experience to lend a hand testing today please.</p>
+
+
+
+<a name="189975511"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/189975511" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#189975511">(Mar 07 2020 at 15:59)</a>:</h4>
+<p>Yeah, please test! Here's a candidate: <a href="https://github.com/backdrop-contrib/i18n/issues/11" target="_blank" title="https://github.com/backdrop-contrib/i18n/issues/11">https://github.com/backdrop-contrib/i18n/issues/11</a><br>
+And if any autoload expert happens to be around - please help. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/11" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/11" target="_blank" title="Get i18n_field submodule working · Issue #11 · backdrop-contrib/i18n">Get i18n_field submodule working · Issue #11 · backdrop-contrib/i18n</a></div><div class="message_embed_description">Maybe not the most important, but after all an easy to port submodule. i18n_field (Field translation) provides translation for field properties like labels and help text.</div></div></div>
+
+
+
+<a name="189975789"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/189975789" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#189975789">(Mar 07 2020 at 16:07)</a>:</h4>
+<p>Wouldn't that fix be the right fix though? To include the class in the autoloader?</p>
+
+
+
+<a name="189980110"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/189980110" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#189980110">(Mar 07 2020 at 18:08)</a>:</h4>
+<p>Too bad, I’m not available for another week or so. However, thanks for working on i18n! I’m looking forward to chime in when back from vacation.</p>
+
+
+
+<a name="190011255"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190011255" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190011255">(Mar 08 2020 at 11:52)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> ha, there wasn't a problem except for the one between desktop and chair. Everything's OK with the autoloader.</p>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> never mind, this module will still need work and testing the following weeks. Jump in as soon as you find the time.</p>
+
+
+
+<a name="190396602"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190396602" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190396602">(Mar 12 2020 at 14:38)</a>:</h4>
+<p>Anyone willing to test recent i18n submodule improvements? Two PRs are currently pending testing (just another pair of eyes - enable module, click around, inspect dblog): <a href="https://github.com/backdrop-contrib/i18n/pulls" target="_blank" title="https://github.com/backdrop-contrib/i18n/pulls">https://github.com/backdrop-contrib/i18n/pulls</a> i18n_field and i18n_menu.</p>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> has a good excuse, but what about other people interested in getting i18n running for Backdrop? I know, there are some. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/pulls" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/pulls" target="_blank" title="backdrop-contrib/i18n">backdrop-contrib/i18n</a></div><div class="message_embed_description">Contribute to backdrop-contrib/i18n development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="190401617"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190401617" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190401617">(Mar 12 2020 at 15:17)</a>:</h4>
+<p>I am interested <span class="user-mention" data-user-id="256738">@indigoxela</span> ...but time/life <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span> ...plus got too many other things on my plate <span aria-label="sweat" class="emoji emoji-1f613" role="img" title="sweat">:sweat:</span></p>
+
+
+
+<a name="190401761"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190401761" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190401761">(Mar 12 2020 at 15:18)</a>:</h4>
+<p>...perhaps if I had a real multilingual project that was in need of l18n, then I'd be more motivated.</p>
+
+
+
+<a name="190402177"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190402177" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190402177">(Mar 12 2020 at 15:21)</a>:</h4>
+<p>I'm planning to test as well...</p>
+
+
+
+<a name="190402437"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190402437" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190402437">(Mar 12 2020 at 15:23)</a>:</h4>
+<p>...there were some other peeps from EU that are most likely to actually have multilingual sites ...not sure if they are around though(?) ... @opi, @VasasA and <span class="user-mention" data-user-id="269428">@mazze.ch</span> come to mind</p>
+
+
+
+<a name="190403853"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190403853" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190403853">(Mar 12 2020 at 15:34)</a>:</h4>
+<p>I know, you all (we all) have a lot of other stuff to do. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span>  I'm just trying to catch attention for an otherwise easily overlooked module. Although Backdrop core provides more than D7, i18n enhancements will still be needed for true multilingual sites.</p>
+<p><span class="user-mention" data-user-id="256729">@klonos</span>  Hey, good hint, <span class="user-mention" data-user-id="269428">@mazze.ch</span> is interested in i18n and could help out a bit with testing. (Can you, mazze?)</p>
+
+
+
+<a name="190438219"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190438219" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190438219">(Mar 12 2020 at 20:06)</a>:</h4>
+<p>Sure I’ll help with testing, but on mobile phone right now. Seems that I have to cancel my tomorrow’s trip to DrupalCon London (although the event itself will take place), there’s a real chance that I will not be able to return home early next week due to the virus... read: I stay home and will have time for testing:-)</p>
+
+
+
+<a name="190693878"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190693878" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190693878">(Mar 16 2020 at 08:35)</a>:</h4>
+<p>Ehem... testing some submodules would be really helpful. Namely i18n-field and i18n-menu. <span class="user-mention" data-user-id="269428">@mazze.ch</span> is your offer still valid? <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> are you allright?</p>
+
+
+
+<a name="190694258"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190694258" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190694258">(Mar 16 2020 at 08:40)</a>:</h4>
+<p>Will do today:-)</p>
+
+
+
+<a name="190698940"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190698940" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190698940">(Mar 16 2020 at 09:37)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> Yes, I'm alright - returned without problems from vacation. I'll have a look at i18n after catching up at work.</p>
+
+
+
+<a name="190714069"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190714069" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190714069">(Mar 16 2020 at 12:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span>  <a href="https://github.com/backdrop-contrib/i18n/issues/16" target="_blank" title="https://github.com/backdrop-contrib/i18n/issues/16">https://github.com/backdrop-contrib/i18n/issues/16</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/16" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/16" target="_blank" title="Throws error right after installation · Issue #16 · backdrop-contrib/i18n">Throws error right after installation · Issue #16 · backdrop-contrib/i18n</a></div><div class="message_embed_description">I tested in a multsite environment, putting the module into /sites/demo1/modules/i18n-1.x Right after activating the module, I got the error Error: Class &#39;i18n_field&#39; not found in i18n_get_...</div></div></div>
+
+
+
+<a name="190714846"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190714846" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190714846">(Mar 16 2020 at 12:28)</a>:</h4>
+<p>@mazze: OK, you need some more information for testing. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span>  The untested PRs aren't merged yet. Both PR have their own Issue.</p>
+<p>These are the ones for i18n_field:</p>
+<p><a href="https://github.com/backdrop-contrib/i18n/issues/11" target="_blank" title="https://github.com/backdrop-contrib/i18n/issues/11">https://github.com/backdrop-contrib/i18n/issues/11</a></p>
+<p>Scroll down for testing info. AND you need to apply the patch:</p>
+<p><a href="https://github.com/backdrop-contrib/i18n/pull/12" target="_blank" title="https://github.com/backdrop-contrib/i18n/pull/12">https://github.com/backdrop-contrib/i18n/pull/12</a></p>
+<p>Another question: do you have backdrop_drupal_compatibility on or off?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/11" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/11" target="_blank" title="Get i18n_field submodule working · Issue #11 · backdrop-contrib/i18n">Get i18n_field submodule working · Issue #11 · backdrop-contrib/i18n</a></div><div class="message_embed_description">Maybe not the most important, but after all an easy to port submodule. i18n_field (Field translation) provides translation for field properties like labels and help text.</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/pull/12" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/pull/12" target="_blank" title="Issue #11: get i18n_field working by indigoxela · Pull Request #12 · backdrop-contrib/i18n">Issue #11: get i18n_field working by indigoxela · Pull Request #12 · backdrop-contrib/i18n</a></div><div class="message_embed_description">Fixes #11</div></div></div>
+
+
+
+<a name="190715377"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190715377" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190715377">(Mar 16 2020 at 12:33)</a>:</h4>
+<p>The other module I currently work on is i18n_menu, which has its own issue here <a href="https://github.com/backdrop-contrib/i18n/issues/2" target="_blank" title="https://github.com/backdrop-contrib/i18n/issues/2">https://github.com/backdrop-contrib/i18n/issues/2</a></p>
+<p>This PR also isn't merged yet, so you have to apply a patch.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/2" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/2" target="_blank" title="i18n_menu issues · Issue #2 · backdrop-contrib/i18n">i18n_menu issues · Issue #2 · backdrop-contrib/i18n</a></div><div class="message_embed_description">I&#39;m going to poke around and see if I can get a few submodules running. I am testing i18n_menu and am running into this error when I try to configure a menu: Fatal error: Maximum execution time...</div></div></div>
+
+
+
+<a name="190720122"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190720122" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190720122">(Mar 16 2020 at 13:16)</a>:</h4>
+<p>I am terrible at Git and Hub, so if this is bad advice ignore it. But would it be easier to apply PR to a branch to make it simpler to test? Testers can just then pull the branch instead of messing with patches?</p>
+
+
+
+<a name="190720531"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190720531" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190720531">(Mar 16 2020 at 13:20)</a>:</h4>
+<p>Ah, branch... that's a good idea. Instead of applying patches it might be easier to checkout my branch... I'll update the issues accordingly.</p>
+
+
+
+<a name="190722162"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190722162" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190722162">(Mar 16 2020 at 13:34)</a>:</h4>
+<p>I hope, my testing instructions in the two issues are more helpful now.</p>
+
+
+
+<a name="190924366"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190924366" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190924366">(Mar 17 2020 at 23:29)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> Thanks for the instructions, here's my first feedback: <a href="https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-600343996" target="_blank" title="https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-600343996">https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-600343996</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-600343996" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-600343996" target="_blank" title="i18n_menu issues · Issue #2 · backdrop-contrib/i18n">i18n_menu issues · Issue #2 · backdrop-contrib/i18n</a></div><div class="message_embed_description">I&#39;m going to poke around and see if I can get a few submodules running. I am testing i18n_menu and am running into this error when I try to configure a menu: Fatal error: Maximum execution time...</div></div></div>
+
+
+
+<a name="190957455"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190957455" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190957455">(Mar 18 2020 at 09:49)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> I wonder what causes the difference between my and your results when testing i18n_menu.</p>
+<ul>
+<li>What is your source language set to? (admin/config/regional/i18n/strings)</li>
+<li>Are you sure, you didn't miss setting the menu itself to "Translate and Localize" in the menu multilingual options?</li>
+</ul>
+<p>The fact that the "Translate" tab always appears for menu items can be misleading.</p>
+
+
+
+<a name="190965624"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/190965624" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#190965624">(Mar 18 2020 at 11:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> Thanks for the hints (also in the issue queue), will look into it later.</p>
+
+
+
+<a name="191042263"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191042263" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191042263">(Mar 18 2020 at 21:06)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> I just did a test on the <code>i18n-menu</code> branch as well. I couldn't see where to translate the menu item.</p>
+
+
+
+<a name="191109483"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191109483" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191109483">(Mar 19 2020 at 13:08)</a>:</h4>
+<p>Hi <span class="user-mention" data-user-id="256738">@indigoxela</span> sorry for the delay, I had some urgent issues in customer projects... hey, i18n works perfectly now , I did not find any bug. Thank you so much for your work on l10n issues. Do you still need testing on the menu part? </p>
+<p><a href="/user_uploads/18319/FXAI2Ida6V-Z0NXHNAPz-AcO/Screenshot-2020-03-19-at-14.03.15.png" target="_blank" title="Screenshot-2020-03-19-at-14.03.15.png">Screenshot-2020-03-19-at-14.03.15.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/FXAI2Ida6V-Z0NXHNAPz-AcO/Screenshot-2020-03-19-at-14.03.15.png" target="_blank" title="Screenshot-2020-03-19-at-14.03.15.png"><img src="/user_uploads/18319/FXAI2Ida6V-Z0NXHNAPz-AcO/Screenshot-2020-03-19-at-14.03.15.png"></a></div>
+
+
+
+<a name="191109577"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191109577" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191109577">(Mar 19 2020 at 13:09)</a>:</h4>
+<p>i18n works == i18n field works;-)</p>
+
+
+
+<a name="191111508"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191111508" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191111508">(Mar 19 2020 at 13:25)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> many thanks for your feedback. Yeah, at least an easy submodule (field translation) works now. The complex ones unfortunately need more work. I'll keep you updated here with the progress.</p>
+
+
+
+<a name="191116334"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191116334" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191116334">(Mar 19 2020 at 13:58)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> but you stick with node translation, not entity translation, right?</p>
+
+
+
+<a name="191120678"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191120678" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191120678">(Mar 19 2020 at 14:29)</a>:</h4>
+<p>I stick with what the <strong>i18n</strong> module with all its submodules provides (which is a lot) and try to combine it (and make it compatible) with the new things that went into BD core (compared to D7). That's a challenge on its own. No, I don't port D8 entity translation. But i18n should provide the things a multilingual site needs and currently are not provided by core (translate menu items, field labels, taxonomy terms, paths...)</p>
+
+
+
+<a name="191276464"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191276464" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191276464">(Mar 20 2020 at 17:37)</a>:</h4>
+<p>Another i18n PR is ready for testing: <a href="https://github.com/backdrop-contrib/i18n/pull/18" target="_blank" title="https://github.com/backdrop-contrib/i18n/pull/18">https://github.com/backdrop-contrib/i18n/pull/18</a></p>
+<p>This time translation sets might work properly. Please test and report.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/pull/18" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/pull/18" target="_blank" title="I18n menu part2 by indigoxela · Pull Request #18 · backdrop-contrib/i18n">I18n menu part2 by indigoxela · Pull Request #18 · backdrop-contrib/i18n</a></div><div class="message_embed_description">Next step in ongoing port of i18n - get translation sets working
+Related to #2</div></div></div>
+
+
+
+<a name="191579498"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191579498" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191579498">(Mar 24 2020 at 08:48)</a>:</h4>
+<p>Can someone verify that translation sets work properly now for i18n_menu? If so, I could merge the PR and move on to port the next submodule.</p>
+
+
+
+<a name="191587647"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191587647" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191587647">(Mar 24 2020 at 10:03)</a>:</h4>
+<p>Hi <span class="user-mention" data-user-id="256738">@indigoxela</span> I do not use GIT, but if you have a download link, I can test it today. #justafrontenddeveloper</p>
+
+
+
+<a name="191589407"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191589407" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191589407">(Mar 24 2020 at 10:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> cool, many thanks. The download link would be: <a href="https://github.com/indigoxela/i18n/archive/i18n-menu-part2.zip" target="_blank" title="https://github.com/indigoxela/i18n/archive/i18n-menu-part2.zip">https://github.com/indigoxela/i18n/archive/i18n-menu-part2.zip</a><br>
+Unzip that file in the modules directory and rename it to i18n. Then enable i18n_menu only (with its dependencies) and follow the instructions from this comment: <a href="https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-599419129" target="_blank" title="https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-599419129">https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-599419129</a> Note: language file imports are known to not work properly currently, don't import. Just try to translate menu items. And - of course - not on a production site.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-599419129" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/2#issuecomment-599419129" target="_blank" title="i18n_menu issues · Issue #2 · backdrop-contrib/i18n">i18n_menu issues · Issue #2 · backdrop-contrib/i18n</a></div><div class="message_embed_description">I&#39;m going to poke around and see if I can get a few submodules running. I am testing i18n_menu and am running into this error when I try to configure a menu: Fatal error: Maximum execution time...</div></div></div>
+
+
+
+<a name="191595239"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191595239" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191595239">(Mar 24 2020 at 11:15)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> ++</p>
+
+
+
+<a name="191595240"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191595240" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191595240">(Mar 24 2020 at 11:15)</a>:</h4>
+<p><strong>indigoxela</strong> GG (Karma: 2)</p>
+
+
+
+<a name="191609490"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191609490" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191609490">(Mar 24 2020 at 13:34)</a>:</h4>
+<p>Hi <span class="user-mention" data-user-id="256738">@indigoxela</span>  can the language selector in node creation form be hidden as in D7? I am not sure anymore. I have an issue when creating eg. FR content while being in EN version. But I am not sure if this is even a real-world scenario.</p>
+
+
+
+<a name="191609851"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191609851" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191609851">(Mar 24 2020 at 13:37)</a>:</h4>
+<p>Apart from that, it seems to be quite stable, but let me test more. So good to have someone taking care of this, thank you <span class="user-mention" data-user-id="256738">@indigoxela</span></p>
+
+
+
+<a name="191610232"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191610232" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191610232">(Mar 24 2020 at 13:40)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> Content translation (links and handling) - that's a different submodule, I bet the feature you ask for ships with i18n_node.</p>
+<p>i18n_menu still has some quirks - the most important thing currently is, that it actually _does_ something and doesn't throw errors. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> </p>
+<p>Sure, keep on testing, no need to rush.</p>
+
+
+
+<a name="191610683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191610683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191610683">(Mar 24 2020 at 13:43)</a>:</h4>
+<p>You are right (here's a D7 screenshot of the option seetings) <a href="/user_uploads/18319/Obd8rYmUmoiDvhLTO8yPiWXM/Screenshot-2020-03-24-at-14.43.01.png" target="_blank" title="Screenshot-2020-03-24-at-14.43.01.png">Screenshot-2020-03-24-at-14.43.01.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/Obd8rYmUmoiDvhLTO8yPiWXM/Screenshot-2020-03-24-at-14.43.01.png" target="_blank" title="Screenshot-2020-03-24-at-14.43.01.png"><img src="/user_uploads/18319/Obd8rYmUmoiDvhLTO8yPiWXM/Screenshot-2020-03-24-at-14.43.01.png"></a></div>
+
+
+
+<a name="191611061"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191611061" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191611061">(Mar 24 2020 at 13:46)</a>:</h4>
+<p>Yes, that's i18n_node (which already works to some extent with Backdrop). See <a href="https://github.com/backdrop-contrib/i18n/issues/8" target="_blank" title="https://github.com/backdrop-contrib/i18n/issues/8">https://github.com/backdrop-contrib/i18n/issues/8</a> for details regarding that submodule.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/8" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/8" target="_blank" title="Get i18n_node submodule working · Issue #8 · backdrop-contrib/i18n">Get i18n_node submodule working · Issue #8 · backdrop-contrib/i18n</a></div><div class="message_embed_description">i18n_node isn&#39;t working yet. How to reproduce: Enable Internationalization and Multilingual content modules, go to admin/structure/types/manage/page Besides several property: stdClass notices (...</div></div></div>
+
+
+
+<a name="191746272"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191746272" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191746272">(Mar 25 2020 at 13:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span>  as you didn't report any problems or errors with i18n_menu I suppose, your testing was successful... right?</p>
+
+
+
+<a name="191748024"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191748024" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191748024">(Mar 25 2020 at 13:56)</a>:</h4>
+<p>Hi <span class="user-mention" data-user-id="256738">@indigoxela</span> I had some errors thrown when changing  a parent's item language back to "all", but I could not recreate the scenario since... I know, this is not the kind of feedback developers like. However, I setup a public instance for future l81n tests <a href="https://i18n.backdrop.mazzemedia.ch/en/text/simple-text-page-01" title="https://i18n.backdrop.mazzemedia.ch/en/text/simple-text-page-01">https://i18n.backdrop.mazzemedia.ch/en/text/simple-text-page-01</a></p>
+<p><a href="/user_uploads/18319/PJP68J4FUtOugmUnPOzHddCi/Screenshot-2020-03-24-at-14.18.11.png" title="Screenshot-2020-03-24-at-14.18.11.png">Screenshot-2020-03-24-at-14.18.11.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/PJP68J4FUtOugmUnPOzHddCi/Screenshot-2020-03-24-at-14.18.11.png" title="Screenshot-2020-03-24-at-14.18.11.png"><img src="/user_uploads/18319/PJP68J4FUtOugmUnPOzHddCi/Screenshot-2020-03-24-at-14.18.11.png"></a></div>
+
+
+
+<a name="191748958"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191748958" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191748958">(Mar 25 2020 at 14:02)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> Developers don't like bugs, but love bug reporters <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> But of course, randomly occurring bugs are the worst. I'll see if I can reproduce it.</p>
+
+
+
+<a name="191749549"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191749549" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191749549">(Mar 25 2020 at 14:06)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> there might be more information about the error in the logs at /admin/reports/dblog. Sometimes there's a detail or two added there that is not displayed on the main error page.</p>
+
+
+
+<a name="191749627"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191749627" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191749627">(Mar 25 2020 at 14:06)</a>:</h4>
+<p>Though that one looks pretty complete.</p>
+
+
+
+<a name="191751291"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191751291" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191751291">(Mar 25 2020 at 14:18)</a>:</h4>
+<p>I already fixed it (and merged), although I couldn't reproduce it. Simply because I saw that the argument count actually is wrong in that function call. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="191995306"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/191995306" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#191995306">(Mar 27 2020 at 09:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> If you're interested in testing the progress regarding i18n_taxonomy see <a href="https://github.com/backdrop-contrib/i18n/issues/3" title="https://github.com/backdrop-contrib/i18n/issues/3">https://github.com/backdrop-contrib/i18n/issues/3</a> for details. A new PR is available.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/3" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/3" title="i18n_taxonomy issues · Issue #3 · backdrop-contrib/i18n">i18n_taxonomy issues · Issue #3 · backdrop-contrib/i18n</a></div><div class="message_embed_description">Similarly to #2 -- when visiting admin/structure/taxonomy/tags/configure I get: Fatal error: Maximum execution time of 30 seconds exceeded in /path/to/backdrop/core/includes/errors.inc on line 57 W...</div></div></div>
+
+
+
+<a name="192489879"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/192489879" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#192489879">(Apr 01 2020 at 07:06)</a>:</h4>
+<p>Really? No one wants to test this PR? Isn't anyone using i18n_taxonomy with D7?</p>
+
+
+
+<a name="192491333"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/192491333" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#192491333">(Apr 01 2020 at 07:26)</a>:</h4>
+<p>Hi <span class="user-mention" data-user-id="256738">@indigoxela</span> I have not forgotten you... but currently it's pretty crazy at the customer front (I am far away from running out of work, pretty strange compared to many people i know). I will test this week, promised!</p>
+
+
+
+<a name="192510123"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/192510123" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#192510123">(Apr 01 2020 at 10:47)</a>:</h4>
+<p>I am also planning on testing it again...</p>
+
+
+
+<a name="192581666"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/192581666" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#192581666">(Apr 01 2020 at 19:36)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> I just submitted some feedback from my testing.</p>
+
+
+
+<a name="193154535"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193154535" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193154535">(Apr 07 2020 at 08:27)</a>:</h4>
+<p>Made my first i18n taxonomy test... using "Localize" option, one term, n languages <a href="https://github.com/backdrop-contrib/i18n/issues/21" title="https://github.com/backdrop-contrib/i18n/issues/21">https://github.com/backdrop-contrib/i18n/issues/21</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/21" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/21" title="Taxonomy Translation Test · Issue #21 · backdrop-contrib/i18n">Taxonomy Translation Test · Issue #21 · backdrop-contrib/i18n</a></div><div class="message_embed_description">Hi @indigoxela thank you for doing the initial port... here&#39;s my first feedback Created a new vocabulary Chose the option &quot;Localize&quot; Create a term in three languages (EN = base langua...</div></div></div>
+
+
+
+<a name="193159507"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193159507" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193159507">(Apr 07 2020 at 09:20)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> I'll simplify i18n (human) testing in the future. I'll just commit into the main repo (which I'm allowed to do since I'm in the list of maintainers). There will be less space for misunderstandings then.</p>
+
+
+
+<a name="193568191"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193568191" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193568191">(Apr 10 2020 at 13:23)</a>:</h4>
+<p>I'd like to have feedback for two questions I have re i18n submodules: <a href="https://github.com/backdrop-contrib/i18n/issues/1" title="https://github.com/backdrop-contrib/i18n/issues/1">https://github.com/backdrop-contrib/i18n/issues/1</a> (scroll down)</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/1" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/1" title="What needs work · Issue #1 · backdrop-contrib/i18n">What needs work · Issue #1 · backdrop-contrib/i18n</a></div><div class="message_embed_description">Noticed a distinct need for language related help, so this is a start on i18n. It will not work as is, havent tested, so dont use in production. Its here so hopefully we can collaborate and fix it....</div></div></div>
+
+
+
+<a name="193568959"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193568959" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193568959">(Apr 10 2020 at 13:32)</a>:</h4>
+<p>People who are interested in searching Easter eggs (or rather bugs), please give i18n testing a try. <span aria-label="bunny" class="emoji emoji-1f430" role="img" title="bunny">:bunny:</span> <br>
+There are currently no PRs, everything is in 1.x. Clone or download, test, report in the issue queue...</p>
+<p>But please have an eye on Issue 1, because not all submodules are (or will get) ported.</p>
+
+
+
+<a name="193634604"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193634604" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193634604">(Apr 11 2020 at 01:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> ++</p>
+
+
+
+<a name="193634605"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193634605" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193634605">(Apr 11 2020 at 01:09)</a>:</h4>
+<p><strong>indigoxela</strong> thanks for all you do (Karma: 3)</p>
+
+
+
+<a name="193722863"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193722863" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193722863">(Apr 12 2020 at 17:54)</a>:</h4>
+<p>What is the de-facto way to be treating number formatting in D7/backdrop? ...I was looking at <a href="https://www.drupal.org/project/format_number" title="https://www.drupal.org/project/format_number">https://www.drupal.org/project/format_number</a> and core issues like <a href="https://www.drupal.org/project/drupal/issues/52153" title="https://www.drupal.org/project/drupal/issues/52153">https://www.drupal.org/project/drupal/issues/52153</a></p>
+
+
+
+<a name="193763871"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193763871" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193763871">(Apr 13 2020 at 11:35)</a>:</h4>
+<p>@klonos I have several multilingual sites but have (luckily) never been in the need to support internationalized number formats.<br>
+What's your use case?</p>
+
+
+
+<a name="193766482"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193766482" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193766482">(Apr 13 2020 at 12:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> I've been working on <a href="https://github.com/backdrop/backdrop-issues/issues/4197" title="https://github.com/backdrop/backdrop-issues/issues/4197">#4197</a> off of the existing PR by <span class="user-mention" data-user-id="258960">@Alan Mels</span> (really close to finish now). ...I need to have thousand separators for the numbers inside the <code>t()</code> functions in <a href="https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L159" title="https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L159">https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L159</a> and <a href="https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L161" title="https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L161">https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L161</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4197" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4197" title="[UX] Add configuration to exclude node types from search indexing · Issue #4197 · backdrop/backdrop-issues">[UX] Add configuration to exclude node types from search indexing · Issue #4197 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need Here is the excerpt from https://github.com/backdrop-contrib/search_index_options: The core search module scans all the available content, regardless of whether some content...</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L159" style="background-image: url(https://avatars3.githubusercontent.com/u/56610508?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L159" title="altagrade/backdrop">altagrade/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to altagrade/backdrop development by creating an account on GitHub.</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L161" style="background-image: url(https://avatars3.githubusercontent.com/u/56610508?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/altagrade/backdrop/blob/1.x/core/modules/search/search.admin.inc#L161" title="altagrade/backdrop">altagrade/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to altagrade/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="193766880"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193766880" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193766880">(Apr 13 2020 at 12:25)</a>:</h4>
+<p>...for now, I'm using the stock <code>number_format()</code> provided by php.</p>
+
+
+
+<a name="193773280"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193773280" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193773280">(Apr 13 2020 at 13:49)</a>:</h4>
+<p>If number_format() works for you - sure, why not.</p>
+
+
+
+<a name="193799703"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193799703" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193799703">(Apr 13 2020 at 17:52)</a>:</h4>
+<p>Well, it works, but it assumes US/AU locale (<code>.</code> for decimals - <code>,</code> for thousands ) so not ideal for multilingual.</p>
+
+
+
+<a name="193865479"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193865479" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193865479">(Apr 14 2020 at 08:38)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256729">klonos</span> <a href="#narrow/stream/218635-Backdrop/topic/I18n/near/193799703" title="#narrow/stream/218635-Backdrop/topic/I18n/near/193799703">said</a>:</p>
+<blockquote>
+<p>not ideal for multilingual.</p>
+</blockquote>
+<p>If you can avoid the thousand separator in general, do so (means: no separator at all). The decimal separator... hm, ... sticking with integers is probably not an option.</p>
+
+
+
+<a name="193868916"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193868916" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193868916">(Apr 14 2020 at 09:09)</a>:</h4>
+<p>I generally agree, but if people are to be building multilingual sites like e-commerce on Backdrop, I'd imagine that they'd need a reliable way to be presenting currency etc in localized decimal/thousand separators.</p>
+
+
+
+<a name="193886120"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193886120" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193886120">(Apr 14 2020 at 12:03)</a>:</h4>
+<p>I seem to recall that localized dates, currencies, and general numbers were never adequately addressed (or even addressed at all) for D7. I spent some time researching it a few years ago, and all I came up with were a few contrib modules and 3rd party libraries that attempted to address it in different ways, but were still incomplete solutions.</p>
+
+
+
+<a name="193916729"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/193916729" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#193916729">(Apr 14 2020 at 15:41)</a>:</h4>
+<p>Personally, I do think that D and B do a rather good job re localized dates (and sometimes numbers). When it comes to currency and when localized number formats are a must, the air gets thin in general.<br>
+That's a playground for accounting software. Even worse if rounding errors are unacceptable. (I already mentioned that I didn't need fully localized number formats so far and that I consider myself lucky.)</p>
+
+
+
+<a name="201188246"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/201188246" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#201188246">(Jun 17 2020 at 19:20)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> fyi; <a href="https://www.drupal.org/sa-contrib-2020-025">https://www.drupal.org/sa-contrib-2020-025</a></p>
+
+
+
+<a name="201231041"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/201231041" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#201231041">(Jun 18 2020 at 06:11)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> Many thanks for the hint, fixed.</p>
+
+
+
+<a name="214836749"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/214836749" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#214836749">(Oct 28 2020 at 13:38)</a>:</h4>
+<p>How ready is i18n <span class="user-mention" data-user-id="256738">@indigoxela</span>? I see no release yet.</p>
+
+
+
+<a name="214837858"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/214837858" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#214837858">(Oct 28 2020 at 13:47)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> It's not ready yet. One of the biggest showstoppers is the <a href="https://github.com/backdrop-contrib/i18n/issues/33">missing migration path</a>, but there might be others. Probably most of the other open issues are outdated, but nobody tested and I wouldn't release such a complex module untested.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/issues/33" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/issues/33" title="[META] Migration path from D7 · Issue #33 · backdrop-contrib/i18n">[META] Migration path from D7 · Issue #33 · backdrop-contrib/i18n</a></div><div class="message_embed_description">These modules need a migration path, as functionality made it into core (or has gone or changed significantly). i18n_user i18n_block i18n_variable i18n_taxonomy i18n_menu Pick your task, open a new...</div></div></div>
+
+
+
+<a name="214838537"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/214838537" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#214838537">(Oct 28 2020 at 13:52)</a>:</h4>
+<p>Sorry unable to help, I have no idea about multilingual stuff.</p>
+
+
+
+<a name="214839662"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/214839662" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#214839662">(Oct 28 2020 at 13:59)</a>:</h4>
+<p>I work on some multilingual sites. So far I'm trying to avoid i18n because of changes in core. Will require lots more work on that</p>
+
+
+
+<a name="214845788"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/214845788" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#214845788">(Oct 28 2020 at 14:43)</a>:</h4>
+<p>I'd already be happy it the people who opened issues months/years back checked if their reports are outdated (stuff already fixed) or not. But it seems, I have to wait until someone really needs the module, because it ships with a lot functionality missing in core...<br>
+See, for instance <a href="https://github.com/backdrop/backdrop-issues/issues/4720">https://github.com/backdrop/backdrop-issues/issues/4720</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4720" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4720" title="Translation of taxonomy terms · Issue #4720 · backdrop/backdrop-issues">Translation of taxonomy terms · Issue #4720 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I tried to find a similar issue, but I did not find it. It may be I am inexperienced, so if there is such a topic I apologize and please add my question to existent issue. Backdrop now has the abil...</div></div></div>
+
+
+
+<a name="214978197"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/214978197" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#214978197">(Oct 29 2020 at 14:59)</a>:</h4>
+<p>Seems like we've got two conversations now here. I don't think I can change the topic for others to "i18n". Oh well.</p>
+
+
+
+<a name="214985090"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/214985090" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#214985090">(Oct 29 2020 at 15:40)</a>:</h4>
+<blockquote>
+<p>Seems like we've got two conversations now here</p>
+</blockquote>
+<p>Yeah, we messed it.</p>
+
+
+
+<a name="215006329"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/215006329" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#215006329">(Oct 29 2020 at 18:09)</a>:</h4>
+<p>Shrug</p>
+
+
+
+<a name="215009461"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/215009461" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#215009461">(Oct 29 2020 at 18:33)</a>:</h4>
+<p>Fixed <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="222870489"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/222870489" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#222870489">(Jan 15 2021 at 15:12)</a>:</h4>
+<p>Some "weirdos" flooded the i18n issue queue last night. <span aria-label="grinning face with smiling eyes" class="emoji emoji-1f601" role="img" title="grinning face with smiling eyes">:grinning_face_with_smiling_eyes:</span> <span class="user-mention" data-user-id="256705">@Herb</span> and <span class="user-mention" data-user-id="256573">@Laryn</span> it might take some time until I can catch up.</p>
+
+
+
+<a name="222870821"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/222870821" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#222870821">(Jan 15 2021 at 15:14)</a>:</h4>
+<p>quelle horreur! <span aria-label="laughing" class="emoji emoji-1f606" role="img" title="laughing">:laughing:</span></p>
+
+
+
+<a name="222871394"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/222871394" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#222871394">(Jan 15 2021 at 15:16)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> and imagine if I had a go at it too <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="222872795"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/222872795" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#222872795">(Jan 15 2021 at 15:22)</a>:</h4>
+<blockquote>
+<p>imagine if I had a go at it too</p>
+</blockquote>
+<p>OMG <span aria-label="rofl" class="emoji emoji-1f923" role="img" title="rofl">:rofl:</span></p>
+
+
+
+<a name="222924982"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/222924982" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#222924982">(Jan 15 2021 at 21:03)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> yup. I'm working on an English/French site and I can't get away with not using i18n this time so finally putting some effort into getting it ready for a release - I hope.</p>
+
+
+
+<a name="223239862"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223239862" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223239862">(Jan 19 2021 at 15:09)</a>:</h4>
+<p>And only 20 commits later, we have a probably functioning migration path from D7 ... . <span aria-label="exhausted" class="emoji emoji-1f625" role="img" title="exhausted">:exhausted:</span> <br>
+Testing is welcome. The changes are still on a branch: <a href="https://github.com/backdrop-contrib/i18n/tree/d7-upgrade-path">https://github.com/backdrop-contrib/i18n/tree/d7-upgrade-path</a></p>
+<p>As a zip file: <a href="https://github.com/backdrop-contrib/i18n/archive/d7-upgrade-path.zip">https://github.com/backdrop-contrib/i18n/archive/d7-upgrade-path.zip</a></p>
+<p>Again, <span class="user-mention" data-user-id="256705">@Herb</span> many thanks for your PRs - although I couldn't use them as-is.</p>
+<p>(What in the world did I think to apply as i18n co-maintainer <span aria-label="face palm" class="emoji emoji-1f926" role="img" title="face palm">:face_palm:</span> )</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n/tree/d7-upgrade-path" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n/tree/d7-upgrade-path" title="backdrop-contrib/i18n">backdrop-contrib/i18n</a></div><div class="message_embed_description">Collection of modules to extend Backdrop CMS multilingual capabilities - backdrop-contrib/i18n</div></div></div>
+
+
+
+<a name="223260069"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223260069" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223260069">(Jan 19 2021 at 17:23)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> ++</p>
+
+
+
+<a name="223260070"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223260070" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223260070">(Jan 19 2021 at 17:23)</a>:</h4>
+<p><strong>indigoxela</strong> Props to you for all your hard work. (Karma: 12)</p>
+
+
+
+<a name="223452714"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223452714" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223452714">(Jan 20 2021 at 23:41)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> I'll try test it this week</p>
+
+
+
+<a name="223493788"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223493788" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223493788">(Jan 21 2021 at 11:04)</a>:</h4>
+<p>As we're getting closer to an i18n release, I do have some concerns because of possible compatibility issues in modules that implemented one of the i18n API hooks, or ship with a [modulename].i18n.inc file. </p>
+<p>As an example see this issue with the metatag module: <a href="https://github.com/backdrop-contrib/metatag/issues/47">https://github.com/backdrop-contrib/metatag/issues/47</a></p>
+<p>But other modules could run into problems, too. For instance rules, coder_review... Is there a possibility to search for modules that either ship with a file like described above or implement one of the i18n hooks in the whole backdrop-contrib organization on Github?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/metatag/issues/47" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/metatag/issues/47" title="i18n conflict · Issue #47 · backdrop-contrib/metatag">i18n conflict · Issue #47 · backdrop-contrib/metatag</a></div><div class="message_embed_description">I was testing a PR for i18n_node and when I enabled that module I got this fatal error: Error: Call to undefined function ctools_include() in metatag_i18n_list_metatag_config() (line 134 of /path/m...</div></div></div>
+
+
+
+<a name="223704474"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223704474" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223704474">(Jan 22 2021 at 21:40)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> we could try this: <a href="https://github.com/search?q=org%3Abackdrop-contrib+hook_i18n_string_info&amp;type=code">https://github.com/search?q=org%3Abackdrop-contrib+hook_i18n_string_info&amp;type=code</a> and add an issue for each project to check compatibility</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/search?q=org%3Abackdrop-contrib+hook_i18n_string_info&amp;type=code" style="background-image: url(https://github.githubassets.com/images/modules/open_graph/github-octocat.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/search?q=org%3Abackdrop-contrib+hook_i18n_string_info&amp;type=code" title="Build software better, together">Build software better, together</a></div><div class="message_embed_description">GitHub is where people build software. More than 56 million people use GitHub to discover, fork, and contribute to over 100 million projects.</div></div></div>
+
+
+
+<a name="223804842"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223804842" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223804842">(Jan 24 2021 at 09:21)</a>:</h4>
+<p>Re: <a href="https://github.com/backdrop/backdrop-issues/issues/4894">https://github.com/backdrop/backdrop-issues/issues/4894</a></p>
+<p>I started posting in the Issue, but decided to get feedback first.</p>
+<hr>
+<p>I messed with i18n one time and that was on Drupal. That's my experience, so keep that in mind.</p>
+<p>I keep seeing translation stuff come up here and there and the idea came to me to have core use hard coded placeholders for all language text, then have a language pack that uses those placeholders.</p>
+<p>Any time core needs updated text, descriptions, labels etc, they could live in the language pack file and be applied separately from core releases. No more core PR against text change issues. It also means that someone who is annoyed by core descriptions, labels etc, could create their own language pack and easily override the core pack. The translation module can handle the facilitation of switching between language packs.</p>
+<p>I don't know if this is what you're thinking @indigoxela </p>
+<p>Language packs could also be added to the install profile as a download (english provided by default?) This way anyone who wants to use Backdrop in a different language, has it ready to go out of the box.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4894" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4894" title="Add a localization concept for user-provided strings to core · Issue #4894 · backdrop/backdrop-issues">Add a localization concept for user-provided strings to core · Issue #4894 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Backdrop core ships with content translation, which is fine for sites, that really only need content translation. Additionally there&#39;s config translation, which allows to translate certain user...</div></div></div>
+
+
+
+<a name="223805031"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223805031" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223805031">(Jan 24 2021 at 09:26)</a>:</h4>
+<blockquote>
+<p>I keep seeing translation stuff come up here and there and the idea came to me to have core use hard coded placeholders for all language text, then have a language pack that uses those placeholders.</p>
+</blockquote>
+<p>The issue you linked is <em>not</em> about something that could go into a "language pack", it's about strings that get added by users/admins and that can change. (And the source language could be something else than English).</p>
+<blockquote>
+<p>I don't know if this is what you're thinking @indigoxela </p>
+</blockquote>
+<p>Not at all. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> The contrary.</p>
+
+
+
+<a name="223805601"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223805601" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223805601">(Jan 24 2021 at 09:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> alright, that's why I posted here instead of over there.</p>
+<p>Would the idea of language packs be worth exploring or is the code so intertwined that it wouldn't be feasible?</p>
+
+
+
+<a name="223805711"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223805711" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223805711">(Jan 24 2021 at 09:46)</a>:</h4>
+<p>I guess what I'm asking is if it would make sense for all text to live outside of Core save for maybe a few explicit exceptions.</p>
+
+
+
+<a name="223805714"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223805714" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223805714">(Jan 24 2021 at 09:47)</a>:</h4>
+<p>I suppose, you refer to Wordpress language packs, right?</p>
+<p>That's working properly in Drupal / Backdrop with .po files grabbed from <a href="https://localize.backdropcms.org/">https://localize.backdropcms.org/</a> - nothing to do here, everything works as designed (and probably better than in WP).</p>
+
+
+
+<a name="223805760"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/223805760" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#223805760">(Jan 24 2021 at 09:48)</a>:</h4>
+<p>Ok. I haven't messed with it on BD, so Im not familiar with what is available already.</p>
+<p>I have no idea how WP handles it.</p>
+
+
+
+<a name="226202397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n/near/226202397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n.html#226202397">(Feb 12 2021 at 22:05)</a>:</h4>
+<p>I ported another module from the <code>i18n</code> ecosystem: <a href="https://github.com/backdrop-contrib/i18n_access">https://github.com/backdrop-contrib/i18n_access</a></p>
+<p>This allows you to restrict content create/edit rights by language, so (for example) you could set someone up as a translator without giving them access to the original language content.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/i18n_access" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/i18n_access" title="backdrop-contrib/i18n_access">backdrop-contrib/i18n_access</a></div><div class="message_embed_description">Allows per-user administrative content access permissions by language (e.g. for translation). - backdrop-contrib/i18n_access</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

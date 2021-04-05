@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>Is there any way to do nested packages on the Project installer? e.g. to get all of these under one umbrella? <a href=\"/user_uploads/18319/lqeg0WjmRb-Oc2IZlAu3oB0c/Screenshot_2020-07-27-Modules-Ubercart-Sandbox.png\">Screenshot_2020-07-27-Modules-Ubercart-Sandbox.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/lqeg0WjmRb-Oc2IZlAu3oB0c/Screenshot_2020-07-27-Modules-Ubercart-Sandbox.png\" title=\"Screenshot_2020-07-27-Modules-Ubercart-Sandbox.png\"><img src=\"/user_uploads/18319/lqeg0WjmRb-Oc2IZlAu3oB0c/Screenshot_2020-07-27-Modules-Ubercart-Sandbox.png\"></a></div>",
+        "id": 205141206,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595868718
+    },
+    {
+        "content": "<p>I don't think that is currently possible, but it does sound like a cool idea.</p>",
+        "id": 205142181,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1595869204
+    },
+    {
+        "content": "<p>Not sure how much work that would be though.</p>",
+        "id": 205142224,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1595869219
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> there are a couple of existing related issues like <a href=\"https://github.com/backdrop/backdrop-issues/issues/119\">https://github.com/backdrop/backdrop-issues/issues/119</a> and <a href=\"https://github.com/backdrop/backdrop-issues/issues/3147\">https://github.com/backdrop/backdrop-issues/issues/3147</a> + <a href=\"https://github.com/backdrop/backdrop-issues/issues/3148\">https://github.com/backdrop/backdrop-issues/issues/3148</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/119\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/119\" title=\"Add support for widely distributed code in .info files · Issue #119 · backdrop/backdrop-issues\">Add support for widely distributed code in .info files · Issue #119 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In #117, @quicksketch wrote that the backdrop = 1.x would be &quot;replacing&quot; core = 8.x. I think I&#39;m following this correctly and replacing only refers to Backdrop&#39;s includes/bootstra...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3147\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3147\" title=\"[UX] Modules page: Add a drop-down to browse by Tag · Issue #3147 · backdrop/backdrop-issues\">[UX] Modules page: Add a drop-down to browse by Tag · Issue #3147 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea This is a follow-up to #37 to un-block that issue. We&#39;d like to add a select list of all available tags to the module page, to make it easier for people to easily re...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3148\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3148\" title=\"[UX] Module page: Alphabetize by module name and remove package groupings · Issue #3148 · backdrop/backdrop-issues\">[UX] Module page: Alphabetize by module name and remove package groupings · Issue #3148 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea This is a follow-up to #37 to un-block that issue. PR by @klonos: backdrop/backdrop#2548</div></div></div>",
+        "id": 205143372,
+        "sender_full_name": "klonos",
+        "timestamp": 1595869786
+    },
+    {
+        "content": "<p>How is the Project Installer sorted currently? It's strange that the \"Ubercart - Payment\" package comes before \"Ubercart - Core\".</p>",
+        "id": 205146263,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595871438
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/system/system.admin.inc#L721-L723\">https://github.com/backdrop/backdrop/blob/1.x/core/modules/system/system.admin.inc#L721-L723</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/system/system.admin.inc#L721-L723\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/system/system.admin.inc#L721-L723\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 205150829,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595874057
+    },
+    {
+        "content": "<p>Testing/comments welcome here: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4503\">https://github.com/backdrop/backdrop-issues/issues/4503</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4503\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4503\" title=\"Module list is strangely ordered · Issue #4503 · backdrop/backdrop-issues\">Module list is strangely ordered · Issue #4503 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When viewing the module list, the order is hard to understand. Steps To Reproduce To reproduce the behavior: Install a variety of modules and go to the admin/modules page. Ac...</div></div></div>",
+        "id": 205152277,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595874822
+    }
+]

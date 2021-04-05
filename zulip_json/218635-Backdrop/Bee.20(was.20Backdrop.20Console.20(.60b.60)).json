@@ -1,0 +1,278 @@
+[
+    {
+        "content": "<p>Just downloading and testing B for the first time.</p>",
+        "id": 227539669,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614134761
+    },
+    {
+        "content": "<p>Can anyone give some tips on how to configure PHPStorm to debug B? I know how to set up a project that is interacted with via the web server (MAMP, for my local setup), but for debugging a command-line tool, what does one do differently? Any suggestions would be most appreciated.</p>",
+        "id": 227539795,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1614134881
+    },
+    {
+        "content": "<p>I recommend trying the dev/git version, as the tagged versions are quite old and lots of work has been done since then.</p>",
+        "id": 227548684,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614143032
+    },
+    {
+        "content": "<p>I thought I did use the dev version, but I'm going to try again. </p>\n<p>Right now, I'm just trying to figure out how to use B with Lando. <br>\n<a href=\"https://forum.backdropcms.org/forum/using-b-locally-lando\">https://forum.backdropcms.org/forum/using-b-locally-lando</a></p>",
+        "id": 227554485,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614148453
+    },
+    {
+        "content": "<p>Understood. I'll write some instructions later for you. Out ATM.</p>",
+        "id": 227554542,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614148522
+    },
+    {
+        "content": "<p>No worries - no rush</p>",
+        "id": 227554691,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614148634
+    },
+    {
+        "content": "<p>When it comes to \"realeasing\" b - how can that work? It shouldn't show up in the list of modules on b-org, nor in the module installer withing Backdrop installs. How will that be accomplished? (Out of curiosity...)</p>",
+        "id": 227562496,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614154335
+    },
+    {
+        "content": "<p>I just plan to make a v1.0.0 release in GitHub (and then more actively promote it). I'm not sure what'll happen (if anything) on the Backdrop side...</p>",
+        "id": 227569813,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614158525
+    },
+    {
+        "content": "<p>Maybe we can create a node with links and instructions to the Github page? Just a thought.</p>",
+        "id": 227569900,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614158583
+    },
+    {
+        "content": "<p>Certainly a blog post.</p>",
+        "id": 227569927,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614158599
+    },
+    {
+        "content": "<p>I think.</p>",
+        "id": 227569943,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614158604
+    },
+    {
+        "content": "<p>Instructions on using <code>b</code> with Lando posted to forum.</p>",
+        "id": 227575097,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614161342
+    },
+    {
+        "content": "<p>Creating a release for a non-project project in contrib (missing .info file, or missing <code>type =</code> line in its .info file) will cause the packaging script to fail I believe. So no project/release node would be created ...unless I'm terribly wrong about how all that works.</p>",
+        "id": 227584657,
+        "sender_full_name": "klonos",
+        "timestamp": 1614166223
+    },
+    {
+        "content": "<p>Backdrop Console (<code>b</code>) is now <strong>Bee</strong>!</p>\n<p><a href=\"https://github.com/backdrop-contrib/bee\">https://github.com/backdrop-contrib/bee</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bee\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bee\" title=\"backdrop-contrib/bee\">backdrop-contrib/bee</a></div><div class=\"message_embed_description\">Bee is a command line utility for Backdrop CMS. It includes commands that allow developers to interact with Backdrop sites. - backdrop-contrib/bee</div></div></div>",
+        "id": 230447790,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615858804
+    },
+    {
+        "content": "<p>And we now have a cute mascot <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span>  <a href=\"https://raw.githubusercontent.com/backdrop-contrib/bee/1.x-1.x/images/bee.png\">https://raw.githubusercontent.com/backdrop-contrib/bee/1.x-1.x/images/bee.png</a></p>\n<div class=\"message_inline_image\"><a href=\"https://raw.githubusercontent.com/backdrop-contrib/bee/1.x-1.x/images/bee.png\"><img src=\"https://raw.githubusercontent.com/backdrop-contrib/bee/1.x-1.x/images/bee.png\"></a></div>",
+        "id": 230449264,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615860217
+    },
+    {
+        "content": "<p><span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 230449843,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615860623
+    },
+    {
+        "content": "<p>why the change?</p>",
+        "id": 230449861,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615860631
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> may I ask why the namespace change? IIRC some people mentioned that one of the advantages of the project <code>b</code> over drush and brush was that they had to type less ...not that this cannot be achieved via an alias command - just less work to do if it's called just <code>b</code>.</p>",
+        "id": 230450155,
+        "sender_full_name": "klonos",
+        "timestamp": 1615860923
+    },
+    {
+        "content": "<p>There was a disconnect between the official name of the project \"Backdrop Console\" and the documented command <code>b</code>. Since people would naturally just refer to the project as <code>b</code>, then that became its 'unofficial' name, and some people felt that it would be better as something slightly longer and that had meaning outside of just a letter of the alphabet (to make searches for/references to it easier too). I was initially against the idea, as I liked the simplicity of <code>b</code>, but I eventually came around to the idea, especially after I thought of <code>Bee</code> (not too long, more unique, doesn't change how people pronounce it) <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> </p>\n<p>You can read more here: <a href=\"https://github.com/backdrop-contrib/bee/issues/132\">https://github.com/backdrop-contrib/bee/issues/132</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bee/issues/132\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bee/issues/132\" title=\"Change the documented command name from `b`? · Issue #132 · backdrop-contrib/bee\">Change the documented command name from `b`? · Issue #132 · backdrop-contrib/bee</a></div><div class=\"message_embed_description\">I have two suggested project names: bcli bbash I like bcli, because it&#39;s short and means something - backdrop command line interface! bbash is also nice, with some cadence with the double &#39;...</div></div></div>",
+        "id": 230450414,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615861170
+    },
+    {
+        "content": "<p>And yes, if people don't like typing too much, they can just change the installation steps slightly to use a different alias/symlink. I personally have a bunch of bash aliases on my computer for Drush commands like:</p>\n<ul>\n<li><code>dca = drush cc all</code></li>\n<li><code>ddl = drush dl</code></li>\n<li>etc.<br>\nSo I imagine I'll do a similar thing on my computer with Bee once I start using it more regularly for day-to-day stuff.</li>\n</ul>",
+        "id": 230450666,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615861337
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> - I was someone that commented on the fact that writing about \"b\" felt weird to me, because of the single letter issue. It always felt like I had just forgotten to finish typing my word. If I see the letter \"b\" alone, I don't think of a name, I think of a typo. </p>\n<p>I like \"bee\" a lot better. But, I did not feel strongly about this and would have been fine either way.</p>",
+        "id": 230450667,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615861337
+    },
+    {
+        "content": "<blockquote>\n<p>But, I did not feel strongly about this and would have been fine either way.</p>\n</blockquote>\n<p>Now you tell me <span aria-label=\"laughter tears\" class=\"emoji emoji-1f602\" role=\"img\" title=\"laughter tears\">:laughter_tears:</span></p>",
+        "id": 230450682,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615861360
+    },
+    {
+        "content": "<p>(jk)</p>",
+        "id": 230450702,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615861382
+    },
+    {
+        "content": "<p>:-)</p>",
+        "id": 230450705,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615861385
+    },
+    {
+        "content": "<p>The <code>bee</code> is distinctive, just letter <code>b</code> was not at all. It's now much more comfortable to use, to refer, to search. So all is good, you did right, Peter!</p>",
+        "id": 230451992,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615862498
+    },
+    {
+        "content": "<p>Yup, all good <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...I was just curious, and hadn't noticed that there was an issue about it.</p>",
+        "id": 230465375,
+        "sender_full_name": "klonos",
+        "timestamp": 1615876260
+    },
+    {
+        "content": "<p>Hehe, naming things... Now let's carry on with our busy little working bee. <span aria-label=\"bee\" class=\"emoji emoji-1f41d\" role=\"img\" title=\"bee\">:bee:</span></p>",
+        "id": 230466316,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615877109
+    },
+    {
+        "content": "<p>Hey, doesn't this make <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> a beekeeper? <span aria-label=\"joy\" class=\"emoji emoji-1f602\" role=\"img\" title=\"joy\">:joy:</span></p>",
+        "id": 230504233,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615898257
+    },
+    {
+        "content": "<p>As someone tuning into backdrop more intently over the past month or two, I never knew exactly what 'b' was when people were referring to it.  I thought maybe it was shorthand for Backdrop or something.  I think having a 'real' name (thats not just a letter) is a vast improvement....it makes it a 'real thing' to people who don't know about it.</p>",
+        "id": 230513588,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615902229
+    },
+    {
+        "content": "<p>Had I known that changing the name was a real possibility, I might have suggested \"bc\" (for Backdrop Console), but \"bee\" is fine, too. Short is nice. (And \"bee\" lends itself to a cute logo.)</p>",
+        "id": 230732152,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1616001832
+    },
+    {
+        "content": "<p>The naming thing again?.. <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span> But actually <code>bc</code> isn't a good idea, as it conflicts with an existing Linux command line tool (\"bc - An arbitrary precision calculator language\").</p>",
+        "id": 230732664,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616002053
+    },
+    {
+        "content": "<p>I wonder if that cute bee mascot would work as ascii-art. Have to try that soon. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 230732959,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616002172
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I had the same thought about ASCII art and even played around with a few online converters, but didn't get very far yet.</p>",
+        "id": 230754045,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616010007
+    },
+    {
+        "content": "<p>Just for fun (I'm not entertaining any more suggestions/thoughts of changing the name again), here's the list I came up with when trying to think of a new name/command (thumbs-up are the ones I really liked and was seriously considering at the time):</p>\n<p>bac<br>\nbaq<br>\ndrop <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span><br>\nbdc<br>\nbox<br>\ndrp<br>\nbckdrp<br>\ncnsl<br>\nclimb<br>\nbite<br>\nbyte<br>\ntype<br>\ncmd<br>\nbcmd<br>\nbee <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span><br>\nhive<br>\nbach <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span><br>\nbcon<br>\nbeacon</p>\n<p>I quite liked 'drop' (the name of Backdrop's dragon mascot), but was concerned it'd be too scary writing database related commands: <code>drop db...</code> <span aria-label=\"blush\" class=\"emoji emoji-1f60a\" role=\"img\" title=\"blush\">:blush:</span></p>",
+        "id": 230756129,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616010983
+    },
+    {
+        "content": "<p><strong>Is someone talking about me?</strong></p>",
+        "id": 230756130,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1616010983
+    },
+    {
+        "content": "<p>Yes <span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span></p>",
+        "id": 230756223,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616011036
+    },
+    {
+        "content": "<p>Bee has a beta release: <a href=\"https://github.com/backdrop-contrib/bee/releases/tag/1.x-1.0.0-beta\">https://github.com/backdrop-contrib/bee/releases/tag/1.x-1.0.0-beta</a> Please download, install and test it in preparation for the first stable release, coming soon.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bee/releases/tag/1.x-1.0.0-beta\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bee/releases/tag/1.x-1.0.0-beta\" title=\"Release 1.x-1.0.0-beta · backdrop-contrib/bee\">Release 1.x-1.0.0-beta · backdrop-contrib/bee</a></div><div class=\"message_embed_description\">Beta release for 1.0.0</div></div></div>",
+        "id": 231258891,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616382542
+    },
+    {
+        "content": "<p>I had to <code>chmod 755 bee.php</code>, otherwise everything seems to work fine so far. <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 231268945,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616395371
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> What was it by default? Glad it's working otherwise!</p>",
+        "id": 231268975,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616395421
+    },
+    {
+        "content": "<p>It was <code>644</code>.</p>",
+        "id": 231269057,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616395490
+    },
+    {
+        "content": "<p>Hm... spoken too soon, the cget command doesn't find the file, both, when a relative or absolute path is provided - but maybe I misunderstand something.</p>",
+        "id": 231269199,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616395639
+    },
+    {
+        "content": "<p>You should just prove the filename... No path required.</p>",
+        "id": 231269596,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616396125
+    },
+    {
+        "content": "<p>See example: <code>bee config-get system.core site_name</code></p>",
+        "id": 231269669,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616396190
+    },
+    {
+        "content": "<p>[Discussion continues in issue queue...] <span aria-label=\"blush\" class=\"emoji emoji-1f60a\" role=\"img\" title=\"blush\">:blush:</span></p>",
+        "id": 231269781,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616396343
+    },
+    {
+        "content": "<p>Hmmm, I wonder if the executablility of the php file was lost during the renaming...</p>",
+        "id": 231270577,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616397119
+    },
+    {
+        "content": "<p>I belief, it's packaging, that sets the perms - only guessing.</p>",
+        "id": 231270765,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616397296
+    }
+]

@@ -1,0 +1,158 @@
+[
+    {
+        "content": "<blockquote>\n<p>We then talked about ways that Backdrop Core might help these site owners. I think that there was some consensus that (in that specific discussion) that if Backdrop Core should not try to take on too much of this work, but if there is some basic meta tag information that could could reliably provided, then maybe that should be provided by core and we should leave the advanced/custom stuff to contrib.</p>\n</blockquote>\n<p>(From a comment by <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> in <a href=\"https://github.com/backdrop/backdrop-issues/issues/4995#issuecomment-799192477\">this thread</a>. Opening this here since it's a bit of a tangent from the specific issue topic in that thread)</p>\n<p>Instead of duplicating effort that has already been made in a contrib module, a few other thoughts/possibilities:</p>\n<ul>\n<li>Should we update the dashboard to highlight some of these contrib modules that many sites will need but may not know about?</li>\n<li>Would it be better to focus on recipes and create a recipe that installs the contrib and preconfigures it with these default settings?</li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4995#issuecomment-799192477\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4995#issuecomment-799192477\" title=\"[SEO][META] Provide some basic SEO meta tags OOTB · Issue #4995 · backdrop/backdrop-issues\">[SEO][META] Provide some basic SEO meta tags OOTB · Issue #4995 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Current OOTB header for a vanilla Backdrop site, when visiting the home page: &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;link rel=&quot;shortcut icon&quot; href=&quot;https://example.c...</div></div></div>",
+        "id": 230393789,
+        "sender_full_name": "Laryn",
+        "timestamp": 1615832092
+    },
+    {
+        "content": "<p>(And once we have recipes, some of these could be shown as links/options on the dashboard immediately after installation)</p>",
+        "id": 230394848,
+        "sender_full_name": "Laryn",
+        "timestamp": 1615832477
+    },
+    {
+        "content": "<p>Technically, recipes already exist, but they don't handle functionality like this. Also, as was discussed in the recipes session, that functionality would be outside the scope of what is considered a recipe. It is closer to Features type of functionality, which as I understand it, is not on the radar.</p>",
+        "id": 230399503,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615834465
+    },
+    {
+        "content": "<p>However, <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> and I were discussing recipes this morning, and it could be something we could add in a module that is somewhere between a recipe and Features at some point in the future.</p>",
+        "id": 230399907,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615834653
+    },
+    {
+        "content": "<p>By the way, it is interesting to know about the target groups of those 70% of sites where such modules are not used. Maybe this is something illegal? Or just testing farms?</p>",
+        "id": 230404917,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1615837002
+    },
+    {
+        "content": "<p>I doubt it's anything illegal. I think it comes down to the fact that people don't know those things help with site/page rankings, etc., and/or don't know they exist.</p>",
+        "id": 230405489,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615837217
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268468\">@findlabnet(Vladimir)</span> - I think that you are underestimating how many people build their sites without thinking about things like metatags and/or site maps - or don't even know that they need these things. Based upon personal experience, I think that many small freelancers get busy and often forget or never get around to these things.</p>",
+        "id": 230405497,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615837220
+    },
+    {
+        "content": "<p>But 70%? It's just sad. So much sloppy work.</p>",
+        "id": 230407951,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1615838174
+    },
+    {
+        "content": "<p>Well, I disagree with the characterization of sloppy work. Maybe because I've done this myself. I admire those who are thorough and do all the right things, but I sympathize with those who forget or fail to find time to for all of these extra details that are not always obvious.</p>",
+        "id": 230416126,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615841413
+    },
+    {
+        "content": "<p>As I posted on the Github issue, my shop has a number of certainly not illegal nor testing Backdrop sites that serve primarily as containers for CiviCRM, with no public content at all. We have no interest in SEO!</p>",
+        "id": 230419382,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1615842755
+    },
+    {
+        "content": "<p>(For those particular sites.)</p>",
+        "id": 230419439,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1615842769
+    },
+    {
+        "content": "<p>I'm one of the \"many small freelancers\" who often doesn't \"get around to these things\".</p>",
+        "id": 230421727,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615843806
+    },
+    {
+        "content": "<p>I'm just against SEO in general. I think we should be optimising our websites for humans, not search engines (not that I'm very good at doing that either though...).</p>",
+        "id": 230422825,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615844370
+    },
+    {
+        "content": "<p>HBO - Human-Being Optimisation <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 230422972,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615844439
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> but the bits we adjust to achieve SEO (meta tags in <code>&lt;head&gt;</code>) do not affect humans in any negative way ...not that I'm aware of at least.</p>",
+        "id": 230428651,
+        "sender_full_name": "klonos",
+        "timestamp": 1615846448
+    },
+    {
+        "content": "<p>I wasn't commenting on that issue or any changes we can/should make to Backdrop, I just thought we were having a rant about SEO and didn't want to miss out <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 230428941,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615846524
+    },
+    {
+        "content": "<p>(tongue-in-cheek - ignore me)</p>",
+        "id": 230429034,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615846554
+    },
+    {
+        "content": "<p>You should also be optimizing for humans, which is the content and design, and by doing so, you will be optimizing for SEO as well.</p>",
+        "id": 230442135,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615854191
+    },
+    {
+        "content": "<p>I prefer to drop a message here, as I'm not planning to further contribute to <a href=\"https://github.com/backdrop/backdrop-issues/issues/4995\">the issue</a></p>\n<p>Important things from my perspective:</p>\n<ul>\n<li>Do not complicate D7 migrations - people might have used contrib modules for meta tags and the migration path could get cumbersome if parts are in core and other parts aren't</li>\n<li>Do not force module maintainers to fundamentally rewrite their code within 1.x (remember the Backdrop philosophy regarding contrib)</li>\n<li>Do not assume that all sites need extra metatags (all those og:* and twitter:* tags might - worst case - be undesirable)</li>\n<li>Do not assume what sorts of pages, layouts, views, content types, ... sites have - this vastly varies because of the flexibility of Backdrop</li>\n<li>Do not add meta tags OOTB, that need extra configuration - bad/wrong meta tags can cause a regression (all of the proposed extra meta tags need proper configuration, btw)</li>\n</ul>\n<p>I understand that you try to make things easier, but you might actually make things worse. As meta tags aren't visible, site owners might have trouble to understand, what's going on.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4995\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4995\" title=\"[SEO][META] Provide some basic SEO meta tags OOTB · Issue #4995 · backdrop/backdrop-issues\">[SEO][META] Provide some basic SEO meta tags OOTB · Issue #4995 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Current OOTB header for a vanilla Backdrop site, when visiting the home page: &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;link rel=&quot;shortcut icon&quot; href=&quot;https://example.c...</div></div></div>",
+        "id": 230466053,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615876831
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I understand where you are coming from, but so far it seems to me that those in favor of some basic SEO OOTB have demonstrated that lack of SEO is an actual issue that hurts individual sites built on Backdrop, as well as Backdrop as a product. All I keep reading in your comments is \"might\" and \"could\" re making D7 -&gt; Backdrop upgrades complicated or anything causing a regression/breakage. Yes, I am aware that these things may happen, that's why I am proposing to implement any solution in a backwards-compatible way, and work with site owners and contrib maintainers towards ensuring that we don't break things. ...I would NEVER propose to include any SEO solution if I knew it would certainly break things, so I don't understand your pushback before you have actually seen any code implementation. I would expect that we draft something simple, and then review it and investigate if it actually breaks existing sites or interferes with contrib modules.</p>",
+        "id": 230466553,
+        "sender_full_name": "klonos",
+        "timestamp": 1615877329
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> What worried me were some of the comments, that actually proposed to do breaking changes. And I think, I explicitly mentioned these when replying - obviously not clear enough. Usually I'm trying to stay away from this kind of discussions, as far as possible. I failed this time, I admit,</p>",
+        "id": 230467882,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615878488
+    },
+    {
+        "content": "<p>Nobody should feel like they shouldn't be part of these discussions. Sorry, my bad <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> ...last thing I meant is to make you feel that way <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span> ...I'm gonna go re-read that thread, and pay even more attention to your comments. Promise.</p>",
+        "id": 230468994,
+        "sender_full_name": "klonos",
+        "timestamp": 1615879396
+    },
+    {
+        "content": "<p>Hmm, just today <span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/594#issuecomment-799836348\">noticed</a> that all animals are equal, but some animals are more equal than others.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/594#issuecomment-799836348\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/594#issuecomment-799836348\" title=\"How best to use the `backdrop.org` domain? · Issue #594 · backdrop-ops/backdropcms.org\">How best to use the `backdrop.org` domain? · Issue #594 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Update: The domain name backdrop.org has been generously donated to the Backdrop community. We now need to decide what to do with it... Original post: Sorry for a blasphemy of doubting the domain n...</div></div></div>",
+        "id": 230470729,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1615880601
+    },
+    {
+        "content": "<blockquote>\n<p>Nobody should feel like they shouldn't be part of these discussions.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  Sorry, again I wasn't clear enough...</p>\n<p>In <em>no</em> case you ever made me feel like I shouldn't be part of a discussion. It's that I don't <em>want</em> to be part of these discussions. I love to contribute with code, testing, reviews. I like to make things <em>happen</em>, but find the discussions exhausting.</p>",
+        "id": 230470883,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615880707
+    },
+    {
+        "content": "<p>EVERYBODY'S SO FEISTY!!!</p>\n<p>Y'all cool-it... It's my job to be the feisty one that gets all worked up... <span aria-label=\"innocent\" class=\"emoji emoji-1f607\" role=\"img\" title=\"innocent\">:innocent:</span> <span aria-label=\"smiling devil\" class=\"emoji emoji-1f608\" role=\"img\" title=\"smiling devil\">:smiling_devil:</span> <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 230479287,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615885297
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> the list you dropped above resonates so much though for me as a site owner, site builder <em>and</em> dev. Thank you for it! I hear you on the v long discussions being exhausting though.</p>",
+        "id": 230561991,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1615917585
+    }
+]

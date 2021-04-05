@@ -1,0 +1,214 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Panels.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html">Panels</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="212105467"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/212105467" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#212105467">(Oct 02 2020 at 17:37)</a>:</h4>
+<p>So one of the most powerful features of Drupal Panels, are the panel pane rules.  Anyone know of an alternative to these?  I personally loved the work that was put into Drupal panels before responsive became a thing which relinquished all of my panel layouts to single columns but I still use the crap out of mini-panels and custom content-panes.  I know the custom content panes can be replaced with blocks (which I despise to this day because they were horribly designed) but I'm not sure how to go about replacing the mini-panes and more specifically, I'm not sure how to replace the pane rules that accompany panes.  Context might be an alternative but when I used it on D7, I found it to be rather buggy and very lop-sided with functionality.</p>
+<p>So, in order for me to consider moving to Backdrop long term, I would love to see some sort of replacement for the pane rules and hoped someone way smarter than me might be able to come up with a way to replicate that functionality or offer some suggestions on alternatives.</p>
+
+
+
+<a name="212121094"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/212121094" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#212121094">(Oct 02 2020 at 19:57)</a>:</h4>
+<p>I didn't use Panels much in Drupal but I'm told that Backdrop's layout system is "Panels-light" and done in a much more intuitive way.  What kind of rules are you referring to in particular? Layouts has built in visibility rules of various kinds, is that what you mean <span class="user-mention" data-user-id="330989">@Phil Ward</span>?</p>
+
+
+
+<a name="212140260"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/212140260" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#212140260">(Oct 02 2020 at 23:24)</a>:</h4>
+<p>Yes Layouts is Panels, our blocks are same as Panes (not same as D7 blocks). Pane rules are visibility conditions. Also have Layout contexts, flexible layouts. Context relationships should be in next minor release.</p>
+
+
+
+<a name="212241631"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/212241631" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#212241631">(Oct 04 2020 at 21:01)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256757">docwilmot</span> <a href="#narrow/stream/218635-Backdrop/topic/Panels/near/212140260">said</a>:</p>
+<blockquote>
+<p>Yes Layouts is Panels, our blocks are same as Panes (not same as D7 blocks). Pane rules are visibility conditions. Also have Layout contexts, flexible layouts. Context relationships should be in next minor release.</p>
+</blockquote>
+<p>Also much easier for an end user to understand and use.  None of my clients could ever get the hang of panels, but had no problem with blocks, so we only used panels when there was no other alternative.  The way Backdrop handles it is far better than Drupal ever did.</p>
+
+
+
+<a name="212266475"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/212266475" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#212266475">(Oct 05 2020 at 07:31)</a>:</h4>
+<blockquote>
+<p>None of my clients could ever get the hang of panels, but had no problem with blocks, so we only used panels when there was no other alternative. The way Backdrop handles it is far better than Drupal ever did.</p>
+</blockquote>
+<p>Hehe, so true!</p>
+
+
+
+<a name="213232175"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/213232175" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#213232175">(Oct 13 2020 at 23:58)</a>:</h4>
+<p>Thanks all.  I'll dive into the Backdrop "Blocks" a bit closer when I get some time.</p>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Yeah, the visibility rules are what I'm talking about.  If this, show that, If not, hide this.  It has been an absolute lifesaver when creating ecommerce websites.  I see Ubercart has been ported to Backdrop (yay!) so I would need a way to utilize the same functionality for example: "If availability list field is set to Backorder, Hide Add to Cart form".</p>
+
+
+
+<a name="213232924"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/213232924" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#213232924">(Oct 14 2020 at 00:08)</a>:</h4>
+<p>Alright, I quickly looked at it and I see where you can change the visibility of the block, but how do you create a block that is a field?  In the custom blocks, all I see is a simple text field.  How would one expose a field to a block?  (Panel Pane) How would one expose multiple fields inside of a single block?  (Mini-Panels)</p>
+<p>To top it off, the visibility conditions are extremely basic and don't really give the "power" that the visibility rules give with D7 panel panes, so kinda disappointing ATM :-(</p>
+<p>Not narking, just trying to understand if there is a way to accomplish what I need where things currently sit.  I have a feeling what I need isn't possible yet.</p>
+
+
+
+<a name="213235702"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/213235702" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#213235702">(Oct 14 2020 at 00:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> - Are you aware that if you create a layout with the path = node/% that you will then have access to all the fields for that content type as blocks?</p>
+
+
+
+<a name="213235754"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/213235754" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#213235754">(Oct 14 2020 at 00:51)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> I was not... Super new to BD so the ins-and-outs of it still elude me ;-)  I'll note I've used Drupal since 2007, so not new to the overall platform.</p>
+
+
+
+<a name="213235959"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/213235959" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#213235959">(Oct 14 2020 at 00:55)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> - Give that a try and let me know if answers any of your needs. I know that even after I was aware of these field blocks, there was a time when it was hard for me to find them.</p>
+
+
+
+<a name="213235962"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/213235962" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#213235962">(Oct 14 2020 at 00:55)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="330989">Phil Ward</span> <a href="#narrow/stream/218635-Backdrop/topic/Panels/near/213232924">said</a>:</p>
+<blockquote>
+<p>Alright, I quickly looked at it and I see where you can change the visibility of the block, but how do you create a block that is a field?  In the custom blocks, all I see is a simple text field.  How would one expose a field to a block?  (Panel Pane) How would one expose multiple fields inside of a single block?  (Mini-Panels)</p>
+<p>To top it off, the visibility conditions are extremely basic and don't really give the "power" that the visibility rules give with D7 panel panes, so kinda disappointing ATM :-(</p>
+<p>Not narking, just trying to understand if there is a way to accomplish what I need where things currently sit.  I have a feeling what I need isn't possible yet.</p>
+</blockquote>
+<p>Hard to know how to help you without knowing what you want.  You could use URL path as a visibility condition and populate the paths with the variables (one option), or you could use tokens in the body for fields that vary based on the node (for example page title).  I'm not sure what you're trying to do but I've found it to be pretty powerful, especially combining views and blocks (example pulling a slideshow based on the page  it shows up on), or changing the background based on department, etc.</p>
+
+
+
+<a name="215053197"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215053197" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215053197">(Oct 30 2020 at 03:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="268008">@Elisabeth Garbeil</span> What I want...</p>
+<p>Well, what I want is a way to expose pretty much anything that can be exposed within BD, into the layout form. I just tested node/% and I do see that it exposes the individual fields like I would expect. Problem 1 solved.</p>
+<p>Problem 2 is that the visibility conditions are extremely basic.</p>
+<p><a href="/user_uploads/18319/M9a5ULmqVTMQDoREFMjENyuu/image.png">image.png</a> </p>
+<div class="message_inline_image"><a href="/user_uploads/18319/M9a5ULmqVTMQDoREFMjENyuu/image.png" title="image.png"><img src="/user_uploads/18319/M9a5ULmqVTMQDoREFMjENyuu/image.png"></a></div><p>As you can see, there is no "field" visibility condition. This is the powerful piece that is missing.</p>
+<p>See, Panels exposes EVERY FIELD on the node as a visibility condition. This allows me to say "Show this block (panel pane) [if] this field is true. If not, hide it." I have fields on one of my websites where some of them contain data, others do not. I tell the visibility rule to "hide all of these fields that are empty (null)".</p>
+<p>Let me give you a real-world on one of my e-commerce sites: I have a price field (ubercart) and a custom availability field (list field). I have a visibility set on the price where "if availability NOT = In-Stock, On-Backorder, Sold-Out -&gt; Hide the price field".</p>
+<p>Since there is no exposure in the BD visibility to fields, there is currently no way to accomplish this. The Context module for D7 kinda handled this sort of thing, but I never really used it because its focus was more on block visibility where-as Panels focus was literally on EVERYTHING you wanted to expose to the Panel.</p>
+<p>So, as of right now, core does not have a way for me to accomplish what I would need because core isn't exposing the fields as visibility conditions. They're exposed on the layout, just not on the visibility.</p>
+
+
+
+<a name="215053357"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215053357" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215053357">(Oct 30 2020 at 03:25)</a>:</h4>
+<p>Thanks for taking the time to explain <span class="user-mention" data-user-id="330989">@Phil Ward</span> <span aria-label="pray" class="emoji emoji-1f64f" role="img" title="pray">:pray:</span> ...this feature indeed does not exist in Backdrop core. Are you comfortable with opening a new feature request for this in <a href="https://github.com/backdrop/backdrop-issues/issues/new/choose">https://github.com/backdrop/backdrop-issues/issues/new/choose</a> ?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/new/choose" style="background-image: url(https://github.githubassets.com/images/modules/open_graph/github-octocat.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/new/choose" title="Build software better, together">Build software better, together</a></div><div class="message_embed_description">GitHub is where people build software. More than 50 million people use GitHub to discover, fork, and contribute to over 100 million projects.</div></div></div>
+
+
+
+<a name="215053375"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215053375" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215053375">(Oct 30 2020 at 03:25)</a>:</h4>
+<p>...adding screenshots of how this is implemented in D7 would help.</p>
+
+
+
+<a name="215053617"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215053617" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215053617">(Oct 30 2020 at 03:30)</a>:</h4>
+<p>@klonos Am I comfortable with opening a new feature request... Heck yeah! Hope to see it gain some traction. To be honest, the pane visibility rules isn't something I use on every one of my websites. Most of the time I don't need them on the individual fields, but what I have found for an ecommerce site is the difference between a nightmare of a site and pure bliss. I have honestly stayed on D7 Ubercart purely because I can literally do almost anything I want to the output of the page. For not being able to code, I am surprised at some of the stuff I have been able to accomplish just with Panels, Views and Paragraphs on a product page. It's been a fun journey over the years and I know trying to accomplish a fraction of the same tasks on Woo Commerce wouldn't be remotely possible.</p>
+<p>Thanks for sharing the link :-)</p>
+
+
+
+<a name="215101629"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215101629" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215101629">(Oct 30 2020 at 14:29)</a>:</h4>
+<p>THis fields conditions thing could be a contrib project. I posted a query on the issue.</p>
+
+
+
+<a name="215103362"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215103362" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215103362">(Oct 30 2020 at 14:42)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="330989">Phil Ward</span> <a href="#narrow/stream/218635-Backdrop/topic/Panels/near/215053197">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="268008">Elisabeth Garbeil</span> What I want...</p>
+<p>Well, what I want is a way to expose pretty much anything that can be exposed within BD, into the layout form. I just tested node/% and I do see that it exposes the individual fields like I would expect. Problem 1 solved.</p>
+<p>Problem 2 is that the visibility conditions are extremely basic.</p>
+<p><a href="/user_uploads/18319/M9a5ULmqVTMQDoREFMjENyuu/image.png">image.png</a> </p>
+<p>As you can see, there is no "field" visibility condition. This is the powerful piece that is missing.</p>
+<p>See, Panels exposes EVERY FIELD on the node as a visibility condition. This allows me to say "Show this block (panel pane) [if] this field is true. If not, hide it." I have fields on one of my websites where some of them contain data, others do not. I tell the visibility rule to "hide all of these fields that are empty (null)".</p>
+<p>Let me give you a real-world on one of my e-commerce sites: I have a price field (ubercart) and a custom availability field (list field). I have a visibility set on the price where "if availability NOT = In-Stock, On-Backorder, Sold-Out -&gt; Hide the price field".</p>
+<p>Since there is no exposure in the BD visibility to fields, there is currently no way to accomplish this. The Context module for D7 kinda handled this sort of thing, but I never really used it because its focus was more on block visibility where-as Panels focus was literally on EVERYTHING you wanted to expose to the Panel.</p>
+<p>So, as of right now, core does not have a way for me to accomplish what I would need because core isn't exposing the fields as visibility conditions. They're exposed on the layout, just not on the visibility.</p>
+</blockquote>
+<p>Phil,  have you tried using token filter?   Also, maybe look at porting the context module (this may take a lot of work)?  Display suite and context were not in core in D7 either.  For the above, how about using a view with a rewrite results  on the price field?  I've done something similar before.  I like the idea of a feature request to add fields to visibility conditions, but I think that might have to be contrib, rather than core  because it would probably depend on something like token filter.  I use token filter a lot.  I also use the URL path to filter items as well (ex. only show if 'instock' or hide if 'outofstock').  That does require adding the variable you're filtering on to the URL.</p>
+
+
+
+<a name="215206204"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215206204" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215206204">(Oct 31 2020 at 18:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> did a rough port of field value conditions. See <a href="https://github.com/backdrop-contrib/field_visibility_condition">https://github.com/backdrop-contrib/field_visibility_condition</a>, and test if you can please.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/field_visibility_condition" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/field_visibility_condition" title="backdrop-contrib/field_visibility_condition">backdrop-contrib/field_visibility_condition</a></div><div class="message_embed_description">Allows admins to control access by entity field value - backdrop-contrib/field_visibility_condition</div></div></div>
+
+
+
+<a name="215207073"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215207073" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215207073">(Oct 31 2020 at 19:11)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> awesome! I'll take a look</p>
+
+
+
+<a name="215208086"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215208086" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215208086">(Oct 31 2020 at 19:33)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> ++ layout ninja!!</p>
+
+
+
+<a name="215208087"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215208087" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215208087">(Oct 31 2020 at 19:33)</a>:</h4>
+<p><strong>docwilmot</strong> leveled up! (Karma: 13)</p>
+
+
+
+<a name="215213297"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215213297" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215213297">(Oct 31 2020 at 21:43)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> do you want feedback here or in the git issue queue? Great start BTW. The foundation looks really good. Curious if you've gotten far enough to get it to work or if you're just laying the foundation for now? (It isn't respecting the visibility condition for me, is why I ask)</p>
+<p>Side thought, if you want feedback here on Zulip, then I think we might want to create a new sub-stream for it.</p>
+
+
+
+<a name="215213514"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215213514" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215213514">(Oct 31 2020 at 21:49)</a>:</h4>
+<p>In the issue queue would be best.</p>
+
+
+
+<a name="215213738"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215213738" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215213738">(Oct 31 2020 at 21:55)</a>:</h4>
+<p>Ok. Looks like there is already a visibility topic: <a href="#narrow/stream/218635-Backdrop/topic/Visibility.20conditions">https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Visibility.20conditions</a></p>
+
+
+
+<a name="215214105"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Panels/near/215214105" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Panels.html#215214105">(Oct 31 2020 at 22:04)</a>:</h4>
+<blockquote>
+<p>do you want feedback here or in the git issue queue?</p>
+</blockquote>
+<p>If you are comfortable in the issue queue, that is usually the best place to put feedback on issues. Sometimes the discussion of a feature extends for months or years and the best place to track its history is in the issue queue.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

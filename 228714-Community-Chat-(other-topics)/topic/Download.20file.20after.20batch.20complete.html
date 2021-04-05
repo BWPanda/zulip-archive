@@ -1,0 +1,56 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/Download.20file.20after.20batch.20complete.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Download.20file.20after.20batch.20complete.html">Download file after batch complete</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="232121618"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Download%20file%20after%20batch%20complete/near/232121618" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Download.20file.20after.20batch.20complete.html#232121618">(Mar 27 2021 at 22:07)</a>:</h4>
+<p>I'm struggling with something here. I wants to run some intensive code to create a large zip file that downloads automatically after the zip is created (by calling <code>readfile()</code> then <code>exit()</code>) but this seems not doable in a batch API finish callback because the <code>exit()</code> hangs the batch process and progress indicator just keeps going forever. Is there any other way you can think of to get a file download after a batch process?</p>
+
+
+
+<a name="232174119"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Download%20file%20after%20batch%20complete/near/232174119" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Download.20file.20after.20batch.20complete.html#232174119">(Mar 28 2021 at 15:38)</a>:</h4>
+<blockquote>
+<p>Is there any other way you can think of to get a file download after a batch process?</p>
+</blockquote>
+<p>To be honest, I never did that in combination. Maybe just save the file in batches, and after job completion redirect to the download? Or a page with the download link... Or set a message with the download link?</p>
+
+
+
+<a name="232175539"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Download%20file%20after%20batch%20complete/near/232175539" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Download.20file.20after.20batch.20complete.html#232175539">(Mar 28 2021 at 16:03)</a>:</h4>
+<p>You could take a look at views export module for an example</p>
+
+
+
+<a name="232178765"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Download%20file%20after%20batch%20complete/near/232178765" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Download.20file.20after.20batch.20complete.html#232178765">(Mar 28 2021 at 16:57)</a>:</h4>
+<p>As I can see this task: it should be client request, maybe cron job with URL provided/programmed?</p>
+
+
+
+<a name="232429408"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Download%20file%20after%20batch%20complete/near/232429408" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Download.20file.20after.20batch.20complete.html#232429408">(Mar 30 2021 at 13:58)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/228714-Community-Chat.20.28other.20topics.29/topic/Download.20file.20after.20batch.20complete/near/232174119">said</a>:</p>
+<div class="codehilite"><pre><span></span><code>Or a page with the download link?
+</code></pre></div>
+<p>Thanks all. I did that <span aria-label="point up" class="emoji emoji-1f446" role="img" title="point up">:point_up:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

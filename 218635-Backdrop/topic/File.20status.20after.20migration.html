@@ -1,0 +1,71 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/File.20status.20after.20migration.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html">File status after migration</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="205305531"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/File%20status%20after%20migration/near/205305531" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html#205305531">(Jul 29 2020 at 00:08)</a>:</h4>
+<p>Can someone please explain something for me, I'm a bit confused...</p>
+<p>I'm migrating content from a D7 site (via a CSV file, and Feeds in Backdrop). I have copied over the entire <code>files</code> dir so Backdrop has all the same files as D7, and in a <code>presave</code> function I convert any absolute URLs to the old site to relative URLs for the new site in the Body field (so any embedded images are referencing the new site's files). After import, everything works fine, but there are a bunch of 'Temporary' files listed in <code>/admin/content/files</code>. After 6 hours and a cron run, they were removed from here, so I figured I needed to write code to make these files Permanent on import. However when I go to look for content that had an embedded image in the Body field, it's still there. And the file's are all still in the <code>files</code> directory. So it seems I don't have to do anything after all...?</p>
+<p>Therefore my question is: what's the purpose/reason for the files listed on <code>/admin/content/files</code>? Do I need to worry about them? Can I import files from D7 but have everything still work even after they're removed from that page? What's up with all this?</p>
+
+
+
+<a name="205306160"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/File%20status%20after%20migration/near/205306160" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html#205306160">(Jul 29 2020 at 00:20)</a>:</h4>
+<p>The /admin/content/files page lists all files that are in the file_manage table. If your content is referencing files and they are showing up in the content, but they are not displayed in /admin/content/files, then Backdrop is not managing the files.</p>
+
+
+
+<a name="205306659"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/File%20status%20after%20migration/near/205306659" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html#205306659">(Jul 29 2020 at 00:30)</a>:</h4>
+<p>So follow-up question then becomes: what are 'managed' files? What's their benefit over regular (unmanaged?) files? What are the consequences of Backdrop not managing a file?</p>
+
+
+
+<a name="205357275"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/File%20status%20after%20migration/near/205357275" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html#205357275">(Jul 29 2020 at 13:40)</a>:</h4>
+<p>Having a file managed by Backdrop means that the file can be available to be (re-)used (like in the media browser) or seen (like at /admin/content/file) everywhere that capability is available on the site. It also means that some person does not need to manually copy or remove files on the server -- it is handled by management facility.</p>
+
+
+
+<a name="205974787"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/File%20status%20after%20migration/near/205974787" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html#205974787">(Aug 04 2020 at 23:51)</a>:</h4>
+<p>Ok, so in the end, migrating files from D7 and having them deleted from the Manage Files page isn't an issue, they'll keep working regardless...?</p>
+
+
+
+<a name="205979591"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/File%20status%20after%20migration/near/205979591" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html#205979591">(Aug 05 2020 at 01:28)</a>:</h4>
+<p>Only if the files aren't deleted as a part of removing them from the database, which is one of the things that happens with the file management processes. If the links in the content are to files that Backdrop is not managing, then they should continue to stick around and work.<br>
+However, I would have thought that doing your migration the way you did would have put the files into the Backdrop file management system. So I think I would need to know more about and examine the process, the data, and the code to understand why it worked the way it did. There might be an obvious explanation that I'm missing or not thinking of.</p>
+
+
+
+<a name="205979992"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/File%20status%20after%20migration/near/205979992" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html#205979992">(Aug 05 2020 at 01:39)</a>:</h4>
+<p>I'm using Views Data Export in D7 to make a CSV file which has file/image URLs. That's then imported into Backdrop using Feeds, and I have custom code that saves each URL to a File field.</p>
+
+
+
+<a name="205980554"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/File%20status%20after%20migration/near/205980554" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/File.20status.20after.20migration.html#205980554">(Aug 05 2020 at 01:51)</a>:</h4>
+<p>That might be why they aren't being added to the file management process.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

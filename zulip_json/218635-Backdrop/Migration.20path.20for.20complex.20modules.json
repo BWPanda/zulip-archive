@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>I wonder if anyone here has done a migration path for complex contrib modules. Things get difficult when dependencies change or submodules get removed.</p>\n<p>How to deal with that?</p>\n<p>Example: i18n_variable in D7 has a dependency on variable_store. Variable store ships with (and has a dependency on) variable - this module does not exist for Backdrop and the dependency has been removed. But we need the data from the variable_store database table (to convert to config). Any hint is welcome.</p>",
+        "id": 222983164,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610806267
+    },
+    {
+        "content": "<p>Another question: I found no example, how to disable a module within upgrade process. I'm aware of the opposite - function update_module_enable(), but there's no _disable counterpart. How can modules get disabled in a clean way?</p>\n<p>Note: it's not possible to disable the module in D7 because of the dependency chain.</p>",
+        "id": 222983408,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610806535
+    },
+    {
+        "content": "<blockquote>\n<p>I found no example, how to disable a module within upgrade process.</p>\n</blockquote>\n<p>Oh, I found one in core. The (former contrib) token module gets \"disabled\" via db_query() to the system table.</p>",
+        "id": 222983732,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610806915
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> the internet says that this should work:</p>\n<div class=\"codehilite\"><pre><span></span><code>/**\n * Disable and uninstall the module.\n */\nfunction MODULE_update_1234() {\n  if (module_exists(&#39;module_name&#39;)) {\n    module_disable(array(&#39;module_name&#39;));\n    backdrop_uninstall_modules(array(&#39;module_name&#39;));\n  }\n}\n</code></pre></div>",
+        "id": 222985492,
+        "sender_full_name": "klonos",
+        "timestamp": 1610808858
+    },
+    {
+        "content": "<p>...I could be wrong about it, but I'm assuming that disabling via a db query may not call any other required routines/hooks - it might have been simply a clean-up if the module files have been removed from the codebase.</p>",
+        "id": 222985642,
+        "sender_full_name": "klonos",
+        "timestamp": 1610809039
+    },
+    {
+        "content": "<p>Interesting. Where did you find that example?</p>\n<p>The thing is: \"disabling\" shouldn't call any routine. We actually just need the data from database, the code might be possibly broken because of the unmet dependencies... not sure.</p>",
+        "id": 222985816,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610809205
+    },
+    {
+        "content": "<p>Adapted from <a href=\"https://stackoverflow.com/questions/13708873/how-to-disable-and-uninstall-a-drupal-module-programmatically\">https://stackoverflow.com/questions/13708873/how-to-disable-and-uninstall-a-drupal-module-programmatically</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/13708873/how-to-disable-and-uninstall-a-drupal-module-programmatically\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/13708873/how-to-disable-and-uninstall-a-drupal-module-programmatically\" title=\"How to disable and uninstall a Drupal module programmatically?\">How to disable and uninstall a Drupal module programmatically?</a></div><div class=\"message_embed_description\">I want to be able to disable and then uninstall a module programmatically on my local environment and then easily push that code to prod so everything gets updated.\n\nI'm guessing it's something wit...</div></div></div>",
+        "id": 222985868,
+        "sender_full_name": "klonos",
+        "timestamp": 1610809229
+    },
+    {
+        "content": "<p>Check in the ubercart main module install file. I enable and disable some submodules in there.</p>",
+        "id": 222986034,
+        "sender_full_name": "Laryn",
+        "timestamp": 1610809360
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> yeah, Ubercart is even more complex, good example. <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span>  But... you do it in hook_disable(), not in hook_update_N() - is that comparable?</p>",
+        "id": 222986243,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610809579
+    },
+    {
+        "content": "<p>I did it in hook disable because I wanted them disabled when the main module got disabled, I assume it would work in an update hook as well but can't say for sure.</p>",
+        "id": 222986387,
+        "sender_full_name": "Laryn",
+        "timestamp": 1610809753
+    },
+    {
+        "content": "<p>You don't like how I did it <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> ? I figure we don't want to run any of that submodule code and can have more control over what gets removed and when</p>",
+        "id": 223023671,
+        "sender_full_name": "Herb",
+        "timestamp": 1610857770
+    },
+    {
+        "content": "<p>And in regards to converting data from variable_store I figure my PR works pretty well. It takes all config files, selects those which are marked translatable and then looks for a translation in variable_store. Is there an issue with that approach?</p>",
+        "id": 223023934,
+        "sender_full_name": "Herb",
+        "timestamp": 1610858201
+    },
+    {
+        "content": "<blockquote>\n<p>You don't like how I did it?</p>\n</blockquote>\n<p>My first impression was, that it's a bit \"dirty\", but thinking it over ... we do not want any module code to run anyway, so your approach seems right. I just wanted some get some additional opinions, as maybe someone else has been there before. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 223031400,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610871587
+    }
+]

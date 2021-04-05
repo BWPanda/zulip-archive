@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>I'm going to paste my notes from the session. Here's my paraphrasing of the comments people posted:</p>\n<p>article:<br>\n<a href=\"https://www.freeform.ca/upgrading-website-drupal-7-backdrop-cms\">https://www.freeform.ca/upgrading-website-drupal-7-backdrop-cms</a></p>\n<p>--<br>\nFixing links or file paths that are embedded in body fields:<br>\n• <a href=\"https://github.com/interconnectit/Search-Replace-DB\">https://github.com/interconnectit/Search-Replace-DB</a> <br>\n• port <a href=\"https://www.drupal.org/project/scanner\">https://www.drupal.org/project/scanner</a><br>\n• Pathologic (already exists in Backdrop)<br>\n• make a symlink</p>\n<div class=\"codehilite\"><pre><span></span><code>cd sites/default\nln -s ../../files files\n</code></pre></div>\n\n\n<p>--<br>\nIf you are using feeds to migrate - you can use feeds tamper to do some of this as well. </p>\n<p>In more complex sites, we migrate using feeds to bring in content rather than upgrade. I have found it to be a better solution. </p>\n<p>--<br>\nWatch out for dates! <br>\nAnd files and images when migrating ... <br>\nfile and image fields, not in body</p>\n<p>--<br>\nHere’s a Drupal 7 module that will tell you the status of all your Drupal 7 modules for Backdrop: <a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\">https://github.com/backdrop-contrib/backdrop_upgrade_status</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/interconnectit/Search-Replace-DB\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/1242291?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/interconnectit/Search-Replace-DB\" title=\"interconnectit/Search-Replace-DB\">interconnectit/Search-Replace-DB</a></div><div class=\"message_embed_description\">This script was made to aid the process of migrating PHP and MySQL based websites. Works with most common CMSes. - interconnectit/Search-Replace-DB</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/backdrop_upgrade_status\" title=\"backdrop-contrib/backdrop_upgrade_status\">backdrop-contrib/backdrop_upgrade_status</a></div><div class=\"message_embed_description\">Checks to see if the installed modules on a Drupal 7 site are ready for upgrade to Backdrop CMS. - backdrop-contrib/backdrop_upgrade_status</div></div></div>",
+        "id": 210549887,
+        "sender_full_name": "Herb",
+        "timestamp": 1600449616
+    },
+    {
+        "content": "<p>I forgot to mention a couple things: make sure d7 code is all up to date before trying to upgrade. And as <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> mentioned I think we need to manually enable ckeditor for each text format</p>",
+        "id": 210552177,
+        "sender_full_name": "Herb",
+        "timestamp": 1600450787
+    },
+    {
+        "content": "<p>Thanks, <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span></p>",
+        "id": 210552337,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600450866
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> you're welcome</p>",
+        "id": 210553458,
+        "sender_full_name": "Herb",
+        "timestamp": 1600451434
+    }
+]

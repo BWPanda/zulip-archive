@@ -1,0 +1,122 @@
+[
+    {
+        "content": "<p>Hi, is there anybody interested in porting ERPAL to Backdrop? Or does sb knows if there is a planned distribution like ERPAL?</p>",
+        "id": 219645852,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1607712640
+    },
+    {
+        "content": "<p>Porting that would be an ambitious undertaking. Is it even maintained anymore?</p>",
+        "id": 219649231,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1607714212
+    },
+    {
+        "content": "<p>No, it 's not maintained anymore, and development has been stopped long before D8 arrived. I talked to the maintainer two years ago. Neither Drupal nor Backdrop is a suitable technical base for this kind of software. Backdrop CMS is for websites, not for \"we bring your business to the next digital level\" kind of projects.</p>",
+        "id": 219653289,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1607716192
+    },
+    {
+        "content": "<p>Hmm...</p>\n<blockquote>\n<p>ERPAL's goal is to have ONE TOOL to consolidate all the different business processes</p>\n</blockquote>\n<p>Have they not heard the term, \"jack-of-all-trades, master of none\"?</p>",
+        "id": 219653789,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607716444
+    },
+    {
+        "content": "<p>Yeah: <a href=\"/user_uploads/18319/64ypYl_tUzidjfP2KM_DLmBt/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/64ypYl_tUzidjfP2KM_DLmBt/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/64ypYl_tUzidjfP2KM_DLmBt/image.png\"></a></div>",
+        "id": 219655503,
+        "sender_full_name": "klonos",
+        "timestamp": 1607717250
+    },
+    {
+        "content": "<p>...it's common for a project to not have a release in years, but the dev version of that one has last been updated in May 2017 ...with 190 open issues in their queue, that is not a good sign.</p>",
+        "id": 219655682,
+        "sender_full_name": "klonos",
+        "timestamp": 1607717336
+    },
+    {
+        "content": "<p>...there are 2 RTBC issues waiting in that state for years: <a href=\"/user_uploads/18319/OzyE_m-OwOv0yKAAKlgvEjJy/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/OzyE_m-OwOv0yKAAKlgvEjJy/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/OzyE_m-OwOv0yKAAKlgvEjJy/image.png\"></a></div>",
+        "id": 219655773,
+        "sender_full_name": "klonos",
+        "timestamp": 1607717399
+    },
+    {
+        "content": "<p>Oh, that looks really bad. Even the official ERPAL home page is gone.</p>",
+        "id": 219668123,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607724181
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"367994\">@Sven Götze</span> Re \"a distribution like ERPAL\", I don't know of such plans. What exactly do you need? Backdrop works great with CiviCRM (<a href=\"https://backdropcms.org/news/official-civicrm-support-backdrop-cms\">https://backdropcms.org/news/official-civicrm-support-backdrop-cms</a>) btw, which would cover one part of ERPAL.</p>",
+        "id": 219668698,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607724513
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> I will give CiviCRM a try. I need the ERP functions instead of CRM. So managing projects with tasks and billing is really important in my usecase.</p>",
+        "id": 219669105,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1607724729
+    },
+    {
+        "content": "<p>I see! Is it a former D7 site, or a new project?</p>",
+        "id": 219669613,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607725153
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"367994\">Sven Götze</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ERPAL.20port.3F/near/219669105\">said</a>:</p>\n<blockquote>\n<p>I will give CiviCRM a try. I need the ERP functions instead of CRM. So managing projects with tasks and billing is really important in my usecase.</p>\n</blockquote>\n<p>I'm not sure exactly what ERP is in detail, but in case it's helpful, CiviCRM does allow \"activities\" to be scheduled and recorded (maybe similar to tasks in your usage), and CiviCase will allow setting up complex workflows. There is an <a href=\"https://docs.civicrm.org/user/en/latest/contributions/invoicing/\">invoicing feature</a> as well.</p>",
+        "id": 219672943,
+        "sender_full_name": "Laryn",
+        "timestamp": 1607727758
+    },
+    {
+        "content": "<p>See also this old post: <a href=\"https://civicrm.org/blog/chrischinchilla/using-civicrm-for-project-management-and-budgeting\">https://civicrm.org/blog/chrischinchilla/using-civicrm-for-project-management-and-budgeting</a></p>",
+        "id": 219672951,
+        "sender_full_name": "Laryn",
+        "timestamp": 1607727771
+    },
+    {
+        "content": "<p>ERP is not CRM. <a href=\"https://en.wikipedia.org/wiki/Enterprise_resource_planning\">https://en.wikipedia.org/wiki/Enterprise_resource_planning</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://en.wikipedia.org/wiki/Enterprise_resource_planning\" style=\"background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ERP_Modules.png/1200px-ERP_Modules.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://en.wikipedia.org/wiki/Enterprise_resource_planning\" title=\"Enterprise resource planning - Wikipedia\">Enterprise resource planning - Wikipedia</a></div><div class=\"message_embed_description\">\n</div></div></div>",
+        "id": 219675402,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1607730018
+    },
+    {
+        "content": "<p>\"Enterprise resource planning (ERP) is the integrated management of main business processes, often in real time and mediated by software and technology.\"</p>",
+        "id": 219675415,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1607730031
+    },
+    {
+        "content": "<p>I often run into ERP solutions in my never-ending quest to find an accounting system I am okay with.</p>",
+        "id": 219675465,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1607730116
+    },
+    {
+        "content": "<p>I did look into ERPAL a couple of times, but it is far more than I need and want.</p>",
+        "id": 219675581,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1607730206
+    },
+    {
+        "content": "<p>My biggest and worst project ever was trying to model business processes with a CMS, it was D7 with CRMCore and a myriad of other modules. I also checked ERPAL first. CMS are not made for that, I learnt it the hard way.</p>",
+        "id": 219682720,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1607737903
+    },
+    {
+        "content": "<p>The site has been relaunched recently, using a Symphony based custom solution, Symphony was also chosen because of powerful connectors to other platforms.</p>",
+        "id": 219683016,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1607738375
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"269428\">mazze.ch</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ERPAL.20port.3F/near/219682720\">said</a>:</p>\n<blockquote>\n<p>My biggest and worst project ever was trying to model business processes with a CMS, it was D7 with CRMCore and a myriad of other modules. I also checked ERPAL first. CMS are not made for that, I learnt it the hard way.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span>  I get your pain, we also have a client with CRM Core.  Buggy and now unsupported.  I've made it work for them just fine, but it's definitely not ideal.  It fit their needs and budget at the time though.</p>",
+        "id": 220015122,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1608054159
+    }
+]

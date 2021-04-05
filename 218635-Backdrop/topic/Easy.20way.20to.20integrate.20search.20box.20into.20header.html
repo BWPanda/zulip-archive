@@ -1,0 +1,93 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html">Easy way to integrate search box into header</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="187004282"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/187004282" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#187004282">(Jan 30 2020 at 16:32)</a>:</h4>
+<p>I haven't found a good way to add the search box to the header. On a lot of sites a search box ends up in the top right corner. Yet it's a bit difficult to put it there. Wondering if anyone else has good approaches for this. I was also wondering if we added it as an option to the default header block</p>
+
+
+
+<a name="187020690"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/187020690" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#187020690">(Jan 30 2020 at 19:18)</a>:</h4>
+<p>I was able to add the 'Search form' block to the header on a test site just now, no problems... Are you having an issue doing this, or is the problem more a theming one in terms of styling it to appear literally in the top-right corner of the header? (in which case I'd suggest looking into CSS Flex/Grid/Floats)</p>
+
+
+
+<a name="187022471"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/187022471" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#187022471">(Jan 30 2020 at 19:38)</a>:</h4>
+<p>More about design. I've used flex but it's not really user friendly</p>
+
+
+
+<a name="187022531"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/187022531" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#187022531">(Jan 30 2020 at 19:38)</a>:</h4>
+<p>Wondering about a quick solution, much like how the header block already has smart defaults</p>
+
+
+
+<a name="187022556"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/187022556" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#187022556">(Jan 30 2020 at 19:38)</a>:</h4>
+<p>Some themes/layouts would be better suited to this task than others then I imagine...</p>
+
+
+
+<a name="187024534"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/187024534" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#187024534">(Jan 30 2020 at 19:58)</a>:</h4>
+<p>There was another person having issues with getting the Search block to display nicely relatively recently. It was on Gitter but I think related to how the submit button was displaying. Agreed that making this more friendly ootb would be helpful.</p>
+
+
+
+<a name="187024620"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/187024620" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#187024620">(Jan 30 2020 at 19:59)</a>:</h4>
+<p>I ported <a href="https://github.com/backdrop-contrib/better_search" target="_blank" title="https://github.com/backdrop-contrib/better_search">https://github.com/backdrop-contrib/better_search</a> at one point for a site but haven't done much with it besides the port.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/better_search" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/better_search" target="_blank" title="backdrop-contrib/better_search">backdrop-contrib/better_search</a></div><div class="message_embed_description">Tweak the default Backdrop search block with CSS animations - backdrop-contrib/better_search</div></div></div>
+
+
+
+<a name="188074491"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/188074491" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#188074491">(Feb 13 2020 at 03:12)</a>:</h4>
+<p>I think that was me. Seems like there should be an easy way in the UI to make the search button go next to the search box. I have to use Custom Search because I need several search paths.</p>
+
+
+
+<a name="188085215"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/188085215" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Graham Oliver <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#188085215">(Feb 13 2020 at 07:58)</a>:</h4>
+<p>I would like there to be a discussion about the Header layout in Basic. I think we need more flexibility to add things and produce different styles/layouts of header. I usually find I have to make custom alterations.</p>
+
+
+
+<a name="188148683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/188148683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#188148683">(Feb 13 2020 at 20:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> maybe we should add a checkbox in the header settings to include a search box?</p>
+
+
+
+<a name="188148707"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/188148707" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#188148707">(Feb 13 2020 at 20:45)</a>:</h4>
+<p>this seems like soemthing that would be a common use case, and would be valuable</p>
+
+
+
+<a name="188156302"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Easy%20way%20to%20integrate%20search%20box%20into%20header/near/188156302" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Easy.20way.20to.20integrate.20search.20box.20into.20header.html#188156302">(Feb 13 2020 at 21:54)</a>:</h4>
+<p>That's what I was thinking. I took a look to see how hard. Probably not that bad to implement but I ended up moving on to something else. I can't recall if we have a backlog issue for it</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

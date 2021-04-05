@@ -1,0 +1,80 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Packaging.20error.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html">Packaging error</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="231256031"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231256031" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231256031">(Mar 22 2021 at 02:11)</a>:</h4>
+<p>In making a beta release for Bee, I get a 'packaging error' text file added to the release on GitHub. In it, it says:</p>
+<blockquote>
+<p>The project node could not be created on <a href="http://BackdropCMS.org">BackdropCMS.org</a> because no .info file was found in the repository.</p>
+</blockquote>
+<p>Is there a way to avoid this? I don't need an info file, because this isn't a module/theme/layout, and I don't want to give the impression that it can be installed like other projects by adding an info file. But at the same time I don't like the 'packaging error' text file added to the release... FYI, Drush has this same problem.</p>
+
+
+
+<a name="231256033"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231256033" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231256033">(Mar 22 2021 at 02:11)</a>:</h4>
+<p><a href="https://github.com/backdrop-contrib/bee/releases/tag/1.x-1.0.0-beta">https://github.com/backdrop-contrib/bee/releases/tag/1.x-1.0.0-beta</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bee/releases/tag/1.x-1.0.0-beta" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bee/releases/tag/1.x-1.0.0-beta" title="Release 1.x-1.0.0-beta · backdrop-contrib/bee">Release 1.x-1.0.0-beta · backdrop-contrib/bee</a></div><div class="message_embed_description">Beta release for 1.0.0</div></div></div>
+
+
+
+<a name="231256233"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231256233" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231256233">(Mar 22 2021 at 02:15)</a>:</h4>
+<p>I see that I can edit the release and remove the text file. Is that the best solution?</p>
+
+
+
+<a name="231267568"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231267568" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231267568">(Mar 22 2021 at 06:12)</a>:</h4>
+<p>Same issue with <a href="https://github.com/backdrop-contrib/backdrop-drush-extension/releases">https://github.com/backdrop-contrib/backdrop-drush-extension/releases</a> <span class="user-mention" data-user-id="256607">@BWPanda</span> ...you can either ignore, or remove the release asset. ...or was your intention to allow creating a release node on <a href="http://b.org">b.org</a> for some reason?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/backdrop-drush-extension/releases" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/backdrop-drush-extension/releases" title="Releases · backdrop-contrib/backdrop-drush-extension">Releases · backdrop-contrib/backdrop-drush-extension</a></div><div class="message_embed_description">A set of commands and boot class for Drush and Backdrop CMS. - backdrop-contrib/backdrop-drush-extension</div></div></div>
+
+
+
+<a name="231267769"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231267769" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231267769">(Mar 22 2021 at 06:16)</a>:</h4>
+<p>...perhaps we should allow <code>type = utility</code> or something like that in .info files. Drupal has done the same. See <a href="https://www.drupal.org/project/drupalorg/issues/2474007">Add a “General” project type to Drupal.org</a></p>
+
+
+
+<a name="231267983"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231267983" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231267983">(Mar 22 2021 at 06:22)</a>:</h4>
+<p>I'll just remove it</p>
+
+
+
+<a name="231268007"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231268007" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231268007">(Mar 22 2021 at 06:22)</a>:</h4>
+<p><span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="231268616"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231268616" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231268616">(Mar 22 2021 at 06:36)</a>:</h4>
+<p>Though it would be nice to have downloads available on <a href="http://B.org">B.org</a>. just not from the project installer...</p>
+
+
+
+<a name="231272299"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Packaging%20error/near/231272299" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Packaging.20error.html#231272299">(Mar 22 2021 at 07:40)</a>:</h4>
+<p>I'm thinking that such projects need a project node, but perhaps no release nodes ...if that's possible <span aria-label="thinking" class="emoji emoji-1f914" role="img" title="thinking">:thinking:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

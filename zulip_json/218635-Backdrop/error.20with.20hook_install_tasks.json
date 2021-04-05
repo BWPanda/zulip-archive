@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>I'm using this hook_install_tasks() in a new profile and got an error:</p>\n<div class=\"codehilite\"><pre><span></span><code>Error: Call to undefined function lock_acquire() in state_initialize() (line 1278 of /app/www/core/includes/bootstrap.inc).\n</code></pre></div>\n\n\n<p>It is triggered by the state_get() function within the hook example code. Could it be that the file /core/includes/lock.in (where that lock_acquire() function is) is not included during install??</p>",
+        "id": 205942326,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596565681
+    },
+    {
+        "content": "<p>I see that you can not use state_get() function as there is no semaphore table at this point, anyway, so it's not a problem with having <a href=\"http://lock.in\">lock.in</a> file included.</p>\n<p>In Drupal 7 they use a variable_get() to set a batch_processing variable (<a href=\"https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_install_tasks/7.x\">https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_install_tasks/7.x</a>). this has been changed to state_get during the port of the core. Is this something never checked before?</p>",
+        "id": 205944697,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596566757
+    },
+    {
+        "content": "<p>created an issue <a href=\"https://github.com/backdrop/backdrop-issues/issues/4518\">https://github.com/backdrop/backdrop-issues/issues/4518</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4518\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4518\" title=\"state_get triggers and error during profile install · Issue #4518 · backdrop/backdrop-issues\">state_get triggers and error during profile install · Issue #4518 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug Working on a new profile, I wanted to implement the hook_install_tasks() function as it&#39;s shown in the api docs (https://api.backdropcms.org/api/backdrop/core%21modules%2...</div></div></div>",
+        "id": 205946402,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596567517
+    }
+]

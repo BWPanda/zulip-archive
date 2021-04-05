@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>Alrighty, so I got this module ported.  I got it moved over to the Backdrop contrib team on github.  Then I got lost.  Dont know what to do next.  Am I done setting it up on Github? What do I do to get it into the module list on <a href=\"http://backdropcms.org\" title=\"http://backdropcms.org\">backdropcms.org</a>  Help? <a href=\"https://github.com/backdrop-contrib/views_selective_filters\" title=\"https://github.com/backdrop-contrib/views_selective_filters\">https://github.com/backdrop-contrib/views_selective_filters</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/views_selective_filters\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/views_selective_filters\" title=\"backdrop-contrib/views_selective_filters\">backdrop-contrib/views_selective_filters</a></div><div class=\"message_embed_description\">Backdrop port of Views Selective Filters Module. Contribute to backdrop-contrib/views_selective_filters development by creating an account on GitHub.</div></div></div>",
+        "id": 195852363,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588259086
+    },
+    {
+        "content": "<p>And here's the issue on contrib about it: <a href=\"https://github.com/backdrop-ops/contrib/issues/366\" title=\"https://github.com/backdrop-ops/contrib/issues/366\">https://github.com/backdrop-ops/contrib/issues/366</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/366\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/366\" title=\"Port of Views Selective Filters · Issue #366 · backdrop-ops/contrib\">Port of Views Selective Filters · Issue #366 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">I&#39;m attempting my first Drupal 7 module port for Views Selective Filters: https://www.drupal.org/project/views_selective_filters I think I&#39;ve got the baseline work done at: https://github.c...</div></div></div>",
+        "id": 195852568,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588259154
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"298007\">@Bob Christenson</span> Once you make a stable release in Github it'll automatically show up on <a href=\"http://B.org\" title=\"http://B.org\">B.org</a></p>",
+        "id": 195853018,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588259317
+    },
+    {
+        "content": "<p>Thanks, any docs on how to do that?</p>",
+        "id": 195853075,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588259347
+    },
+    {
+        "content": "<p><a href=\"https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository#creating-a-release\" title=\"https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository#creating-a-release\">https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository#creating-a-release</a></p>\n<p>Use <code>1.x-1.0.0</code> for the tag and the name/title. Description can be something like 'Initial release'. That's it! <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>",
+        "id": 195855039,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588260014
+    },
+    {
+        "content": "<p>Thanks!  I generally only manage my own private code on github, never really done publicly released stuff before.  Thanks for the link.</p>",
+        "id": 195855198,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588260072
+    },
+    {
+        "content": "<p>OK, I think I did it...I'll watch for it to show up on <a href=\"http://BackdropCMS.org\" title=\"http://BackdropCMS.org\">BackdropCMS.org</a> and hopefully it all worked as it should.  Thanks again for the assist!</p>",
+        "id": 195859376,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588261777
+    },
+    {
+        "content": "<p>Looks like it's there:<br>\n<a href=\"https://backdropcms.org/project/views_selective_filters\" title=\"https://backdropcms.org/project/views_selective_filters\">https://backdropcms.org/project/views_selective_filters</a></p>",
+        "id": 195860977,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588262385
+    },
+    {
+        "content": "<p>Just saw that..sweet!  I think after 15 years in Drupal, I may finally need to learn how to submit/manage contrib modules :)  Thanks for making it easy (so far...)</p>",
+        "id": 195861162,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588262448
+    },
+    {
+        "content": "<p>One aside, it may be unofficial but I think the standard versioning is to try to track the Drupal 7 version number for ease of comparison. So a module that is released as 7.x-1.5 would get released as 1.x-1.5.0 in Backdrop.</p>",
+        "id": 195861189,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588262459
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> based on the version were it deviated into a backdrop module?</p>",
+        "id": 195861293,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588262507
+    },
+    {
+        "content": "<p>Yes, or the version that future D7 changes implemented which are merged into the Backdrop module.</p>",
+        "id": 195861429,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588262549
+    },
+    {
+        "content": "<p>That was probably not proper English.</p>",
+        "id": 195861460,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588262560
+    },
+    {
+        "content": "<p>K, I just did what <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> told me to :) So...blame him. hehe. Should I change anything or just leave it?</p>",
+        "id": 195861557,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588262597
+    },
+    {
+        "content": "<p>Your call. <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span></p>",
+        "id": 195861692,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588262645
+    },
+    {
+        "content": "<p>How would I know which version I should start with?  I'm not even sure where it was when I branched it off from Drupal.</p>",
+        "id": 195861783,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1588262692
+    },
+    {
+        "content": "<p>Looking at dates in the commit history, it looks like you have branched the dev version, (which is typical) and is slightly ahead of 7.x-1.5.</p>",
+        "id": 195862120,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588262805
+    },
+    {
+        "content": "<p>I switched some modules to track the Drupal version after some time of using its own. You could wait until there's a new release and then jump to 1.x-1.5.0 Not a big deal. I put a note in the release explaining the jump</p>",
+        "id": 195954538,
+        "sender_full_name": "Herb",
+        "timestamp": 1588334817
+    }
+]

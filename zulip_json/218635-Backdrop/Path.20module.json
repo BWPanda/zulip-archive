@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>I was chasing an error message in another thread that led me to look at the <code>path_get_info()</code> function. Am I reading this right, that <code>if (!isset($info)) {</code> should actually be <code>if (!isset($all_info)) {</code>?</p>\n<p><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611\">https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 226257126,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613237839
+    },
+    {
+        "content": "<p>I agree, it should be <code>$all_info</code>.</p>",
+        "id": 226258263,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613239119
+    },
+    {
+        "content": "<p>Thx. Made an issue/PR for it.<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4944\">https://github.com/backdrop/backdrop-issues/issues/4944</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4944\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4944\" title=\"Variable typo in path.module · Issue #4944 · backdrop/backdrop-issues\">Variable typo in path.module · Issue #4944 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug There is a typo in a variable name in the path.module file, function path_get_info(): https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611 Th...</div></div></div>",
+        "id": 226258835,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613239740
+    },
+    {
+        "content": "<p>Many thanks for the PR. I was able to review, but not to \"test\". Maybe backdrop_static() is redundant anyway in function path_get_info()?</p>",
+        "id": 226291539,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1613289466
+    }
+]

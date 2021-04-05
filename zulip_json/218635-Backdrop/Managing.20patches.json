@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Wondering how people are managing patches for their projects. Looking for best practices though there are bound to be different necessary approaches. Some sites have composer, some use drush make, some have manual approach, ...</p>",
+        "id": 197599299,
+        "sender_full_name": "Herb",
+        "timestamp": 1589481501
+    },
+    {
+        "content": "<p>Ha! Don't hate on me, but I hack core <span aria-label=\"shock\" class=\"emoji emoji-1f628\" role=\"img\" title=\"shock\">:shock:</span> There are two features I wanted to test/use before they were/are merged into core, so I just applied the patches to core manually (and left the patch files in the root dir to remind me), and then once I update core the new version will include them so it will automatically fix itself <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> <span aria-label=\"fingers crossed\" class=\"emoji emoji-1f91e\" role=\"img\" title=\"fingers crossed\">:fingers_crossed:</span></p>",
+        "id": 197599674,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589481656
+    },
+    {
+        "content": "<p>We have a directory where we keep all the patches we apply to core or contrib, along with a README which describes each patch, why it is included, and any relevant links for more info (like an issue).</p>",
+        "id": 197601268,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589482303
+    },
+    {
+        "content": "<p>One more recipe - <a href=\"https://www.jenlampton.com/blog/sustainable-development-workflow-patching\">https://www.jenlampton.com/blog/sustainable-development-workflow-patching</a></p>",
+        "id": 197603166,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1589483141
+    },
+    {
+        "content": "<p>That's not too dissimilar to how we do it.</p>",
+        "id": 197603442,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589483287
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Managing.20patches/near/197601268\">said</a>:</p>\n<blockquote>\n<p>We have a directory where we keep all the patches we apply to core or contrib, along with a README which describes each patch, why it is included, and any relevant links for more info (like an issue).</p>\n</blockquote>\n<p>Similar here, but I do the write up on an online board, including description of the update method (which varies between sites and hosting services) and links to the corresponding issues on <a href=\"http://d.org\">d.org</a> or <a href=\"http://b.org\">b.org</a>.</p>",
+        "id": 197613923,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589488356
+    },
+    {
+        "content": "<p>The agency I work for uses composer. ...for the few and not-so-active personal sites I have, I used to do it \"manually\" as most of you mentioned: keep the patch files in a directory, and repeat applying them with each upgrade.</p>",
+        "id": 197622929,
+        "sender_full_name": "klonos",
+        "timestamp": 1589493024
+    },
+    {
+        "content": "<p>We've got a debate at my company whether to just have a directory of patches or make files. I'm leaning towards latter. Right now we have the former.</p>",
+        "id": 197628858,
+        "sender_full_name": "Herb",
+        "timestamp": 1589497034
+    }
+]

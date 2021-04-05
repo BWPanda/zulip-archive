@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>Hi...,</p>\n<p>Wheres the best place to look for info on Entity...  </p>\n<p>I'm getting an error with nodeownership module <em>Class EntityAPIController does not exist and could not be loaded in entity_plus_entity_info_alter() (line 237 of....</em></p>\n<p>I've checked D7 entity.controller.inc and the declaration is there but it's not in the BD version of entity in core.</p>\n<p>Or should I use the <em>DefaultEntityController</em></p>\n<p>This is the function I'm trying to get working </p>\n<p>function nodeownership_entity_info() {<br>\n  return array(<br>\n    'claim' =&gt; array(<br>\n      'label' =&gt; t('Claim'),<br>\n      'entity class' =&gt; 'ClaimEntityClass',<br>\n      'controller class' =&gt; 'EntityAPIController',  *** &lt;-------  this is causing the error...  can't find anything in the change record on BD<br>\n      'base table' =&gt; 'nodeownership',<br>\n      'entity keys' =&gt; array(<br>\n        'id' =&gt; 'id',<br>\n      ),<br>\n      // Make use the class' label() and uri() implementation by default.<br>\n      'label callback' =&gt; 'entity_class_label',<br>\n      // 'uri callback' =&gt; 'entity_class_uri',.<br>\n    ),<br>\n  );<br>\n}</p>\n<p>Any help would be appreciated.</p>\n<p><span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 212176189,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601737536
+    },
+    {
+        "content": "<p>Controller class maybe EntityPlusAPIController? On my phone so can't check easily right now.</p>",
+        "id": 212176268,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601737650
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Thanks...  That's not in the file but I've tried both DefaultEntityController and EntityPlusControllerInterface without any errors <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span>  I'll stick with the latter and see how it goes <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 212177277,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601739313
+    }
+]

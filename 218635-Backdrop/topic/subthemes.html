@@ -1,0 +1,669 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/subthemes.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html">subthemes</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="219796947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219796947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219796947">(Dec 14 2020 at 03:34)</a>:</h4>
+<p>I'm having trouble with what seems to me to be basic subtheming; I'm wondering if I've forgotten the basics!</p>
+<p>I want to create a bunch of subthemes of a contrib theme that only differs by a single CSS file.  When I create it, I can see in Chrome Dev Tools that the CSS file is being picked up, but it's being overridden by the parent theme's CSS file.  Isn't that the opposite of what's supposed to happen?</p>
+<p>When I copy the contrib theme and place the subthemes inside it, it works as expected.</p>
+<p>Am I missing something?  I know subthemes can be inside the parent theme's folder, but they don't have to be, do they?</p>
+
+
+
+<a name="219797174"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797174" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797174">(Dec 14 2020 at 03:39)</a>:</h4>
+<p>The relevant bit in my .info file looks like this:</p>
+<div class="codehilite"><pre><span></span><code>base theme = contrib_theme_machine_name
+stylesheets[all][] = mynewstyle.css
+</code></pre></div>
+
+
+
+<a name="219797185"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797185" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797185">(Dec 14 2020 at 03:39)</a>:</h4>
+<p>No, they don't need to be in the base theme's directory.</p>
+
+
+
+<a name="219797274"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797274" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797274">(Dec 14 2020 at 03:41)</a>:</h4>
+<p>Does a new stylesheet work? Is it only when overriding a base theme stylesheet that you have a problem?</p>
+
+
+
+<a name="219797311"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797311" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797311">(Dec 14 2020 at 03:42)</a>:</h4>
+<p>I haven't explicitly tried it, but a new style <em>should</em> work.  The style is there, it's just being overridden by the original style.</p>
+
+
+
+<a name="219797339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797339">(Dec 14 2020 at 03:42)</a>:</h4>
+<p>Here's my .info file:<br>
+<a href="/user_uploads/18319/WE4DoOYLV_V-0zXyUde-m1LJ/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/WE4DoOYLV_V-0zXyUde-m1LJ/image.png" title="image.png"><img src="/user_uploads/18319/WE4DoOYLV_V-0zXyUde-m1LJ/image.png"></a></div>
+
+
+
+<a name="219797352"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797352" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797352">(Dec 14 2020 at 03:43)</a>:</h4>
+<p>And here's the body tag in dev tools: <a href="/user_uploads/18319/FutTAQfUWa9tKATAHaPdq4TT/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/FutTAQfUWa9tKATAHaPdq4TT/image.png" title="image.png"><img src="/user_uploads/18319/FutTAQfUWa9tKATAHaPdq4TT/image.png"></a></div>
+
+
+
+<a name="219797358"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797358" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797358">(Dec 14 2020 at 03:44)</a>:</h4>
+<p>OK, so the styles are being overridden, not the stylesheet itself...</p>
+
+
+
+<a name="219797399"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797399" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797399">(Dec 14 2020 at 03:44)</a>:</h4>
+<p>Oh, I think I just figured it out -- the min version is overriding the regular one.</p>
+
+
+
+<a name="219797409"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797409" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797409">(Dec 14 2020 at 03:45)</a>:</h4>
+<p>Are the base theme's stylesheets being loaded after the sub theme's in the HTML head somehow?</p>
+
+
+
+<a name="219797472"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797472" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797472">(Dec 14 2020 at 03:46)</a>:</h4>
+<p>That seems unlikely.  I'm not doing anything fancy, I'm only adding the css in the theme's info file</p>
+
+
+
+<a name="219797553"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797553" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797553">(Dec 14 2020 at 03:49)</a>:</h4>
+<p>I'm going to try doing the name thing with minimized files</p>
+
+
+
+<a name="219797787"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797787" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797787">(Dec 14 2020 at 03:54)</a>:</h4>
+<p>I think I just figured out my mistake.</p>
+
+
+
+<a name="219797789"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797789" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797789">(Dec 14 2020 at 03:54)</a>:</h4>
+<p>Ah, I think it's because the Bootstrap CSS file is coming from a CDN...</p>
+
+
+
+<a name="219797797"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797797" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797797">(Dec 14 2020 at 03:54)</a>:</h4>
+<p>That's not my current theory :)</p>
+
+
+
+<a name="219797808"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797808" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797808">(Dec 14 2020 at 03:55)</a>:</h4>
+<p>I changed the filename of the CSS file in the subtheme.</p>
+
+
+
+<a name="219797820"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797820" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797820">(Dec 14 2020 at 03:55)</a>:</h4>
+<p>I figured the styles would take precedence over the same styles, but now I realize that's naive.</p>
+
+
+
+<a name="219797897"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797897" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797897">(Dec 14 2020 at 03:57)</a>:</h4>
+<p>I should leave the filename alone, that way Backdrop will squeeze the original out of the array, so it doesn't have to override it -- the original will be gone.  (I think...)</p>
+
+
+
+<a name="219797978"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797978" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797978">(Dec 14 2020 at 03:59)</a>:</h4>
+<p>If you want to completely remove a base theme stylesheet, then yes, you need to use the same name. But I just tested this with a simple sub-theme of bootstrap_lite and even a custom CSS file's CSS is being overridden...</p>
+
+
+
+<a name="219797988"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219797988" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219797988">(Dec 14 2020 at 03:59)</a>:</h4>
+<p>Does that feel like a bug to you?</p>
+
+
+
+<a name="219798041"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798041" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798041">(Dec 14 2020 at 04:00)</a>:</h4>
+<p>I suspect it's specific to Bootstrap Lite...</p>
+
+
+
+<a name="219798230"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798230" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798230">(Dec 14 2020 at 04:04)</a>:</h4>
+<p>Yeah, look at this:</p>
+<div class="codehilite" data-code-language="HTML"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span> <span class="na">media</span><span class="o">=</span><span class="s">"all"</span><span class="p">&gt;</span>
+<span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s2">"http://sandbox.lndo.site/themes/bootstrap_lite/css/style.css?qlb9rk"</span><span class="o">)</span><span class="p">;</span>
+<span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s2">"http://sandbox.lndo.site/themes/test/test.css?qlb9rk"</span><span class="o">)</span><span class="p">;</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"</span> <span class="na">media</span><span class="o">=</span><span class="s">"all"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"</span> <span class="na">media</span><span class="o">=</span><span class="s">"all"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">media</span><span class="o">=</span><span class="s">"all"</span><span class="p">&gt;</span>
+<span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s2">"http://sandbox.lndo.site/themes/bootstrap_lite/css/overrides.css?qlb9rk"</span><span class="o">)</span><span class="p">;</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Bootstrap's CDN-based CSS is being loaded after my 'test' theme's CSS (and thereby overriding it).</p>
+
+
+
+<a name="219798345"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798345" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798345">(Dec 14 2020 at 04:06)</a>:</h4>
+<p>sunnoafbitch <span aria-label="scream" class="emoji emoji-1f631" role="img" title="scream">:scream:</span></p>
+
+
+
+<a name="219798392"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798392" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798392">(Dec 14 2020 at 04:07)</a>:</h4>
+<p>I specifically want to override bootstrap.css</p>
+
+
+
+<a name="219798474"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798474" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798474">(Dec 14 2020 at 04:09)</a>:</h4>
+<p>I think you'll need to open an issue for Bootstrap Lite, asking to change the way they add their CDN CSS. They do it in <a href="https://github.com/backdrop-contrib/bootstrap_lite/blob/1.x-1.x/template.php#L10">hook_css_alter()</a> and even though they set a negative weight, it doesn't seem to have any affect on where the CSS is loaded. I suspect they should instead be calling <code>backdrop_add_css()</code> in a different function...</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bootstrap_lite/blob/1.x-1.x/template.php#L10" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bootstrap_lite/blob/1.x-1.x/template.php#L10" title="backdrop-contrib/bootstrap_lite">backdrop-contrib/bootstrap_lite</a></div><div class="message_embed_description">Bootstrap Lite - a Backdrop Bootstrap-based theme: - backdrop-contrib/bootstrap_lite</div></div></div>
+
+
+
+<a name="219798479"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798479" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798479">(Dec 14 2020 at 04:09)</a>:</h4>
+<p>It actually says this in "admin/appearance/settings/bootstrap_lite"</p>
+<p>"Use BootstrapCDN to serve the Bootstrap framework files. Enabling this setting will prevent this theme from attempting to load any Bootstrap framework files locally."</p>
+
+
+
+<a name="219798573"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798573" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798573">(Dec 14 2020 at 04:11)</a>:</h4>
+<p>So if I disable the CDN (which there's an option to do) it should work the way I was expecting it to.</p>
+
+
+
+<a name="219798578"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798578" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798578">(Dec 14 2020 at 04:11)</a>:</h4>
+<p>And that does</p>
+
+
+
+<a name="219798647"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798647" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798647">(Dec 14 2020 at 04:13)</a>:</h4>
+<p>Yes, it's only the CDN thing that's causing the issue. And it seems there's an existing issue in the queue for this: <a href="https://github.com/backdrop-contrib/bootstrap_lite/issues/13">https://github.com/backdrop-contrib/bootstrap_lite/issues/13</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bootstrap_lite/issues/13" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bootstrap_lite/issues/13" title="CSS file loading in wrong order? · Issue #13 · backdrop-contrib/bootstrap_lite">CSS file loading in wrong order? · Issue #13 · backdrop-contrib/bootstrap_lite</a></div><div class="message_embed_description">Not being sure whether this is an issue with the Bootstrap Lite theme, or with Backdrop core, I&#39;m posting this issue here, hoping someone can help. I did a fresh Backdrop install with &quot;Boo...</div></div></div>
+
+
+
+<a name="219798715"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798715" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798715">(Dec 14 2020 at 04:14)</a>:</h4>
+<p>I'm relieved to know that I hadn't forgotten basic sub-theming as much as it seemed!</p>
+
+
+
+<a name="219798937"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219798937" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219798937">(Dec 14 2020 at 04:19)</a>:</h4>
+<p>I added my suggestion of a fix to that issue. Not that that theme has a maintainer to implement it though... Perhaps a <span class="user-group-mention" data-user-group-id="2152">@Bug Squad</span> member...?</p>
+
+
+
+<a name="219799685"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219799685" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219799685">(Dec 14 2020 at 04:36)</a>:</h4>
+<p>I'm desperate to fix it, it's key to my whole plan.  I think I'm going to fork it, and monkeywrench the CDN.</p>
+
+
+
+<a name="219857823"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219857823" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219857823">(Dec 14 2020 at 15:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> if you can get someone to file a PR for <a href="https://github.com/backdrop-contrib/bootstrap_lite/issues/13">https://github.com/backdrop-contrib/bootstrap_lite/issues/13</a> or you manage to file a PR yourself, then if people test and say it's RTBC, then finally someone from the Bug Squad can merge the change.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bootstrap_lite/issues/13" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bootstrap_lite/issues/13" title="CSS file loading in wrong order? · Issue #13 · backdrop-contrib/bootstrap_lite">CSS file loading in wrong order? · Issue #13 · backdrop-contrib/bootstrap_lite</a></div><div class="message_embed_description">Not being sure whether this is an issue with the Bootstrap Lite theme, or with Backdrop core, I&#39;m posting this issue here, hoping someone can help. I did a fresh Backdrop install with &quot;Boo...</div></div></div>
+
+
+
+<a name="219857997"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219857997" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219857997">(Dec 14 2020 at 15:36)</a>:</h4>
+<p>That sounds like something I should be able to confidently say I can do; let me give it a shot.</p>
+
+
+
+<a name="219859965"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219859965" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219859965">(Dec 14 2020 at 15:51)</a>:</h4>
+<p>After reading that thread, I'm less confident.  I didn't see a patch the solved the issue.  When you say "file a PR" does that imply fixing the problem first?  It's possible I could do that -- the code looks like stuff I understand -- but I'd have to dive into it with more commitment.</p>
+<p>In the meantime, I think I can solve my practical problem by adding a template.php file to each subtheme with this bit in it:</p>
+<div class="codehilite"><pre><span></span><code>&lt;?php
+/**
+ * Implements hook_css_alter().
+ */
+function NAMEOFYOURSUBTHEME_css_alter(&amp;$css) {
+  // Add overrides.
+  $theme_path = backdrop_get_path(&#39;theme&#39;, &#39;NAMEOFYOURSUBTHEME&#39;);
+  $override = $theme_path . &#39;/css/suboverride.css&#39;;
+  $css[$override] = array(
+    &#39;data&#39; =&gt; $override,
+    &#39;type&#39; =&gt; &#39;file&#39;,
+    &#39;every_page&#39; =&gt; TRUE,
+    &#39;media&#39; =&gt; &#39;all&#39;,
+    &#39;preprocess&#39; =&gt; TRUE,
+    &#39;group&#39; =&gt; CSS_THEME,
+    &#39;browsers&#39; =&gt; array(&#39;IE&#39; =&gt; TRUE, &#39;!IE&#39; =&gt; TRUE),
+    &#39;weight&#39; =&gt; 1,
+  );
+}
+</code></pre></div>
+
+
+
+<a name="219860465"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219860465" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219860465">(Dec 14 2020 at 15:54)</a>:</h4>
+<p>Btw, the driving force behind what I'm doing is to make BootSwatch themes easily available.  At some point it would be nice to fix the code in Bootstrap_lite that allows a user to select a bootswatch theme, but for usability reasons I want to implement my workaround anyway.</p>
+
+
+
+<a name="219863947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219863947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219863947">(Dec 14 2020 at 16:14)</a>:</h4>
+<p>Yes <span class="user-mention" data-user-id="256664">@Luke McCormick</span> ...a PR that fixes the issue means that you've fixed it on your local fist <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...I mean a "proper" way that fixes the original issue you are having here (making sure that the CDN-based CSS file is loaded before any subtheme CSS, so that the subtheme CSS takes priority)</p>
+
+
+
+<a name="219865972"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219865972" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219865972">(Dec 14 2020 at 16:29)</a>:</h4>
+<p>Ok, in that case it's something I could probably do "if given enough time" but unlikely to do given the time I have.  I thought the problem was already solved and just needed to be packaged up.</p>
+
+
+
+<a name="219866478"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219866478" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219866478">(Dec 14 2020 at 16:32)</a>:</h4>
+<p>Alternatively, you can solicit the help of others, or see it there's anyone willing to become a maintainer of that theme. That way, they will fix things for everyone using it.</p>
+
+
+
+<a name="219866561"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219866561" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219866561">(Dec 14 2020 at 16:33)</a>:</h4>
+<p>In the meantime: I think I need a little help implementing the phptemplate solution above.  Besides substituting in the subtheme names, I think (but I'm not sure) that I need to specific the specific CSS files that should use the local version?</p>
+<p>Specifically, this line:</p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">$override = $theme_path . '/css/suboverride.css';</span>
+</code></pre></div>
+<p>Does that only affect files named "suboverride.css" ? So I should replace "suboverride.css" with the name of the file I want to override?  Or is this doing something more general, and suboverride.css is a name of something somewhere else within Backdrop?</p>
+
+
+
+<a name="219866871"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219866871" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219866871">(Dec 14 2020 at 16:35)</a>:</h4>
+<p>I'm conducting a GovCMS training this week, so I need to focus on that. Then I would like to focus on the 1.18.0 core release as much as possible, so I cannot help with contrib as much ATM. Sorry.</p>
+
+
+
+<a name="219866920"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219866920" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219866920">(Dec 14 2020 at 16:35)</a>:</h4>
+<p>...btw: <a href="https://backdropcms.org/project/usage/bootstrap_lite">https://backdropcms.org/project/usage/bootstrap_lite</a> shows 140 sites using that theme, and the number has been steadily growing over time.</p>
+
+
+
+<a name="219893506"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219893506" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219893506">(Dec 14 2020 at 19:51)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> BTW, I recently filed a simple PR for Bootstrap Lite that fixed the Bootswatch issue...</p>
+
+
+
+<a name="219904441"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219904441" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219904441">(Dec 14 2020 at 21:27)</a>:</h4>
+<p>I can merge PRs for it if other people test. Ideally we'd need a new maintainer. I found the theme not quite up to snuff so I've stayed away from it. (I'm happy to just customize Basis myself).</p>
+
+
+
+<a name="219912633"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219912633" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219912633">(Dec 14 2020 at 22:39)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/subthemes/near/219893506">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="256664">Luke McCormick</span> BTW, I recently filed a simple PR for Bootstrap Lite that fixed the Bootswatch issue...</p>
+</blockquote>
+<p>I just tested it, and it seemed to solve <a href="https://github.com/backdrop-contrib/bootstrap_lite/issues/19">https://github.com/backdrop-contrib/bootstrap_lite/issues/19</a>.  So...I guess I should RTBC it?</p>
+<p>It revealed at least one more problem -- it looks to me like the fonts aren't being downloaded -- but I imagine I should open another issue for that one?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bootstrap_lite/issues/19" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bootstrap_lite/issues/19" title="Update API URL · Issue #19 · backdrop-contrib/bootstrap_lite">Update API URL · Issue #19 · backdrop-contrib/bootstrap_lite</a></div><div class="message_embed_description">The Bootswatch page is basically empty, because the API URL it's trying to call is old and doesn't work anymore. The current API URL is: https://bootswatch.com/api/4.json</div></div></div>
+
+
+
+<a name="219912678"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219912678" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219912678">(Dec 14 2020 at 22:39)</a>:</h4>
+<p>(The Bootswatch page is populated now, which is pretty delightful)</p>
+
+
+
+<a name="219915205"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219915205" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219915205">(Dec 14 2020 at 23:05)</a>:</h4>
+<p>So, umm...How do I RTBC it?</p>
+
+
+
+<a name="219919463"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219919463" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219919463">(Dec 14 2020 at 23:52)</a>:</h4>
+<p>You can type RTBC in a comment. Update labels too</p>
+
+
+
+<a name="219920752"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219920752" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219920752">(Dec 15 2020 at 00:05)</a>:</h4>
+<p>I added a comment; I don't seem to be able to add an "RTBC" label: <a href="/user_uploads/18319/sGWWloTJoOu2LHhg8zewGcsR/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/sGWWloTJoOu2LHhg8zewGcsR/image.png" title="image.png"><img src="/user_uploads/18319/sGWWloTJoOu2LHhg8zewGcsR/image.png"></a></div>
+
+
+
+<a name="219923268"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219923268" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219923268">(Dec 15 2020 at 00:33)</a>:</h4>
+<p>There probably isn't  a label for that. they have to be added per project.</p>
+
+
+
+<a name="219927362"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219927362" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219927362">(Dec 15 2020 at 01:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> do you think the fonts issue is unrelated?</p>
+
+
+
+<a name="219927468"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219927468" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219927468">(Dec 15 2020 at 01:28)</a>:</h4>
+<p>I'll say (without a lot of confidence) that it might be a similar case of a changed URL for the fonts</p>
+
+
+
+<a name="219927510"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219927510" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219927510">(Dec 15 2020 at 01:29)</a>:</h4>
+<p>There's a setting for Font Awesome</p>
+
+
+
+<a name="219927656"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219927656" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219927656">(Dec 15 2020 at 01:31)</a>:</h4>
+<p>Let's see if this line goes anywhere: </p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">  if ($font_awesome = theme_get_setting('bootstrap_lite_font_awesome')) {</span>
+<span class="x">    $awesome = 'https://maxcdn.bootstrapcdn.com/font-awesome/' . $font_awesome . '/css/font-awesome.min.css';</span>
+</code></pre></div>
+
+
+
+<a name="219927875"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219927875" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219927875">(Dec 15 2020 at 01:34)</a>:</h4>
+<p>Well, it looks like we get something at both <br>
+<a href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css</a> <br>
+and <br>
+<a href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</a></p>
+
+
+
+<a name="219928118"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219928118" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219928118">(Dec 15 2020 at 01:39)</a>:</h4>
+<p>However, I do see this in the DevTools console: </p>
+<p>GET <a href="http://netdna.bootstrapcdn.com/bootswatch/3.3.5/sketchy/bootstrap.min.css">http://netdna.bootstrapcdn.com/bootswatch/3.3.5/sketchy/bootstrap.min.css</a> net::ERR_ABORTED 403 (Forbidden)</p>
+
+
+
+<a name="219928238"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219928238" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219928238">(Dec 15 2020 at 01:41)</a>:</h4>
+<p>(Sketchy has a super-obvious look I figured would be easy to see)</p>
+<p><a href="/user_uploads/18319/eqgbhfFnQKgJRTG6rmRs8MZ9/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/eqgbhfFnQKgJRTG6rmRs8MZ9/image.png" title="image.png"><img src="/user_uploads/18319/eqgbhfFnQKgJRTG6rmRs8MZ9/image.png"></a></div>
+
+
+
+<a name="219937287"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/219937287" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#219937287">(Dec 15 2020 at 04:36)</a>:</h4>
+<p>bootstrapcdn seems a bit sketchy too. I'm getting errors <a href="https://www.bootstrapcdn.com/">https://www.bootstrapcdn.com/</a></p>
+
+
+
+<a name="220042649"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220042649" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220042649">(Dec 15 2020 at 21:08)</a>:</h4>
+<p>So: I've reached MVP (or at least first public release) of the little project I've been working on this week:</p>
+<p><a href="https://github.com/backdrop-contrib/bootswatch_collection">https://github.com/backdrop-contrib/bootswatch_collection</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bootswatch_collection" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bootswatch_collection" title="backdrop-contrib/bootswatch_collection">backdrop-contrib/bootswatch_collection</a></div><div class="message_embed_description">All available Bootswatch themes, implemented as Bootstrap Lite subthemes - backdrop-contrib/bootswatch_collection</div></div></div>
+
+
+
+<a name="220042689"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220042689" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220042689">(Dec 15 2020 at 21:09)</a>:</h4>
+<p>I'm curious to see what people think about it.</p>
+
+
+
+<a name="220044465"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220044465" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220044465">(Dec 15 2020 at 21:24)</a>:</h4>
+<p>Cool. Did you have to build them all individually, or is that repo generated automatically somehow?</p>
+
+
+
+<a name="220049827"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220049827" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220049827">(Dec 15 2020 at 22:09)</a>:</h4>
+<p>I built them individually, with a lot of help from Emacs.</p>
+
+
+
+<a name="220050440"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220050440" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220050440">(Dec 15 2020 at 22:13)</a>:</h4>
+<p>Wow. Someone I know who actually uses Emacs.</p>
+
+
+
+<a name="220052257"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220052257" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220052257">(Dec 15 2020 at 22:29)</a>:</h4>
+<p>The “Mac” in EMACS stands for “macros” — I use them extensively. I create crazy programs on the fly that crawl through hundreds of files doing all sorts of wacky things.</p>
+
+
+
+<a name="220072677"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220072677" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220072677">(Dec 16 2020 at 03:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> ++</p>
+
+
+
+<a name="220072678"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220072678" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220072678">(Dec 16 2020 at 03:09)</a>:</h4>
+<p>mccormick** kudos (Karma: 3)</p>
+
+
+
+<a name="220087062"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220087062" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220087062">(Dec 16 2020 at 08:10)</a>:</h4>
+<p>(deleted)</p>
+
+
+
+<a name="220097481"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220097481" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220097481">(Dec 16 2020 at 10:11)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> <span class="user-mention" data-user-id="256705">@Herb</span> Regarding the FontAwesome URLs for Bootstrap Lite, you might want to see how the Font Awesome module includes the CSS, might be useful here too... <a href="https://github.com/backdrop-contrib/font_awesome/blob/6036029096a68d029bd08791c4fa0f55888526fe/font_awesome.module#L28">https://github.com/backdrop-contrib/font_awesome/blob/6036029096a68d029bd08791c4fa0f55888526fe/font_awesome.module#L28</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/font_awesome/blob/6036029096a68d029bd08791c4fa0f55888526fe/font_awesome.module#L28" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/font_awesome/blob/6036029096a68d029bd08791c4fa0f55888526fe/font_awesome.module#L28" title="backdrop-contrib/font_awesome">backdrop-contrib/font_awesome</a></div><div class="message_embed_description">A simple module to include Font Awesome Icons via CSS classes for usage in your website - backdrop-contrib/font_awesome</div></div></div>
+
+
+
+<a name="220107505"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220107505" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220107505">(Dec 16 2020 at 12:09)</a>:</h4>
+<p>this is really cool <span class="user-mention" data-user-id="256664">@Luke McCormick</span>. really cool.</p>
+
+
+
+<a name="220107691"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220107691" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220107691">(Dec 16 2020 at 12:11)</a>:</h4>
+<p>one non-theme issue is to remember <a href="http://bcms.org">bcms.org</a> has issues when there isn't a root info file. if you release, it'll probably list your project from the first info file it finds.</p>
+
+
+
+<a name="220109175"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220109175" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220109175">(Dec 16 2020 at 12:27)</a>:</h4>
+<p>Well, that project is a first. ...we never had a collection of (sub)themes within a single project before ...might be worth using that project and also <a href="https://github.com/backdrop-contrib/radix_layouts">https://github.com/backdrop-contrib/radix_layouts</a> as test cases, to make sure that core can properly handle these situations.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/radix_layouts" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/radix_layouts" title="backdrop-contrib/radix_layouts">backdrop-contrib/radix_layouts</a></div><div class="message_embed_description">Responsive layouts for Backdrop CMS. Contribute to backdrop-contrib/radix_layouts development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="220127785"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220127785" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220127785">(Dec 16 2020 at 15:15)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256757">docwilmot</span> <a href="#narrow/stream/218635-Backdrop/topic/subthemes/near/220107691">said</a>:</p>
+<blockquote>
+<p>one non-theme issue is to remember <a href="http://bcms.org">bcms.org</a> has issues when there isn't a root info file. if you release, it'll probably list your project from the first info file it finds.</p>
+</blockquote>
+<p>I'm considering including a fork of Bootstrap Lite within Bootswatch Collection, mostly to simplify the experience for my intended audience.  If I do that, I can put more project-wide information into its .info file.</p>
+
+
+
+<a name="220167810"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220167810" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220167810">(Dec 16 2020 at 20:22)</a>:</h4>
+<p>Can't wait to test this. I just haven't had time yet.</p>
+
+
+
+<a name="220202035"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220202035" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220202035">(Dec 17 2020 at 02:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span> - Is there anything special that needs to be done to enable these themes? <a href="https://github.com/backdrop-contrib/bootswatch_collection/issues/2">https://github.com/backdrop-contrib/bootswatch_collection/issues/2</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bootswatch_collection/issues/2" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bootswatch_collection/issues/2" title="Instructions · Issue #2 · backdrop-contrib/bootswatch_collection">Instructions · Issue #2 · backdrop-contrib/bootswatch_collection</a></div><div class="message_embed_description">I&#39;ve downloaded them as a collection into the themes folder and tried enabling them individually. I don&#39;t think that they are working as intended and there are not yet any instructions on h...</div></div></div>
+
+
+
+<a name="220202074"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220202074" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220202074">(Dec 17 2020 at 02:57)</a>:</h4>
+<p>Bootstrap lite needs to be available</p>
+
+
+
+<a name="220202277"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220202277" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220202277">(Dec 17 2020 at 03:01)</a>:</h4>
+<p>I've enabled bootstrap lite, but not made it default and I've switching between the other themes, but nothing much is happening. I am making them the default theme.</p>
+
+
+
+<a name="220202409"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220202409" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220202409">(Dec 17 2020 at 03:03)</a>:</h4>
+<p>OK, got them working. I had to turn off compression and/or aggregation.</p>
+
+
+
+<a name="220204769"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220204769" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220204769">(Dec 17 2020 at 03:55)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> Good to know!</p>
+
+
+
+<a name="220204889"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220204889" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220204889">(Dec 17 2020 at 03:58)</a>:</h4>
+<p>Are you getting fonts?</p>
+
+
+
+<a name="220206216"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220206216" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220206216">(Dec 17 2020 at 04:30)</a>:</h4>
+<p>I wasn't. But, once I turned off aggregation, I think I was.</p>
+
+
+
+<a name="220206769"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220206769" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220206769">(Dec 17 2020 at 04:43)</a>:</h4>
+<p>Was that a cache issue?</p>
+
+
+
+<a name="220208174"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220208174" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220208174">(Dec 17 2020 at 05:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> - Clearing cache does not help. I isolated "aggregate and compress css files" as the problem. <br>
+<a href="https://github.com/backdrop-contrib/bootswatch_collection/issues/3">https://github.com/backdrop-contrib/bootswatch_collection/issues/3</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bootswatch_collection/issues/3" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bootswatch_collection/issues/3" title="Does not work with &quot;Aggregate and compress CSS files&quot; · Issue #3 · backdrop-contrib/bootswatch_collection">Does not work with "Aggregate and compress CSS files" · Issue #3 · backdrop-contrib/bootswatch_collection</a></div><div class="message_embed_description">Instructions on how to reproduce: Spin up a new site Add Bootswatch Collection of themes to /themes directory Enable Bootstrap Lite (leave Basis as default theme) Enable a Bootswatch theme and make...</div></div></div>
+
+
+
+<a name="220261415"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220261415" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220261415">(Dec 17 2020 at 15:57)</a>:</h4>
+<p>I think I know why.</p>
+<p>In my template.php, I overrode bootstrap.css:</p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x"> $override = $theme_path . '/css/bootstrap.css';</span>
+</code></pre></div>
+<p>...but not bootstrap.min.css</p>
+<p>I'm guessing Backdrop grabs the minimized file when it compresses and aggregates?</p>
+
+
+
+<a name="220409982"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220409982" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220409982">(Dec 18 2020 at 18:22)</a>:</h4>
+<p>I dug up a few links about the origin of Bootswatch, and it's all pretty interesting.  I'll be incorporating various things I'm learning from it into this project (if I keep it) and others.</p>
+<p><a href="https://thomaspark.co/2012/02/introducing-bootswatch/">https://thomaspark.co/2012/02/introducing-bootswatch/</a></p>
+<p><a href="https://www.smashingmagazine.com/2013/03/customizing-bootstrap/">https://www.smashingmagazine.com/2013/03/customizing-bootstrap/</a></p>
+<p><a href="https://github.com/thomaspark/bootswatch">https://github.com/thomaspark/bootswatch</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://www.smashingmagazine.com/2013/03/customizing-bootstrap/" style="background-image: url(https://www.smashingmagazine.com/)"></a><div class="data-container"><div class="message_embed_title"><a href="https://www.smashingmagazine.com/2013/03/customizing-bootstrap/" title="How To Customize Twitter’s Bootstrap — Smashing Magazine">How To Customize Twitter’s Bootstrap — Smashing Magazine</a></div><div class="message_embed_description">Twitter’s Bootstrap has taken off like a rocket since its release a year ago. The popular CSS framework supplies a responsive grid system, pre-styled components and JavaScript plugins to a parade of websites.</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/thomaspark/bootswatch" style="background-image: url(https://avatars3.githubusercontent.com/u/900407?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/thomaspark/bootswatch" title="thomaspark/bootswatch">thomaspark/bootswatch</a></div><div class="message_embed_description">Themes for Bootstrap. Contribute to thomaspark/bootswatch development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="220410263"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220410263" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220410263">(Dec 18 2020 at 18:25)</a>:</h4>
+<p>At the end of the Smashing Magazine article is a paragraph that references a number of interesting-sounding tools, most of which seem to now be gone.  That's not surprising, since they were presumably written for earlier version of Bootstrap, and they probably all used LESS and not SASS.   I wonder if there are similar tools available that work with current versions?</p>
+<blockquote>
+<p>Several third-party generators are also available on the Web. Unlike the official generator, they provide live previews as you adjust variables. Bootswatchr organizes itself by variable, and StyleBootstrap by component. BootTheme adds a roll-the-dice feature to randomize your values. If lady luck isn’t on your side, Lavish can generate a theme from any image you provide, and PaintStrap from existing color schemes.</p>
+</blockquote>
+
+
+
+<a name="220410563"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220410563" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220410563">(Dec 18 2020 at 18:27)</a>:</h4>
+<p>Here's one: <a href="https://bootstrap.build/">https://bootstrap.build/</a></p>
+
+
+
+<a name="220412164"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220412164" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220412164">(Dec 18 2020 at 18:41)</a>:</h4>
+<p>Unfortunately <a href="https://bootstrap.build/license">https://bootstrap.build/license</a></p>
+
+
+
+<a name="220449000"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220449000" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220449000">(Dec 19 2020 at 02:30)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256573">Laryn</span> <a href="#narrow/stream/218635-Backdrop/topic/subthemes/near/220412164">said</a>:</p>
+<blockquote>
+<p>Unfortunately <a href="https://bootstrap.build/license">https://bootstrap.build/license</a></p>
+</blockquote>
+<p>Wait, why? Is there something there that's incompatible with ours?</p>
+
+
+
+<a name="220449180"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220449180" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220449180">(Dec 19 2020 at 02:35)</a>:</h4>
+<p>Everything <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...things you can't do:</p>
+<ul>
+<li><strong>Redistribute</strong> or resell our themes and templates or source files.</li>
+<li>...</li>
+<li>Create templates, themes and plugins for sale <strong>or free distribution</strong>.</li>
+</ul>
+
+
+
+<a name="220449313"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220449313" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220449313">(Dec 19 2020 at 02:39)</a>:</h4>
+<p>...so it seems that a person can use these freely for their site, or their customers' sites, BUT you cannot base any distributable project (feee or otherwise) using them <span aria-label="thinking" class="emoji emoji-1f914" role="img" title="thinking">:thinking:</span></p>
+
+
+
+<a name="220454506"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220454506" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220454506">(Dec 19 2020 at 05:13)</a>:</h4>
+<p>Wow. How oddly restrictive. I wonder what their angle is?  Are they selling something?</p>
+
+
+
+<a name="220496852"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/subthemes/near/220496852" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/subthemes.html#220496852">(Dec 20 2020 at 01:31)</a>:</h4>
+<p>Trying to wrap my head around this: <a href="http://paintstrap.com/gallery/">http://paintstrap.com/gallery/</a> (including trying looking at the licensing to see if there are any problems there)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p>Just testing out webp image files in Backdrop. I've managed to upload one but I don't think image styles resizing can handle them. Perhaps that's an issue with GD?</p>",
+        "id": 207877182,
+        "sender_full_name": "Herb",
+        "timestamp": 1598293006
+    },
+    {
+        "content": "<p>I suspect it might have something to do with the fact that png+jpg+gif is \"hardcoded\" somewhere - note: without evidence, just a suspicion. Depending on the php version and how gd was compiled, gd <em>can</em> handle webp.</p>",
+        "id": 207927843,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598335935
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Are you testing <a href=\"https://github.com/backdrop/backdrop-issues/issues/4509\">https://github.com/backdrop/backdrop-issues/issues/4509</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4509\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4509\" title=\"Add webp support · Issue #4509 · backdrop/backdrop-issues\">Add webp support · Issue #4509 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need A common &quot;Opportunity&quot; listed in Google PageSpeed insights is to &quot;Serve images in next-gen formats.&quot; Backdrop does not currently support any next-gen for...</div></div></div>",
+        "id": 207952491,
+        "sender_full_name": "Laryn",
+        "timestamp": 1598356095
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <a href=\"https://github.com/backdrop/backdrop-issues/issues/3136#issuecomment-506351365\">https://github.com/backdrop/backdrop-issues/issues/3136#issuecomment-506351365</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3136#issuecomment-506351365\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3136#issuecomment-506351365\" title=\"[D8] Allow image fields to use any extensions the current image toolkit supports · Issue #3136 · backdrop/backdrop-issues\">[D8] Allow image fields to use any extensions the current image toolkit supports · Issue #3136 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Things to consider: Image uploads need to be allowed Allow it by default? No image styles for SVGs (only attribute mods)? Add support for image styles? (later?) This was addressed in Drupal 8.5.x: ...</div></div></div>",
+        "id": 207965780,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1598363866
+    },
+    {
+        "content": "<p>The line number might have shifted since then.</p>",
+        "id": 207965865,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1598363895
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> I'm aware of that other (and older) Issue, but I'm afraid that supporting <em>everything</em> a toolkit supports is a bit too wide and eventually not possible. And a lot of that older Issue tries to address svg, which gd doesn't support anyway.</p>",
+        "id": 207966193,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598364051
+    },
+    {
+        "content": "<p>I was pointing to that hard coded part you mentioned.</p>",
+        "id": 207967160,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1598364517
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/webp/near/207967160\">said</a>:</p>\n<blockquote>\n<p>I was pointing to that hard coded part you mentioned.</p>\n</blockquote>\n<p>Ah, I see, yes that was one of them. There's a second one in core/modules/system/image.gd.inc But if we extend these two, we get webp support on php 7.1.0 and newer.</p>",
+        "id": 207967909,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598364890
+    },
+    {
+        "content": "<p>I didn't know about that PR. I'll test it at some point</p>",
+        "id": 207968021,
+        "sender_full_name": "Herb",
+        "timestamp": 1598364959
+    },
+    {
+        "content": "<p>...I vaguely recall reading someplace that there are security implications/concerns with the SVG format (something about being able to inject JS in its code or something like that). But yeah, GD doesn't support svg, so image styles would not be able to be applied to them.</p>",
+        "id": 208160095,
+        "sender_full_name": "klonos",
+        "timestamp": 1598482822
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> Are you interested in being an advocate for this one? <a href=\"https://github.com/backdrop/backdrop-issues/issues/4509\">https://github.com/backdrop/backdrop-issues/issues/4509</a> If not I will, but I also had my eye on another issue to advocate for. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4509\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4509\" title=\"Add webp support · Issue #4509 · backdrop/backdrop-issues\">Add webp support · Issue #4509 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need A common &quot;Opportunity&quot; listed in Google PageSpeed insights is to &quot;Serve images in next-gen formats.&quot; Backdrop does not currently support any next-gen for...</div></div></div>",
+        "id": 212879058,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602279945
+    },
+    {
+        "content": "<p>@laryn being an advocate means that I should participate in dev meetings, right? That's hard for me because of timezone. I'd prefer if someone else could take over.</p>",
+        "id": 212902179,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602311775
+    },
+    {
+        "content": "<blockquote>\n<p>being an advocate means that I should participate in dev meetings, right?</p>\n</blockquote>\n<p>No, you just need to make sure people in the meeting know the current status of the issue - either by telling someone directly and asking them to discuss it for you, or just keeping the issue summary up-to-date on a weekly basis.</p>",
+        "id": 212902233,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602311914
+    },
+    {
+        "content": "<p>I also can't attend meetings due to the timezone, but I advocate for issues. I also sometimes update the agenda template directly during the week. Just ask Jen for edit access to Google Drive.</p>",
+        "id": 212902261,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602311982
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> thanks for clarification. I'll advocate for it then to not block <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> from advocating for something else.</p>",
+        "id": 212902741,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602313041
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> when you get closer to getting the webp issue committed, let's colab on the UX side of it and see if we can make it sing.</p>",
+        "id": 216582069,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605257686
+    }
+]

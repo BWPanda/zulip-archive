@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>Is there a way to get a tabbed menu with more than two levels?</p>",
+        "id": 205349466,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596025778
+    },
+    {
+        "content": "<p>Depends on what you need. If the items have to be MENU_DEFAULT_LOCAL_TASK, MENU_LOCAL_TASK ... - not that I knew. But you can create anything, for instance a custom menu block or something with views and style it the way you need it.</p>",
+        "id": 205351823,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1596027405
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> That's what I was thinking.</p>",
+        "id": 205369461,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596035313
+    },
+    {
+        "content": "<p>I cannot make this work. I want to make a complex menu structure under 'node/%node/mymodule'. I cannot render them as local tasks as there is a limit of two levels. I cannot create a custom menu and assign a menu_name to each menu item, and render the menu block as tabs, because the menu items don't appear in the block. I guess the only way to do this is by creating a custom block which prints the links list without depending on the menu.inc. Any other ideas? Thanks.</p>",
+        "id": 205558912,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596173203
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> Maybe someone comes with a fancy idea, if you describe your use case a bit. Currently we only realise that you insist on the \"things\" to be primary/secondary tabs, but it's unclear why this is essential for you.</p>",
+        "id": 205562501,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1596177863
+    },
+    {
+        "content": "<p>thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I 'm not explaining myself well enough.</p>\n<p>I realize that I cannot set any menu item below 'node/%' as normal item. They have to be local tasks as the parents are local task.</p>\n<p>Then I tried to create my own menu 'mymodule-menu' and add menu items to it, through hook_menu, as normal items like 'mymodule/%node/mytask'. The intention is to print a menu block and stylize it as tabs. But my links don't appear in the menu if they use the %node wildcard. (a menu item 'mymodule/mytask' gets indeed printed)</p>\n<p>What am I missing??</p>",
+        "id": 205602857,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596208470
+    },
+    {
+        "content": "<p>Finally, found what I was missing: a _to_arg() function. Now my menu block shows all my custom links with argument wildcards.</p>",
+        "id": 205642039,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596229905
+    },
+    {
+        "content": "<p>Quite an obscure function, really... ;-)</p>",
+        "id": 205642459,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596230173
+    },
+    {
+        "content": "<p><a href=\"https://www.drupal.org/project/drupal/issues/1244980\">https://www.drupal.org/project/drupal/issues/1244980</a> ??</p>",
+        "id": 205648309,
+        "sender_full_name": "klonos",
+        "timestamp": 1596234696
+    },
+    {
+        "content": "<p>It is already documented on <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_menu/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_menu/1</a> but there is only one implementation in the whole core system and one in backdrop-contrib (webform).</p>",
+        "id": 205674995,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1596276635
+    }
+]

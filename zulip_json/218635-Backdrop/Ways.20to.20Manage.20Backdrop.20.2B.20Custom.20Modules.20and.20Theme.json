@@ -1,0 +1,134 @@
+[
+    {
+        "content": "<p>Happy holidays all!</p>\n<p>I'm thinking through the ways to manage a Backdrop site, in this case it's a port of an existing Drupal 7 site. The current site leverages custom modules and a custom theme which exist in GitHub. Is there any documentation or guides for work flows when it comes to managing custom code plus a Backdrop install.</p>\n<p>Things I'd need to do:</p>\n<ol>\n<li>Update Backdrop core and contributed code independent of custom code.</li>\n<li>Version site-specific theme and custom modules in a GitHub repository and deploy / update in production.</li>\n</ol>\n<p>Typically with PHP projects I leverage composer to manage code. I've read about backdrop-composer, and some of the associated discussion, but I'm not convinced that's the way to go.</p>\n<p>Any thoughts, suggestions or guidance?</p>\n<p>Thanks in advance!</p>",
+        "id": 220970882,
+        "sender_full_name": "Joe",
+        "timestamp": 1609001422
+    },
+    {
+        "content": "<p>I also might need to manage your configuration files, depending on what workflow you end up with, so it would be good to at least have that in mind when you're going through this.</p>",
+        "id": 220973819,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1609006915
+    },
+    {
+        "content": "<p>Good point <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> , thanks for that. I'm curious to hear how others accomplish this before I dive in. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 220974101,
+        "sender_full_name": "Joe",
+        "timestamp": 1609007463
+    },
+    {
+        "content": "<p>There is this conversation that started back in 2015 and got new life a month ago, but it's only about configuration: <a href=\"https://github.com/backdrop/backdrop-issues/issues/855\">https://github.com/backdrop/backdrop-issues/issues/855</a><br>\nI thought there was something more, but I'm probably not remembering correctly, since I haven't found anything.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/855\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/855\" title=\"Documentation of Configuration Management  · Issue #855 · backdrop/backdrop-issues\">Documentation of Configuration Management  · Issue #855 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Hi, where can I find some docs about the configuration management? How can i work with the staging dir in files/config/staging - or what is this? What is the best practice to work with GIT (or othe...</div></div></div>",
+        "id": 220974294,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1609007883
+    },
+    {
+        "content": "<p>I found <a href=\"https://api.backdropcms.org/documentation/working-with-configuration\">https://api.backdropcms.org/documentation/working-with-configuration</a> to be helpful, giving 3 different ways to handle configuration.</p>",
+        "id": 220979907,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609018215
+    },
+    {
+        "content": "<p>That's very helpful <span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> , thanks!</p>\n<p>The way parts document what belongs in <code>git</code> and what doesn't is a great way to frame it. That's sort of what I was getting at in my original post. I know core shouldn't get versioned, but how to have it live next to versioned code is what I am looking for any best practices on.</p>",
+        "id": 220985948,
+        "sender_full_name": "Joe",
+        "timestamp": 1609029687
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"372866\">@Joe</span> I just throw core into git too for simplicity. Don't have a composer workflow for Backdrop at the moment</p>",
+        "id": 221019653,
+        "sender_full_name": "Herb",
+        "timestamp": 1609096566
+    },
+    {
+        "content": "<blockquote>\n<p>I know core shouldn't get versioned, but how to have it live next to versioned code is what I am looking for any best practices on.</p>\n</blockquote>\n<p>I think you are describing a common composer workflow. I don't think that too many Backdrop CMS users are using composer. Many folks have come to Backdrop to avoid using composer, or at least because it's not required.</p>\n<p>With composer, I understand how you would leave core out of git. But, without composer I assume that most people do keep Backdrop Core in git (version control). Personally, I keep core in version control for all of my Backdrop CMS sites. </p>\n<p>I manage core, all contrib modules/themes, and any custom code in git.</p>",
+        "id": 221019813,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609096903
+    },
+    {
+        "content": "<p>I have been experimenting with keeping a \"versioned\" copy of config in git. But, I'm still working on this.</p>",
+        "id": 221019874,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609096994
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Late follow-up and a lot of additional questions are inbound. <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> </p>\n<p>Thanks for the responses! <span aria-label=\"100\" class=\"emoji emoji-1f4af\" role=\"img\" title=\"100\">:100:</span> </p>\n<p>Is it fair to say that versioning Backdrop in your project repo is a standard or even recommended way to organize a project site codebase?</p>\n<p>Do you version the other contributed modules your site might use?</p>\n<p>What's your workflow for updating something from core or contrib, e.g. a security patch for core is released? Do you drush in Production to apply any updates then commit and push changes?</p>\n<p>Backdrop provides its own way to autoload <code>hook_autoload_info</code>, which provides a main <code>composer</code> feature, but what about dependency management or namespacing? (I'm really used to <code>composer</code> in other projects, so thinking of one without it is taking me some time to wrap my head around it.)</p>\n<blockquote>\n<p>I have been experimenting with keeping a \"versioned\" copy of config in git. But, I'm still working on this.</p>\n</blockquote>\n<p>Have you made any progress on this?</p>",
+        "id": 231233047,
+        "sender_full_name": "Joe",
+        "timestamp": 1616351696
+    },
+    {
+        "content": "<p>I would like to move this discussion to the Backdrop forum, because I think it will be easier for others to find the information there. I'll post a link to my response in the forum, once I get a chance to reply.</p>",
+        "id": 231233328,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616352013
+    },
+    {
+        "content": "<p>I just paraphrased the question here and am about to post my answer. <br>\n<a href=\"https://forum.backdropcms.org/forum/git-workflow-backdrop-cms\">https://forum.backdropcms.org/forum/git-workflow-backdrop-cms</a></p>",
+        "id": 231239295,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616358769
+    },
+    {
+        "content": "<p>We've got our config versioned now for all backdrop sites. The staging config. And once deployed we sync the config.</p>",
+        "id": 231239929,
+        "sender_full_name": "Herb",
+        "timestamp": 1616359534
+    },
+    {
+        "content": "<p>My only experience of putting a Backdrop site into version control are Backdrop's own sites (<a href=\"http://B.org\">B.org</a>, Docs, etc.). With those <em>everything</em> is in the git repo e.g. (<a href=\"https://github.com/backdrop-ops/backdropcms.org\">https://github.com/backdrop-ops/backdropcms.org</a>). The idea is that all changes happen on your local machine (core/contrib updates, new features, etc.) then you commit all changes and push live.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 231240885,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616360568
+    },
+    {
+        "content": "<p>I've posted more details here - <a href=\"https://forum.backdropcms.org/forum/git-workflow-backdrop-cms\">https://forum.backdropcms.org/forum/git-workflow-backdrop-cms</a></p>",
+        "id": 231241246,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616360900
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> That was very helpful. Is the forum the best place to post moving forward? I appreciate that you paraphrased and moved that all over.</p>\n<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Thanks!</p>\n<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> It was really helpful to see a full Production site in git.</p>",
+        "id": 231246851,
+        "sender_full_name": "Joe",
+        "timestamp": 1616367463
+    },
+    {
+        "content": "<blockquote>\n<p>That was very helpful. Is the forum the best place to post moving forward? </p>\n</blockquote>\n<p>It's up to you. It's ok to ask questions either here or in the forum. However, I think that the forum is a better place to document these discussions for future users. Conversations in Zulip are not discoverable in search engines. Personally, if I am going to spend time composing a detailed answer, I would rather that it be in the forum for wider access. </p>\n<p>I recommend that you ask questions like this in the forum and then post a note here linking to the forum.</p>",
+        "id": 231247804,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616368526
+    },
+    {
+        "content": "<p>In my view, the more questions and answers that users can find in places like the forum, the more users we will attract to Backdrop and the better it will be for the community.</p>",
+        "id": 231248161,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616368940
+    },
+    {
+        "content": "<p>If you do prefer to use composer for backdrop core, it is possible by using <a href=\"https://github.com/backdrop-ops/backdrop-composer/blob/1.x/composer.json\">https://github.com/backdrop-ops/backdrop-composer/blob/1.x/composer.json</a>. But it's not used a lot so needs someone to volunteer to keep it up to date with the main project <span class=\"user-mention\" data-user-id=\"372866\">@Joe</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdrop-composer/blob/1.x/composer.json\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdrop-composer/blob/1.x/composer.json\" title=\"backdrop-ops/backdrop-composer\">backdrop-ops/backdrop-composer</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop-ops/backdrop-composer development by creating an account on GitHub.</div></div></div>",
+        "id": 231256788,
+        "sender_full_name": "Herb",
+        "timestamp": 1616379994
+    },
+    {
+        "content": "<p>In regards to dependency management and namespacing, the approach is the same as Drupal 7 for better or worse. hook_autoload_info replaced the d7 class registry in the database</p>",
+        "id": 231257278,
+        "sender_full_name": "Herb",
+        "timestamp": 1616380634
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> </p>\n<blockquote>\n<p>Personally, if I am going to spend time composing a detailed answer, I would rather that it be in the forum for wider access.<br>\nI recommend that you ask questions like this in the forum and then post a note here linking to the forum.</p>\n</blockquote>\n<p>Make sense, and I'm sure I'll have more questions and I'll do that in the future.</p>",
+        "id": 231347055,
+        "sender_full_name": "Joe",
+        "timestamp": 1616432519
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Thanks for sharing. I checked that out before I posted, that's what led me down the path.</p>\n<p>It's really not a question of preference to me. I'd rather have a project setup similar to the rest of the community to make support easier. As far as a I can tell most Backdrop modules don't contain a <code>composer.json</code>, so I don't think embracing <code>composer</code> flow makes sense (even if it's what I'm used to). I'm still thinking it all the way through though. Thanks again for the help!</p>",
+        "id": 231348291,
+        "sender_full_name": "Joe",
+        "timestamp": 1616432944
+    }
+]

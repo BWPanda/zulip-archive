@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Does the Style Guide module pull code from the style guide repo? I had done some work on the repo many moons ago that isn't reflected in the module. Should the two be cooperating?</p>",
+        "id": 219971698,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608035704
+    },
+    {
+        "content": "<blockquote>\n<p>Does the Style Guide module pull code from the style guide repo?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> are you trying to confuse us again? <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span> In how far is the repo something different or somewhere else? Links might help to understand what you refer to...</p>",
+        "id": 219972839,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608036314
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/styleguide\">https://github.com/backdrop-contrib/styleguide</a> vs <a href=\"https://github.com/backdrop-ops/styleguide\">https://github.com/backdrop-ops/styleguide</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/styleguide\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/styleguide\" title=\"backdrop-contrib/styleguide\">backdrop-contrib/styleguide</a></div><div class=\"message_embed_description\">The styleguide module demonstrates all common Backdrop elements on a single page. - backdrop-contrib/styleguide</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/styleguide\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/styleguide\" title=\"backdrop-ops/styleguide\">backdrop-ops/styleguide</a></div><div class=\"message_embed_description\">Backdrop CMS Admin theme style guide. Contribute to backdrop-ops/styleguide development by creating an account on GitHub.</div></div></div>",
+        "id": 220181240,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608157042
+    },
+    {
+        "content": "<p>Sorry to confuse</p>",
+        "id": 220181586,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608157204
+    },
+    {
+        "content": "<p>But I suspect my question is unnecessary, since I don't think the two have anything to do with each other really.</p>",
+        "id": 220181633,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608157241
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> So the 'ops' repo is/was for designing the new Seven admin theme for Backdrop, and was likely inspired by (and used code from) the contrib module. The contrib module was ported from D7 and allows anyone with a Backdrop site to see all elements rendered on one page for easier theme comparison &amp; theming.</p>",
+        "id": 220181718,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608157296
+    },
+    {
+        "content": "<p>Regarding keeping them up-to-date, I'd suggest work should go into the contrib module, as I doubt the 'ops' repo is used much anymore...</p>",
+        "id": 220181813,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608157331
+    },
+    {
+        "content": "<p>this seems reasonable</p>",
+        "id": 220181845,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608157353
+    },
+    {
+        "content": "<p>Any further work on the Seven theme can utilise the Styleguide contrib module anyway.</p>",
+        "id": 220181851,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608157359
+    }
+]

@@ -1,0 +1,104 @@
+[
+    {
+        "content": "<p>Anyone know a quick and easy way to display a node form (or any page really) in an overlay/modal?</p>",
+        "id": 215215371,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604184322
+    },
+    {
+        "content": "<p>If you find out, I'd like to know. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 215215574,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1604184708
+    },
+    {
+        "content": "<p>I'm interested as well, to link to an edit form from a contextual link in my case. Planning to deconstruct how the block system does it at some point.</p>",
+        "id": 215248003,
+        "sender_full_name": "Laryn",
+        "timestamp": 1604243207
+    },
+    {
+        "content": "<p>Or (God forbid) port the Overlay module to Backdrop?</p>",
+        "id": 215256717,
+        "sender_full_name": "klonos",
+        "timestamp": 1604256650
+    },
+    {
+        "content": "<p>Don't think we need Overlay. I noticed that Views does it, and as <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> said, Layouts/blocks does it... Just need to work out how and see if we can replicate at will.</p>",
+        "id": 215258246,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604258998
+    },
+    {
+        "content": "<p>I'm thinking about using Featherlight, since one of my requirements is that users can close the modal by just clicking off it. But I'll play around and report back when I get a chance.</p>",
+        "id": 215258801,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604259761
+    },
+    {
+        "content": "<p>Ok, so <a href=\"https://github.com/backdrop-contrib/featherlight\">Featherlight</a> works:</p>\n<div class=\"codehilite\" data-code-language=\"HTML\"><pre><span></span><code><span class=\"p\">&lt;</span><span class=\"nt\">a</span> <span class=\"na\">href</span><span class=\"o\">=</span><span class=\"s\">\"#\"</span> <span class=\"na\">data-featherlight</span><span class=\"o\">=</span><span class=\"s\">\"node/add/page #page-node-form\"</span><span class=\"p\">&gt;</span>Add page<span class=\"p\">&lt;/</span><span class=\"nt\">a</span><span class=\"p\">&gt;</span>\n</code></pre></div>\n<p>The <code>#page-node-form</code> part after the URL is a selector that tells Featherlight which part of the page to display; in this case just the form (rather than the whole page (header, menu, footer, etc.)). While that looks much better, it unfortunately has the apparent effect of not loading the JS needed for certain form items (such as the vertical tabs). Looking into a fix for that now...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/featherlight\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/featherlight\" title=\"backdrop-contrib/featherlight\">backdrop-contrib/featherlight</a></div><div class=\"message_embed_description\">A very lightweight jQuery lightbox plugin. Contribute to backdrop-contrib/featherlight development by creating an account on GitHub.</div></div></div>",
+        "id": 215267564,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604272552
+    },
+    {
+        "content": "<p>Core dialog wouldnt work here?</p>",
+        "id": 215269453,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1604275671
+    },
+    {
+        "content": "<p>Twas a joke re Overlay module <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...I was about to mention <a href=\"https://api.backdropcms.org/change-records/dialog-api\">https://api.backdropcms.org/change-records/dialog-api</a> too.</p>",
+        "id": 215269624,
+        "sender_full_name": "klonos",
+        "timestamp": 1604275969
+    },
+    {
+        "content": "<p>Well that seems simpler! Didn't know about that. Thanks guys <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 215269776,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604276275
+    },
+    {
+        "content": "<p>It seems that certain options are hard-coded and I can't change them using <code>data-dialog-options=\"\"</code> (e.g. <code>modal</code>)</p>",
+        "id": 215272506,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604280782
+    },
+    {
+        "content": "<p>Giving up for now. I had trouble getting the width and height to be percentages - it seems you can only specify 'auto' or a pixel value... And if I try to style it with CSS, then it stuffs up the automatic styling.</p>",
+        "id": 215272713,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604281103
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Thank you! I have spent so much time trying to figure out how the modals worked and I never found that. That was one of the last things that I needed to fix for a full port of the Display Suite module.</p>",
+        "id": 215367760,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1604345793
+    },
+    {
+        "content": "<blockquote>\n<p>I have spent so much time trying to figure out how the modals worked and I never found that...</p>\n</blockquote>\n<p>Same here. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> Bookmarked.</p>",
+        "id": 215421673,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1604390448
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> Is <a href=\"https://github.com/backdrop-contrib/ds\">https://github.com/backdrop-contrib/ds</a> the current state of the Display Suite port, or do you have another version somewhere else?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ds\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ds\" title=\"backdrop-contrib/ds\">backdrop-contrib/ds</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/ds development by creating an account on GitHub.</div></div></div>",
+        "id": 217749567,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1606222768
+    },
+    {
+        "content": "<p>That is the most recent copy of my work. Most of the features, such as applying layouts to display modes and entity forms, should be working. I think that there were only a couple things, like the custom fields, that I had not finished testing, but I believe the conversion to config is done for those.</p>",
+        "id": 217789204,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1606240023
+    },
+    {
+        "content": "<p>I have not made a release for it yet because I have not made the upgrade path for it.</p>",
+        "id": 217790375,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1606240597
+    }
+]

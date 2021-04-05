@@ -1,0 +1,106 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html">How to create members-only pages?</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="194628905"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194628905" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Jeff Porten <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194628905">(Apr 20 2020 at 02:40)</a>:</h4>
+<p>Will have portions of the site that are accessible only to authenticated users; I see the module to set permissions by role for menus, but not to set them for individual pages or particular paths and wildcards? (Vaguely recalling this could be done with layouts, but not sure if that's the right tree in this forest.)</p>
+
+
+
+<a name="194633444"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194633444" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194633444">(Apr 20 2020 at 05:02)</a>:</h4>
+<p>There are a few different "access" modules. I've used this one on a few sites: <a href="https://backdropcms.org/project/content_view_access" title="https://backdropcms.org/project/content_view_access">https://backdropcms.org/project/content_view_access</a></p>
+
+
+
+<a name="194705759"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194705759" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Jeff Porten <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194705759">(Apr 20 2020 at 17:13)</a>:</h4>
+<p>So if I'm reading that right, the simplest way about this is to install that module, then create a content-type such as "members page" which anonymous users can't reach?</p>
+
+
+
+<a name="194707691"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194707691" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194707691">(Apr 20 2020 at 17:29)</a>:</h4>
+<p>Yes, that's how this one works. <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="194729295"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194729295" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194729295">(Apr 20 2020 at 20:35)</a>:</h4>
+<p>I've also created custom module for one off sites where a field is added to a content type and then check for the status of that field with the access hook</p>
+
+
+
+<a name="194973451"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194973451" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194973451">(Apr 22 2020 at 18:36)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> this thread got me to thinking about porting Taxonomy Access Control or Taxonomy Access Control Lite. <br>
+noticed that you started on tac_lite a while ago. <br>
+wondering if you think I should start from forking your repo or start from scratch?</p>
+
+
+
+<a name="194982024"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194982024" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194982024">(Apr 22 2020 at 19:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="259074">@ericfg</span> - I need to verify this later, but have to run out now. BUT, I believe that the only thing I did was copy the Drupal module to Backdrop CMS, possibly run it through the coder upgrade module (or whatever it is called). You can start over OR you can just work with my repo. I would be happy to share access (if that is necessary). I would also be happy to just turn over this project to you, if that is helpful. </p>
+<p>I believe I started this for someone else. I was not working on this for myself, rather at the request of another user.</p>
+
+
+
+<a name="194982041"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194982041" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194982041">(Apr 22 2020 at 19:45)</a>:</h4>
+<p>I'll look more later tonight to verify what I'm telling you from memory.</p>
+
+
+
+<a name="194982060"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194982060" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194982060">(Apr 22 2020 at 19:45)</a>:</h4>
+<p>I don't expect to get back to it anytime soon.</p>
+
+
+
+<a name="194986341"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/194986341" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#194986341">(Apr 22 2020 at 20:21)</a>:</h4>
+<p>cool. thanks. that's consistent with the note you left in the repo.</p>
+
+
+
+<a name="195081843"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/195081843" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#195081843">(Apr 23 2020 at 15:56)</a>:</h4>
+<p>for now I'll just fork your repo and start from there, other details we can worry about later</p>
+
+
+
+<a name="195113261"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/195113261" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#195113261">(Apr 23 2020 at 20:10)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="259074">ericfg</span> <a href="#narrow/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F/near/195081843" title="#narrow/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F/near/195081843">said</a>:</p>
+<blockquote>
+<p>for now I'll just fork your repo and start from there, other details we can worry about later</p>
+</blockquote>
+<p>I don't know if I needed to grant to extra permissions on the module or not, but I've given you maintainer permissions. Feel free to add yourself as the maintainer on the Readme and simply take over this module.</p>
+
+
+
+<a name="195113291"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20create%20members-only%20pages%3F/near/195113291" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F.html#195113291">(Apr 23 2020 at 20:10)</a>:</h4>
+<p><a href="https://github.com/backdrop-contrib/tac_lite" title="https://github.com/backdrop-contrib/tac_lite">https://github.com/backdrop-contrib/tac_lite</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/tac_lite" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/tac_lite" title="backdrop-contrib/tac_lite">backdrop-contrib/tac_lite</a></div><div class="message_embed_description">Simple access control based on categories. Contribute to backdrop-contrib/tac_lite development by creating an account on GitHub.</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>It looks like I can provide a Views <code>json</code> file in a module's <code>config</code> folder and it gets installed automatically when the module is first installed. When I disable and uninstall the module, that View remains. Is that best practice, or should the module disable/delete it? Is there an automated way to do so?</p>",
+        "id": 190775649,
+        "sender_full_name": "Laryn",
+        "timestamp": 1584390496
+    },
+    {
+        "content": "<p>In fact, even after the module is fully uninstalled I can't delete the view currently from the UI (likely since I've added a <code>module=\"module_name\"</code> line in the <code>.json</code>).</p>",
+        "id": 190775812,
+        "sender_full_name": "Laryn",
+        "timestamp": 1584390586
+    },
+    {
+        "content": "<p>Maybe you need to add it to <code>hook_config_info()</code> for it to be deleted automatically on uninstall...?</p>",
+        "id": 190778005,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584391712
+    },
+    {
+        "content": "<p>Funny, I had the same question recently but forgot to ask. So... - should we delete it or not after module uninstall? What is the recommended way?</p>",
+        "id": 190825378,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1584438242
+    },
+    {
+        "content": "<p>I just verified that using hook_config_info() doesn't remove views on uninstall. It has to be <code>$config-&gt;delete</code> inside hook_uninstall.<br>\nAnother unasked question has been answered: using <code>\"module\": \"mymodule\",</code> in views json prevents manual deletes and allows to revert views to their initial setup, if they are overridden. (Which is good.)</p>",
+        "id": 190833441,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1584443241
+    },
+    {
+        "content": "<blockquote>\n<p>I just verified that using hook_config_info() doesn't remove views on uninstall.</p>\n</blockquote>\n<p>I wonder if it should...?</p>",
+        "id": 190833588,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584443331
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda (Peter)</span> <a href=\"#narrow/stream/218635-General/topic/Module-provided.20views/near/190833588\" title=\"#narrow/stream/218635-General/topic/Module-provided.20views/near/190833588\">said</a>:</p>\n<blockquote>\n<p>I wonder if it should...?</p>\n</blockquote>\n<p>Interesting question - maybe it makes sense to not delete them automatically and module maintainers take care of it.</p>",
+        "id": 190834096,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1584443685
+    },
+    {
+        "content": "<p>Not always. E.g. a module provides a view that lists items it creates (e.g. Mailchimp lists (off the top of my head)). If you uninstall the module, the view has no more use as the data it displays was removed with the module, so the view should go too.</p>",
+        "id": 190834260,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584443808
+    },
+    {
+        "content": "<p>Sure, if a view is useless without its module, the view should get deleted (config-&gt;delete). But is this always the case? I think, Drupal doesn't delete views automatically either. Views can make sense without their modules...</p>",
+        "id": 190834542,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1584444043
+    },
+    {
+        "content": "<p>I suppose one option in certain cases would be for a module to unset the <code>\"module\": \"mymodule\"</code> line in the view in the uninstall hook, so it's not automatically deleted but <strong>can be</strong> deleted if desired.</p>",
+        "id": 190836540,
+        "sender_full_name": "Laryn",
+        "timestamp": 1584445746
+    },
+    {
+        "content": "<p>That's a good idea. <code>config_clear($config_file, 'module')</code> in hook_uninstall could do the trick.</p>",
+        "id": 190836681,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1584445889
+    },
+    {
+        "content": "<p>I have modules that create views that could be useful after the module is disabled, I'm thinking that in those cases there might also be a check to see if the view was modified via the views ui; delete it if it is unchanged, unset/clear the connection to the module if it has been modified</p>",
+        "id": 190914710,
+        "sender_full_name": "ericfg",
+        "timestamp": 1584481460
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>What's the best way to break \"Attempting to re-run cron while it is already running.\" on a Backdrop site?</p>",
+        "id": 214620069,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603739564
+    },
+    {
+        "content": "<p>By \"break\", do you mean stop? I think the biggest thing to look for is a long running process within a short cron window.</p>",
+        "id": 214622031,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603740691
+    },
+    {
+        "content": "<p>I mean end whatever process is stalled to allow cron to run again. Or does this just continue running until it's complete? Where do I see which cron processes are currently running?</p>",
+        "id": 214622297,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603740812
+    },
+    {
+        "content": "<p>Okay, site in question runs cron okay now. I guess I misinterpreted that warning to mean something was stalled rather than just that it was still processing.</p>",
+        "id": 214622769,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603741050
+    },
+    {
+        "content": "<p>If you grep the config files for cron, do you see anything there? I'm so used to Elysia Cron over the last few years, I'm not even sure how Drupal does it.</p>",
+        "id": 214623012,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1603741156
+    },
+    {
+        "content": "<p>I didn't see anything that looked relevant. Some searching on D7 turned up a variable that doesn't seem to exist in Backdrop; maybe it's become a state.</p>",
+        "id": 214657588,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603768772
+    },
+    {
+        "content": "<p>Yes, cron_key and cron_last are in the state db table. It this (...re-run cron while it is already...) happened just once, ignore it. If it happens regularly, check if your cron jobs runs often enough (and regularly) and also check your modules for their <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_cron/1\">hook_cron()</a> - and try to figure out, which one runs so long.</p>",
+        "id": 214669074,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1603785229
+    }
+]

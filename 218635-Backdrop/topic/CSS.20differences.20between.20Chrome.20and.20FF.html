@@ -1,0 +1,87 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html">CSS differences between Chrome and FF</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="197110707"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/CSS%20differences%20between%20Chrome%20and%20FF/near/197110707" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html#197110707">(May 11 2020 at 07:46)</a>:</h4>
+<p>I've been using a version of Chrome for the last year, and just switched back to Firefox. A site I'm in the process of theming looks weird in FF that looked fine in Chrome. It seems to have to do with <code>display: flex;</code> and widths (e.g. getting a center column to stretch the remaining width in a flexbox). Does anyone have any insights they can provide? This is really stumping me...</p>
+
+
+
+<a name="197111706"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/CSS%20differences%20between%20Chrome%20and%20FF/near/197111706" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html#197111706">(May 11 2020 at 07:57)</a>:</h4>
+<p>Hey <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> is that site publicly accessible? Url?</p>
+
+
+
+<a name="197111892"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/CSS%20differences%20between%20Chrome%20and%20FF/near/197111892" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html#197111892">(May 11 2020 at 07:58)</a>:</h4>
+<p>No, but if you think you can help I can give you the domain/IP to setup in your local hosts file...</p>
+
+
+
+<a name="197111936"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/CSS%20differences%20between%20Chrome%20and%20FF/near/197111936" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html#197111936">(May 11 2020 at 07:59)</a>:</h4>
+<p>I've been able to simulate what I'm trying to do in a CSS testing sandbox website thing, so FF and the CSS seems to work, so it must be an issue with my site specifically...</p>
+
+
+
+<a name="197112387"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/CSS%20differences%20between%20Chrome%20and%20FF/near/197112387" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html#197112387">(May 11 2020 at 08:03)</a>:</h4>
+<p>Hm. If it's not public it will be hard for me to help. A quick idea: maybe there are conflicting/interfering  css rules from your theme or a base theme?</p>
+
+
+
+<a name="197112556"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/CSS%20differences%20between%20Chrome%20and%20FF/near/197112556" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html#197112556">(May 11 2020 at 08:05)</a>:</h4>
+<p>Yeah, I've been looking through them all (using FF's Developer Tools) and scrolling down on each element to see inherited/overridden styles, but can't see anything so far.</p>
+
+
+
+<a name="197119885"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/CSS%20differences%20between%20Chrome%20and%20FF/near/197119885" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html#197119885">(May 11 2020 at 09:26)</a>:</h4>
+<p>I was able to solve this by adding <code>justify-content: space-between;</code> to the container element. However that wasn't needed in Chrome, so I suspect it's a work-around instead of a fix...</p>
+
+
+
+<a name="197148819"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/CSS%20differences%20between%20Chrome%20and%20FF/near/197148819" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/CSS.20differences.20between.20Chrome.20and.20FF.html#197148819">(May 11 2020 at 13:59)</a>:</h4>
+<p>Ok, after the above 'fix', I experienced further, similar problems with different parts of the site, but the above 'fix' didn't work for those. I'm thankful to sya however that I found and fixed the root cause and that my site now looks proper in Firefox and Chrome. The issue was that I'm using Seven as my base theme (it has nice form styling, etc.) and it has CSS which displays blocks as tables:</p>
+<div class="codehilite"><pre><span></span><code>.block {
+  display: table;
+}
+</code></pre></div>
+
+
+<p>(I don't know why...)<br>
+So wherever I had blocks as flexbox items, it was mucking up in FF. I simply changed blocks in flexbox to display as blocks and that fixed it:</p>
+<div class="codehilite"><pre><span></span><code>.wrapper {
+  display: flex;
+
+  .block {
+    display: block;
+  }
+}
+</code></pre></div>
+
+
+<p>(I use SASS - gotta love that indenting!)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

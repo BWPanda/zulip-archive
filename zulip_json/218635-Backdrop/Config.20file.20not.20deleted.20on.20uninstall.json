@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>If I declare my mymodule.settings config file in hook_config_info() and create a default config file, the mymodule.settings.json file is created automatically in the config directory upon module installation, yay. But when I disable+uninstall the module, that file is left behind in the active config folder (unless I explicitly remove it in hook_uninstall()). Shouldn't it be automatically removed from the active config folder upon uninstallation? <a href=\"https://api.backdropcms.org/converting-modules-from-drupal\">This page says so.</a> But it's not happening with 1.17.4.</p>",
+        "id": 220289036,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1608232820
+    },
+    {
+        "content": "<p>It should be removed automatically, yes</p>",
+        "id": 220291784,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608234052
+    },
+    {
+        "content": "<p>Ah hah. I guess it helps if hook_config_info() actually returns $prefixes. (The auto-generated version from coder_upgrade module leaves out the \"return $prefixes\" line.)</p>",
+        "id": 220294695,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1608235470
+    },
+    {
+        "content": "<p>I noticed that too: <a href=\"https://github.com/backdrop-contrib/coder_upgrade/issues/28\">https://github.com/backdrop-contrib/coder_upgrade/issues/28</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/coder_upgrade/issues/28\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/coder_upgrade/issues/28\" title=\"hook_config_info cleanup · Issue #28 · backdrop-contrib/coder_upgrade\">hook_config_info cleanup · Issue #28 · backdrop-contrib/coder_upgrade</a></div><div class=\"message_embed_description\">Example from a recent port, hook_config_info comes out like this: /** * Implements hook_config_info(). */ function userprotect_config_info() { $prefixes[&#39;userprotect.settings&#39;] = array( &amp;#3...</div></div></div>",
+        "id": 220295494,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608235857
+    },
+    {
+        "content": "<p>Yup, I just found that! Fixing it should also address <a href=\"https://github.com/backdrop-contrib/coder_upgrade/issues/21\">https://github.com/backdrop-contrib/coder_upgrade/issues/21</a>, making the call superfluous, right?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/coder_upgrade/issues/21\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/coder_upgrade/issues/21\" title=\"Use config()-&gt;delete() instead of config_clear() in .install file · Issue #21 · backdrop-contrib/coder_upgrade\">Use config()-&gt;delete() instead of config_clear() in .install file · Issue #21 · backdrop-contrib/coder_upgrade</a></div><div class=\"message_embed_description\">Please read backdrop/backdrop-issues#4186 (comment) to see that replacing Drupal 7&#39;s variable_del() function in .install files is not sufficient. Either config_clear() should be used in the .mo...</div></div></div>",
+        "id": 220297390,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1608236821
+    }
+]

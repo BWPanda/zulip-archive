@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>...a thing I'm going to miss is the GitHub integration in Gitter (notifications on GitHub comments, label, milestone, and status change etc.)</p>",
+        "id": 184842550,
+        "sender_full_name": "klonos",
+        "timestamp": 1578218703
+    },
+    {
+        "content": "<p>Maybe someone should look into that</p>",
+        "id": 184842649,
+        "sender_full_name": "Herb",
+        "timestamp": 1578218904
+    },
+    {
+        "content": "<p><a href=\"https://zulipchat.com/api/incoming-webhooks-overview\" target=\"_blank\" title=\"https://zulipchat.com/api/incoming-webhooks-overview\">https://zulipchat.com/api/incoming-webhooks-overview</a></p>\n<blockquote>\n<p>An incoming webhook allows a third-party service to push data to Zulip when something happens.</p>\n</blockquote>",
+        "id": 184842719,
+        "sender_full_name": "klonos",
+        "timestamp": 1578219067
+    },
+    {
+        "content": "<p>...and <a href=\"https://zulipchat.com/api/non-webhook-integrations\" target=\"_blank\" title=\"https://zulipchat.com/api/non-webhook-integrations\">https://zulipchat.com/api/non-webhook-integrations</a> I guess</p>",
+        "id": 184842789,
+        "sender_full_name": "klonos",
+        "timestamp": 1578219197
+    },
+    {
+        "content": "<p><a href=\"https://zulipchat.com/integrations/\" target=\"_blank\" title=\"https://zulipchat.com/integrations/\">https://zulipchat.com/integrations/</a></p>",
+        "id": 184842844,
+        "sender_full_name": "klonos",
+        "timestamp": 1578219277
+    },
+    {
+        "content": "<p>^^ has GitHub already <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 184842846,
+        "sender_full_name": "klonos",
+        "timestamp": 1578219295
+    },
+    {
+        "content": "<p><a href=\"https://zulipchat.com/integrations/doc/github\" target=\"_blank\" title=\"https://zulipchat.com/integrations/doc/github\">https://zulipchat.com/integrations/doc/github</a></p>",
+        "id": 184842856,
+        "sender_full_name": "klonos",
+        "timestamp": 1578219310
+    },
+    {
+        "content": "<p>So looks like we can integrate GitHub notifications. I can imagine they'd go to their own stream</p>",
+        "id": 184842861,
+        "sender_full_name": "Herb",
+        "timestamp": 1578219324
+    },
+    {
+        "content": "<p>Who's set this Zulip instance up for us? Was it <span class=\"user-mention\" data-user-id=\"256607\">@Peter Anderson (BWPanda)</span> or <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span></p>",
+        "id": 184842862,
+        "sender_full_name": "klonos",
+        "timestamp": 1578219326
+    },
+    {
+        "content": "<p>Not sure.</p>",
+        "id": 184842964,
+        "sender_full_name": "Herb",
+        "timestamp": 1578219529
+    },
+    {
+        "content": "<p>...it will need a person that also has access to the GitHub repos settings; so pinging <span class=\"user-mention\" data-user-id=\"256358\">@Jennifer Lampton</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> (for when you have time)</p>",
+        "id": 184842980,
+        "sender_full_name": "klonos",
+        "timestamp": 1578219582
+    },
+    {
+        "content": "<p>For some of the integrations seems like they'd need to be installed on our own server and then integrated here. Maybe that's how it works with gitter too?</p>",
+        "id": 184843026,
+        "sender_full_name": "Herb",
+        "timestamp": 1578219624
+    },
+    {
+        "content": "<p>Oh looks like the GitHub one is easier. No need for installing anything.</p>",
+        "id": 184843147,
+        "sender_full_name": "Herb",
+        "timestamp": 1578219890
+    },
+    {
+        "content": "<p>I didn't set this up. <span class=\"user-mention\" data-user-id=\"256358\">@Jennifer Lampton</span>  setup Backdrop on Zulip originally, then had trouble with removing the 'invite only' status, so I think it might have been <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> who fixed that and setup streams, etc...</p>",
+        "id": 184847392,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578228043
+    },
+    {
+        "content": "<p>I wonder if being able to setup these things will help us decide whether we want to make Zulip Backdrop's official chat software (i.e. work on doing that now), or whether that effort should only be made once it's decided (if) Zulip becomes official (i.e. wait and do it later)...?</p>",
+        "id": 184848167,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578229482
+    },
+    {
+        "content": "<p>I think we should at least get an idea of how much effort it would be. Someone with admin access could easily setup the simple integrations. I think GitHub notifications is one. Dragonbot would be a bit more effort</p>",
+        "id": 184852433,
+        "sender_full_name": "Herb",
+        "timestamp": 1578237192
+    },
+    {
+        "content": "<p>Looks like anyone can add a bot by default.</p>",
+        "id": 184852868,
+        "sender_full_name": "Herb",
+        "timestamp": 1578237994
+    },
+    {
+        "content": "<p>Thought I saw somewhere before that someone mentioned the ability (or lack thereof) to automatically link to issues, e.g. #2655 But just saw in the organisation settings the Linkifiers section where these can be setup!</p>",
+        "id": 184861772,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578253357
+    }
+]

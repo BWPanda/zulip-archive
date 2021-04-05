@@ -1,0 +1,69 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Responsive.20images.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Responsive.20images.html">Responsive images</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="209695220"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Responsive%20images/near/209695220" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Responsive.20images.html#209695220">(Sep 10 2020 at 19:14)</a>:</h4>
+<p>I was looking into this conversation about Breakpoints and Picture modules: <a href="https://github.com/backdrop-ops/contrib/issues/409">https://github.com/backdrop-ops/contrib/issues/409</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/contrib/issues/409" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/contrib/issues/409" title="Port request for Breakpoints · Issue #409 · backdrop-ops/contrib">Port request for Breakpoints · Issue #409 · backdrop-ops/contrib</a></div><div class="message_embed_description">Name of the module, theme, or layout Breakpoints Link to the drupal.org module, theme, or layout https://www.drupal.org/project/breakpoints Related forum post https://forum.backdropcms.org/forum/al...</div></div></div>
+
+
+
+<a name="209695382"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Responsive%20images/near/209695382" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Responsive.20images.html#209695382">(Sep 10 2020 at 19:15)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> Does Srcset Images have that same functionality? I've looked at it and installed it but having a bit of a hard time figuring out the final steps for configuring it and telling it which styles are intended for which widths/breakpoints...</p>
+
+
+
+<a name="209705529"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Responsive%20images/near/209705529" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Responsive.20images.html#209705529">(Sep 10 2020 at 20:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> I haven't used it in a while, but I think you just setup image styles (e.g. slideshow-desktop, slideshow-mobile, etc.) then configure srcset images to reference those... Maybe I can help more with a more specific question or screenshots...</p>
+
+
+
+<a name="209772809"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Responsive%20images/near/209772809" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Responsive.20images.html#209772809">(Sep 11 2020 at 12:19)</a>:</h4>
+<p>I think I just can't figure out how you tell srcset which image style is for mobile, which one is for desktop, for example. <a href="/user_uploads/18319/l7R7EAPEHpqp0-kaNNWT6ASo/Screen-Shot-2020-09-11-at-7.19.29-AM.jpg">Screen-Shot-2020-09-11-at-7.19.29-AM.jpg</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/l7R7EAPEHpqp0-kaNNWT6ASo/Screen-Shot-2020-09-11-at-7.19.29-AM.jpg" title="Screen-Shot-2020-09-11-at-7.19.29-AM.jpg"><img src="/user_uploads/18319/l7R7EAPEHpqp0-kaNNWT6ASo/Screen-Shot-2020-09-11-at-7.19.29-AM.jpg"></a></div>
+
+
+
+<a name="209773269"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Responsive%20images/near/209773269" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Responsive.20images.html#209773269">(Sep 11 2020 at 12:24)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Ah. Here's a quote from the module's README:</p>
+<blockquote>
+<p>srcset lets you specify different image variants which <strong>the browser chooses between</strong> based on the screen size. For example, you can specify a large, medium and small variant of a particular image; then, <strong>depending on the user's screen size, the browser will automatically load the appropriately-sized image</strong>.</p>
+</blockquote>
+<p>You don't choose specific sizes for specific devices, the browser does that.</p>
+
+
+
+<a name="209773585"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Responsive%20images/near/209773585" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Responsive.20images.html#209773585">(Sep 11 2020 at 12:27)</a>:</h4>
+<p>This might help too: <a href="https://html.com/attributes/img-srcset/">https://html.com/attributes/img-srcset/</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://html.com/attributes/img-srcset/" style="background-image: url(https://html.com/wp-content/uploads/Code.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="https://html.com/attributes/img-srcset/" title="What Img Srcset Does In HTML5: A Quick &amp; Simple Guide">What Img Srcset Does In HTML5: A Quick &amp; Simple Guide</a></div><div class="message_embed_description">Defines multiple sizes of the same image, allowing the browser to select the appropriate image source.</div></div></div>
+
+
+
+<a name="209776448"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Responsive%20images/near/209776448" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Responsive.20images.html#209776448">(Sep 11 2020 at 12:54)</a>:</h4>
+<p>Ah, somehow I missed that. Thanks!</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

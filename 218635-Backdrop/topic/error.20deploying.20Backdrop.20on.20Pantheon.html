@@ -1,0 +1,70 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html">error deploying Backdrop on Pantheon</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="201437272"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20deploying%20Backdrop%20on%20Pantheon/near/201437272" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html#201437272">(Jun 19 2020 at 20:35)</a>:</h4>
+<p>Anyone else have issues spinning up Backdrop on Pantheon? <a href="https://backdropcms.org/try-backdrop">https://backdropcms.org/try-backdrop</a></p>
+
+
+
+<a name="201437383"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20deploying%20Backdrop%20on%20Pantheon/near/201437383" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html#201437383">(Jun 19 2020 at 20:36)</a>:</h4>
+<p>I've created an issue. <a href="https://github.com/backdrop-ops/backdrop-pantheon/issues/38">https://github.com/backdrop-ops/backdrop-pantheon/issues/38</a>. Pantheon support thinks it's the lack of a pantheon.upstream.yml but they can't provide official support so that's all the help we'll get</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdrop-pantheon/issues/38" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdrop-pantheon/issues/38" title="Error deploying Backdrop site on Pantheon: add pantheon.upstream.yml. · Issue #38 · backdrop-ops/backdrop-pantheon">Error deploying Backdrop site on Pantheon: add pantheon.upstream.yml. · Issue #38 · backdrop-ops/backdrop-pantheon</a></div><div class="message_embed_description">Pantheon support suggested we try add https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml and see if that works. I think we should have that file anyway even if it doesn&amp;...</div></div></div>
+
+
+
+<a name="201439104"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20deploying%20Backdrop%20on%20Pantheon/near/201439104" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html#201439104">(Jun 19 2020 at 20:56)</a>:</h4>
+<p>Something is wrong with the git repo <a href="https://github.com/backdrop-ops/backdrop-pantheon">https://github.com/backdrop-ops/backdrop-pantheon</a> <span class="user-mention" data-user-id="263951">@jenlampton</span> <span class="user-mention" data-user-id="258586">@quicksketch</span> The "main" branch last had a commit two years ago. I only found this out when trying to spin up a site and it failed. My fork has a pantheon.upstream.yml but not in the parent. Something got lost</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdrop-pantheon" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdrop-pantheon" title="backdrop-ops/backdrop-pantheon">backdrop-ops/backdrop-pantheon</a></div><div class="message_embed_description">Version of Backdrop CMS that runs on the Pantheon hosting platform. - backdrop-ops/backdrop-pantheon</div></div></div>
+
+
+
+<a name="201443874"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20deploying%20Backdrop%20on%20Pantheon/near/201443874" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html#201443874">(Jun 19 2020 at 21:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> ohnoes, this is definitely my fault... looking into it now</p>
+
+
+
+<a name="201443962"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20deploying%20Backdrop%20on%20Pantheon/near/201443962" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html#201443962">(Jun 19 2020 at 21:49)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> what's the last commit in your fork?</p>
+
+
+
+<a name="201444153"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20deploying%20Backdrop%20on%20Pantheon/near/201444153" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html#201444153">(Jun 19 2020 at 21:51)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@quicksketch</span> who did the 1.16.2 update this wednesday? We may need them to push that code back up to the master branch</p>
+
+
+
+<a name="201446094"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20deploying%20Backdrop%20on%20Pantheon/near/201446094" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html#201446094">(Jun 19 2020 at 22:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span>  <span class="user-mention" data-user-id="258586">@quicksketch</span> fixed everything...  I have no idea how that happened -- but I'm 100% sure it was my fault. Maybe there was already a main branch on that repo? maybe I got my remotes crossed? no idea...  I'm so sorry everyone!</p>
+
+
+
+<a name="201447641"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/error%20deploying%20Backdrop%20on%20Pantheon/near/201447641" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/error.20deploying.20Backdrop.20on.20Pantheon.html#201447641">(Jun 19 2020 at 22:40)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> thanks for fixing! This stuff happens, I know I've done similar. I'll be able to check tomorrow</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

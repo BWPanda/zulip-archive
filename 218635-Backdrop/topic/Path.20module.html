@@ -1,0 +1,48 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Path.20module.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Path.20module.html">Path module</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="226257126"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Path%20module/near/226257126" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Path.20module.html#226257126">(Feb 13 2021 at 17:37)</a>:</h4>
+<p>I was chasing an error message in another thread that led me to look at the <code>path_get_info()</code> function. Am I reading this right, that <code>if (!isset($info)) {</code> should actually be <code>if (!isset($all_info)) {</code>?</p>
+<p><a href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611">https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="226258263"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Path%20module/near/226258263" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Path.20module.html#226258263">(Feb 13 2021 at 17:58)</a>:</h4>
+<p>I agree, it should be <code>$all_info</code>.</p>
+
+
+
+<a name="226258835"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Path%20module/near/226258835" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Path.20module.html#226258835">(Feb 13 2021 at 18:09)</a>:</h4>
+<p>Thx. Made an issue/PR for it.<br>
+<a href="https://github.com/backdrop/backdrop-issues/issues/4944">https://github.com/backdrop/backdrop-issues/issues/4944</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4944" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4944" title="Variable typo in path.module · Issue #4944 · backdrop/backdrop-issues">Variable typo in path.module · Issue #4944 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug There is a typo in a variable name in the path.module file, function path_get_info(): https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/path.module#L590-L611 Th...</div></div></div>
+
+
+
+<a name="226291539"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Path%20module/near/226291539" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Path.20module.html#226291539">(Feb 14 2021 at 07:57)</a>:</h4>
+<p>Many thanks for the PR. I was able to review, but not to "test". Maybe backdrop_static() is redundant anyway in function path_get_info()?</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

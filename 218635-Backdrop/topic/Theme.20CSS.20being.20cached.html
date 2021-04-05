@@ -1,0 +1,58 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Theme.20CSS.20being.20cached.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Theme.20CSS.20being.20cached.html">Theme CSS being cached</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="213994643"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Theme%20CSS%20being%20cached/near/213994643" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Theme.20CSS.20being.20cached.html#213994643">(Oct 21 2020 at 00:09)</a>:</h4>
+<p>Anyone know why my CSS changes aren't taking effect straight away? Normally I can make a change to the theme's CSS file, save, then reload the site to see the CSS take effect. But it's not working currently and I have to clear caches each time I make a change. All caching and aggregation on <code>admin/config/development/performance</code> is turned off...</p>
+
+
+
+<a name="213994803"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Theme%20CSS%20being%20cached/near/213994803" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Theme.20CSS.20being.20cached.html#213994803">(Oct 21 2020 at 00:12)</a>:</h4>
+<p>Ha, apparently I've come across this before and filed an issue for it <span aria-label="smiling face" class="emoji emoji-263a" role="img" title="smiling face">:smiling_face:</span> <a href="https://github.com/backdrop/backdrop-issues/issues/4086">https://github.com/backdrop/backdrop-issues/issues/4086</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4086" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4086" title="Changes to CSS not reflected until after cache clear · Issue #4086 · backdrop/backdrop-issues">Changes to CSS not reflected until after cache clear · Issue #4086 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug When all caching and aggregation is disabled, and you make a change to a theme&#39;s CSS file, the change isn&#39;t reflected on the site after a simple browser refresh, you ...</div></div></div>
+
+
+
+<a name="213995649"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Theme%20CSS%20being%20cached/near/213995649" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Theme.20CSS.20being.20cached.html#213995649">(Oct 21 2020 at 00:27)</a>:</h4>
+<p>I think this is Color-module related. Updated the issue to reflect that.</p>
+
+
+
+<a name="214000269"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Theme%20CSS%20being%20cached/near/214000269" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Theme.20CSS.20being.20cached.html#214000269">(Oct 21 2020 at 01:51)</a>:</h4>
+<p>Yes, if you are using the color module, you need to resave your color settings so it will regenerate the files.</p>
+
+
+
+<a name="214000397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Theme%20CSS%20being%20cached/near/214000397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Theme.20CSS.20being.20cached.html#214000397">(Oct 21 2020 at 01:53)</a>:</h4>
+<p>I thought we had an issue somewhere to regenerate the color files when caches are cleared, but I can't seem to find it atm</p>
+
+
+
+<a name="214001378"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Theme%20CSS%20being%20cached/near/214001378" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Theme.20CSS.20being.20cached.html#214001378">(Oct 21 2020 at 02:10)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> <a href="https://github.com/backdrop/backdrop-issues/issues/4295">https://github.com/backdrop/backdrop-issues/issues/4295</a> I referenced that issue in my update.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4295" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4295" title="[DX] Themes with color support: CSS changes not taking effect unless theme settings are re-saved. · Issue #4295 · backdrop/backdrop-issues">[DX] Themes with color support: CSS changes not taking effect unless theme settings are re-saved. · Issue #4295 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need I just ran into a situation in which I made a css change and could not get it to take effect, regardless of how many times I cleared the browser cache or the Backdrop cache....</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

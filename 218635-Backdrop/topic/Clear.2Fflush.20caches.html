@@ -1,0 +1,300 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html">Clear/flush caches</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="215999939"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/215999939" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#215999939">(Nov 08 2020 at 10:15)</a>:</h4>
+<p>I get so confused by these three API functions:</p>
+<ul>
+<li><a href="https://api.backdropcms.org/api/backdrop/core%21includes%21cache.inc/function/cache_clear_all/1">cache_clear_all</a></li>
+<li><a href="https://api.backdropcms.org/api/backdrop/core%21includes%21cache.inc/function/cache_flush/1">cache_flush</a></li>
+<li><a href="https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_flush_all_caches/1">backdrop_flush_all_caches</a></li>
+</ul>
+<p>Any others I missed...?</p>
+<p>I wish there was just one cache clearing/flushing function that either cleared a specific cache, or all of them.</p>
+
+
+
+<a name="216000660"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/216000660" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#216000660">(Nov 08 2020 at 10:34)</a>:</h4>
+<p>At least for cache_clear_all() there's a discussion to deprecate it: <a href="https://github.com/backdrop/backdrop-issues/issues/2158">https://github.com/backdrop/backdrop-issues/issues/2158</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2158" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2158" title="[DX] Mark cache_clear_all() as deprecated · Issue #2158 · backdrop/backdrop-issues">[DX] Mark cache_clear_all() as deprecated · Issue #2158 · backdrop/backdrop-issues</a></div><div class="message_embed_description">We should use the new backdrop_flush_all_caches() wherever possible to utilize our shiny new cache system. Let&#39;s replace all core usage of cache_clear_all and mark the function deprecated, to b...</div></div></div>
+
+
+
+<a name="216071495"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/216071495" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#216071495">(Nov 09 2020 at 11:28)</a>:</h4>
+<p>I can see the use for all three. Sometimes you don't know the specific cache item to clear but you don't want to rebuild everything either (like menus, JS, etc)</p>
+
+
+
+<a name="227976416"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227976416" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227976416">(Feb 26 2021 at 19:08)</a>:</h4>
+<p>Side topic... This is IMO, one of the most under-rated modules for Drupal 7: <a href="https://www.drupal.org/project/ui_cache_clear">https://www.drupal.org/project/ui_cache_clear</a></p>
+<p>I know the cache system has changed a bit on Backdrop so I don't know if ui_cache_clear would still be relevant, but it has been a life-saver for me when it comes to clearing container caches on D7.</p>
+
+
+
+<a name="227985018"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227985018" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227985018">(Feb 26 2021 at 20:07)</a>:</h4>
+<p><a href="/user_uploads/18319/uR-v-5VhoxCgVBUZmYBLJjVy/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/uR-v-5VhoxCgVBUZmYBLJjVy/image.png" title="image.png"><img src="/user_uploads/18319/uR-v-5VhoxCgVBUZmYBLJjVy/image.png"></a></div>
+
+
+
+<a name="227985067"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227985067" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227985067">(Feb 26 2021 at 20:07)</a>:</h4>
+<p>I don't know if it has all the same options, but there is this menu in core already</p>
+
+
+
+<a name="227985187"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227985187" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227985187">(Feb 26 2021 at 20:08)</a>:</h4>
+<p>I personally never clear individual caches, only ever the Flush all caches option...</p>
+
+
+
+<a name="227989312"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227989312" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227989312">(Feb 26 2021 at 20:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> individual cache clearing is a game-changer. Clearing all caches is absolutely horrible on larger sites. It has to rebuild everything from scratch as well as rebuild ALL of the caches. In my experience, it takes on average 3 page loads for all caches to be rebuilt (on drupal at least... I haven't benchmarked on BD). That means that 3 people will suffer from slower page views because of a cache clear and when Google says "Your SEO depends on page speed!!!" It becomes a bit more difficult to want to hit that button willy-nilly.</p>
+<p>Using ui_cache_clear, if you have a block (with caching) or an embedded view (with caching) you can clear the cache of just that block or that specific view without having to clear the cache for the site or even the page.</p>
+<p>I would be fine if there was a way to clear the specific page cache and everything that touches it (views, blocks etc) but D7 caches were never really designed to be granular like this.</p>
+<p>On one of my e-commerce sites, I have probably 8 views on average embedded into the product pages using panels. If I make a change on the product page that impacts the view on that page and the changes don't show up, I can clear the cache of that specific view, refresh the page and be done. All of my other caches stay intact.</p>
+<p>Ideally, a piece of software that uses caches should be smart enough to understand which caches need to be flushed automatically when something changes. Drupal 7 was horrible about this... D8+ I think got a little better? I always had cache clearing issues on D8+ as well and seem to just resort to flushing all caches anyway... </p>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> What backdrop has for clearing caches is similar to what D7 has through the admin menu. Unfortunately it clears the caches for everything on those particular areas, not just the specific caches of the page or container you're working on.</p>
+<p>Ideally, BD needs a way to clear the caches of just the viewed page without touching the caches of the rest of the site. If I'm working on 1 or 2 pages and the updates aren't showing due to caching, only those pages need to be cleared to inspect the changes. It's not ideal to flush the entire sites caches just to view updated changes to 1 or 2 pages.</p>
+<p>Sorry for going on a side-tangent... I had no intention of saying "we need to fix anything", I just wanted to point out ui_cache_clear as a tool that works really well for my needs.</p>
+
+
+
+<a name="227989686"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227989686" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227989686">(Feb 26 2021 at 20:38)</a>:</h4>
+<blockquote>
+<p>Clearing all caches is absolutely horrible on larger sites.</p>
+</blockquote>
+<p>I guess that's where the difference is - I only have small sites <span aria-label="smiling face" class="emoji emoji-263a" role="img" title="smiling face">:smiling_face:</span></p>
+
+
+
+<a name="227990094"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227990094" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227990094">(Feb 26 2021 at 20:40)</a>:</h4>
+<p>I've recently hit this problem working on Poll module. See <a href="https://github.com/backdrop-contrib/poll/issues/1">https://github.com/backdrop-contrib/poll/issues/1</a> for details. In short, just replacing Drupal's <code>cache_clear_all();</code> with <code>backdrop_flush_all_caches()</code> was devastating performance-wise. Luckily, turns out Backdrop allows clearing cache for individual node pages with <code>cache('cache_entity_node')-&gt;flush();</code>.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/poll/issues/1" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/poll/issues/1" title="Does not register a vote · Issue #1 · backdrop-contrib/poll">Does not register a vote · Issue #1 · backdrop-contrib/poll</a></div><div class="message_embed_description">so you can vote twice to get: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry &#39;3-1-172.21.0.8&#39; for key &#39;PRIMARY&#39;: INSERT INTO {poll_vote} (`nid`, `chid`, `uid`...</div></div></div>
+
+
+
+<a name="227990689"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227990689" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227990689">(Feb 26 2021 at 20:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> That might be a nice little contrib idea to add for the short term?</p>
+
+
+
+<a name="227990890"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227990890" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227990890">(Feb 26 2021 at 20:45)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="330989">Phil Ward</span> <a href="#narrow/stream/218635-Backdrop/topic/Clear.2Fflush.20caches/near/227990689">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="258960">Alan Mels</span> That might be a nice little contrib idea to add for the short term?</p>
+</blockquote>
+<p>would be really easy to implement in a contrib module. do you need it soon?</p>
+
+
+
+<a name="227992033"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227992033" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227992033">(Feb 26 2021 at 20:52)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> Not right away, but that doesn't mean other folks wouldn't benefit from it.</p>
+
+
+
+<a name="227992871"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227992871" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227992871">(Feb 26 2021 at 20:58)</a>:</h4>
+<p>Have you checked this menu item? <a href="/user_uploads/18319/ZUzM1T7RleaeIgQb1F2KVRy_/page_cachepng">page_cachepng</a> Does it clear all pages instead of individual page?</p>
+
+
+
+<a name="227995568"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227995568" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227995568">(Feb 26 2021 at 21:17)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> that should technically flush all pages instead of an individual page. I've had mixed results with that on Drupal and little experience with it on Backdrop.</p>
+<p>The page and else is still a bad mechanism if only 1 or 2 pages need flushed though.</p>
+<p>I could be wrong, but I think <span class="user-mention" data-user-id="256663">@Joseph Flatt</span> is working on cache tags that are similar to how D8+ does it. I don't know the details though.</p>
+
+
+
+<a name="227997030"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227997030" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227997030">(Feb 26 2021 at 21:28)</a>:</h4>
+<blockquote>
+<p>individual cache clearing is a game-changer. Clearing all caches is absolutely horrible on larger sites.  </p>
+</blockquote>
+<p>This is interesting to hear and make sense. I never think twice about clearing all caches, because I work on a lot of sites where it just doesn't matter that much. But, I can see this is not always true. </p>
+<p>I have one site, where maybe I should be a bit more conscious of this given it's page load and traffic.</p>
+
+
+
+<a name="227999682"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/227999682" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#227999682">(Feb 26 2021 at 21:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> It is pretty similar to D8's cache handling, although it is not exactly the same. In theory though you should be able to get very granular cache handling by just adding cache tags when you load your data.</p>
+
+
+
+<a name="228000626"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228000626" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228000626">(Feb 26 2021 at 21:53)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> sounds good. Curious how well it will be able to understand "this page changed and there are other pieces that are directly tied to this change so we need to update the cache for not only x, but y, z and a,b,c"?</p>
+<p>I know that adds a lot more into the mix though.</p>
+<p>I honestly would be fine if there was a "current page" cash clear option as long as it took into account all of the different pieces that touch that page. (Embedded entities like paragraphs, views, general blocks etc).</p>
+<p>ui_cache_clear adds this option in the admin menu but I've had mixed results with it.</p>
+
+
+
+<a name="228100145"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228100145" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228100145">(Feb 28 2021 at 02:59)</a>:</h4>
+<p>"Curious how well it will be able to understand "this page changed and there are other pieces that are directly tied to this change so we need to update the cache for not only x, but y, z and a,b,c"?"</p>
+<p>It's supposed to handle those situations as well.</p>
+
+
+
+<a name="228102613"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228102613" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228102613">(Feb 28 2021 at 03:54)</a>:</h4>
+<p>Yeah, cache tags are meant to solve this very problem you are having <span class="user-mention" data-user-id="330989">@Phil Ward</span> ...but do it "automagically". If cache tags are configured properly, your site will be smart enough to selectively refresh caches for only the things/components that have been updated on the page.</p>
+
+
+
+<a name="228102824"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228102824" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228102824">(Feb 28 2021 at 03:59)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> this will be nice. I know it's a lot of overhead on the DB, but I feel like it's a good approach. Hopefully we can get the forced clearing to work better than D8+. I always have to resort to clearing everything just to see a small update.</p>
+
+
+
+<a name="228103106"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228103106" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228103106">(Feb 28 2021 at 04:04)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> at some point said that we don't really need cache tags in Backdrop, because we are not as "heavy" as D8/9, and we all agreed that this feature would mostly be a "marketing" thing (for all the people that say "but Drupal has this and that" etc.) ...well it seems that larger sites built on Backdrop may actually benefit greatly by this feature after all.</p>
+
+
+
+<a name="228168116"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228168116" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228168116">(Mar 01 2021 at 00:25)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> I just discovered ui_cache_clear last week. I think it would be useful to port. I didn't because the client is moving to d8.</p>
+
+
+
+<a name="228175163"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228175163" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228175163">(Mar 01 2021 at 02:47)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> I think it could be useful on D8, but it hasn't been maintained in a while. Definitely been nice on D7.</p>
+<p>Cache tags might be the end all solution for Backdrop (provided there's a way to clear specific pages)</p>
+
+
+
+<a name="228177512"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228177512" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228177512">(Mar 01 2021 at 03:27)</a>:</h4>
+<p>There's no UI for cache tags so I don't think they're the same thing.</p>
+
+
+
+<a name="228178224"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228178224" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228178224">(Mar 01 2021 at 03:42)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> my understanding is that cache tags do automatic "magic" or "smart" cache refresh of page components that have been updated. What ui_cache_clear does is manual, selective cache clearing ...but yeah, in theory (properly configured) cache tags would make the need for modules like ui_cache_clear moot.</p>
+
+
+
+<a name="228257977"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228257977" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228257977">(Mar 01 2021 at 16:15)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> I think it should be able to handle most circumstances when editing nested content. However, if you need to manually clear cache entries for some reason, then it might be a great solution for that.</p>
+
+
+
+<a name="228258210"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228258210" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228258210">(Mar 01 2021 at 16:17)</a>:</h4>
+<p>It might be easier to understand if I wrote up some documentation for how to implement it with a custom module.</p>
+
+
+
+<a name="228290292"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228290292" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228290292">(Mar 01 2021 at 19:21)</a>:</h4>
+<p>Personally, I would love to see Core have the ability to flush an individual page along with anything that touches that page. I know in theory the cache tags will do this, but I know if a contrib doesn't properly tie into that cache system, it runs the risk of everything getting flushed automatically "except" that one contrib piece (until someone brings it up and it gains attention).</p>
+<p>It's too early to know how well this will work in long term practicality. I suggest this as a last-resort option in case caches don't automatically get flushed for whatever reason.</p>
+<p>I don't know if it would be possible to make the core cache system work regardless of contrib where contribs are just automatically encompassed whether they want to be it not as opposed to having to explicitly tie into the cache, but this might be the end-all solution. "Included with the option to manually opt-out" is how I would probably approach it.</p>
+<p>Just spit balling ideas, experience and thoughts.</p>
+
+
+
+<a name="228336319"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228336319" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228336319">(Mar 02 2021 at 01:05)</a>:</h4>
+<blockquote>
+<p>Personally, I would love to see Core have the ability to flush an individual page along with anything that touches that page. I know in theory the cache tags will do this...</p>
+</blockquote>
+<p>Cache tags work the other way around, i.e., it's inside out, not outside in. For example, if you have a view in a block on a page, editing the page will not necessarily invalidate the cache for the block and view, but editing the view should invalidate the cache for the block and the page.</p>
+<blockquote>
+<p>...but I know if a contrib doesn't properly tie into that cache system, it runs the risk of everything getting flushed automatically "except" that one contrib piece (until someone brings it up and it gains attention).</p>
+</blockquote>
+<p>I'm not sure that's necessarily true, but Joseph would know better.</p>
+
+
+
+<a name="228356603"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/228356603" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#228356603">(Mar 02 2021 at 05:37)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> yeah, in my workflow, editing a node that has fields that are in-turn displayed on that nodes layout using a view (think a product comparison view as an example) I would need the node save to trigger a cache flush on the view "if" the current nodes field that is in that view changes.</p>
+<p>Many of the views I have embedded on a page include the currently viewed node information along with similar info from other nodes.</p>
+<p>If one node gets updated, the view needs refreshed so all of the other nodes using the same view receive the same updated info.</p>
+<p>Just throwing out a seemingly rare but real-world scenario I've encountered.</p>
+
+
+
+<a name="229708324"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/229708324" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#229708324">(Mar 10 2021 at 17:33)</a>:</h4>
+<p>Cache tags do work as you describe: updating a node that appears in a View will refresh the View cache. Pantheon had backported cache tags to Drupal 7, which is where I've tried it out. Is that what <span class="user-mention" data-user-id="256663">@Joseph Flatt</span> is using to port to Backdrop?</p>
+
+
+
+<a name="229708917"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/229708917" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#229708917">(Mar 10 2021 at 17:36)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> by the way I've got an initial port of UI Cache Clear here <a href="https://github.com/backdrop-contrib/ui_cache_clear">https://github.com/backdrop-contrib/ui_cache_clear</a>. It works for Views and nodes right now. I removed the block functionality since there is no block level cache anymore. And I haven't really tried to convert the panels cache clearing to layout. There is a cache_layout_path table but I'm not sure how that compares to Panels. I suspect it's not helpful to have cache clear button on Layouts since the cache_layout_path does not save the full page content, just the config.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/ui_cache_clear" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/ui_cache_clear" title="backdrop-contrib/ui_cache_clear">backdrop-contrib/ui_cache_clear</a></div><div class="message_embed_description">Contribute to backdrop-contrib/ui_cache_clear development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="229708957"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/229708957" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#229708957">(Mar 10 2021 at 17:36)</a>:</h4>
+<p>Anyway, give it a spin</p>
+
+
+
+<a name="229709010"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/229709010" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#229709010">(Mar 10 2021 at 17:36)</a>:</h4>
+<p>Yes. I started by porting the module, and then after I had the module working I copied the code into it's respective modules in core.</p>
+
+
+
+<a name="229709509"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/229709509" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#229709509">(Mar 10 2021 at 17:40)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> what's the link to your PR?</p>
+
+
+
+<a name="229710004"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/229710004" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#229710004">(Mar 10 2021 at 17:42)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop/pull/3475">https://github.com/backdrop/backdrop/pull/3475</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/pull/3475" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/pull/3475" title="Issue 4127 add cache tags and cache max age by hosef · Pull Request #3475 · backdrop/backdrop">Issue 4127 add cache tags and cache max age by hosef · Pull Request #3475 · backdrop/backdrop</a></div><div class="message_embed_description">This PR adds new cache classes and many functions to allow cache tagging to work.
+Fixes backdrop/backdrop-issues#4127</div></div></div>
+
+
+
+<a name="229710119"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Clear/flush%20caches/near/229710119" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Clear.2Fflush.20caches.html#229710119">(Mar 10 2021 at 17:43)</a>:</h4>
+<p>It still needs some more cleanup, but I decided to wait on doing more with it until I can get a technical review about the way it is implemented.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

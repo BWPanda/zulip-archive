@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>How do I add a new <code>$type</code> to Backdrop's simplified VBO system? I am looking at OG right now and it looks like the bulk actions are there and are using <code>hook_action_info</code> correctly, but the type is <code>og_membership</code> (for example) rather than any of the core options. They aren't showing up in Views. <br>\n<a href=\"https://github.com/backdrop-contrib/og/issues/22\">https://github.com/backdrop-contrib/og/issues/22</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/og/issues/22\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/og/issues/22\" title=\"Views / Bulk Operations missing · Issue #22 · backdrop-contrib/og\">Views / Bulk Operations missing · Issue #22 · backdrop-contrib/og</a></div><div class=\"message_embed_description\">I'm looking into the Views and it seems the Bulk Operations aren't showing up in Backdrop. (Maybe it's looking for a vbo module in the code -- which is in core, I think?).</div></div></div>",
+        "id": 217161444,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605717611
+    },
+    {
+        "content": "<p>I've wondered about porting vbo or adding missing pieces to core</p>",
+        "id": 217167511,
+        "sender_full_name": "Herb",
+        "timestamp": 1605720021
+    },
+    {
+        "content": "<p>Noting that we already have a meta for VBO feature parity: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3797\">https://github.com/backdrop/backdrop-issues/issues/3797</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3797\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3797\" title=\"[META] VBO: Feature parity with 7.x · Issue #3797 · backdrop/backdrop-issues\">[META] VBO: Feature parity with 7.x · Issue #3797 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Here&#39;s the options we provide when configuring VBO (same as D8 core Views, so, we have feature parity): Here&#39;s what VBO 7.x provides: Features/options missing: #802 | Option to have either ...</div></div></div>",
+        "id": 217229372,
+        "sender_full_name": "klonos",
+        "timestamp": 1605761070
+    },
+    {
+        "content": "<p>Does this mean what I'm after is not (yet) possible?</p>",
+        "id": 217279900,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605797709
+    }
+]

@@ -1,0 +1,158 @@
+[
+    {
+        "content": "<p>I have a content-type that requires a user to be authenticated to view, but I would like to display teasers on the front page. I've got a view that displays the teasers as I want them, but I can't get the teasers to show unless you're logged in. I've tried many different <code>Access</code> settings in the view but alas I can't get them to display!</p>",
+        "id": 219237902,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1607449434
+    },
+    {
+        "content": "<p>Have you tried <a href=\"https://github.com/backdrop-contrib/field_permissions\">https://github.com/backdrop-contrib/field_permissions</a> <span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/field_permissions\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/field_permissions\" title=\"backdrop-contrib/field_permissions\">backdrop-contrib/field_permissions</a></div><div class=\"message_embed_description\">Allows site administrators to set field-level permissions for fields that are attached to any kind of entity - backdrop-contrib/field_permissions</div></div></div>",
+        "id": 219241903,
+        "sender_full_name": "klonos",
+        "timestamp": 1607451335
+    },
+    {
+        "content": "<p>...not sure if it works on teaser/summaries for body fields, but worth a try.</p>",
+        "id": 219242011,
+        "sender_full_name": "klonos",
+        "timestamp": 1607451376
+    },
+    {
+        "content": "<p>...here's some useful resources I was able to find that might help:</p>\n<ul>\n<li><a href=\"https://www.drupal.org/node/677644\">https://www.drupal.org/node/677644</a></li>\n<li><a href=\"https://www.drupal.org/project/premium_content\">https://www.drupal.org/project/premium_content</a> (not ported to Backdrop yet)</li>\n<li><a href=\"https://www.drupal.org/project/internal_nodes\">https://www.drupal.org/project/internal_nodes</a> (not ported to Backdrop yet)</li>\n</ul>",
+        "id": 219242752,
+        "sender_full_name": "klonos",
+        "timestamp": 1607451762
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> - It's been a while since I've looked at it, but this Drupal 7 module might do what you are looking for. <a href=\"https://www.drupal.org/project/view_mode_per_role\">https://www.drupal.org/project/view_mode_per_role</a></p>\n<p>This may not be a difficult one to port.</p>",
+        "id": 219251388,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1607456058
+    },
+    {
+        "content": "<p>I may also have some custom code that would be helpful.</p>",
+        "id": 219251419,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1607456076
+    },
+    {
+        "content": "<p>I understand that you might not be interested in custom code, but just in case. I did this in Drupal 7 (actually, a colleague did it).</p>\n<p>This is Drupal code, not sure if the same functions exist in BackdropCMS. Also, this may tap into the D7 module I mentioned above. <br>\n<code>function module_name_entity_view_mode_alter(&amp;$view_mode, $context) {\n  if ($context['entity_type'] == 'node' &amp;&amp; $context['entity']-&gt;type == 'my-content-type') {\n    if (user_is_anonymous()) {\n      if (drupal_is_front_page()) {\n          $view_mode = 'teaser';\n        }\n      }\n    }\n  }\n}</code></p>",
+        "id": 219252448,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1607456569
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Thanks for the field_permissions suggestion, but it doesn't appear to work on the teaser</p>",
+        "id": 219270299,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1607465493
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> The <code>Disable SQL rewriting</code> seems to do the job :)  I understand this removes all access control, but as it only applies to this view I hoping it's not a problem to use it?</p>",
+        "id": 219271634,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1607466234
+    },
+    {
+        "content": "<p>I have no idea <span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...never actually done this before ...I'm just good with Google, and I found those articles for you <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 219279932,
+        "sender_full_name": "klonos",
+        "timestamp": 1607471158
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> as long as you don't have sensitive info/fields in the view, disabling rewriting should be fine.</p>\n<p>Dunno if they fixed it finally, but back in the day, the only way to get certain views to work with Commerce fields was to disable rewriting.</p>",
+        "id": 219303952,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607498351
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Thanks, I'm only displaying the title and teaser, and am all stripping html tags except p, br, ol, ul &amp; li so I'm thinking I'm pretty safe :)</p>",
+        "id": 219304144,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1607498639
+    },
+    {
+        "content": "<p>According to my buddy over at ModulesUnraveled:</p>\n<p><strong>Disable SQL rewriting (This will disable SQL rewriting by modules that implement hook_query_alter() and node_access checks.)</strong></p>\n<p>It basically means \"if I have a user field, and the requesting user doesn't have permission to that field, don't allow access.\" Disabling says \"ignore the all access checks and just show it to everyone regardless of their credentials\".</p>",
+        "id": 219304906,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607499575
+    },
+    {
+        "content": "<p>Better explanation: <a href=\"https://www.drupal.org/project/commerce/issues/1276450#comment-5649248\">https://www.drupal.org/project/commerce/issues/1276450#comment-5649248</a></p>",
+        "id": 219305578,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607500297
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Thank you, that's nice and clear, and I'm content with the approach for my needs :)<br>\nI do need to remember that Backdrop was Drupal 7 as I've been googling with the keyword <code>backdropcms</code> which is limiting my search results.</p>",
+        "id": 219306011,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1607500649
+    },
+    {
+        "content": "<blockquote>\n<p>I've tried many different <code>Access</code> settings in the view but alas I can't get them to display!</p>\n</blockquote>\n<p>I feel your pain. Views does some stuff really well and other stuff makes absolutely no sense when it should make perfect sense.</p>",
+        "id": 219306368,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607500994
+    },
+    {
+        "content": "<p>I've always struggled to get menu tabs to work right in views... Should be straight forward but it isn't. Lol</p>",
+        "id": 219306458,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607501066
+    },
+    {
+        "content": "<p>I must say though, migrating from Wordpress to the structure of Backdrop is a really nice thing. I love that I create content type's and then I think about how to display the data, and can display in it different ways and update in one place. Also, I've just created a feed import that is building 70+ pages of content from the comments in one of our projects source code to act as a help system - so cool!</p>",
+        "id": 219313263,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1607506175
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> did you ever use Drupal in the past?</p>\n<p>Curious why the move off WordPress?</p>",
+        "id": 219384250,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607541476
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> I played with Drupal 6 in the past, but the client I was working with went with osCommerce instead. I dislike Wordpress, it's too unstructured, so and I found myself writing bespoke web apps (go is my backend language of choice) as most of my work is with technical structured data. BackdropCMS is I hope a great in-between for me.</p>",
+        "id": 219439529,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1607585965
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> I think you'll find it is a lot more structured than wordpress and a lot less structured than Drupal 7. D7 was a bit too rigid whereas Backdrop has a much more relaxed feel, while still holding the principles of what made D7 great.</p>\n<p>As time goes on, I know Backdrop will loosen up a bit more and become a lot more comfortable for more folks.</p>",
+        "id": 219452483,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607594825
+    },
+    {
+        "content": "<p>Is someone talking about Wordpress again?</p>",
+        "id": 219452486,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1607594825
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> yup!</p>",
+        "id": 219452520,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607594861
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> I speak of it only with disgust! And only if asked! :)</p>",
+        "id": 219453625,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1607595516
+    },
+    {
+        "content": "<p>Speaking of WordPress being unstructured, we've got a client which has been using one of the WP page builders - Beaver Builder I think. We've advised them to stop using it because of issues. But good luck transferring content to WP built in content structure. A ton of html and plugin specific code all saved into the post</p>",
+        "id": 219506408,
+        "sender_full_name": "Herb",
+        "timestamp": 1607621604
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/Override.20access.20control.20in.20a.20view/near/219506408\">said</a>:</p>\n<blockquote>\n<p>Speaking of WordPress being unstructured, we've got a client which has been using one of the WP page builders - Beaver Builder I think. We've advised them to stop using it because of issues. But good luck transferring content to WP built in content structure. A ton of html and plugin specific code all saved into the post</p>\n</blockquote>\n<p>That's one of the really sucky things about Wordpress.  Everything is either in the page (as with page builders like Beaver Builder or WP Composer) or the theme and you lose it if you change themes or change page builders.  In the case of one of my other clients,  WP Visual Composer is unsupported, so I have to leave the really old version there - it was a client who came with a Wordpress site already.  I don't use page builders for that reason.</p>",
+        "id": 219506883,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607621782
+    }
+]

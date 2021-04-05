@@ -1,0 +1,193 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html">Ways to Manage Backdrop + Custom Modules and Theme</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="220970882"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/220970882" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joe <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#220970882">(Dec 26 2020 at 16:50)</a>:</h4>
+<p>Happy holidays all!</p>
+<p>I'm thinking through the ways to manage a Backdrop site, in this case it's a port of an existing Drupal 7 site. The current site leverages custom modules and a custom theme which exist in GitHub. Is there any documentation or guides for work flows when it comes to managing custom code plus a Backdrop install.</p>
+<p>Things I'd need to do:</p>
+<ol>
+<li>Update Backdrop core and contributed code independent of custom code.</li>
+<li>Version site-specific theme and custom modules in a GitHub repository and deploy / update in production.</li>
+</ol>
+<p>Typically with PHP projects I leverage composer to manage code. I've read about backdrop-composer, and some of the associated discussion, but I'm not convinced that's the way to go.</p>
+<p>Any thoughts, suggestions or guidance?</p>
+<p>Thanks in advance!</p>
+
+
+
+<a name="220973819"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/220973819" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#220973819">(Dec 26 2020 at 18:21)</a>:</h4>
+<p>I also might need to manage your configuration files, depending on what workflow you end up with, so it would be good to at least have that in mind when you're going through this.</p>
+
+
+
+<a name="220974101"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/220974101" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joe <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#220974101">(Dec 26 2020 at 18:31)</a>:</h4>
+<p>Good point <span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> , thanks for that. I'm curious to hear how others accomplish this before I dive in. <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="220974294"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/220974294" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#220974294">(Dec 26 2020 at 18:38)</a>:</h4>
+<p>There is this conversation that started back in 2015 and got new life a month ago, but it's only about configuration: <a href="https://github.com/backdrop/backdrop-issues/issues/855">https://github.com/backdrop/backdrop-issues/issues/855</a><br>
+I thought there was something more, but I'm probably not remembering correctly, since I haven't found anything.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/855" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/855" title="Documentation of Configuration Management  · Issue #855 · backdrop/backdrop-issues">Documentation of Configuration Management  · Issue #855 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Hi, where can I find some docs about the configuration management? How can i work with the staging dir in files/config/staging - or what is this? What is the best practice to work with GIT (or othe...</div></div></div>
+
+
+
+<a name="220979907"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/220979907" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#220979907">(Dec 26 2020 at 21:30)</a>:</h4>
+<p>I found <a href="https://api.backdropcms.org/documentation/working-with-configuration">https://api.backdropcms.org/documentation/working-with-configuration</a> to be helpful, giving 3 different ways to handle configuration.</p>
+
+
+
+<a name="220985948"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/220985948" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joe <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#220985948">(Dec 27 2020 at 00:41)</a>:</h4>
+<p>That's very helpful <span class="user-mention" data-user-id="335929">@bugfolder</span> , thanks!</p>
+<p>The way parts document what belongs in <code>git</code> and what doesn't is a great way to frame it. That's sort of what I was getting at in my original post. I know core shouldn't get versioned, but how to have it live next to versioned code is what I am looking for any best practices on.</p>
+
+
+
+<a name="221019653"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/221019653" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#221019653">(Dec 27 2020 at 19:16)</a>:</h4>
+<p><span class="user-mention" data-user-id="372866">@Joe</span> I just throw core into git too for simplicity. Don't have a composer workflow for Backdrop at the moment</p>
+
+
+
+<a name="221019813"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/221019813" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#221019813">(Dec 27 2020 at 19:21)</a>:</h4>
+<blockquote>
+<p>I know core shouldn't get versioned, but how to have it live next to versioned code is what I am looking for any best practices on.</p>
+</blockquote>
+<p>I think you are describing a common composer workflow. I don't think that too many Backdrop CMS users are using composer. Many folks have come to Backdrop to avoid using composer, or at least because it's not required.</p>
+<p>With composer, I understand how you would leave core out of git. But, without composer I assume that most people do keep Backdrop Core in git (version control). Personally, I keep core in version control for all of my Backdrop CMS sites. </p>
+<p>I manage core, all contrib modules/themes, and any custom code in git.</p>
+
+
+
+<a name="221019874"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/221019874" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#221019874">(Dec 27 2020 at 19:23)</a>:</h4>
+<p>I have been experimenting with keeping a "versioned" copy of config in git. But, I'm still working on this.</p>
+
+
+
+<a name="231233047"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231233047" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joe <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231233047">(Mar 21 2021 at 18:34)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> <span class="user-mention" data-user-id="256570">@StPaulTim</span> Late follow-up and a lot of additional questions are inbound. <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> </p>
+<p>Thanks for the responses! <span aria-label="100" class="emoji emoji-1f4af" role="img" title="100">:100:</span> </p>
+<p>Is it fair to say that versioning Backdrop in your project repo is a standard or even recommended way to organize a project site codebase?</p>
+<p>Do you version the other contributed modules your site might use?</p>
+<p>What's your workflow for updating something from core or contrib, e.g. a security patch for core is released? Do you drush in Production to apply any updates then commit and push changes?</p>
+<p>Backdrop provides its own way to autoload <code>hook_autoload_info</code>, which provides a main <code>composer</code> feature, but what about dependency management or namespacing? (I'm really used to <code>composer</code> in other projects, so thinking of one without it is taking me some time to wrap my head around it.)</p>
+<blockquote>
+<p>I have been experimenting with keeping a "versioned" copy of config in git. But, I'm still working on this.</p>
+</blockquote>
+<p>Have you made any progress on this?</p>
+
+
+
+<a name="231233328"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231233328" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231233328">(Mar 21 2021 at 18:40)</a>:</h4>
+<p>I would like to move this discussion to the Backdrop forum, because I think it will be easier for others to find the information there. I'll post a link to my response in the forum, once I get a chance to reply.</p>
+
+
+
+<a name="231239295"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231239295" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231239295">(Mar 21 2021 at 20:32)</a>:</h4>
+<p>I just paraphrased the question here and am about to post my answer. <br>
+<a href="https://forum.backdropcms.org/forum/git-workflow-backdrop-cms">https://forum.backdropcms.org/forum/git-workflow-backdrop-cms</a></p>
+
+
+
+<a name="231239929"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231239929" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231239929">(Mar 21 2021 at 20:45)</a>:</h4>
+<p>We've got our config versioned now for all backdrop sites. The staging config. And once deployed we sync the config.</p>
+
+
+
+<a name="231240885"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231240885" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231240885">(Mar 21 2021 at 21:02)</a>:</h4>
+<p>My only experience of putting a Backdrop site into version control are Backdrop's own sites (<a href="http://B.org">B.org</a>, Docs, etc.). With those <em>everything</em> is in the git repo e.g. (<a href="https://github.com/backdrop-ops/backdropcms.org">https://github.com/backdrop-ops/backdropcms.org</a>). The idea is that all changes happen on your local machine (core/contrib updates, new features, etc.) then you commit all changes and push live.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org" style="background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org" title="backdrop-ops/backdropcms.org">backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="231241246"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231241246" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231241246">(Mar 21 2021 at 21:08)</a>:</h4>
+<p>I've posted more details here - <a href="https://forum.backdropcms.org/forum/git-workflow-backdrop-cms">https://forum.backdropcms.org/forum/git-workflow-backdrop-cms</a></p>
+
+
+
+<a name="231246851"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231246851" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joe <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231246851">(Mar 21 2021 at 22:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> That was very helpful. Is the forum the best place to post moving forward? I appreciate that you paraphrased and moved that all over.</p>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> Thanks!</p>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> It was really helpful to see a full Production site in git.</p>
+
+
+
+<a name="231247804"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231247804" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231247804">(Mar 21 2021 at 23:15)</a>:</h4>
+<blockquote>
+<p>That was very helpful. Is the forum the best place to post moving forward? </p>
+</blockquote>
+<p>It's up to you. It's ok to ask questions either here or in the forum. However, I think that the forum is a better place to document these discussions for future users. Conversations in Zulip are not discoverable in search engines. Personally, if I am going to spend time composing a detailed answer, I would rather that it be in the forum for wider access. </p>
+<p>I recommend that you ask questions like this in the forum and then post a note here linking to the forum.</p>
+
+
+
+<a name="231248161"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231248161" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231248161">(Mar 21 2021 at 23:22)</a>:</h4>
+<p>In my view, the more questions and answers that users can find in places like the forum, the more users we will attract to Backdrop and the better it will be for the community.</p>
+
+
+
+<a name="231256788"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231256788" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231256788">(Mar 22 2021 at 02:26)</a>:</h4>
+<p>If you do prefer to use composer for backdrop core, it is possible by using <a href="https://github.com/backdrop-ops/backdrop-composer/blob/1.x/composer.json">https://github.com/backdrop-ops/backdrop-composer/blob/1.x/composer.json</a>. But it's not used a lot so needs someone to volunteer to keep it up to date with the main project <span class="user-mention" data-user-id="372866">@Joe</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdrop-composer/blob/1.x/composer.json" style="background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdrop-composer/blob/1.x/composer.json" title="backdrop-ops/backdrop-composer">backdrop-ops/backdrop-composer</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop-ops/backdrop-composer development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="231257278"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231257278" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231257278">(Mar 22 2021 at 02:37)</a>:</h4>
+<p>In regards to dependency management and namespacing, the approach is the same as Drupal 7 for better or worse. hook_autoload_info replaced the d7 class registry in the database</p>
+
+
+
+<a name="231347055"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231347055" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joe <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231347055">(Mar 22 2021 at 17:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> </p>
+<blockquote>
+<p>Personally, if I am going to spend time composing a detailed answer, I would rather that it be in the forum for wider access.<br>
+I recommend that you ask questions like this in the forum and then post a note here linking to the forum.</p>
+</blockquote>
+<p>Make sense, and I'm sure I'll have more questions and I'll do that in the future.</p>
+
+
+
+<a name="231348291"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Ways%20to%20Manage%20Backdrop%20%2B%20Custom%20Modules%20and%20Theme/near/231348291" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joe <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Ways.20to.20Manage.20Backdrop.20.2B.20Custom.20Modules.20and.20Theme.html#231348291">(Mar 22 2021 at 17:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> Thanks for sharing. I checked that out before I posted, that's what led me down the path.</p>
+<p>It's really not a question of preference to me. I'd rather have a project setup similar to the rest of the community to make support easier. As far as a I can tell most Backdrop modules don't contain a <code>composer.json</code>, so I don't think embracing <code>composer</code> flow makes sense (even if it's what I'm used to). I'm still thinking it all the way through though. Thanks again for the help!</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

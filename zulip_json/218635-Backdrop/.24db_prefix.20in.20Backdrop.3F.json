@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>In Drupal, one could make queries to tables in external databases by setting <code>$db_prefix[$table_name] = 'databasename.'</code> (typically in settings.php). Is there an equivalent functionality in Backdrop? An example application being to do a JOIN between the Backdrop {user} table in the Backdrop db and the CiviCRM {civicrm_uf_match} table in the separate CiviCRM db (which worked in Drupal).</p>",
+        "id": 233040037,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1617491687
+    },
+    {
+        "content": "<p><code>$db_prefix</code> is still in Backdrop: <a href=\"https://github.com/backdrop/backdrop/blob/a259d2d276e5f43db925a408a2f06944eee25324/settings.php#L16\">https://github.com/backdrop/backdrop/blob/a259d2d276e5f43db925a408a2f06944eee25324/settings.php#L16</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/a259d2d276e5f43db925a408a2f06944eee25324/settings.php#L16\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/a259d2d276e5f43db925a408a2f06944eee25324/settings.php#L16\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 233040652,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617492486
+    },
+    {
+        "content": "<p>My understanding is that $database_prefix in Backdrop is different from $db_prefix in Drupal. $database_prefix is a prefix to be used per-site when you have multiple sites in the same database; it gets added to each table name to distinguish multiple tables within the same database. $db_prefix was something that allowed you to use different databases within the same site. Is that not right?</p>",
+        "id": 233041253,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1617493146
+    },
+    {
+        "content": "<p>Also, isn't $database_prefix a string, whereas $db_prefix was an array?</p>",
+        "id": 233041339,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1617493234
+    },
+    {
+        "content": "<p>Mmm, looks like it. I've personally never user either of them... Sorry.</p>",
+        "id": 233045062,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617497812
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> you can still specify multiple databases. The syntax is still there. It's just simplified in settings.php to make it easier for most people. I think you can just use Drupal 7's format</p>",
+        "id": 233078952,
+        "sender_full_name": "Herb",
+        "timestamp": 1617540186
+    },
+    {
+        "content": "<p>OK, thx!</p>",
+        "id": 233078979,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1617540226
+    },
+    {
+        "content": "<p>Yes, thanks, just needed to use the \"long-form\" databases declaration.</p>",
+        "id": 233090463,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1617550174
+    }
+]

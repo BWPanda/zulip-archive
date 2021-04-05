@@ -1,0 +1,146 @@
+[
+    {
+        "content": "<p>I'm a bit confused about theme settings. Bartik for example has a <code>theme-settings.php</code> file with just naked form elements in there, not within a function, and these are automatically picked up on the theme settings page. What is the difference between doing that to add settings, versus implementing <code>hook_form_system_theme_settings_alter()</code>? Implementing that hook seems to also add form elements to the settings page. Why one or the other?</p>",
+        "id": 200044180,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591566496
+    },
+    {
+        "content": "<p>Anyone know this?</p>",
+        "id": 200086850,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591617281
+    },
+    {
+        "content": "<p>After reading <a href=\"https://github.com/backdrop/backdrop/blob/5447e13a78c449c0330b9daf9a5c7cd22717a5be/core/modules/system/system.admin.inc#L437\">https://github.com/backdrop/backdrop/blob/5447e13a78c449c0330b9daf9a5c7cd22717a5be/core/modules/system/system.admin.inc#L437</a> my guess would be that having 'naked' form elements let's you setup the form the way you want (e.g. you define the form's starting state), whereas using the <code>alter</code> hook let's you change other forms (e.g. add a new element, instead of redefining the whole form). Note sure if that helps...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/5447e13a78c449c0330b9daf9a5c7cd22717a5be/core/modules/system/system.admin.inc#L437\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/5447e13a78c449c0330b9daf9a5c7cd22717a5be/core/modules/system/system.admin.inc#L437\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 200087710,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591617859
+    },
+    {
+        "content": "<p>As far as I am aware, there is no difference between them in functionality.</p>",
+        "id": 200106961,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1591627364
+    },
+    {
+        "content": "<p>That is weird, right? Two ways to do the same thing, no documentation anywhere as to why its this way (I've searched), and one of those ways very non-Drupal/Backdrop (just naked form elements in a <code>*.php</code> file). Wonder how this happened. Seems like an oversight.</p>",
+        "id": 200110278,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591628605
+    },
+    {
+        "content": "<p>It probably is. Most of the code in there is very old.</p>",
+        "id": 200112357,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1591629405
+    },
+    {
+        "content": "<p>Did some digging; looks like the \"naked\" code started with Backdrop. I checked 10 random D7 themes, none do that. Maybe, though it seems to work, we shouldnt do that. Worth an issue?</p>",
+        "id": 200128604,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591636464
+    },
+    {
+        "content": "<p>By reading <a href=\"https://www.drupal.org/docs/7/theming/advanced/creating-advanced-theme-settings#s-drupal-7\">https://www.drupal.org/docs/7/theming/advanced/creating-advanced-theme-settings#s-drupal-7</a> I get the impression that using a theme-settings.php was the D6 and before way, with <code>hook_form_system_theme_settings_alter()</code> being added in D7.</p>",
+        "id": 200147612,
+        "sender_full_name": "klonos",
+        "timestamp": 1591645997
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Theme.20settings/near/200147612\">said</a>:</p>\n<blockquote>\n<p>I get the impression that using a theme-settings.php was the D6 and before way, with <code>hook_form_system_theme_settings_alter()</code> being added in D7.</p>\n</blockquote>\n<p>Not sure that is so. I checked the source code for both D7 and D6 themes. Both had <code>theme-settings.php</code> files, none had form elements as we do.</p>",
+        "id": 200151366,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591647822
+    },
+    {
+        "content": "<p>Posting an issue shortly.</p>",
+        "id": 200151379,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591647831
+    },
+    {
+        "content": "<p>I have no idea where this might be documented but I think I heard somewhere that this was done to make it easier to add to the theme form. If that file only ever has one function than why not just put the form elements in there \"raw\"? So I recall</p>",
+        "id": 200180486,
+        "sender_full_name": "Herb",
+        "timestamp": 1591675461
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/3391\">https://github.com/backdrop/backdrop-issues/issues/3391</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3391\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3391\" title=\"[DX] Document the usage of theme-settings.php · Issue #3391 · backdrop/backdrop-issues\">[DX] Document the usage of theme-settings.php · Issue #3391 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">So, I worked on #3375 and specifically on http://drupal.org/node/2900373. The initial PR I filed was an almost verbatim copy-paste from the Drupal patch, and it included a new core/modules/simplete...</div></div></div>",
+        "id": 200181260,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591676757
+    },
+    {
+        "content": "<p>Ah thanks <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>. So I commented all about this already <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span>. Though still is a mystery</p>",
+        "id": 200215459,
+        "sender_full_name": "Herb",
+        "timestamp": 1591704492
+    },
+    {
+        "content": "<p>Seems to me this page is accurate now <a href=\"https://api.backdropcms.org/adding-theme-settings-advanced\">https://api.backdropcms.org/adding-theme-settings-advanced</a></p>",
+        "id": 200221592,
+        "sender_full_name": "Herb",
+        "timestamp": 1591706846
+    },
+    {
+        "content": "<p>Thanks for finding the existing issue. <br>\n<span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Theme.20settings/near/200221592\">said</a>:</p>\n<blockquote>\n<p>Seems to me this page is accurate now <a href=\"https://api.backdropcms.org/adding-theme-settings-advanced\">https://api.backdropcms.org/adding-theme-settings-advanced</a></p>\n</blockquote>",
+        "id": 200227465,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591709666
+    },
+    {
+        "content": "<p>Though accurate, my thinking is that it is wrong; we should not be promoting the shortcut in core, nor our docs</p>",
+        "id": 200227587,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591709723
+    },
+    {
+        "content": "<p>More complex settings would look a bit strange if there were full functions mixed in with the form elements on the page</p>",
+        "id": 200227943,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591709868
+    },
+    {
+        "content": "<p>If you had a submit function and some validation and some other helper functions for example</p>",
+        "id": 200228034,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591709894
+    },
+    {
+        "content": "<p>I think core should demonstrate what is best practice and what is possible, not the shortcuts</p>",
+        "id": 200228097,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591709923
+    },
+    {
+        "content": "<p>So as per the issue I posted, I feel we should switch core themes to implement the hook instaed.</p>",
+        "id": 200228197,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591709965
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4438\">https://github.com/backdrop/backdrop-issues/issues/4438</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4438\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4438\" title=\"Use hook_form_system_theme_settings_alter() for theme settings · Issue #4438 · backdrop/backdrop-issues\">Use hook_form_system_theme_settings_alter() for theme settings · Issue #4438 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug Backdrop themes which provide a theme-settings.php have form elements in that file outside of a function definition. This seems unique to Backdrop, and is not a pattern seen ...</div></div></div>",
+        "id": 200228200,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591709967
+    },
+    {
+        "content": "<p>I don't have a strong opinion about this. I can see pros/cons to either way. A pro is that currently it might be easier to understand</p>",
+        "id": 200254589,
+        "sender_full_name": "Herb",
+        "timestamp": 1591719677
+    },
+    {
+        "content": "<p>There's an <code>IMAGE</code> placeholder in the text (w/o any actual image though)</p>",
+        "id": 200262189,
+        "sender_full_name": "klonos",
+        "timestamp": 1591723102
+    },
+    {
+        "content": "<p>Can someone please explain this to me? <a href=\"https://github.com/backdrop/backdrop-issues/issues/4814\">https://github.com/backdrop/backdrop-issues/issues/4814</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4814\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4814\" title=\"Why do theme settings need two separate default values? · Issue #4814 · backdrop/backdrop-issues\">Why do theme settings need two separate default values? · Issue #4814 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;m reading through Adding theme settings (advanced) in order to better understand theme settings (something which I rarely use/need), and am confused by this part near the end of that page: Se...</div></div></div>",
+        "id": 220351222,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608283926
+    }
+]

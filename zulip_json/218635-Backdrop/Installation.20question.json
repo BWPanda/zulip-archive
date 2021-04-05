@@ -1,0 +1,668 @@
+[
+    {
+        "content": "<p>Hi everyone, I am trying to get backdrop on my bluehost shared server. I created the database using cpanel as instructed, but when I unzip the download I get a 500 error. Are there any known issues with bluehost or the installation process in general?</p>",
+        "id": 207743837,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598133639
+    },
+    {
+        "content": "<p>Hi, Chuck Tilbury. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 207743838,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1598133639
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"332304\">@Chuck Tilbury</span> - Welcome. Can you point us at which instructions you are using or provide any additional information.</p>",
+        "id": 207750528,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598146909
+    },
+    {
+        "content": "<p>NOTE: You are welcome to ask questions here, but the forum is also a good place.<br>\n<a href=\"https://forum.backdropcms.org/\">https://forum.backdropcms.org/</a></p>",
+        "id": 207750574,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598146970
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"332304\">@Chuck Tilbury</span> ...there's this previously-reported issue in our queue: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2967\">https://github.com/backdrop/backdrop-issues/issues/2967</a> ...turns out that switching to a newer version of php (which Bluehost apparently does support) fixed the issue. What php version have you configured your site to run on?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2967\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2967\" title=\"Backdrop's PHP version requirement prevents it from being installed on Bluehost · Issue #2967 · backdrop/backdrop-issues\">Backdrop's PHP version requirement prevents it from being installed on Bluehost · Issue #2967 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea When trying to deploy a backdrop site to Bluehost, I encountered this error: Your PHP installation is too old. Backdrop CMS requires at least PHP 5.3.2. See the System R...</div></div></div>",
+        "id": 207751152,
+        "sender_full_name": "klonos",
+        "timestamp": 1598148184
+    },
+    {
+        "content": "<p>No problems on Bluehost so far</p>",
+        "id": 207752580,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1598150958
+    },
+    {
+        "content": "<p>Here is a link to the instructions I am using. <a href=\"https://backdropcms.org/installation\">https://backdropcms.org/installation</a></p>\n<p>It's just what I found on the web site. I downloaded to the zip file and unziped it. That made a directory called backdrop/. I moved all of the files and directories up one level so that the index.php file is in the right place. I think there is probably some configuration issue, but I don't really know where to start.</p>\n<p>The version of PHP is 7.3.12</p>\n<p>Is there a way to see the actual error that happened?</p>",
+        "id": 207753303,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598152365
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"332304\">@Chuck Tilbury</span>  , if you would like to do a screen share. I'd be willing to look at what your doing and see if I can offer any advice.</p>",
+        "id": 207753523,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598152772
+    },
+    {
+        "content": "<p>Another option would be to create a forum post where you list in detail what steps you are taking. The more information we have the more likely we can offer advice. Things like, what path are you using to access the new BackdropCMS site and how did you configure that path (or what instructions does Bluehost give you about where to find your site).</p>",
+        "id": 207753675,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153001
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  That's kind of a problem, though. My internet connection &lt;suks&gt; I live in the sticks so all I have is satellite. Ping times are always near a second or so. Ssh to the server is... fun...</p>\n<p>As you can tell, I don't really know how to do this. I am a C and Python guy mostly. Web sites are a new thing for me.</p>",
+        "id": 207753743,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153147
+    },
+    {
+        "content": "<p>No problem. It was just a thought. I'd love to help you and also figure out if there is something we can add to those instructions that might help the next person.</p>",
+        "id": 207753792,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153218
+    },
+    {
+        "content": "<p>Are you sure that you have the right path to your site. The correct default URL?</p>",
+        "id": 207753799,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153249
+    },
+    {
+        "content": "<p>You could put a simple test.html file on the server and be sure that you can access that. Because if you can't access a simple .html file, you would be able to start the install process.</p>",
+        "id": 207753840,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153285
+    },
+    {
+        "content": "<p>That having been said, I am following the instructions on the web site. I created the database with no troubles. That seems okay. It should be possible to turn on error display. I found this elsewhere:</p>\n<p>error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);<br>\nini_set('display_errors', TRUE);<br>\nini_set('display_startup_errors', TRUE);</p>\n<p>I take it that can be added to the index.php.</p>",
+        "id": 207753842,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153293
+    },
+    {
+        "content": "<p>Well, I don't think you should ever have to edit or add anything to the index.php file. That is part of core and you shouldn't have to change it.</p>",
+        "id": 207753861,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153350
+    },
+    {
+        "content": "<p>Sometimes it's necessary to edit the .htaccess file.</p>",
+        "id": 207753864,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153363
+    },
+    {
+        "content": "<p>The site is <a href=\"http://boskycallow.org\">boskycallow.org</a>. I am setting up a blog there. I put a simple index.html, which appears as expected.</p>",
+        "id": 207753866,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153370
+    },
+    {
+        "content": "<p>OK, good</p>",
+        "id": 207753872,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153380
+    },
+    {
+        "content": "<p>ah. the .htaccess....</p>",
+        "id": 207753922,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153414
+    },
+    {
+        "content": "<p>That would be in the ~/public_html/ direcory, correct?</p>",
+        "id": 207753933,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153458
+    },
+    {
+        "content": "<p>I have other web sites defined for this shared server as well.</p>",
+        "id": 207753944,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153496
+    },
+    {
+        "content": "<p>My production site is <a href=\"http://whistlemaker.com\">whistlemaker.com</a></p>",
+        "id": 207753947,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153518
+    },
+    {
+        "content": "<p>Well, I'm not an .htaccess expert and sometimes there are more than one.</p>",
+        "id": 207753984,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153533
+    },
+    {
+        "content": "<p>There is one included in BackdropCMS core that should be in the root directory of your site.</p>",
+        "id": 207753989,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153558
+    },
+    {
+        "content": "<p>There are situations in which you need to edit that file. Having multiple sites on the same share hosting account is a situation in which you might need to make changes there.</p>",
+        "id": 207754001,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153597
+    },
+    {
+        "content": "<p>There are just 3 lines in it:</p>\n<p>&lt;IfModule mime_module&gt;<br>\n  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml<br>\n&lt;/IfModule&gt;</p>",
+        "id": 207754004,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153616
+    },
+    {
+        "content": "<p>no. I lied. There are a dozen or more lines.</p>",
+        "id": 207754048,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153670
+    },
+    {
+        "content": "<p>1) I assume that the test.html file you placed you pointed me at is in /public_html/index.html ??</p>",
+        "id": 207754058,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153698
+    },
+    {
+        "content": "<p>No. It's in ~/public_html/boskycallow/</p>",
+        "id": 207754073,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153739
+    },
+    {
+        "content": "<p>2) OK, just to be clear, that is also where you put the index.php file for Backdrop CMS, correct?</p>",
+        "id": 207754115,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153770
+    },
+    {
+        "content": "<p>yes.</p>",
+        "id": 207754118,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153785
+    },
+    {
+        "content": "<p>OK, good</p>",
+        "id": 207754121,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153791
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"332304\">Chuck Tilbury</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/207754004\">said</a>:</p>\n<blockquote>\n<p>There are just 3 lines in it:</p>\n<p>&lt;IfModule mime_module&gt;<br>\n  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml<br>\n&lt;/IfModule&gt;</p>\n</blockquote>\n<p>Which file is this?</p>",
+        "id": 207754133,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153844
+    },
+    {
+        "content": "<p>~/public_html/.htaccess1</p>",
+        "id": 207754138,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598153873
+    },
+    {
+        "content": "<p>This is what the official backdropcms .htaccess file should look like:<br>\n<a href=\"https://github.com/backdrop/backdrop/blob/1.x/.htaccess\">https://github.com/backdrop/backdrop/blob/1.x/.htaccess</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/.htaccess\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/.htaccess\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 207754140,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153875
+    },
+    {
+        "content": "<p>Yeah, I don't about the .htaccess file provided by Bluehost. I can't help you there. The one I am talking about is in Backdrop CMS root.</p>",
+        "id": 207754183,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598153914
+    },
+    {
+        "content": "<p>I recommend you read through the settings.php file. There might be something you have to fix there.</p>",
+        "id": 207754231,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154016
+    },
+    {
+        "content": "<p>I need to digest that a little. It sounds like I need to call bluehost again. Looking at the existing file, there are references to whistlemaker/index.php</p>",
+        "id": 207754234,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154032
+    },
+    {
+        "content": "<p>So it follows that I would need to add the new site as well.</p>",
+        "id": 207754237,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154058
+    },
+    {
+        "content": "<p>Was the code for Backdrop CMS provided by Bluehost or downloaded from <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a>?</p>",
+        "id": 207754249,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154106
+    },
+    {
+        "content": "<p>From <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a>.</p>",
+        "id": 207754294,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154143
+    },
+    {
+        "content": "<p>OK. I'm not clear where the references to whistlemaker.index.php are, but that might be something to look into.</p>",
+        "id": 207754299,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154180
+    },
+    {
+        "content": "<p><a href=\"http://whistlemaker.com\">whistlemaker.com</a> is an existing site on this server. It's up and running (last time I checked  ) <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span></p>",
+        "id": 207754341,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154244
+    },
+    {
+        "content": "<p>DOH! It's not up! I have to go and fix that right now.</p>",
+        "id": 207754357,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154321
+    },
+    {
+        "content": "<p>Fixed it.</p>",
+        "id": 207754409,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154384
+    },
+    {
+        "content": "<p>I feel fairly confident is saying the following things.<br>\n1) If you can't even get to the install screen of Backdrop CMS - then the database isn't your problem (at least not yet). <br>\n2) The only two files you MIGHT have to edit would be .htaccess or settings.php (I would start by looking at settings.php). <br>\n3) You might considering googling \"problems install Drupal 7 on Bluehost\" - since the process for install Backdrop CMS should be very similar to install Drupal 7 and there might be more documentation around Drupal 7 than there is for Backdrop.</p>",
+        "id": 207754413,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154414
+    },
+    {
+        "content": "<p>I need to talk to the folks at bluehost before I really make a mess.</p>",
+        "id": 207754419,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154454
+    },
+    {
+        "content": "<p>Is there a pointer to some minimum requirements for the setup.php file?</p>",
+        "id": 207754463,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154501
+    },
+    {
+        "content": "<p>It sounds to me like the problem is that your properly accessing the index.php file and once you figure that out, you should be in good (or better) shape.</p>",
+        "id": 207754468,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154512
+    },
+    {
+        "content": "<p>agree. I think I need to add an entry to the .htaccess file.</p>",
+        "id": 207754472,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154543
+    },
+    {
+        "content": "<p>Maybe Bluehost can help you with that.</p>",
+        "id": 207754476,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154561
+    },
+    {
+        "content": "<p>I think that bluehost support can help me with that.</p>",
+        "id": 207754478,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154568
+    },
+    {
+        "content": "<p>ya. I am going to go and ping them now. Would it be helpful if I post the results here when I am done?</p>",
+        "id": 207754531,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154614
+    },
+    {
+        "content": "<p>Good luck. Let us know what you find.</p>",
+        "id": 207754532,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154615
+    },
+    {
+        "content": "<p>Thanks. Will do.</p>",
+        "id": 207754535,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154633
+    },
+    {
+        "content": "<p>It would be most helpful if you posted them in the forum, because they are easier to find there. But, a quick update here is also good.</p>",
+        "id": 207754539,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154644
+    },
+    {
+        "content": "<p>Okay. I just created a login there. Thanks. I really appreciate you taking some time to help me.</p>",
+        "id": 207754549,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598154698
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"332304\">@Chuck Tilbury</span> - I see someone had a similar problem and never got help. If you find any answers, post them in response to that issue. <br>\n<a href=\"https://forum.backdropcms.org/forum/http-500-error\">https://forum.backdropcms.org/forum/http-500-error</a></p>",
+        "id": 207754620,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154836
+    },
+    {
+        "content": "<p>You probably saw that already!</p>",
+        "id": 207754662,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598154867
+    },
+    {
+        "content": "<p>The problem was file permissions. I don't know what the default was, but the correct permissions are 644.</p>",
+        "id": 207757122,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598160025
+    },
+    {
+        "content": "<p>The .htaccess file was not touched.</p>",
+        "id": 207757124,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598160046
+    },
+    {
+        "content": "<p>I should have thought of that! Congratulations.</p>",
+        "id": 207757132,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598160095
+    },
+    {
+        "content": "<p>Will you have time to update the forum post, or should I?<br>\n<a href=\"https://forum.backdropcms.org/forum/http-500-error\">https://forum.backdropcms.org/forum/http-500-error</a></p>",
+        "id": 207757172,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598160127
+    },
+    {
+        "content": "<p>me too.... &lt;&lt;sigh&gt;&gt; <br>\nHow many times have that jumped up and bit my butt....</p>",
+        "id": 207757173,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598160135
+    },
+    {
+        "content": "<p>I will do it.</p>",
+        "id": 207757177,
+        "sender_full_name": "Chuck Tilbury",
+        "timestamp": 1598160159
+    },
+    {
+        "content": "<p>After creating a php database, I get:<br>\nFailed to connect to your database server. The server reports the following message: Access denied for user 'sarvasri'@'localhost' (using password: YES).</p>\n<p>Is the database server running on 127.0.0.1?<br>\nIs sardb the correct database name?<br>\nAre the username and password correct?</p>\n<p>The database is not at 127... instead it's at %</p>",
+        "id": 209031814,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599168519
+    },
+    {
+        "content": "<p>This topic was moved here from <a class=\"stream-topic\" data-stream-id=\"228714\" href=\"/#narrow/stream/228714-Community-Chat-.28other-topics.29/topic/Welcome\">#Community Chat (other topics) &gt; Welcome</a> by <span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span></p>",
+        "id": 209032581,
+        "sender_full_name": "Notification Bot",
+        "timestamp": 1599169060
+    },
+    {
+        "content": "<p>There doesn't seem to be a way to change % (the default Host Name in MAMP) to localhost. The instructions for installing Backdrop should explicitly require \"localhost\" since % (the default) doesn't seem to work. There is no way to change the Host Name in PHPMyAdmin that I can find, so I have to delete the database and start all over. Apparently bad instructions for how to install BackDrop on your computer. This should be corrected in the documentation.</p>",
+        "id": 209046696,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599182159
+    },
+    {
+        "content": "<p>Also, deleting the old database doesn't work. I deleted the database and created a new one with the same name. It automatically put % as the Host Name for me as the user. I don't know how to fix this problem.</p>",
+        "id": 209046903,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599182430
+    },
+    {
+        "content": "<p>Where are you seeing the % ? During the install on the \"Database configuration\" page?</p>",
+        "id": 209048383,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599184545
+    },
+    {
+        "content": "<p>When I add the user, I must input user name, Host Name, etc.<br>\nI tried using 127.0.0.1 and localhost in addition to the default %<br>\nNothing works so far, I can't get past the same error message.</p>",
+        "id": 209049307,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599185868
+    },
+    {
+        "content": "<p>As I understand it, I must create a database ahead of running BackDrop. So I created an empty database with PHPMyAdmin. Then I need a user and a password for BackDrop to use the database. In creating the User and Password there are other fields that have default values. For Host Name, % is the default. Searching the web, % is not a substitute for either localhost or 127.0.0.1 so I don't know how or why % is the default. The instructions at <a href=\"https://backdropcms.org/installation\">https://backdropcms.org/installation</a> are inadequate. For a first time user, they are impossible.</p>",
+        "id": 209049744,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599186513
+    },
+    {
+        "content": "<p>I'm not sure why you have a % there. I don't recall ever seeing that before. Maybe MAMP is helping you out, and unfortunately, I know nothing about MAMP.</p>",
+        "id": 209050171,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599187319
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> perhaps if you posted a screenshot, it would help us understand better and be able to help you out.</p>",
+        "id": 209058373,
+        "sender_full_name": "klonos",
+        "timestamp": 1599200196
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> This <code>%</code> is a placeholder for \"from any host\". Here's a screenshot from phpmyadmin:<br>\n<a href=\"/user_uploads/18319/ktHlaFq486CM13wmePcIm_co/screenshot-pma.png\">screenshot-pma.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/ktHlaFq486CM13wmePcIm_co/screenshot-pma.png\" title=\"screenshot-pma.png\"><img src=\"/user_uploads/18319/ktHlaFq486CM13wmePcIm_co/screenshot-pma.png\"></a></div><p>That <code>%</code> for sure isn't causing the problem. It's rather a problem with your mysql setup.<br>\nOne thing that comes to my mind: what's the \"Authentication Plugin\" setting?</p>\n<p>And I suppose you really made sure there's no typo in your username/password credentials.</p>",
+        "id": 209065629,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599206585
+    },
+    {
+        "content": "<p>I'm not sure what you mean by \"Authentication  Plugin\" but when I created the database I gave myself all privileges.<br>\nWhen I came back to the database today in phpMyAdmin, I had a <strong>Note</strong> from the software in yellow that said, \"Note: phpMyAdmin gets the users’ privileges directly from MySQL’s privilege tables. The content of these tables may differ from the privileges the server uses, if they have been changed manually. In this case, you should reload the privileges before you continue.\" I don't understand this and don't know how I would reload privileges.</p>",
+        "id": 209107183,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599233073
+    },
+    {
+        "content": "<p>Also, I don't know which user Host Name to use whether %, 127..., or localhost. I would like to be consistent because I have 4 or 5 websites to create or convert from Drupal 7.</p>",
+        "id": 209107517,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599233231
+    },
+    {
+        "content": "<p>If using % for \"Any host\" would help me later when I want to move the BackDrop site to my internet host, then that would be preferable. % is the default in MAMP. I don't yet know how to move a finished site to a host later, so whatever I can do now to prevent problems is a good thing to do.</p>",
+        "id": 209111119,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599235091
+    },
+    {
+        "content": "<p>I'm starting over from scratch. I deleted all users and dropped the database.  The instructions say, \"Create a database, and make a note of the database name and hostname (usually localhost).\" I can create a database -- in doing so, I can give it a name, I can allow the default for Collation which is utf_general_ci, but I cannot choose a hostname. It just creates the database. Then phpMyAdmin takes me to the Structure tab where I can \"Create table.\" I presume that BackDrop will create all the tables I need. So now I go to the Privileges Tab where I can create a new user for the database. NOWHERE in the process was there an opportunity to \"note the database name and hostname.\" I can note the database name only. No option to note a hostname. I could NOT choose a host or hostname during the database creation.</p>",
+        "id": 209114269,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599236868
+    },
+    {
+        "content": "<p>When you input the database credentials in the Backdrop installer form, you use <code>localhost</code>. That % is just a placeholder for the _database_ - that has nothing to do with Backdrop. So: <code>localhost</code>.</p>\n<p>The database has no credentials, it's the _database user_ who has. So you create a user first - and I'd recommend to do it all in one step (db and user). That's easy in phpmyadmin. Please check the documentation of phpmyadmin.</p>",
+        "id": 209168934,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599296376
+    },
+    {
+        "content": "<p>I finally got a BackDrop installation to work.<br>\nHere's the problem. You can't just enter your user name and password for the database. You can't just set \"localhost\" as your user host name.<br>\nYou have to click on Advanced Options and check on the database location, in my case the database location was set at 127.0.0.1 whereas my user login host name was set, as recommended, to \"localhost\" -- So it would not work. The Advanced options are invisible until you click on them. This costs me several days. Including a screenshot would not have helped. Advanced options were not visible.</p>",
+        "id": 209582822,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599695605
+    },
+    {
+        "content": "<p>Glad you have worked this out <span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> but sorry it had to take you that long. Do we have documentation on that that's outdated or missing details? I could update it to include your findings, so that others don't waste time in the future.</p>",
+        "id": 209590398,
+        "sender_full_name": "klonos",
+        "timestamp": 1599705047
+    },
+    {
+        "content": "<p>ping <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span></p>",
+        "id": 209615482,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1599730649
+    },
+    {
+        "content": "<p>If you have a few minutes, please Q/A this: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/220\">https://github.com/backdrop-ops/backdropcms.org/issues/220</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/220\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/220\" title=\"SSL Certificates Using Let's Encrypt · Issue #220 · backdrop-ops/backdropcms.org\">SSL Certificates Using Let's Encrypt · Issue #220 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Migrate from our current SSL certificate to SSL certificates provided by the Let&#39;s Encrypt program: https://letsencrypt.org/getting-started/. To Do: Generate and install a certificate for each ...</div></div></div>",
+        "id": 209616241,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1599731099
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> ++</p>",
+        "id": 209623631,
+        "sender_full_name": "klonos",
+        "timestamp": 1599736298
+    },
+    {
+        "content": "<p><strong>larsdesigns</strong> thanks for all you do (Karma: 4)</p>",
+        "id": 209623632,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1599736298
+    },
+    {
+        "content": "<p>...I've tested all domains and the LE certs seem to be valid. Is there anything else to test/review?</p>",
+        "id": 209623960,
+        "sender_full_name": "klonos",
+        "timestamp": 1599736527
+    },
+    {
+        "content": "<p>Nothing else right now. Thank you so much the Q/A. There is work to do on the Sanitize site. Maybe we can test that later and I can gather feedback. <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span></p>",
+        "id": 209688435,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1599762258
+    },
+    {
+        "content": "<p>Yes, at <a href=\"https://backdropcms.org/installation\">https://backdropcms.org/installation</a> the instructions are not correct. Under \"Create the MySQL database\" is says \"Create a database, and make a note of the database name and hostname (usually localhost).</p>\n<p>You can create a database, but in some phpMyAdmins (I'm using MAMP) you don't see the hostname when you create the database. I spent a long time looking for it and couldn't find it. Frustrating. You assign a host name when you create a USER for the database.</p>\n<p>But that doesn't work right either, because you can get it wrong. In MAMP, I had to click on the Advanced Option to see where the database was created. If I didn't select the same host name in my user setup, then I couldn't log in to BackDrop because the user or password was wrong. The database was created at 127.0.0.1 but I had selected \"localhost\" for the user. In the Advanced option, I could change it to \"localhost\" and then everything worked. It took me a LONG time to discover the problem by clicking around.</p>",
+        "id": 209816998,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599848552
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> ...I think that all your hard work and effort trying to figure out what worked in the end, deserves to be either in a subsection of that online documentation (MAMP-specific instructions that is), or in the forum ...or both.</p>",
+        "id": 209853928,
+        "sender_full_name": "klonos",
+        "timestamp": 1599876371
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/209853928\">said</a>:</p>\n<blockquote>\n<p>Thanks <span class=\"user-mention silent\" data-user-id=\"333206\">Sarvasri</span> ...I think that all your hard work and effort trying to figure out what worked in the end, deserves to be either in a subsection of that online documentation (MAMP-specific instructions that is), or in the forum ...or both.</p>\n</blockquote>\n<p>I don't know that it is MAMP specific. Users of other platforms should check and see if following the documentation exactly shows the same problems I found. I would think that phpMyAdmin would be exactly the same, but I don't know for sure. I'm including an expanded version of the start up process in my \"Ultimate Beginners Guide to Backdrop.\"</p>",
+        "id": 209854198,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1599876909
+    },
+    {
+        "content": "<p>Thanks for documenting that <span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span> ...you've mentioned this guide a few times during our weekly meetings; do you have it only on your local as a Word document, or have you perhaps uploaded it somewhere publicly?</p>",
+        "id": 209864107,
+        "sender_full_name": "klonos",
+        "timestamp": 1599885327
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"333206\">Sarvasri</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/209854198\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/209853928\">said</a>:</p>\n<blockquote>\n<p>Thanks <span class=\"user-mention silent\" data-user-id=\"333206\">Sarvasri</span> ...I think that all your hard work and effort trying to figure out what worked in the end, deserves to be either in a subsection of that online documentation (MAMP-specific instructions that is), or in the forum ...or both.</p>\n</blockquote>\n<p>I don't know that it is MAMP specific. Users of other platforms should check and see if following the documentation exactly shows the same problems I found. I would think that phpMyAdmin would be exactly the same, but I don't know for sure. I'm including an expanded version of the start up process in my \"Ultimate Beginners Guide to Backdrop.\"</p>\n</blockquote>\n<p>To be honest and blunt (and I mean this in the nicest way possible <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> )  the instructions for creating the database is very poor and disjointed. The instructions, from what I've read, assume you already know how to create a database...  They haven't been written with the novice in mind.  For example, where it says \"Create a database and make a note of the database name and <em>hostname</em> (usually localhost).\"  \"The database name and localhost\" bit shouldn't really be in the same sentence and it does seem to imply you will get the settings from phpMyAdmin or similar.  A good proportion of shared hosting will use \"localhost\" and if you are using it on LAMP or WAMP or MAMP then it will also probably be \"Localhost\" but some hosting providers do use a separate system for hosting the database server... for example the hosting company I use, you have to specify the server similar to this... \"<a href=\"http://shareddb1a.hosting.stackcp.net\">shareddb1a.hosting.stackcp.net</a>\".</p>\n<p>So, should the instructions be expanded (I don't mind helping) or should the instructions be changed to point to places on the internet where instructions have already been created for the different systems?</p>\n<p>And, where a certain level of knowledge is expected, that should be stated... for example, \"The following instructions will assume you already know how to create a database with the correct privileges to be able to install BackdropCMS\"  type of thing.</p>\n<p>Hope this helps.</p>",
+        "id": 209874446,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1599905428
+    },
+    {
+        "content": "<p>where is this documentation about databases?</p>",
+        "id": 209883149,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599919944
+    },
+    {
+        "content": "<p>never mind</p>",
+        "id": 209883157,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599919971
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"333206\">Sarvasri</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/209854198\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/209853928\">said</a>:</p>\n<blockquote>\n<p>Thanks <span class=\"user-mention silent\" data-user-id=\"333206\">Sarvasri</span> ...I think that all your hard work and effort trying to figure out what worked in the end, deserves to be either in a subsection of that online documentation (MAMP-specific instructions that is), or in the forum ...or both.</p>\n</blockquote>\n<p>I don't know that it is MAMP specific. Users of other platforms should check and see if following the documentation exactly shows the same problems I found. I would think that phpMyAdmin would be exactly the same, but I don't know for sure. I'm including an expanded version of the start up process in my \"Ultimate Beginners Guide to Backdrop.\"</p>\n</blockquote>\n<p>@Sarvasri,  it is MAMP specific.  I use Linux (CentOS) servers (not local) and everything works correctly according to the directions.  They are based on the D6/D7 directions and we've been doing this 20 years with various flavors of UNIX and not run into an issue.  But good to know for MAMP.</p>",
+        "id": 209902146,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599948841
+    },
+    {
+        "content": "<p>@klonos - MAMP is pretty specific to Windows and is a bit wicky (odd) to work with.  It absolutely does not work the same as the Linux/ Unix,  (just like everything else on Windows in my personal opinion). They make a macOS version for some ungodly reason too, but I've never touched that, Linux/UNIX works fine and MySQL server can be installed on a mac as is.  The Linux/Unix version is standard and that's what Drupal was developed on.  I think the original installation instructions from Drupal (and that Backdrop is also based on) were written in German for Linux systems and then translated.  They also do presume some basic Unix / Database knowledge, as well as some basic programming skills.  I only go as far back as D5 and we really only started focusing on Drupal as an agency when 6 came out.  We only had a few D5 sites.  It was easier for my partner to do static at that point.  D6 was really a turning point for us.  The basic installation really hasn't changed.  I don't know what it was like before that.  Wordpress also installs pretty much the same way.  My conclusion is that it's really the MAMP portion that is different and probably very poorly documented because it's such a small user base.  ( <a href=\"https://www.mamp.info/en/windows/\">https://www.mamp.info/en/windows/</a> ). I've installed MySQL server and Drupal locally with no problems, without MAMP, FYI, when I needed to test something out.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.mamp.info/en/windows/\" style=\"background-image: url(https://www.mamp.info/images/icons/mamp-pro.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.mamp.info/en/windows/\" title=\"MAMP &amp; MAMP PRO - your local web development solution for PHP and WordPress development\">MAMP &amp; MAMP PRO - your local web development solution for PHP and WordPress development</a></div><div class=\"message_embed_description\">MAMP GmbH is the manufacturer of the award-winning MAMP software.</div></div></div>",
+        "id": 209902553,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599949532
+    },
+    {
+        "content": "<p>MAMP started out being only for Mac: <a href=\"https://www.mamp.info/en/mac/\">https://www.mamp.info/en/mac/</a> <a href=\"https://en.wikipedia.org/wiki/MAMP\">https://en.wikipedia.org/wiki/MAMP</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.mamp.info/en/mac/\" style=\"background-image: url(https://www.mamp.info/images/icons/mamp-pro.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.mamp.info/en/mac/\" title=\"MAMP &amp; MAMP PRO - your local web development solution for PHP and WordPress development\">MAMP &amp; MAMP PRO - your local web development solution for PHP and WordPress development</a></div><div class=\"message_embed_description\">MAMP GmbH is the manufacturer of the award-winning MAMP software.</div></div></div>",
+        "id": 209902983,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599950299
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/209902983\">said</a>:</p>\n<blockquote>\n<p>MAMP started out being only for Mac: <a href=\"https://www.mamp.info/en/mac/\">https://www.mamp.info/en/mac/</a> <a href=\"https://en.wikipedia.org/wiki/MAMP\">https://en.wikipedia.org/wiki/MAMP</a></p>\n</blockquote>\n<p>@oadaeh, heh.  I always thought it was for Windows.  Why the heck would you need a web developer environment for the MAC unless it was OS 9?  OS X is UNIX based.</p>",
+        "id": 209903145,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599950674
+    },
+    {
+        "content": "<p>I used to use MAMP for the Mac when I first got started, because it was a simple way to get databases and PHP running. I probably used MAMP for a year or two, before I ever configured mysql and php directly on my Mac. </p>\n<p>MAMP was a way for folks who were not comfortable on the command line to get a local version of their site working on a Mac.</p>\n<p>Now, I'm using Lando or DDev</p>",
+        "id": 209903213,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1599950812
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/209864107\">said</a>:</p>\n<blockquote>\n<p>Thanks for documenting that <span class=\"user-mention silent\" data-user-id=\"333206\">Sarvasri</span> <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span> ...you've mentioned this guide a few times during our weekly meetings; do you have it only on your local as a Word document, or have you perhaps uploaded it somewhere publicly?</p>\n</blockquote>\n<p>The Ultimate Beginners Guide to BackDrop is written in Apple Notes. I start all my unformatted writing that way. Then I move it to a WP or Publishing platform. It's still got a little way to go to finish the \"how to install section.\" If there is a way to write collaboratively online I could cut and paste what I have so far if others want to review, or paste it into an RTF for you to look at if it's useful for you.</p>",
+        "id": 209953795,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1600038359
+    },
+    {
+        "content": "<p>I'm an ex-Windows person, only using Mac the past 3-4 years. I started my web dev attempts as back as 2001 (using Dreamweaver <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span>) and then started playing with Drupal in 2006-2007. I've always used <a href=\"https://www.apachefriends.org\">XAMPP</a> as my AMP stack and it never failed me ...not even when I switched to Mac. ...the Tech Lead that was mentoring me in the agency that offered me the Drupal support engineer job in 2017 was using <a href=\"https://github.com/beetboxvm/beetbox\">https://github.com/beetboxvm/beetbox</a> ...that has also served me very well, but the person that maintained it moved to <a href=\"http://amazee.io\">http://amazee.io</a> (which are behind <a href=\"https://github.com/amazeeio/lagoon\">https://github.com/amazeeio/lagoon</a> the infrastructure used by the GovCMS Platform). Since I use that platform day-to-day, I have switched to Docker + <a href=\"https://github.com/amazeeio/pygmy\">https://github.com/amazeeio/pygmy</a> + <a href=\"https://github.com/ahoy-cli/ahoy\">https://github.com/ahoy-cli/ahoy</a> (all enterprise-orientated tools) which also serve me well for my day job ...but when working with Backdrop, I wanted something simple yet robust ...I fiddled with <a href=\"https://www.ddev.com/ddev-local\">https://www.ddev.com/ddev-local</a> for a brief period, which I liked but had some issues with ...when <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> mentioned that the agency he works for are behind <a href=\"https://lando.dev\">https://lando.dev</a>, I switched to that and never looked back since (mainly because Geoff was very promptly answering questions and solved any hiccup people in the Backdrop community mentioned). ...I hope that all this information helps, but in the end, which tool people use for their job is based on their personal preferences and experience with it + it seems that mileage varies most of the times <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 209954415,
+        "sender_full_name": "klonos",
+        "timestamp": 1600039612
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> I have found that the easiest way to share documentation via Google docs or an Etherpad instance (<a href=\"https://pad.riseup.net\">https://pad.riseup.net</a> is one such service) ...but any way that you are comfortable with would do (even uploading a .pdf somewhere and sharing the link). ...another option is that if you have an account in <a href=\"http://backdropcms.org\">backdropcms.org</a>, you could create a documentation page. It would remain unpublished, until we review/approve, and then one of us with proper permissions can publish it when ready.</p>",
+        "id": 209960995,
+        "sender_full_name": "klonos",
+        "timestamp": 1600051637
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Installation.20question/near/209954415\">said</a>:</p>\n<blockquote>\n<p><a href=\"https://lando.dev\">https://lando.dev</a>, I switched to that and never looked back...</p>\n</blockquote>\n<p>I took a look at Lando. It appears to be a heavy development platform for command line coders. I couldn't understand half the terminology. I think that for ordinary people, personal site builders, and non-profits, this would scare their pants off!</p>\n<p>We definitely need to make BackDrop accessible to mere mortals. It's nice that command-line coders have such a neat tool for high powered work. If there is something even more accessible than MAMP, I'm all ears :)</p>",
+        "id": 210116071,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1600168792
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"333206\">@Sarvasri</span> I'm curious, how do you currently handle web development / site building? Which web cms(es) did you use so far?</p>",
+        "id": 210117474,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1600169954
+    },
+    {
+        "content": "<p>Interesting: In the WordPress docs there are different sections for installing WordPress \"Locally\" (<a href=\"https://codex.wordpress.org/WordPress_Installation_Techniques#Installing_WordPress_Locally\">https://codex.wordpress.org/WordPress_Installation_Techniques#Installing_WordPress_Locally</a>, amongst them MAMP) and \"Using various web interfaces\" (<a href=\"https://codex.wordpress.org/WordPress_Installation_Techniques#Using_Various_Web_Host_Interfaces\">https://codex.wordpress.org/WordPress_Installation_Techniques#Using_Various_Web_Host_Interfaces</a>). I think it's a good idea to provide something similar to the Backdrop installation documentation.</p>",
+        "id": 210149391,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600185611
+    },
+    {
+        "content": "<p>I used D7, but I never got very good with it. It took me forever to get a site up.</p>",
+        "id": 210288783,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1600274669
+    },
+    {
+        "content": "<p>We should make an effort to provide detailed instructions for MAMP and XAMPP. ...adding that to my never-ending list of things to do.</p>",
+        "id": 210299561,
+        "sender_full_name": "klonos",
+        "timestamp": 1600279937
+    },
+    {
+        "content": "<blockquote>\n<p>We should make an effort to provide detailed instructions </p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> was <a href=\"https://github.com/backdrop/backdrop-issues/issues/4624\">this</a> something you had in mind?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4624\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4624\" title=\"Improve installation instructions for non-technical users · Issue #4624 · backdrop/backdrop-issues\">Improve installation instructions for non-technical users · Issue #4624 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need It actually popped up in the Zulip chat. A user had a really hard time to figure out how to install Backdrop with MAMP. The Backdrop installation instructions require some b...</div></div></div>",
+        "id": 210352405,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1600324269
+    },
+    {
+        "content": "<p>Yup. Exactly that <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...detailed instructions for most popular tools, like MAMP and XAMPP, with screenshots etc.</p>",
+        "id": 210359848,
+        "sender_full_name": "klonos",
+        "timestamp": 1600330364
+    },
+    {
+        "content": "<p>I am doing this for MAMP as part of my Ultimate Beginners Guide to Backdrop. It could be copied and edited for the installation instructions if you like it. I should be finished in a few days.</p>",
+        "id": 211387765,
+        "sender_full_name": "Sarvasri",
+        "timestamp": 1601163414
+    }
+]

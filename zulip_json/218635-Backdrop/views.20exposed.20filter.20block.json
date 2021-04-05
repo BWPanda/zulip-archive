@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>Is there a way to programmatically have a views exposed filter for a block? I've spent a while searching, and tried competing suggestions and have been unsuccessful in my efforts.</p>",
+        "id": 213995687,
+        "sender_full_name": "Abbie Gonzalez",
+        "timestamp": 1603240074
+    },
+    {
+        "content": "<p>Hi, Abbie Gonzalez. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 213995688,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1603240074
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"355997\">@Abbie Gonzalez</span> Can you please clarify \"programmatically have a views exposed filter for a block\"?</p>",
+        "id": 213998349,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603242696
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"355997\">Abbie Gonzalez</span> <a href=\"#narrow/stream/218635-Backdrop/topic/views.20exposed.20filter.20block/near/213995687\">said</a>:</p>\n<blockquote>\n<p>Is there a way to programmatically have a views exposed filter for a block? I've spent a while searching, and tried competing suggestions and have been unsuccessful in my efforts.</p>\n</blockquote>\n<p>Abbie, yes.  It's a bit complicated but it is totally doable, for both blocks and pages.  Basically, it's all in the views setup - you will need to add a contextual filter to the view.  Here's some reference: <a href=\"https://drupal.stackexchange.com/questions/27818/contextual-filter-with-a-block-view\">https://drupal.stackexchange.com/questions/27818/contextual-filter-with-a-block-view</a>.   Depending on what you are trying to filter, these will change.  Also, depending on what you are trying to filter for - you may need to install the token filter module.  I would need much more specific information on exactly what you're trying to do to give any more help.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://drupal.stackexchange.com/questions/27818/contextual-filter-with-a-block-view\" style=\"background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://drupal.stackexchange.com/questions/27818/contextual-filter-with-a-block-view\" title=\"Contextual filter with a block view\">Contextual filter with a block view</a></div><div class=\"message_embed_description\">I have a page view(\"/news\") with contextual filter for the topics (\"news/design\",\"news/coding\"...) which are taxonomy terms and this worked fine. Due to some changes for the mobile theming, I need a </div></div></div>",
+        "id": 213998448,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603242791
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> <br>\nThis isn't a feature that shows for a views block in backdrop. It only shows in drupal7. :-/</p>",
+        "id": 214062276,
+        "sender_full_name": "Abbie Gonzalez",
+        "timestamp": 1603292515
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>  I have a module that creates a block that embeds a page view that has an exposed form block that I also want to embed separately. Embedding the page works using views_embed_view(), but the api options I've looked at to embed the exposed block don't seem to work (module_invoke(), etc.). <br>\nCan't find any documentation that can even point me in the right direction. <span aria-label=\"grimacing\" class=\"emoji emoji-1f62c\" role=\"img\" title=\"grimacing\">:grimacing:</span></p>",
+        "id": 214062796,
+        "sender_full_name": "Abbie Gonzalez",
+        "timestamp": 1603292692
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"355997\">Abbie Gonzalez</span> <a href=\"#narrow/stream/218635-Backdrop/topic/views.20exposed.20filter.20block/near/214062276\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <br>\nThis isn't a feature that shows for a views block in backdrop. It only shows in drupal7. :-/</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"355997\">@Abbie Gonzalez</span> , yes it does show in backdrop - in almost exactly the same way.  I have a number of views created like that for one of my sites IN BACKDROP.  The documentation is a bit scanty for Backdrop yet, because it's newer than Drupal 7, but views works almost exactly the same way.  All of those options exist.</p>",
+        "id": 214062891,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603292714
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"355997\">Abbie Gonzalez</span> <a href=\"#narrow/stream/218635-Backdrop/topic/views.20exposed.20filter.20block/near/214062796\">said</a>:</p>\n<blockquote>\n<p>I have a module that creates a block that embeds a page view that has an exposed form block that I also want to embed separately. Embedding the page works using views_embed_view(), but the api options I've looked at to embed the exposed block don't seem to work (module_invoke(), etc.). <br>\nCan't find any documentation that can even point me in the right direction. <span aria-label=\"grimacing\" class=\"emoji emoji-1f62c\" role=\"img\" title=\"grimacing\">:grimacing:</span></p>\n</blockquote>\n<p>It sounds like the issue is the way you're trying to embed the views block rather than the view itself.  I think it's more that you have to step back in how you're embedding the views block.  I normally use layouts for that, not module_invoke.  Try using the API to embed the block in the layout you're using rather than using module_invoke - or just do it manually, then export the layout block code and include that in your module as an install process, but make sure you've created the view first.  There's a number of ways to install a views block into a layout, but you would need to use the layout - or create the block as a custom block and install manually, etc.  It really helps when we have more information.   I've had no problem embedding both webform blocks and views blocks, but I'm not trying to do them programmatically - I'm just doing it as part of site building, and maybe a bit of code as I need, because all my sites are custom.  I only write modules when I have something I have to re-use for multiple clients or there's no other way to do it.  Some of the other folks here may be better able to help you.  But I think you need to look at layouts and custom blocks, not the views.</p>",
+        "id": 214064525,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603293223
+    },
+    {
+        "content": "<p>Layouts are defined in JSON files so the block needs to be defined in there to show up</p>",
+        "id": 214069659,
+        "sender_full_name": "Herb",
+        "timestamp": 1603295067
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> I have a specific presentation need where I can't just build a layout to place the blocks in. That's why I'm using a module for presenting it, although the final block will be placed using layouts.</p>",
+        "id": 214073053,
+        "sender_full_name": "Abbie Gonzalez",
+        "timestamp": 1603296332
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"355997\">Abbie Gonzalez</span> <a href=\"#narrow/stream/218635-Backdrop/topic/views.20exposed.20filter.20block/near/214073053\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> I have a specific presentation need where I can't just build a layout to place the blocks in. That's why I'm using a module for presenting it, although the final block will be placed using layouts.</p>\n</blockquote>\n<p>Then you need to give a lot more details on the use case, or no one here will be able to help you.</p>",
+        "id": 214074352,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603296802
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"355997\">@Abbie Gonzalez</span> Thanks for the clarification. I kinda got it working with this code:</p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">/**</span>\n<span class=\"x\"> * Implements hook_block_info().</span>\n<span class=\"x\"> */</span>\n<span class=\"x\">function my_module_block_info() {</span>\n<span class=\"x\">  return array(</span>\n<span class=\"x\">    'page' =&gt; array(</span>\n<span class=\"x\">      'info' =&gt; t('Views page'),</span>\n<span class=\"x\">      'description' =&gt; t('The views page display.'),</span>\n<span class=\"x\">    ),</span>\n<span class=\"x\">    'form' =&gt; array(</span>\n<span class=\"x\">      'info' =&gt; t('Views form'),</span>\n<span class=\"x\">      'description' =&gt; t('The views exposed form.'),</span>\n<span class=\"x\">    ),</span>\n<span class=\"x\">  );</span>\n<span class=\"x\">}</span>\n\n<span class=\"x\">/**</span>\n<span class=\"x\"> * Implements hook_block_view().</span>\n<span class=\"x\"> */</span>\n<span class=\"x\">function my_module_block_view($delta = '', $settings = array(), $contexts = array()) {</span>\n<span class=\"x\">  $block = array();</span>\n\n<span class=\"x\">  if ($delta == 'page') {</span>\n<span class=\"x\">    $block['subject'] = NULL;</span>\n<span class=\"x\">    $block['content'] = views_embed_view('test', 'page');</span>\n<span class=\"x\">  }</span>\n<span class=\"x\">  elseif ($delta == 'form') {</span>\n<span class=\"x\">    $block['subject'] = NULL;</span>\n<span class=\"x\">    $block['content'] = my_module_views_exposed_form();</span>\n<span class=\"x\">  }</span>\n\n<span class=\"x\">  return $block;</span>\n<span class=\"x\">}</span>\n\n<span class=\"x\">function my_module_views_exposed_form() {</span>\n<span class=\"x\">  // @see http://sanchiz.net/en/blog/drupal-7-programmatically-get-and-render-views-exposed-form</span>\n<span class=\"x\">  $view = views_get_view('test');</span>\n<span class=\"x\">  $view-&gt;set_display('page');</span>\n<span class=\"x\">  $view-&gt;init_handlers();</span>\n<span class=\"x\">  $exposed_form = $view-&gt;display_handler-&gt;get_plugin('exposed_form');</span>\n<span class=\"x\">  return $exposed_form-&gt;render_exposed_form(TRUE);</span>\n<span class=\"x\">}</span>\n</code></pre></div>",
+        "id": 214115784,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603314878
+    },
+    {
+        "content": "<p>Note that:</p>\n<ol>\n<li>You need to set ' Create exposed form block' to 'Yes' in the view</li>\n<li>When using the exposed form, it displays the results on a separate page (i.e. not in the other embedded views block) - not sure how to fix that...</li>\n</ol>",
+        "id": 214115941,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603314976
+    },
+    {
+        "content": "<p>As per the code comment, I got that exposed form embed code from <a href=\"http://sanchiz.net/en/blog/drupal-7-programmatically-get-and-render-views-exposed-form\">http://sanchiz.net/en/blog/drupal-7-programmatically-get-and-render-views-exposed-form</a></p>",
+        "id": 214116012,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603315025
+    },
+    {
+        "content": "<p>Most of the time you can find a solution in D7, then apply it to Backdrop with few-to-no tweaks.</p>",
+        "id": 214116051,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603315052
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/views.20exposed.20filter.20block/near/214116051\">said</a>:</p>\n<blockquote>\n<p>Most of the time you can find a solution in D7, then apply it to Backdrop with few-to-no tweaks.</p>\n</blockquote>\n<p>Definitely - if it's been done in D7, it can be done in Backdrop</p>",
+        "id": 214116158,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603315100
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> :-O<br>\nSweet! Thanks for setting me in the right direction! :)</p>",
+        "id": 214124418,
+        "sender_full_name": "Abbie Gonzalez",
+        "timestamp": 1603320326
+    },
+    {
+        "content": "<p>I feel that this deserves to be either a how-to blog post in <a href=\"http://b.org\">b.org</a>, or a topic with solution in <a href=\"http://forum.b.org\">forum.b.org</a>.</p>",
+        "id": 214209734,
+        "sender_full_name": "klonos",
+        "timestamp": 1603383079
+    }
+]

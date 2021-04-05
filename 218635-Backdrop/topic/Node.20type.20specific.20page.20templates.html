@@ -1,0 +1,186 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html">Node type specific page templates</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="229409605"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229409605" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229409605">(Mar 09 2021 at 02:03)</a>:</h4>
+<p>Is there equivalent of D7's page--node--blog.tpl.php for Backdrop? Template suggestions are not showing any content-type specific templates. Using the template_preprocess_page(&amp;$variables) to create one also doesn't work because there is no $node in variables. How do you, guys, override page components depending on content type?</p>
+
+
+
+<a name="229410046"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410046" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410046">(Mar 09 2021 at 02:08)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> Are you sure you want a separate <code>page.tpl.php</code> template for blog nodes? Because <code>page.tpl.php</code> affects the <em>entire</em> page (<code>html</code> tag, stylesheets, javascript files, <code>body</code> tag, all regions, etc.)...</p>
+
+
+
+<a name="229410176"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410176" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410176">(Mar 09 2021 at 02:10)</a>:</h4>
+<p>Do you mean <code>node.tpl.php</code> instead? <a href="/user_uploads/18319/1PxipkK_86EAyAnNPu_mFN3x/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/1PxipkK_86EAyAnNPu_mFN3x/image.png" title="image.png"><img src="/user_uploads/18319/1PxipkK_86EAyAnNPu_mFN3x/image.png"></a></div>
+
+
+
+<a name="229410210"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410210" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410210">(Mar 09 2021 at 02:10)</a>:</h4>
+<p>What Im' trying to do is to override a note title of specific content type without touching the database</p>
+
+
+
+<a name="229410278"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410278" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410278">(Mar 09 2021 at 02:11)</a>:</h4>
+<p>Couldn't find the node type in node.tpl.php, page-components.tpl.php and page-components.tpl.php</p>
+
+
+
+<a name="229410320"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410320" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410320">(Mar 09 2021 at 02:11)</a>:</h4>
+<p>The $title is there and I can override it, however the change goes to all node types, unfortunately. That's why I was looking to narrow the template file to a node type</p>
+
+
+
+<a name="229410385"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410385" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410385">(Mar 09 2021 at 02:12)</a>:</h4>
+<p>See red highlighted section of screenshot above</p>
+
+
+
+<a name="229410398"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410398" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410398">(Mar 09 2021 at 02:12)</a>:</h4>
+<p>Use <code>node--[content_type].tpl.php</code></p>
+
+
+
+<a name="229410403"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410403" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410403">(Mar 09 2021 at 02:12)</a>:</h4>
+<p>Lemme look again</p>
+
+
+
+<a name="229410580"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410580" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410580">(Mar 09 2021 at 02:14)</a>:</h4>
+<p>Unfortunately you can not override $title that you see on a node page with node--[content_type].tpl.php</p>
+
+
+
+<a name="229410638"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410638" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410638">(Mar 09 2021 at 02:15)</a>:</h4>
+<p>Oh ok, you want to override the <em>page</em> title, but for specific content types...</p>
+
+
+
+<a name="229410780"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410780" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410780">(Mar 09 2021 at 02:17)</a>:</h4>
+<p>And page.tpl.php is so much different than on D7, it doesn't have $title anymore</p>
+
+
+
+<a name="229410890"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410890" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410890">(Mar 09 2021 at 02:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> Are you wanting to change the <em>page</em> title, or the <em>node</em> title?</p>
+
+
+
+<a name="229410930"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229410930" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229410930">(Mar 09 2021 at 02:19)</a>:</h4>
+<p>The title that you see when you are on a node page.</p>
+
+
+
+<a name="229411252"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229411252" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229411252">(Mar 09 2021 at 02:23)</a>:</h4>
+<p>There are template suggestions like block--system:page-components:title-combo.tpl.php or page-components--title-combo.tpl.php, but none of 'em have node type to check. I could take page argument as nid and load the whole node, but to node_load() ing just to check node type seems overkill</p>
+
+
+
+<a name="229411390"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229411390" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229411390">(Mar 09 2021 at 02:25)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> I wouldn't do this in a template file, I'd do it in a preprocess function... Try this:</p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">function [MY_THEME]_preprocess_node(&amp;$variables) {</span>
+<span class="x">  if ($variables['type'] == 'post') {</span>
+<span class="x">    $title = backdrop_get_title() . t(' - Post');</span>
+<span class="x">    backdrop_set_title($title);</span>
+<span class="x">  }</span>
+<span class="x">}</span>
+</code></pre></div>
+
+
+
+<a name="229411780"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229411780" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229411780">(Mar 09 2021 at 02:30)</a>:</h4>
+<p>Belissimo! Works like charm. Thank you!</p>
+
+
+
+<a name="229466850"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229466850" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229466850">(Mar 09 2021 at 12:16)</a>:</h4>
+<p>Or change it in the layout directly, if I'm understanding. You can place the title like a regular field.</p>
+
+
+
+<a name="229466972"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229466972" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229466972">(Mar 09 2021 at 12:17)</a>:</h4>
+<p>Ah nevermind.</p>
+
+
+
+<a name="229478416"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229478416" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Rob Feature <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229478416">(Mar 09 2021 at 13:45)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="258960">Alan Mels</span> <a href="#narrow/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates/near/229409605">said</a>:</p>
+<blockquote>
+<p>Is there equivalent of D7's page--node--blog.tpl.php for Backdrop? Template suggestions are not showing any content-type specific templates</p>
+</blockquote>
+<p>FWIW, I dont think these page level suggestions were automatic in D7 either.  I think you had to create a preprocess function to make content-type-template suggestions available at the page.tpl level. Like:</p>
+<div class="codehilite"><pre><span></span><code>function mytheme_process_page(&amp;$variables) {
+  $variables[&#39;theme_hook_suggestions&#39;][] = &#39;page__node__&#39;. $variables[&#39;node&#39;]-&gt;type;
+}
+</code></pre></div>
+
+
+
+<a name="229536779"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229536779" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229536779">(Mar 09 2021 at 19:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="298007">@Rob Feature</span>, right. But even if you create such a template, the variables available are different than on D7. You can't get to $title there.</p>
+
+
+
+<a name="229540786"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229540786" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Rob Feature <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229540786">(Mar 09 2021 at 19:45)</a>:</h4>
+<p>I'm assuming $title now resides in a Layout, then?  I know this goes beyond your original question, but it seems like this would be a good place to have a layout with no title, then you could implement that anywhere you wanted thru the Layouts UI.  That would be my first instinct, at least.</p>
+
+
+
+<a name="229544412"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229544412" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229544412">(Mar 09 2021 at 20:08)</a>:</h4>
+<p>My comment from earlier relates to the UI -- in core layouts already allow you to override the title/place it as a block on a particular layout.</p>
+
+
+
+<a name="229544617"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229544617" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229544617">(Mar 09 2021 at 20:09)</a>:</h4>
+<p>So if you have a layout for a particular content type, you can have the title placed in a custom location for that content type pretty easily through the UI.</p>
+
+
+
+<a name="229578486"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20type%20specific%20page%20templates/near/229578486" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20type.20specific.20page.20templates.html#229578486">(Mar 09 2021 at 23:57)</a>:</h4>
+<p>But does the title block support tokens in the Layout UI. I doubt it does.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

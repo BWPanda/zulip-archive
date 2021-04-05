@@ -1,0 +1,56 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Admin.20bar.20menu.20items.20not.20displaying.20properly.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20bar.20menu.20items.20not.20displaying.20properly.html">Admin bar menu items not displaying properly</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="221033265"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20bar%20menu%20items%20not%20displaying%20properly/near/221033265" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20bar.20menu.20items.20not.20displaying.20properly.html#221033265">(Dec 28 2020 at 01:52)</a>:</h4>
+<p>I just gave a client access to their site, but the admin bar for them is mostly empty... They have all the necessary permissions (AFAIK). For example, the admin bar just shows Home and Add Content. If I manually enter the URL <code>/admin/dashboard</code> or <code>/admin/content</code> they can access those pages, but those links aren't appearing in the admin bar for them.</p>
+
+
+
+<a name="221033268"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20bar%20menu%20items%20not%20displaying%20properly/near/221033268" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20bar.20menu.20items.20not.20displaying.20properly.html#221033268">(Dec 28 2020 at 01:52)</a>:</h4>
+<p>I'm user 1 and it all works ok for me.</p>
+
+
+
+<a name="221033283"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20bar%20menu%20items%20not%20displaying%20properly/near/221033283" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20bar.20menu.20items.20not.20displaying.20properly.html#221033283">(Dec 28 2020 at 01:53)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> I've seen that happen when there are (non-admin_bar) javascript errors, which somehow prevent the admin_bar js from loading properly.</p>
+
+
+
+<a name="221033339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20bar%20menu%20items%20not%20displaying%20properly/near/221033339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20bar.20menu.20items.20not.20displaying.20properly.html#221033339">(Dec 28 2020 at 01:55)</a>:</h4>
+<p>The only thing in the console is the typical "This page uses the non standard property “zoom”..."</p>
+
+
+
+<a name="221033471"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20bar%20menu%20items%20not%20displaying%20properly/near/221033471" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20bar.20menu.20items.20not.20displaying.20properly.html#221033471">(Dec 28 2020 at 01:59)</a>:</h4>
+<p>Just tried disabling all checkboxes on the Performance page (inc. Aggregate JS) but that didn't fix it.</p>
+
+
+
+<a name="221725020"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Admin%20bar%20menu%20items%20not%20displaying%20properly/near/221725020" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Admin.20bar.20menu.20items.20not.20displaying.20properly.html#221725020">(Jan 06 2021 at 01:41)</a>:</h4>
+<p>Figured it out! FoxyCart was overriding core's 'Use the administration pages' permission (it was trying to create a new permission with that same machine name), and this was messing with the access permissions. Pushed a fix to the FoxyCart module and all good now.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

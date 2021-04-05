@@ -1,0 +1,38 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Installing.20site.20from.20scratch.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installing.20site.20from.20scratch.html">Installing site from scratch</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="185807583"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installing%20site%20from%20scratch/near/185807583" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installing.20site.20from.20scratch.html#185807583">(Jan 16 2020 at 11:54)</a>:</h4>
+<p>If I want to reset a site completely and install it from scratch, I dump all the tables in the DB and delete everything in <code>/files/config_*/active/</code>. Is there then any way anything from the old version of the site can remain? Specifically caching or stuff like that?</p>
+
+
+
+<a name="185807683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installing%20site%20from%20scratch/near/185807683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installing.20site.20from.20scratch.html#185807683">(Jan 16 2020 at 11:56)</a>:</h4>
+<p>I ask because I'm testing an install profile, and I have a <code>print_r()</code> in the code that's run during the install tasks. Sometimes it prints out stuff, and sometimes not (mostly not). Wondering if it's a caching thing or something like that...?</p>
+
+
+
+<a name="187504017"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installing%20site%20from%20scratch/near/187504017" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installing.20site.20from.20scratch.html#187504017">(Feb 05 2020 at 22:58)</a>:</h4>
+<p>Anything cache-related would reside in the db AFAIK; so if you drop all the tables, then that should not be the culprit there. Not sure what could be wrong <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

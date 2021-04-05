@@ -1,0 +1,602 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Lando.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html">Lando</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="197058081"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197058081" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197058081">(May 10 2020 at 14:23)</a>:</h4>
+<p>I'm looking for a way to automate OOTB UTF8 support for my local environments + at the same time understand a little bit more about how Lando works. My <code>.lando.yml</code> looks like this:</p>
+<div class="codehilite"><pre><span></span><code>name: whatever
+# Use existing Backdrop recipe, then customise below.
+recipe: backdrop
+
+config:
+  # Where Backdrop resides, relative to this file.
+  webroot: docroot
+  # Prefer MariaDB over MySQL.
+  database: mariadb
+  php: &#39;7.2&#39;
+  backdrush: &#39;1.3.1&#39;
+...
+</code></pre></div>
+
+
+<p>...which gets me "MySQL, MariaDB, or equivalent version 5.5.5-10.3.22-MariaDB" in the site status report.</p>
+<p>...when I do <code>lando ssh</code> and run <code>mysql --version</code>, I get:<br>
+<code>mysql  Ver 15.1 Distrib 10.1.44-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2</code><br>
+OK so it is my understanding from all that that the db container is different from the appserver container, but why does the appserver container have mysql installed as well?<br>
+...and back to my original question: how do I get a version of mariadb + the right settings to have it support UTF8 OOTB?</p>
+
+
+
+<a name="197058213"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197058213" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197058213">(May 10 2020 at 14:25)</a>:</h4>
+<p>...also, is there a way to always pull the latest drush from <a href="https://github.com/backdrop-contrib/backdrop-drush-extension/releases" title="https://github.com/backdrop-contrib/backdrop-drush-extension/releases">https://github.com/backdrop-contrib/backdrop-drush-extension/releases</a> w/o having to hardcode the version?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/backdrop-drush-extension/releases" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/backdrop-drush-extension/releases" title="backdrop-contrib/backdrop-drush-extension">backdrop-contrib/backdrop-drush-extension</a></div><div class="message_embed_description">A set of commands and boot class for Drush and Backdrop CMS. - backdrop-contrib/backdrop-drush-extension</div></div></div>
+
+
+
+<a name="197059582"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197059582" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197059582">(May 10 2020 at 14:49)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> ...? <span aria-label="yum" class="emoji emoji-1f60b" role="img" title="yum">:yum:</span></p>
+
+
+
+<a name="197071234"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197071234" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197071234">(May 10 2020 at 18:39)</a>:</h4>
+<p>For the moment, I have a script with the following the does some magic form me, but I'd rather Lando did it for me instead:</p>
+<div class="codehilite"><pre><span></span><code>BACKDRUSH=&quot;$(curl -sL https://api.github.com/repos/backdrop-contrib/drush/releases/latest | jq -r &#39;.tag_name&#39;)&quot;
+sed -i &#39;&#39; -e &quot;s/&#39;?.?.?&#39;/&#39;${BACKDRUSH}&#39;/g&quot; .lando.yml
+</code></pre></div>
+
+
+<p>(my <code>.lando.yml</code> has <code>?.?.?</code> as a placeholder for the backdrush version)</p>
+
+
+
+<a name="197153370"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197153370" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197153370">(May 11 2020 at 14:30)</a>:</h4>
+<p>set backdrop to the HEAD</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">backdrush</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1.x-1.x</span>
+</code></pre></div>
+
+
+
+<a name="197153406"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197153406" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197153406">(May 11 2020 at 14:30)</a>:</h4>
+<p>in your <code>.lando.yml</code> file</p>
+
+
+
+<a name="197159176"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197159176" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197159176">(May 11 2020 at 15:10)</a>:</h4>
+<p>I'm also interested. Need to then run <code>lando rebuild</code>?</p>
+
+
+
+<a name="197159275"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197159275" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197159275">(May 11 2020 at 15:10)</a>:</h4>
+<p>Yep, always rebuild after editing lando config file.</p>
+
+
+
+<a name="197161185"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197161185" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197161185">(May 11 2020 at 15:22)</a>:</h4>
+<p>Out of curiosity: is anyone here <em>not</em> using lando? (Like me... )</p>
+
+
+
+<a name="197161834"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197161834" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197161834">(May 11 2020 at 15:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> I'm sure the non-Lando users greatly outnumber the Lando users <span aria-label="blush" class="emoji emoji-1f60a" role="img" title="blush">:blush:</span></p>
+
+
+
+<a name="197163539"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197163539" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197163539">(May 11 2020 at 15:37)</a>:</h4>
+<p>Neither <span class="user-mention" data-user-id="256663">@Joseph Flatt</span> nor I use any container-type environment to develop in. We use straight LAMP.</p>
+
+
+
+<a name="197163606"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197163606" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197163606">(May 11 2020 at 15:37)</a>:</h4>
+<p>straight WAMP and GitHub for Windows and Notepad++.</p>
+
+
+
+<a name="197163625"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197163625" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197163625">(May 11 2020 at 15:38)</a>:</h4>
+<p>Amateur!</p>
+
+
+
+<a name="197163752"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197163752" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197163752">(May 11 2020 at 15:38)</a>:</h4>
+<p>Lando has made local dev a lot easier for me</p>
+
+
+
+<a name="197164150"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197164150" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197164150">(May 11 2020 at 15:41)</a>:</h4>
+<p>Im on Windows, first time I tried, discovered I needed Windows PRO for Lando to install. Gave up.</p>
+
+
+
+<a name="197164189"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197164189" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197164189">(May 11 2020 at 15:41)</a>:</h4>
+<p>Think I have PRO now, but havent tried again</p>
+
+
+
+<a name="197164242"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197164242" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197164242">(May 11 2020 at 15:42)</a>:</h4>
+<p>I suspect its probably more fiddly to set up on Windows</p>
+
+
+
+<a name="197167808"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197167808" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197167808">(May 11 2020 at 16:06)</a>:</h4>
+<p>I'm a long-time Windows user, but recently (3+ years Mac convert) ...I have PHPStorm installed and always keep saying that I'll start using one of them, but never do ...I'm using SublimeText instead (so also n00b <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ) ...I used to use <a href="https://github.com/beetboxvm/beetbox">https://github.com/beetboxvm/beetbox</a>, but then our agency took over the GovCMS support from Acquia and the Platform switched to <a href="https://github.com/amazeeio/lagoon">https://github.com/amazeeio/lagoon</a> (which uses <a href="https://github.com/amazeeio/pygmy">https://github.com/amazeeio/pygmy</a> and <a href="https://github.com/ahoy-cli/ahoy">https://github.com/ahoy-cli/ahoy</a>) ...for Backdrop I use Lando (thanks to <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> for introducing me to it <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ) ...I was really excited to find out that the long term plan for Amazee/Lagoon is to switch to Lando <span aria-label="tada" class="emoji emoji-1f389" role="img" title="tada">:tada:</span> <a href="https://www.amazee.io/blog/post/announcing-lando-integration-for-lagoon">https://www.amazee.io/blog/post/announcing-lando-integration-for-lagoon</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/beetboxvm/beetbox" style="background-image: url(https://avatars3.githubusercontent.com/u/17006830?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/beetboxvm/beetbox" title="beetboxvm/beetbox">beetboxvm/beetbox</a></div><div class="message_embed_description">Pre-provisioned L*MP stack. Contribute to beetboxvm/beetbox development by creating an account on GitHub.</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/amazeeio/lagoon" style="background-image: url(https://avatars0.githubusercontent.com/u/14974468?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/amazeeio/lagoon" title="amazeeio/lagoon">amazeeio/lagoon</a></div><div class="message_embed_description">Docker Build and Deploy System for OpenShift &amp; Kubernetes - amazeeio/lagoon</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/amazeeio/pygmy" style="background-image: url(https://avatars0.githubusercontent.com/u/14974468?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/amazeeio/pygmy" title="amazeeio/pygmy">amazeeio/pygmy</a></div><div class="message_embed_description">Local amazee.io Docker Drupal Development Environment https://rubygems.org/gems/pygmy/ - amazeeio/pygmy</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/ahoy-cli/ahoy" style="background-image: url(https://avatars3.githubusercontent.com/u/19353604?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/ahoy-cli/ahoy" title="ahoy-cli/ahoy">ahoy-cli/ahoy</a></div><div class="message_embed_description">Create self-documenting cli programs from YAML files. Easily wrap bash, grunt, npm, docker, (anything) to standardize your processes and make the lives of the people working on your project better....</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://www.amazee.io/blog/post/announcing-lando-integration-for-lagoon" style="background-image: url(http://images.prismic.io/amazeeio/0372169a-2094-4a0a-bcc1-7634f7d27e40_lagoon-lando.jpeg?auto=compress,format)"></a><div class="data-container"><div class="message_embed_title"><a href="https://www.amazee.io/blog/post/announcing-lando-integration-for-lagoon" title="Announcing Lando Integration for Lagoon | amazee.io">Announcing Lando Integration for Lagoon | amazee.io</a></div><div class="message_embed_description">Until now, Lagoon users have been reliant on a suite of local dev tools, including our own homespun open source tool, Pygmy. As amazee.io’s primary focus is developing and supporting the Lagoon hosting platform, maintaining and enhancing Pygmy has often been less of a priority. Because of this, the local development process has always had room for improvement.</div></div></div>
+
+
+
+<a name="197168094"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197168094" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197168094">(May 11 2020 at 16:09)</a>:</h4>
+<p>(BTW, Thom who's the person behind beetboxvm has joined <a href="http://Amazee.io">Amazee.io</a> ...I don't think that the project is maintained after that)</p>
+<div class="message_embed"><a class="message_embed_image" href="http://Amazee.io" style="background-image: url(http://amazee.io/images/social-share-image.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="http://Amazee.io" title="Home | amazee.io">Home | amazee.io</a></div><div class="message_embed_description">amazee.io offers high-performance, flexible hosting solutions built for speed, security, and scalability.</div></div></div>
+
+
+
+<a name="197168382"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197168382" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197168382">(May 11 2020 at 16:11)</a>:</h4>
+<p>...anyway <span class="user-mention" data-user-id="256757">@docwilmot</span> when I was on Windows, I found <a href="https://github.com/rizonesoft/Notepad3">https://github.com/rizonesoft/Notepad3</a> indispensable! ...it is really lightweight, and seamlessly replaces Windows Notepad ...I considered it to be the equivalent "Notepad on steroids" same as I consider Backdrop to be "D7 on steroids" <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/rizonesoft/Notepad3" style="background-image: url(https://avatars2.githubusercontent.com/u/8640728?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/rizonesoft/Notepad3" title="rizonesoft/Notepad3">rizonesoft/Notepad3</a></div><div class="message_embed_description">Notepad like text editor based on the Scintilla source code. Notepad3 based on code from Notepad2 and MiniPath on code from metapath. Download Notepad3: - rizonesoft/Notepad3</div></div></div>
+
+
+
+<a name="197168668"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197168668" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197168668">(May 11 2020 at 16:13)</a>:</h4>
+<p>...you may also find <a href="https://github.com/stefankueng/grepWin">https://github.com/stefankueng/grepWin</a> useful</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/stefankueng/grepWin" style="background-image: url(https://avatars1.githubusercontent.com/u/665591?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/stefankueng/grepWin" title="stefankueng/grepWin">stefankueng/grepWin</a></div><div class="message_embed_description">A powerful and fast search tool using regular expressions - stefankueng/grepWin</div></div></div>
+
+
+
+<a name="197169239"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197169239" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197169239">(May 11 2020 at 16:17)</a>:</h4>
+<p>...if people are looking for a grep GUI on Mac similar to WinGrep, then I highly recommend <a href="https://github.com/facelessuser/Rummage">https://github.com/facelessuser/Rummage</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/facelessuser/Rummage" style="background-image: url(https://avatars0.githubusercontent.com/u/1055125?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/facelessuser/Rummage" title="facelessuser/Rummage">facelessuser/Rummage</a></div><div class="message_embed_description">Rummage is a GUI for grep like searches in Python. Contribute to facelessuser/Rummage development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="197170303"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197170303" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197170303">(May 11 2020 at 16:25)</a>:</h4>
+<p>Backdrop is Drupal 7 on vitamins and regular exercise</p>
+
+
+
+<a name="197170452"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197170452" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197170452">(May 11 2020 at 16:26)</a>:</h4>
+<p>By the way, is a bot or Zulip doing recursive link snippets?</p>
+
+
+
+<a name="197170619"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197170619" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197170619">(May 11 2020 at 16:27)</a>:</h4>
+<p>Yeah, on Slack, there is an "x" which allows yo to leave the link and only remove the snippet. ...I don't see that in Zulip</p>
+
+
+
+<a name="197170754"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197170754" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197170754">(May 11 2020 at 16:28)</a>:</h4>
+<p>...and by the way <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> ++ ...<code>backdrush: 1.x-1.x</code> worked like a charm <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="197170755"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197170755" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197170755">(May 11 2020 at 16:28)</a>:</h4>
+<p>(serundeputy)** GG (Karma: 12)</p>
+
+
+
+<a name="197170889"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197170889" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197170889">(May 11 2020 at 16:29)</a>:</h4>
+<p>the <code>mysql</code> in the <code>appserver</code> is the mysql client so that the appserver can connect to the DB service</p>
+
+
+
+<a name="197170919"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197170919" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197170919">(May 11 2020 at 16:29)</a>:</h4>
+<p>Nice. I can't recall if we've got dragonbot also doing link snippets</p>
+
+
+
+<a name="197174000"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197174000" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197174000">(May 11 2020 at 16:52)</a>:</h4>
+<p>Unsure ...I believe that <span class="user-mention" data-user-id="256570">@StPaulTim</span> has set it up.</p>
+
+
+
+<a name="197177917"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197177917" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197177917">(May 11 2020 at 17:24)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> It's a organisation setting in Zulip. See: <a href="help/allow-image-link-previews">https://backdrop.zulipchat.com/help/allow-image-link-previews</a></p>
+
+
+
+<a name="197177948"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197177948" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197177948">(May 11 2020 at 17:25)</a>:</h4>
+<p>There's an open PR to allow hiding previews per message: <a href="https://github.com/zulip/zulip/pull/12816">https://github.com/zulip/zulip/pull/12816</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/zulip/zulip/pull/12816" style="background-image: url(https://avatars2.githubusercontent.com/u/4921959?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/zulip/zulip/pull/12816" title="Remove preview for a specific URL in a message by punchagan · Pull Request #12816 · zulip/zulip">Remove preview for a specific URL in a message by punchagan · Pull Request #12816 · zulip/zulip</a></div><div class="message_embed_description">I&#39;ve added 3 commits to this draft PR.
+
+The first commit adds a cross next to each URL preview, irrespective of whether or not you are the sender. Clicking on it removes the URL preview until t...</div></div></div>
+
+
+
+<a name="197362961"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197362961" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197362961">(May 13 2020 at 02:26)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256705">Herb</span> <a href="#narrow/stream/218635-Backdrop/topic/Lando/near/197170452">said</a>:</p>
+<blockquote>
+<p>By the way, is a bot or Zulip doing recursive link snippets?</p>
+</blockquote>
+<p>I don't believe that our bot has anything to do with the link snippets. I believe that would be a Zulip feature.</p>
+
+
+
+<a name="197376050"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/197376050" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#197376050">(May 13 2020 at 07:19)</a>:</h4>
+<p>Zulip seems to pick up og/twitter meta tags like <code>&lt;meta property="og:image"...</code>.</p>
+
+
+
+<a name="198010065"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198010065" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198010065">(May 19 2020 at 00:11)</a>:</h4>
+<p>If this lands <a href="https://github.com/backdrop-ops/backdropcms.org/issues/678">https://github.com/backdrop-ops/backdropcms.org/issues/678</a> will make lando borg development slightly easier for folks; [DX]</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/issues/678" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/issues/678" title="[DX] Add lando tooling to easily grab latest sanitized db. · Issue #678 · backdrop-ops/backdropcms.org">[DX] Add lando tooling to easily grab latest sanitized db. · Issue #678 · backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">In #677 we added the symlink to the latest database backup. In this issue let's add tooling to automate grabbing the latest backup and piping it into our local backdropcms.org lando app. PR: #679</div></div></div>
+
+
+
+<a name="198265898"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198265898" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198265898">(May 20 2020 at 22:34)</a>:</h4>
+<p>I haven't been able to do a lando push to Pantheon in a while. It gets to the end and fails. Do I need to redo my recipe from scratch and start over with the authentication?</p>
+
+
+
+<a name="198269305"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198269305" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198269305">(May 20 2020 at 23:18)</a>:</h4>
+<p>you def need to auth; <code>lando terminus auth:login</code> i think is the game</p>
+
+
+
+<a name="198271144"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198271144" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198271144">(May 20 2020 at 23:46)</a>:</h4>
+<p>at the end it still says server certification verification failed</p>
+
+
+
+<a name="198349874"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198349874" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198349874">(May 21 2020 at 17:21)</a>:</h4>
+<p>I redid everything today with a new token from Pantheon.  It still doesn't work.  All the connections are good, it starts pushing and then there's a fatal error.  It's unable to access a url and then says error reading x.509 key or certificate file but the certificate was good further up in the messages.</p>
+
+
+
+<a name="198357166"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198357166" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198357166">(May 21 2020 at 18:20)</a>:</h4>
+<p>i haven't used Pantheon in some time; can you do a <code>lando pull</code> or does that fail as well? perhaps <code>lando push -vvv</code> and paste the output here? also make sure you are up to date w/ a least <code>v3.0.1</code></p>
+
+
+
+<a name="198376397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198376397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198376397">(May 21 2020 at 20:56)</a>:</h4>
+<p>I've got 3.0.3 and tried the -vvv.  No dice.  Gives me this at the end.  </p>
+<p>fatal: unable to access '<a href="https://35.193.244.251:486/bindings/5e15b65e125e42318c54e67cb07d16f4/code/">https://35.193.244.251:486/bindings/5e15b65e125e42318c54e67cb07d16f4/code/</a>': error reading X.509 key or certificate file<br>
+jpl-backdrop 16:51:45 DEBUG ==&gt; process pid4 finished with exit code 128<br>
+jpl-backdrop 16:51:46 DEBUG ==&gt; engine is up.</p>
+<p>It hasn't been working in over a month but I thought it would fix itself with all of the Lando versions that you guys keep pumping out.   I could try the pull with another site but I'm probably not going to touch this for a few days.  It should work though.</p>
+
+
+
+<a name="198376652"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198376652" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198376652">(May 21 2020 at 20:58)</a>:</h4>
+<p>wanna add me to the pantheon site <code>serundeputy@gmail.com</code> and I'll see if I can pull it down? does it have multi-dev if so I could try to push to a multidev env too and see what happens? If you don't want/can't give me access no worries</p>
+
+
+
+<a name="198392230"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198392230" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198392230">(May 21 2020 at 23:45)</a>:</h4>
+<p>The problem appears to be with git because this is above what I listed before.  Your branch is ahead of 'origin/master' by 6 commits.<br>
+  (use "git push" to publish your local commits)  I don't know how to fix this either.</p>
+
+
+
+<a name="198392736"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198392736" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198392736">(May 21 2020 at 23:53)</a>:</h4>
+<p><code>git push origin master</code></p>
+
+
+
+<a name="198393713"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198393713" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198393713">(May 22 2020 at 00:07)</a>:</h4>
+<p>could not load PEM client certificate, OpenSSL error error:02001003:system library:fopen:No such process, (no key found, wrong pass phrase, or wrong file format?)</p>
+
+
+
+<a name="198393879"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198393879" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198393879">(May 22 2020 at 00:09)</a>:</h4>
+<p>do you have your public key loaded up on your pantheon account?</p>
+
+
+
+<a name="198393890"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198393890" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198393890">(May 22 2020 at 00:09)</a>:</h4>
+<p>sounds like you do not</p>
+
+
+
+<a name="198394912"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/198394912" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#198394912">(May 22 2020 at 00:26)</a>:</h4>
+<p>I had that setup in Pantheon before and then I just redid it with a new one.  I'm just going to stop for now.</p>
+
+
+
+<a name="205733680"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/205733680" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#205733680">(Aug 02 2020 at 16:19)</a>:</h4>
+<p>Got a new machine and have a new Lando problem.  Every site I spin up says I need ftp access to install modules.  This didn't happen before and I don't know how to fix it.  Fresh install of Docker 2.3..0.3 and Lando 3.0.9.  Backdrop, Drupal 8 all saying , Updating modules and themes requires FTP access to your server.</p>
+
+
+
+<a name="217261240"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261240" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261240">(Nov 19 2020 at 12:17)</a>:</h4>
+<p>Hey <span class="user-mention" data-user-id="256607">@BWPanda</span> <span aria-label="wave" class="emoji emoji-1f44b" role="img" title="wave">:wave:</span> ...I've noticed the bug you raised a few days ago in <a href="https://github.com/lando/lando/issues/2695">https://github.com/lando/lando/issues/2695</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/lando/lando/issues/2695" style="background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/lando/lando/issues/2695" title="backdrop-drush-version error · Issue #2695 · lando/lando">backdrop-drush-version error · Issue #2695 · lando/lando</a></div><div class="message_embed_description">Tell us about your setup Lando: v3.0.19 OS: Linux Mint 20 Cinnamon Tell us about your .lando.yml name: backdrop-drush-test recipe: backdrop config: webroot: . Tell us about the command you were run...</div></div></div>
+
+
+
+<a name="217261263"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261263" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261263">(Nov 19 2020 at 12:18)</a>:</h4>
+<p>...I just raised <a href="https://github.com/lando/lando/issues/2698">https://github.com/lando/lando/issues/2698</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/lando/lando/issues/2698" style="background-image: url(https://avatars1.githubusercontent.com/u/31605584?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/lando/lando/issues/2698" title="curl: (22) The requested URL returned error: 404 Not Found · Issue #2698 · lando/lando">curl: (22) The requested URL returned error: 404 Not Found · Issue #2698 · lando/lando</a></div><div class="message_embed_description">I had the same issue with v3.0.14. I upgraded to the freshly-released v3.0.19, and the error is still there. The FASTEST way for us to verify and resolve your bug if for you to write a functional t...</div></div></div>
+
+
+
+<a name="217261368"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261368" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261368">(Nov 19 2020 at 12:19)</a>:</h4>
+<p>...it seems that it chokes when trying to download the drush extension. For me, the drush version command works OK:</p>
+
+
+
+<a name="217261373"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261373" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261373">(Nov 19 2020 at 12:19)</a>:</h4>
+<div class="codehilite"><pre><span></span><code>backdrop-composer 13:51:57 DEBUG ==&gt; process pid12 running /Applications/Docker.app/Contents/Resources/bin/docker-compose/docker-compose exec appserver /bin/sh curl https://github.com/drush-ops/drush/releases/download/8.3.5/drush.phar -L -o /tmp/drush.phar &amp;&amp; chmod +x /tmp/drush.phar &amp;&amp; mv /tmp/drush.phar /usr/local/bin/drush &amp;&amp; drush --version cstdio=[inherit, pipe, pipe], silent=false, mode=spawn, detached=false
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   632  100   632    0     0   2567      0 --:--:-- --:--:-- --:--:--  2569
+100 4879k  100 4879k    0     0   441k      0  0:00:11  0:00:11 --:--:--  903k
+ Drush Version   :  8.3.5
+</code></pre></div>
+
+
+
+<a name="217261401"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261401" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261401">(Nov 19 2020 at 12:19)</a>:</h4>
+<p>...but it seems that it's trying to download a non-existing release package:</p>
+
+
+
+<a name="217261458"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261458" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261458">(Nov 19 2020 at 12:20)</a>:</h4>
+<p><code>curl -fsSL https://github.com/backdrop-contrib/backdrop-drush-extension/archive/false.tar.gz</code></p>
+
+
+
+<a name="217261469"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261469" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261469">(Nov 19 2020 at 12:20)</a>:</h4>
+<p><span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span></p>
+
+
+
+<a name="217261489"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261489" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261489">(Nov 19 2020 at 12:20)</a>:</h4>
+<p>...anyone else noticing the same?</p>
+
+
+
+<a name="217261624"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261624" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261624">(Nov 19 2020 at 12:22)</a>:</h4>
+<p>I started having this issue with lando 3.0.14, which I have been using w/o any issues since September with the same recipe. Upgrading to lando 3.0.19 didn't fix things.</p>
+
+
+
+<a name="217261665"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217261665" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217261665">(Nov 19 2020 at 12:22)</a>:</h4>
+<p>pinging <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> if you're around <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="217533552"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217533552" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217533552">(Nov 22 2020 at 04:19)</a>:</h4>
+<p>I have some time/energy to contribute, but having those issues with my local isn't helping <span aria-label="disappointed" class="emoji emoji-1f61e" role="img" title="disappointed">:disappointed:</span> ...anyone out there that is lando-savvy has any ideas?</p>
+
+
+
+<a name="217560386"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217560386" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217560386">(Nov 22 2020 at 17:12)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> have you tried again today? We reversed a commit on Thursday. Maybe that fixed it?</p>
+
+
+
+<a name="217569708"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/217569708" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#217569708">(Nov 22 2020 at 21:01)</a>:</h4>
+<p>Oh yes, sorry I failed to update here. I did try again, and things seem to have been fixed now <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...this is odd though, as the failure was with a curl command trying to fetch the latest from <a href="https://github.com/backdrop-contrib/backdrop-drush-extension">https://github.com/backdrop-contrib/backdrop-drush-extension</a> ...it didn't seem to be with core, which is where the commit was reversed. Anyway, I'm in "monitoring" status now, watching for that problem in case it happens again <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/backdrop-drush-extension" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/backdrop-drush-extension" title="backdrop-contrib/backdrop-drush-extension">backdrop-contrib/backdrop-drush-extension</a></div><div class="message_embed_description">A set of commands and boot class for Drush and Backdrop CMS. - backdrop-contrib/backdrop-drush-extension</div></div></div>
+
+
+
+<a name="219656946"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219656946" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219656946">(Dec 11 2020 at 20:20)</a>:</h4>
+<p>Here's my one-liner to spin up a D7 site + admin_menu on my local using lando (broken down to multi-line here, for readability):</p>
+<div class="codehilite"><pre><span></span><code>lando init \
+  --source remote \
+  --remote-url https://github.com/drupal/drupal/archive/7.x.zip \
+  --remote-options=&quot;--strip-components 1&quot; \
+  --recipe drupal7 \
+  --webroot ./drupal-7.x \
+  --name d7test \
+  &amp;&amp; lando start \
+  &amp;&amp; lando drush si standard \
+  --db-url=mysql://drupal7:drupal7@database:3306/drupal7 -r /app/drupal-7.x -y \
+  &amp;&amp; drush --root=/app/drupal-7.x dl admin_menu -y \
+  &amp;&amp; drush --root=/app/drupal-7.x en admin_menu admin_menu_toolbar -y
+</code></pre></div>
+
+
+
+<a name="219657540"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219657540" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219657540">(Dec 11 2020 at 20:26)</a>:</h4>
+<p>...I'm trying to do something similar with backdrop, so trying this:</p>
+<div class="codehilite"><pre><span></span><code>lando init \
+  --source remote\
+  --remote-url https://github.com/backdrop/backdrop/archive/1.x.zip \
+  --remote-options=&quot;--strip-components=1&quot;\
+  --recipe backdrop \
+  --webroot ./backdrop-1.x \
+  --name backdrop \
+  --option backdrush=1.x-1.x
+</code></pre></div>
+<p>...but I'm getting this error:</p>
+<div class="codehilite"><pre><span></span><code>Creating landoinitbackdrop_init_1 ... done
+Killing landoinitbackdrop_init_1 ... done
+Removing landoinitbackdrop_init_1 ... done
+-bash: Detected: command not found
+</code></pre></div>
+<p>...am I missing anything?</p>
+
+
+
+<a name="219657886"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219657886" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219657886">(Dec 11 2020 at 20:29)</a>:</h4>
+<p>..huh! ...running the exact command a few hrs later, it succeeded w/o any errors <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span></p>
+
+
+
+<a name="219658117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219658117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219658117">(Dec 11 2020 at 20:31)</a>:</h4>
+<p>Dang. After I spent so much time coming up with thoughtful questions.</p>
+
+
+
+<a name="219658345"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219658345" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219658345">(Dec 11 2020 at 20:33)</a>:</h4>
+<p>...but I did notice this in the log:</p>
+<div class="codehilite"><pre><span></span><code>Creating landoinitbackdrop_init_1 ... done
+Detected that https://github.com/backdrop/backdrop/archive/1.x.zip is a tar archive
+Downloading https://github.com/backdrop/backdrop/archive/1.x.zip...
+Downloaded to /tmp/source/1.x.zip
+Archive:  /tmp/source/1.x.zip
+...
+</code></pre></div>
+<p>...so it seems that something's wrong with that <code>Detected</code> there. Still odd why re-running the command several times (using the command history on the terminal - so exact same command) came back with the same error ...seems that my MacBook needed a rest and was able to complete the same command after some hrs <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="219659703"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219659703" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219659703">(Dec 11 2020 at 20:44)</a>:</h4>
+<p>You do realise that all of those commands could be put into a single <code>.lando.yml</code> file, right? Then your one-line command could be just copying that lando file to a directory, and then <code>lando start</code>-ing it.</p>
+
+
+
+<a name="219659746"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219659746" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219659746">(Dec 11 2020 at 20:44)</a>:</h4>
+<p>Might be eaiser maintenance-wise...</p>
+
+
+
+<a name="219659977"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219659977" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219659977">(Dec 11 2020 at 20:46)</a>:</h4>
+<p>Sure <span class="user-mention" data-user-id="256607">@BWPanda</span> ...I have this for my own use: <a href="https://gist.githubusercontent.com/klonos/fe7b0b070697cf699646edd5c007db02/raw/bff53df1f3614e6be1ba39fd178265c03a99c06a/.lando.yml">https://gist.githubusercontent.com/klonos/fe7b0b070697cf699646edd5c007db02/raw/bff53df1f3614e6be1ba39fd178265c03a99c06a/.lando.yml</a> ...I'm trying to do one-liners, so that people using lando can run those when testing.</p>
+
+
+
+<a name="219660440"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219660440" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219660440">(Dec 11 2020 at 20:51)</a>:</h4>
+<p>I just meant that having all detailed commands in the Lando file, then having the one-liner be simply downloading/copying that file and starting it, might be easier.</p>
+
+
+
+<a name="219660553"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219660553" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219660553">(Dec 11 2020 at 20:52)</a>:</h4>
+<p>Unrelated: I miss <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span>... Come back to us Geoff! <span aria-label="grinning face with smiling eyes" class="emoji emoji-1f601" role="img" title="grinning face with smiling eyes">:grinning_face_with_smiling_eyes:</span></p>
+
+
+
+<a name="219661537"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219661537" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219661537">(Dec 11 2020 at 21:00)</a>:</h4>
+<p>We all miss Geoff <span aria-label="heart" class="emoji emoji-2764" role="img" title="heart">:heart:</span> ...speaking to other members of the community (the usual gang - you know who you are) it seems that many of us have reached out to him via private messages in the past months ...the last update  I got is that he's OK, but busy with Real Life®</p>
+
+
+
+<a name="219736957"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219736957" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219736957">(Dec 13 2020 at 01:01)</a>:</h4>
+<p>Can you spot the "intruder"?: <a href="https://docs.lando.dev/config/drupal9.html">https://docs.lando.dev/config/drupal9.html</a></p>
+
+
+
+<a name="219736961"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219736961" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219736961">(Dec 13 2020 at 01:01)</a>:</h4>
+<p><a href="/user_uploads/18319/l6DrsmlwVW-QVzX6w7lL5BJ0/Screen-Shot-2020-12-13-at-2.59.26-am.png">Screen-Shot-2020-12-13-at-2.59.26-am.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/l6DrsmlwVW-QVzX6w7lL5BJ0/Screen-Shot-2020-12-13-at-2.59.26-am.png" title="Screen-Shot-2020-12-13-at-2.59.26-am.png"><img src="/user_uploads/18319/l6DrsmlwVW-QVzX6w7lL5BJ0/Screen-Shot-2020-12-13-at-2.59.26-am.png"></a></div>
+
+
+
+<a name="219737019"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219737019" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219737019">(Dec 13 2020 at 01:02)</a>:</h4>
+<p>Ha. Can fix it here: <a href="https://github.com/lando/lando/edit/master/docs/config/drupal9.md">https://github.com/lando/lando/edit/master/docs/config/drupal9.md</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/lando/lando/edit/master/docs/config/drupal9.md" style="background-image: url(https://github.githubassets.com/images/modules/open_graph/github-octocat.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/lando/lando/edit/master/docs/config/drupal9.md" title="Build software better, together">Build software better, together</a></div><div class="message_embed_description">GitHub is where people build software. More than 50 million people use GitHub to discover, fork, and contribute to over 100 million projects.</div></div></div>
+
+
+
+<a name="219737030"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219737030" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219737030">(Dec 13 2020 at 01:03)</a>:</h4>
+<p>Should we though? <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="219737096"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/219737096" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#219737096">(Dec 13 2020 at 01:04)</a>:</h4>
+<p>...see how sometimes during our meetings/presentations some of us mean to say "Backdrop" and say "Drupal" instead? ...I kinda find that to be equally funny <span aria-label="grinning" class="emoji emoji-1f600" role="img" title="grinning">:grinning:</span></p>
+
+
+
+<a name="223775555"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/223775555" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#223775555">(Jan 23 2021 at 20:56)</a>:</h4>
+<p>Anyone other than <span class="user-mention" data-user-id="256729">@klonos</span> and I using Lando and Drush? If so, want to help test this Drush fix before it's committed, just to confirm it's not specific to us? <a href="https://github.com/backdrop-contrib/backdrop-drush-extension/issues/231">https://github.com/backdrop-contrib/backdrop-drush-extension/issues/231</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/backdrop-drush-extension/issues/231" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/backdrop-drush-extension/issues/231" title="'version' bootstrap issue · Issue #231 · backdrop-contrib/backdrop-drush-extension">'version' bootstrap issue · Issue #231 · backdrop-contrib/backdrop-drush-extension</a></div><div class="message_embed_description">The version command doesn&#39;t work properly: Command backdrop-drush-version needs a higher bootstrap level to run - you will need to invoke drush from a more functional Drupal environment to run ...</div></div></div>
+
+
+
+<a name="223790588"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/223790588" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#223790588">(Jan 24 2021 at 02:17)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> I've added a note to the Drush issue explaining why the change is necessary, and <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> has given his ok for someone to merge the PR. Could you therefore do the honours please?</p>
+
+
+
+<a name="223821506"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Lando/near/223821506" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Lando.html#223821506">(Jan 24 2021 at 16:20)</a>:</h4>
+<p>Done <span class="user-mention" data-user-id="256607">@BWPanda</span> <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

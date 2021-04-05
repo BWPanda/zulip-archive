@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>I'm altering exposed filters using hook_views_pre_build() but when I filter the view, using AJAX, my alterations from the pre_build hook no longer work.  Any ideas on a hook I should to alter exposed filters  that works both on initial page load and after an AJAX filter is applied? (btw: form alter doesn't seem to work as it should in my case)</p>",
+        "id": 232477033,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617130103
+    },
+    {
+        "content": "<p>Views has loads of hooks... That can be tricky. Exposed forms usually work via GET params, that might be the problem here - not sure. Do you have to alter the query? Maybe someone comes with a fancy idea, if you describe your use-case a bit.</p>",
+        "id": 232544391,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617173683
+    },
+    {
+        "content": "<p>The api page - to pick a hook <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span> <a href=\"https://docs.backdropcms.org/api/backdrop/core!modules!views!views.api.php\">https://docs.backdropcms.org/api/backdrop/core!modules!views!views.api.php</a></p>\n<p>hook_views_ajax_data_alter?</p>",
+        "id": 232544648,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617173934
+    },
+    {
+        "content": "<p>Thanks for the input...yeah, I tried lots of different views hooks, I figured pre_build would work best because it's super-early in the process...but no go.  I'll keep plugging away on it today :)</p>",
+        "id": 232585687,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617195577
+    },
+    {
+        "content": "<p>Can you describe a bit, what you're trying to achieve? If you want to change the filtered result (result list), you might need to alter the query.</p>",
+        "id": 232586317,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617195794
+    },
+    {
+        "content": "<p>I'm giving authors an option, on a node form, for which views filters they want displayed in the view which gets embedded on the node page.  So we have 4 available filters, they choose which ones display...then I hide some filters based on their selection.  So it's potentially a different set of filters on each node display (did that make sense?)</p>",
+        "id": 232590929,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617197431
+    },
+    {
+        "content": "<p>I tried doing it during a form_alter, which should work...but for some reason setting #access on the form fields (to hide them) still left the html and label in place.  So I moved to a views hook instead, which works perfectly...unless AJAX is on.  Then the ajax-flitered page ignores my alterations.</p>",
+        "id": 232591066,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617197488
+    },
+    {
+        "content": "<p>I looked into altering the query...but I couldn't find a working way to alter which filters display at that stage.</p>",
+        "id": 232591603,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617197659
+    },
+    {
+        "content": "<p>Ah, OK, that's something totally different than I had in mind... seems tricky.</p>",
+        "id": 232594798,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617198805
+    },
+    {
+        "content": "<p>Yeah, i'm just stumped as to why the AJAX filtered result would ignore the views hook...seems like it should be going thru the same process.</p>",
+        "id": 232594890,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617198841
+    },
+    {
+        "content": "<p>In the end, I may have to do what I dont want to do:  Just add classes into my theme dynamically and use those to hide certain filters.   I hate that option, but can't seem to find another way to accomplish this.</p>",
+        "id": 232595021,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617198872
+    },
+    {
+        "content": "<p>How are you embedding the views? Which module are you using?</p>",
+        "id": 232595235,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617198936
+    },
+    {
+        "content": "<p>EVA</p>",
+        "id": 232595385,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617198983
+    },
+    {
+        "content": "<p>I didn't think of that...i suppose i could try some different embed methods and see if it makes a difference</p>",
+        "id": 232595466,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617199011
+    },
+    {
+        "content": "<p>Ohhhhhh....that made a difference!  If I just embed the view directly, it works!  Thanks for the idea <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> !!</p>",
+        "id": 232596850,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617199491
+    },
+    {
+        "content": "<p>I didn't do anything besides head scratching. <span aria-label=\"smile cat\" class=\"emoji emoji-1f638\" role=\"img\" title=\"smile cat\">:smile_cat:</span> Glad that it works now.</p>",
+        "id": 232597024,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617199558
+    },
+    {
+        "content": "<p>I work by myself (and have for the last 15 years)...so someone else doing some head-scratching out loud can make all the difference!</p>",
+        "id": 232597197,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617199611
+    },
+    {
+        "content": "<p>Yay teamwork! <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> <span aria-label=\"love\" class=\"emoji emoji-2764\" role=\"img\" title=\"love\">:love:</span></p>",
+        "id": 232628804,
+        "sender_full_name": "klonos",
+        "timestamp": 1617210510
+    }
+]

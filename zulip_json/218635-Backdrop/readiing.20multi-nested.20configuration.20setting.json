@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I'm trying to get the value of the multi-nested configuration value. The problem is when I read the whole config file first with </p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">$views_members = config('views.view.members');</span>\n</code></pre></div>\n<p>and then try to get to the value of specific configuration setting with </p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">$views_members-&gt;get(['display']['page']['display_options']['fields']['picture']));</span>\n</code></pre></div>\n<p>it never works. How do you, guys, get to the multilevel configuration?</p>",
+        "id": 228618934,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1614787927
+    },
+    {
+        "content": "<p>To be honest, I never tried to deal with a view by config file. Rather than parsing the file, I'd load the view (as object) and handle things with its methods. But maybe that's not possible in your use-case?</p>",
+        "id": 228619778,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614788217
+    },
+    {
+        "content": "<p><code>$views_members-&gt;get('display.page.display_options.fields.picture');</code>?</p>",
+        "id": 228620461,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1614788427
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting/near/228620461\">said</a>:</p>\n<blockquote>\n<p><code>$views_members-&gt;get('display.page.display_options.fields.picture');</code>?</p>\n</blockquote>\n<p>Works like a charm! Thank you!</p>",
+        "id": 228651297,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1614799370
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting/near/228619778\">said</a>:</p>\n<blockquote>\n<p>To be honest, I never tried to deal with a view by config file. Rather than parsing the file, I'd load the view (as object) and handle things with its methods. But maybe that's not possible in your use-case?</p>\n</blockquote>\n<p>Yea, I needed to manipulate with the configuration value, not only reading, but also setting. So the way <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> pointed works perfectly.</p>",
+        "id": 228651538,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1614799462
+    },
+    {
+        "content": "<p>Yep, config files use <code>.</code> to separate nested levels.</p>\n<blockquote>\n<p>The config option may contain periods to indicate levels within the config file.</p>\n</blockquote>\n<p><a href=\"https://docs.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/config_get/1\">https://docs.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/config_get/1</a></p>",
+        "id": 228656306,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614801187
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/readiing.20multi-nested.20configuration.20setting/near/228656306\">said</a>:</p>\n<blockquote>\n<p>Yep, config files use <code>.</code> to separate nested levels.</p>\n<blockquote>\n<p>The config option may contain periods to indicate levels within the config file.</p>\n</blockquote>\n<p><a href=\"https://docs.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/config_get/1\">https://docs.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/config_get/1</a></p>\n</blockquote>\n<p>I remember reading that once, however it doesn't fixate in your mind until you really hit the wall when actually coding.</p>",
+        "id": 228668472,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1614805677
+    }
+]

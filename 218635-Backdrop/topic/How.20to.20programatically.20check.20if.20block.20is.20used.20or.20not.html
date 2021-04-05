@@ -1,0 +1,88 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html">How to programatically check if block is used or not</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="220777635"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220777635" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220777635">(Dec 23 2020 at 10:39)</a>:</h4>
+<p>Hello everyone and happy holidays!<br>
+It was fairly easy to check if a block was enabled or not on Drupal 7 just by using</p>
+<div class="codehilite"><pre><span></span><code>db_result(db_query(&quot;SELECT status FROM {blocks} where module = &#39;%s&#39; and delta = &#39;%s&#39;&quot;, &quot;user&quot;, &quot;0&quot;));
+</code></pre></div>
+<p>Now, on Backdrop usage of blocks is not reflected on DB, but configuration file <code>layout.layout.default.json</code>. I could just grep, but thought maybe someones knows better way on how to check if a block is used or not.</p>
+
+
+
+<a name="220777732"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220777732" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220777732">(Dec 23 2020 at 10:41)</a>:</h4>
+<p>Using <code>layout_get_block_usage()</code> is just giving <code>Call to undefined function layout_get_block_usage() </code></p>
+
+
+
+<a name="220777833"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220777833" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220777833">(Dec 23 2020 at 10:42)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> Probably just have to <code>include layout.admin.inc</code> to use that function...</p>
+
+
+
+<a name="220777942"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220777942" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220777942">(Dec 23 2020 at 10:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> , thanks, will try now. Meanwhile, don't we have something like <a href="https://api.drupal.org/api/drupal/modules!block!block.module/function/block_list/7.x">https://api.drupal.org/api/drupal/modules!block!block.module/function/block_list/7.x</a></p>
+
+
+
+<a name="220778441"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220778441" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220778441">(Dec 23 2020 at 10:51)</a>:</h4>
+<p>Does this page have what you need: <code>/admin/reports/blocks</code>? If so, see where it gets its info: <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.admin.inc/function/layout_block_list/1">https://api.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.admin.inc/function/layout_block_list/1</a></p>
+
+
+
+<a name="220778681"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220778681" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220778681">(Dec 23 2020 at 10:55)</a>:</h4>
+<p>Ok, this worked like a charm:</p>
+<div class="codehilite"><pre><span></span><code>module_load_include(&#39;inc&#39;, &#39;layout&#39;, &#39;layout.admin&#39;);
+if (!empty(layout_get_block_usage(&#39;custom_module&#39;, &#39;block_delta&#39;))) {
+</code></pre></div>
+<p>Thanks for the hint, <span class="user-mention" data-user-id="256607">@BWPanda</span> !</p>
+
+
+
+<a name="220778722"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220778722" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220778722">(Dec 23 2020 at 10:55)</a>:</h4>
+<p>Let me know if you think using <code>include layout.admin.inc</code> is better, though I couldn't get it working</p>
+
+
+
+<a name="220778902"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220778902" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220778902">(Dec 23 2020 at 10:59)</a>:</h4>
+<p>No sorry, <code>module_load_include()</code> is correct. Glad you got it working.</p>
+
+
+
+<a name="220837546"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220837546" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220837546">(Dec 23 2020 at 23:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> ++</p>
+
+
+
+<a name="220837550"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/How%20to%20programatically%20check%20if%20block%20is%20used%20or%20not/near/220837550" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/How.20to.20programatically.20check.20if.20block.20is.20used.20or.20not.html#220837550">(Dec 23 2020 at 23:46)</a>:</h4>
+<p><strong>bwpanda</strong> <span aria-label="grinning" class="emoji emoji-1f600" role="img" title="grinning">:grinning:</span>  <span aria-label="heart" class="emoji emoji-2764" role="img" title="heart">:heart:</span> (Karma: 24)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

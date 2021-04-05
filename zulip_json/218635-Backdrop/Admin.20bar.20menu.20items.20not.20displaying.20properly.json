@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>I just gave a client access to their site, but the admin bar for them is mostly empty... They have all the necessary permissions (AFAIK). For example, the admin bar just shows Home and Add Content. If I manually enter the URL <code>/admin/dashboard</code> or <code>/admin/content</code> they can access those pages, but those links aren't appearing in the admin bar for them.</p>",
+        "id": 221033265,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609120364
+    },
+    {
+        "content": "<p>I'm user 1 and it all works ok for me.</p>",
+        "id": 221033268,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609120373
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I've seen that happen when there are (non-admin_bar) javascript errors, which somehow prevent the admin_bar js from loading properly.</p>",
+        "id": 221033283,
+        "sender_full_name": "klonos",
+        "timestamp": 1609120431
+    },
+    {
+        "content": "<p>The only thing in the console is the typical \"This page uses the non standard property “zoom”...\"</p>",
+        "id": 221033339,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609120543
+    },
+    {
+        "content": "<p>Just tried disabling all checkboxes on the Performance page (inc. Aggregate JS) but that didn't fix it.</p>",
+        "id": 221033471,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609120756
+    },
+    {
+        "content": "<p>Figured it out! FoxyCart was overriding core's 'Use the administration pages' permission (it was trying to create a new permission with that same machine name), and this was messing with the access permissions. Pushed a fix to the FoxyCart module and all good now.</p>",
+        "id": 221725020,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609897289
+    }
+]

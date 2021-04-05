@@ -1,0 +1,632 @@
+[
+    {
+        "content": "<p>Do we have any time set for when we'll start working on the release?</p>",
+        "id": 197727346,
+        "sender_full_name": "klonos",
+        "timestamp": 1589564792
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>! I'm going to start giving the queue on last review right now. I'd like to start the process of cutting the release within the next 2 hours.</p>",
+        "id": 197731825,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589566776
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> I'm going to create the release checklists. Looks like I need to do one for the preview release too?</p>",
+        "id": 197746113,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589573130
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  or anyone else around to help with the release today?</p>",
+        "id": 197746803,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589573502
+    },
+    {
+        "content": "<p>I'm here! <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span></p>",
+        "id": 197746867,
+        "sender_full_name": "klonos",
+        "timestamp": 1589573523
+    },
+    {
+        "content": "<p>I'm not available right at the moment, but I'll make time later this afternoon/ early evening.</p>",
+        "id": 197747600,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1589573980
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span>  can you check the boxes on <a href=\"https://github.com/backdrop/backdrop-issues/issues/4393\">https://github.com/backdrop/backdrop-issues/issues/4393</a> for things you did already?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4393\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4393\" title=\"Backdrop 1.16.0 Preview Release checklist · Issue #4393 · backdrop/backdrop-issues\">Backdrop 1.16.0 Preview Release checklist · Issue #4393 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Scheduled for May 1st, 2020 10am - 4pm PT Pre-release tasks Merge commits @quicksketch Create a new minor release milestone @quicksketch Move all unfinished issues to the next minor release milesto...</div></div></div>",
+        "id": 197747949,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589574148
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  can you check that list also and make sure I got yorus right?</p>",
+        "id": 197747965,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589574158
+    },
+    {
+        "content": "<p>Sure. In the middle of something right now ...please gimme a couple of mins.</p>",
+        "id": 197748020,
+        "sender_full_name": "klonos",
+        "timestamp": 1589574191
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> are any of you around and interested in helping <span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> ?</p>",
+        "id": 197748426,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589574396
+    },
+    {
+        "content": "<p>on a not fun deadline at workz;</p>",
+        "id": 197748743,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589574591
+    },
+    {
+        "content": "<p>I dropped the release notes into <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0-preview\">https://github.com/backdrop/backdrop/releases/tag/1.16.0-preview</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0-preview\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0-preview\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 197751381,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576251
+    },
+    {
+        "content": "<p>...OK, it was more than a couple of mins. Looking now <span aria-label=\"eyes\" class=\"emoji emoji-1f440\" role=\"img\" title=\"eyes\">:eyes:</span></p>",
+        "id": 197752155,
+        "sender_full_name": "klonos",
+        "timestamp": 1589576691
+    },
+    {
+        "content": "<p>I could use some help with this language: \"Cacheing is now included for all core entities\"</p>",
+        "id": 197752307,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576789
+    },
+    {
+        "content": "<p>it's now automatic?</p>",
+        "id": 197752317,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576799
+    },
+    {
+        "content": "<p>Not automatic exactly ...this might help: <a href=\"https://api.backdropcms.org/change-records/entity-caching-added-to-core\">https://api.backdropcms.org/change-records/entity-caching-added-to-core</a></p>",
+        "id": 197752397,
+        "sender_full_name": "klonos",
+        "timestamp": 1589576853
+    },
+    {
+        "content": "<p>\"automatically enabled\"</p>",
+        "id": 197752407,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576860
+    },
+    {
+        "content": "<blockquote>\n<p>...has been added to core as an alternative to field caching and to fully cache entities that contain non-field data. This functionality is enabled for the core entity types: nodes, terms, and users.</p>\n</blockquote>",
+        "id": 197752441,
+        "sender_full_name": "klonos",
+        "timestamp": 1589576881
+    },
+    {
+        "content": "<p>enabled</p>",
+        "id": 197752470,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576883
+    },
+    {
+        "content": "<p>\"available\"</p>",
+        "id": 197752548,
+        "sender_full_name": "klonos",
+        "timestamp": 1589576930
+    },
+    {
+        "content": "<p>both available and enabled</p>",
+        "id": 197752590,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576953
+    },
+    {
+        "content": "<p>not available (and not enabled)</p>",
+        "id": 197752595,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576958
+    },
+    {
+        "content": "<p>and available for all entities!</p>",
+        "id": 197752604,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576968
+    },
+    {
+        "content": "<p>ah, I'll add that :)</p>",
+        "id": 197752617,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589576975
+    },
+    {
+        "content": "<p>How about \"Cacheing is now available for entities as an alternative option to field cacheing. This is now the default for core entities.\"</p>",
+        "id": 197752724,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577021
+    },
+    {
+        "content": "<p>\"Cacheing is now enabled for core entity types, and available for all others\"</p>",
+        "id": 197752725,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577022
+    },
+    {
+        "content": "<p>...or something along those lines</p>",
+        "id": 197752735,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577028
+    },
+    {
+        "content": "<p>has field caching been deprecated?</p>",
+        "id": 197752841,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577063
+    },
+    {
+        "content": "<p>no.</p>",
+        "id": 197752933,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577084
+    },
+    {
+        "content": "<p>From the change record I'm assuming no</p>",
+        "id": 197752944,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577086
+    },
+    {
+        "content": "<p>So here's the thing:</p>\n<ul>\n<li>Core now allows for both entity-level and field-level caching</li>\n<li>All core entities have switched to entity caching</li>\n<li>Contrib/custom need to do some work to get it.</li>\n</ul>",
+        "id": 197753080,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577148
+    },
+    {
+        "content": "<p>That's my understanding at least.</p>",
+        "id": 197753097,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577167
+    },
+    {
+        "content": "<p>oops, looks like we missed one issue <a href=\"https://github.com/backdrop/backdrop/pull/3136\">https://github.com/backdrop/backdrop/pull/3136</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3136\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3136\" title=\"Issue #4161: Add update hook to add permission by klonos · Pull Request #3136 · backdrop/backdrop\">Issue #4161: Add update hook to add permission by klonos · Pull Request #3136 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4161\nAdding an update hook as requested by @quicksketch</div></div></div>",
+        "id": 197753098,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577167
+    },
+    {
+        "content": "<p>this is required for 1.16.0, isn't it?</p>",
+        "id": 197753131,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577189
+    },
+    {
+        "content": "<p>oh, NM, this didn't get in :) <a href=\"https://github.com/backdrop/backdrop-issues/issues/4161\">https://github.com/backdrop/backdrop-issues/issues/4161</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4161\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4161\" title=\"Make it possible to disable the use of flexible layout templates · Issue #4161 · backdrop/backdrop-issues\">Make it possible to disable the use of flexible layout templates · Issue #4161 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Make it possible to disable the use of flexible layout templates (should this be it&#39;s own submodule?) Phases: first: add a permission for flexible layout templates (urgent bug fix?) move layout...</div></div></div>",
+        "id": 197753178,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577220
+    },
+    {
+        "content": "<p>we;re fine, bumping milestone</p>",
+        "id": 197753196,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577230
+    },
+    {
+        "content": "<p>It is I'm afraid ...otherwise there'll be functionality regression (people will not have access to flexible template unless they are user1 or they add the new permission to their role)</p>",
+        "id": 197753256,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577246
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> that did get in... <a href=\"https://github.com/backdrop/backdrop/pull/3108\">https://github.com/backdrop/backdrop/pull/3108</a> was merged, and we meant to merge <a href=\"https://github.com/backdrop/backdrop/pull/3136/files\">https://github.com/backdrop/backdrop/pull/3136/files</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3108\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3108\" title=\"Issue #4161: Add permissions to access flexible templates by docwilmot · Pull Request #3108 · backdrop/backdrop\">Issue #4161: Add permissions to access flexible templates by docwilmot · Pull Request #3108 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4161\nReplaces #2952</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3136/files\" style=\"background-image: url(https://avatars0.githubusercontent.com/u/2423362?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3136/files\" title=\"Issue #4161: Add update hook to add permission by klonos · Pull Request #3136 · backdrop/backdrop\">Issue #4161: Add update hook to add permission by klonos · Pull Request #3136 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4161\nAdding an update hook as requested by @quicksketch</div></div></div>",
+        "id": 197753395,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577343
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span>  see above, looks like we either need to merge something or revert soemthing</p>",
+        "id": 197753486,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577388
+    },
+    {
+        "content": "<p>...not sure what <span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> 's alternative PR is meant to be doing additionally to mine: <a href=\"https://github.com/backdrop/backdrop/pull/3139/files\">https://github.com/backdrop/backdrop/pull/3139/files</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3139/files\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/100206?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3139/files\" title=\"Issue #4161: Add update hook to add flexible layouts permission to Layout module. by quicksketch · Pull Request #3139 · backdrop/backdrop\">Issue #4161: Add update hook to add flexible layouts permission to Layout module. by quicksketch · Pull Request #3139 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4161</div></div></div>",
+        "id": 197753514,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577414
+    },
+    {
+        "content": "<p>...one of these needs to be merged, since they add that update hook</p>",
+        "id": 197753541,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577430
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> yours failed tests - maybe it needed a rebase?</p>",
+        "id": 197753588,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577459
+    },
+    {
+        "content": "<p>Yeah I just posted <a href=\"https://github.com/backdrop/backdrop-issues/issues/4161#issuecomment-629490558\">https://github.com/backdrop/backdrop-issues/issues/4161#issuecomment-629490558</a> that should fix the failing Upgrade tests. But I think the right solution for now is to move that update hook into system.install instead.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4161#issuecomment-629490558\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4161#issuecomment-629490558\" title=\"Make it possible to disable the use of flexible layout templates · Issue #4161 · backdrop/backdrop-issues\">Make it possible to disable the use of flexible layout templates · Issue #4161 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Make it possible to disable the use of flexible layout templates (should this be it&#39;s own submodule?) Phases: first: add a permission for flexible layout templates (urgent bug fix?) don&#39;t f...</div></div></div>",
+        "id": 197753589,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589577459
+    },
+    {
+        "content": "<p>ah!</p>",
+        "id": 197753662,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589577484
+    },
+    {
+        "content": "<p>I just saw that <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> ...well, we need to get some update hook in.</p>",
+        "id": 197753762,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577544
+    },
+    {
+        "content": "<p>I've closed my PR in favor of <span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> 's</p>",
+        "id": 197753917,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577641
+    },
+    {
+        "content": "<p>Hm, yeah my \"fix\" broke some other tests. Let's just move the update hook to system.install.</p>",
+        "id": 197753937,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589577653
+    },
+    {
+        "content": "<p>I can do that ...just give me  a min</p>",
+        "id": 197753962,
+        "sender_full_name": "klonos",
+        "timestamp": 1589577672
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop/pull/3140\">https://github.com/backdrop/backdrop/pull/3140</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3140\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3140\" title=\"Issue #4161: Aadd flexible layouts permission for existing sites by klonos · Pull Request #3140 · backdrop/backdrop\">Issue #4161: Aadd flexible layouts permission for existing sites by klonos · Pull Request #3140 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4161</div></div></div>",
+        "id": 197754908,
+        "sender_full_name": "klonos",
+        "timestamp": 1589578279
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>, looks good.</p>",
+        "id": 197755441,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589578678
+    },
+    {
+        "content": "<p>Meh ...I just copy-pasted the update hook from layout.install to system.install ...took me more to type the additional comment as to why that layout-related update hook is in system.install.</p>",
+        "id": 197755547,
+        "sender_full_name": "klonos",
+        "timestamp": 1589578742
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Well while those tests are running, I think we're ready to do 1.15.2. Shall I go ahead and cut that tag?</p>",
+        "id": 197755568,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589578762
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Here we are: <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.2\">https://github.com/backdrop/backdrop/releases/tag/1.15.2</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.2\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.2\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 197755950,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589579061
+    },
+    {
+        "content": "<p>yes, thank you!</p>",
+        "id": 197756743,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589579639
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> can you review my draft release notes for 1.15.2?</p>",
+        "id": 197756790,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589579650
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4394\">https://github.com/backdrop/backdrop-issues/issues/4394</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4394\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4394\" title=\"Backdrop 1.15.2 Release checklist · Issue #4394 · backdrop/backdrop-issues\">Backdrop 1.15.2 Release checklist · Issue #4394 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">May 15th, 2020 approx 2pm PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release milestone @jenlampton Dr...</div></div></div>",
+        "id": 197756802,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589579660
+    },
+    {
+        "content": "<p>I just need a sanity check that none of those commits were for 1.16.0 only</p>",
+        "id": 197756814,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589579672
+    },
+    {
+        "content": "<p>Hm, looks like you got a number of 1.15.1 issues in there. I'll remove them.</p>",
+        "id": 197756989,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589579789
+    },
+    {
+        "content": "<p>I'm looking at all the changes that went in for both 1.15.2 and 1.16.0 and these releases make me happy <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197757481,
+        "sender_full_name": "klonos",
+        "timestamp": 1589580124
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> There that's the full list: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4394#issuecomment-629507949\">https://github.com/backdrop/backdrop-issues/issues/4394#issuecomment-629507949</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4394#issuecomment-629507949\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4394#issuecomment-629507949\" title=\"Backdrop 1.15.2 Release checklist · Issue #4394 · backdrop/backdrop-issues\">Backdrop 1.15.2 Release checklist · Issue #4394 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">May 15th, 2020 approx 2pm PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release milestone @jenlampton Dr...</div></div></div>",
+        "id": 197757485,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589580128
+    },
+    {
+        "content": "<p>...a huge thank you to all the community members that have been working on coding/testing/reviewing these. Yay teamwork!! <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span> <span aria-label=\"high five\" class=\"emoji emoji-1f590\" role=\"img\" title=\"high five\">:high_five:</span></p>",
+        "id": 197757604,
+        "sender_full_name": "klonos",
+        "timestamp": 1589580221
+    },
+    {
+        "content": "<p>maybe we should switch to <code>git log since</code> for generating release notes</p>",
+        "id": 197757671,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589580250
+    },
+    {
+        "content": "<p>I think we should automate pulling release notes from GitHub based on the milestone, rather than using Git history at all.</p>",
+        "id": 197757759,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589580316
+    },
+    {
+        "content": "<p>Looks like <a href=\"https://github.com/github-tools/github-release-notes\">https://github.com/github-tools/github-release-notes</a> might be the ticket.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/github-tools/github-release-notes\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/16116810?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/github-tools/github-release-notes\" title=\"github-tools/github-release-notes\">github-tools/github-release-notes</a></div><div class=\"message_embed_description\">Node module to create a release or a changelog from a tag and uses issues or commits to creating the release notes. - github-tools/github-release-notes</div></div></div>",
+        "id": 197757949,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589580465
+    },
+    {
+        "content": "<p>celebration <a href=\"https://github.com/backdrop/backdrop-issues/issues/1\">#1</a>: <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.2\">https://github.com/backdrop/backdrop/releases/tag/1.15.2</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1\" title=\"Import the Sources · Issue #1 · backdrop/backdrop-issues\">Import the Sources · Issue #1 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">We need to find a suitable location in history from which to begin our repository. We definitely want pre-Drupal Kernel and the PSR-0 namespacing, but at the same time we&#39;d like at least a reas...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.2\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.15.2\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 197758168,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589580611
+    },
+    {
+        "content": "<p>yesssss gren &lt;3</p>",
+        "id": 197758253,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589580695
+    },
+    {
+        "content": "<p>Tag is cut: <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0\">https://github.com/backdrop/backdrop/releases/tag/1.16.0</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 197759693,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589581806
+    },
+    {
+        "content": "<p>Also that happens to be our 100th release: <a href=\"/user_uploads/18319/RxX1dQounbcC0lTa5C0ZlppD/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/RxX1dQounbcC0lTa5C0ZlppD/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/RxX1dQounbcC0lTa5C0ZlppD/image.png\"></a></div>",
+        "id": 197759729,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589581835
+    },
+    {
+        "content": "<p><span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 197760204,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582257
+    },
+    {
+        "content": "<p>...it still shows only 98 releases for me:</p>",
+        "id": 197760304,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582336
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/GxMp5kIP-l_oOXHZxdNuKiht/Screen-Shot-2020-05-16-at-1.39.06-am.png\">Screen-Shot-2020-05-16-at-1.39.06-am.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/GxMp5kIP-l_oOXHZxdNuKiht/Screen-Shot-2020-05-16-at-1.39.06-am.png\" title=\"Screen-Shot-2020-05-16-at-1.39.06-am.png\"><img src=\"/user_uploads/18319/GxMp5kIP-l_oOXHZxdNuKiht/Screen-Shot-2020-05-16-at-1.39.06-am.png\"></a></div>",
+        "id": 197760326,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582365
+    },
+    {
+        "content": "<p>okie! <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0\">https://github.com/backdrop/backdrop/releases/tag/1.16.0</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.0\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 197760401,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589582426
+    },
+    {
+        "content": "<p><span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 197760411,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582436
+    },
+    {
+        "content": "<p>just posted release notes, and published.</p>",
+        "id": 197760412,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589582436
+    },
+    {
+        "content": "<p>I'm updating the download link in <a href=\"http://b.org\">b.org</a></p>",
+        "id": 197760425,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582461
+    },
+    {
+        "content": "<p>Done!</p>",
+        "id": 197760466,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582506
+    },
+    {
+        "content": "<p>...the tugboat demo may take ~24hrs to be updated. Right?</p>",
+        "id": 197760542,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582551
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I don't know how that works, we still have checkmarks in this list for it to be updated manually</p>",
+        "id": 197760664,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589582676
+    },
+    {
+        "content": "<p>OK. I believe that <span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> knows more about how it works.</p>",
+        "id": 197760688,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582709
+    },
+    {
+        "content": "<p>want to update <a href=\"https://backdropcms.org/roadmap\">https://backdropcms.org/roadmap</a> ?</p>",
+        "id": 197760722,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589582747
+    },
+    {
+        "content": "<p>Yup, I'm on it <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197760767,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582763
+    },
+    {
+        "content": "<p>ty!</p>",
+        "id": 197760818,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589582834
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> do you want to do the tweeting? :)</p>",
+        "id": 197760824,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589582841
+    },
+    {
+        "content": "<p>...there's nothing that was pushed to <a href=\"https://github.com/backdrop/backdrop-issues/issues?q=milestone%3A1.17.0\">https://github.com/backdrop/backdrop-issues/issues?q=milestone%3A1.17.0</a> so I'll just leave that to \"TBD\"</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues?q=milestone%3A1.17.0\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues?q=milestone%3A1.17.0\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 197760850,
+        "sender_full_name": "klonos",
+        "timestamp": 1589582873
+    },
+    {
+        "content": "<p>sounds good :)</p>",
+        "id": 197761107,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589583064
+    },
+    {
+        "content": "<p>OMG WE DID ALL THE THINGS</p>",
+        "id": 197761116,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589583075
+    },
+    {
+        "content": "<p>wait there were two that we didn't do...</p>",
+        "id": 197761125,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589583085
+    },
+    {
+        "content": "<p>mine and Nate's</p>",
+        "id": 197761129,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589583088
+    },
+    {
+        "content": "<p>but IDK if they are going to be in 1.17 so ...  WE DID ALMOST ALL THE THINGS</p>",
+        "id": 197761149,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589583107
+    },
+    {
+        "content": "<p>ok, I gotta go launch a thing...</p>",
+        "id": 197761223,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589583164
+    },
+    {
+        "content": "<p>ty for your help!</p>",
+        "id": 197761228,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589583168
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I could use some help for the \"focused on ...\" line for this release when you get back.</p>",
+        "id": 197761254,
+        "sender_full_name": "klonos",
+        "timestamp": 1589583193
+    },
+    {
+        "content": "<p>okie</p>",
+        "id": 197761293,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1589583232
+    },
+    {
+        "content": "<p>I went with \"focused on improving the user experience in various parts of the admin UI\" for now</p>",
+        "id": 197762196,
+        "sender_full_name": "klonos",
+        "timestamp": 1589584005
+    },
+    {
+        "content": "<p>We still have to update the separate tugboat repo separately (which I just did). Demos are now on 1.16.0.</p>",
+        "id": 197763034,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1589584762
+    },
+    {
+        "content": "<p>Roadmap and project history pages in <a href=\"http://b.org\">b.org</a> updated <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 197765256,
+        "sender_full_name": "klonos",
+        "timestamp": 1589587333
+    },
+    {
+        "content": "<p>If I can be given merge access to <a href=\"https://github.com/backdrop-ops/backdrop-docker\">https://github.com/backdrop-ops/backdrop-docker</a> I will be able to help with that in the future</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdrop-docker\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdrop-docker\" title=\"backdrop-ops/backdrop-docker\">backdrop-ops/backdrop-docker</a></div><div class=\"message_embed_description\">Backdrop on Docker. Contribute to backdrop-ops/backdrop-docker development by creating an account on GitHub.</div></div></div>",
+        "id": 197766269,
+        "sender_full_name": "klonos",
+        "timestamp": 1589588567
+    },
+    {
+        "content": "<p>Sorry for late reply, but the timing doesn't really work for me currently (might be better when I'm in Australia). Let me know if there's anything non-urgent I can help with and I'll see if I get a chance sometime today.</p>",
+        "id": 197777462,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589605500
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I wrote about 2/3 of a blog post about <code>1.16.0</code> release that I was going to put on HowToBackdrop site, but I could put it on Backdrop CMS as the <code>1.16.0</code> post, but if you've already started then I'll leave that to you; let me know what you think</p>",
+        "id": 197816810,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589665745
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/M254t_9ws7VRvtNzvYesKm4T/Backdrop-v1-1.16-comparison.jpg\">Backdrop-v1-1.16-comparison.jpg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/M254t_9ws7VRvtNzvYesKm4T/Backdrop-v1-1.16-comparison.jpg\" title=\"Backdrop-v1-1.16-comparison.jpg\"><img src=\"/user_uploads/18319/M254t_9ws7VRvtNzvYesKm4T/Backdrop-v1-1.16-comparison.jpg\"></a></div>",
+        "id": 197816952,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589665951
+    },
+    {
+        "content": "<p>Thanks everyone! I haven't had much free time to help. But I keep checking to see how things are going and doing what I can.</p>",
+        "id": 197823258,
+        "sender_full_name": "Herb",
+        "timestamp": 1589677391
+    },
+    {
+        "content": "<p>I've been busy with family time and chores (lockdown lifted, so it was shopping time big time <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ) ...I haven't started on a 1.16.0 blog ...please feel to drop what you have into a draft. Let me know, and I'll see if I can do the rest 1/3 <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 197824735,
+        "sender_full_name": "klonos",
+        "timestamp": 1589680206
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> For when you get a chance to correct a typo on the Roadmap page: \"<strong>Vasty</strong> improved the UX of the text format configuration form ...\"</p>",
+        "id": 197866994,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589746660
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ...fixed the typo in both <a href=\"https://backdropcms.org/roadmap\">https://backdropcms.org/roadmap</a> and <a href=\"https://backdropcms.org/user-guide/project-history\">https://backdropcms.org/user-guide/project-history</a></p>",
+        "id": 197870918,
+        "sender_full_name": "klonos",
+        "timestamp": 1589752602
+    },
+    {
+        "content": "<p><span aria-label=\"thumbs up\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"thumbs up\">:thumbs_up:</span></p>",
+        "id": 197871333,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1589753144
+    }
+]

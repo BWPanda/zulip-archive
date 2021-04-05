@@ -1,0 +1,95 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/rsync.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html">rsync</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="208155998"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208155998" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208155998">(Aug 26 2020 at 22:15)</a>:</h4>
+<p>Any <code>rsync</code> gurus here? I have an <code>rsync</code> command I'm using to backup my laptop to an external HD, but it takes forever to run, even on subsequent runs. I thought it should only backup changes on subsequent runs and therefore would be much quicker... Anyone able to help me debug?</p>
+
+
+
+<a name="208166288"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208166288" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208166288">(Aug 27 2020 at 00:27)</a>:</h4>
+<p>For example, I've run this command multiple times over the last few days, and just started it today before I posted above (2 hrs ago). It's still running now...</p>
+
+
+
+<a name="208168214"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208168214" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208168214">(Aug 27 2020 at 00:59)</a>:</h4>
+<p>I'm no guru. Perhaps it's worth running a test that your command is is actually only doing a diff</p>
+
+
+
+<a name="208168531"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208168531" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208168531">(Aug 27 2020 at 01:04)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> How do I do that?</p>
+
+
+
+<a name="208170842"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208170842" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208170842">(Aug 27 2020 at 01:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> here are some ideas. <a href="https://superuser.com/questions/576687/how-to-print-files-that-would-have-been-changed-using-rsync">https://superuser.com/questions/576687/how-to-print-files-that-would-have-been-changed-using-rsync</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://superuser.com/questions/576687/how-to-print-files-that-would-have-been-changed-using-rsync" style="background-image: url(https://cdn.sstatic.net/Sites/superuser/Img/apple-touch-icon@2.png?v=e869e4459439)"></a><div class="data-container"><div class="message_embed_title"><a href="https://superuser.com/questions/576687/how-to-print-files-that-would-have-been-changed-using-rsync" title="How to print files that would have been changed using rsync?">How to print files that would have been changed using rsync?</a></div><div class="message_embed_description">Is there a way to get rsync to print the full filepaths to all files that are different without actually transferring any files?
+
+Alternatively, I need a way to diff the files across two trees (ove...</div></div></div>
+
+
+
+<a name="208172598"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208172598" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208172598">(Aug 27 2020 at 02:25)</a>:</h4>
+<p>Hmmm, doing a dry-run and piping the output results in a 22MB file!</p>
+
+
+
+<a name="208172602"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208172602" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208172602">(Aug 27 2020 at 02:25)</a>:</h4>
+<p>Something's going on here I think...</p>
+
+
+
+<a name="208172749"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208172749" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208172749">(Aug 27 2020 at 02:29)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> thanks. I didn't actually know how but figured there might be some resource out there</p>
+
+
+
+<a name="208172761"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208172761" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208172761">(Aug 27 2020 at 02:29)</a>:</h4>
+<p>I use rsync quite a bit and I've found the dry run option useful at times.</p>
+
+
+
+<a name="208174230"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208174230" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208174230">(Aug 27 2020 at 03:06)</a>:</h4>
+<p>Ok, so I think I worked out the problem. Files on my source are writeable by the group, whereas on the destination they're not (I wonder if this has something to do with the external HD...) So because the file permissions are different, it's copying everything again.</p>
+
+
+
+<a name="208182643"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208182643" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208182643">(Aug 27 2020 at 06:44)</a>:</h4>
+<p>I reformatted my external HD from FAT to EXT4 and now <code>rsync</code> works as expected. The initial backup (I obviously had to redo it) took much less time than the previous ones, and now subsequent backups are really quick.</p>
+
+
+
+<a name="208182698"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/rsync/near/208182698" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/rsync.html#208182698">(Aug 27 2020 at 06:44)</a>:</h4>
+<p>Thanks for the help <span class="user-mention" data-user-id="256705">@Herb</span> and <span class="user-mention" data-user-id="256570">@StPaulTim</span>!</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,225 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html">Folder name not matching info name</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="199102604"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199102604" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199102604">(May 29 2020 at 00:40)</a>:</h4>
+<p>Trying to resolve the long standing issue with node clone module. Should we require that every module's directory name match the info name? It's not clear from the documentation that it's required. For the most part it works even if they don't match except when trying to install from browser</p>
+
+
+
+<a name="199102625"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199102625" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199102625">(May 29 2020 at 00:40)</a>:</h4>
+<p>We can either fix node clone or fix core</p>
+
+
+
+<a name="199123787"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199123787" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199123787">(May 29 2020 at 07:56)</a>:</h4>
+<p>I'd vote for a fix in node clone. The naming thing (<code>clone.info</code>...) has baffled me several times in Drupal.</p>
+
+
+
+<a name="199141958"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199141958" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199141958">(May 29 2020 at 11:35)</a>:</h4>
+<p>I agree. I think we should also fix the documentation to make it even clearer that the file names must match the directory</p>
+
+
+
+<a name="199142043"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199142043" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199142043">(May 29 2020 at 11:36)</a>:</h4>
+<p>Question is how to fix node_clone. Could do it gradually or a breaking change</p>
+
+
+
+<a name="199146283"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199146283" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199146283">(May 29 2020 at 12:23)</a>:</h4>
+<p>Hm... gradually? Isn't that like pulling a plaster off slowly? How about 1.x-2.x (major version change)? Or would you recommend to stay in sync with the D version numbers?</p>
+
+
+
+<a name="199149728"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199149728" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199149728">(May 29 2020 at 12:55)</a>:</h4>
+<p>Related, I would love it if we had something more generic like <a href="https://www.drupal.org/project/entity_clone">https://www.drupal.org/project/entity_clone</a> and <a href="https://www.drupal.org/project/entity_templates">https://www.drupal.org/project/entity_templates</a> either in core or contrib (note: these are D8 modules).</p>
+
+
+
+<a name="199150148"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199150148" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199150148">(May 29 2020 at 12:59)</a>:</h4>
+<p>...or <a href="https://www.drupal.org/project/replicate">https://www.drupal.org/project/replicate</a> as mentioned on a forum post</p>
+
+
+
+<a name="199151787"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199151787" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199151787">(May 29 2020 at 13:13)</a>:</h4>
+<p><a href="https://github.com/backdrop-contrib/replicate">https://github.com/backdrop-contrib/replicate</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/replicate" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/replicate" title="backdrop-contrib/replicate">backdrop-contrib/replicate</a></div><div class="message_embed_description">Provides an API to duplicate / clone an entity. Contribute to backdrop-contrib/replicate development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="199151980"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199151980" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199151980">(May 29 2020 at 13:14)</a>:</h4>
+<p>I ported that for a specific purpose (so I could port/use replicate paragraphs for translations) so it isn't fully tested, and have not ported the replicate gui module yet...</p>
+
+
+
+<a name="199152557"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199152557" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199152557">(May 29 2020 at 13:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> ++</p>
+
+
+
+<a name="199157297"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199157297" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199157297">(May 29 2020 at 13:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> it seems like replicate could replace node_clone if a few more modules were ported. I've never heard of it before.</p>
+
+
+
+<a name="199157573"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199157573" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199157573">(May 29 2020 at 13:59)</a>:</h4>
+<p>Though people are still using node_clone on Backdrop so still might be worth fixing it</p>
+
+
+
+<a name="199157928"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199157928" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199157928">(May 29 2020 at 14:02)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> major version change might be the way to go. And deprecate 1.x. It's mostly just to deal with the hooks</p>
+
+
+
+<a name="199158054"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199158054" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199158054">(May 29 2020 at 14:03)</a>:</h4>
+<p>Or could create an empty repo at /clone to help prevent name space clashes for hooks, etc</p>
+
+
+
+<a name="199159316"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199159316" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199159316">(May 29 2020 at 14:12)</a>:</h4>
+<p>The nice thing about node_clone is its simplicity. It's not very flexible, but it does one job really well.</p>
+
+
+
+<a name="199177361"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199177361" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199177361">(May 29 2020 at 16:22)</a>:</h4>
+<p>I'll put <code>replicate_ui</code> on my list to port at some point soon. I've never used it on Drupal but discovered it when trying to figure out how to get translations working with Paragraphs.</p>
+
+
+
+<a name="199177396"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199177396" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199177396">(May 29 2020 at 16:22)</a>:</h4>
+<p>Agreed that it's still worth fixing <code>node_clone</code>.</p>
+
+
+
+<a name="199213591"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199213591" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199213591">(May 29 2020 at 21:19)</a>:</h4>
+<p>A bit of a rabbit hole. I was looking to see if there was any discussion on d7 regarding node_clone/clone issue. Came up with <a href="https://www.drupal.org/project/node_clone/issues/1809898">https://www.drupal.org/project/node_clone/issues/1809898</a> which referenced <a href="https://www.drupal.org/project/google_analytics/issues/427770">https://www.drupal.org/project/google_analytics/issues/427770</a>. For the latter the d8 version got files renamed.</p>
+
+
+
+<a name="199215374"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199215374" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199215374">(May 29 2020 at 21:37)</a>:</h4>
+<p>I'd switch everything to <code>node_clone_x()</code> and do an update function and a compatibility functions for the hooks. There's no database so this should be doable. Dont know the effect on the <code>System</code> table entries when you change the info file. But I think its worth just getting this done.</p>
+
+
+
+<a name="199215401"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199215401" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199215401">(May 29 2020 at 21:37)</a>:</h4>
+<p>Its too confusing</p>
+
+
+
+<a name="199236588"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199236588" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199236588">(May 30 2020 at 03:52)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256757">@docwilmot</span> I'm inclined that way too. I could test the system table with changing an info file easily enough. What do you mean by "compatibility functions for the hooks"?</p>
+
+
+
+<a name="199237105"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199237105" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199237105">(May 30 2020 at 04:06)</a>:</h4>
+<p>Theres an API file, I'm assuming it provides hooks? Havent checked code. So I mean if another module is calling <code>my_module_clone_node_alter()</code> you might need to "redirect" that to <code>my_module_node_clone_node_alter()</code> once you've changed.</p>
+
+
+
+<a name="199237380"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199237380" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199237380">(May 30 2020 at 04:14)</a>:</h4>
+<p>Ah, I see what you mean. Yes, it has hooks. Seems to me that if we're going to redirect then we should also reserve <a href="http://github.com/backdrop-contrib/clone">github.com/backdrop-contrib/clone</a> so that someone doesn't creating a module with potential hooks that clash with the old ones. Rare but good housekeeping</p>
+
+
+
+<a name="199301042"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199301042" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199301042">(May 31 2020 at 10:50)</a>:</h4>
+<p>I've reserved <a href="http://github.com/backdrop-contrib/clone">http://github.com/backdrop-contrib/clone</a> and I've added an empty node_clone.module. this is addition to a hidden <a href="http://node_clone.info">node_clone.info</a>. I don't see the error anymore.</p>
+
+
+
+<a name="199301092"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199301092" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199301092">(May 31 2020 at 10:52)</a>:</h4>
+<p>I'm having trouble seeing how we can rename everything. It's a bit of pulling oneself up by ones own bootstraps. My 1 year old nephew tried it yesterday. Didn't work</p>
+
+
+
+<a name="199301108"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199301108" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199301108">(May 31 2020 at 10:53)</a>:</h4>
+<p>We'd have to leave the <a href="http://clone.info">clone.info</a>, clone.module and clone.install behind so that we can update the system table to use the new name (I think)</p>
+
+
+
+<a name="199317518"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199317518" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199317518">(May 31 2020 at 19:16)</a>:</h4>
+<p>Just copy everything from the <code>node_clone</code> repo to the new <code>clone</code> repo, (except the unnecessary <code>node_clone</code> stuff), then tell people to manually move over.</p>
+
+
+
+<a name="199326694"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199326694" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199326694">(May 31 2020 at 23:58)</a>:</h4>
+<p>So you're suggesting we go back to using clone and not node_clone? <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span></p>
+
+
+
+<a name="199327024"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199327024" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199327024">(Jun 01 2020 at 00:08)</a>:</h4>
+<p>I just read through the existing repo and it seems to all be named 'clone'... 'Node clone' seems to just be for the URL. Basically I'm suggesting that the new repo/URL should be named after whatever's in the System table. I think that'll be less code changes...</p>
+
+
+
+<a name="199329894"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199329894" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199329894">(Jun 01 2020 at 01:37)</a>:</h4>
+<p>That's true but I think we were all talking about moving it the other way. That was the approach suggested in the <a href="http://d.org">d.org</a> thread too. But maybe you're right.</p>
+
+
+
+<a name="199329936"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199329936" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199329936">(Jun 01 2020 at 01:38)</a>:</h4>
+<p>Though at the moment it seems to be working with the 'hack'</p>
+
+
+
+<a name="199330180"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199330180" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199330180">(Jun 01 2020 at 01:46)</a>:</h4>
+<p>Feel free to ignore me then <span aria-label="blush" class="emoji emoji-1f60a" role="img" title="blush">:blush:</span></p>
+
+
+
+<a name="199405405"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Folder%20name%20not%20matching%20info%20name/near/199405405" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Folder.20name.20not.20matching.20info.20name.html#199405405">(Jun 01 2020 at 18:29)</a>:</h4>
+<p>Heres a crazy thought: dump all the code in <code>clone.module</code> into an <code>*.inc</code> file. Then on both modules just have an <code>include_once</code> as the only code. Then remove the dependency. Then add a <code>hook_requirements()</code> to both that declines to install the other, with a message. So users who already have <code>clone</code> in System would not need to do anything new, but new users could also install <code>node_clone</code> and have same functionality. Sounds like madness, though.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

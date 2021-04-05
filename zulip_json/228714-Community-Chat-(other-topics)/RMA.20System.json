@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>Just wondered if anybody has implemented a RMA (return goods) type system (or similar) in Backdrop? We looking for a system for clients to log a return/repair which they post to us, and we update them via email. Eventually I'd like to get our support tickets on the same system.</p>",
+        "id": 222741522,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1610641379
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> I need to do the same at some point. I was just going to create a webform for someone to fill out so maybe that would be a good solution temporarily.</p>",
+        "id": 222777408,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1610655370
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> That seems like a good starting point, but I do want it to be more than just a form, so I'm trying to decide whether to custom code it in my languages of choice (golang/vuejs) or have a go using backdrop - I suppose I'm just not familiar enough with backdrop to know if it's a reasonable fit.</p>",
+        "id": 222787366,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1610659902
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> I can't help with the coding side of things but I guess my question is whether you are already using a backdrop site for other items (ecommerce) that would make sense to tie the RMA to a product that already lives on Backdrop.</p>\n<p>I'll say that \"yes\" it can totally be done in Backdrop it's just a matter of whether you would want to code for it. The main benefit to using Backdrop is the field/database structure that Backdrop can provide.</p>\n<p>If you think you'll use the site for more than just RMA then yes it's worth it. If you only plan to use the site for RMA then a more straight forward solution might be the better route.</p>\n<p>Interesting: <a href=\"https://www.drupal.org/node/1044784\">https://www.drupal.org/node/1044784</a></p>\n<p>Possible ready-solutions:<br>\n<a href=\"https://servicecentral.com/solutions/rma-process/\">https://servicecentral.com/solutions/rma-process/</a><br>\n<a href=\"https://www.readycloud.com/lp/rma-software-system\">https://www.readycloud.com/lp/rma-software-system</a><br>\n<a href=\"https://renewityglobal.com/returns-management-software-rma-portal/\">https://renewityglobal.com/returns-management-software-rma-portal/</a><br>\n<a href=\"https://repair-online.com/\">https://repair-online.com/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://renewityglobal.com/returns-management-software-rma-portal/\" style=\"background-image: url(https://noor.pixeldima.com/wp-content/uploads/2017/10/slack-imgs.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://renewityglobal.com/returns-management-software-rma-portal/\" title=\"Returns Management Software | RMA Software – Renewity Service Team Automation - Renewity - RMA &amp; Service Management\">Returns Management Software | RMA Software – Renewity Service Team Automation - Renewity - RMA &amp; Service Management</a></div><div class=\"message_embed_description\">Are your customers and distributors demanding a customer portal to request RMAs and to view their st</div></div></div>",
+        "id": 222788498,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1610660498
+    }
+]

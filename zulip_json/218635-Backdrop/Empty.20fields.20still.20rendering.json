@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>I'm just noticing (not sure how long it has been like this) that empty fields are rendering on Layouts that have individual fields placed on them (e.g. a layout with the <code>node/%</code> context which has a field added separately as a block). Has anyone else noticed that, and if so is it new or did I just not notice it before?</p>",
+        "id": 189148611,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582744787
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/SUtxH3MI1xEzTasLjBEUMUYO/Screen-Shot-2020-02-26-at-1.21.15-PM.jpg\" target=\"_blank\" title=\"Screen-Shot-2020-02-26-at-1.21.15-PM.jpg\">Screen-Shot-2020-02-26-at-1.21.15-PM.jpg</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/SUtxH3MI1xEzTasLjBEUMUYO/Screen-Shot-2020-02-26-at-1.21.15-PM.jpg\" target=\"_blank\" title=\"Screen-Shot-2020-02-26-at-1.21.15-PM.jpg\"><img src=\"/user_uploads/18319/SUtxH3MI1xEzTasLjBEUMUYO/Screen-Shot-2020-02-26-at-1.21.15-PM.jpg\"></a></div><p>Unless it's due to a contrib module... digging now.</p>",
+        "id": 189148821,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582744888
+    },
+    {
+        "content": "<p>Verified on a demo sandbox (it's inserting empty divs):<br>\n<a href=\"/user_uploads/18319/x4a73XXApOc-z2POO_a_Uo4o/Screen-Shot-2020-02-26-at-1.24.10-PM.jpg\" target=\"_blank\" title=\"Screen-Shot-2020-02-26-at-1.24.10-PM.jpg\">Screen-Shot-2020-02-26-at-1.24.10-PM.jpg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/x4a73XXApOc-z2POO_a_Uo4o/Screen-Shot-2020-02-26-at-1.24.10-PM.jpg\" target=\"_blank\" title=\"Screen-Shot-2020-02-26-at-1.24.10-PM.jpg\"><img src=\"/user_uploads/18319/x4a73XXApOc-z2POO_a_Uo4o/Screen-Shot-2020-02-26-at-1.24.10-PM.jpg\"></a></div>",
+        "id": 189149222,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582745084
+    },
+    {
+        "content": "<p>Added <a href=\"https://github.com/backdrop/backdrop-issues/issues/4319\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/4319\">https://github.com/backdrop/backdrop-issues/issues/4319</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4319\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4319\" target=\"_blank\" title=\"Empty fields are rendering markup · Issue #4319 · backdrop/backdrop-issues\">Empty fields are rendering markup · Issue #4319 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug Empty fields seem to still be rendering markup in the layout. Steps To Reproduce To reproduce the behavior: Add a &#39;text area&#39; field to a content type. Create a piece ...</div></div></div>",
+        "id": 189150140,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582745610
+    }
+]

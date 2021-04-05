@@ -1,0 +1,86 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html">Enabling revisions for all existing nodes</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="202750257"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202750257" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202750257">(Jul 02 2020 at 22:14)</a>:</h4>
+<p>I've imported a bunch of content into a Backdrop site; I'd now like to turn on node revisions for all of the nodes on the site, en masse. How would I do that?</p>
+
+
+
+<a name="202750331"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202750331" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202750331">(Jul 02 2020 at 22:14)</a>:</h4>
+<p>I can't figure out where this is set in the database; don't see it in the <code>node</code> table</p>
+
+
+
+<a name="202750456"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202750456" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202750456">(Jul 02 2020 at 22:16)</a>:</h4>
+<p>Huh -- is it actually in the <code>node_revision</code> table? Does EVERY node have an entry in that table, even if it doesn't have any revisions besides the original one?</p>
+
+
+
+<a name="202750505"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202750505" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202750505">(Jul 02 2020 at 22:17)</a>:</h4>
+<p>(Nope!)</p>
+
+
+
+<a name="202761503"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202761503" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202761503">(Jul 03 2020 at 01:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="262176">@Jack</span> You enable it per content type. Look for the "Revision settings" tab.</p>
+
+
+
+<a name="202831317"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202831317" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202831317">(Jul 03 2020 at 19:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> AFAICT that doesn't affect existing nodes that don't already have content revisions enabled....huh, but maybe my problem was that for the Page content type new revisions weren't enabled by default <em>before</em> the import, ugh.</p>
+
+
+
+<a name="202831343"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202831343" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202831343">(Jul 03 2020 at 19:26)</a>:</h4>
+<p>Nevertheless, I'd assume there must be a programmatic way to change this for all nodes on a site, same way I can use an UPDATE MySQL query to close comments on all nodes on the site.</p>
+
+
+
+<a name="202831458"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202831458" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202831458">(Jul 03 2020 at 19:28)</a>:</h4>
+<p>Huh -- <span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> I think I might be seeing what you're saying...</p>
+
+
+
+<a name="202831682"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202831682" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202831682">(Jul 03 2020 at 19:32)</a>:</h4>
+<p>Yes! Now that I've enabled new revisions by default for the Page content type, I haven't found a single imported page that doesn't have "Create new revision" enabled by default when I edit the node. Revisions enabled isn't a value set on a per-node basis, it's set on a per-content-type basis as you said AND it applies to all nodes, not just nodes you create after fixing that setting.</p>
+
+
+
+<a name="202831745"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202831745" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202831745">(Jul 03 2020 at 19:33)</a>:</h4>
+<p>Problem was I was convinced that I had new revisions enabled by default for the Page content type already, but when I just checked I didn't. Whoops!</p>
+
+
+
+<a name="202831762"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Enabling%20revisions%20for%20all%20existing%20nodes/near/202831762" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jackaponte <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Enabling.20revisions.20for.20all.20existing.20nodes.html#202831762">(Jul 03 2020 at 19:33)</a>:</h4>
+<p>Thanks for the help sorting that out <span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> !</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

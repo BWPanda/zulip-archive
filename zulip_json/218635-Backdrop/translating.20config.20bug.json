@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>I just noticed a bug. It's an upgraded d7 site. It's supposed to be config:system_core:anonymous. <a href=\"/user_uploads/18319/s27Mn_A88QBdcMQqkLAsrLMO/Screenshot-from-2021-04-01-12-25-34.png\">Screenshot-from-2021-04-01-12-25-34.png</a> I noticed the same issue with maintenance message.</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/s27Mn_A88QBdcMQqkLAsrLMO/Screenshot-from-2021-04-01-12-25-34.png\" title=\"Screenshot-from-2021-04-01-12-25-34.png\"><img src=\"/user_uploads/18319/s27Mn_A88QBdcMQqkLAsrLMO/Screenshot-from-2021-04-01-12-25-34.png\"></a></div>",
+        "id": 232785676,
+        "sender_full_name": "Herb",
+        "timestamp": 1617294442
+    },
+    {
+        "content": "<p>I've got to do some more testing but I thought we had fixed these issues in the last release <span aria-label=\"sad\" class=\"emoji emoji-2639\" role=\"img\" title=\"sad\">:sad:</span></p>",
+        "id": 232785855,
+        "sender_full_name": "Herb",
+        "timestamp": 1617294497
+    },
+    {
+        "content": "<p>The wrong one seems to have created within a batch job. Search the database table for more of these faulty entries, maybe then we can figure out what caused this. This entry has nothing to  do with the (recently fixed) <em>missing</em> translatables - it seems unrelated.</p>",
+        "id": 232911156,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617376759
+    },
+    {
+        "content": "<p>There was that other bug. I can't recall if my pr got merged already. I'm guessing it's related to that, but I need to look at that again</p>",
+        "id": 232914121,
+        "sender_full_name": "Herb",
+        "timestamp": 1617378332
+    },
+    {
+        "content": "<p>Did you mean that one? <a href=\"https://github.com/backdrop/backdrop-issues/issues/4878\">https://github.com/backdrop/backdrop-issues/issues/4878</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4878\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4878\" title=\"_locale_get_config_translatables() should use the proper context · Issue #4878 · backdrop/backdrop-issues\">_locale_get_config_translatables() should use the proper context · Issue #4878 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">locale_get_config_translatables() is calling locale() with just the config name as the context, e.g. site_name. However it should be doing the same thing as locale_enable() which is setting the con...</div></div></div>",
+        "id": 232914505,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617378540
+    },
+    {
+        "content": "<p>Yes, I was just looking that up too <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span>️</p>",
+        "id": 232915032,
+        "sender_full_name": "Herb",
+        "timestamp": 1617378822
+    },
+    {
+        "content": "<p>I guess I didn't fix the existing entries on this site. I started the upgrade before this fix</p>",
+        "id": 232915146,
+        "sender_full_name": "Herb",
+        "timestamp": 1617378864
+    },
+    {
+        "content": "<p>I'd really recommend to inspect the database table for more entries like that.</p>",
+        "id": 232915191,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617378892
+    },
+    {
+        "content": "<p>And a hint: these entries don't do any harm, as their context doesn't fit anything. (You can simply delete them.)</p>",
+        "id": 232915285,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617378942
+    },
+    {
+        "content": "<p>Though oddly I had updated the maintenance message and it still used the incorrect context.</p>",
+        "id": 232915628,
+        "sender_full_name": "Herb",
+        "timestamp": 1617379125
+    },
+    {
+        "content": "<p>Database... search in the database. <span aria-label=\"stuck out tongue wink\" class=\"emoji emoji-1f61c\" role=\"img\" title=\"stuck out tongue wink\">:stuck_out_tongue_wink:</span> The UI isn't very helpful when it comes to translation contexts.</p>",
+        "id": 232915729,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617379195
+    },
+    {
+        "content": "<p>Translation contexts are not unique, the one with the highest lid wins. That's why the database can be helpful here.</p>",
+        "id": 232916034,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617379308
+    },
+    {
+        "content": "<p>Yup. I'll do it some other day. Got the day off for Good Friday and gonna build my kid's slide</p>",
+        "id": 232916179,
+        "sender_full_name": "Herb",
+        "timestamp": 1617379366
+    }
+]

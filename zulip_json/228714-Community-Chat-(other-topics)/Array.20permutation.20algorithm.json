@@ -1,0 +1,176 @@
+[
+    {
+        "content": "<p>Hi all, I want to create an algorithm to replace items in a path with a placeholder. If I have a path <code>one/two/three</code> I want the algorithm to return:</p>\n<ul>\n<li><code>one/%/three</code> </li>\n<li><code>one/%/%</code> </li>\n<li><code>one/two/%</code> </li>\n<li><code>%/two/three</code> </li>\n<li><code>%/%/three</code><br>\netc, with all possible combinations of each path part replaced by <code>%</code>. For any path.<br>\nI've actually accomplished this, but its not very elegant looking, and wondered if I could pick your brains. The size of the return would be I think 2^(number-of-parts), which could cause issues quickly if the algorithm isn't efficient I suspect.<br>\nWhat do you think?<br>\n(I left my solution home on my laptop, and I'm at work, but happy to share later).</li>\n</ul>",
+        "id": 196224712,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588618584
+    },
+    {
+        "content": "<p>How many items are you expecting to have to process like that? Also, what is the maximum number of parts that you expect will be needed?</p>",
+        "id": 196242040,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588627560
+    },
+    {
+        "content": "<p>Do you want it to only return 1 copy of the path if a part is already a <code>%</code>?</p>",
+        "id": 196244187,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588628921
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> I came up with something that seems to work well. It runs decently fast for an operation that doubles in length with every operation, but the big problem I hit was the memory usage. With 20 parts in the url, it ran in .12 seconds, but just used over 50MB of memory. Every  extra component causes 2x the execution time, but  3x the memory usage.</p>",
+        "id": 196247314,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588631085
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code><span class=\"cp\">&lt;?php</span>\n<span class=\"k\">function</span> <span class=\"nf\">joseph_test_path_replace</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n  <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nb\">is_string</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">))</span> <span class=\"p\">{</span>\n    <span class=\"nv\">$path</span> <span class=\"o\">=</span> <span class=\"nb\">explode</span><span class=\"p\">(</span><span class=\"s1\">&#39;/&#39;</span><span class=\"p\">,</span> <span class=\"nv\">$path</span><span class=\"p\">);</span>\n  <span class=\"p\">}</span>\n\n  <span class=\"nv\">$part</span> <span class=\"o\">=</span> <span class=\"nb\">array_shift</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">);</span>\n\n  <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"k\">empty</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">))</span> <span class=\"p\">{</span>\n    <span class=\"c1\">// We have reached the last item.</span>\n    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nv\">$part</span> <span class=\"o\">!==</span> <span class=\"s1\">&#39;%&#39;</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n      <span class=\"k\">return</span> <span class=\"k\">array</span><span class=\"p\">(</span><span class=\"nv\">$part</span><span class=\"p\">,</span> <span class=\"s1\">&#39;%&#39;</span><span class=\"p\">);</span>\n    <span class=\"p\">}</span>\n    <span class=\"k\">return</span> <span class=\"k\">array</span><span class=\"p\">(</span><span class=\"s1\">&#39;%&#39;</span><span class=\"p\">);</span>\n  <span class=\"p\">}</span>\n\n  <span class=\"c1\">// There are more parts to go.</span>\n  <span class=\"nv\">$paths</span> <span class=\"o\">=</span> <span class=\"k\">array</span><span class=\"p\">();</span>\n  <span class=\"nv\">$sub_paths</span> <span class=\"o\">=</span> <span class=\"nx\">joseph_test_path_replace</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">);</span>\n  <span class=\"nv\">$count</span> <span class=\"o\">=</span> <span class=\"nb\">count</span><span class=\"p\">(</span><span class=\"nv\">$sub_paths</span><span class=\"p\">);</span>\n  <span class=\"k\">for</span> <span class=\"p\">(</span><span class=\"nv\">$index</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">;</span> <span class=\"nv\">$index</span> <span class=\"o\">&lt;</span> <span class=\"nv\">$count</span><span class=\"p\">;</span> <span class=\"nv\">$index</span><span class=\"o\">++</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nv\">$part</span> <span class=\"o\">!==</span> <span class=\"s1\">&#39;%&#39;</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n      <span class=\"nv\">$paths</span><span class=\"p\">[]</span> <span class=\"o\">=</span> <span class=\"nv\">$part</span> <span class=\"o\">.</span> <span class=\"s1\">&#39;/&#39;</span> <span class=\"o\">.</span> <span class=\"nv\">$sub_paths</span><span class=\"p\">[</span><span class=\"nv\">$index</span><span class=\"p\">];</span>\n    <span class=\"p\">}</span>\n    <span class=\"nv\">$paths</span><span class=\"p\">[]</span> <span class=\"o\">=</span> <span class=\"s1\">&#39;%/&#39;</span> <span class=\"o\">.</span> <span class=\"nv\">$sub_paths</span><span class=\"p\">[</span><span class=\"nv\">$index</span><span class=\"p\">];</span>\n  <span class=\"p\">}</span>\n  <span class=\"k\">return</span> <span class=\"nv\">$paths</span><span class=\"p\">;</span>\n<span class=\"p\">}</span>\n</code></pre></div>",
+        "id": 196247350,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588631106
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> wow, excellent, much better than what I did. I cant figure how it works, so I'll ask you one more favor: is it possible to ensure that the first part of the path is always preserved? So <code>one/two/three</code> results in </p>\n<ul>\n<li>one/two/three</li>\n<li>one/%/three</li>\n<li>one/%/%</li>\n<li>one/two/%</li>\n<li>one/%/three<br>\netc</li>\n</ul>",
+        "id": 196252877,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588635591
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code><span class=\"cp\">&lt;?php</span>\n<span class=\"k\">function</span> <span class=\"nf\">joseph_test_path_replace</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n  <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nb\">is_string</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">))</span> <span class=\"p\">{</span>\n    <span class=\"nv\">$path</span> <span class=\"o\">=</span> <span class=\"nb\">explode</span><span class=\"p\">(</span><span class=\"s1\">&#39;/&#39;</span><span class=\"p\">,</span> <span class=\"nv\">$path</span><span class=\"p\">);</span>\n  <span class=\"p\">}</span>\n\n  <span class=\"nv\">$part</span> <span class=\"o\">=</span> <span class=\"nb\">array_pop</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">);</span>\n\n  <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"k\">empty</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">))</span> <span class=\"p\">{</span>\n    <span class=\"c1\">// We have reached the last item, so just return it.</span>\n    <span class=\"k\">return</span> <span class=\"k\">array</span><span class=\"p\">(</span><span class=\"nv\">$part</span><span class=\"p\">);</span>\n  <span class=\"p\">}</span>\n\n  <span class=\"c1\">// There are more parts to process.</span>\n  <span class=\"nv\">$paths</span> <span class=\"o\">=</span> <span class=\"k\">array</span><span class=\"p\">();</span>\n  <span class=\"c1\">// Call this function again with the remaining path parts.</span>\n  <span class=\"nv\">$sub_paths</span> <span class=\"o\">=</span> <span class=\"nx\">joseph_test_path_replace</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">);</span>\n\n  <span class=\"k\">foreach</span> <span class=\"p\">(</span><span class=\"nv\">$sub_paths</span> <span class=\"k\">as</span> <span class=\"nv\">$sub_path</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n    <span class=\"c1\">// If the part is already a %, just return one item to avoid duplicates.</span>\n    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nv\">$part</span> <span class=\"o\">!==</span> <span class=\"s1\">&#39;%&#39;</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n      <span class=\"nv\">$paths</span><span class=\"p\">[]</span> <span class=\"o\">=</span> <span class=\"nv\">$sub_path</span> <span class=\"o\">.</span> <span class=\"s1\">&#39;/&#39;</span> <span class=\"o\">.</span> <span class=\"nv\">$part</span><span class=\"p\">;</span>\n    <span class=\"p\">}</span>\n    <span class=\"nv\">$paths</span><span class=\"p\">[]</span> <span class=\"o\">=</span> <span class=\"nv\">$sub_path</span> <span class=\"o\">.</span> <span class=\"s1\">&#39;/%&#39;</span><span class=\"p\">;</span>\n  <span class=\"p\">}</span>\n\n  <span class=\"k\">return</span> <span class=\"nv\">$paths</span><span class=\"p\">;</span>\n<span class=\"p\">}</span>\n</code></pre></div>",
+        "id": 196256254,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588638408
+    },
+    {
+        "content": "<p>That should do the trick.</p>",
+        "id": 196256277,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588638435
+    },
+    {
+        "content": "<p>Perfect! Thanks!</p>",
+        "id": 196258414,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588640644
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Ooh, nice problem! I love these sort of maths/coding challenges! It took me a while, but I finally worked out a solution to this:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"x\">function permutations($string) {</span>\n<span class=\"x\">  $result = array();</span>\n<span class=\"x\">  $array = explode(&#39;/&#39;, $string);</span>\n<span class=\"x\">  $max_binary = str_pad(&#39;&#39;, count($array), &#39;1&#39;);</span>\n\n<span class=\"x\">  for ($i = 0; $i &lt;= bindec($max_binary); $i++) {</span>\n<span class=\"x\">    $components = array();</span>\n<span class=\"x\">    $binary = str_pad(decbin($i), count($array), &#39;0&#39;, STR_PAD_LEFT);</span>\n\n<span class=\"x\">    foreach (str_split($binary) as $j =&gt; $num) {</span>\n<span class=\"x\">      if ($num == &#39;1&#39;) {</span>\n<span class=\"x\">        $components[] = &#39;%&#39;;</span>\n<span class=\"x\">      }</span>\n<span class=\"x\">      else {</span>\n<span class=\"x\">        $components[] = $array[$j];</span>\n<span class=\"x\">      }</span>\n<span class=\"x\">    }</span>\n\n<span class=\"x\">    $result[] = implode(&#39;/&#39;, $components);</span>\n<span class=\"x\">  }</span>\n\n<span class=\"x\">  return $result;</span>\n<span class=\"x\">}</span>\n</code></pre></div>\n\n\n<p>So <code>permutations('one/two/three')</code> gives:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"x\">Array</span>\n<span class=\"x\">(</span>\n<span class=\"x\">    [0] =&gt; one/two/three</span>\n<span class=\"x\">    [1] =&gt; one/two/%</span>\n<span class=\"x\">    [2] =&gt; one/%/three</span>\n<span class=\"x\">    [3] =&gt; one/%/%</span>\n<span class=\"x\">    [4] =&gt; %/two/three</span>\n<span class=\"x\">    [5] =&gt; %/two/%</span>\n<span class=\"x\">    [6] =&gt; %/%/three</span>\n<span class=\"x\">    [7] =&gt; %/%/%</span>\n<span class=\"x\">)</span>\n</code></pre></div>\n\n\n<p>I based this on binary numbers (e.g. <code>101</code>). Each <code>0</code> represents the original part of the string, while each <code>1</code> represents where to insert the <code>%</code> character. So the code simply generates a list of all appropriate length binary numbers, then replaces the <code>0</code>'s and <code>1</code>'s with their respective values.</p>\n<p>Hope that helps! It sure was fun <span aria-label=\"smile\" class=\"emoji emoji-263a\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 196272997,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588661458
+    },
+    {
+        "content": "<p><span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>",
+        "id": 196324651,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588692797
+    },
+    {
+        "content": "<p>Good Lord thats genius!</p>",
+        "id": 196324666,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588692805
+    },
+    {
+        "content": "<p>Any need to check speed and memory? THis is probably the best I imagine</p>",
+        "id": 196324782,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588692848
+    },
+    {
+        "content": "<p>Hmm, actually no... I checked it against <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span>'s first one above and his runs faster (0.5s to my 4.5s), though mine used slightly less memory (180Mb to his 220Mb). I might have numbers wrong, that was from memory. And that was all with 20 path components.</p>",
+        "id": 196330567,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588695561
+    },
+    {
+        "content": "<p>shocking</p>",
+        "id": 196335130,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588697778
+    },
+    {
+        "content": "<p>this is for use in Backdrop so since <code>MENU_MAX_PARTS</code> is 9, that would be the maximum.</p>",
+        "id": 196335246,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588697838
+    },
+    {
+        "content": "<p>Ok, here's official numbers for 9 parts:</p>\n<p>My code:<br>\n0.0014 ms<br>\n14Kb peak memory usage difference</p>\n<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span>'s code:<br>\n0.0002 ms<br>\n38Kb peak memory usage difference</p>\n<p>These were obtained with this code:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"x\">function print_mem() {</span>\n<span class=\"x\">  $mem_usage = memory_get_usage();</span>\n<span class=\"x\">  $mem_peak = memory_get_peak_usage();</span>\n\n<span class=\"x\">  echo round($mem_usage / 1024) . &quot;KB\\n&quot;;</span>\n<span class=\"x\">  echo round($mem_peak / 1024) . &quot;KB peak\\n&quot;;</span>\n<span class=\"x\">}</span>\n\n<span class=\"x\">print_mem();</span>\n<span class=\"x\">$start = microtime(true);</span>\n<span class=\"x\">permutations/joseph_test_path_replace(&#39;one/two/three/one/two/three/one/two/three&#39;);</span>\n<span class=\"x\">$end = microtime(true);</span>\n<span class=\"x\">print_mem();</span>\n<span class=\"x\">print ($end - $start) . &quot;ms\\n\\n&quot;;</span>\n</code></pre></div>\n\n\n<p>The <code>memory_get_usage()</code> value didn't change for either code before or after running it. The Kb value listed above was the peak usage after running the code minus the peak value before running it.<br>\nNot sure if this is the best way to test the performance...</p>",
+        "id": 196349778,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588704849
+    },
+    {
+        "content": "<p>Raw results:</p>\n<p>Mine:</p>\n<div class=\"codehilite\"><pre><span></span><code>385KB\n423KB peak\n385KB\n437KB peak\n0.0014050006866455ms\n</code></pre></div>\n\n\n<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span>'s:</p>\n<div class=\"codehilite\"><pre><span></span><code>385KB\n422KB peak\n385KB\n460KB peak\n0.00022220611572266ms\n</code></pre></div>",
+        "id": 196349916,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588704937
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> I made some modifications to both of the functions. Could you try timing them again?</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"cp\">&lt;?php</span>\n\n<span class=\"k\">function</span> <span class=\"nf\">permutations</span><span class=\"p\">(</span><span class=\"nv\">$string</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n  <span class=\"nv\">$results</span> <span class=\"o\">=</span> <span class=\"k\">array</span><span class=\"p\">();</span>\n  <span class=\"nv\">$array</span> <span class=\"o\">=</span> <span class=\"nb\">explode</span><span class=\"p\">(</span><span class=\"s1\">&#39;/&#39;</span><span class=\"p\">,</span> <span class=\"nv\">$string</span><span class=\"p\">);</span>\n  <span class=\"nv\">$count</span> <span class=\"o\">=</span> <span class=\"nb\">count</span><span class=\"p\">(</span><span class=\"nv\">$array</span><span class=\"p\">);</span>\n  <span class=\"nv\">$max</span> <span class=\"o\">=</span> <span class=\"nb\">bindec</span><span class=\"p\">(</span><span class=\"nb\">str_pad</span><span class=\"p\">(</span><span class=\"s1\">&#39;&#39;</span><span class=\"p\">,</span> <span class=\"nv\">$count</span><span class=\"p\">,</span> <span class=\"s1\">&#39;1&#39;</span><span class=\"p\">));</span>\n\n  <span class=\"k\">for</span> <span class=\"p\">(</span><span class=\"nv\">$i</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">;</span> <span class=\"nv\">$i</span> <span class=\"o\">&lt;=</span> <span class=\"nv\">$max</span><span class=\"p\">;</span> <span class=\"nv\">$i</span><span class=\"o\">++</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n    <span class=\"nv\">$binary</span> <span class=\"o\">=</span> <span class=\"nb\">str_pad</span><span class=\"p\">(</span><span class=\"nb\">decbin</span><span class=\"p\">(</span><span class=\"nv\">$i</span><span class=\"p\">),</span> <span class=\"nv\">$count</span><span class=\"p\">,</span> <span class=\"s1\">&#39;0&#39;</span><span class=\"p\">,</span> <span class=\"nx\">STR_PAD_LEFT</span><span class=\"p\">);</span>\n    <span class=\"nv\">$string</span> <span class=\"o\">=</span> <span class=\"s1\">&#39;&#39;</span><span class=\"p\">;</span>\n\n    <span class=\"k\">for</span> <span class=\"p\">(</span><span class=\"nv\">$j</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">;</span> <span class=\"nv\">$j</span> <span class=\"o\">&lt;</span> <span class=\"nv\">$count</span><span class=\"p\">;</span> <span class=\"nv\">$j</span><span class=\"o\">++</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n      <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nv\">$j</span> <span class=\"o\">!==</span> <span class=\"mi\">0</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n        <span class=\"nv\">$string</span> <span class=\"o\">.=</span> <span class=\"s1\">&#39;/&#39;</span><span class=\"p\">;</span>\n      <span class=\"p\">}</span>\n\n      <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nv\">$binary</span><span class=\"p\">[</span><span class=\"nv\">$j</span><span class=\"p\">]</span> <span class=\"o\">==</span> <span class=\"s1\">&#39;1&#39;</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n        <span class=\"nv\">$string</span> <span class=\"o\">.=</span> <span class=\"s1\">&#39;%&#39;</span><span class=\"p\">;</span>\n      <span class=\"p\">}</span>\n      <span class=\"k\">else</span> <span class=\"p\">{</span>\n        <span class=\"nv\">$string</span> <span class=\"o\">.=</span> <span class=\"nv\">$array</span><span class=\"p\">[</span><span class=\"nv\">$j</span><span class=\"p\">];</span>\n      <span class=\"p\">}</span>\n    <span class=\"p\">}</span>\n\n    <span class=\"nv\">$results</span><span class=\"p\">[]</span> <span class=\"o\">=</span> <span class=\"nv\">$string</span><span class=\"p\">;</span>\n  <span class=\"p\">}</span>\n\n  <span class=\"k\">return</span> <span class=\"nv\">$results</span><span class=\"p\">;</span>\n<span class=\"p\">}</span>\n\n<span class=\"k\">function</span> <span class=\"nf\">joseph_test_path_replace</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n  <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nb\">is_string</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">))</span> <span class=\"p\">{</span>\n    <span class=\"nv\">$path</span> <span class=\"o\">=</span> <span class=\"nb\">explode</span><span class=\"p\">(</span><span class=\"s1\">&#39;/&#39;</span><span class=\"p\">,</span> <span class=\"nv\">$path</span><span class=\"p\">);</span>\n  <span class=\"p\">}</span>\n\n  <span class=\"nv\">$part</span> <span class=\"o\">=</span> <span class=\"nb\">array_shift</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">);</span>\n\n  <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"k\">empty</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">))</span> <span class=\"p\">{</span>\n    <span class=\"c1\">// We have reached the last item.</span>\n    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nv\">$part</span> <span class=\"o\">!==</span> <span class=\"s1\">&#39;%&#39;</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n      <span class=\"k\">return</span> <span class=\"k\">array</span><span class=\"p\">(</span><span class=\"nv\">$part</span><span class=\"p\">,</span> <span class=\"s1\">&#39;%&#39;</span><span class=\"p\">);</span>\n    <span class=\"p\">}</span>\n    <span class=\"k\">return</span> <span class=\"k\">array</span><span class=\"p\">(</span><span class=\"s1\">&#39;%&#39;</span><span class=\"p\">);</span>\n  <span class=\"p\">}</span>\n\n  <span class=\"c1\">// There are more parts to go.</span>\n  <span class=\"nv\">$sub_paths</span> <span class=\"o\">=</span> <span class=\"nx\">joseph_test_path_replace</span><span class=\"p\">(</span><span class=\"nv\">$path</span><span class=\"p\">);</span>\n  <span class=\"nv\">$count</span> <span class=\"o\">=</span> <span class=\"nb\">count</span><span class=\"p\">(</span><span class=\"nv\">$sub_paths</span><span class=\"p\">);</span>\n  <span class=\"k\">for</span> <span class=\"p\">(</span><span class=\"nv\">$i</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">;</span> <span class=\"nv\">$i</span> <span class=\"o\">&lt;</span> <span class=\"nv\">$count</span><span class=\"p\">;</span> <span class=\"nv\">$i</span><span class=\"o\">++</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"nv\">$part</span> <span class=\"o\">!==</span> <span class=\"s1\">&#39;%&#39;</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n      <span class=\"nv\">$sub_paths</span><span class=\"p\">[]</span> <span class=\"o\">=</span> <span class=\"nv\">$part</span> <span class=\"o\">.</span> <span class=\"s1\">&#39;/&#39;</span> <span class=\"o\">.</span> <span class=\"nv\">$sub_paths</span><span class=\"p\">[</span><span class=\"nv\">$i</span><span class=\"p\">];</span>\n    <span class=\"p\">}</span>\n    <span class=\"nv\">$sub_paths</span><span class=\"p\">[</span><span class=\"nv\">$i</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"s1\">&#39;%/&#39;</span> <span class=\"o\">.</span> <span class=\"nv\">$sub_paths</span><span class=\"p\">[</span><span class=\"nv\">$i</span><span class=\"p\">];</span>\n  <span class=\"p\">}</span>\n  <span class=\"k\">return</span> <span class=\"nv\">$sub_paths</span><span class=\"p\">;</span>\n<span class=\"p\">}</span>\n</code></pre></div>",
+        "id": 196371660,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588714685
+    },
+    {
+        "content": "<p>I think most of the time in your original version was the count, str_split, and implode functions inside the loop, so I moved some things so that it doesn't have those.</p>",
+        "id": 196371792,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588714792
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span>! Here're the results:</p>\n<div class=\"codehilite\"><pre><span></span><code>My OLD code:               My NEW code:\n385KB                      385KB\n423KB peak                 422KB peak\n385KB                      385KB\n437KB peak                 435KB peak\n0.0025179386138916ms       0.001121997833252ms\n</code></pre></div>\n\n\n<div class=\"codehilite\"><pre><span></span><code>Your OLD code:             Your NEW code:\n385KB                      385KB\n422KB peak                 422KB peak\n385KB                      385KB\n460KB peak                 435KB peak\n0.00020313262939453ms      0.00023198127746582ms\n</code></pre></div>",
+        "id": 196591516,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588745783
+    },
+    {
+        "content": "<p>Your changes halved the time my code takes ( <span aria-label=\"thumbs up\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"thumbs up\">:thumbs_up:</span> ), but memory wasn't really affected.<br>\nYour changes made your code perform better regarding memory usage, but the time increased ever so slightly (still much faster than mine though).</p>",
+        "id": 196591609,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588745917
+    },
+    {
+        "content": "<p>Oh the joy of being in the company of intelligent people <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span></p>",
+        "id": 196608795,
+        "sender_full_name": "klonos",
+        "timestamp": 1588757523
+    },
+    {
+        "content": "<p>I hope you're not implying you aren't intelligent, because you most certainly are.</p>",
+        "id": 196641927,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1588775209
+    },
+    {
+        "content": "<p>I was referring to the fact that we're all a bunch of amazing people with beautiful minds - I was impressed by the results of the teamwork in this thread.</p>",
+        "id": 196653846,
+        "sender_full_name": "klonos",
+        "timestamp": 1588779902
+    },
+    {
+        "content": "<p>well I have a medical degree, a Masters in Business, and all kinds of other pieces of paper, and I understand Backdrop code quite well, yet I struggled for two days with this and only came up with a piece of crappy code, and you guys popped up two lovely solutions in a few minutes. I concur with <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> completely. Impressive minds indeed!! <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 196654390,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588780144
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I wasn't sure how you meant it, so I just wanted to speak up. You could have also meant that you weren't in the company of intelligent people elsewhere. <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 196655865,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1588780737
+    },
+    {
+        "content": "<p><span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 196658874,
+        "sender_full_name": "klonos",
+        "timestamp": 1588781843
+    },
+    {
+        "content": "<p>...I am lucky to also be surrounded by beautiful minds at work + blessed with such childhood friends too. I intended to stress the benefits of this when it happens. <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> summed it up beautifully.</p>",
+        "id": 196659111,
+        "sender_full_name": "klonos",
+        "timestamp": 1588781934
+    }
+]

@@ -1,0 +1,180 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html">Quick survey utf8-mb4</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="224871921"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224871921" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224871921">(Feb 02 2021 at 13:41)</a>:</h4>
+<p>Another survey:</p>
+<p>How many of you still struggle with databases without utf8-mb4 support? Do most of your sites have support, or are you still bound to hosting, where it's not available?</p>
+<p>This question popped up in a core issue, which lead to a contrib module. But one of the open questions in the core issue is: how many users may be affected? Is the 80% rule applicable in any way?</p>
+<p><a href="https://github.com/backdrop/backdrop-issues/issues/4927">https://github.com/backdrop/backdrop-issues/issues/4927</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4927" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4927" title="EntityStorageException when trying to save emojis without UTF8-mb4 enabled in the database · Issue #4927 · backdrop/backdrop-issues">EntityStorageException when trying to save emojis without UTF8-mb4 enabled in the database · Issue #4927 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I got his error when saving a page: EntityStorageException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: &#39;\xF0\x9F\x91\x8B&lt;/...&#39; for column `backdrop`.`field_da...</div></div></div>
+
+
+
+<a name="224878101"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224878101" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224878101">(Feb 02 2021 at 14:30)</a>:</h4>
+<p>I have Debian "old-stable" on some servers. Therefore, when loading a brand new database, it will need some cosmetics. But this is not a huge problem for me now.</p>
+
+
+
+<a name="224886580"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224886580" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224886580">(Feb 02 2021 at 15:29)</a>:</h4>
+<p>Most of my sites have support for utf8-mb4.</p>
+
+
+
+<a name="224888517"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224888517" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224888517">(Feb 02 2021 at 15:42)</a>:</h4>
+<blockquote>
+<p>Most of my sites have support for utf8-mb4.</p>
+</blockquote>
+<p>Interesting, how do you handle the other ones? Did you instruct the users to <em>not</em> insert emojis?</p>
+
+
+
+<a name="224892234"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224892234" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224892234">(Feb 02 2021 at 16:05)</a>:</h4>
+<p>It's not a Backdrop site, but I maintain a site that does not have support for utf8-mb4 (due to its DB size, it was not converted, as it would take the site offline for hours). For that one, I have custom code that strips any emojis from the content when it's submitted.</p>
+
+
+
+<a name="224892610"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224892610" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224892610">(Feb 02 2021 at 16:07)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> would your custom module pick up all text entry fields on a site?</p>
+
+
+
+<a name="224893562"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224893562" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224893562">(Feb 02 2021 at 16:13)</a>:</h4>
+<blockquote>
+<p>Interesting, how do you handle the other ones? Did you instruct the users to not insert emojis?</p>
+</blockquote>
+<p>The one that comes to mind that does not have it is on their own (shared) server. At one point I indicated we could update things to allow emojis and they said they had no plans to use emojis and preferred to leave it as is. <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span></p>
+
+
+
+<a name="224893984"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224893984" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224893984">(Feb 02 2021 at 16:16)</a>:</h4>
+<blockquote>
+<p>would your custom module pick up all text entry fields on a site?</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span>  I suppose so, yes. it handles form item type textfield and texarea, so the module also protects webforms.</p>
+
+
+
+<a name="224894163"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224894163" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224894163">(Feb 02 2021 at 16:17)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Yes, that also can happen - people simply do not use emojis, so no Exceptions.</p>
+
+
+
+<a name="224898940"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224898940" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224898940">(Feb 02 2021 at 16:47)</a>:</h4>
+<p>All mine are on the same VPS and so have support.</p>
+
+
+
+<a name="224900743"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224900743" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224900743">(Feb 02 2021 at 16:58)</a>:</h4>
+<p>So thinking through options for my benefit; we could validate all text input; but that may be overkill since some text entry doesnt hit the database, like stuff stored in config, and would be fine, emojis or not.<br>
+or we could try/catch the exception only on attempting to save to the database.<br>
+Am I getting it right?</p>
+
+
+
+<a name="224904404"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224904404" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224904404">(Feb 02 2021 at 17:19)</a>:</h4>
+<p>Fun facts:</p>
+<ul>
+<li>
+<p>in <a href="https://www.drupal.org/project/drupal/issues/2681073">https://www.drupal.org/project/drupal/issues/2681073</a> a user trying to contribute to the Drupal issue, mentioned:</p>
+<blockquote>
+<p>I tried to put an example emoticon into this comment, but it caused the error on <a href="http://drupal.org">drupal.org</a>.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="https://www.drupal.org/project/webform/issues/2375541">https://www.drupal.org/project/webform/issues/2375541</a></p>
+<blockquote>
+<p>This is not limited to just weforms. Try putting an emoji into a node title or body and see if you get an error. I did.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="https://www.drupal.org/project/drupal/issues/2002100">https://www.drupal.org/project/drupal/issues/2002100</a></p>
+<blockquote>
+<p>Just saying, the same error can be triggered by a site search. Pick your favorite popular D7 site and open "/search/site/%F0%9F%98%89". ...I found exactly one popular site with this problem. It was the first one I tested, so I thought it would be more common.</p>
+</blockquote>
+</li>
+</ul>
+
+
+
+<a name="224981119"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224981119" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224981119">(Feb 03 2021 at 07:12)</a>:</h4>
+<blockquote>
+<p>we could validate all text input; but that may be overkill since some text entry doesnt hit the database, like stuff stored in config, and would be fine, emojis or not.</p>
+</blockquote>
+<p>Overkill or not - the validation has to be generic to catch all possible use-cases. Textfield and textarea are used all over the place and there's no reliable way to distinguish, which ones hit the database and which don't. An allowlist could be a possible enhancement.</p>
+<blockquote>
+<p>or we could try/catch the exception only on attempting to save to the database.</p>
+</blockquote>
+<p>As already mentioned in the related core issue: IMO that would require a bigger change in the database abstraction layer - I wouldn't recommend that. Especially as we don't have any metrics, how many percent of sites are actually affected.</p>
+
+
+
+<a name="224992366"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/224992366" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#224992366">(Feb 03 2021 at 09:37)</a>:</h4>
+<p>For completeness: The default search (node/user) is not affected in B nor D7. Open /search/node/𝛁%20𝑩%20Blah - no Exceptions, even if "Log all searches" is turned on. That's because the watchdog "variables" column is of type longblob (not text).</p>
+
+
+
+<a name="225021706"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/225021706" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#225021706">(Feb 03 2021 at 14:23)</a>:</h4>
+<p>Was just ruminating on options really. But why would this require fiddling with the DB abstraction layer? Could we check entity fields at the level of the entity controller class before saving?</p>
+
+
+
+<a name="225022255"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/225022255" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#225022255">(Feb 03 2021 at 14:27)</a>:</h4>
+<blockquote>
+<p>Could we check entity fields at the level of the entity controller class before saving?</p>
+</blockquote>
+<p>On a per entity-form basis, this will never be generic enough IMO. Textfield and textarea are used so many times for so many different forms...</p>
+
+
+
+<a name="225024572"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/225024572" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#225024572">(Feb 03 2021 at 14:44)</a>:</h4>
+<p>For core though, the majority of DB saves where emoji saving would be attempted would be via an entity save, no? Cant think of any other non-entity input field where an emoji would be valid entry (there likely would be other fields, just cant think of any now). In which case all of them would eventually call <code>EntityDatabaseStorageController::save()</code>. Could we check the entity's fields in there before we save it? Spitballing...</p>
+
+
+
+<a name="225025956"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/225025956" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#225025956">(Feb 03 2021 at 14:54)</a>:</h4>
+<p>Although I'm not (yet) convinced of your finding (core does mostly entity), I'm interested. Wouldn't it make sense to post your "spitballing" in the issue thread? <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> BTW, wouldn't that mean that all contrib modules have to solve it separately? Think of webforms...</p>
+<p>Yet unanswered is the question: "is the problem still relevant enough to take care of it in core?". So maybe before the decision "where in core?" there actually needs to be a decision "in core or in contrib?". The survey comments so far make me think "contrib". None of the posts here indicate a big problem. I'm not sure, though, if this represents the average Backdrop user, or rather the advanced user.</p>
+
+
+
+<a name="225031592"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Quick%20survey%20utf8-mb4/near/225031592" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Quick.20survey.20utf8-mb4.html#225031592">(Feb 03 2021 at 15:31)</a>:</h4>
+<p>reasonable</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

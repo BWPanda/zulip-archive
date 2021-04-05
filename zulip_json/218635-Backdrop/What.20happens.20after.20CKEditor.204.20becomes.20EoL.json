@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>Interesting thread for deciding which editor will be in core for D9: <a href=\"https://www.drupal.org/project/drupal/issues/3091226\">https://www.drupal.org/project/drupal/issues/3091226</a></p>",
+        "id": 205063403,
+        "sender_full_name": "klonos",
+        "timestamp": 1595790255
+    },
+    {
+        "content": "<p>Interesting.</p>",
+        "id": 205074503,
+        "sender_full_name": "Herb",
+        "timestamp": 1595811359
+    },
+    {
+        "content": "<p>At least ckeditor 4 lts is supported until 2023. So we still have time to decide.</p>",
+        "id": 205074543,
+        "sender_full_name": "Herb",
+        "timestamp": 1595811397
+    },
+    {
+        "content": "<p>Ckeditor 5 seems a bad fit. They now require a build step which means recompiling for each new plugin added. Ouch! That can't work with Backdrop workflow</p>",
+        "id": 205074555,
+        "sender_full_name": "Herb",
+        "timestamp": 1595811461
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  the way we add it now requires a build step by visiting <a href=\"http://ckeditor.com/builder\">http://ckeditor.com/builder</a> ...see the instructions/comments in <a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/misc/ckeditor/build-config.js\">https://github.com/backdrop/backdrop/blob/1.x/core/misc/ckeditor/build-config.js</a> for details <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://ckeditor.com/builder\" style=\"background-image: url(https://ckeditor.com/assets/images/composition/ckeditor-4/section-1/thumb-0e8b79fba2.svg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://ckeditor.com/builder\" title=\"Builder\">Builder</a></div><div class=\"message_embed_description\">Includes only the most basic styles (Bold, Italic) and simple text formatting options. Ideal for small text editing areas and quick input fields.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/misc/ckeditor/build-config.js\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/misc/ckeditor/build-config.js\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 205099335,
+        "sender_full_name": "klonos",
+        "timestamp": 1595844346
+    },
+    {
+        "content": "<p>...but pretty much yeah, we can wait 2-3 years more, since by then:<br>\na) the Drupal folks will have done the hard work of evaluating various editors, so we can then hook into that.<br>\nb) if D9 switches to another editor, we'll have feedback on whether it was a good choice or not<br>\nc) more new editors may emerge, and the existing ones may have evolved</p>",
+        "id": 205099773,
+        "sender_full_name": "klonos",
+        "timestamp": 1595844626
+    },
+    {
+        "content": "<p>I don't mean that kind of build. With ckeditor 5 it'll mean a build for any plugin added as well. IIRC. That means we wouldn't be able to extend it by simply downloading a module</p>",
+        "id": 205104874,
+        "sender_full_name": "Herb",
+        "timestamp": 1595848899
+    },
+    {
+        "content": "<p>Oh, I see. ...still, that job could be done by us, and we'd still be able to ship core with the compiled version. So end users would still get the software without having to compile it themselves.</p>",
+        "id": 205107578,
+        "sender_full_name": "klonos",
+        "timestamp": 1595850898
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> meaning if someone installs a backdrop module that adds a button to ckeditor the user would have to rebuild ckeditor?</p>",
+        "id": 205120657,
+        "sender_full_name": "sdubois",
+        "timestamp": 1595858642
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"321437\">@sdubois</span> yes, I believe so</p>",
+        "id": 205132043,
+        "sender_full_name": "Herb",
+        "timestamp": 1595863843
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I don't think you understand completely. We're talking about compiling for all possible combinations of plugins. It's just not feasible</p>",
+        "id": 205132126,
+        "sender_full_name": "Herb",
+        "timestamp": 1595863911
+    },
+    {
+        "content": "<p>I obviously don't <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...do you have a link to their documentation re that <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> ?</p>",
+        "id": 205132215,
+        "sender_full_name": "klonos",
+        "timestamp": 1595863959
+    },
+    {
+        "content": "<p>Is it built with nodejs?</p>",
+        "id": 205132238,
+        "sender_full_name": "sdubois",
+        "timestamp": 1595863975
+    },
+    {
+        "content": "<p>I recall a thread about it, including <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> talking about the problems of CKEditor 5. But I can't find it now</p>",
+        "id": 205141328,
+        "sender_full_name": "Herb",
+        "timestamp": 1595868778
+    },
+    {
+        "content": "<p>Do we have an issue for this yet? I strongly recommend to define our requirements in the first place, like: compatibility to existing content, compatibility to current integration code (our file upload...) or at least feasible migration of it. Fully open source (now and in future), well maintained by a community (e.g. not only by a single company).</p>\n<p>Re the Drupal issue mentioned earlier: I'd bet their decision will be different as they're not afraid to break backwards compability. And also some comments in their issue go beyond a simple WYSIWYG editor - like layouts, templates... I don't think we need functionality like that in an editor - we already have layouts.</p>",
+        "id": 205200466,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1595915830
+    },
+    {
+        "content": "<p>Totally with you <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...we don't have an issue for it yet; I'll create one ... but later ...unless anyone else beats me to it  ...I'm having a very lazy morning here (too hot as well)</p>",
+        "id": 205203577,
+        "sender_full_name": "klonos",
+        "timestamp": 1595920031
+    },
+    {
+        "content": "<p>Oh, it seems @klonos beats himself ... <a href=\"https://github.com/backdrop/backdrop-issues/issues/4122\">https://github.com/backdrop/backdrop-issues/issues/4122</a> <span aria-label=\"rofl\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rofl\">:rofl:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4122\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4122\" title=\"CKEditor 4 becomes EoL in 2023 - Are we going to move to CKEditor 5? · Issue #4122 · backdrop/backdrop-issues\">CKEditor 4 becomes EoL in 2023 - Are we going to move to CKEditor 5? · Issue #4122 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">CKEditor 4 to 5 is a big change, similar to the D7 to D8 move: https://support.ckeditor.com/hc/en-us/articles/115005971405-How-to-migrate-from-CKEditor-4-to-CKEditor-5- When compared to its predece...</div></div></div>",
+        "id": 205218176,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1595930910
+    },
+    {
+        "content": "<p>Seems I'm getting old and forget more and more things as time goes by <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 205219499,
+        "sender_full_name": "klonos",
+        "timestamp": 1595931866
+    }
+]

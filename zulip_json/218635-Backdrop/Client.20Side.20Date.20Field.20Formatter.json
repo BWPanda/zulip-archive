@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> How does this module detect timezones? I'm curious if it uses a more reliable method than <a href=\"https://github.com/backdrop-contrib/timezone_detect\">https://github.com/backdrop-contrib/timezone_detect</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/timezone_detect\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/timezone_detect\" title=\"backdrop-contrib/timezone_detect\">backdrop-contrib/timezone_detect</a></div><div class=\"message_embed_description\">Auto-detect and set user timezones in Backdrop. Contribute to backdrop-contrib/timezone_detect development by creating an account on GitHub.</div></div></div>",
+        "id": 230235591,
+        "sender_full_name": "Laryn",
+        "timestamp": 1615725121
+    },
+    {
+        "content": "<p>No library at all, not timezone handling in any way, super lazy - I let the browser decide.</p>\n<p>That only needs minimal js code: <a href=\"https://github.com/backdrop-contrib/cs_date_formatter/blob/1.x-1.x/js/cs-date-formatter.js\">https://github.com/backdrop-contrib/cs_date_formatter/blob/1.x-1.x/js/cs-date-formatter.js</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/cs_date_formatter/blob/1.x-1.x/js/cs-date-formatter.js\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/cs_date_formatter/blob/1.x-1.x/js/cs-date-formatter.js\" title=\"backdrop-contrib/cs_date_formatter\">backdrop-contrib/cs_date_formatter</a></div><div class=\"message_embed_description\">Backdrop CMS module for client side date field rendering - backdrop-contrib/cs_date_formatter</div></div></div>",
+        "id": 230235773,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615725270
+    },
+    {
+        "content": "<p>Thanks, it's on my list to take a look at.</p>",
+        "id": 230237921,
+        "sender_full_name": "Laryn",
+        "timestamp": 1615727933
+    },
+    {
+        "content": "<p>Off topic, but I had someone bring up the issue on Drupal installs where it knows the timezone of the user, but wouldn't default to the timezone of the user... I never noticed it until he pointed it out but it is a curious question. I'm limited on my BD installs so I haven't paid attention if this is the case with BD or not. Might be something to consider fixing as a QoL if it isn't already.</p>",
+        "id": 230260521,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615748038
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> I do not fully understand what you posted above, but I'm familiar with these 2 issues re timezones:</p>\n<ul>\n<li>There was debate over the auto-detection of the timezone during installation: should the installer default the timezone to whatever is configured on the server where the site is being installed, or the timezone of the browser of the person performing the installation? (think site hosted in the US, but installation and configuration is happening remotely, by a person in Australia)</li>\n<li>After we had enough people register in the main <a href=\"http://b.org\">b.org</a> site, we thought that it'd be a good idea to ask them to add their country/timezone to their user profiles. Most/many people configure that, but because the field does not allow setting \"none\", if someone skipped setting their timezone, then it would default to Afghanistan or something like that (because alphabetical) ...same thing for user profiles created before we added the timezone/country field. ...we only found that out when we tried to get a count of people registered in <a href=\"http://b.org\">b.org</a> by country/timezone.</li>\n</ul>\n<p>...just some things to be aware or think about.</p>",
+        "id": 230280203,
+        "sender_full_name": "klonos",
+        "timestamp": 1615766604
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> timezone of the server probably makes the most sense? But yes, good topics I didn't think about but make sense now that you mention it.</p>\n<p>My thought is \"if we can get it so 40% of the people don't have to change it, it's better than 99% having to change it.\"</p>\n<p>Guess more feedback from people would be warranted or additional data collection.</p>\n<p>Thanks for pointing out the problems with the idea.</p>",
+        "id": 230282920,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615769867
+    },
+    {
+        "content": "<blockquote>\n<p>...timezone of the server probably makes the most sense?</p>\n</blockquote>\n<p>Until what happens is that the server hosting the site is in the US, whereas the business (hence visitors/audience) is either global or say Africa, and the person installing Backdrop is in EU <span aria-label=\"crazy\" class=\"emoji emoji-1f61c\" role=\"img\" title=\"crazy\">:crazy:</span></p>",
+        "id": 230283429,
+        "sender_full_name": "klonos",
+        "timestamp": 1615770479
+    },
+    {
+        "content": "<p>A lot of servers have their timezone set to UTC, regardless of where they're located.</p>",
+        "id": 230283520,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615770549
+    },
+    {
+        "content": "<p>...a more generic issue that happens during installation (and we saw that happening with the email field predominantly) is that the person installing Backdrop sees that form with the site info during the installer as requesting details about them - whereas it is details about the site.</p>",
+        "id": 230283572,
+        "sender_full_name": "klonos",
+        "timestamp": 1615770606
+    },
+    {
+        "content": "<blockquote>\n<p>A lot of servers have their timezone set to UTC</p>\n</blockquote>\n<p>Maybe some even run on Stardate (lookup Wikipedia) and never have any problems with timezone or date formats <span aria-label=\"rofl\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rofl\">:rofl:</span> UTC is what comes closest to that.</p>\n<p>No, seriously, if anyone of you finds the new module useful or found that something's missing or broken, I'd be thankful for feedback.</p>",
+        "id": 230300716,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615789955
+    }
+]

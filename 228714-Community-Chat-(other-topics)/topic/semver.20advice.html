@@ -1,0 +1,66 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html">semver advice</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="207544266"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/semver%20advice/near/207544266" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html#207544266">(Aug 20 2020 at 16:37)</a>:</h4>
+<p>If a project <code>1.x-1.46.2-alpha</code> is ready to release a beta, should I be next releasing <code>1.x-1.46.2-beta</code> or up to <code>1.x-1.46.3-beta</code>or down to <code>1.x-1.46.0-beta</code>?</p>
+
+
+
+<a name="207555200"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/semver%20advice/near/207555200" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html#207555200">(Aug 20 2020 at 18:10)</a>:</h4>
+<p>It should be like the first one, <code>1.x-1.46.2-beta</code>, but usually there is some number afterward, in case there are multiple beta versions, like <code>1.x-1.46.2-beta-0</code>, but that part's up to you.</p>
+
+
+
+<a name="207561120"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/semver%20advice/near/207561120" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html#207561120">(Aug 20 2020 at 19:02)</a>:</h4>
+<p>See <a href="https://semver.org">https://semver.org</a> <span class="user-mention" data-user-id="256757">@docwilmot</span> :</p>
+
+
+
+<a name="207561177"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/semver%20advice/near/207561177" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html#207561177">(Aug 20 2020 at 19:02)</a>:</h4>
+<p>... <a href="https://semver.org/#spec-item-10">https://semver.org/#spec-item-10</a> and <a href="https://semver.org/#spec-item-11">https://semver.org/#spec-item-11</a> specifically</p>
+
+
+
+<a name="207561197"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/semver%20advice/near/207561197" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html#207561197">(Aug 20 2020 at 19:03)</a>:</h4>
+<blockquote>
+<p>Precedence for two pre-release versions with the same major, minor, and patch version MUST be determined by comparing each dot separated identifier from left to right until a difference is found as follows:</p>
+</blockquote>
+
+
+
+<a name="207561248"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/semver%20advice/near/207561248" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html#207561248">(Aug 20 2020 at 19:03)</a>:</h4>
+<p>...</p>
+
+
+
+<a name="207561251"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/semver%20advice/near/207561251" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/semver.20advice.html#207561251">(Aug 20 2020 at 19:03)</a>:</h4>
+<blockquote>
+<p>Example: 1.0.0-alpha &lt; 1.0.0-alpha.1 &lt; 1.0.0-alpha.beta &lt; 1.0.0-beta &lt; 1.0.0-beta.2 &lt; 1.0.0-beta.11 &lt; 1.0.0-rc.1 &lt; 1.0.0.</p>
+</blockquote>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

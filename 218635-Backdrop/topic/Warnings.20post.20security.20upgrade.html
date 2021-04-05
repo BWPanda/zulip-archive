@@ -1,0 +1,59 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Warnings.20post.20security.20upgrade.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Warnings.20post.20security.20upgrade.html">Warnings post security upgrade</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="192054638"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Warnings%20post%20security%20upgrade/near/192054638" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Warnings.20post.20security.20upgrade.html#192054638">(Mar 27 2020 at 17:44)</a>:</h4>
+<p>Anyone else seeing errors like this with the recent upgrade? I've gotten this on two sites:</p>
+<div class="codehilite"><pre><span></span>    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type int in element_children() (line 7226 of /home/ib2/ibiketo.ca/core/includes/common.inc).
+    Notice: Trying to access array offset on value of type null in _batch_finished() (line 456 of /home/ib2/ibiketo.ca/core/includes/batch.inc).
+</pre></div>
+
+
+
+<a name="192057356"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Warnings%20post%20security%20upgrade/near/192057356" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Warnings.20post.20security.20upgrade.html#192057356">(Mar 27 2020 at 18:05)</a>:</h4>
+<p>Are you using PHP 7.4?</p>
+
+
+
+<a name="192059707"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Warnings%20post%20security%20upgrade/near/192059707" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Warnings.20post.20security.20upgrade.html#192059707">(Mar 27 2020 at 18:22)</a>:</h4>
+<p>You are probably running into <a href="https://github.com/backdrop/backdrop-issues/issues/4308" title="https://github.com/backdrop/backdrop-issues/issues/4308">https://github.com/backdrop/backdrop-issues/issues/4308</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4308" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4308" title="PHP 7.4: Notice: Trying to access array offset on value of type &lt;int, null&gt; · Issue #4308 · backdrop/backdrop-issues">PHP 7.4: Notice: Trying to access array offset on value of type &lt;int, null&gt; · Issue #4308 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug There are a few places where we check the first character of a string or int using the array access syntax. As of PHP 7.4 this now gives an error notice. We should convert ea...</div></div></div>
+
+
+
+<a name="192128356"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Warnings%20post%20security%20upgrade/near/192128356" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Warnings.20post.20security.20upgrade.html#192128356">(Mar 28 2020 at 15:35)</a>:</h4>
+<p>Not sure, but I'll check soon. Thanks for the tip <span class="user-mention" data-user-id="256663">@Joseph Flatt</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

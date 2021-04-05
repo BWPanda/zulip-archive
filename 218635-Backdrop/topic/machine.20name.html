@@ -1,0 +1,68 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/machine.20name.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html">machine name</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="225102973"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/machine%20name/near/225102973" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html#225102973">(Feb 04 2021 at 00:17)</a>:</h4>
+<p>Is there a core function that converts a string to a machine_name type string (lowercase/underscore etc)?</p>
+
+
+
+<a name="225103620"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/machine%20name/near/225103620" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html#225103620">(Feb 04 2021 at 00:24)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> have you looked at <a href="https://docs.backdropcms.org/api/backdrop/1/search/form_process_machine_name">https://docs.backdropcms.org/api/backdrop/1/search/form_process_machine_name</a> <a href="https://docs.backdropcms.org/api/backdrop/1/search/backdrop_html_class">https://docs.backdropcms.org/api/backdrop/1/search/backdrop_html_class</a> and the likes?</p>
+
+
+
+<a name="225104148"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/machine%20name/near/225104148" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html#225104148">(Feb 04 2021 at 00:31)</a>:</h4>
+<p>yes, but none seem to do just that.</p>
+
+
+
+<a name="225104253"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/machine%20name/near/225104253" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html#225104253">(Feb 04 2021 at 00:32)</a>:</h4>
+<p>Yeah, from what I saw, most functions seem to be using custom <code>preg_match()</code></p>
+
+
+
+<a name="225104365"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/machine%20name/near/225104365" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html#225104365">(Feb 04 2021 at 00:33)</a>:</h4>
+<p>...but perhaps we're looking at the wrong place. Doesn't the whole machine name generation happen via JS replacing characters as the user types in the dependent field?</p>
+
+
+
+<a name="225104609"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/machine%20name/near/225104609" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html#225104609">(Feb 04 2021 at 00:36)</a>:</h4>
+<p>yes the machine name field stuff is done by js. thought there'd be a PHP equivalent</p>
+
+
+
+<a name="225104634"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/machine%20name/near/225104634" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html#225104634">(Feb 04 2021 at 00:37)</a>:</h4>
+<p>Hmm <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span></p>
+
+
+
+<a name="225352469"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/machine%20name/near/225352469" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/machine.20name.html#225352469">(Feb 05 2021 at 20:31)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> <a href="https://docs.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_html_class/1">https://docs.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_html_class/1</a> ?</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

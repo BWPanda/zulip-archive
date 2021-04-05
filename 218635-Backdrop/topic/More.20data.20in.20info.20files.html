@@ -1,0 +1,79 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html">More data in info files</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="224232102"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/More%20data%20in%20info%20files/near/224232102" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html#224232102">(Jan 27 2021 at 19:07)</a>:</h4>
+<p>Creating a topic so we dont lose track again of <a href="https://github.com/backdrop-ops/backdropcms.org/pull/750">https://github.com/backdrop-ops/backdropcms.org/pull/750</a> after recent interest in reviewing it. This time, tested with ngrok, so I know the webhook does what it should.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/pull/750" style="background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/pull/750" title="Issue #487: Support more data in .info files by docwilmot · Pull Request #750 · backdrop-ops/backdropcms.org">Issue #487: Support more data in .info files by docwilmot · Pull Request #750 · backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">Fixes #487
+Replaces: #488</div></div></div>
+
+
+
+<a name="224232610"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/More%20data%20in%20info%20files/near/224232610" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html#224232610">(Jan 27 2021 at 19:10)</a>:</h4>
+<p>We can either create a new demo site just for this, or, maybe simpler, <span class="user-mention" data-user-id="263951">@jenlampton</span>or whoever has GitHub access can point the webhook at the Tugboat site.</p>
+
+
+
+<a name="224235057"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/More%20data%20in%20info%20files/near/224235057" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html#224235057">(Jan 27 2021 at 19:28)</a>:</h4>
+<p>I can't set anything up from within GitHub, but I can approve requests there as they come in. IIRC the instructions for what to do on the destination site are in the readme for the project_github module. Let me know when you'd like me to check for the request :)</p>
+
+
+
+<a name="224240307"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/More%20data%20in%20info%20files/near/224240307" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html#224240307">(Jan 27 2021 at 20:09)</a>:</h4>
+<p>Well, that wont work. Would need to have set up and application on GH first then put in the Client Secret and Client ID before you can authorise anything. The GitHubAPI module instructions say so.</p>
+
+
+
+<a name="224240395"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/More%20data%20in%20info%20files/near/224240395" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html#224240395">(Jan 27 2021 at 20:10)</a>:</h4>
+<div class="codehilite"><pre><span></span><code>  - Create GitHub Application via https://github.com
+
+    There are two ways to do so.
+    - Via your profile: https://github.com/settings/applications/new
+    - Via your organization profile: https://github.com/organizations/ORGNAME/settings/applications/new
+
+    The &quot;Authorization callback URL&quot; will be: http://yoursite.com/githubapi/register
+
+  - Save settings on admin/config/system/githubapi/settings
+</code></pre></div>
+
+
+
+<a name="224240680"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/More%20data%20in%20info%20files/near/224240680" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html#224240680">(Jan 27 2021 at 20:12)</a>:</h4>
+<p>TBH the instructions arent crystal clear.</p>
+
+
+
+<a name="224240751"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/More%20data%20in%20info%20files/near/224240751" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html#224240751">(Jan 27 2021 at 20:13)</a>:</h4>
+<p>But in either case I dont know if it would be wise to have the Secret and ID accessible to everyone on a Tugboat site</p>
+
+
+
+<a name="224241447"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/More%20data%20in%20info%20files/near/224241447" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/More.20data.20in.20info.20files.html#224241447">(Jan 27 2021 at 20:18)</a>:</h4>
+<p>Perhaps then we should ask <span class="user-mention" data-user-id="258586">@quicksketch</span> advice on how to accomplish test webhooks.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

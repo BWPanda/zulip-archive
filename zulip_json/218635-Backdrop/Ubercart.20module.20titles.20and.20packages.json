@@ -1,0 +1,356 @@
+[
+    {
+        "content": "<p>Following up on my module title question from yesterday, this is Ubercart-specific (hi <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>); but is generally applicable to contrib modules that extend other contrib modules (e.g., Webform add-ons).</p>\n<p>Having just finished my <a href=\"https://backdropcms.org/project/uc_discounts\">second Ubercart module port</a> (and more on the way), I'm wondering about standards for Ubercart-related module naming in Backdrop.</p>\n<p>Most of the <a href=\"https://backdropcms.org/modules?s=ubercart\">Backdrop Ubercart contrib modules</a> are currently named \"Ubercart Something\". Whereas over on <a href=\"https://www.drupal.org/docs/7/modules/ubercart/contributed-modules/ubercart-3-module-list\">the Drupal side</a>, most are just called \"Something\", and a few are called \"UC Something\". This makes me wonder:</p>\n<p>1) For modules created solely for Backdrop Ubercart (no D7 port), is there a preferred naming scheme?</p>\n<p>2) For modules ported from D7, should the name be exactly what it was in D7 (modulo capitalization standardization), or should it be adjusted to follow a preferred/consistent naming scheme (i.e., add or remove \"Ubercart\" or \"UC\" to/from the name)?</p>\n<p>Then there's the question of which package the contrib module should belong to.</p>\n<p>3) Should the package name for an Ubercart contrib module be one of the non-core Ubercart package names already defined by the Ubercart modules (i.e., \"Ubercart - extra\", \"Ubercart - fulfillment\", \"Ubercart - payment\"), or a specific separate name (e.g., \"Ubercart - contrib\"), or are there no particular recommendations?</p>\n<p>4) Whatever the answers to 1–3 are, would it be a good idea to document that information on the <a href=\"https://github.com/backdrop-contrib/ubercart/wiki\">Ubercart project Wiki page</a> (which I'd be happy to draft)?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ubercart/wiki\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ubercart/wiki\" title=\"backdrop-contrib/ubercart\">backdrop-contrib/ubercart</a></div><div class=\"message_embed_description\">A flexible but easy-to-use e-commerce system for Backdrop. - backdrop-contrib/ubercart</div></div></div>",
+        "id": 221308910,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609440497
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span>++ for porting these modules over <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span> ...I think that as long as the machine name of the module stays the same as the respective 7.x version, then the module name (human-readable label) should be fine to deviate from the D7 version. It would be nice to bring some consistency to the Ubercart ecosystem of modules in Backdrop-land though...</p>",
+        "id": 221327753,
+        "sender_full_name": "klonos",
+        "timestamp": 1609462543
+    },
+    {
+        "content": "<p><strong>bugfolder</strong> great work (Karma: 5)</p>",
+        "id": 221327754,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1609462543
+    },
+    {
+        "content": "<p>...to that end (consistency), I think that you should be aware that we are considering to remove the grouping in the module listing page at some point: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3148\">https://github.com/backdrop/backdrop-issues/issues/3148</a> (although inactive for some time now)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3148\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3148\" title=\"[UX] Module page: Alphabetize by module name and remove package groupings · Issue #3148 · backdrop/backdrop-issues\">[UX] Module page: Alphabetize by module name and remove package groupings · Issue #3148 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea This is a follow-up to #37 to un-block that issue. PR by @klonos: backdrop/backdrop#2548</div></div></div>",
+        "id": 221327830,
+        "sender_full_name": "klonos",
+        "timestamp": 1609462641
+    },
+    {
+        "content": "<p>...if (when?) that happens, it would be helpful to have the \"Ubercart\" bit prepended to the module names.</p>",
+        "id": 221327880,
+        "sender_full_name": "klonos",
+        "timestamp": 1609462689
+    },
+    {
+        "content": "<p>...having \"Ubercart\" as a name prefix would also help in the module list in <a href=\"https://backdropcms.org/modules\">https://backdropcms.org/modules</a></p>",
+        "id": 221327901,
+        "sender_full_name": "klonos",
+        "timestamp": 1609462749
+    },
+    {
+        "content": "<p>Do you think that should apply to just Ubercart add-on modules, or also to all of the Ubercart core modules?</p>",
+        "id": 221327912,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609462769
+    },
+    {
+        "content": "<p>Well, Ubercart core won't have any issue with <a href=\"https://backdropcms.org/modules\">https://backdropcms.org/modules</a> since only the main project is listed - not any submodules it includes. As for the module listing in the admin UI, they would need to specify their \"parent\" module in their names I think.</p>",
+        "id": 221328005,
+        "sender_full_name": "klonos",
+        "timestamp": 1609462881
+    },
+    {
+        "content": "<p>...perhaps <code>Ubercart: Core: Some Module</code> or <code>Ubercart: Category: Some Contrib Module</code> would be helpful <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 221328058,
+        "sender_full_name": "klonos",
+        "timestamp": 1609462943
+    },
+    {
+        "content": "<p>The base Ubercart distribution has something like 27 submodules, none of which currently contain \"Ubercart\" in their name on the module listing (other than the main Ubercart module). They have names like \"Flat rate\", \"Weight quote\", and so forth.</p>",
+        "id": 221328106,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609463037
+    },
+    {
+        "content": "<p>Well, I think that if they are not generic modules, then they should be denoting the module they work with, which they require and extend.</p>",
+        "id": 221328223,
+        "sender_full_name": "klonos",
+        "timestamp": 1609463175
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> I've had some questions about this, too. Ubercart in particular has so many sub-modules that it brings all the issues to the surface pretty quickly... I think adding \"Ubercart\" to all the submodule names directly would be pretty visually heavy/unwieldy and would personally prefer a way to still group them or at least indicate a belonging without manually adding the group/package name directly in the module name. (e.g. a smaller subtle package indicator and a filter on the project page, even if they aren't sorted into packages by default)</p>",
+        "id": 221544194,
+        "sender_full_name": "Laryn",
+        "timestamp": 1609777157
+    },
+    {
+        "content": "<p>Just did a little further looking into this as it has been a while and the \"small subtle package indicator\" may be what tags are for... I have not tested yet if we do end up removing project groupings whether adding \"Ubercart\" as a tag in the <code>.info</code> file for a module would be enough to be able to use the filter at the top of the project page by typing \"Ubercart\" rather than having to have Ubercart listed directly in the module name.</p>",
+        "id": 221545060,
+        "sender_full_name": "Laryn",
+        "timestamp": 1609777549
+    },
+    {
+        "content": "<blockquote>\n<p>Whatever the answers to 1–3 are, would it be a good idea to document that information on the Ubercart project Wiki page (which I'd be happy to draft)?</p>\n</blockquote>\n<p>Yes, but I suppose we need to answer 1-3 first. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 221545554,
+        "sender_full_name": "Laryn",
+        "timestamp": 1609777760
+    },
+    {
+        "content": "<p>It does kinda seem like package groupings serve the role of keeping related things together. Tags would do that even better (since even Ubercart core is spread over multiple packages). It would be nice if the <a href=\"https://backdropcms.org/modules\">Backdrop Modules page</a> offered tags as a separate filter from the general search box (which returns some non-Ubercart modules even if one enters \"Ubercart\").</p>",
+        "id": 221545578,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609777772
+    },
+    {
+        "content": "<p>Also some indication of what the existing .info tags are, to encourage developers to apply existing tags if appropriate.</p>",
+        "id": 221545716,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609777819
+    },
+    {
+        "content": "<p>Agreed. See also: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3147\">https://github.com/backdrop/backdrop-issues/issues/3147</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3147\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3147\" title=\"[UX] Modules page: Add a drop-down to browse by Tag · Issue #3147 · backdrop/backdrop-issues\">[UX] Modules page: Add a drop-down to browse by Tag · Issue #3147 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea This is a follow-up to #37 to un-block that issue. We&#39;d like to add a select list of all available tags to the module page, to make it easier for people to easily re...</div></div></div>",
+        "id": 221545775,
+        "sender_full_name": "Laryn",
+        "timestamp": 1609777846
+    },
+    {
+        "content": "<p>The tags are there currently, just hidden under the \"More\" link.</p>",
+        "id": 221545800,
+        "sender_full_name": "Laryn",
+        "timestamp": 1609777862
+    },
+    {
+        "content": "<p>They're hidden well. I'm not even seeing a \"More\" link on <a href=\"https://backdropcms.org/modules\">https://backdropcms.org/modules</a>.</p>",
+        "id": 221546107,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609778005
+    },
+    {
+        "content": "<p>Ah, you mean the modules page within the site.</p>",
+        "id": 221546229,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609778055
+    },
+    {
+        "content": "<p>Sorry, yes. I misunderstood which page you were talking about at first. I agree they should be there on the borg modules page.</p>",
+        "id": 221546525,
+        "sender_full_name": "Laryn",
+        "timestamp": 1609778177
+    },
+    {
+        "content": "<p>I'm thinking that a web developer who is looking for Backdrop modules would likely want to go to <a href=\"https://backdropcms.org/modules\">https://backdropcms.org/modules</a>, see what modules are available and filter by tag. And a developer who wants to add their module to the ecosystem would go to that page to see what tags are already in use.</p>",
+        "id": 221546547,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609778190
+    },
+    {
+        "content": "<p>So maybe that's a separate issue from <a href=\"https://github.com/backdrop/backdrop-issues/issues/3147\">#3147</a>. But related.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3147\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3147\" title=\"[UX] Modules page: Add a drop-down to browse by Tag · Issue #3147 · backdrop/backdrop-issues\">[UX] Modules page: Add a drop-down to browse by Tag · Issue #3147 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea This is a follow-up to #37 to un-block that issue. We&#39;d like to add a select list of all available tags to the module page, to make it easier for people to easily re...</div></div></div>",
+        "id": 221546682,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609778256
+    },
+    {
+        "content": "<p>Maybe this issue should be updated/refreshed: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/169\">https://github.com/backdrop-ops/backdropcms.org/issues/169</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/169\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/169\" title=\"Add exposed filters to project listings · Issue #169 · backdrop-ops/backdropcms.org\">Add exposed filters to project listings · Issue #169 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Suggested filters for the modules page are module 'packages' from info file: like Administration, Education, Commerce, etc parent issue: #95</div></div></div>",
+        "id": 221548859,
+        "sender_full_name": "Laryn",
+        "timestamp": 1609779205
+    },
+    {
+        "content": "<p>Related, yet unrelated, long term I would like to see: </p>\n<p>a) Ubercart renamed. This trademark was created under a company that hired Ryan Szrama to create an ecommerce platform. I believe they still own <a href=\"http://ubercart.org\">ubercart.org</a>.</p>\n<p>OR</p>\n<p>b) Ubercart forked into a future evolving platform. UC is old and dated and needs work to bring it up to relevant standards.</p>\n<p>I'll note, I am not a fan of Commerce and have zero plans of ever using it.</p>",
+        "id": 221577492,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609792720
+    },
+    {
+        "content": "<p>Is \"Ubercart\" really trademarked?</p>",
+        "id": 221579521,
+        "sender_full_name": "Laryn",
+        "timestamp": 1609793868
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> in the US, technically any \"name\" that has been used in commerce is automatically trademarked. How far the owning entity wants to go to protect that trademark, is solely upto the entity. A registered trademark says the entity out-right owns it and had the power to easily fight it.</p>",
+        "id": 221581572,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609794852
+    },
+    {
+        "content": "<p>I don't know who \"technically\" owns the mark, but I do know it was created under the guise of the company that paid for the work to have UC created.</p>",
+        "id": 221581786,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609794945
+    },
+    {
+        "content": "<p>There was some discussion last week or over the weekend to \"distinguish BD from Drupal\". This is one area I think BD could distinguish itself away from it's big brother.</p>",
+        "id": 221582092,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609795075
+    },
+    {
+        "content": "<p><a href=\"http://ubercart.org\">ubercart.org</a> is owned by: Prima, LLC out of Kentucky. I'm not 100% sure, but I believe it is: <a href=\"https://primasupply.com/\">https://primasupply.com/</a> which is clearly no longer using Drupal or Ubercart. I think it's safe to use Ubercart as the name, but I'm of the opinion it's time to update Ubercart, make it its own and distance away from its origins.</p>\n<p>Just my own personal thoughts on the matter. (Long term goals)</p>",
+        "id": 221594353,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609802271
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"335929\">bugfolder</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart.20module.20titles.20and.20packages/near/221546547\">said</a>:</p>\n<blockquote>\n<p>I'm thinking that a web developer who is looking for Backdrop modules would likely want to go to <a href=\"https://backdropcms.org/modules\">https://backdropcms.org/modules</a>, see what modules are available and filter by tag. And a developer who wants to add their module to the ecosystem would go to that page to see what tags are already in use.</p>\n</blockquote>\n<p>Here again is my quarterly plug for this issue: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\">https://github.com/backdrop-ops/backdropcms.org/issues/487</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\" title=\"Support a little more data in .info files · Issue #487 · backdrop-ops/backdropcms.org\">Support a little more data in .info files · Issue #487 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">This is a spin-off from #100 I have added several fields to the project content types on backdropcms.org: unlimited value term reference field &quot;Project Tags&quot; -- the list of tags has been ...</div></div></div>",
+        "id": 221608406,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609815383
+    },
+    {
+        "content": "<p>And its &gt; 2 year old PR.</p>",
+        "id": 221608419,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609815415
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Trying to read through that issue again, but can you explain the current status and what's needed?</p>",
+        "id": 221609277,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609816593
+    },
+    {
+        "content": "<p>Its been two years, I may not remember. Essentially using <code>borg_github</code> hooks to update the project nodes during project release.</p>",
+        "id": 221610997,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609819454
+    },
+    {
+        "content": "<p>The actual issue though was that GitHub webhooks point only at the backdropcms site and I cant replicate those hooks to test the PR.</p>",
+        "id": 221611059,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609819598
+    },
+    {
+        "content": "<p>Hmm, ok. Sounds complicated <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 221611070,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609819646
+    },
+    {
+        "content": "<p>Did some fakery to simulate the hooks to partly test it. But again that was a while ago.</p>",
+        "id": 221611130,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609819772
+    },
+    {
+        "content": "<blockquote>\n<p>I'm thinking that a web developer who is looking for Backdrop modules would likely want to go to <a href=\"https://backdropcms.org/modules\">https://backdropcms.org/modules</a>, see what modules are available and filter by tag.</p>\n</blockquote>\n<p>Agreed</p>",
+        "id": 221614932,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609825317
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> or <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> or <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> or anyone else with access to these webhooks, I don't know how they work, but can they be duplicated to also ping a separate dev site during GitHub releases? Problem also is that I use WAMP on a laptop, and I dont think webhooks can point at my <code>localhost</code>, but if we had a dev site for testing?</p>",
+        "id": 221704062,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609882107
+    },
+    {
+        "content": "<p>Pretty sure this PR is close, but <strong>I just cant test it!!</strong></p>",
+        "id": 221704129,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609882144
+    },
+    {
+        "content": "<p>I'm not very familiar with webhooks, sorry.</p>",
+        "id": 221709880,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609885346
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> if github is doing things the way I think they are with webhooks, then yes you should be able to set it up on your local dev.</p>\n<p>From my understanding, you have a listener that listens for intents sent by an endpoint. If it hears that intent, it does something with it.</p>\n<p>As long as the endpoint can reach the internet (not blocked by an apache .htaccess password login for example) then anything can be configured as an endpoint.</p>\n<p>My terminology might be a little off but in essence, instead of sending a file with information like XML or json, you send a machine name (intent) to the listener. If the listener sees (hears) it, it checks authenticity through the token and routes it to the appropriate account based on the API key.</p>\n<p>It's a way to send real-time information over the wire without having to send a bunch of files every time something needs to be done.</p>\n<p>I want to say it can be asynchronous as well, but I'm fuzzy on that part.</p>",
+        "id": 221713806,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609887878
+    },
+    {
+        "content": "<p>This makes me realize that the Telemetry initiative <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> is working on might be a good candidate for webhooks. Telemetry data could possibly be updated in real-time.</p>",
+        "id": 221714192,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609888116
+    },
+    {
+        "content": "<p>Actually youre wrong and right. Your post led me to actually read the GH webhook API and it seems I can install <a href=\"https://ngrok.com\">https://ngrok.com</a> locally to enable GH webhooks to reach my laptop. But I would still need to duplicate the webhook etc. And we'd still need to test again with backdropcms once it works. Etc.</p>",
+        "id": 221714885,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609888609
+    },
+    {
+        "content": "<p>I'll wait till theres demand for this. Anything that sits for 2 years probably isn't necessary or wanted.</p>",
+        "id": 221714923,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609888640
+    },
+    {
+        "content": "<p><a href=\"https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/configuring-your-server-to-receive-payloads\">https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/configuring-your-server-to-receive-payloads</a></p>",
+        "id": 221715059,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609888711
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> right. Each webhook endpoint is dependent on the site it is listening to.</p>\n<p>I had someone create a custom stripe module that uses their Checkout webhook api so I got a crash course on how it works. I know some of the lingo and have a basic understanding, but the logistics I'm clueless on <span aria-label=\"rolling on the floor laughing\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rolling on the floor laughing\">:rolling_on_the_floor_laughing:</span></p>",
+        "id": 221717741,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609890558
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  did you get your question answered about the webhooks?</p>",
+        "id": 221989233,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1610047885
+    },
+    {
+        "content": "<p>I think all the magic is in the project module (or project_releases, more specifically).</p>",
+        "id": 221989382,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1610047949
+    },
+    {
+        "content": "<p>I was asking about the process by which GH tells <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a> that a release has been made. There has to be a configuration setting on the Backdrop organization account to tell GH to ping a certain URL on BackdropCMS for the magic to happen. That URL isnt my laptop, so I cant test what happens when there is an official release. I can fake it by creating my own webhook, installing ngrok, making relaeses on my own GH account and see if it all blows up (I faked similar to get where it is at now), but in the end, we'd still need to test it on BackdropCMS. I'm hoping to hand the progress-so-far code to one of you to do more realistic testing because I've reached the end of my fakery skills.</p>",
+        "id": 221998601,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1610052505
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ++</p>",
+        "id": 222023110,
+        "sender_full_name": "klonos",
+        "timestamp": 1610067583
+    },
+    {
+        "content": "<p><strong>docwilmot</strong> - Dragon Fire (Karma: 19)</p>",
+        "id": 222023111,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1610067583
+    },
+    {
+        "content": "<p>Thanks for the Karma. Hoping <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> will respond. I wonder if I get this issue on an agenda it would get some traction?</p>",
+        "id": 222083125,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1610118738
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> I just re-read <a href=\"https://github.com/backdrop-contrib/project/tree/1.x-1.x/project_github\">https://github.com/backdrop-contrib/project/tree/1.x-1.x/project_github</a> and it looks like the GitHub API module is responsible for setting up the handshake between your site and github (<a href=\"https://backdropcms.org/project/githubapi?destination=admin/dashboard\">https://backdropcms.org/project/githubapi?destination=admin/dashboard</a>)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/project/tree/1.x-1.x/project_github\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/project/tree/1.x-1.x/project_github\" title=\"backdrop-contrib/project\">backdrop-contrib/project</a></div><div class=\"message_embed_description\">Projects associate a code-based project with releases and power the update server of BackdropCMS.org - backdrop-contrib/project</div></div></div>",
+        "id": 222492162,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1610484502
+    },
+    {
+        "content": "<p>It looks like you can Create GitHub Application via <a href=\"https://github.com\">https://github.com</a>, so I'm going to see what that looks like for backdrop-contrib...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com\" style=\"background-image: url(https://github.githubassets.com/images/modules/site/social-cards/github-social.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com\" title=\"GitHub: Where the world builds software\">GitHub: Where the world builds software</a></div><div class=\"message_embed_description\">GitHub is where over 56 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, review code like a pro, track bugs and feat...</div></div></div>",
+        "id": 222492300,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1610484572
+    },
+    {
+        "content": "<p>Well, we didn't have any applications there yet, but there are some notes in the settings.php file that what we are doing on the live site is deprecated, and the \"next version\" of Project module (beta 7) will do things differently. So maybe that's where we are now.</p>",
+        "id": 222493845,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1610485280
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> I set up a new application for <a href=\"http://beta.backdropcms.org\">beta.backdropcms.org</a>, so we should also be able to fire hooks there. Now all we need is a test site :)</p>",
+        "id": 222494239,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1610485472
+    },
+    {
+        "content": "<blockquote>\n<p>jenlampton: @docwilmot I set up a new application for <a href=\"http://beta.backdropcms.org\">beta.backdropcms.org</a>, so we should also be able to fire hooks there. Now all we need is a test site :)</p>\n</blockquote>\n<p>Great. We used to have a <a href=\"http://dev.backdropcms.org\">dev.backdropcms.org</a> for this kind of stuff, guess we deleted it. And I'm assuming you mean you set up a new GH Application with a URL <code>beta.backdropcms.org/githubapi/payload</code> like the live site?<br>\nI should probably still need to duplicate the site and test the PR locally with this ngrok thing anyway. <span aria-label=\"sad\" class=\"emoji emoji-2639\" role=\"img\" title=\"sad\">:sad:</span>  How do I get a sanitized dbase dump again?</p>",
+        "id": 222608695,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1610556029
+    },
+    {
+        "content": "<p>Got ngrok working, but aiming to nix the <code>screenshot[] = whatever</code> from <code>.info</code> files. Can I get some thoughts? <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\">https://github.com/backdrop-ops/backdropcms.org/issues/487</a> again</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\" title=\"Support a little more data in .info files · Issue #487 · backdrop-ops/backdropcms.org\">Support a little more data in .info files · Issue #487 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">This is a spin-off from #100 I have added several fields to the project content types on backdropcms.org: unlimited value term reference field &quot;Project Tags&quot; -- the list of tags has been ...</div></div></div>",
+        "id": 223185966,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611029802
+    }
+]

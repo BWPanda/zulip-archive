@@ -1,0 +1,240 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Form.20API.20States.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html">Form API States</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="190320933"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190320933" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190320933">(Mar 11 2020 at 19:22)</a>:</h4>
+<p>Using <code>#states</code>, is there a way to set a value for a text field based on what is selected in another field (radios)?</p>
+
+
+
+<a name="190321047"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321047" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321047">(Mar 11 2020 at 19:23)</a>:</h4>
+<p>I don't think so <span class="user-mention" data-user-id="256573">@Laryn</span></p>
+
+
+
+<a name="190321066"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321066" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321066">(Mar 11 2020 at 19:23)</a>:</h4>
+<p>good question. I feel like it requires some direct JS manipulation</p>
+
+
+
+<a name="190321138"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321138" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321138">(Mar 11 2020 at 19:24)</a>:</h4>
+<p>...<code>#states</code> allows only to set a specific set of attributes/properties, but cannot effect the default value.</p>
+
+
+
+<a name="190321151"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321151" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321151">(Mar 11 2020 at 19:24)</a>:</h4>
+<p>(AFAIK)</p>
+
+
+
+<a name="190321341"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321341" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321341">(Mar 11 2020 at 19:26)</a>:</h4>
+<p>You can only set:</p>
+<div class="codehilite"><pre><span></span>enabled
+disabled
+required
+optional
+visible
+invisible
+checked
+unchecked
+expanded
+collapsed
+</pre></div>
+
+
+<p>(i.e. no <code>value</code>)</p>
+
+
+
+<a name="190321353"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321353" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321353">(Mar 11 2020 at 19:26)</a>:</h4>
+<p><a href="https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_process_states/1" target="_blank" title="https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_process_states/1">https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_process_states/1</a></p>
+
+
+
+<a name="190321446"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321446" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321446">(Mar 11 2020 at 19:27)</a>:</h4>
+<p>Doh. (Thanks.)</p>
+
+
+
+<a name="190321498"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321498" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321498">(Mar 11 2020 at 19:28)</a>:</h4>
+<p>Need AJAX for that</p>
+
+
+
+<a name="190321509"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321509" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321509">(Mar 11 2020 at 19:28)</a>:</h4>
+<p>...I was about to point to <a href="https://github.com/backdrop/backdrop/blob/1.x/core/misc/states.js#L468" target="_blank" title="https://github.com/backdrop/backdrop/blob/1.x/core/misc/states.js#L468">https://github.com/backdrop/backdrop/blob/1.x/core/misc/states.js#L468</a> but <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span>'s link is much better <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/1.x/core/misc/states.js#L468" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/1.x/core/misc/states.js#L468" target="_blank" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="190321635"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190321635" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190321635">(Mar 11 2020 at 19:29)</a>:</h4>
+<p>Going to have to leave this for someone else (or another day) then:<br>
+<a href="https://github.com/backdrop-contrib/special_menu_items/issues/1" target="_blank" title="https://github.com/backdrop-contrib/special_menu_items/issues/1">https://github.com/backdrop-contrib/special_menu_items/issues/1</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/special_menu_items/issues/1" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/special_menu_items/issues/1" target="_blank" title="[UX] provide a &quot;Add non-linkable item&quot; and a &quot;Add separator item&quot; action links instead of special paths. · Issue #1 · backdrop-contrib/special_menu_items">[UX] provide a "Add non-linkable item" and a "Add separator item" action links instead of special paths. · Issue #1 · backdrop-contrib/special_menu_items</a></div><div class="message_embed_description">We currently require the user to enter either &lt;nolink&gt; or &lt;separator&gt; as path in order to create the supported special menu items. That is for users that already know how the module wor...</div></div></div>
+
+
+
+<a name="190322937"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190322937" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190322937">(Mar 11 2020 at 19:43)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> you could use states to hide the path field (for text with no link) or both path and title field for separator, and just deal with the value in the submit function.</p>
+
+
+
+<a name="190323183"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190323183" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190323183">(Mar 11 2020 at 19:45)</a>:</h4>
+<p>I was really needing to work on other things. But now I'm working on this again. ;)</p>
+
+
+
+<a name="190323450"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190323450" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190323450">(Mar 11 2020 at 19:48)</a>:</h4>
+<p>How do I hook into the submit function for this?<br>
+<a href="https://github.com/backdrop-contrib/special_menu_items/blob/issue-1/special_menu_items.module#L145-L182" target="_blank" title="https://github.com/backdrop-contrib/special_menu_items/blob/issue-1/special_menu_items.module#L145-L182">https://github.com/backdrop-contrib/special_menu_items/blob/issue-1/special_menu_items.module#L145-L182</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/special_menu_items/blob/issue-1/special_menu_items.module#L145-L182" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/special_menu_items/blob/issue-1/special_menu_items.module#L145-L182" target="_blank" title="backdrop-contrib/special_menu_items">backdrop-contrib/special_menu_items</a></div><div class="message_embed_description">Enables creating placeholder and separator menu items. - backdrop-contrib/special_menu_items</div></div></div>
+
+
+
+<a name="190323864"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190323864" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190323864">(Mar 11 2020 at 19:52)</a>:</h4>
+<p><a href="/user_uploads/18319/uXrHb8S8IQpEvjEQrTf-1yLx/Screen-Shot-2020-03-11-at-2.51.53-PM.jpg" target="_blank" title="Screen-Shot-2020-03-11-at-2.51.53-PM.jpg">Screen-Shot-2020-03-11-at-2.51.53-PM.jpg</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/uXrHb8S8IQpEvjEQrTf-1yLx/Screen-Shot-2020-03-11-at-2.51.53-PM.jpg" target="_blank" title="Screen-Shot-2020-03-11-at-2.51.53-PM.jpg"><img src="/user_uploads/18319/uXrHb8S8IQpEvjEQrTf-1yLx/Screen-Shot-2020-03-11-at-2.51.53-PM.jpg"></a></div>
+
+
+
+<a name="190323962"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190323962" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190323962">(Mar 11 2020 at 19:53)</a>:</h4>
+<p>Depends if you're able to achieve what you want by adding your own submit function in addition to the existing one, or if you specifically need to change what happens in the existing submit function...</p>
+
+
+
+<a name="190324135"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324135" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324135">(Mar 11 2020 at 19:54)</a>:</h4>
+<p>I think if I can adjust values before the default submit does its thing, it would work great.</p>
+
+
+
+<a name="190324170"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324170" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324170">(Mar 11 2020 at 19:54)</a>:</h4>
+<p>So add a custom submit function before the default one.</p>
+
+
+
+<a name="190324218"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324218" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324218">(Mar 11 2020 at 19:55)</a>:</h4>
+<p>I realize that is probably something I should know how to do...</p>
+
+
+
+<a name="190324251"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324251" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324251">(Mar 11 2020 at 19:55)</a>:</h4>
+<p>Will do some research.</p>
+
+
+
+<a name="190324350"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324350" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324350">(Mar 11 2020 at 19:56)</a>:</h4>
+<p><code>  $form['#submit'][] = 'my_new_submit';</code></p>
+
+
+
+<a name="190324409"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324409" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324409">(Mar 11 2020 at 19:56)</a>:</h4>
+<p>add that in <code>special_menu_items_form_menu_edit_item_alter()</code></p>
+
+
+
+<a name="190324417"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324417" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324417">(Mar 11 2020 at 19:56)</a>:</h4>
+<p><span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> Do I need to set a weight somehow?</p>
+
+
+
+<a name="190324480"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324480" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324480">(Mar 11 2020 at 19:57)</a>:</h4>
+<p>the alter should run first, IIRC</p>
+
+
+
+<a name="190324505"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324505" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324505">(Mar 11 2020 at 19:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> ++</p>
+
+
+
+<a name="190324506"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324506" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324506">(Mar 11 2020 at 19:57)</a>:</h4>
+<p><strong>docwilmot</strong> - Dragon Fire (Karma: 2)</p>
+
+
+
+<a name="190324624"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324624" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324624">(Mar 11 2020 at 19:58)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Sorry, didn't mean to leave you hanging there... I was searching for the right code to point you too, but <span class="user-mention" data-user-id="256757">@docwilmot</span> beat me to it <span aria-label="smile" class="emoji emoji-263a" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="190324712"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324712" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324712">(Mar 11 2020 at 19:59)</a>:</h4>
+<p>No worries -- I appreciate all the help. <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> ++ <span class="user-mention" data-user-id="256757">@docwilmot</span> ++</p>
+
+
+
+<a name="190324713"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190324713" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190324713">(Mar 11 2020 at 19:59)</a>:</h4>
+<p>(peter)** <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> (Karma: 14)</p>
+
+
+
+<a name="190327485"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190327485" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190327485">(Mar 11 2020 at 20:26)</a>:</h4>
+<p>I would add it with <a href="https://www.php.net/manual/en/function.array-unshift" target="_blank" title="https://www.php.net/manual/en/function.array-unshift">https://www.php.net/manual/en/function.array-unshift</a></p>
+
+
+
+<a name="190327561"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/190327561" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#190327561">(Mar 11 2020 at 20:27)</a>:</h4>
+<p>Unless Backdrop is different than Drupal, they're executed in the order in the array.</p>
+
+
+
+<a name="193502339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/193502339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#193502339">(Apr 09 2020 at 20:04)</a>:</h4>
+<p>Is this confirmed as a core bug? <a href="https://github.com/backdrop/backdrop-issues/issues/3489" title="https://github.com/backdrop/backdrop-issues/issues/3489">https://github.com/backdrop/backdrop-issues/issues/3489</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3489" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3489" title="backdrop_process_states only works on lowest level of field in node form · Issue #3489 · backdrop/backdrop-issues">backdrop_process_states only works on lowest level of field in node form · Issue #3489 · backdrop/backdrop-issues</a></div><div class="message_embed_description">In a node form array, the actual field array of type &quot;#text&quot; is located at something like &quot;field_name[und][0][#value]&quot;. All the documentation of backdrop_process_states() descri...</div></div></div>
+
+
+
+<a name="193502429"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Form%20API%20States/near/193502429" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Form.20API.20States.html#193502429">(Apr 09 2020 at 20:05)</a>:</h4>
+<p>(I was going to try to give some polish to a few partially ported modules that I've seen mentioned recently, but Conditional Fields seems blocked by that issue above: <a href="https://github.com/backdrop-contrib/conditional_fields/issues/5" title="https://github.com/backdrop-contrib/conditional_fields/issues/5">https://github.com/backdrop-contrib/conditional_fields/issues/5</a> )</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/conditional_fields/issues/5" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/conditional_fields/issues/5" title="List field dependee with list field dependents only works when fields are in individual fieldsets · Issue #5 · backdrop-contrib/conditional_fields">List field dependee with list field dependents only works when fields are in individual fieldsets · Issue #5 · backdrop-contrib/conditional_fields</a></div><div class="message_embed_description">Have this set up on a content type that has a term reference field as the dependee, and 16 fields that are dependent upon it based on which selection is made. Each field becomes visible when the de...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

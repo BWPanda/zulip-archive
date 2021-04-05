@@ -1,0 +1,61 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Entity.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Entity.html">Entity</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="212176189"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Entity/near/212176189" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Entity.html#212176189">(Oct 03 2020 at 15:05)</a>:</h4>
+<p>Hi...,</p>
+<p>Wheres the best place to look for info on Entity...  </p>
+<p>I'm getting an error with nodeownership module <em>Class EntityAPIController does not exist and could not be loaded in entity_plus_entity_info_alter() (line 237 of....</em></p>
+<p>I've checked D7 entity.controller.inc and the declaration is there but it's not in the BD version of entity in core.</p>
+<p>Or should I use the <em>DefaultEntityController</em></p>
+<p>This is the function I'm trying to get working </p>
+<p>function nodeownership_entity_info() {<br>
+  return array(<br>
+    'claim' =&gt; array(<br>
+      'label' =&gt; t('Claim'),<br>
+      'entity class' =&gt; 'ClaimEntityClass',<br>
+      'controller class' =&gt; 'EntityAPIController',  *** &lt;-------  this is causing the error...  can't find anything in the change record on BD<br>
+      'base table' =&gt; 'nodeownership',<br>
+      'entity keys' =&gt; array(<br>
+        'id' =&gt; 'id',<br>
+      ),<br>
+      // Make use the class' label() and uri() implementation by default.<br>
+      'label callback' =&gt; 'entity_class_label',<br>
+      // 'uri callback' =&gt; 'entity_class_uri',.<br>
+    ),<br>
+  );<br>
+}</p>
+<p>Any help would be appreciated.</p>
+<p><span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="212176268"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Entity/near/212176268" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Entity.html#212176268">(Oct 03 2020 at 15:07)</a>:</h4>
+<p>Controller class maybe EntityPlusAPIController? On my phone so can't check easily right now.</p>
+
+
+
+<a name="212177277"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Entity/near/212177277" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Entity.html#212177277">(Oct 03 2020 at 15:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Thanks...  That's not in the file but I've tried both DefaultEntityController and EntityPlusControllerInterface without any errors <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span>  I'll stick with the latter and see how it goes <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

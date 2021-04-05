@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Just made a mistake I've made a half-dozen times: wanted to modify the layout for a particular page with different blocks, and accidentally did all the setup on the default layout. What would be nifty here: being able to clone the default layout into a new one, set the page for the new one, and then fix the default. It's easier to revert a layout back to the original than it is to create a new layout and put everything in its place. But the default layout(s) appear to be the only ones that _omit_ a clone button?</p>",
+        "id": 197227191,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1589248464
+    },
+    {
+        "content": "<p>There's a request for that: <a href=\"https://github.com/backdrop/backdrop-issues/issues/1674\">https://github.com/backdrop/backdrop-issues/issues/1674</a> <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1674\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1674\" title=\"[UX] Add the ability for default layouts to be cloned (like views). · Issue #1674 · backdrop/backdrop-issues\">[UX] Add the ability for default layouts to be cloned (like views). · Issue #1674 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Simple: a user might not want to start completely from scratch and it might be more convenient for then to clone an existing layout and edit it.</div></div></div>",
+        "id": 197230841,
+        "sender_full_name": "klonos",
+        "timestamp": 1589254302
+    },
+    {
+        "content": "<blockquote>\n<p>Yeah, I am always playing around with the default ones, so I forgot about this. What I mean is that if one customizes the default ones and needs to clone them at that stage, then they should have that option. Is there any reason why we do not allow the default layouts to be cloned?</p>\n</blockquote>",
+        "id": 197230890,
+        "sender_full_name": "klonos",
+        "timestamp": 1589254354
+    },
+    {
+        "content": "<p>^^ exactly the situation I gotten myself into a few years back when I was fooling around with layouts <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197230902,
+        "sender_full_name": "klonos",
+        "timestamp": 1589254392
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"294810\">Jeff Porten</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Can't.20clone.20the.20default.20layout.3F/near/197227191\">said</a>:</p>\n<blockquote>\n<p>Just made a mistake I've made a half-dozen times: wanted to modify the layout for a particular page with different blocks, and accidentally did all the setup on the default layout. What would be nifty here: being able to clone the default layout into a new one, set the page for the new one, and then fix the default. It's easier to revert a layout back to the original than it is to create a new layout and put everything in its place. But the default layout(s) appear to be the only ones that _omit_ a clone button?</p>\n</blockquote>\n<p>Jeff layouts are all config, so just copy the default.json file, change these bits:</p>\n<div class=\"codehilite\"><pre><span></span><code>  &quot;_config_name&quot;: &quot;layout.layout.default&quot;,\n  &quot;path&quot;: &quot;&quot;,\n  &quot;name&quot;: &quot;default&quot;,\n  &quot;title&quot;: &quot;Default Layout&quot;,\n</code></pre></div>\n\n\n<p>and then reset the default.</p>",
+        "id": 197280775,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589292363
+    }
+]

@@ -1,0 +1,140 @@
+[
+    {
+        "content": "<p>New module available: <a href=\"https://github.com/backdrop-contrib/dismiss\">https://github.com/backdrop-contrib/dismiss</a> (ported from D7)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/dismiss\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/dismiss\" title=\"backdrop-contrib/dismiss\">backdrop-contrib/dismiss</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/dismiss development by creating an account on GitHub.</div></div></div>",
+        "id": 215446887,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604406745
+    },
+    {
+        "content": "<blockquote>\n<p>New module available: <a href=\"https://github.com/backdrop-contrib/dismiss\">https://github.com/backdrop-contrib/dismiss</a> (ported from D7)</p>\n</blockquote>\n<p>I think this should be core. Anyone else?</p>",
+        "id": 215462447,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1604414838
+    },
+    {
+        "content": "<p>Didn't try it, but something like that would be useful. Has also been discussed (somewhere).</p>",
+        "id": 215463403,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1604415248
+    },
+    {
+        "content": "<p>Found it: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4571\">https://github.com/backdrop/backdrop-issues/issues/4571</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4571\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4571\" title=\"[UX][DX] Provide the ability to make messages dismissible · Issue #4571 · backdrop/backdrop-issues\">[UX][DX] Provide the ability to make messages dismissible · Issue #4571 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is related to #1912 (and a sibling to #3995). There are quite a few contrib modules that allow this. Some examples: https://www.drupal.org/project/pdm Have you ever wished for a very simple wa...</div></div></div>",
+        "id": 215463792,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1604415433
+    },
+    {
+        "content": "<p>Sometimes contrib is so much faster than core when adding/solving something... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 215463969,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1604415505
+    },
+    {
+        "content": "<p>I would say more than sometimes, maybe always.</p>",
+        "id": 215464676,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1604415832
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ++</p>",
+        "id": 215478947,
+        "sender_full_name": "klonos",
+        "timestamp": 1604421718
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> Cheers (Karma: 13)</p>",
+        "id": 215478948,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1604421718
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> yeah, I think that it'd be useful to have this in core.</p>",
+        "id": 215479057,
+        "sender_full_name": "klonos",
+        "timestamp": 1604421755
+    },
+    {
+        "content": "<p>I did a more-or-less straight port last night. I was thinking about re-factoring it somewhat though and making a v2. Some differences would include:</p>\n<ul>\n<li>Changing styling somewhat (and trying to make it easier to override)</li>\n<li>Removing settings to move script placement/type (and trying to allow that to be done with overrides instead)</li>\n<li>General code cleanup</li>\n<li>Adding some sort of indicator for the timeout feature (like a countdown) and disabling it on click</li>\n</ul>",
+        "id": 215501686,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604432830
+    },
+    {
+        "content": "<p>Good work <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> . I added a couple issues.</p>",
+        "id": 215501849,
+        "sender_full_name": "Herb",
+        "timestamp": 1604432913
+    },
+    {
+        "content": "<p>If people wanted it in core I would strip it down to the essentials. No settings page. No timer. Keep it simple like the Bootstrap theme does it</p>",
+        "id": 215501925,
+        "sender_full_name": "Herb",
+        "timestamp": 1604432966
+    },
+    {
+        "content": "<p>I agree on all counts except the timer. I think that'd be helpful, and doesn't add that much complexity.</p>",
+        "id": 215502298,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604433168
+    },
+    {
+        "content": "<p>Agree with <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> though. A timer on messages is rare on the internet, to say the least.</p>",
+        "id": 215502724,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1604433384
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/dismissible.20messages/near/215501925\">said</a>:</p>\n<blockquote>\n<p>If people wanted it in core I would strip it down to the essentials. No settings page. No timer. Keep it simple like the Bootstrap theme does it</p>\n</blockquote>\n<p>If it ends up in core, I would still like to configure it it.  I want to be able to control how and if messages are dismissed.</p>",
+        "id": 215503748,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1604433907
+    },
+    {
+        "content": "<blockquote>\n<p>I want to be able to control how and if messages are dismissed.</p>\n</blockquote>\n<p>As in control which messages are dismissable? That would be bigger than this module I'd imagine</p>",
+        "id": 215504157,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1604434137
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/dismissible.20messages/near/215504157\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>I want to be able to control how and if messages are dismissed.</p>\n</blockquote>\n<p>As in control which messages are dismissable? That would be bigger than this module I'd imagine</p>\n</blockquote>\n<p>Depends on how it's implemented.  The current D7 module just adds a dismiss button, which I'm fine with.  If we're talking adding timers and stuff, then I want to be able to control that.  Some messages should not be dismissed ...</p>",
+        "id": 215504387,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1604434288
+    },
+    {
+        "content": "<p>I can imagine how messages being dismissed after X seconds could easily end up with WTF moments for users. Actually, it's not hard to imagine since CiviCRM does it and it annoys me. No matter the type of message it'll disappear unless I read it quickly.</p>",
+        "id": 215508666,
+        "sender_full_name": "Herb",
+        "timestamp": 1604436796
+    },
+    {
+        "content": "<p>This issue matches well with this one: <a href=\"https://github.com/backdrop/backdrop-issues/issues/1062\">https://github.com/backdrop/backdrop-issues/issues/1062</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1062\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1062\" title=\"[DX] Allow messages to be alterable · Issue #1062 · backdrop/backdrop-issues\">[DX] Allow messages to be alterable · Issue #1062 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">If you don&#39;t want to show a core, or contrib message to the end user, you now have to iterate $_SESSION[&#39;messages&#39;] and search for the (translated, token replaced) string to unset it. I...</div></div></div>",
+        "id": 215508968,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1604436968
+    },
+    {
+        "content": "<p>PR ready! Test away: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4571\">https://github.com/backdrop/backdrop-issues/issues/4571</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4571\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4571\" title=\"[UX][DX] Provide the ability to make messages dismissible · Issue #4571 · backdrop/backdrop-issues\">[UX][DX] Provide the ability to make messages dismissible · Issue #4571 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is related to #1912 (and a sibling to #3995). There are quite a few contrib modules that allow this. Some examples: https://www.drupal.org/project/pdm Have you ever wished for a very simple wa...</div></div></div>",
+        "id": 215536088,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604458590
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ++</p>",
+        "id": 215554349,
+        "sender_full_name": "klonos",
+        "timestamp": 1604479962
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> leveled up! (Karma: 14)</p>",
+        "id": 215554350,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1604479962
+    },
+    {
+        "content": "<p>...no PR sandbox though <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span></p>",
+        "id": 215554357,
+        "sender_full_name": "klonos",
+        "timestamp": 1604479968
+    }
+]

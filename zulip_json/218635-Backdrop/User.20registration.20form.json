@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>I've added a user login block to my home page, but I'm struggling to add a user registration form into a page that I can customise - i.e. as a block within a view.</p>",
+        "id": 218493414,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1606863048
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> Sounds like you might need this: <a href=\"https://github.com/backdrop-contrib/formblock\">https://github.com/backdrop-contrib/formblock</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/formblock\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/formblock\" title=\"backdrop-contrib/formblock\">backdrop-contrib/formblock</a></div><div class=\"message_embed_description\">Enables the presentation of user registration, site wide contact, or node creation forms in blocks. - backdrop-contrib/formblock</div></div></div>",
+        "id": 218498033,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606866176
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>  <span aria-label=\"congratulations\" class=\"emoji emoji-1f389\" role=\"img\" title=\"congratulations\">:congratulations:</span>  That's exactly what I needed - thank you :)</p>",
+        "id": 218499782,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1606867577
+    },
+    {
+        "content": "<p>I'm trying to use a custom layout for the /user/** paths, but they always seem to use the default layout. I've tried setting my layout path to <code>user</code> <code>user/%</code> &amp; <code>user/%/%</code> to no avail.</p>",
+        "id": 218500971,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1606868690
+    },
+    {
+        "content": "<p>Looks like I need to do the reverse, and use my custom layout specifically for nodes, and leave the default layout alone.</p>",
+        "id": 218501525,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1606869134
+    },
+    {
+        "content": "<p><code>user/%</code> should work I would think...</p>",
+        "id": 218501974,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606869511
+    },
+    {
+        "content": "<p>It didn't seem too, also an emailed reset link didn't work.</p>",
+        "id": 218502991,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1606870401
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> I may be asking a dumb question, but did you set the condition on the custom layout path to only show user info?</p>\n<p>For example, setting node/% still uses the default layout until I set a condition for the content types that will use the custom layout.</p>\n<p>Disclaimer: I'm new to BD also, so anyone who has more experienced is welcome to correct me.</p>",
+        "id": 218509615,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606877332
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307683\">@Kevin Golding</span> I just tested this and I noticed that I needed to enter a Layout name and select a template first, then I could enter <code>user/%</code> and it automatically created the appropriate context: <a href=\"/user_uploads/18319/QeMxeZ-2nZwyRymFT4-b-TzN/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/QeMxeZ-2nZwyRymFT4-b-TzN/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/QeMxeZ-2nZwyRymFT4-b-TzN/image.png\"></a></div>",
+        "id": 218510718,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606878739
+    },
+    {
+        "content": "<p>The caveat I think is that this won't work for login and registration pages. Only user accounts</p>",
+        "id": 218511367,
+        "sender_full_name": "Herb",
+        "timestamp": 1606879271
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Thanks for the pointers, I've settled on using the default layout and am using <code>node/%</code> for my custom layout, and I'll clone it for <code>tags/%</code>'s etc as needed. I think I was trying to be too clever overriding the default layout :)</p>",
+        "id": 218523943,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1606895858
+    },
+    {
+        "content": "<p>Could this be related to <a href=\"https://github.com/backdrop/backdrop-issues/issues/4029\">https://github.com/backdrop/backdrop-issues/issues/4029</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4029\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4029\" title=\"[UX][D7] Add a 'User: compare' visibility rule · Issue #4029 · backdrop/backdrop-issues\">[UX][D7] Add a 'User: compare' visibility rule · Issue #4029 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need In Drupal 7 / Panels you could choose to show or hide a content pane based on whether a User context was equal to the logged in User context. This panels access plugin allow...</div></div></div>",
+        "id": 218527906,
+        "sender_full_name": "klonos",
+        "timestamp": 1606898731
+    }
+]

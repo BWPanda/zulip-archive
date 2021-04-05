@@ -1,0 +1,62 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html">(Re)copying user accounts from Drupal 7</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="202461719"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%28Re%29copying%20user%20accounts%20from%20Drupal%207/near/202461719" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html#202461719">(Jun 30 2020 at 16:35)</a>:</h4>
+<p>I have a dev site that I've upgraded from Drupal 7. Now I'd like to take the user account table from the live D7 site and insert it into the dev Backdrop site, mostly so everyone's passwords don't change (if possible). Will swapping user tables in the database work?</p>
+
+
+
+<a name="202463552"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%28Re%29copying%20user%20accounts%20from%20Drupal%207/near/202463552" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html#202463552">(Jun 30 2020 at 16:47)</a>:</h4>
+<p>you could try it on a dev site and see; otherwise you can <code>describe users</code> on D7 and on Backdrop and see if they line up</p>
+
+
+
+<a name="202463584"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%28Re%29copying%20user%20accounts%20from%20Drupal%207/near/202463584" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html#202463584">(Jun 30 2020 at 16:47)</a>:</h4>
+<p>^ in a <code>mysql</code> shell</p>
+
+
+
+<a name="202468876"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%28Re%29copying%20user%20accounts%20from%20Drupal%207/near/202468876" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html#202468876">(Jun 30 2020 at 17:27)</a>:</h4>
+<p>Copying an encrypted password from Drupal to Backdrop seems to work...</p>
+
+
+
+<a name="202519080"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%28Re%29copying%20user%20accounts%20from%20Drupal%207/near/202519080" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html#202519080">(Jul 01 2020 at 00:41)</a>:</h4>
+<p>I thought that user accounts were retained when upgrading D7 -&gt; Backdrop. Is that not the case?</p>
+
+
+
+<a name="202520515"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%28Re%29copying%20user%20accounts%20from%20Drupal%207/near/202520515" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html#202520515">(Jul 01 2020 at 01:04)</a>:</h4>
+<p>They are, but the development took a while and the user accounts got out of sync.</p>
+
+
+
+<a name="202577686"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%28Re%29copying%20user%20accounts%20from%20Drupal%207/near/202577686" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/(Re)copying.20user.20accounts.20from.20Drupal.207.html#202577686">(Jul 01 2020 at 14:48)</a>:</h4>
+<p>Right, gotcha! <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

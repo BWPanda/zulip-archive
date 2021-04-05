@@ -1,0 +1,86 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html">Hover CSS for touch devices</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="196668015"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hover%20CSS%20for%20touch%20devices/near/196668015" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html#196668015">(May 06 2020 at 17:22)</a>:</h4>
+<p>I'm theming a site which has images which, when hovered over, have the title slide up into view and you can click on that to go to another page (the image isn't a link, just the title (which is hidden until the image is hovered over)). I just realised that this won't work on touch devices though... Anyone know of an easy way to fix this?</p>
+
+
+
+<a name="196671414"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hover%20CSS%20for%20touch%20devices/near/196671414" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html#196671414">(May 06 2020 at 17:44)</a>:</h4>
+<p>Don't use hover in the UI?</p>
+
+
+
+<a name="196671537"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hover%20CSS%20for%20touch%20devices/near/196671537" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html#196671537">(May 06 2020 at 17:45)</a>:</h4>
+<p>Then it'd be a very boring website... <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="196671731"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hover%20CSS%20for%20touch%20devices/near/196671731" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html#196671731">(May 06 2020 at 17:46)</a>:</h4>
+<p>I'd say that the only way would be breakpoint/device detection and then selectively implementing the hover-over niceness on devices that have pointers.</p>
+
+
+
+<a name="196672172"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hover%20CSS%20for%20touch%20devices/near/196672172" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html#196672172">(May 06 2020 at 17:50)</a>:</h4>
+<p>These have been useful in the past:<br>
+<a href="https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices" title="https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices">https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices</a><br>
+<a href="https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers" title="https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers">https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers</a><br>
+<a href="https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices" title="https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices">https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers" style="background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)"></a><div class="data-container"><div class="message_embed_title"><a href="https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers" title="How do I simulate a hover with a touch in touch enabled browsers?">How do I simulate a hover with a touch in touch enabled browsers?</a></div><div class="message_embed_description">With some HTML like this:
+
+&lt;p&gt;Some Text&lt;/p&gt;
+Then some CSS like this:
+
+p {
+  color:black;
+}
+
+p:hover {
+  color:red;
+}
+How can I allow a long touch on a touch enabled device to replicate </div></div></div><div class="message_embed"><a class="message_embed_image" href="https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices" style="background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)"></a><div class="data-container"><div class="message_embed_title"><a href="https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices" title="Changing :hover to touch/click for mobile devices">Changing :hover to touch/click for mobile devices</a></div><div class="message_embed_description">I've had a look around but can't quite find what i'm looking for.
+
+I currently have a css animation on my page which is triggered by :hover. I would like this to change to 'click' or 'touch' when the </div></div></div>
+
+
+
+<a name="196674433"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hover%20CSS%20for%20touch%20devices/near/196674433" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html#196674433">(May 06 2020 at 18:07)</a>:</h4>
+<p>Hmm, that last link suggests that <code>:active</code> should work. Will have to test that once the site is live...</p>
+
+
+
+<a name="196679142"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hover%20CSS%20for%20touch%20devices/near/196679142" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html#196679142">(May 06 2020 at 18:44)</a>:</h4>
+<p>should be able to right click and <code>inspect element</code> set to a mobile device and test now ... no need to <code>do it live</code> ;)</p>
+
+
+
+<a name="196680255"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hover%20CSS%20for%20touch%20devices/near/196680255" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hover.20CSS.20for.20touch.20devices.html#196680255">(May 06 2020 at 18:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> Ah, indeed! Very nice, thanks! It works <span aria-label="smiley" class="emoji emoji-1f603" role="img" title="smiley">:smiley:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

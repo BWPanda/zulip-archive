@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>This is a weird one. Anyone seen this before?</p>\n<ul>\n<li>Create a View filtering on content based on a taxonomy term and <code>Published = Yes</code></li>\n<li>Test the view, it works fine.</li>\n<li>Add a new filter for <code>Published or Admin</code> and remove <code>Published = Yes</code></li>\n<li>Test the view, no unpublished nodes show.</li>\n<li>Remove the filter based on taxonomy term.</li>\n<li>Test the view, unpublished nodes show (if you are logged in as admin).</li>\n</ul>\n<p>Can we not filter on taxonomy terms for unpublished content?</p>",
+        "id": 192071339,
+        "sender_full_name": "Laryn",
+        "timestamp": 1585338763
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> yes, there's something wrong with the view / the query, I played with a view based on your description and also found strange behavior. I'd suggest you open an issue for it.</p>",
+        "id": 192119183,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585395854
+    },
+    {
+        "content": "<p>Ooops, I already got what goes wrong: whenever a node gets unpublished, the node entry is removed from database table \"taxonomy_index\". That's why it's impossible to have unpublished nodes in results filtered by term.</p>",
+        "id": 192119344,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585396175
+    },
+    {
+        "content": "<p>As db table taxonomy_index is supposed to only hold published nodes, a quick workaround is to use the field value for filtering (like Content: Tags). That filter isn't using table taxonomy_index.</p>",
+        "id": 192163898,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585471826
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> so that is actually expected behavior? I will do some more testing when I'm by the computer again...</p>",
+        "id": 192175275,
+        "sender_full_name": "Laryn",
+        "timestamp": 1585489771
+    },
+    {
+        "content": "<p>I would not call it \"expected\". This seems to be another case where developers knowing what's happening in the background (db tables) finding what's going on in the UI \"natural\", or at least know what to do in the UI to make things work for them. As an end user, I would expect the UI to \"just work\" as expected.</p>",
+        "id": 192178023,
+        "sender_full_name": "klonos",
+        "timestamp": 1585493387
+    },
+    {
+        "content": "<p>^^^ that my way of saying \"we should fix this\" <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 192178072,
+        "sender_full_name": "klonos",
+        "timestamp": 1585493416
+    },
+    {
+        "content": "<p>It seems to be expected behavior in the db table, see this comment <a href=\"https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966\" title=\"https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966\">https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966</a><br>\nIt's a bit unexpected in the view, though. The fact that results are filtered for published nodes isn't obvious. But to \"fix\" it needs a deeper change in how taxonomy views are implemented (hook_views_data). With a lot of possible side effects on existing views. Personally, I wouldn't dare to touch that.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 192217079,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585551490
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> and <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> – I've filed <a href=\"https://github.com/backdrop/backdrop-issues/issues/4356\" title=\"https://github.com/backdrop/backdrop-issues/issues/4356\">https://github.com/backdrop/backdrop-issues/issues/4356</a> for further feedback.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4356\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4356\" title=\"Views &quot;Unpublished or admin&quot; doesn't work if filtering on a taxonomy term · Issue #4356 · backdrop/backdrop-issues\">Views \"Unpublished or admin\" doesn't work if filtering on a taxonomy term · Issue #4356 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug Displaying unpublished content that is tagged with a term does not work in Views that filter by term. (e.g. &quot;Unpublished or admin&quot; filter only shows published conte...</div></div></div>",
+        "id": 192253951,
+        "sender_full_name": "Laryn",
+        "timestamp": 1585574472
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++</p>",
+        "id": 192941683,
+        "sender_full_name": "klonos",
+        "timestamp": 1586062008
+    },
+    {
+        "content": "<p><strong>laryn</strong> Cheers (Karma: 4)</p>",
+        "id": 192941684,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1586062008
+    }
+]

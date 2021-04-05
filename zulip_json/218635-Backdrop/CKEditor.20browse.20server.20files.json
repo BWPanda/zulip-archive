@@ -1,0 +1,278 @@
+[
+    {
+        "content": "<p>Is there anything that adds the browser server functionality on the link button in ckeditor (core).  It's there in the add media button but not the link editor and is causing havoc with my clients as they try to link items they've already uploaded elsewhere on the site.    They're having to re-upload, which is really ridiculous.  I have a lot of duplicate files now. [ckeditor-link-dialog.jpeg] <a href=\"user_uploads/18319/dzaJGy4SfpNNUjHYubG2uGn6/ckeditor-image-dialog.jpeg\">ckeditor-image-dialog.jpeg</a> (<a href=\"user_uploads/18319/mWSUV4_O8hbo5lQA02w-5pnM/ckeditor-link-dialog.jpeg\">https://backdrop.zulipchat.com/user_uploads/18319/mWSUV4_O8hbo5lQA02w-5pnM/ckeditor-link-dialog.jpeg</a>)</p>\n<div class=\"message_inline_image\"><a href=\"user_uploads/18319/dzaJGy4SfpNNUjHYubG2uGn6/ckeditor-image-dialog.jpeg\" title=\"ckeditor-image-dialog.jpeg\"><img src=\"user_uploads/18319/dzaJGy4SfpNNUjHYubG2uGn6/ckeditor-image-dialog.jpeg\"></a></div><div class=\"message_inline_image\"><a href=\"user_uploads/18319/mWSUV4_O8hbo5lQA02w-5pnM/ckeditor-link-dialog.jpeg\" title=\"https://backdrop.zulipchat.com/user_uploads/18319/mWSUV4_O8hbo5lQA02w-5pnM/ckeditor-link-dialog.jpeg\"><img src=\"user_uploads/18319/mWSUV4_O8hbo5lQA02w-5pnM/ckeditor-link-dialog.jpeg\"></a></div>",
+        "id": 212467950,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602009637
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212467950\">said</a>:</p>\n<blockquote>\n<p>Is there anything that adds the browser server functionality on the link button in ckeditor (core).</p>\n</blockquote>\n<p>It is there in Drupal 7 ckeditor (contrib) module: <a href=\"/user_uploads/18319/pOgDq2ORJ58rRK_auMxy2aXw/ckeditor-link-dialog-drupal7.jpeg\">ckeditor-link-dialog-drupal7.jpeg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/pOgDq2ORJ58rRK_auMxy2aXw/ckeditor-link-dialog-drupal7.jpeg\" title=\"ckeditor-link-dialog-drupal7.jpeg\"><img src=\"/user_uploads/18319/pOgDq2ORJ58rRK_auMxy2aXw/ckeditor-link-dialog-drupal7.jpeg\"></a></div>",
+        "id": 212468943,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602010140
+    },
+    {
+        "content": "<p>In the Insert Link dialog, do you have to click 'Upload a file...' first to see the Browse button?</p>",
+        "id": 212475248,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602013294
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212475248\">said</a>:</p>\n<blockquote>\n<p>In the Insert Link dialog, do you have to click 'Upload a file...' first to see the Browse button?</p>\n</blockquote>\n<p>At no point does it give you that option.  The link to existing content is for pages, not files and will not find previously uploaded files.  The Upload a file just gives you the choose file button, which opens up an upload window to your local system (PC, Mac or Linux).<br>\n<a href=\"/user_uploads/18319/-6JJlFJvS6FWFVWGoCA2r51X/ckeditor-link-upload.jpeg\">ckeditor-link-upload.jpeg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/-6JJlFJvS6FWFVWGoCA2r51X/ckeditor-link-upload.jpeg\" title=\"ckeditor-link-upload.jpeg\"><img src=\"/user_uploads/18319/-6JJlFJvS6FWFVWGoCA2r51X/ckeditor-link-upload.jpeg\"></a></div><p>The browser server button on Drupal 7 link dialog, and on the image dialog (both Backdrop and Drupal 7) is what allows you to browse server files.  It's missing in Backdrop.   I found out because we have a large site going live Friday and the user is struggling to update pages in preparation.  It's a fairly urgent issue and the workaround is a bit problematic.  </p>\n<p>Not sure where to open an issue or if there is already a contrib that fixes this.</p>",
+        "id": 212475621,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602013520
+    },
+    {
+        "content": "<p>I think the simplest would be to create a new issue. Including file entities in the link autocomplete could be the quickest way to get this</p>",
+        "id": 212508546,
+        "sender_full_name": "Herb",
+        "timestamp": 1602036975
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212508546\">said</a>:</p>\n<blockquote>\n<p>I think the simplest would be to create a new issue. Including file entities in the link autocomplete could be the quickest way to get this</p>\n</blockquote>\n<p>I'll create the issue first thing tomorrow.  Thanks <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span></p>",
+        "id": 212510774,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602039968
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/6CW6ulLRzNQGipR5csVRNKM-/Screenshot-from-2020-10-07-00-42-27.png\">Screenshot-from-2020-10-07-00-42-27.png</a>  Just tested again: there is indeed already an autocomplete for files in addition to nodes, users, system paths, terms , views, layouts, menu items. (see function path_autocomplete). There isn't a browser in core, but if you know the approximate name of the file this should work.</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/6CW6ulLRzNQGipR5csVRNKM-/Screenshot-from-2020-10-07-00-42-27.png\" title=\"Screenshot-from-2020-10-07-00-42-27.png\"><img src=\"/user_uploads/18319/6CW6ulLRzNQGipR5csVRNKM-/Screenshot-from-2020-10-07-00-42-27.png\"></a></div>",
+        "id": 212514805,
+        "sender_full_name": "Herb",
+        "timestamp": 1602045919
+    },
+    {
+        "content": "<p>My first test didn't work because I was trying to access an image which it excludes</p>",
+        "id": 212514817,
+        "sender_full_name": "Herb",
+        "timestamp": 1602045945
+    },
+    {
+        "content": "<p>I think there is a check box in the editor settings to allow file uploads. May not be activated by default on upgrades.</p>",
+        "id": 212515449,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602046892
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212514805\">said</a>:</p>\n<blockquote>\n<p><a href=\"/user_uploads/18319/6CW6ulLRzNQGipR5csVRNKM-/Screenshot-from-2020-10-07-00-42-27.png\">Screenshot-from-2020-10-07-00-42-27.png</a>  Just tested again: there is indeed already an autocomplete for files in addition to nodes, users, system paths, terms , views, layouts, menu items. (see function path_autocomplete). There isn't a browser in core, but if you know the approximate name of the file this should work.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> ,  there is no way an end user is going to remember the exact name or even an approximate of a file when there are hundreds or thousands and a complex file structure.  I tried the autocomplete and it doesn't work anywhere near adequately, as in it kept bringing up pages, and no files.  For a link to a page it's fine, but it does not work for files.  Maybe you only had a few, but this is a larger site and has thousands. of files.  That's why they need the browser, and yes, they should probably go in and clean up some of the files, but there would still be a lot.  The site has over 5000 pages, and thousands of files.</p>",
+        "id": 212562860,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602079469
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212515449\">said</a>:</p>\n<blockquote>\n<p>I think there is a check box in the editor settings to allow file uploads. May not be activated by default on upgrades.</p>\n</blockquote>\n<p>The problem isn't uploads.  The problem is linking to an already uploaded file.</p>",
+        "id": 212562912,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602079498
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212510774\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212508546\">said</a>:</p>\n<blockquote>\n<p>I think the simplest would be to create a new issue. Including file entities in the link autocomplete could be the quickest way to get this</p>\n</blockquote>\n<p>I'll create the issue first thing tomorrow.  Thanks <span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span></p>\n</blockquote>\n<p>Autocomplete will not work.  There are hundreds/thousand of files and a complex file structure.  They need to be able to browse to find the file they want.  These are end users, not technical people.  They aren't going to remember the exact file name or directory structure that it's in until they see it.  That is part of why D7 had the Browse Server Link.  This is functionality that was there in D7.</p>",
+        "id": 212563209,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602079627
+    },
+    {
+        "content": "<p><span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span>‍♂️.</p>",
+        "id": 212564045,
+        "sender_full_name": "Herb",
+        "timestamp": 1602080003
+    },
+    {
+        "content": "<p>Oops, messed up emojis</p>",
+        "id": 212564074,
+        "sender_full_name": "Herb",
+        "timestamp": 1602080016
+    },
+    {
+        "content": "<p>ha! nope I didn't mess it up. When I edit the message it shows the \"male\" shrug, but after I save it shows the \"female\" one and adds the male symbol</p>",
+        "id": 212564288,
+        "sender_full_name": "Herb",
+        "timestamp": 1602080113
+    },
+    {
+        "content": "<p>Anyway, getting the browser button is a new feature. I looked at D7's ckeditor module - it requires either IMCE or CKFinder</p>",
+        "id": 212564452,
+        "sender_full_name": "Herb",
+        "timestamp": 1602080176
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212564045\">said</a>:</p>\n<blockquote>\n<p><span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span>‍♂️.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> , it may not seem like a show stopper for you but it is for us moving ahead with Backdrop as an agency.  We have many other clients in the same situation.  They are on D7 and have a lot of files and a complex file structure.  As a company, we don't want to invest in a CMS to find that it won't work for the majority of our clients.  We already use Wordpress for the small clients that want it and needed a solution for the bigger clients.  Wordpress is a horror when it comes to file management and any solutions are glommed on tope of the core, not integrated.   I absolutely have to have this long term and any larger site  already on the web will need it too.  Users tend to accumulate files and don't tend to clean them (just like with their PC's).  It's also a show stopper for us with the site that's supposed to go live Friday.  I didn't find out because, as the developer, I'm mainly migrating content using feeds, not creating new pages, plus I'm copying links and locations from the live site.  The end users just got into the site last week to do updates and practice before go live and we immediately have a gargantuan mess.</p>",
+        "id": 212565273,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602080524
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212564452\">said</a>:</p>\n<blockquote>\n<p>Anyway, getting the browser button is a new feature. I looked at D7's ckeditor module - it requires either IMCE or CKFinder</p>\n</blockquote>\n<p>I disagree.  If you use Ckeditor and don't install another file tracker,  you HAVE to use CKFinder by default.  It comes with ckeditor.  Backdrop chose to integrate ckeditor into core, so loading it as a contrib module is problematic.  If you use IMCE, it's a replacement for CKFinder.    I don't care whether it's treated as a contrib or core module, I need it.  And I can tell you that most migrations will too, unless the site is really small.</p>",
+        "id": 212565794,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602080761
+    },
+    {
+        "content": "<p>In D7 <em>with</em> IMCE it's possible to browse the files directories directly via the ckeditor link dialog. That's currently not possible in Backdrop. I belief, that's what <span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> is asking for. Let people <em>link</em> to files (also images).</p>\n<p>Here's a screenshot of that D7 CKEditor dialog:<br>\n<a href=\"/user_uploads/18319/CZCCX4n7yZKiipDv7UHWVTJx/screenshot-d7-edit.png\">screenshot-d7-edit.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/CZCCX4n7yZKiipDv7UHWVTJx/screenshot-d7-edit.png\" title=\"screenshot-d7-edit.png\"><img src=\"/user_uploads/18319/CZCCX4n7yZKiipDv7UHWVTJx/screenshot-d7-edit.png\"></a></div>",
+        "id": 212566175,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602080900
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> I'm shrugging because I understand your request, but I'm not going to be the person to fix that for you.</p>\n<p>Maybe someone will. You could wait until it happens, put up a bounty and see if someone will build it, or build the feature in-house. Those are the same choices I make.</p>",
+        "id": 212566747,
+        "sender_full_name": "Herb",
+        "timestamp": 1602081148
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212566747\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> I'm shrugging because I understand your request, but I'm not going to be the person to fix that for you.</p>\n<p>Maybe someone will. You could wait until it happens, put up a bounty and see if someone will build it, or build the feature in-house. Those are the same choices I make.</p>\n</blockquote>\n<p>@**Herb,<br>\nI'm not asking you to.  I'm opening an issue because I see this as an issue.  You can disagree with me or not.  This is functionality I had out of the box with D7.</p>",
+        "id": 212567004,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602081266
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> Did you already open a core issue for that? (Ability to link to files using imce or something like that)<br>\nYour request will get more visibility with an issue and maybe others need that too - and then someone starts working on it...</p>",
+        "id": 212567553,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602081503
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212567553\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> Did you already open a core issue for that? (Ability to link to files using imce or something like that)<br>\nYour request will get more visibility with an issue and maybe others need that too - and then someone starts working on it...</p>\n</blockquote>\n<p>Logging the issue right now. The issue was found Monday by my clients.  Was asking here yesterday to see if there was a contrib solution before I logged the issue.</p>",
+        "id": 212567807,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602081630
+    },
+    {
+        "content": "<blockquote>\n<p>Was asking here yesterday to see if there was a contrib solution before I logged the issue.</p>\n</blockquote>\n<p>It doesn't look like that, but a core issue still can lead to a contrib solution. And probably more people will get aware of your request if it's in the issue queue.</p>",
+        "id": 212569462,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602082278
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212569462\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>Was asking here yesterday to see if there was a contrib solution before I logged the issue.</p>\n</blockquote>\n<p>It doesn't look like that, but a core issue still can lead to a contrib solution. And probably more people will get aware of your request if it's in the issue queue.</p>\n</blockquote>\n<p>I really don't care as long as there IS a solution.  Or at least some guidance, since it's functionality that has been integrated into core.  I had to install ckeditor and the admin toolbar for Drupal 7 (among about 30 other modules that we considered essential, such as metatag) for every site we did.   We are doing the same with Backdrop, although the number is smaller. I don't mind adding one more.  I don't have time to risk modifying core functionality though, since I'm one of two for the entire agency, so I can't develop a solution by myself, especially as the site is live.  And I'm sure that we're not the only ones who will have this problem if Backdrop is to grow as a CMS.</p>",
+        "id": 212573760,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602083783
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212567553\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> Did you already open a core issue for that? (Ability to link to files using imce or something like that)<br>\nYour request will get more visibility with an issue and maybe others need that too - and then someone starts working on it...</p>\n</blockquote>\n<p>Issue opened - Browse Server Button Missing on Link Dialog in Ckeditor (Core) <a href=\"https://github.com/backdrop/backdrop-issues/issues/4688\">#4688</a>.  <a href=\"https://github.com/backdrop/backdrop-issues/issues/4688\">https://github.com/backdrop/backdrop-issues/issues/4688</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4688\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4688\" title=\"Browse Server Button Missing on Link Dialog in Ckeditor (Core) · Issue #4688 · backdrop/backdrop-issues\">Browse Server Button Missing on Link Dialog in Ckeditor (Core) · Issue #4688 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In Drupal 7, with ckeditor installed, the link dialog has a Browse Server button that allows the user (with the appropriate role) find a file already uploaded on the server : Backdrop moved ckedito...</div></div></div>",
+        "id": 212575091,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602084257
+    },
+    {
+        "content": "<blockquote>\n<p>don't have time to risk modifying core functionality though, since I'm one of two for the entire agency, so I can't develop a solution by myself, especially as the site is live.</p>\n</blockquote>\n<p>If you modify core and submit a functional PR to the issue you filed, I'd say it has a good chance of getting in. I'd support that feature. I don't know for sure, but maybe the current Image library browser could be cloned and turned into a file browser?</p>",
+        "id": 212598319,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602094700
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212598319\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>don't have time to risk modifying core functionality though, since I'm one of two for the entire agency, so I can't develop a solution by myself, especially as the site is live.</p>\n</blockquote>\n<p>If you modify core and submit a functional PR to the issue you filed, I'd say it has a good chance of getting in. I'd support that feature. I don't know for sure, but maybe the current Image library browser could be cloned and turned into a file browser?</p>\n</blockquote>\n<p>If I do it, it will have to wait until I have time.  I don't think I want anything that shows images though.  Most of these are pdf's or other documents, rather than images.  The current image library browser also doesn't do a good job of supporting subdirectories.  It's almost as bad as the Wordpress one.  Subdirectories are key here.  If I do it, it will link to either ckfinder or imce (or other 3rd party), the same way that Drupal 7 ckeditor module works.  (If nothing else, it will be easier for me to replicate that code).  Both CKFinder and IMCE have full directory support (although they aren't pretty).</p>",
+        "id": 212598722,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602094915
+    },
+    {
+        "content": "<p>It looks like IMCE is seeking maintainers -- that could be another direction to go instead of core.</p>",
+        "id": 212602687,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602096765
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/imce\">https://github.com/backdrop-contrib/imce</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/imce\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/imce\" title=\"backdrop-contrib/imce\">backdrop-contrib/imce</a></div><div class=\"message_embed_description\">Backdrop port of Drupal 7 module. Image/file uploader and browser - backdrop-contrib/imce</div></div></div>",
+        "id": 212602743,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602096795
+    },
+    {
+        "content": "<p>Is this related? (Already has a PR it looks like)<br>\n<a href=\"https://github.com/backdrop-contrib/imce/issues/9\">https://github.com/backdrop-contrib/imce/issues/9</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/imce/issues/9\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/imce/issues/9\" title=\"Plugin for inserting files from IMCE without image dialog. · Issue #9 · backdrop-contrib/imce\">Plugin for inserting files from IMCE without image dialog. · Issue #9 · backdrop-contrib/imce</a></div><div class=\"message_embed_description\">Drupal 7 CKEditor project ships with a IMCE direct integration module, which could be usefull to IMCE users in Backdrop. I made a PR for this : #8 I made a small edit to the plugin : remove the sty...</div></div></div>",
+        "id": 212602953,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602096877
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212602953\">said</a>:</p>\n<blockquote>\n<p>Is this related? (Already has a PR it looks like)<br>\n<a href=\"https://github.com/backdrop-contrib/imce/issues/9\">https://github.com/backdrop-contrib/imce/issues/9</a></p>\n</blockquote>\n<p>No.  that's for putting code directly into the editor for an image.  It's actually the opposite of what I need.</p>",
+        "id": 212621860,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602106239
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/ckeditor/near/212602687\">said</a>:</p>\n<blockquote>\n<p>It looks like IMCE is seeking maintainers -- that could be another direction to go instead of core.</p>\n</blockquote>\n<p>I don't think the issue is IMCE - it's missing in ckeditor.  I think the link dialog form in ckeditor needs to be modified to add the browse server button.  It's the same button that exists already in the image dialog.  I'm going to have to go through the code in D7 module to see where that button is added.  If you use CKFinder, it's the same button as with IMCE.</p>",
+        "id": 212623361,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602107196
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> you mentioned the need to browse ac complex file structure somewhere earlier. I'm assuming this is to insert links to actual document files stored on server, like Word or Excel files? Just thinking this through and considering that a browser of some sort would need to browse files, and content, and maybe other things, and I'm wondering how to browse site content like pages and posts.</p>",
+        "id": 212917767,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1602338855
+    },
+    {
+        "content": "<p>@docwilmot, I think you’re making it more complex than it is. The ‘browse server’ I was thinking of was strictly for files.  It can be pdf’s, xlsx, docx, doc, txt, etc.   The majority are pdf’s but there are also other kinds of files.  For images and files, though, it tends to be really bad.  You can have 5 (or less or more) different sizes or versions  of the same image or pdf with all sorts of meaningless names.  They can’t find or remember them.   I also think you’ll have lots of problems if you try and mix the two (probably why the link autocomplete doesn’t work well for us - it can’t handle large quantities and most of our sites have well over several hundred pages).</p>\n<p>For the most part they don’t have a problem linking pages and posts - all they have to do is bring the page or post up in another window and copy the URL (without the domain).  That’s not a problem.  And for pages and posts, I’d focus on fixing what the link autocomplete brings up.  There’s only 3 selections and it chokes if the name is too complicated even with pages. </p>\n<p>Elisabeth Garbeil, MBA PMP<br>\nBrainwrap LLC<br>\n\"Being on the web doesn't have to make your head hurt.\"<br>\n<a href=\"http://www.brainwrap.com\">www.brainwrap.com</a><br>\n(810) 560-7181<br>\n<a href=\"mailto:egarbeil@brainwrap.com\">egarbeil@brainwrap.com</a></p>",
+        "id": 212921690,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602345052
+    },
+    {
+        "content": "<p>For images, it sounds like the Media Browser from the D7 Media module would be beneficial: <a href=\"https://www.drupal.org/project/media\">https://www.drupal.org/project/media</a><br>\nI don't know how hard it would be to extract it from the module, but my guess us that it would be no small feat.</p>",
+        "id": 212921850,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1602345318
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/CKEditor.20browse.20server.20files/near/212921850\">said</a>:</p>\n<blockquote>\n<p>For images, it sounds like the Media Browser from the D7 Media module would be beneficial: <a href=\"https://www.drupal.org/project/media\">https://www.drupal.org/project/media</a><br>\nI don't know how hard it would be to extract it from the module, but my guess us that it would be no small feat.</p>\n</blockquote>\n<p>That would be challenging - that's a huge module with some bugs in it, although useful.  It's also got some major issues in that it's actually a view and kind of buggy at that.  IMCE works much better without the bugginess for images.  I used to have to patch that module regularly (as in every time they issued a new release) for D7.</p>",
+        "id": 212921994,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602345565
+    },
+    {
+        "content": "<blockquote>\n<p>The ‘browse server’ I was thinking of was strictly for files. </p>\n</blockquote>\n<p>In that case IMCE should be enough for this then. You can make a tiny custom module with only the following code in the module file:</p>\n<div class=\"codehilite\"><pre><span></span><code>/**\n * Implements hook_form_FORM_ID-alter().\n *\n * Adds a &quot;Browse server&quot; link to the backdroplink dialog.\n *\n * @see filter_format_editor_image_form().\n */\n\nfunction MODULE_form_filter_format_editor_link_form_alter(&amp;$form, &amp;$form_state) {\n  $form[&#39;href&#39;][&#39;#id&#39;] = &#39;urlField&#39;;\n  $openFileBrowser =\n    &#39;$(&quot;#ckeditor-modal .form-type-managed-file&quot;).hide();&#39;\n  . &#39;$(&quot;#ckeditor-modal .form-item-attributes-src&quot;).show();&#39;\n  . &#39;window.open(&quot;&#39; . base_path()\n  . &#39;imce?app=backdrop|url@urlField&quot;, &quot;&quot;, &quot;width=760,height=560,resizable=1&quot;);&#39;;\n  $form[&#39;href&#39;][&#39;#suffix&#39;] = &quot;&lt;input type=button onclick=&#39;javascript:&quot;\n    . $openFileBrowser . &quot;&#39; value=&#39;Browse server&#39; style=&#39;float:right;&#39;&gt;&quot;;\n}\n</code></pre></div>",
+        "id": 212935818,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1602366111
+    },
+    {
+        "content": "<p>(Or just hack IMCE.module and rplace MODULE with \"imce\")</p>",
+        "id": 212935888,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1602366173
+    },
+    {
+        "content": "<p>If custom module, make it dependent on IMCE</p>",
+        "id": 212935906,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1602366190
+    },
+    {
+        "content": "<p>We can aim to have a more robust solution in  core eventually but that should get you by for now</p>",
+        "id": 212935964,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1602366247
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/CKEditor.20browse.20server.20files/near/212935818\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>The ‘browse server’ I was thinking of was strictly for files. </p>\n</blockquote>\n<p>In that case IMCE should be enough for this then. You can make a tiny custom module with only the following code in the module file:</p>\n<div class=\"codehilite\"><pre><span></span><code>/**\n * Implements hook_form_FORM_ID-alter().\n *\n * Adds a &quot;Browse server&quot; link to the backdroplink dialog.\n *\n * @see filter_format_editor_image_form().\n */\n\nfunction MODULE_form_filter_format_editor_link_form_alter(&amp;$form, &amp;$form_state) {\n  $form[&#39;href&#39;][&#39;#id&#39;] = &#39;urlField&#39;;\n  $openFileBrowser =\n    &#39;$(&quot;#ckeditor-modal .form-type-managed-file&quot;).hide();&#39;\n  . &#39;$(&quot;#ckeditor-modal .form-item-attributes-src&quot;).show();&#39;\n  . &#39;window.open(&quot;&#39; . base_path()\n  . &#39;imce?app=backdrop|url@urlField&quot;, &quot;&quot;, &quot;width=760,height=560,resizable=1&quot;);&#39;;\n  $form[&#39;href&#39;][&#39;#suffix&#39;] = &quot;&lt;input type=button onclick=&#39;javascript:&quot;\n    . $openFileBrowser . &quot;&#39; value=&#39;Browse server&#39; style=&#39;float:right;&#39;&gt;&quot;;\n}\n</code></pre></div>\n\n\n</blockquote>\n<p>I'd do  as a small custom module, rather than tack on to IMCE.  Eventually I'd like to get to the solution I was talking about above, where it's part of the ckeditor configuration to choose this (but not make it the default) if IMCE is installed.  There should be a check for IMCE installation as well.  I think it's in the code in the D7 contrib already. For now a small custom module would do. I'll test it out later this week.</p>",
+        "id": 212936018,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602366359
+    },
+    {
+        "content": "<p>If I'm understanding you correctly, that would make core dependent on a contrib module, and <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> won't be in favor of that.</p>",
+        "id": 212936872,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1602367639
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/CKEditor.20browse.20server.20files/near/212936872\">said</a>:</p>\n<blockquote>\n<p>If I'm understanding you correctly, that would make core dependent on a contrib module, and <span class=\"user-mention silent\" data-user-id=\"258586\">quicksketch</span> won't be in favor of that.</p>\n</blockquote>\n<p>Not really,  I want the dropdown there regardless of whether IMCE is installed or not. There are other 3rd party browsers, and some companies do use CKFinder and prefer that.  Thus the default of NONE.  Ideally if IMCE installed, it shows up in that list.  That's how ckeditor works now in Drupal 7.  (see image above).  If it had been left as contrib, I'd have no issues, but Backdrop moved ckeditor into core and vastly changed it.  We've been able to work with it with the addition of several modules, and some changes I still have to figure out, but this is one addition that is vital.  Another option would be allow the contrib module to alter ckeditor setup, but I'm not sure that's a good idea, because, as I've said, there are other 3rd party browsers.   Take a look at the ckeditor module on Drupal 7.  All the behavior I'm discussing is already there and was stripped out for Backdrop.</p>",
+        "id": 212937085,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602368000
+    },
+    {
+        "content": "<blockquote>\n<p>I want the dropdown there regardless of whether IMCE is installed or not. </p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> You seem to prefer discussion in the chat. That has some disadvantages, though, because it's pretty informal and hard to find after some time. I'd suggest that you add this information to the respective <a href=\"https://github.com/backdrop/backdrop-issues/issues/4688\">issue</a>, otherwise it might be lost.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4688\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4688\" title=\"Browse Server Button Missing on Link Dialog in Ckeditor (Core) · Issue #4688 · backdrop/backdrop-issues\">Browse Server Button Missing on Link Dialog in Ckeditor (Core) · Issue #4688 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In Drupal 7, with ckeditor installed, the link dialog has a Browse Server button that allows the user (with the appropriate role) find a file already uploaded on the server : Backdrop moved ckedito...</div></div></div>",
+        "id": 212959322,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602411470
+    },
+    {
+        "content": "<p>It is there in the issue already.  I included an image of how it works in Drupal 7 and a description.  </p>\n<p>Elisabeth Garbeil, MBA PMP<br>\nBrainwrap Web Design<br>\n(810) 560-7181<br>\nSent from my iPhone</p>",
+        "id": 212964449,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602420693
+    }
+]

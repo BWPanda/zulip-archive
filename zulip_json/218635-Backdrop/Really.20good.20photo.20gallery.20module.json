@@ -1,0 +1,272 @@
+[
+    {
+        "content": "<p>Any suggestions on a good, user friendly photo gallery module for backdrop.  Right now, I'm porting those clients into Wordpress because there isn't a really user friendly drag and drop solution for Backdrop that I can find.  Using views is fine for sites where the gallery isn't the main focus, but it doesn't really work well for an end user whose site is mainly a gallery.  Media gallery used to be great, but severely buggy - in that I had to patch it for every user.  Other suggestions?  I'd like to move away from Wordpress for more of my clients.</p>",
+        "id": 219359491,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607530760
+    },
+    {
+        "content": "<p>Can you explain more what you're wanting? Why is Views not suitable? Is it the frontend slideshow/lightbox functionality you're wanting, or backend uploading that's the problem...?</p>",
+        "id": 219387993,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607543055
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219387993\">said</a>:</p>\n<blockquote>\n<p>Can you explain more what you're wanting? Why is Views not suitable? Is it the frontend slideshow/lightbox functionality you're wanting, or backend uploading that's the problem...?</p>\n</blockquote>\n<p>It's the ability to drag and drop move items in a gallery, upload in bulk and be able to manipulate easily.   I can do the slideshow/gallery thing with views, but it's not easy for the user to interact with - it's not user friendly.   That functionality existed in Drupal in media gallery, but I don't really want to use that module or port it, as it was pretty buggy.  </p>\n<p>There's a number of galleries in Wordpress that are pretty easy to use, but the backend file management sucks big time, as Wordpress core  does not support subdirectories, nor do the galleries modules  I've found.  I have one Drupal client for which this a BIG deal - they have hundreds of images in many galleries (total images are in the high thousands)  and it would be a nightmare to port to Backdrop at this point.  Something that I have to keep in mind.  They are also not a candidate for Wordpress.</p>",
+        "id": 219406907,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607552066
+    },
+    {
+        "content": "<blockquote>\n<p>I have one Drupal client for which this a BIG deal </p>\n</blockquote>\n<p>So what are they using then?</p>",
+        "id": 219412956,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1607555231
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219412956\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>I have one Drupal client for which this a BIG deal </p>\n</blockquote>\n<p>So what are they using then?</p>\n</blockquote>\n<p>Media Gallery, which as I have said, I don't want to port to Backdrop because it's buggy.  And it has a number of dependencies, which I don't think would be simple to port.</p>",
+        "id": 219426524,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607568282
+    },
+    {
+        "content": "<p>For example, free wordpress gallery plugins are:  Envira Gallery Lite,  Modula Free version,  NextGen Gallery, FooGallery and so on ...  (<a href=\"https://kinsta.com/blog/wordpress-photo-gallery-plugins/\">https://kinsta.com/blog/wordpress-photo-gallery-plugins/</a>).  I've used several of them on Wordpress sites and they all have the ease of use I'm looking for.  Drupal really lagged in this area, and I haven't seen much like it on Backdrop yet. I'm hoping someone knows of a gallery module that's been added since I last looked or one I don't know about.  One thing ALL the Wordpress photo modules lack is file and directory management, which means that looking for one file out of thousands can be a nightmare and it is an issue on some of my Wordpress sites, so I really don't want to go that route for galleries if I can avoid it.  Looking for suggestions or ideas I haven't thought of, NOT for someone to write code or port a module for me.   And please dont' suggest views gallery, because I have already gone that route and while it works for the client I'm using it with, it is not a good solution for other clients (including the new one I will be doing in Wordpress because of exactly this.)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://kinsta.com/blog/wordpress-photo-gallery-plugins/\" style=\"background-image: url(https://kinsta.com/wp-content/uploads/2020/05/wordpress-photo-gallery-plugins-1.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://kinsta.com/blog/wordpress-photo-gallery-plugins/\" title=\"16 Best WordPress Photo Gallery Plugins (Compared With Examples)\">16 Best WordPress Photo Gallery Plugins (Compared With Examples)</a></div><div class=\"message_embed_description\">Discover the best WordPress photo gallery plugins so that your photos are not only presented well, but they don't cause problems with site performance.</div></div></div>",
+        "id": 219427126,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607569194
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> Just out of curiosity, if there were a Backdrop module that allowed dragging &amp; dropping of images in a grid (like this: <a href=\"https://www.drupal.org/files/images/media_gallery.png\">https://www.drupal.org/files/images/media_gallery.png</a>) would that suit?</p>\n<div class=\"message_inline_image\"><a href=\"https://www.drupal.org/files/images/media_gallery.png\"><img src=\"https://www.drupal.org/files/images/media_gallery.png\"></a></div>",
+        "id": 219427313,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607569394
+    },
+    {
+        "content": "<p>In other words, Backdrop has multi-file upload, an image library, lightbox support, etc.</p>",
+        "id": 219427318,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607569414
+    },
+    {
+        "content": "<p>So just wondering what exact functionality you're missing...</p>",
+        "id": 219427323,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607569434
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219427318\">said</a>:</p>\n<blockquote>\n<p>In other words, Backdrop has multi-file upload, an image library, lightbox support, etc.</p>\n</blockquote>\n<p>@BwPanda, No it doesn't.  That's media gallery, and I just checked today - it hasn't been ported to Backdrop - or at least it's not publicly available on the backdrop modules.  And I don't want to, because as I have said before , it has dependencies, and the module on Drupal is buggy to say the least - and I can say that because I've had to fix it on every site and have used it since 2012.  That would be a lot of sites. I like the way it works, but I don't think it would be easy or simple to port and fix all the bugs and issues.  I think there would be a fair amount of changes to be made to have it work with Backdrop without requiring lots of bug fixes.  I wouldn't ask anyone else to either, but someone may have come up with a different solution that I don't know about.</p>\n<p><a href=\"https://backdropcms.org/modules?s=media+gallery\">https://backdropcms.org/modules?s=media+gallery</a></p>\n<p>And as to your other comments - please read the thread. Backdrop's core file upload functionality sucks for large numbers of files and directory management.  That is why my clients on Backdrop use IMCE (that's a separate thread).  The core media library browser can't handle large numbers of files, subdirectories and so on...  I haven't seen a module in Backdrop  that just allows a user to click on a button, upload a large number of files and then just drag and drop them in the order they want, move them around, add titles and captions and do this all simply and easily by going to content -add gallery.  Yes, the lightbox functionality is there, but that's colorbox, not media gallery and not my issue.  </p>\n<p>I've used views gallery on another Backdrop site, and it's not a good solution for photo galleries.  It works great when the client wants me to just deal with it for a small number of files, or just wants to add one image at a time and have the gallery immediately re-order by date - but those aren't photos, they're magazine issues (just one example - views gallery works for this client, but they don't do a lot of photo galleries).  </p>\n<p>Most of my photo galleries, the client wants to be able to move them around, play with the photos maybe delete one and then add another, until it looks the way they want.  And they want to easily be able to do this.  All the functionality i'm talking about exists for Wordpress plugins, but I'd rather do it in Backdrop for clients with lots of photo galleries.</p>",
+        "id": 219427528,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607569718
+    },
+    {
+        "content": "<p>Backdrop has <a href=\"https://github.com/backdrop-contrib/html5_upload\">multi-file uploads</a>, an <a href=\"https://github.com/backdrop/backdrop-issues/issues/1307\">image library</a> and <a href=\"https://github.com/backdrop-contrib/colorbox\">lightbox support</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/html5_upload\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/html5_upload\" title=\"backdrop-contrib/html5_upload\">backdrop-contrib/html5_upload</a></div><div class=\"message_embed_description\">Batch-uploading (drag-and-drop multiple) of images/files in modern (HTML5 compliant) browsers - backdrop-contrib/html5_upload</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1307\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1307\" title=\"[META][UX] Improvements for the image library · Issue #1307 · backdrop/backdrop-issues\">[META][UX] Improvements for the image library · Issue #1307 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Create a new file field widget for reusable/selectable managed files Must have Library tab: Grid of images to choose from (based on Views) Library tab: Display information (Add the following fields...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/colorbox\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/colorbox\" title=\"backdrop-contrib/colorbox\">backdrop-contrib/colorbox</a></div><div class=\"message_embed_description\">A port of the Colorbox Drupal 7 module to BackdropCMS - backdrop-contrib/colorbox</div></div></div>",
+        "id": 219428025,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607570478
+    },
+    {
+        "content": "<p>The point I'm trying to make is that if you can't/won't port Media Gallery to Backdrop, then you'll need to use a bunch of modules together to produce a similar outcome. I.e. Colorbox to provide the lightbox functionality, HTML5 Upload for the bulk uploads, etc. Then you just need to work out what functionality Backdrop doesn't have at all, and you/someone can work on that.</p>",
+        "id": 219428186,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607570676
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219428025\">said</a>:</p>\n<blockquote>\n<p>Backdrop has <a href=\"https://github.com/backdrop-contrib/html5_upload\">multi-file uploads</a>, an <a href=\"https://github.com/backdrop/backdrop-issues/issues/1307\">image library</a> and <a href=\"https://github.com/backdrop-contrib/colorbox\">lightbox support</a></p>\n</blockquote>\n<p>AGAIN, none of that allows a client to simply press a button and upload images into a gallery to easily drag and drop move, add captions and titles, etc. etc.  I know about all those modules, but they don't do what I need. and As to the Image library - it's useless when you have subdirectories and a lot of files .  I've tried it and it's not helpful  for this.  Colorbox is fine, but not what I'm talking about.  Colorbox is not the gallery.</p>",
+        "id": 219428190,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607570686
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219428186\">said</a>:</p>\n<blockquote>\n<p>The point I'm trying to make is that if you can't/won't port Media Gallery to Backdrop, then you'll need to use a bunch of modules together to produce a similar outcome. I.e. Colorbox to provide the lightbox functionality, HTML5 Upload for the bulk uploads, etc. Then you just need to work out what functionality Backdrop doesn't have at all, and you/someone can work on that.</p>\n</blockquote>\n<p>So, basically,  the answer is no.  And media gallery already uses other modules  (such as Colorbox and PLUpload) to do those.  None of it is the gallery and that's the functionality I need.  And that's something I already knew.    And my client's aren't going to be willing to pay me for the development of a photo gallery module, thus this post asking if anyone knew of something I hadn't already looked for.  Such as a module that may not be called media gallery or photo gallery, and so on....</p>",
+        "id": 219428384,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607571001
+    },
+    {
+        "content": "<blockquote>\n<p>So, basically,  the answer is no.</p>\n</blockquote>\n<p>Correct.</p>",
+        "id": 219428467,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607571111
+    },
+    {
+        "content": "<p>I am not assuming that the media gallery module is the only solution, it's just the only one on Drupal I've used besides Views Galleria or Views Gallery, both of which I have used.  I may just have to live with Wordpress and its godawful file management.  It irks me because I had some absolutely stunning gallery sites on Drupal 7, even with a buggy media gallery module, and the clients loved them and loved the sites.</p>\n<p>I don't think the Wordpress gallery sites I've done even come close to how good those were.  And the one current client I have that has multiple photo galleries will probably end up somewhere else as well.  The thing is I love how easy Backdrop is to use and develop with.  It kept all the good features of Drupal 7 and fixed a lot of the bad ones.  The media functionality seems to be the main missing piece.</p>",
+        "id": 219428512,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607571147
+    },
+    {
+        "content": "<p>Re drag-n-drop ordering <span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> have you tried <a href=\"https://github.com/backdrop-contrib/draggableviews\">https://github.com/backdrop-contrib/draggableviews</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/draggableviews\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/draggableviews\" title=\"backdrop-contrib/draggableviews\">backdrop-contrib/draggableviews</a></div><div class=\"message_embed_description\">Makes Views draggable. Contribute to backdrop-contrib/draggableviews development by creating an account on GitHub.</div></div></div>",
+        "id": 219434072,
+        "sender_full_name": "klonos",
+        "timestamp": 1607578704
+    },
+    {
+        "content": "<p>While I’m willing to believe it won’t cover <span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> ‘s needs (she seems pretty clear about what those are) I think I’m going to try <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ‘s formula above.  Peter, was that screenshot you pasted above a Backdrop site, or Drupal running Media Gallery as Elisabeth said?</p>",
+        "id": 219439507,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1607585934
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> That was the screenshot from the Drupal module page.</p>",
+        "id": 219444870,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607590182
+    },
+    {
+        "content": "<p>Was there any similar module in D7 that's was user friendly and not as scary as Media?</p>",
+        "id": 219470440,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1607606570
+    },
+    {
+        "content": "<blockquote>\n<p>I think I’m going to try @BWPanda ‘s formula above.</p>\n</blockquote>\n<p>Yep! I've built a gallery content type similar to that formula, and it works pretty well. It doesn't cover all of <span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span>'s requirements yet, but in my opinion it could be a good start.</p>",
+        "id": 219484590,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607612998
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256664\">Luke McCormick</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219439507\">said</a>:</p>\n<blockquote>\n<p>While I’m willing to believe it won’t cover <span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> ‘s needs (she seems pretty clear about what those are) I think I’m going to try <span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> ‘s formula above.  Peter, was that screenshot you pasted above a Backdrop site, or Drupal running Media Gallery as Elisabeth said?</p>\n</blockquote>\n<p>It's the image from the drupal project page for media gallery.   <a href=\"https://www.drupal.org/project/media_gallery\">https://www.drupal.org/project/media_gallery</a></p>",
+        "id": 219493114,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607616299
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219470440\">said</a>:</p>\n<blockquote>\n<p>Was there any similar module in D7 that's was user friendly and not as scary as Media?</p>\n</blockquote>\n<p>@docwilmot, I'm assuming you meant media gallery module?  Media is in core now.  I hadn't found one that met needs adequately.  There were some that were more like views galleria, where the photo gallery was more of a display, nothing you could interact with.  Ex - photoswipe and others.  Photoswipe was ported, but I haven't seen that it enables the user to be able to drag and drop reorder photos and add captions  &amp; titles like media gallery while in view mode (or delete an image from the gallery  and add one).  This is by the way the major requirement all my users had and have.</p>",
+        "id": 219493778,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607616584
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219484590\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>I think I’m going to try @BWPanda ‘s formula above.</p>\n</blockquote>\n<p>Yep! I've built a gallery content type similar to that formula, and it works pretty well. It doesn't cover all of <span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span>'s requirements yet, but in my opinion it could be a good start.</p>\n</blockquote>\n<p>The main requirement - coming from users by the way  - is to be able to drag and drop reorder, add captions and titles, and delete or add media via the front end (think view mode), rather than have to do it by entering an edit and going back and forth from edit to view.  Media Gallery had this, as do all the Wordpress photo galleries (though some are clunkier than others and some do require doing it in edit, but they have a much better edit form ..).  <br>\nI can't afford to lose clients over it, so I've been using Wordpress, as I don't do any new development in Drupal anymore.  But some clients are not a good fit for Wordpress at all, so that leaves Drupal 9 (which eliminates itself because of cost of initial site development - although I may have to revisit that - Drupal 8 was a definite no (that's another thread)) or something else. Which sucks because I LIKE Backdrop and can't afford the learning curve on too many CMS's to stay in business.  It's bad enough that I'm now split three ways between Wordpress, Backdrop and Drupal maintenance.</p>",
+        "id": 219494987,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607616950
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219412956\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>I have one Drupal client for which this a BIG deal </p>\n</blockquote>\n<p>So what are they using then?</p>\n</blockquote>\n<p>It's Drupal 7, with media gallery.  Which I like  and meets my needs, but is extremely buggy, even on Drupal.  I have to routinely patch that module on Drupal, and it has a number of dependencies as well, which haven't been ported.  I think it would be incredibly difficult to port and would require a lot of maintenance, which puts me out of the running for doing that - as I'm a one woman shop that can't afford to do much unpaid development.   I wouldn't ask anyone else to do it either.</p>",
+        "id": 219496052,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607617345
+    },
+    {
+        "content": "<p>It would be really nice if one of the Wordpress photo gallery modules got ported to Backdrop - but in most cases they are not open source, so it would have to be the developer's choice.  Too bad we can't encourage them to develop for Backdrop too, but the model is different. Wordpress seems to be free limited module, but paid expanded and that's how they make money ... Most of the money in Drupal was development, with the end results being open source.  Of course, that may be what led it to be enterprise focused - they are the ones that can afford to develop modules.    It's a philosophical difference.  Wonder if there's a way to combine the two to benefit?</p>",
+        "id": 219497821,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607618049
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219434072\">said</a>:</p>\n<blockquote>\n<p>Re drag-n-drop ordering <span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> have you tried <a href=\"https://github.com/backdrop-contrib/draggableviews\">https://github.com/backdrop-contrib/draggableviews</a> ?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , yes I tried this - good with lists, but not so much photo galleries.  It clogged up and is a pain to set up.  Doesn't make sense for photo galleries. ...   Works great to emulate the drag &amp; drop on menus and such for other things though!  Could totally see using it for product catalog views.</p>",
+        "id": 219501723,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607619555
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> agreed re not ideal, but combined with <a href=\"https://github.com/backdrop-contrib/editableviews\">https://github.com/backdrop-contrib/editableviews</a> I believe that it would allow to drag-n-drop + edit the image list from within the same page.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/editableviews\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/editableviews\" title=\"backdrop-contrib/editableviews\">backdrop-contrib/editableviews</a></div><div class=\"message_embed_description\">Create Views where the fields can be edited. Contribute to backdrop-contrib/editableviews development by creating an account on GitHub.</div></div></div>",
+        "id": 219502067,
+        "sender_full_name": "klonos",
+        "timestamp": 1607619706
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219502067\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> agreed re not ideal, but combined with <a href=\"https://github.com/backdrop-contrib/editableviews\">https://github.com/backdrop-contrib/editableviews</a> I believe that it would allow to drag-n-drop + edit the image list from within the same page.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> - if it's a lot of work for a kludge, that's a problem.  If my clients encounter too many bugs, I lose them. ... Plus I can't charge for the work.  I haven't combined the two, although I have used both (in Drupal) for separate use cases.  At that point, if its the same amount to work as porting media gallery ....</p>",
+        "id": 219502605,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607619917
+    },
+    {
+        "content": "<p>Packery allows draggability but I don't think the D7 module has that piece integrated into the Views portion -- could that module be ported and potentially be expanded to allow dragging/track sorting (like Draggable Views does)?</p>\n<p>Draggability demo: <a href=\"https://packery.metafizzy.co/draggable.html\">https://packery.metafizzy.co/draggable.html</a></p>",
+        "id": 219542665,
+        "sender_full_name": "Laryn",
+        "timestamp": 1607639044
+    },
+    {
+        "content": "<p>Drupal 7 module: <a href=\"https://www.drupal.org/project/packery\">https://www.drupal.org/project/packery</a></p>",
+        "id": 219542782,
+        "sender_full_name": "Laryn",
+        "timestamp": 1607639123
+    },
+    {
+        "content": "<blockquote>\n<p>Most of the money in Drupal was development, with the end results being open source.  Of course, that may be what led it to be enterprise focused - they are the ones that can afford to develop modules.    It's a philosophical difference.  Wonder if there's a way to combine the two to benefit?</p>\n</blockquote>\n<p>Chime in on the \"monetizing Backdrop\" topic if this interests you. Be forewarned it's a touchy, divided topic but we definitely need more perspective on it.</p>",
+        "id": 219545625,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607640950
+    },
+    {
+        "content": "<p>The Draggability demo looks nice!</p>",
+        "id": 219579790,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607677831
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> this here might not be a direct solution to your problem... but I was fiddling around with image galleries for years in Drupal 7. Now in Backdrop, I use the Uikit CSS framework (not Bootstrap, like core does). But this forced me to write field templates, which is what I should have learned years ago. This is my solution for an image gallery... 9 lines of code... and the backend is a pure Backdrop CMS image multifield, including sorting, crop, caption</p>\n<p>&lt;div class=\"uk-child-width-1-4@m uk-child-width-1-3@l uk-child-width-1-4@s  uk-child-width-1-4 uk-grid-small\" uk-grid uk-lightbox=\"animation: slide\"&gt;<br>\n     &lt;?php foreach ($items as $delta =&gt; $item): ?&gt;<br>\n        &lt;div&gt;<br>\n        &lt;a class=\"uk-inline\" href=\"&lt;?php print image_style_url('16_9_standard', $item['#item']['uri']); ?&gt;\" data-caption=\"&lt;?php print render($item['#item']['title']); ?&gt;\"&gt;&lt;img src=\"&lt;?php print image_style_url('16_9_preview', $item['#item']['uri']); ?&gt;\" /&gt;&lt;/a&gt;<br>\n        &lt;/div&gt;<br>\n    &lt;?php endforeach; ?&gt;<br>\n&lt;/div&gt;</p>\n<p>I do not know Bootstrap enough, but I assume something very similar should be possible there, or with another 3rd party script. It's not a module solution, but I (being a marketer as my main profession) would never, never go back to any module-based solution for image galleries.</p>\n<p>Sample page (right column)<br>\n<a href=\"https://landwirtschaft.ag/monatshof/exklusivitaeten-vom-fisch-bis-zum-schnaps\">https://landwirtschaft.ag/monatshof/exklusivitaeten-vom-fisch-bis-zum-schnaps</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://landwirtschaft.ag/monatshof/exklusivitaeten-vom-fisch-bis-zum-schnaps\" style=\"background-image: url(https://landwirtschaft.ag/sites/lag/files/MH_Haeseli_16.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://landwirtschaft.ag/monatshof/exklusivitaeten-vom-fisch-bis-zum-schnaps\" title=\"Exklusivitäten vom Fisch bis zum Schnaps\">Exklusivitäten vom Fisch bis zum Schnaps</a></div><div class=\"message_embed_description\">Zander, Freilandschweine, Natura Beef und Edelbrände: Charlotte Häseli und ihre Tochter Judith haben sich auf ihrem Betrieb in Gipf-Oberfrick der Produktion von hochwertigen Produkten verschrieben.</div></div></div>",
+        "id": 219580578,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1607678392
+    },
+    {
+        "content": "<blockquote>\n<p>the backend is a pure Backdrop CMS image multifield, including sorting, crop, caption</p>\n</blockquote>\n<p>IIRC, the requirement was sorting via the frontend.</p>",
+        "id": 219581385,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607678901
+    },
+    {
+        "content": "<p>Ooops, you are right <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span></p>",
+        "id": 219581742,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1607679138
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"269428\">mazze.ch</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219580578\">said</a>:</p>\n<blockquote>\n<p>Hi <span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> this here might not be a direct solution to your problem... but I was fiddling around with image galleries for years in Drupal 7. Now in Backdrop, I use the Uikit CSS framework (not Bootstrap, like core does). But this forced me to write field templates, which is what I should have learned years ago. This is my solution for an image gallery... 9 lines of code... and the backend is a pure Backdrop CMS image multifield, including sorting, crop, caption</p>\n<p>&lt;div class=\"uk-child-width-1-4@m uk-child-width-1-3@l uk-child-width-1-4@s  uk-child-width-1-4 uk-grid-small\" uk-grid uk-lightbox=\"animation: slide\"&gt;<br>\n     &lt;?php foreach ($items as $delta =&gt; $item): ?&gt;<br>\n        &lt;div&gt;<br>\n        &lt;a class=\"uk-inline\" href=\"&lt;?php print image_style_url('16_9_standard', $item['#item']['uri']); ?&gt;\" data-caption=\"&lt;?php print render($item['#item']['title']); ?&gt;\"&gt;&lt;img src=\"&lt;?php print image_style_url('16_9_preview', $item['#item']['uri']); ?&gt;\" /&gt;&lt;/a&gt;<br>\n        &lt;/div&gt;<br>\n    &lt;?php endforeach; ?&gt;<br>\n&lt;/div&gt;</p>\n<p>I do not know Bootstrap enough, but I assume something very similar should be possible there, or with another 3rd party script. It's not a module solution, but I (being a marketer as my main profession) would never, never go back to any module-based solution for image galleries.</p>\n<p>Sample page (right column)<br>\n<a href=\"https://landwirtschaft.ag/monatshof/exklusivitaeten-vom-fisch-bis-zum-schnaps\">https://landwirtschaft.ag/monatshof/exklusivitaeten-vom-fisch-bis-zum-schnaps</a></p>\n</blockquote>\n<p>@mazze.ch - You could do exactly the same thing with Views Gallery without having to code - and if you aren't using a module -  (even custom) PHP code through the front end is very risky and insecure.  It doesn't meet my main requirement, which is the drag &amp; drop and ability to edit the gallery via the front end.   Which would require a substantial amount of code and a custom module or a 3rd party contrib.  The above is pretty much just a field formatter and there's any number of solutions for that.  You could try Photoswipe gallery, which is quite nice although it lacks my main requirement.  Views gallery also does the above and is fairly flexible.</p>",
+        "id": 219777427,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1607888821
+    },
+    {
+        "content": "<p>There are three points of consideration when dealing with images:</p>\n<p>1) Backend where the images are added</p>\n<p>2) Frontend where the images are viewed</p>\n<p>3) Frontend where the images are interacted with</p>\n<p>One of my biggest complaints about Drupals handling of images is the lack of congruity between the Backend and Frontend interaction.</p>\n<p>Every Backend module or frontend viewing module must \"include\" support for the frontend interaction and many times this does not happen without a feature request.</p>\n<p>I have wished for a long time that \"Drupal\" would create a better API around the interaction modules where a module can register itself as an interactive module to be used by any viewing module and it becomes available to the system from the time it is enabled. I think this is something Backdrop can look into fixing for the long term. (Maybe it's already happened as I don't have enough hands on experience yet)</p>\n<p>When newer interaction modules are added, they are not always supported by older viewing modules. This has caused me to drop one module and search for a different one because they don't all work from start to finish. Point is, when it comes it image manipulation, a better job could be done to seamlessly allow them to know about and talk to one another.</p>",
+        "id": 219779886,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607891561
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> you are right, and I did not see the frontend sorting requirement, sorry.</p>",
+        "id": 219964146,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1608030748
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"269428\">mazze.ch</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219964146\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> you are right, and I did not see the frontend sorting requirement, sorry.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> , not a problem!  I just wanted to save you some work.  The photoswipe module (<a href=\"https://backdropcms.org/modules?s=photoswipe\">https://backdropcms.org/modules?s=photoswipe</a>) and views gallery look like they both do what you describe robustly without having to write any code.  I've used views gallery and that works fine.  Photoswipe looks like it already does what you need as well.   My needs are because these are sites where the main point is the photo galleries, so the needs are pretty critical on those.   It's not an uncommon need either, or there wouldn't be tons of Wordpress modules that do exactly what I want.  I just can't port any of them because they are not open source.  The one I could port is messy (media gallery) and buggy, and probably cheaper to rewrite from scratch - which I can't do, because I have no budget to do unpaid work.</p>",
+        "id": 220012471,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1608053052
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/219545625\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>Most of the money in Drupal was development, with the end results being open source.  Of course, that may be what led it to be enterprise focused - they are the ones that can afford to develop modules.    It's a philosophical difference.  Wonder if there's a way to combine the two to benefit?</p>\n</blockquote>\n<p>Chime in on the \"monetizing Backdrop\" topic if this interests you. Be forewarned it's a touchy, divided topic but we definitely need more perspective on it.</p>\n</blockquote>\n<p>I think there's room to have paid modules as well as free - because otherwise we're right back to where Drupal is,  needing the big pockets to develop modules.  Smaller agencies just don't have the resources to do unpaid work.  <br>\nOne of the biggest problems with Drupal modules can be the lack of support - CRM Core for example.  We chose it for a client over CivicRM, because CivicRM was way to expensive and massive overkill for the clients budget.  We also talked to the module developers about our concerns for ongoing support for the modules. They assured us that it wouldn't be a problem, and yet less than 2 years after those modules were released, they were unsupported and no bug fixes were released.  I now have a client with unsupported modules that I can't remove because it's core functionality.  Nor can I do major fixes that are needed for those modules because the client can't pay for it.  If the developers could charge nominal fees for ongoing support, this would help both sides.  Not as monetized as Wordpress, but somewhere in the middle.  That's my opinion, anyway.</p>",
+        "id": 220013476,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1608053468
+    },
+    {
+        "content": "<p>Is someone talking about Wordpress again?</p>",
+        "id": 220013478,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608053468
+    },
+    {
+        "content": "<p>Oh great, now Dragonbot is trolling us!</p>",
+        "id": 220013959,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1608053649
+    },
+    {
+        "content": "<p>What about the Packery module mentioned above. Wouldnt that do? Looks simple and slick.</p>",
+        "id": 220016623,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608054838
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Really.20good.20photo.20gallery.20module/near/220016623\">said</a>:</p>\n<blockquote>\n<p>What about the Packery module mentioned above. Wouldnt that do? Looks simple and slick.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> , it wouldn't meet my needs.  It's an image field formatter like photoswipe module and it hasn't been ported from Drupal 7.  There's multiple options that let you format from the backend for drupal, but only one (media gallery)  that I've found that lets the client drag &amp; drop, add, remove and add titles &amp; captions from front end (they have to be logged in and have permissions - this is not for just any viewer) in view mode.</p>",
+        "id": 220017572,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1608055242
+    }
+]

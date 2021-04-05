@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I have an image URI (e.g. <code>public://images/.../my-image.jpg</code>) but I need an image URL (e.g. <code>https://mydomain.com/files/images/.../my-image.jpg</code>). How do I convert one to the other?</p>",
+        "id": 218248329,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606711269
+    },
+    {
+        "content": "<p><code>backdrop_realpath()</code> provides the full path to the image on the server (e.g. <code>/var/www/...</code>)</p>",
+        "id": 218248349,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606711315
+    },
+    {
+        "content": "<p><code>url()</code> with <code>absolute =&gt; TRUE</code> outputs this weirdness: <code>https://mydomain.com/public%3A//images/...</code></p>",
+        "id": 218248405,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606711375
+    },
+    {
+        "content": "<p>I'm sure there must be a function for this, I just can't find it...</p>",
+        "id": 218248412,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606711408
+    },
+    {
+        "content": "<p>Ah, found it: <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21file.inc/function/file_create_url/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21file.inc/function/file_create_url/1</a></p>",
+        "id": 218248465,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606711491
+    },
+    {
+        "content": "<p>And this does the same if you need an image style: <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21image%21image.module/function/image_style_url/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21image%21image.module/function/image_style_url/1</a></p>",
+        "id": 218248635,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606711708
+    },
+    {
+        "content": "<p>#notetoself <span aria-label=\"point up\" class=\"emoji emoji-1f446\" role=\"img\" title=\"point up\">:point_up:</span></p>",
+        "id": 218248647,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606711735
+    }
+]

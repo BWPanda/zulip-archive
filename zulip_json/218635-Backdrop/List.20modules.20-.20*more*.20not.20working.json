@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>Hi Guys...,</p>\n<p>Not really sure what I'm doing lol... but on the Module List, the \"more\" option isn't working.</p>\n<p>Has anyone else come across this?</p>\n<p>I've been experimenting and if jquery.ui isn't loading then the toggle() function won't work.</p>\n<p>Can anyone shed some light on this please?</p>\n<p>I'm using a child theme from Basis.</p>\n<p>Many thanks</p>",
+        "id": 210296026,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1600278152
+    },
+    {
+        "content": "<p>it works on the latest sandbox. do you get any console errors?</p>",
+        "id": 210296316,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600278286
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/List.20modules.20-.20*more*.20not.20working/near/210296316\">said</a>:</p>\n<blockquote>\n<p>it works on the latest sandbox. do you get any console errors?</p>\n</blockquote>\n<p>I'm not that familiar with js etc...  But does this mean anything... the [[functionLocation]]: &lt;unknown&gt;</p>\n<p><a href=\"/user_uploads/18319/4B5d8yjNgIvIWoS48McGeNZT/jquery.ui.jpg\">jquery.ui.jpg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/4B5d8yjNgIvIWoS48McGeNZT/jquery.ui.jpg\" title=\"jquery.ui.jpg\"><img src=\"/user_uploads/18319/4B5d8yjNgIvIWoS48McGeNZT/jquery.ui.jpg\"></a></div>",
+        "id": 210296863,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1600278577
+    },
+    {
+        "content": "<p>Is this after upgrading to 1.17? Or just in general?</p>",
+        "id": 210297920,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600279084
+    },
+    {
+        "content": "<p>Which modules do you have installed?</p>",
+        "id": 210297952,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600279093
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/List.20modules.20-.20*more*.20not.20working/near/210297920\">said</a>:</p>\n<blockquote>\n<p>Is this after upgrading to 1.17? Or just in general?</p>\n</blockquote>\n<p>I've had it for a while, so just in general.</p>\n<p>The site I'm playing with is now 1.17.</p>\n<p>I've just spun up a 1.16.2 and installed the same theme and everything is working, so I'm going to install the same modules and test it one at a time.</p>",
+        "id": 210298953,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1600279582
+    },
+    {
+        "content": "<p>Found the culprit...  EU Cookie Compliance... and when it popped up I did click on OK....</p>\n<p>Just going to experiment now.</p>",
+        "id": 210300399,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1600280410
+    }
+]

@@ -1,0 +1,41 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/WordPress.20Migrate.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/WordPress.20Migrate.html">WordPress Migrate</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="201345886"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/WordPress%20Migrate/near/201345886" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/WordPress.20Migrate.html#201345886">(Jun 19 2020 at 02:07)</a>:</h4>
+<p>I'm curious if anyone thinks porting the WordPress Migrate module would be at all useful: <a href="https://www.drupal.org/project/wordpress_migrate">https://www.drupal.org/project/wordpress_migrate</a><br>
+I know there's Feeds and <a href="https://github.com/backdrop-contrib/wordpress_import">https://github.com/backdrop-contrib/wordpress_import</a> but I think both of those only handle basic WordPress sites, and not something with more complexity.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/wordpress_import" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/wordpress_import" title="backdrop-contrib/wordpress_import">backdrop-contrib/wordpress_import</a></div><div class="message_embed_description">This module imports a WordPress blog into Backdrop from a WordPress eXtended RSS (WXR) file. - backdrop-contrib/wordpress_import</div></div></div>
+
+
+
+<a name="201383721"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/WordPress%20Migrate/near/201383721" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/WordPress.20Migrate.html#201383721">(Jun 19 2020 at 12:42)</a>:</h4>
+<p><code>wordpress_migrate</code> has a dependency on <code>migrate</code> so we'd need to fix up <code>backdrop-contrib/migrate</code> before doing <code>wordpress_migrate</code>; I'm not saying don't do it just pointing out some of the ducks.</p>
+
+
+
+<a name="201388639"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/WordPress%20Migrate/near/201388639" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/WordPress.20Migrate.html#201388639">(Jun 19 2020 at 13:23)</a>:</h4>
+<p>Yes, I am aware that there is a bigger task as a dependency, which is why I'm asking, rather than just doing it. <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span><br>
+I've been working on a project that is a migration from WordPress to D7, and in the process I'm fixing some problems with the migrate modules. I intend to provide those fixes to the D7 modules, but I thought they might be more used/useful for Backdrop.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

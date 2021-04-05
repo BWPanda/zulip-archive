@@ -1,0 +1,146 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html">Installation Issues on my domain</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217937404"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217937404" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> esn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217937404">(Nov 25 2020 at 20:47)</a>:</h4>
+<p>Hi all,</p>
+<p>I am new to Backdrop CMS and like what I see so far.</p>
+<p>My setup is ...<br>
+Mac Retina, OS Yosemite<br>
+Mamp 5.7<br>
+Backdrop CMS<br>
+FileZilla</p>
+<p>I have no problem installing Backdrop CMS locally.</p>
+<p>The problem starts when I try to install it on my internet provider's shared server.<br>
+I use the same Backdrop zip file used for the local set-up.</p>
+<p>Process ...</p>
+<p>I first create a database and a user with full read/write access.</p>
+<p>Then FTP across the backdrop zip file using FileZilla.<br>
+Through my cPanel, I unzip Backdrop to my root folder designated for Backdrop.</p>
+<p>I then go to my browser and type in my domain name "<a href="http://xxxx.com">xxxx.com</a>" where the backdrop files are.<br>
+But get the following error.</p>
+<p>"Internal Server Error<br>
+The server encountered an internal error or misconfiguration and was unable to complete your request."</p>
+<p>So I type in the full installation address for Backdrop</p>
+<p>"<a href="http://xxxx.com/core/install.php">xxxx.com/core/install.php</a>"</p>
+<p>Again getting the same error as above.</p>
+<p>I am assuming it is a folder/file permission access issue<br>
+but don't know for sure.</p>
+<p>Can you please tell me where my installation process is going wrong?</p>
+<p>Thanks<br>
+Regards</p>
+
+
+
+<a name="217937405"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217937405" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217937405">(Nov 25 2020 at 20:47)</a>:</h4>
+<p>Hi, esn. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>
+<p>Here is a short (3 min) video to help you navigate Zulip. <a href="https://youtu.be/DN8YL2MrsSU">https://youtu.be/DN8YL2MrsSU</a></p>
+<div class="youtube-video message_inline_image"><a data-id="DN8YL2MrsSU" href="https://youtu.be/DN8YL2MrsSU"><img src="https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg"></a></div>
+
+
+
+<a name="217938832"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217938832" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217938832">(Nov 25 2020 at 21:01)</a>:</h4>
+<p>Hey <span class="user-mention" data-user-id="367392">@esn</span> , what you see if you place to same directory instead unpacked zip just a file "index.html" with some string into?</p>
+
+
+
+<a name="217939676"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217939676" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217939676">(Nov 25 2020 at 21:08)</a>:</h4>
+<p>Or file "index.php"  contained <code>&lt;?php phpinfo();</code> ?</p>
+
+
+
+<a name="217940454"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217940454" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217940454">(Nov 25 2020 at 21:17)</a>:</h4>
+<p>Also, see if you can see what is in the Apache error and/or access log.</p>
+
+
+
+<a name="217942841"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217942841" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217942841">(Nov 25 2020 at 21:41)</a>:</h4>
+<p>I too would start where <span class="user-mention" data-user-id="268468">@Vladimir</span> suggested by testing if a .HTML file works, then a .PHP</p>
+<p>Sometimes when adding an addon domain, Apache doesn't rebuild properly to recognize the domain. The other thing I to check is where the add-on domains folder is looking.</p>
+<p>Question: do you plan to have or already have more than one site/domain? The primary domain on the account can cause problems if the files are in a folder inside /public_html.</p>
+
+
+
+<a name="217943006"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217943006" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> esn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217943006">(Nov 25 2020 at 21:43)</a>:</h4>
+<p>Just to let you know, <br>
+I have installed drupal 9 in the same root directory and it works fine, also I've installed dolphin there too and that worked ok. Both worked on the first installation attempt.</p>
+<p>I have just now hosed that root folder on my domain and reinstalled Drupal 9 by uploading the zip and <br>
+extracting it via cPanel.</p>
+<p>Opened my browser and typed in the domain name and the installation screen came up straight away.<br>
+It went straight to the URL <a href="http://xxxx.com/core/install.php">http://xxxx.com/core/install.php</a>.</p>
+<p>So the issue has to be with the files in Backdrop.</p>
+<p>Regards</p>
+
+
+
+<a name="217945116"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217945116" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217945116">(Nov 25 2020 at 22:10)</a>:</h4>
+<p>I'm not familiar with shared hosting/cPanel, but sounds like maybe an <code>.htaccess</code> issue...?</p>
+
+
+
+<a name="217957116"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217957116" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> esn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217957116">(Nov 26 2020 at 01:19)</a>:</h4>
+<p>As far as I understand it, the major difference between the two types of hosting is one share's resources <br>
+with a number of users where the other has only one user.<br>
+I have deleted the .htaccess file to see if that made a difference but it didn't.</p>
+
+
+
+<a name="217961032"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217961032" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217961032">(Nov 26 2020 at 02:54)</a>:</h4>
+<p>Did you check your Apache logs to see if there were any error notices there?</p>
+
+
+
+<a name="217970193"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217970193" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> esn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217970193">(Nov 26 2020 at 06:46)</a>:</h4>
+<p>@oadaeh (Jason Flatt)<br>
+Thank you for your suggestion. <br>
+I was able to resolve the issue by reading that webserver log. <br>
+The solution is as follows ...</p>
+<p>Error log stated<br>
+"SoftException in Application.cpp:267: File "/home2/xxxx/public_html/xxxx/index.php" is writeable by group"</p>
+<p>But when I looked at the permissions of index.php the group write option was not selected. <br>
+The permission level was 644</p>
+<p>So I selected all the permission options (The permission level was now 777) then saved the file. <br>
+Re-ran the install again (Was just checking), it still had the same error, as expected. <br>
+I then set the permission back to 644 but this time when I ran the install, it worked perfectly.</p>
+<p>So clearly there was a problem with the webserver, for some reason <br>
+it kept reading install.php was writable by group, even though it wasn't.<br>
+So changing the permission to something else seemed to unlock its stuck state.<br>
+I probably would have only needed to set the group write option save it then un-set it to release the web-server's stuck read state.</p>
+<p>Thank you for all contributing, it's greatly appreciated.</p>
+<p>Regards</p>
+
+
+
+<a name="217970761"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Installation%20Issues%20on%20my%20domain/near/217970761" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Installation.20Issues.20on.20my.20domain.html#217970761">(Nov 26 2020 at 07:02)</a>:</h4>
+<p>Glad you have worked things out in the end <span class="user-mention" data-user-id="367392">@esn</span> ...please keep providing feedback and reporting any issues you may find while using Backdrop.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

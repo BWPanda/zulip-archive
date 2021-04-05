@@ -1,0 +1,164 @@
+[
+    {
+        "content": "<p>On <a href=\"https://backdropcms.org/modules\">Backdrop Modules</a>, is the listed name of a module taken from the .info file or from the title of the README.md file? And should the title in those two places always be the same?</p>\n<p>I ask because I observe that on <a href=\"http://drupal.org/projects\">drupal.org/projects</a>, the project page title isn't necessarily the same as the module title in its .info file. For example, <a href=\"https://www.drupal.org/project/uc_price_per_role\">Project title</a> = \"Ubercart Price Per Role\", but module title in .info file is \"Price per role\".</p>\n<p>In that case, it seems to make sense to have \"Ubercart\" in the title on the project page, but not in the module listing on the website (capitalization ought to be the same, though). Wondering if a similar situation is possible (and/or recommended) with BD's project listing.</p>",
+        "id": 221243736,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609359969
+    },
+    {
+        "content": "<p>Backdrop automatically loads the title from the info file (AFAIK). Drupal project nodes have a title field that maintainers can fill in whatever they want. Because ours is automated, I don't see that being a possibility...</p>",
+        "id": 221244271,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609360419
+    },
+    {
+        "content": "<blockquote>\n<p>...but module title in .info file is \"Price per role\".</p>\n</blockquote>\n<p>It shouldn't be that way. Coding standards mandate that project names be capitalized as a proper name (see the \"Properties\" section under \"More about module .info files\" in <a href=\"https://api.backdropcms.org/modules\">https://api.backdropcms.org/modules</a>):</p>\n<blockquote>\n<p>This displays the name of your module, which will appear on the Modules page. Since module names are proper names, it should be capitalized as a proper name (e.g., \"Dragon Builder\", not \"dragon builder\" or \"Dragon builder\"), and it should be a human-readable name (not dragon_builder). If your module name includes an acronym (CSS, WYSIWYG, UI, etc.) or a third-party trade name (jQuery, JavaScript), of course follow the standard capitalization for those.</p>\n</blockquote>\n<p>So the name in the .info file should be \"Price Per Role\"</p>",
+        "id": 221252057,
+        "sender_full_name": "klonos",
+        "timestamp": 1609367327
+    },
+    {
+        "content": "<p><strong>Is someone talking about me?</strong></p>",
+        "id": 221252058,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1609367328
+    },
+    {
+        "content": "<p>...if the title of the project node on <a href=\"http://b.org\">b.org</a> is not updated after you've updated the .info file, then please ask here in Zulip, and one of us with proper access can rename the node for you.</p>",
+        "id": 221252271,
+        "sender_full_name": "klonos",
+        "timestamp": 1609367553
+    },
+    {
+        "content": "<p>...now with re to prepending the name of the \"parent\" module to the node title, perhaps something like that would be possible if <a href=\"https://github.com/backdrop/backdrop-issues/issues/119\">https://github.com/backdrop/backdrop-issues/issues/119</a> was implemented.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/119\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/119\" title=\"Support additional (popular) properties in the .info files of projects · Issue #119 · backdrop/backdrop-issues\">Support additional (popular) properties in the .info files of projects · Issue #119 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In #117, @quicksketch wrote that the backdrop = 1.x would be &quot;replacing&quot; core = 8.x. I think I&#39;m following this correctly and replacing only refers to Backdrop&#39;s includes/bootstra...</div></div></div>",
+        "id": 221252604,
+        "sender_full_name": "klonos",
+        "timestamp": 1609367939
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>, actually, the <a href=\"https://backdropcms.org/project/uc_price_per_role\">Backdrop module</a> is capitalized with Title Case (Price per Role).</p>",
+        "id": 221252731,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609368096
+    },
+    {
+        "content": "<p>Just scanning the <a href=\"https://backdropcms.org/modules\">Modules list</a>, I see lots of inconsistent capitalization, but \"Markdown Editor for BUEditor\" also uses Title Case.</p>",
+        "id": 221252833,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609368193
+    },
+    {
+        "content": "<p>According to our current standards, the word \"Per\" should also be capitalized. ...also helper words like \"For\" in other modules. ...you are correct re inconsistency, but we do not have any automated checks in place that would either warn or block the creation of the project node if not properly capitalized.</p>",
+        "id": 221252920,
+        "sender_full_name": "klonos",
+        "timestamp": 1609368283
+    },
+    {
+        "content": "<p>Gotcha. I'll go update modules. Meanwhile, would it be possible to make the distinction explicit on that page (\"all words should be capitalized, even small ones like \"A\" or \"The\")?</p>",
+        "id": 221253002,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609368370
+    },
+    {
+        "content": "<p>...I see how title case may be preferred, and I'm personally fine with it (although it may possibly cause the same issues we are trying to address with proper name case).</p>",
+        "id": 221253026,
+        "sender_full_name": "klonos",
+        "timestamp": 1609368414
+    },
+    {
+        "content": "<p>The problem I have with Title case is knowing which words should be uppercase and which shouldn't...</p>",
+        "id": 221253062,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609368463
+    },
+    {
+        "content": "<p>Always confusing for me</p>",
+        "id": 221253071,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609368473
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>, me too, so I turn to <a href=\"https://titlecase.com\">https://titlecase.com</a>.</p>",
+        "id": 221253130,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609368512
+    },
+    {
+        "content": "<p>Haha, there's a website for that!</p>",
+        "id": 221253154,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609368552
+    },
+    {
+        "content": "<p>That's like me with knowing when to use apostrophes. I alway go to <a href=\"https://theoatmeal.com/comics/apostrophe\">https://theoatmeal.com/comics/apostrophe</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://theoatmeal.com/comics/apostrophe\" style=\"background-image: url(https://s3.amazonaws.com/theoatmeal-img/thumbnails/apostrophe.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://theoatmeal.com/comics/apostrophe\" title=\"How To Use An Apostrophe - The Oatmeal\">How To Use An Apostrophe - The Oatmeal</a></div><div class=\"message_embed_description\">The right way to use an apostrophe (in illustrated form).</div></div></div>",
+        "id": 221253181,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609368600
+    },
+    {
+        "content": "<p>...consider writing the following in a documentation page for example:</p>\n<blockquote>\n<p>...you need to install some additional modules like Markdown Editor for BUEditor.</p>\n</blockquote>\n<p>In the above sentence, one might read \"Markdown Editor\" and \"BUEditor\" as being 2 separate modules. Whereas if the module name was written in proper case, it would instead be:</p>\n<blockquote>\n<p>...you need to install some additional modules like Markdown Editor For BUEditor.</p>\n</blockquote>\n<p>...which makes it clear that this whole 4-word thing is a single module.</p>",
+        "id": 221253226,
+        "sender_full_name": "klonos",
+        "timestamp": 1609368607
+    },
+    {
+        "content": "<p>Yes, I prefer all uppercase for module names</p>",
+        "id": 221253256,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609368644
+    },
+    {
+        "content": "<p>Removes ambiguity</p>",
+        "id": 221253262,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609368652
+    },
+    {
+        "content": "<p>Which was the exact reason for dictating that in our documentation/standards/practices <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 221253278,
+        "sender_full_name": "klonos",
+        "timestamp": 1609368681
+    },
+    {
+        "content": "<p>I guess that saying it should be capitalized \"as a proper name\" is technically sufficient, but it still might be clearer to say \"capitalize every word, unless the word is an uncapitalized name like jQuery.\" (At least, clearer for folks like me, sorry.) Also, \"Jimmy the Greek\" is a proper name, but \"the\" seems to be usually uncapitalized.</p>",
+        "id": 221253512,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609368940
+    },
+    {
+        "content": "<p>Incidentally, on that <a href=\"https://api.backdropcms.org/modules\">Creating modules page</a>, the \"contents of a module directory\" section doesn't show a README.md file. Should that be added? (There is a reference farther down the page to a \"readme file\".)</p>",
+        "id": 221253730,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609369152
+    },
+    {
+        "content": "<p>Thanks for the suggestions <span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span> ...I've fixed the bit for the <code>name</code> property, and made rules a list of bullet points, so that they are more readable. Does it look better now?</p>",
+        "id": 221254246,
+        "sender_full_name": "klonos",
+        "timestamp": 1609369596
+    },
+    {
+        "content": "<p>Much clearer! <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 221254298,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1609369681
+    },
+    {
+        "content": "<p>...I've also added a <code>LICENSE.txt</code> and a <code>README.md</code> in the example folder structure <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 221254591,
+        "sender_full_name": "klonos",
+        "timestamp": 1609369944
+    },
+    {
+        "content": "<p>Thank you for taking the time to report all these issues with our documentation <span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span>++ ...all these small changes/clarifications help others save time/energy, and reduces any frustration that may be caused.</p>",
+        "id": 221254649,
+        "sender_full_name": "klonos",
+        "timestamp": 1609370039
+    },
+    {
+        "content": "<p><strong>bugfolder</strong> :-) (Karma: 4)</p>",
+        "id": 221254650,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1609370039
+    }
+]

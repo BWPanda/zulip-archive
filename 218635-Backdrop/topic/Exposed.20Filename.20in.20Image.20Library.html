@@ -1,0 +1,56 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Exposed.20Filename.20in.20Image.20Library.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exposed.20Filename.20in.20Image.20Library.html">Exposed Filename in Image Library</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="216518600"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exposed%20Filename%20in%20Image%20Library/near/216518600" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exposed.20Filename.20in.20Image.20Library.html#216518600">(Nov 12 2020 at 19:51)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> so the issue you're stuck on is the apply and insert?</p>
+
+
+
+<a name="216518772"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exposed%20Filename%20in%20Image%20Library/near/216518772" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exposed.20Filename.20in.20Image.20Library.html#216518772">(Nov 12 2020 at 19:53)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> Yes, when you try to apply the exposed filename filter in the WYSIWYG editor's implementation of the image library, everything explodes.</p>
+
+
+
+<a name="216518912"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exposed%20Filename%20in%20Image%20Library/near/216518912" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exposed.20Filename.20in.20Image.20Library.html#216518912">(Nov 12 2020 at 19:54)</a>:</h4>
+<p>(It seems to work fine in a field level implementation, the issue is just with WYSIWYG)</p>
+
+
+
+<a name="216519641"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exposed%20Filename%20in%20Image%20Library/near/216519641" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exposed.20Filename.20in.20Image.20Library.html#216519641">(Nov 12 2020 at 20:01)</a>:</h4>
+<p>Maybe it's not possible, but what about filtering using ajax and removing the apply button? Personally, I like this type of UX better than typing something and hitting apply.</p>
+
+
+
+<a name="216519809"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exposed%20Filename%20in%20Image%20Library/near/216519809" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exposed.20Filename.20in.20Image.20Library.html#216519809">(Nov 12 2020 at 20:02)</a>:</h4>
+<p>I would say to show all images (with pager) by default, then reduce the images shown based on the input field using ajax. "filter out" what we don't need.</p>
+
+
+
+<a name="216525699"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exposed%20Filename%20in%20Image%20Library/near/216525699" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exposed.20Filename.20in.20Image.20Library.html#216525699">(Nov 12 2020 at 20:44)</a>:</h4>
+<p>Yes, I think showing all and filtering based on input would be great. I'm not necessarily opposed to the ajax auto-submit, but it can get a little dicey with a text input field, and I'm not sure about accessibility.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,236 @@
+[
+    {
+        "content": "<p>Is it really difficult to get a site to send HTML email for others? I feel like I struggle with this more often. Does anyone have a good \"recipe\" to follow? Which module(s) work best for this?</p>",
+        "id": 187839061,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581356926
+    },
+    {
+        "content": "<p>Mailsystem, MimeMail, SMTP</p>",
+        "id": 187840711,
+        "sender_full_name": "Herb",
+        "timestamp": 1581357907
+    },
+    {
+        "content": "<p>Before writing this, I had just installed Mail System and Mime Mail on a site and the settings for Mail System won't save in the \"Site-wide default mail system\" section -- keeps reverting from \"Mime Mail\" to \"Default\" after I click \"Save\".</p>",
+        "id": 187841141,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581358178
+    },
+    {
+        "content": "<p>Maybe I can track down why...</p>",
+        "id": 187841251,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581358250
+    },
+    {
+        "content": "<p>Nothing in the logs.</p>",
+        "id": 187841568,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581358464
+    },
+    {
+        "content": "<p>I'm using SMTP on another site and that has its own \"Allow to send e-mails formatted as Html\" checkbox. But I don't currently have an external account set up for the site in question so can't use SMTP here.</p>",
+        "id": 187848190,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581361996
+    },
+    {
+        "content": "<p>Is it just me, or in this day and age should sending HTML emails be supported OOTB in core...?</p>",
+        "id": 187848419,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581362126
+    },
+    {
+        "content": "<p>Or failing that, install <em>one</em> contrib module to enable that ability, not three.</p>",
+        "id": 187848468,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581362162
+    },
+    {
+        "content": "<p>Yes please.</p>",
+        "id": 187848631,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581362265
+    },
+    {
+        "content": "<p>Technically sending html emails is supported in core. But there are different ways to do it</p>",
+        "id": 187875474,
+        "sender_full_name": "Herb",
+        "timestamp": 1581384100
+    },
+    {
+        "content": "<p>But I think SMTP is even more important to support in core</p>",
+        "id": 187875483,
+        "sender_full_name": "Herb",
+        "timestamp": 1581384121
+    },
+    {
+        "content": "<p>Which Mailsystem module are you using <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ?</p>",
+        "id": 187875529,
+        "sender_full_name": "Herb",
+        "timestamp": 1581384145
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> MimeMail doesn't send mail, so that is probably why Mailsystem is reverting the setting. You need either of the SMTP or PHPMailer modules installed. Then it is likely that the Mailsystem setting will stick.</p>",
+        "id": 187879134,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1581389368
+    },
+    {
+        "content": "<p>I usually configure those modules in the other order PHPMailer -&gt; MimeMail -&gt; Mailsystem.</p>",
+        "id": 187879190,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1581389434
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  and <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> . I activated PHPMailer after the fact and was having trouble getting that set up, so I decided to set up a temporary email address to use with the SMTP module, but that was giving me grief, too. This was supposed to be a quick little touch to make things nicer for the end users, but I just had to uninstall all three and go back to plain text for now due to time. I'll come back to this later.</p>",
+        "id": 187922622,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581435485
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I was just using the standard <a href=\"https://github.com/backdrop-contrib/mailsystem\" target=\"_blank\" title=\"https://github.com/backdrop-contrib/mailsystem\">https://github.com/backdrop-contrib/mailsystem</a> (1.x-3.0.5).</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/mailsystem\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/mailsystem\" target=\"_blank\" title=\"backdrop-contrib/mailsystem\">backdrop-contrib/mailsystem</a></div><div class=\"message_embed_description\">Provides an Administrative UI and Developers API for safely updating the mail_system configuration variable. - backdrop-contrib/mailsystem</div></div></div>",
+        "id": 187922734,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581435563
+    },
+    {
+        "content": "<p>I currently have Mail system and mime mail installed, as well as ubercart.  The mail system does not allow me to set the class to Mime Mail - <br>\n<a href=\"/user_uploads/18319/iJLowgcsPyMOqsRNBbjg8DIx/image.png\" title=\"image.png\">image.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/iJLowgcsPyMOqsRNBbjg8DIx/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/iJLowgcsPyMOqsRNBbjg8DIx/image.png\"></a></div><p>I have tried to change this from default to MimeMail at least 3 times and every time I hit save - it goes back to 'Default' and the emails are unreadable (no line breaks or anything).  Please help?!!  I am using mime mail with ubercart and the order confirmation email looks like gibberish.  It's not even picking up the template</p>",
+        "id": 191793416,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585161855
+    },
+    {
+        "content": "<p>Note - I read the stream and don't see an option to install phpmailer module.  We're not using an external SMTP server - the mail is sending fine but it is completely unformatted. Driving me crazy.  We're ready to go live and this looks terrible.</p>",
+        "id": 191794162,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585162172
+    },
+    {
+        "content": "<p>I do not use  MimeMail module, but to change default you can try edit the system.mail.json file in your active config folder:</p>\n<div class=\"codehilite\"><pre><span></span>  &quot;default-system&quot;: &quot;MimeMailSystem&quot;,\n</pre></div>",
+        "id": 191796517,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1585163203
+    },
+    {
+        "content": "<p>Vladimir,</p>\n<p>What do you use to send html formatted emails if you don’t use mime mail?</p>\n<p>Warmest regards,</p>\n<p>Elisabeth Garbeil, MBA PMP<br>\nBrainwrap LLC<br>\n\"Being on the web doesn't have to make your head hurt.\"<br>\n<a href=\"http://www.brainwrap.com\" title=\"http://www.brainwrap.com\">www.brainwrap.com</a><br>\n(810) 560-7181<br>\n<a href=\"mailto:egarbeil@brainwrap.com\" title=\"mailto:egarbeil@brainwrap.com\">egarbeil@brainwrap.com</a></p>",
+        "id": 191798362,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585164088
+    },
+    {
+        "content": "<p>phpmailer does not have an official release, but you can find and use it from here: <a href=\"https://github.com/backdrop-contrib/phpmailer\" title=\"https://github.com/backdrop-contrib/phpmailer\">https://github.com/backdrop-contrib/phpmailer</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/phpmailer\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/phpmailer\" title=\"backdrop-contrib/phpmailer\">backdrop-contrib/phpmailer</a></div><div class=\"message_embed_description\">SMTP support for Backdrop CMS with PHPMailer. Contribute to backdrop-contrib/phpmailer development by creating an account on GitHub.</div></div></div>",
+        "id": 191799331,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1585164521
+    },
+    {
+        "content": "<p>Elisabeth, at this time I use very simple formatted messages for internal purpose. Additionally I found useful module <a href=\"https://backdropcms.org/project/maillog\" title=\"https://backdropcms.org/project/maillog\">\"Maillog\"</a> to keep Emails in the database (and set it as default mail system).<br>\nHope it helps, best regards.</p>",
+        "id": 191800746,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1585165155
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> have you solved your mail problem yet? It is many months since I last investigated mail problems and I have never yet looked at Ubercart, but looking at your problem it seems to me that there are currently issues with both Ubercart and Mail System. Some while age I produced a contrib module Simple Mail System and checking this just now I find that it will enable the setting of the default mail system to be MimeMailSystem so I will now check why this is different from Mail System.<br>\nThen Simple Mail System is showing an option UbercartMailSystem and this is not showing in Mail System. But Mail System is showing an option name 'Store', produced by the Ubercart module. Also a Mail-ID named 'Mail_System' (which is a confusing name since it is specific to Ubercart) is being produced by Ubercart and appears in both Mail System and Simple Mail System.<br>\nI will take a look at these issue today, in particular the way Ubercart is setting its entries in the config file system.mail when installing. But others who know more about Ubercart may be better able to help.</p>",
+        "id": 191845341,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1585206026
+    },
+    {
+        "content": "<p>hhmm</p>",
+        "id": 191858464,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1585215243
+    },
+    {
+        "content": "<p>The below didn’t help.  Nothing has so far.</p>\n<p>Warmest regards,</p>\n<p>Elisabeth Garbeil, MBA PMP<br>\nBrainwrap LLC<br>\n\"Being on the web doesn't have to make your head hurt.\"<br>\n<a href=\"http://www.brainwrap.com\" title=\"http://www.brainwrap.com\">www.brainwrap.com</a><br>\n(810) 560-7181<br>\n<a href=\"mailto:egarbeil@brainwrap.com\" title=\"mailto:egarbeil@brainwrap.com\">egarbeil@brainwrap.com</a></p>",
+        "id": 191900287,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585236187
+    },
+    {
+        "content": "<p>Where is that file located? (path)</p>\n<p>Elisabeth</p>\n<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191796517\" title=\"#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191796517\">said</a>:</p>\n<blockquote>\n<p>I do not use  MimeMail module, but to change default you can try edit the system.mail.json file in your active config folder:</p>\n<div class=\"codehilite\"><pre><span></span>  &quot;default-system&quot;: &quot;MimeMailSystem&quot;,\n````\n</pre></div>\n\n\n</blockquote>",
+        "id": 191900874,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585236358
+    },
+    {
+        "content": "<p>Something like \"/files/config_&lt;random_long_hash&gt;/active/\"</p>",
+        "id": 191901765,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1585236708
+    },
+    {
+        "content": "<p>Hi, Vladimir. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\" title=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\" title=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 191901766,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1585236708
+    },
+    {
+        "content": "<p>Found it.  The Simple Mail System module also allows setting that variable.  Seems overly cumbersome, but at least the emails are readable.  Now I can refine them a bit.</p>\n<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191901765\" title=\"#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191901765\">said</a>:</p>\n<blockquote>\n<p>Something like \"/files/config_&lt;random_long_hash&gt;/active/\"</p>\n</blockquote>",
+        "id": 191904951,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585237781
+    },
+    {
+        "content": "<p>Hmm, it sounds like there might be a bug there in the Mail System module.</p>",
+        "id": 191905666,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1585238015
+    },
+    {
+        "content": "<p>Also with Ubercart - it's not really picking up that class, but Mime Mail seems to work.  I just have to adjust the template.</p>\n<p>Elisabeth</p>\n<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191905666\" title=\"#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191905666\">said</a>:</p>\n<blockquote>\n<p>Hmm, it sounds like there might be a bug there in the Mail System module.</p>\n</blockquote>",
+        "id": 191906322,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585238224
+    },
+    {
+        "content": "<p>Or it's a bug in ubercart. Mailsystem has been working for me</p>",
+        "id": 191927084,
+        "sender_full_name": "Herb",
+        "timestamp": 1585246339
+    },
+    {
+        "content": "<p>We need to merge Mail System and Simple Mailsystem. It's confusing to have two modules</p>",
+        "id": 191927259,
+        "sender_full_name": "Herb",
+        "timestamp": 1585246384
+    },
+    {
+        "content": "<p>Or better yet, the functionality should be in core</p>",
+        "id": 191929024,
+        "sender_full_name": "Herb",
+        "timestamp": 1585247222
+    },
+    {
+        "content": "<p>I have raised a new issue in Ubercart because in my view it is doing something odd with its mail settings - inherited from D7 I think.</p>",
+        "id": 191934901,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1585249995
+    },
+    {
+        "content": "<p>I have now provided a PR for making a change in Ubercart. I will now check out Mail System.</p>\n<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> please can you tell me whether you need to use MimeMail as well or is the use of UbercartMailSystem proving adequate for your HTML need? If use of the MimeMail module is desirable I could propose an addition to Ubercart Admin that would enable use of the MimeMail module if installed, i.e. avoiding use of additional Mail System module to change the settings.</p>",
+        "id": 192011203,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1585313214
+    },
+    {
+        "content": "<p>I use mime mail for other things. Ubercart needs to use the ubercart mail system, because of special classes to display orders correctly.  </p>\n<p>Elisabeth Garbeil, MBA PMP<br>\nBrainwrap Web Design<br>\n(810) 560-7181<br>\nSent from my iPhone</p>",
+        "id": 192013785,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585314603
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256648\">@Graham Oliver</span> I added a comment to your PR. It needs a change</p>",
+        "id": 192053376,
+        "sender_full_name": "Herb",
+        "timestamp": 1585330475
+    },
+    {
+        "content": "<p>Graham,</p>\n<p>I did.  It turns out that Mail system was not picking up the change in variable of the Default Mail System to Mime Mail.  I had to change the variable manually and that worked. (SimpleMailSystem also allows you to change that variable, but I changed it manually anyway).  It's not picking up the Ubercart Mail System, but my guess is that the variable isn't correct (the ID it's using UC_ORDER_UBERCARTMAILSYSTEM) or the class (Store) isn't matching what's defined in Ubercart and I don't have the time to look through all the code to find the correct variable.   The email that prints with the Mime mail setting is not bad, just missing the printing of the logo.  The client is okay with it, so I've put it on the back burner for now.</p>",
+        "id": 192701516,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1585849439
+    }
+]

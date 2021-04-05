@@ -1,0 +1,76 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html">keep staging config post sync</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="196368048"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/keep%20staging%20config%20post%20sync/near/196368048" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html#196368048">(May 05 2020 at 21:07)</a>:</h4>
+<p>This is the first time I've had a chance to set up a Drupal 8 site from scratch so I'm just now finding some comparisons with Backdrop. The one thing I like is that the staging config directory in Drupal 8 doesn't get emptied after it is synced with the live config (in D8 it's actually only one sync directory but it's equivalent to staging). I don't know if it would cause problems if the staging config was left but it also causes problems if it's wiped every time. For instance, on Pantheon it causes issues when trying to keep config in the repo but the repo is not writable on live.</p>
+<p>I may create a github issue to allow for this change (maybe optional). But just wondering what other people think and what approaches you might take</p>
+
+
+
+<a name="196655590"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/keep%20staging%20config%20post%20sync/near/196655590" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html#196655590">(May 06 2020 at 15:57)</a>:</h4>
+<p>I believe that it all depends on how things are set up. The way things work in the GovCMS platform for GovCMS 8 is this:</p>
+<ol>
+<li>do dev work on your local.</li>
+<li>export config and commit -&gt; push</li>
+<li>CI runs -&gt; if green, a deployment is triggered for the respective Lagoon environment (<code>master</code> branch is prod/live, every other branch is secondary environments, staging, UAT etc.)</li>
+<li>during the deployment, <code>drush cim</code> happens, so config is being imported<br>
+...all that is fine in theory, but there are many gov agencies that do not have an internal dev team, and their dev partners (digital agencies) are only engaged in an ad-hoc manner. That means that if config changes happen directly on their live site, there usually is nobody to export the config changes and commit them to the repo. This in turn causes all the changes to be reverted/lost next time dev work is done ...unless the dev partner has been bitten by this before, and the first thing they do is sync the db on their local with prod, and export-&gt;push code to the repo.</li>
+</ol>
+
+
+
+<a name="196655631"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/keep%20staging%20config%20post%20sync/near/196655631" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html#196655631">(May 06 2020 at 15:57)</a>:</h4>
+<p>...in other words, I very much like the way config works in Backdrop compared to D8.</p>
+
+
+
+<a name="196656612"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/keep%20staging%20config%20post%20sync/near/196656612" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html#196656612">(May 06 2020 at 16:03)</a>:</h4>
+<p>...I guess that depending on your setup you can get into similar situations with Backdrop, but if you only have a single config directory (small sites), config is being read/written directly instead of having to export/import/sync all the time.</p>
+
+
+
+<a name="196658834"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/keep%20staging%20config%20post%20sync/near/196658834" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html#196658834">(May 06 2020 at 16:17)</a>:</h4>
+<p>Slightly tangentially related, I'm curious how people are currently protecting against the accidental deletion (or some other catastrophe) of a site's active configuration, backups, something else?</p>
+
+
+
+<a name="196659900"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/keep%20staging%20config%20post%20sync/near/196659900" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html#196659900">(May 06 2020 at 16:24)</a>:</h4>
+<p>...in GovCMS we used to have a lot of that happen, so we've made db backups (drush sql-dump) and config backups (drush cex) the first deployment step.</p>
+
+
+
+<a name="196659948"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/keep%20staging%20config%20post%20sync/near/196659948" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html#196659948">(May 06 2020 at 16:24)</a>:</h4>
+<p>...it retains 5 most-recent versions.</p>
+
+
+
+<a name="196660228"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/keep%20staging%20config%20post%20sync/near/196660228" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/keep.20staging.20config.20post.20sync.html#196660228">(May 06 2020 at 16:27)</a>:</h4>
+<p>With Backdrop you have to sync (export/import) as well. Otherwise things don't get triggered properly. But that doesn't really help with my original question which is about dealing with the staging directory</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

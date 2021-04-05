@@ -1,0 +1,194 @@
+[
+    {
+        "content": "<p>Does anyone know of a module that adds extra visibility conditions for blocks to use? In particular, I am thinking about making a visibility condition that works using media queries on the front end, but I was also wondering what conditions other people are using or find helpful.</p>",
+        "id": 213333600,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602700674
+    },
+    {
+        "content": "<p>Could you use the CSS Injector module and hide the blocks within the media queries?</p>",
+        "id": 213335917,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1602701778
+    },
+    {
+        "content": "<p>Yes, or I could add classes to the theme and get the same effect. The main difference would be how easy it is for non technical people to add 2 different block variations at different screen sizes.</p>",
+        "id": 213336397,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602702017
+    },
+    {
+        "content": "<p>Actually, what I want is a hero block that can switch between 2 different images. A long banner at large screen sizes and then more of a square with the text toward the bottom on phones. I think I might just try to make a block that does that.</p>",
+        "id": 213336850,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602702239
+    },
+    {
+        "content": "<p>Different as in aspect ration or completely different images?</p>",
+        "id": 213336982,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1602702306
+    },
+    {
+        "content": "<p>I'd do it in CSS and tell the user to add the specific CSS selector to the block :-)</p>",
+        "id": 213337100,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1602702370
+    },
+    {
+        "content": "<p>Not sure if it's exactly what you are after but look at the hero image on this site: <a href=\"https://williams-syndrome.org/\">https://williams-syndrome.org/</a></p>",
+        "id": 213343399,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602705732
+    },
+    {
+        "content": "<p>I have a long-term goal of getting Breakpoints and Picture ported, but in the meantime this is a DIY implementation of <code>&lt;picture&gt;</code> functionality, so on small screens it uses one image style and on larger screens it uses another.</p>",
+        "id": 213343521,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602705802
+    },
+    {
+        "content": "<p>Then you can control display of various other elements with CSS (e.g. the blue text box in this case)</p>",
+        "id": 213343564,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602705829
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> <span aria-label=\"point of information\" class=\"emoji emoji-261d\" role=\"img\" title=\"point of information\">:point_of_information:</span></p>",
+        "id": 213344122,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602706142
+    },
+    {
+        "content": "<p>Reference: Breakpoints<br>\n<a href=\"https://github.com/backdrop-contrib/breakpoints\">https://github.com/backdrop-contrib/breakpoints</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/breakpoints\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/breakpoints\" title=\"backdrop-contrib/breakpoints\">backdrop-contrib/breakpoints</a></div><div class=\"message_embed_description\">Breakpoints management for responsive web design. Contribute to backdrop-contrib/breakpoints development by creating an account on GitHub.</div></div></div>",
+        "id": 213344199,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602706192
+    },
+    {
+        "content": "<p>Reference: Picture<br>\n<a href=\"https://github.com/backdrop-contrib/picture/\">https://github.com/backdrop-contrib/picture/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/picture/\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/picture/\" title=\"backdrop-contrib/picture\">backdrop-contrib/picture</a></div><div class=\"message_embed_description\">Map breakpoints and image styles. Contribute to backdrop-contrib/picture development by creating an account on GitHub.</div></div></div>",
+        "id": 213344275,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602706213
+    },
+    {
+        "content": "<p>@laryn. Yes, that is almost exactly what I wanted to do. I will take a look at the modules later.</p>",
+        "id": 213345246,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602706875
+    },
+    {
+        "content": "<p>Are you using a template file in your theme to rewrite the output of the block?</p>",
+        "id": 213345265,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602706896
+    },
+    {
+        "content": "<p>Yes, I can copy some sample code here when I'm back by my computer.</p>",
+        "id": 213346272,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602707497
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> So in the template I calculate variables for the URL to an image, using <code>$imgurl</code> for the URL to the large image style and <code>$imgurl_mobile</code> for the smaller one. Then I use something like this in the template afterwards:</p>\n<div class=\"codehilite\"><pre><span></span><code>  &lt;div class=&quot;heroimg&quot;&gt;\n    &lt;picture&gt;\n      &lt;source srcset=&quot;&lt;?php print $imgurl; ?&gt;&quot; media=&quot;(min-width: 62em)&quot; /&gt;\n      &lt;img src=&quot;&lt;?php print $imgurl_mobile; ?&gt;&quot; /&gt;\n    &lt;/picture&gt;\n  &lt;/div&gt;\n</code></pre></div>",
+        "id": 213350665,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602709630
+    },
+    {
+        "content": "<p>Thanks.</p>",
+        "id": 213350917,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602709789
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++</p>",
+        "id": 213350923,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602709795
+    },
+    {
+        "content": "<p><strong>laryn</strong> kudos (Karma: 12)</p>",
+        "id": 213350925,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1602709795
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Visibility.20conditions/near/213336850\">said</a>:</p>\n<blockquote>\n<p>Actually, what I want is a hero block that can switch between 2 different images. A long banner at large screen sizes and then more of a square with the text toward the bottom on phones. I think I might just try to make a block that does that.</p>\n</blockquote>\n<p>If they're the same content, you can use the css to change the background image at different viewport sizes.  There may also be a module that uses images styles for managing responsive image resizing in Drupal that you could port.  I don't recommend ever using CSS injector, as it is a security risk.</p>",
+        "id": 213352777,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602710896
+    },
+    {
+        "content": "<blockquote>\n<p>I don't recommend ever using CSS injector, as it is a security risk.</p>\n</blockquote>\n<p>Why?</p>",
+        "id": 213413710,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1602763498
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Visibility.20conditions/near/213413710\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>I don't recommend ever using CSS injector, as it is a security risk.</p>\n</blockquote>\n<p>Why?</p>\n</blockquote>\n<p>For example:  <a href=\"https://www.netsparker.com/blog/web-security/private-data-stolen-exploiting-css-injection/\">https://www.netsparker.com/blog/web-security/private-data-stolen-exploiting-css-injection/</a>.   It bypasses the normal checks that the user editor does.  CSS injector allows for straight into the CSS, no checks for possible virus/malicious code.  We used to use it, but stopped after seeing some of the risks.   I now use a text format that's very tightly restricted (usually to just me and my partner) to use code that I can't run through a full html filter.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.netsparker.com/blog/web-security/private-data-stolen-exploiting-css-injection/\" style=\"background-image: url(https://dpsvdv74uwwos.cloudfront.net/statics/img/ogimage/private-data-stolen-exploiting-css-injection.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.netsparker.com/blog/web-security/private-data-stolen-exploiting-css-injection/\" title=\"How Private Data Can Be Stolen with a CSS Injection\">How Private Data Can Be Stolen with a CSS Injection</a></div><div class=\"message_embed_description\">Can you employ a CSS Injection to steal private data? This article explores Information Security expert Mike Gualtieri's experiments with CSS Exfil and the use of CSS Attribute Selectors. It concludes with a few pointers on how to avoid this type of attack and the need for a Content Security Policy.</div></div></div>",
+        "id": 213457520,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602781992
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Visibility.20conditions/near/213457520\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Visibility.20conditions/near/213413710\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>I don't recommend ever using CSS injector, as it is a security risk.</p>\n</blockquote>\n<p>Why?</p>\n</blockquote>\n<p>For example:  <a href=\"https://www.netsparker.com/blog/web-security/private-data-stolen-exploiting-css-injection/\">https://www.netsparker.com/blog/web-security/private-data-stolen-exploiting-css-injection/</a>.   It bypasses the normal checks that the user editor does.  CSS injector allows for straight into the CSS, no checks for possible virus/malicious code.  We used to use it, but stopped after seeing some of the risks.   I now use a text format that's very tightly restricted (usually to just me and my partner) to use code that I can't run through a full html filter.</p>\n</blockquote>\n<p>If I need special css for an item,  I use classes.  The users can't cause issues that way.</p>",
+        "id": 213458277,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602782340
+    },
+    {
+        "content": "<p>The malicious user would need to have an account with the 'Administer CSS Injector' permission in order to exploit this. So they would first need to exploit other security holes before getting to this.</p>",
+        "id": 213460620,
+        "sender_full_name": "Herb",
+        "timestamp": 1602783364
+    },
+    {
+        "content": "<p>See <a href=\"https://www.drupal.org/project/css_injector\">https://www.drupal.org/project/css_injector</a></p>",
+        "id": 213460803,
+        "sender_full_name": "Herb",
+        "timestamp": 1602783449
+    },
+    {
+        "content": "<p>I don't use the CSS or JS injector modules for other reasons (better to keep all CSS and JS in our repos). But I don't think they're as dangerous as described above.</p>",
+        "id": 213461015,
+        "sender_full_name": "Herb",
+        "timestamp": 1602783536
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Visibility.20conditions/near/213461015\">said</a>:</p>\n<blockquote>\n<p>I don't use the CSS or JS injector modules for other reasons (better to keep all CSS and JS in our repos). But I don't think they're as dangerous as described above.</p>\n</blockquote>\n<p>We've had some users do absolutely unbelievable things in the past, so perhaps we're more cautious.  I've had users do things like paste entire web pages (source code and ALL) or the source data for images (what a jpg or png would look like when you popped open the binary code), and so on and so on... into their sites.  Then call us to clean it up because they have no idea why the site is acting funky.  And yes, I think we had someone add some malicious code unknowingly at least a few times.  We've really tightened up our security over the years as a result.</p>",
+        "id": 213467370,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602786237
+    },
+    {
+        "content": "<p>So it depends on permissions. I don’t provide CSS Injector for others but use it for myself as a site admin / site architect.</p>",
+        "id": 213571001,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1602860072
+    },
+    {
+        "content": "<p>Main use case: adapt little things in the Seven admin theme</p>",
+        "id": 213575009,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1602861865
+    },
+    {
+        "content": "<p>New module in the wild to handle entity field visibility conditions. This doesn't really relate to the css_injector comments, however if you're looking for info about setting conditions based on a particular fields data, this is it.</p>\n<p><a href=\"https://github.com/backdrop-contrib/field_visibility_condition\">https://github.com/backdrop-contrib/field_visibility_condition</a></p>\n<p>There's still work to be done but the foundation is looking awesome. This will bring the same type of functionality from D7 Panels Visibility Rules if you're familiar with the scope of that module.</p>\n<p>If you need this kind of functionality now, you'll have to wait since it isn't actually functional yet, but feel free to help out with testing and bugs.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/field_visibility_condition\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/field_visibility_condition\" title=\"backdrop-contrib/field_visibility_condition\">backdrop-contrib/field_visibility_condition</a></div><div class=\"message_embed_description\">Allows admins to control access by entity field value - backdrop-contrib/field_visibility_condition</div></div></div>",
+        "id": 215277752,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604289933
+    },
+    {
+        "content": "<p>Is there a way to <code>OR</code> together multiple visibility conditions on blocks for layouts?</p>",
+        "id": 229028028,
+        "sender_full_name": "Laryn",
+        "timestamp": 1614979836
+    },
+    {
+        "content": "<p>I believe we only support AND at the moment <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ...not sure if <a href=\"https://github.com/backdrop-contrib/copy_blocks\">https://github.com/backdrop-contrib/copy_blocks</a> can make this a bit easier for you.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/copy_blocks\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/copy_blocks\" title=\"backdrop-contrib/copy_blocks\">backdrop-contrib/copy_blocks</a></div><div class=\"message_embed_description\">Add blocks to your layout which are actually copies of other blocks or entire regions. - backdrop-contrib/copy_blocks</div></div></div>",
+        "id": 229158259,
+        "sender_full_name": "klonos",
+        "timestamp": 1615094430
+    }
+]

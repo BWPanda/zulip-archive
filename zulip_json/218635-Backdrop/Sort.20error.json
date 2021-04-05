@@ -1,0 +1,266 @@
+[
+    {
+        "content": "<p>Hello, I am new here and recently ran into the below error message when visiting any of the content type configure pages (admin/structure/types/manage/content-type)</p>\n<p>Argument 1 passed to backdrop_sort() must be of the type array, null given, called in /home/modernis/backdropv2.modernistarchives.com/core/includes/token.inc on line 320</p>\n<p>Currently running Backdrop v. 1.18.1</p>",
+        "id": 226178080,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613154947
+    },
+    {
+        "content": "<p>Hi, Erica Cavanaugh. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 226178082,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1613154947
+    },
+    {
+        "content": "<p>Hello. <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span></p>",
+        "id": 226179766,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1613155847
+    },
+    {
+        "content": "<p>Is this a site being ported from Drupal 7?</p>",
+        "id": 226179823,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1613155882
+    },
+    {
+        "content": "<p>Or is this an existing Backdrop site that was updated to 1.18.1?</p>",
+        "id": 226180006,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1613155960
+    },
+    {
+        "content": "<p>It's being ported from Drupal 7</p>",
+        "id": 226182560,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613157259
+    },
+    {
+        "content": "<p>Ok, have you been able to update all of the contributed modules that you were using on the Drupal 7 site?</p>",
+        "id": 226184320,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1613158223
+    },
+    {
+        "content": "<p>I suspect that there is a module on your site that depends on token, but that has not been ported to Backdrop yet</p>",
+        "id": 226184400,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1613158263
+    },
+    {
+        "content": "<p>The Token module \"...is included in core Backdrop 1.1.0, so you no longer need this module.\"</p>",
+        "id": 226186123,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613159105
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/token\">https://github.com/backdrop-contrib/token</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/token\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/token\" title=\"backdrop-contrib/token\">backdrop-contrib/token</a></div><div class=\"message_embed_description\">Provides missing core tokens and a user-interface for selecting tokens. - backdrop-contrib/token</div></div></div>",
+        "id": 226186188,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613159145
+    },
+    {
+        "content": "<p>Maybe try clearing your caches. Based on the code in token_get_info() it looks like it will rebuild the data if you do that.<br>\n<a href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/token.inc#L282\">https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/token.inc#L282</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/token.inc#L282\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/token.inc#L282\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 226187146,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613159561
+    },
+    {
+        "content": "<p>Thanks so much for your help on this. <br>\nThere was one module that wasn't supported. I've removed it as it was already disabled.  I also cleared the caches but the problem still persists. </p>\n<p>We are using the Partial Date module and don't know if that could be the issue.</p>",
+        "id": 226191411,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613161459
+    },
+    {
+        "content": "<p>You're going to have to get into the code and data to see what is not right.<br>\nAs the error states, backdrop_sort() is expecting an array, but it's being called with an empty value. The variable is being created by a call to token_info(), here:<br>\n<a href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/token.inc#L301\">https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/token.inc#L301</a><br>\nSo I would check what is being returned there and maybe also place a call to debug_backtrace() there to see what started the whole operation.<br>\nSome code somewhere is probably setting a token in a way that is not compatible with Backdrop. Any converted Drupal module or theme code would be suspect.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/token.inc#L301\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/token.inc#L301\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 226194298,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613163040
+    },
+    {
+        "content": "<p>Weird tho, why NULL? Shouldnt <code>$token_info['types']</code> always have a value? <code>$token_info</code> is the result of invoking <code>hook_token_info()</code> and at the very least the core tokens return a <code>type</code> key. So types shouldnt be empty. Maybe something somewhere is calling a <code>hook_token_info_alter()</code> and messing up <code>types</code>?</p>",
+        "id": 226198974,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1613165649
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"389290\">@Erica Cavanaugh</span> If it's not obnoxiously long, can you list the modules you've got installed?</p>",
+        "id": 226202741,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613167710
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/Ad9N6iwq3h-r5t5JJmFhzOc2/ModuleList-1of5.png\">ModuleList-1of5.png</a> <a href=\"/user_uploads/18319/4AlfUMKfEU8bChPvfVUYM332/ModuleList-2of5.png\">ModuleList-2of5.png</a> <a href=\"/user_uploads/18319/tABs40anxx97xwtK5pOoD4OR/ModuleList-3of5.png\">ModuleList-3of5.png</a> <a href=\"/user_uploads/18319/f00y-xYY2Yu6Ap47mgAsnOcR/ModuleList-4of5.png\">ModuleList-4of5.png</a> <a href=\"/user_uploads/18319/bK0xfqOwNlNkkJ5drrOLabcs/ModuleList-5of5.png\">ModuleList-5of5.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/Ad9N6iwq3h-r5t5JJmFhzOc2/ModuleList-1of5.png\" title=\"ModuleList-1of5.png\"><img src=\"/user_uploads/18319/Ad9N6iwq3h-r5t5JJmFhzOc2/ModuleList-1of5.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/4AlfUMKfEU8bChPvfVUYM332/ModuleList-2of5.png\" title=\"ModuleList-2of5.png\"><img src=\"/user_uploads/18319/4AlfUMKfEU8bChPvfVUYM332/ModuleList-2of5.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/tABs40anxx97xwtK5pOoD4OR/ModuleList-3of5.png\" title=\"ModuleList-3of5.png\"><img src=\"/user_uploads/18319/tABs40anxx97xwtK5pOoD4OR/ModuleList-3of5.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/f00y-xYY2Yu6Ap47mgAsnOcR/ModuleList-4of5.png\" title=\"ModuleList-4of5.png\"><img src=\"/user_uploads/18319/f00y-xYY2Yu6Ap47mgAsnOcR/ModuleList-4of5.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/bK0xfqOwNlNkkJ5drrOLabcs/ModuleList-5of5.png\" title=\"ModuleList-5of5.png\"><img src=\"/user_uploads/18319/bK0xfqOwNlNkkJ5drrOLabcs/ModuleList-5of5.png\"></a></div>",
+        "id": 226205616,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613169325
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> It was easier to do screenshots of the module list instead of listing them<br>\nAnd everything is up to dat</p>",
+        "id": 226205737,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613169381
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"389290\">@Erica Cavanaugh</span> <br>\nIf I had to guess I'd first try some of the modules without formal releases. </p>\n<p>Where is the code from Partial Date coming from? (I don't see it on <code>backdrop-contrib</code>)</p>",
+        "id": 226207730,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613170629
+    },
+    {
+        "content": "<p>My guess is here: <a href=\"https://www.drupal.org/project/partial_date\">https://www.drupal.org/project/partial_date</a></p>",
+        "id": 226208589,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613171194
+    },
+    {
+        "content": "<p>There's no \"token\" in that module's code.</p>",
+        "id": 226208833,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613171380
+    },
+    {
+        "content": "<p>I wouldn't think Comments would cause it, but that is the one module I see that would be consistent between all content types. Might try disabling it <span class=\"user-mention\" data-user-id=\"389290\">@Erica Cavanaugh</span> and see what happens. It's a complete shot in the dark but that's about as far as my expertise goes.</p>",
+        "id": 226234664,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613205668
+    },
+    {
+        "content": "<p>Regarding the partial date module, I believe it is actually coming from a branch that was being maintained by Agile Humanities, <a href=\"https://github.com/agile-humanities/agile_partial_date\">https://github.com/agile-humanities/agile_partial_date</a><br>\nI am in getting some more information on my predecessor on this as we are transitioning site maintenance from her to me.</p>\n<p>I tried disabling the comments and clearing the cache, but no luck there. One thing, it only happens for the path (admin/structure/types/manage/content-type) and not for any of the sub pages. So editing the fields and display of current content types is possible but we are unable to add any new ones as the configure page is unreachable with the error. </p>\n<p>I am going to start the process of disabling one by one to see if I can pinpoint the culprit that way</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/agile-humanities/agile_partial_date\" style=\"background-image: url(https://avatars.githubusercontent.com/u/9409860?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/agile-humanities/agile_partial_date\" title=\"agile-humanities/agile_partial_date\">agile-humanities/agile_partial_date</a></div><div class=\"message_embed_description\">Fork of Partial Date module to include feed support - agile-humanities/agile_partial_date</div></div></div>",
+        "id": 226246555,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613225376
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"389290\">@Erica Cavanaugh</span> yes, turning off modules one by one to test is a good approach. Let us know what you discover.</p>",
+        "id": 226247975,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613227389
+    },
+    {
+        "content": "<p>It's the Path module. Turning it off allows access to the content type configuration pages. Turning it back on, makes them inaccessible again and going to admin/config/urls/path/patterns gives the below error. Also there are no options to set the URL alias patterns visible<br>\nWarning: Invalid argument supplied for foreach() in path_patterns_form() (line 357 of /home/modernis/backdropdebug.modernistarchives.com/core/modules/path/path.admin.inc)</p>",
+        "id": 226249919,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613229946
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"389290\">@Erica Cavanaugh</span> Can you export your existing path configuration? Go to admin/config/development/configuration/single/export and choose </p>\n<ul>\n<li>Configuration Group: Configuration</li>\n<li>Configuration name: Path settings</li>\n</ul>\n<p>This should be in json format and contain something like for instance <code>\"node_page_pattern\": \"[node:title]\",</code> - or are you unable to export that file?</p>",
+        "id": 226250848,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1613231089
+    },
+    {
+        "content": "<p>A quick idea... Copy the default file content from source code: <a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/config/path.settings.json\">https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/config/path.settings.json</a></p>\n<p>And import that into admin/config/development/configuration/single - with the path module enabled. If after flushing all caches, the errors go away, possibly something went wrong when migrating the path patterns of your Drupal site. I'm aware, that's no solution yet, but at least a hint where to dig further.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/config/path.settings.json\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/path/config/path.settings.json\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 226251244,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1613231581
+    },
+    {
+        "content": "<p>Here are the path settings</p>\n<p>{<br>\n    \"_config_name\": \"path.settings\",<br>\n    \"_config_static\": true,<br>\n    \"verbose\": false,<br>\n    \"separator\": \"-\",<br>\n    \"case\": 1,<br>\n    \"max_length\": 100,<br>\n    \"max_component_length\": 100,<br>\n    \"update_action\": 2,<br>\n    \"transliterate\": false,<br>\n    \"reduce_ascii\": false,<br>\n    \"ignore_words\": \"\",<br>\n    \"punctuation_double_quotes\": 0,<br>\n    \"punctuation_quotes\": 0,<br>\n    \"punctuation_backtick\": 0,<br>\n    \"punctuation_comma\": 0,<br>\n    \"punctuation_period\": 0,<br>\n    \"punctuation_hyphen\": 1,<br>\n    \"punctuation_underscore\": 0,<br>\n    \"punctuation_colon\": 0,<br>\n    \"punctuation_semicolon\": 0,<br>\n    \"punctuation_pipe\": 0,<br>\n    \"punctuation_left_curly\": 0,<br>\n    \"punctuation_left_square\": 0,<br>\n    \"punctuation_right_curly\": 0,<br>\n    \"punctuation_right_square\": 0,<br>\n    \"punctuation_plus\": 0,<br>\n    \"punctuation_equal\": 0,<br>\n    \"punctuation_asterisk\": 0,<br>\n    \"punctuation_ampersand\": 0,<br>\n    \"punctuation_percent\": 0,<br>\n    \"punctuation_caret\": 0,<br>\n    \"punctuation_dollar\": 0,<br>\n    \"punctuation_hash\": 0,<br>\n    \"punctuation_at\": 0,<br>\n    \"punctuation_exclamation\": 0,<br>\n    \"punctuation_tilde\": 0,<br>\n    \"punctuation_left_parenthesis\": 0,<br>\n    \"punctuation_right_parenthesis\": 0,<br>\n    \"punctuation_question_mark\": 0,<br>\n    \"punctuation_less_than\": 0,<br>\n    \"punctuation_greater_than\": 0,<br>\n    \"punctuation_slash\": 0,<br>\n    \"punctuation_back_slash\": 0,<br>\n    \"node_pattern\": \"content/[node:title]\",<br>\n    \"taxonomy_term_pattern\": \"[term:vocabulary]/[term:name]\",<br>\n    \"user_pattern\": \"users/[user:name]\",<br>\n    \"node_page_pattern\": \"\",<br>\n    \"node_post_pattern\": \"posts/[node:title]\",<br>\n    \"blog_pattern\": \"blogs/[user:name]\",<br>\n    \"forum_pattern\": \"[term:vocabulary]/[term:name]\",<br>\n    \"node_biblio_pattern\": \"biblio/[node:title]\",<br>\n    \"node_blog_pattern\": \"\",<br>\n    \"node_business_pattern\": \"business/[node:title]\",<br>\n    \"node_correspondence_pattern\": \"correspondence/[node:title]\",<br>\n    \"node_edition_pattern\": \"edition/[node:title]\",<br>\n    \"node_library_pattern\": \"library/[node:title]\",<br>\n    \"node_partner_pattern\": \"partner/[node:title]\",<br>\n    \"node_person_pattern\": \"person/[node:title]\",<br>\n    \"node_primary_object_pattern\": \"object/[node:title]\",<br>\n    \"node_related_materials_pattern\": \"related/[node:title]\",<br>\n    \"node_work_pattern\": \"work/[node:title]\",<br>\n    \"taxonomy_term_business_type_pattern\": \"\",<br>\n    \"taxonomy_term_condition_pattern\": \"\",<br>\n    \"taxonomy_term_copyright_status_pattern\": \"\",<br>\n    \"taxonomy_term_correspondence_type_pattern\": \"\",<br>\n    \"taxonomy_term_damage_pattern\": \"\",<br>\n    \"taxonomy_term_edition_pattern\": \"\",<br>\n    \"taxonomy_term_gender_pattern\": \"\",<br>\n    \"taxonomy_term_genre_pattern\": \"\",<br>\n    \"taxonomy_term_language_pattern\": \"\",<br>\n    \"taxonomy_term_occupation_pattern\": \"\",<br>\n    \"taxonomy_term_partner_type_pattern\": \"\",<br>\n    \"taxonomy_term_publication_process_pattern\": \"\",<br>\n    \"taxonomy_term_relationship_type_pattern\": \"\",<br>\n    \"taxonomy_term_tags_pattern\": \"\",<br>\n    \"taxonomy_term_work_type_pattern\": \"\"<br>\n}</p>",
+        "id": 226253175,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613233480
+    },
+    {
+        "content": "<p>Unfortunately importing the default file didn't work</p>",
+        "id": 226253520,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613233830
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"389290\">@Erica Cavanaugh</span> \"didn't work\" -- can you provide more detail? Was there an error message? What happened?</p>",
+        "id": 226257494,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613238263
+    },
+    {
+        "content": "<p>Sorry, there wasn't any change in error messages or functionality. The error messages at admin/config/urls/path/patterns and admin/structure/types/manage/content-type both remained the same</p>",
+        "id": 226258384,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613239217
+    },
+    {
+        "content": "<p>Thanks. Just to make these easier to reach:</p>\n<blockquote>\n<p><strong>admin/structure/types/manage/page</strong><br>\n<code>Argument 1 passed to backdrop_sort() must be of the type array, null given, called in /webroot/core/includes/token.inc on line 320</code></p>\n</blockquote>\n<blockquote>\n<p><strong>admin/config/urls/path/patterns</strong><br>\n<code>Warning: Invalid argument supplied for foreach() in path_patterns_form() (line 357 of /webroot/core/modules/path/path.admin.inc)</code></p>\n</blockquote>",
+        "id": 226259535,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613240651
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"389290\">@Erica Cavanaugh</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...may I offer some thoughts/ideas as well? ...is Seven being used as the admin theme, or has it perhaps been subthemed and the subtheme being used instead (look at the bottom of the <code>admin/appearance</code> page)?<br>\nto help you further, can you please have a look in <code>admin/reports/status</code> and provide the following:</p>\n<ul>\n<li>which Backdrop core version is the site using (and do you know if the official version is used or if it has been manually patched?)</li>\n<li>which php version</li>\n<li>which web server and its version</li>\n<li>which database and version</li>\n</ul>",
+        "id": 226271247,
+        "sender_full_name": "klonos",
+        "timestamp": 1613254049
+    },
+    {
+        "content": "<p>Seven is being used as the Admin theme<br>\nBackdrop core: 1.18.1<br>\nPHP: 7.4.11<br>\nServer: Apaches (trying to check on the version)<br>\nDatabase: MySQL, MariaDB, or equivalent version 5.5.5-10.3.27-MariaDB<br>\n*I'm looking into getting more specifics regarding the server version and whether it is MySQL or MariaDB. It is being hosted by Reclaim, so I think they are using MySQL</p>",
+        "id": 226277589,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613263341
+    },
+    {
+        "content": "<p>Are you able to use Devel to inspect the code?</p>",
+        "id": 226278255,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1613264413
+    },
+    {
+        "content": "<blockquote>\n<p>Unfortunately importing the default file didn't work</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"389290\">@Erica Cavanaugh</span> there's an alternate way to reset the path config to default values, if you have direct access to the file system:</p>\n<p>Copy the file <code>core/modules/path/config/path.settings.json</code> to your active config <code>files/config_[your hash here]/active/path.settings.json</code> and flush all caches. Does that work? If that fixes the problem, then the problem has to do with the config file contents - it looks OK, though, at first sight. I was able to import it in a fresh install and it didn't cause any trouble. <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> </p>\n<p>Are there additional error messages in your dblog? (admin/reports/dblog) Related or unrelated to paths.</p>",
+        "id": 226291419,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1613289212
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  Devel is enabled, but honestly I'm not really sure what to look for</p>",
+        "id": 226319158,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613328853
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> reseting the path configuration via the file system produced the same results/same errors still appearing. I did notice that when the cache is cleared, a couple more errors appear.</p>\n<div class=\"codehilite\"><pre><span></span><code>Notice: Undefined index: types in token_get_token_problems() (line 425 of /home/modernis/backdropdebug.modernistarchives.com/core/includes/token.inc).\nWarning: Invalid argument supplied for foreach() in token_get_token_problems() (line 425 of /home/modernis/backdropdebug.modernistarchives.com/core/includes/token.inc).\nNotice: Undefined index: tokens in token_get_token_problems() (line 440 of /home/modernis/backdropdebug.modernistarchives.com/core/includes/token.inc).\nWarning: Invalid argument supplied for foreach() in token_get_token_problems() (line 440 of /home/modernis/backdropdebug.modernistarchives.com/core/includes/token.inc).\nTypeError: Argument 1 passed to backdrop_sort() must be of the type array, null given, called in /home/modernis/backdropdebug.modernistarchives.com/core/includes/token.inc on line 320 in backdrop_sort() (line 7176 of /home/modernis/backdropdebug.modernistarchives.com/core/includes/common.inc).\n</code></pre></div>\n<p>Upon using Backup and Migrate to get a database export at admin/config/system/backup_migrate/export/advanced, the initial sort error appears as well. This one does not go away when disabling the Path module</p>\n<div class=\"codehilite\"><pre><span></span><code>Argument 1 passed to backdrop_sort() must be of the type array, null given, called in /webroot/core/includes/token.inc on line 320\n</code></pre></div>",
+        "id": 226319350,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613329159
+    },
+    {
+        "content": "<p>There has been a feeds related error repeatedly appearing, that Quinn has been working on and we don't think is related.</p>\n<div class=\"codehilite\"><pre><span></span><code>Notice: Undefined index: module in feeds_system_info_alter() (line 896 of /home/modernis/backdropdebug.modernistarchives.com/modules/feeds/feeds.module).\n</code></pre></div>",
+        "id": 226319544,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613329406
+    },
+    {
+        "content": "<p>Out of curiousity, find and modify this function and see the Devel output please: </p>\n<div class=\"codehilite\"><pre><span></span><code>function token_info() {\n  $data = &amp;backdrop_static(__FUNCTION__);\n  dpm($data);\n  if (!isset($data)) {\n    $data = module_invoke_all(&#39;token_info&#39;);\n    dpm($data);\n    backdrop_alter(&#39;token_info&#39;, $data);\n  }\n  return $data;\n}\n</code></pre></div>",
+        "id": 226344028,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1613362836
+    },
+    {
+        "content": "<p>You might have to clear all caches and reload the page to see the output.</p>",
+        "id": 226345400,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613364979
+    },
+    {
+        "content": "<p>I think the suggestion of <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> looks promising. There seems to be a module that implements hook_token_info(_alter) in a wrong/breaking way. At least, that's what I (also) suspect. Figuring out the module should help fixing the problem.</p>",
+        "id": 226350929,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1613372656
+    },
+    {
+        "content": "<p>Oh! I think it's an issue in the initial D7 site. The token module there doesn't work with PHP 7.4 and is causing token errors in the path settings and such. I think the issue has carried over and is causing problems now in the Backdrop site.</p>",
+        "id": 226408179,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613408480
+    },
+    {
+        "content": "<p>It is fixed! Changing the PHP version to 7.2 from 7.4 for the Backdrop site fixed the token related errors that were appearing.</p>",
+        "id": 226425103,
+        "sender_full_name": "Erica Cavanaugh",
+        "timestamp": 1613419313
+    },
+    {
+        "content": "<p>That should be reported as a bug.</p>",
+        "id": 226427643,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613421372
+    }
+]

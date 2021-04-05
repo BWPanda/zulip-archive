@@ -1,0 +1,138 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/oop.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html">oop</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="193565122"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193565122" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193565122">(Apr 10 2020 at 12:47)</a>:</h4>
+<p>need some OOP advice please: in Layouts <code>abstract class LayoutContext</code> does not extend the <code>LayoutHandler</code> class, like other handlers, because contexts are not stored in config. Well, I'm aiming to make contexts store in config. So what are the implications of changing <code>LayoutContext</code> to extend <code>LayoutHandler</code> at this stage? Is that an API change? Could it mess up contrib?</p>
+
+
+
+<a name="193565270"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193565270" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193565270">(Apr 10 2020 at 12:49)</a>:</h4>
+<p>I decided to revisit <a href="https://github.com/backdrop/backdrop-issues/issues/2134" title="https://github.com/backdrop/backdrop-issues/issues/2134">https://github.com/backdrop/backdrop-issues/issues/2134</a> but thought it best to deal with <a href="https://github.com/backdrop/backdrop-issues/issues/3750" title="https://github.com/backdrop/backdrop-issues/issues/3750">https://github.com/backdrop/backdrop-issues/issues/3750</a> first, as relationships are contexts and will need to be stored somehow.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2134" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2134" title="Add support for &quot;Relationships&quot; to Layout Contexts · Issue #2134 · backdrop/backdrop-issues">Add support for "Relationships" to Layout Contexts · Issue #2134 · backdrop/backdrop-issues</a></div><div class="message_embed_description">In many situations when working with Layouts you want or need information related to the primary thing being displayed. For example if you had created a layout configuration for the path node/%, yo...</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3750" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3750" title="Layouts: Add support for custom contexts · Issue #3750 · backdrop/backdrop-issues">Layouts: Add support for custom contexts · Issue #3750 · backdrop/backdrop-issues</a></div><div class="message_embed_description">e.g. make a context for node ID 1, completely separate from the path. Part of #345</div></div></div>
+
+
+
+<a name="193567050"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193567050" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193567050">(Apr 10 2020 at 13:08)</a>:</h4>
+<p>any thoughts?</p>
+
+
+
+<a name="193567091"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193567091" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193567091">(Apr 10 2020 at 13:09)</a>:</h4>
+<p>Sorry, OOP is outside the area of my expertise...</p>
+
+
+
+<a name="193567364"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193567364" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193567364">(Apr 10 2020 at 13:12)</a>:</h4>
+<p>shamelessly pinging <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> and @quicksketch then</p>
+
+
+
+<a name="193567425"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193567425" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193567425">(Apr 10 2020 at 13:13)</a>:</h4>
+<p>off the cuff w/ little to no understanding seems like a big change to me;</p>
+
+
+
+<a name="193567568"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193567568" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193567568">(Apr 10 2020 at 13:15)</a>:</h4>
+<p>hmm just realised Nate has a different handle here <span class="user-mention" data-user-id="258586">@Nate Lampton</span></p>
+
+
+
+<a name="193567940"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193567940" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193567940">(Apr 10 2020 at 13:20)</a>:</h4>
+<p>Yes, it is an API change, and yes, it could mess up contrib, but I haven't looked at either class to see how different they are.</p>
+
+
+
+<a name="193567993"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193567993" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193567993">(Apr 10 2020 at 13:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> do you know if an <code>abstract class</code> can extend another class?</p>
+
+
+
+<a name="193568108"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193568108" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193568108">(Apr 10 2020 at 13:22)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256627">oadaeh (Jason Flatt)</span> <a href="#narrow/stream/218635-Backdrop/topic/oop/near/193567940" title="#narrow/stream/218635-Backdrop/topic/oop/near/193567940">said</a>:</p>
+<blockquote>
+<p>Yes, it is an API change, and yes, it could mess up contrib, but I haven't looked at either class to see how different they are.</p>
+</blockquote>
+<p><span aria-label="angry" class="emoji emoji-1f620" role="img" title="angry">:angry:</span>  was hoping no one would say that.</p>
+
+
+
+<a name="193568536"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193568536" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193568536">(Apr 10 2020 at 13:27)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256583">Geoff St. Pierre (serundeputy)</span> <a href="#narrow/stream/218635-Backdrop/topic/oop/near/193567993" title="#narrow/stream/218635-Backdrop/topic/oop/near/193567993">said</a>:</p>
+<p>I'm not sure, but according to <a href="https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class" title="https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class">https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class</a> it seems possible with at least one caveat, but as mentioned in a comment, traits and/or interfaces might be a better way to go.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class" style="background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded)"></a><div class="data-container"><div class="message_embed_title"><a href="https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class" title="php abstract class extending another abstract class">php abstract class extending another abstract class</a></div><div class="message_embed_description">Is it possible in PHP, that an abstract class inherits from an abstract class?
+
+For example, 
+
+abstract class Generic {
+    abstract public function a();
+    abstract public function b();
+}
+
+abstract </div></div></div>
+
+
+
+<a name="193568650"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193568650" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193568650">(Apr 10 2020 at 13:29)</a>:</h4>
+<p>that is an abstract class extending another abstract class; not extending a regular class</p>
+
+
+
+<a name="193568688"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193568688" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193568688">(Apr 10 2020 at 13:29)</a>:</h4>
+<p>Oh, I missed that distinction in your question. I think that is not possible.</p>
+
+
+
+<a name="193568837"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193568837" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193568837">(Apr 10 2020 at 13:31)</a>:</h4>
+<p>oh; <code>LayoutHandler</code> is an abstract class so what <span class="user-mention" data-user-id="256757">@docwilmot</span> proposes is possible, but yes API change</p>
+
+
+
+<a name="193742590"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193742590" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193742590">(Apr 13 2020 at 03:25)</a>:</h4>
+<p>Abstract classes can extend other abstract classes. I'd have to examine further but generally it sounds like having <code>LayoutContext</code> extend <code>LayoutHandler</code> would add additional methods. That's only an API expansion. If it changes any of the parameters of the existing methods, then it's an API break.</p>
+
+
+
+<a name="193743883"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193743883" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193743883">(Apr 13 2020 at 04:09)</a>:</h4>
+<p>Whoa</p>
+
+
+
+<a name="193744120"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/oop/near/193744120" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/oop.html#193744120">(Apr 13 2020 at 04:17)</a>:</h4>
+<p>Whoa?</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

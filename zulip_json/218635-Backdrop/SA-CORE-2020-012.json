@@ -1,0 +1,128 @@
+[
+    {
+        "content": "<p><a href=\"https://www.drupal.org/sa-core-2020-012\">Drupal core - Critical - Remote code execution - SA-CORE-2020-012 </a> - and we today?</p>",
+        "id": 217174040,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1605722859
+    },
+    {
+        "content": "<p>We have a matching PR ready for Backdrop. We'll be starting the new release process shortly for 1.17.3 and 1.16.5</p>",
+        "id": 217176268,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1605723952
+    },
+    {
+        "content": "<p>If anyone wants to help with the release, <a href=\"https://github.com/backdrop/backdrop-issues/issues/4765\">https://github.com/backdrop/backdrop-issues/issues/4765</a> @stpaultim @klonos @bwpanda etc?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4765\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4765\" title=\"Backdrop 1.17.5 Release checklist · Issue #4765 · backdrop/backdrop-issues\">Backdrop 1.17.5 Release checklist · Issue #4765 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for Nov 18th, 2020 11am - 1pm PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release mi...</div></div></div>",
+        "id": 217178552,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1605724978
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I might be able to help</p>",
+        "id": 217180078,
+        "sender_full_name": "Herb",
+        "timestamp": 1605725706
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  any tasks on that list you want to claim?</p>",
+        "id": 217181478,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1605726289
+    },
+    {
+        "content": "<p>Okay the fix is merged into all branches. I'll start on the 1.16.5 release.</p>",
+        "id": 217185008,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1605727862
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I assigned some of the things like Pantheon and Platform to you, lmk if you don't want to do those</p>",
+        "id": 217185034,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1605727878
+    },
+    {
+        "content": "<p>I'll take a look <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span></p>",
+        "id": 217185471,
+        "sender_full_name": "Herb",
+        "timestamp": 1605728076
+    },
+    {
+        "content": "<p>Tags for <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.3\">https://github.com/backdrop/backdrop/releases/tag/1.17.3</a> and <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.5\">https://github.com/backdrop/backdrop/releases/tag/1.16.5</a> are ready to go.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.3\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.3\" title=\"Release 1.17.3 · backdrop/backdrop\">Release 1.17.3 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop 1.17.3</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.5\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.5\" title=\"Release 1.16.5 · backdrop/backdrop\">Release 1.16.5 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop 1.16.5</div></div></div>",
+        "id": 217185788,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1605728215
+    },
+    {
+        "content": "<p>I can do stuff in a few hours</p>",
+        "id": 217186099,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605728367
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> so far you're assigned to updating Tugboat</p>",
+        "id": 217186637,
+        "sender_full_name": "Herb",
+        "timestamp": 1605728600
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> is this the Composer project that needs updating? <a href=\"https://github.com/backdrop-ops/backdrop-composer\">https://github.com/backdrop-ops/backdrop-composer</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdrop-composer\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdrop-composer\" title=\"backdrop-ops/backdrop-composer\">backdrop-ops/backdrop-composer</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop-ops/backdrop-composer development by creating an account on GitHub.</div></div></div>",
+        "id": 217188541,
+        "sender_full_name": "Herb",
+        "timestamp": 1605729532
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I'll need permissions to <a href=\"https://github.com/backdrop-ops/backdrop-composer\">https://github.com/backdrop-ops/backdrop-composer</a> in order to update it. I've got it ready</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdrop-composer\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdrop-composer\" title=\"backdrop-ops/backdrop-composer\">backdrop-ops/backdrop-composer</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop-ops/backdrop-composer development by creating an account on GitHub.</div></div></div>",
+        "id": 217190768,
+        "sender_full_name": "Herb",
+        "timestamp": 1605730594
+    },
+    {
+        "content": "<p>I'm a bit swamped with work today, but I'll be around if there is anything small I can do to help. It looks like we have enough people working on it.</p>",
+        "id": 217195001,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605732764
+    },
+    {
+        "content": "<p>At least I hope so.</p>",
+        "id": 217195011,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605732768
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  sorry got stuck in a meeting. I just gave you access to the composer repo</p>",
+        "id": 217196891,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1605733660
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> The sentence about vulnerability mitigation on <a href=\"https://backdropcms.org/security/backdrop-sa-core-2020-007\">https://backdropcms.org/security/backdrop-sa-core-2020-007</a> looks strange to me:</p>\n<blockquote>\n<p>This vulnerability is mitigated by the fact that an attacker must have a role with the permission \"administer FOO\".</p>\n</blockquote>",
+        "id": 217198971,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1605734805
+    },
+    {
+        "content": "<p>I was just about to mention that :-)</p>",
+        "id": 217199492,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605735121
+    },
+    {
+        "content": "<p>Never heard of the <code>administer FOO</code> permission...</p>",
+        "id": 217199551,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605735136
+    },
+    {
+        "content": "<p>I guess, it should be \"the permission <em>to upload files</em>\". Not sure, though.</p>",
+        "id": 217199831,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1605735305
+    },
+    {
+        "content": "<p>oops, template text!</p>",
+        "id": 217216251,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1605746243
+    }
+]

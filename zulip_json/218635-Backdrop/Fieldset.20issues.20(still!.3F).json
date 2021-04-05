@@ -1,0 +1,128 @@
+[
+    {
+        "content": "<p>I'm noticing some issues with fieldsets (still/again?):</p>\n<p><a href=\"/user_uploads/18319/B7JRScNN3oaQx84oI85cGddi/2021-02-27_14-00.png\">2021-02-27_14-00.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/B7JRScNN3oaQx84oI85cGddi/2021-02-27_14-00.png\" title=\"2021-02-27_14-00.png\"><img src=\"/user_uploads/18319/B7JRScNN3oaQx84oI85cGddi/2021-02-27_14-00.png\"></a></div><p>The width doesn't seem to be extending to 100% like it used to...</p>",
+        "id": 228027812,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614395032
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/S2ap-dBeQr_ySxgo9ZLXHryl/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/S2ap-dBeQr_ySxgo9ZLXHryl/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/S2ap-dBeQr_ySxgo9ZLXHryl/image.png\"></a></div>",
+        "id": 228027865,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614395084
+    },
+    {
+        "content": "<p>Is that on current 1.x <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ?? <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 228028296,
+        "sender_full_name": "klonos",
+        "timestamp": 1614395567
+    },
+    {
+        "content": "<p>Yep. Screenshots are from <a href=\"http://B.org\">B.org</a> demo site, but I also confirmed on my sandbox (which uses <code>1.x</code>).</p>",
+        "id": 228029131,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614396586
+    },
+    {
+        "content": "<p>Hm, can not reproduce here with 1.19.x-dev (it's up to date). Which sandboxes show that glitch?</p>",
+        "id": 228046856,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614418875
+    },
+    {
+        "content": "<p>Also not reproducible on a recent tugboat sandbox... <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> where do you see these problems?</p>",
+        "id": 228047001,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614419065
+    },
+    {
+        "content": "<p>I'm seeing it on <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a> Demo sites (e.g. <a href=\"https://1-18-1-axnqy479x58bef0gbd0hmt9wuinxa2uj.tugboat.qa/user/1/edit\">https://1-18-1-axnqy479x58bef0gbd0hmt9wuinxa2uj.tugboat.qa/user/1/edit</a> (admin/password)) which are running v1.18.1. But I'm also seeing it on my local sandbox, which is running v1.19.x-dev  (<a href=\"https://github.com/BWPanda/backdrop\">https://github.com/BWPanda/backdrop</a>)...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/BWPanda/backdrop\" style=\"background-image: url(https://avatars.githubusercontent.com/u/2385329?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/BWPanda/backdrop\" title=\"BWPanda/backdrop\">BWPanda/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to BWPanda/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 228047574,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614419840
+    },
+    {
+        "content": "<p>Which browser?</p>",
+        "id": 228047662,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614419967
+    },
+    {
+        "content": "<p>Firefox v86.0 (64-bit)</p>",
+        "id": 228047668,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614419988
+    },
+    {
+        "content": "<p>Ooooh! It's a Firefox bug! <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1694729\">https://bugzilla.mozilla.org/show_bug.cgi?id=1694729</a></p>",
+        "id": 228047831,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614420173
+    },
+    {
+        "content": "<p>Hm, still can't reproduce, neither on 1.19.x-dev nor on 1.18.1, browsers here are Firefox 78.7.1esr (64-Bit) and Chromium 88.0...</p>\n<p>Hahaaaa! It's FF.</p>",
+        "id": 228047874,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614420218
+    },
+    {
+        "content": "<p>But I think we still should fix it in Seven. That display: table-cell on fieldsets is an outdated workaround, which causes problems now...</p>",
+        "id": 228048017,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614420374
+    },
+    {
+        "content": "<p>Maybe we should start a new admin theme (Eight?) that includes all these major fixes for Seven <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 228048053,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614420448
+    },
+    {
+        "content": "<p>Re Seven: <a href=\"https://github.com/backdrop/backdrop/blob/fc38836bee1e52d247c241e2f384af0e0e67baa6/core/modules/system/css/system.theme.css#L15\">https://github.com/backdrop/backdrop/blob/fc38836bee1e52d247c241e2f384af0e0e67baa6/core/modules/system/css/system.theme.css#L15</a></p>\n<p>Re \"Eight\" - shouldn't it be \"One\"? <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/fc38836bee1e52d247c241e2f384af0e0e67baa6/core/modules/system/css/system.theme.css#L15\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/fc38836bee1e52d247c241e2f384af0e0e67baa6/core/modules/system/css/system.theme.css#L15\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 228048130,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614420533
+    },
+    {
+        "content": "<p>Aaaand here's the new issue for the FF fieldset problem: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4971\">https://github.com/backdrop/backdrop-issues/issues/4971</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4971\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4971\" title=\"Seven: old browser quirk workaround causes new trouble with Firefox · Issue #4971 · backdrop/backdrop-issues\">Seven: old browser quirk workaround causes new trouble with Firefox · Issue #4971 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug This affects Firefox 86 (not ESR): Fielsets in Seven look weird. (Screenshot TBD) Steps To Reproduce Go to, for instance, admin/config/people/settings Actual behavior Fieldse...</div></div></div>",
+        "id": 228048530,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614421078
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> can you add a screenshot to that issue, please?</p>",
+        "id": 228048609,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614421157
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I can confirm that commenting out those lines fixes the problem for me. Can you confirm it doesn't have any ill effects for you?</p>",
+        "id": 228048838,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614421452
+    },
+    {
+        "content": "<p>In FF ESR it causes (slightly) less margin on these fieldsets - which was a bug IMO anyway. No other side effects on vertical tabs, as far as I can tell.</p>",
+        "id": 228049020,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614421703
+    },
+    {
+        "content": "<p>Who provides the PR? <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>",
+        "id": 228049620,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614422407
+    },
+    {
+        "content": "<p>I can try doing it later if you don't beat me to it <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 228049944,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614422779
+    },
+    {
+        "content": "<p>If you're on your way to dinner (or bed), I can do it. No problem.</p>",
+        "id": 228049964,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614422846
+    }
+]

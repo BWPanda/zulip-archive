@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>I'm trying to write a test where I create a new node, then select the 'Preview' button. I do this:</p>\n<div class=\"codehilite\"><pre><span></span><code>    $this-&gt;backdropGet(&#39;node/add/&#39; . $this-&gt;content_type-&gt;type);\n    $title = $this-&gt;randomName();\n    $body = $this-&gt;randomName();\n    $edit = array(\n      &#39;title&#39; =&gt; $title,\n      &#39;body&#39; =&gt; $body,\n    );\n    $this-&gt;backdropPost(NULL, $edit, t(&#39;Preview&#39;));\n</code></pre></div>\n<p>When I run the test, I get an exception at that point: \"FAIL: Failed to set field body to\" (yes, there's nothing after the \"to\" in the exception message). Any tips/suggestions on how to make this work?</p>",
+        "id": 231545318,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1616534227
+    },
+    {
+        "content": "<p>the array keys in $edit must be the field element <em>name</em>, so for the body textarea,  <code>body[und][0][value]</code>.</p>",
+        "id": 231549385,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1616536182
+    },
+    {
+        "content": "<p>Got it, thanks!</p>",
+        "id": 231550058,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1616536493
+    }
+]

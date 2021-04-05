@@ -1,0 +1,69 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Forum.20mails.20and.20dnsbl.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Forum.20mails.20and.20dnsbl.html">Forum mails and dnsbl</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="225126919"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Forum%20mails%20and%20dnsbl/near/225126919" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Forum.20mails.20and.20dnsbl.html#225126919">(Feb 04 2021 at 07:29)</a>:</h4>
+<p>I realized, that I don't get any forum notification mails anymore... The sending server is currently on 5 blacklists. Commonly used ones, BTW, so probably hardly anyone gets these mails.</p>
+<p>Blacklisted in:</p>
+<ul>
+<li>BLOCKLIST.DE</li>
+<li>IBM DNS Blacklist</li>
+<li>RATS Spam (!)</li>
+<li>SORBS SPAM</li>
+<li>Spamhaus ZEN (!)</li>
+</ul>
+<p>Servers that are on the Spamhaus dnsbl are extremely unlikely to get anywhere - that a widely used blacklist. Is there any chance to get rid of sendgrid? They're on dnsbl regularly.</p>
+
+
+
+<a name="225209548"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Forum%20mails%20and%20dnsbl/near/225209548" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Forum.20mails.20and.20dnsbl.html#225209548">(Feb 04 2021 at 19:27)</a>:</h4>
+<p>I get Forum emails fine. I use FastMail...</p>
+
+
+
+<a name="225213583"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Forum%20mails%20and%20dnsbl/near/225213583" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Forum.20mails.20and.20dnsbl.html#225213583">(Feb 04 2021 at 19:56)</a>:</h4>
+<p>The subdomains ideally need to be converted to cnames to encompass the DMARC policy unless forums truly is on a different IP, of which a dedicated dmarc policy will be needed, which might help.</p>
+
+
+
+<a name="225213752"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Forum%20mails%20and%20dnsbl/near/225213752" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Forum.20mails.20and.20dnsbl.html#225213752">(Feb 04 2021 at 19:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> can you look at the headers and see if spf, DKIM and DMARC are pass or fail on the forum emails?</p>
+
+
+
+<a name="225216206"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Forum%20mails%20and%20dnsbl/near/225216206" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Forum.20mails.20and.20dnsbl.html#225216206">(Feb 04 2021 at 20:15)</a>:</h4>
+<p>Finally registered for <a href="http://forum.backdropcms.org">forum.backdropcms.org</a>. SPF, DKIM and DMARC all look good, so no worries there. Definitely an issue with blacklisted IPs :-(</p>
+
+
+
+<a name="225217518"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Forum%20mails%20and%20dnsbl/near/225217518" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Forum.20mails.20and.20dnsbl.html#225217518">(Feb 04 2021 at 20:25)</a>:</h4>
+<p>The IP it was sent from is: 149.72.91.245 and checking that IP on <a href="http://blocklist.de">blocklist.de</a> passed. RATS spam passes everything except the "Spam" category.</p>
+<p>Sendgrid "should" be sending out email on a variety of IP's, so are all of them really getting blocked?</p>
+<p>Update: Some interesting info: <a href="https://sendgrid.com/docs/ui/sending-email/deny-lists/">https://sendgrid.com/docs/ui/sending-email/deny-lists/</a></p>
+<p>Looks like a dedicated IP or moving to a different email service would be some options. I've mentioned using Googles Workspace for Non-Profit for the internal backdrop email which would also allow it to be used as an SMTP relay. It's not my decision, so all I can do is recommend. I don't know what costs are involved with sendgrid, but the free Google Workspace for Non-Profit might reduce some costs in the short term until more advanced features are needed.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://sendgrid.com/docs/ui/sending-email/deny-lists/" style="background-image: url(https://sendgrid.com/brand/sg-twilio/SG_Twilio_Lockup_Social.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://sendgrid.com/docs/ui/sending-email/deny-lists/" title="What do I do if I'm added to a deny list?">What do I do if I'm added to a deny list?</a></div><div class="message_embed_description">What do I do if I'm added to a deny list?</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

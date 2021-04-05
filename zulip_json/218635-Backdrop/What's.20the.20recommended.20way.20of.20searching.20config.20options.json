@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>Assume you don't know what is exact <code>$option</code> in <code>$config-&gt;get($option);</code>, you only know part of the option's name. What's the best way to find the option?</p>",
+        "id": 224445215,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611911274
+    },
+    {
+        "content": "<p><code>$config</code> implies you've already done <code>$config = config('module.type');</code>, so just look in that file would be easiest <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 224445362,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611911358
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I need to programmatically find option</p>",
+        "id": 224445653,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611911527
+    },
+    {
+        "content": "<p>knowing only part of its name</p>",
+        "id": 224445675,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611911542
+    },
+    {
+        "content": "<p>Ah</p>",
+        "id": 224445693,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611911558
+    },
+    {
+        "content": "<p>Does my script really needs to deal with the file itself?</p>",
+        "id": 224445707,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611911575
+    },
+    {
+        "content": "<p>Any possibility to iterate through all options?</p>",
+        "id": 224445844,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611911663
+    },
+    {
+        "content": "<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">$option = 'partial';</span>\n<span class=\"x\">$config = config('system.core');</span>\n<span class=\"x\">foreach ($config-&gt;get() as $key =&gt; $value) {</span>\n<span class=\"x\">  if (strpos($key, $option) !== FALSE) {</span>\n<span class=\"x\">    // Tada! $value</span>\n<span class=\"x\">  }</span>\n<span class=\"x\">}</span>\n</code></pre></div>",
+        "id": 224445949,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611911753
+    },
+    {
+        "content": "<p>Ah, <code>$config-&gt;get() </code> gets all values. Good to know. Thanks!</p>",
+        "id": 224446055,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611911798
+    },
+    {
+        "content": "<p>Basically <code>config_get()</code>/<code>$config-&gt;get()</code> without specifying the key will return all values</p>",
+        "id": 224446071,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611911812
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I've been thinking for some time about how Drupal upgrades/migrations push organizations and agencies into un-agile development. I am currently working on a large site migration to Drupal 8 and trying to do it in releasable chunks. But Drupal makes it really hard. It forces a wholesale upgrade, a relatively fixed amount of work, when when the organization is happy enough with their site. I was reading up on migrations and came across this line on Drupalize docs: \"This is a great opportunity to give your website a face lift.\" So they're basically saying, if you're going to have to spent an unknown amount of money on a fixed scope of work, might as well do even more work for more money.\"</p>",
+        "id": 197560617,
+        "sender_full_name": "Herb",
+        "timestamp": 1589465442
+    },
+    {
+        "content": "<p>This is the opposite of agile.</p>",
+        "id": 197560676,
+        "sender_full_name": "Herb",
+        "timestamp": 1589465464
+    },
+    {
+        "content": "<p>Instead we want to make it possible to break the work into smaller chunks where we can release each separately to the public so we can get real world feedback.</p>",
+        "id": 197560890,
+        "sender_full_name": "Herb",
+        "timestamp": 1589465533
+    },
+    {
+        "content": "<p>But that's really hard to do when you're forced to upgrade everything at once.</p>",
+        "id": 197560946,
+        "sender_full_name": "Herb",
+        "timestamp": 1589465561
+    },
+    {
+        "content": "<p>In the case of our one client, we're going to have two sites up and running at the same time. All the Drupal 7 functionality that was deeply connected with CiviCRM will stay on the Drupal 7 site until next year. And everything else will go to Drupal 8.</p>",
+        "id": 197561192,
+        "sender_full_name": "Herb",
+        "timestamp": 1589465669
+    },
+    {
+        "content": "<p>The best case scenario is that the staff and end users will not see much difference in how they use the site. That's a funny way to spend tens of thousands of dollars in the hope of seeing not much change in functionality.</p>",
+        "id": 197561887,
+        "sender_full_name": "Herb",
+        "timestamp": 1589465945
+    },
+    {
+        "content": "<p>Sure, it'll be more secure and it means they'll get more benefits in the future with new releases. But most of their interaction is with CiviCRM which will be the same.</p>",
+        "id": 197562086,
+        "sender_full_name": "Herb",
+        "timestamp": 1589466016
+    }
+]

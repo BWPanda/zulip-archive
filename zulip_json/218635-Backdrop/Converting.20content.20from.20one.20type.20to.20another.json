@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>Is there a method to convert content from one type to another? Ideally using checkboxes on the content admin page to do it for multiple items at once?</p>",
+        "id": 187855577,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581367104
+    },
+    {
+        "content": "<p>In Drupal I think <a href=\"https://www.drupal.org/project/node_convert\" target=\"_blank\" title=\"https://www.drupal.org/project/node_convert\">https://www.drupal.org/project/node_convert</a> is a good option but I don't think it's been ported yet.</p>",
+        "id": 187855608,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581367126
+    },
+    {
+        "content": "<p>If there's no method currently I may port that.</p>",
+        "id": 187855615,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581367135
+    },
+    {
+        "content": "<p>I don't think I've ever done that in either Drupal or Backdrop.</p>",
+        "id": 187856649,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581367880
+    },
+    {
+        "content": "<p>It's one of those things that's really useful once in a while. Especially when redoing a site and perhaps getting rid of some content types -- to preserve certain content before you delete the content type.</p>",
+        "id": 187857408,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581368376
+    },
+    {
+        "content": "<p>Ugh. Ctools again. That'll slow that idea right down.</p>",
+        "id": 187863482,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581372268
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> the only modules I'm aware of are <a href=\"https://www.drupal.org/project/node_convert\" target=\"_blank\" title=\"https://www.drupal.org/project/node_convert\">https://www.drupal.org/project/node_convert</a> (D7) and <a href=\"https://www.drupal.org/project/convert_bundles\" target=\"_blank\" title=\"https://www.drupal.org/project/convert_bundles\">https://www.drupal.org/project/convert_bundles</a> (D8) ...in the early days, if <code>node_convert</code> would fail, people would use Feeds to \"move\" content from one type to another.</p>",
+        "id": 187868824,
+        "sender_full_name": "klonos",
+        "timestamp": 1581376410
+    },
+    {
+        "content": "<p>I would suggest feeds too</p>",
+        "id": 187872708,
+        "sender_full_name": "Herb",
+        "timestamp": 1581380582
+    },
+    {
+        "content": "<p>Thanks, I may end up doing it with feeds. Sometimes if it's not much more work to port a module that would make it simpler for others down the road I try to work that in, but the <code>ctools</code> stuff really slows me down on porting...</p>",
+        "id": 187922902,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581435674
+    },
+    {
+        "content": "<p>I'll never understand why ctools is not in Drupal core. Almost every site uses a module that requires it.</p>",
+        "id": 187973952,
+        "sender_full_name": "Herb",
+        "timestamp": 1581470309
+    }
+]

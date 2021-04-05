@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>Hi...,</p>\n<p>I'm trying to convert a D7 module... and in the admin_settings form there is a System_settings_form() which according to <a href=\"http://b.org\">b.org</a> is to be deprecated</p>\n<p>I'm not that good with array...  so...</p>\n<p>With the $config-&gt;set()  does it only save one setting or will it save multiple settings stored in an array...  </p>\n<p>The example on <a href=\"https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated\">https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated</a> isn't very good for a noob <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>\n<p>Do I have to issue a $config-&gt;set for each setting or, how do I save multiple settings...  </p>\n<p>Thanks again.</p>",
+        "id": 212184369,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601750188
+    },
+    {
+        "content": "<p>Yes, you need a  $config-&gt;set() for each setting.</p>",
+        "id": 212184394,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601750270
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> The function itself is not deprecated, however there is new behavior and the old behavior is deprecated but will still work the way it did before as long as the compatibility layer is enabled.</p>",
+        "id": 212185226,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1601751554
+    },
+    {
+        "content": "<p>To use the new behavior you just need to add a line like <code>$form['#config'] = 'mymodule.settings'</code> to tell Backdrop which config file to save settings into.</p>",
+        "id": 212185321,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1601751681
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256663\">Joseph Flatt</span> <a href=\"#narrow/stream/218635-Backdrop/topic/.24config-.3Eset/near/212185321\">said</a>:</p>\n<blockquote>\n<p>To use the new behavior you just need to add a line like <code>$form['#config'] = 'mymodule.settings'</code> to tell Backdrop which config file to save settings into.</p>\n</blockquote>\n<p>Thanks Joseph.  It does say it is to <em>be</em> deprecated so I thought there was no point in leaving it in, I may as well try (TRY being the operative word) to do it the BD way <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>\n<p>Already have the $form['#config'] in...  I thought this was to add the settings to the form, how would I then save the settings?  I'm using the $config-&gt;set()...  but while it saves a text field ok, it's not saving an array value...  checkbox option... it puts the array item key and not it's value <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>",
+        "id": 212185682,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601752293
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> See <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1</a> which says:</p>\n<blockquote>\n<p>@since 1.6.0 Restored and made compatible with configuration management.</p>\n</blockquote>\n<p>So it's no longer deprecated, it won't be deprecated in future, and it's safe and fine to use with config.</p>",
+        "id": 212186642,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601753834
+    },
+    {
+        "content": "<p>An example might help. See <a href=\"https://github.com/backdrop-contrib/compact_forms/blob/d0be21a8de78c706b3577dd62c2bf6fb07595872/compact_forms.module#L48\">https://github.com/backdrop-contrib/compact_forms/blob/d0be21a8de78c706b3577dd62c2bf6fb07595872/compact_forms.module#L48</a> which uses this function and therefore doesn't need its own submit function. It all happens automatically.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/compact_forms/blob/d0be21a8de78c706b3577dd62c2bf6fb07595872/compact_forms.module#L48\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/compact_forms/blob/d0be21a8de78c706b3577dd62c2bf6fb07595872/compact_forms.module#L48\" title=\"backdrop-contrib/compact_forms\">backdrop-contrib/compact_forms</a></div><div class=\"message_embed_description\">Presents text fields for selected forms in a more compact fashion using jQuery. - backdrop-contrib/compact_forms</div></div></div>",
+        "id": 212186787,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601754109
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Many thanks...  </p>\n<p>I searched the changelog and found <a href=\"https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated\">https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated</a>... What a lovely rabbit hole that was... 4 hours later <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>\n<p>It's all a big learning curve <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>\n<p>Thanks again.</p>",
+        "id": 212186915,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601754286
+    },
+    {
+        "content": "<p>Sorry about that. FTR I've just filed this issue to fix that documentation: <a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/101\">https://github.com/backdrop-ops/api.backdropcms.org/issues/101</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/101\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/101\" title=\"system_settings_form() is *not* deprecated · Issue #101 · backdrop-ops/api.backdropcms.org\">system_settings_form() is *not* deprecated · Issue #101 · backdrop-ops/api.backdropcms.org</a></div><div class=\"message_embed_description\">This change record says that system_settings_form() has been deprecated: https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated This was before CMI and now system_settings_form...</div></div></div>",
+        "id": 212189729,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601758852
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> Another little trick you might not yet be aware of: set <code>#config</code> on your form. That's a shortcut, so you don't have to do config_set over and over again.</p>\n<p>Here's an <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1\">example in combination with system_settings_form()</a></p>\n<p>...and now the right link.</p>",
+        "id": 212222245,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601816170
+    }
+]

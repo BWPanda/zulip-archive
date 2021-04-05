@@ -1,0 +1,104 @@
+[
+    {
+        "content": "<p>Didn't want to hijack the other References discussion - Wondering if Entity reference in D7 migrates to References module in Backdrop?  Anyone have first had experience with that?</p>",
+        "id": 229869908,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615477390
+    },
+    {
+        "content": "<p>There is an entity reference module here: <a href=\"https://github.com/backdrop-contrib/entityreference\">https://github.com/backdrop-contrib/entityreference</a>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/entityreference\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/entityreference\" title=\"backdrop-contrib/entityreference\">backdrop-contrib/entityreference</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/entityreference development by creating an account on GitHub.</div></div></div>",
+        "id": 229875327,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615478871
+    },
+    {
+        "content": "<p>My memory was that References replaced entity reference in D7.  So I thought maybe it was an equivalent an easy migration.  Bad assumption, maybe.</p>",
+        "id": 229875688,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615478941
+    },
+    {
+        "content": "<p>The long term plan is to get all the features from the various referencing modules implemented in <a href=\"https://github.com/backdrop-contrib/reference\">https://github.com/backdrop-contrib/reference</a> and then include it in core with some upgrade hooks to convert fields from the others.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/reference\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/reference\" title=\"backdrop-contrib/reference\">backdrop-contrib/reference</a></div><div class=\"message_embed_description\">Defines a field to allow Backdrop entities to reference each other. - backdrop-contrib/reference</div></div></div>",
+        "id": 229875700,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615478944
+    },
+    {
+        "content": "<p>I thought it was the other way around, that entityreference replaced references.</p>",
+        "id": 229876218,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615479036
+    },
+    {
+        "content": "<p>oh. err.  then I donno. :)</p>",
+        "id": 229876279,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615479066
+    },
+    {
+        "content": "<p>Here is the issue for adding reference to core if you want to take a look at it. <a href=\"https://github.com/backdrop/backdrop-issues/issues/1301\">https://github.com/backdrop/backdrop-issues/issues/1301</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1301\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1301\" title=\"[META][D8] Add reference(s) module to core · Issue #1301 · backdrop/backdrop-issues\">[META][D8] Add reference(s) module to core · Issue #1301 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need I use node and user references all the time. It would be great if we could add these to core. Proposed solution We should create a new module reference that is a rewrite of ...</div></div></div>",
+        "id": 229876587,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615479161
+    },
+    {
+        "content": "<p>From that issue: \"a new module reference that is a rewrite of the Drupal 7 entityreference module\"</p>",
+        "id": 229876712,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615479194
+    },
+    {
+        "content": "<p>So \"references\" in Backdrop is not a port of \"References\" in D7</p>",
+        "id": 229876782,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615479219
+    },
+    {
+        "content": "<p>References (plural) is a port of the D7 module. Reference (singular) is a new module that is supposed to be a replacement for all of the various reference modules.</p>",
+        "id": 229877194,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615479339
+    },
+    {
+        "content": "<p>OK.  That's not confusing at all. <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 229877253,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615479362
+    },
+    {
+        "content": "<p>Either way, glad to see this moving ahead.  Reference functionality is the core of everything I build and a big site I'll be moving to backdrop has it as an essential piece.</p>",
+        "id": 229877377,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615479391
+    },
+    {
+        "content": "<p>Might it be helpful  to add an issue with tag ROADMAP (or something like that) to references, entityreference (and others?) to describe their now and future relationship to the reference module? (PS <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> thx for explaining that!)</p>",
+        "id": 229882094,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615480964
+    },
+    {
+        "content": "<p>I'm hesitant to add a roadmap to the two contrib modules until we know that Reference (singular) will be able to replace them. We don't want to force upgrades on people if they might lose functionality and integration with related modules</p>",
+        "id": 229977392,
+        "sender_full_name": "Herb",
+        "timestamp": 1615525796
+    },
+    {
+        "content": "<p>For instance, entityreference has a lot of related modules (some not ported yet) that would still need to work without too much trouble</p>",
+        "id": 229977485,
+        "sender_full_name": "Herb",
+        "timestamp": 1615525865
+    },
+    {
+        "content": "<p>Understood. Just thinking it would be nice to provide some guidance within the module projects for people who are asking themselves \"should I install reference, or references, or both, or something else?\"</p>",
+        "id": 230038634,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615559775
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I made another PR for the Reference module. <a href=\"https://github.com/backdrop-contrib/reference/issues/23\">https://github.com/backdrop-contrib/reference/issues/23</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/reference/issues/23\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/reference/issues/23\" title=\"Allow a view to be used to filter content that can be referenced · Issue #23 · backdrop-contrib/reference\">Allow a view to be used to filter content that can be referenced · Issue #23 · backdrop-contrib/reference</a></div><div class=\"message_embed_description\">With the other referencing module, References, the list of &#39;referencable&#39; content on the node form can be provided by a view using the &quot;References&quot; display type. Based on this fea...</div></div></div>",
+        "id": 230521770,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615905102
+    }
+]

@@ -1,0 +1,134 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> Further to your comments in the dev meeting, I tried implementing a dark mode for my admin theme Lumi (<a href=\"https://github.com/backdrop-contrib/lumi/issues/1\">https://github.com/backdrop-contrib/lumi/issues/1</a>) but had issues with icons throughout core not being visible on a dark background. So there's a potential blocker for any dark themes...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/lumi/issues/1\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/lumi/issues/1\" title=\"Add dark mode · Issue #1 · backdrop-contrib/lumi\">Add dark mode · Issue #1 · backdrop-contrib/lumi</a></div><div class=\"message_embed_description\">Part of the reason I started this theme was to create a theme with a dark mode for Backdrop. However when I started styling the dark mode part, I realised that I&#39;m not as much of a designer as ...</div></div></div>",
+        "id": 215045168,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604017746
+    },
+    {
+        "content": "<p>Interesting</p>",
+        "id": 215045176,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604017774
+    },
+    {
+        "content": "<p>It doesn't seem like front-end themes would suffer from that.  There aren't any included icons needed, are there?</p>",
+        "id": 215045598,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604018246
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> I just configured Basis to use custom dark colours on my sandbox site, and the first problem I notice is Drop in the footer is hidden on a dark background.</p>",
+        "id": 215047871,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604020975
+    },
+    {
+        "content": "<p>Also, if the front-end theme is also used for content editing, then there are icons like the autocomplete spinner that look ugly then.</p>",
+        "id": 215047930,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604021054
+    },
+    {
+        "content": "<p>And CKEditor is still stark white. Not sure if/how it's possible to make that dark too...</p>",
+        "id": 215047955,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604021129
+    },
+    {
+        "content": "<blockquote>\n<p>Not sure if/how it's possible to make that dark too...</p>\n</blockquote>\n<p>It's possible to get a dark content edit area via hook_ckeditor_settings_alter() - with something like <code>$settings['contentsCss'][] = $color_css;</code>.<br>\nHere's an example (Lateral with the \"Night\" preset):<br>\n<a href=\"/user_uploads/18319/fnjCMkCWrskdgTLcygniguEN/ckeditor-dark.png\">ckeditor-dark.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/fnjCMkCWrskdgTLcygniguEN/ckeditor-dark.png\" title=\"ckeditor-dark.png\"><img src=\"/user_uploads/18319/fnjCMkCWrskdgTLcygniguEN/ckeditor-dark.png\"></a></div><p>It's also possible to change css files only via <code>ckeditor_stylesheets[] = css/yourcss.css</code> in your theme's info file.</p>\n<p>I never tried to replace the CKEditor skin with <a href=\"https://ckeditor.com/cke4/addon/moono-dark\">Moono Dark</a>. Has anyone done this before? Core only ships with moono-lisa.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://ckeditor.com/cke4/addon/moono-dark\" style=\"background-image: url(https://ckeditor.com/cke4/sites/default/files/moono-dark/ckeditor-thumb.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://ckeditor.com/cke4/addon/moono-dark\" title=\"Moono Dark\">Moono Dark</a></div><div class=\"message_embed_description\">This theme is a dark version of Moono Skin which originally was designed and developed as a CKEditor skin contest entry. Features: black UI new icons I would like to thank Craig McLeod (Build.) for his support and keeping this project going.</div></div></div>",
+        "id": 215062245,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1604042146
+    },
+    {
+        "content": "<p>There's now a module that provides additional CKEditor skins (work in progress). A dark one is included:</p>\n<p><a href=\"https://github.com/backdrop-contrib/ckeditor_skins\">https://github.com/backdrop-contrib/ckeditor_skins</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ckeditor_skins\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ckeditor_skins\" title=\"backdrop-contrib/ckeditor_skins\">backdrop-contrib/ckeditor_skins</a></div><div class=\"message_embed_description\">Additonal CKEditor skins for Backdrop CMS. Contribute to backdrop-contrib/ckeditor_skins development by creating an account on GitHub.</div></div></div>",
+        "id": 220583425,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608557477
+    },
+    {
+        "content": "<p>Is this Backdrop's first dark mode-enabled theme...? <a href=\"https://github.com/backdrop-contrib/lumi\">https://github.com/backdrop-contrib/lumi</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/lumi\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/lumi\" title=\"backdrop-contrib/lumi\">backdrop-contrib/lumi</a></div><div class=\"message_embed_description\">A modern, customisable admin theme for Backdrop. Contribute to backdrop-contrib/lumi development by creating an account on GitHub.</div></div></div>",
+        "id": 221930149,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610018459
+    },
+    {
+        "content": "<p>I just updated Lumi to a new version that now includes dark mode support! <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 221930284,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610018556
+    },
+    {
+        "content": "<p>It's been a while in the making, and a learnt lots of (not-so-good) things about core in the process <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 221930325,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610018593
+    },
+    {
+        "content": "<p>There's likely lots that can be improved, so have a play and open some issues.</p>",
+        "id": 221930368,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610018630
+    },
+    {
+        "content": "<p>Did you find that any core changes would be helpful?</p>",
+        "id": 221935112,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1610021954
+    },
+    {
+        "content": "<p>So cool! <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 221938289,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610024269
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> The main thing with core is the hard-coded icons - black PNGs. It'd be nice if they were more customisable (I.e. an icon font or SVGs).</p>",
+        "id": 221991058,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610048730
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Not sure I'd recommend it, but you could use CSS to invert the PNG to white: <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert()\">https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert()</a></p>",
+        "id": 222018923,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1610063954
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> Interesting... If it's a matter of me doing it specifically for the Lumi contrib theme though, then I'll just do what I did in other places (like the autocomplete spinner gif) and find/use FontAwesome icons instead. I just thought to mention it since any other dark-mode themes will have to fix this themselves too in future, so it'd be better if it were fixed in core once, rather than hacked in contrib multiple times <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 222019259,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610064189
+    },
+    {
+        "content": "<p>...similar to the \"there's a module for that\" catch-phrase for Drupal, I would like to say \"there's an issue for that\": <a href=\"https://github.com/backdrop/backdrop-issues/issues/364\">https://github.com/backdrop/backdrop-issues/issues/364</a> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/364\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/364\" title=\"Add an icon font to core · Issue #364 · backdrop/backdrop-issues\">Add an icon font to core · Issue #364 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">We have a handful of icons in core that are currently images. We should replace these with an icon font instead. Up-sides of using an icon font in core: A complete set of matching core icons This l...</div></div></div>",
+        "id": 222023003,
+        "sender_full_name": "klonos",
+        "timestamp": 1610067474
+    },
+    {
+        "content": "<p>Just tried Lumi, and it looks awesome <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ++</p>",
+        "id": 222024357,
+        "sender_full_name": "klonos",
+        "timestamp": 1610068826
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> (Karma: 30)</p>",
+        "id": 222024358,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1610068826
+    },
+    {
+        "content": "<p>...already filed 2 issues for it, but imma stop now ...don't wanna turn it into the same situation as the core queue <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 222024386,
+        "sender_full_name": "klonos",
+        "timestamp": 1610068860
+    },
+    {
+        "content": "<p>Here's n idea: different set of settings for the same theme, depending on whether it's being used as frontend or admin theme! ...so regular for frontend, whereas dark mode in admin pages.</p>",
+        "id": 222024463,
+        "sender_full_name": "klonos",
+        "timestamp": 1610068972
+    }
+]

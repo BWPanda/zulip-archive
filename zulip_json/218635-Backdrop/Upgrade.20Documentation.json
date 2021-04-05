@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>I'm attempting my first D7 -&gt; Backdrop conversion now and following the instructions here: <a href=\"https://docs.backdropcms.org/documentation/upgrading-from-drupal-7-steps\">https://docs.backdropcms.org/documentation/upgrading-from-drupal-7-steps</a>  and, even as a very experienced Drupal dev I'm unclear on the instructions provided.  A few notes that are causing a little confusion:</p>",
+        "id": 233196211,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617640428
+    },
+    {
+        "content": "<ol>\n<li>During \"prepare your Drupal site for upgrade\" (step 2) I'm unclear as to which modules I should disable at htis point, which ones should be completely uninstalled.  My experience tells me that disabling anything isn't going to cause problems, but what about uninstalling?  Not exactly clear on what to leave enabled vs. disable vs uninstall.</li>\n</ol>",
+        "id": 233196358,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617640498
+    },
+    {
+        "content": "<ol start=\"2\">\n<li>During step 3 \"Upgrade your drupal site to backdrop cms\" It starts by sayign \"Follow steps 1 and 2\" from the install page.  Step 1 is basically download the files.  STep 2 says \"enter the mysql database information\".  But enter it where?  Does this just mean create a new database and have (and empty database) ready for step 3? Or am I actually putting in db user/password info somewhere?</li>\n</ol>",
+        "id": 233196523,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617640580
+    },
+    {
+        "content": "<p>Thats confusing because step 3 is to run the installer....and that is where you actually enter database credentials...but I'm not supposed to run step 3 according to the upgrade instructions.  So...where do I enter database details in step 2?  Not sure if start the upgrade with an empty database?  Or I run the installer and have a Backdrop database without certain info entered?  Again, even as an experienced dev, I'm a bit confused.</p>",
+        "id": 233196622,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617640656
+    },
+    {
+        "content": "<p>(and this is basically resolved in a later step when you import your d7 database into an empty backdrop database...but its still confusing up to that point)</p>",
+        "id": 233197453,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617641103
+    },
+    {
+        "content": "<p>Also, now running into this.  Documentation says libraries is included in core...but for some reason it doesn't find it: <a href=\"/user_uploads/18319/bW6_744d85T88SZO-6rpjuuv/Screen-Shot-2021-04-05-at-1.20.07-PM.png\">Screen-Shot-2021-04-05-at-1.20.07-PM.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/bW6_744d85T88SZO-6rpjuuv/Screen-Shot-2021-04-05-at-1.20.07-PM.png\" title=\"Screen-Shot-2021-04-05-at-1.20.07-PM.png\"><img src=\"/user_uploads/18319/bW6_744d85T88SZO-6rpjuuv/Screen-Shot-2021-04-05-at-1.20.07-PM.png\"></a></div>",
+        "id": 233201742,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617643248
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"298007\">@Rob Feature</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...thanks for taking the time to provide feedback on the doco <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...at the very least I'll copy-paste this into an issue in <a href=\"https://github.com/backdrop-ops/docs.backdropcms.org/issues\">https://github.com/backdrop-ops/docs.backdropcms.org/issues</a> but if I have enough time, I'll try to fix things up.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/docs.backdropcms.org/issues\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/docs.backdropcms.org/issues\" title=\"backdrop-ops/docs.backdropcms.org\">backdrop-ops/docs.backdropcms.org</a></div><div class=\"message_embed_description\">Website for displaying Backdrop CMS documentation and API source code. - backdrop-ops/docs.backdropcms.org</div></div></div>",
+        "id": 233202075,
+        "sender_full_name": "klonos",
+        "timestamp": 1617643396
+    },
+    {
+        "content": "<p>...with re to the requirements error, it seems that it's coming from a contrib module. Is it <a href=\"https://github.com/backdrop-contrib/restws\">https://github.com/backdrop-contrib/restws</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/restws\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/restws\" title=\"backdrop-contrib/restws\">backdrop-contrib/restws</a></div><div class=\"message_embed_description\">Backdrop port of RESTful Web Services module. Contribute to backdrop-contrib/restws development by creating an account on GitHub.</div></div></div>",
+        "id": 233202271,
+        "sender_full_name": "klonos",
+        "timestamp": 1617643497
+    },
+    {
+        "content": "<p>its actually services -&gt; rest_server module</p>",
+        "id": 233202342,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617643527
+    },
+    {
+        "content": "<p>for now i just got rid fo the requirement to attempt an installation</p>",
+        "id": 233202365,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617643539
+    },
+    {
+        "content": "<p>Oh. Let me have a look <span aria-label=\"eyes\" class=\"emoji emoji-1f440\" role=\"img\" title=\"eyes\">:eyes:</span></p>",
+        "id": 233202378,
+        "sender_full_name": "klonos",
+        "timestamp": 1617643546
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"298007\">@Rob Feature</span> Not sure if this'll help or add more confusion, but here're the instructions I've written up and use for myself: <a href=\"https://packweb.io/blog/migrating-drupal-7-backdrop-cms\">https://packweb.io/blog/migrating-drupal-7-backdrop-cms</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://packweb.io/blog/migrating-drupal-7-backdrop-cms\" style=\"background-image: url(https://packweb.io/sites/packweb/files/blog/upgrade-1672367_1920.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://packweb.io/blog/migrating-drupal-7-backdrop-cms\" title=\"Migrating from Drupal 7 to Backdrop CMS\">Migrating from Drupal 7 to Backdrop CMS</a></div><div class=\"message_embed_description\">We've been upgrading a few of our client's Drupal 7 sites to Backdrop CMS recently (read why here), so we thought we'd share with you the process we're using. The official Backdrop instructions can be found on the 'Upgrading from Drupal 7' page; ours are based on those instructions, but with some changes that we find fit better with our workflow.</div></div></div>",
+        "id": 233226223,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617655287
+    }
+]

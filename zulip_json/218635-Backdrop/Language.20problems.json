@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Maybe it's just me... I read this comment several times, but am not able to figure out what it means. It seems that (google)translate did a bad job here. Can anyone help me understanding that comment? <a href=\"https://github.com/backdrop/backdrop-issues/issues/4941#issuecomment-797806110\">https://github.com/backdrop/backdrop-issues/issues/4941#issuecomment-797806110</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4941#issuecomment-797806110\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4941#issuecomment-797806110\" title=\"[UX] Manage blocks interface cannot be used with keyboard navigation · Issue #4941 · backdrop/backdrop-issues\">[UX] Manage blocks interface cannot be used with keyboard navigation · Issue #4941 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug We received an email today from someone who is struggling with the manage blocks interface because they can not see. (The following is from a non-English speaker) Hi. I can n...</div></div></div>",
+        "id": 230154843,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615632843
+    },
+    {
+        "content": "<p>Here's how I'm reading that comment <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> :</p>\n<ul>\n<li>\"Let's create a special block.\" -&gt; \"When creating a custom block\"...</li>\n<li>The configuration of this block is very limited. It cannot be configured without going to the layouts page and adding it to a region. (this makes sense as is)</li>\n<li>\"For example, if the block is only shown on certain pages.\" -&gt; \"Let's assume that the block needs to be shown only on specific pages\"</li>\n<li>\"For example, the contract will be added to the user registration form.\" - &gt; They need a \"contract\" or \"terms of use\" piece of text to be shown in the user registration page, in the form of a custom block.</li>\n<li>\"I can't do this directly in the custom block insertion area.\" -&gt; they mean that there is now way to add the block to a layout/page from <code>/admin/structure/block/add</code><br>\n...sounds to me like a separate problem (so pretty much out of scope for that issue), but the person already mentioned that:<blockquote>\n<p>It's not about accessibility. It's a general problem.</p>\n</blockquote>\n</li>\n</ul>",
+        "id": 230164762,
+        "sender_full_name": "klonos",
+        "timestamp": 1615644289
+    },
+    {
+        "content": "<p>...so we should ask them to either create a separate issue for that, or we should create one for them, and ask them to avoid mixing discussions about other issues, as it confuses people reading the thread of comments.</p>",
+        "id": 230164816,
+        "sender_full_name": "klonos",
+        "timestamp": 1615644355
+    },
+    {
+        "content": "<p>...as far as the actual problem they are reporting, it is a matter of workflow I think. They have chosen to create a custom block from that dedicated form in <code>/admin/structure/block/add</code>, which will make that block available in the \"add block\" dialog, whereas they could have chosen to add that block via the block management UI on a specific layout instead <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span> ...perhaps we can support both of these workflows?</p>",
+        "id": 230164990,
+        "sender_full_name": "klonos",
+        "timestamp": 1615644504
+    },
+    {
+        "content": "<p>Still struggling to understand the problem ... that it's about workflow seems reasonable to me, though. Maybe the trouble is, that they still try it \"the Drupal way\"?<br>\nA new issue might make sense. Hopefully we figure out in that issue, if there's something we can do code-wise to make things easier, or if support is sufficient.</p>",
+        "id": 230166182,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615645784
+    },
+    {
+        "content": "<p>Oh, and many thanks for your \"translation\" <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> ++</p>",
+        "id": 230166250,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615645821
+    },
+    {
+        "content": "<p><strong>klonos</strong> - Dragon Fire (Karma: 15)</p>",
+        "id": 230166251,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1615645821
+    },
+    {
+        "content": "<blockquote>\n<p>Maybe the trouble is, that they still try it \"the Drupal way\"?</p>\n</blockquote>\n<p>Yup, I think that that's the case <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 230167566,
+        "sender_full_name": "klonos",
+        "timestamp": 1615647337
+    },
+    {
+        "content": "<p>unfortunately, i dont understand either. hopefully he can find someone who can translate for him better than google can.</p>",
+        "id": 230172566,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615651890
+    },
+    {
+        "content": "<p>Pardon, wrong window. I'll try to help the guy.</p>",
+        "id": 230193388,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615673472
+    },
+    {
+        "content": "<p>(deleted)</p>",
+        "id": 230193549,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615673605
+    },
+    {
+        "content": "<p>I wish I noticed that thread long time ago. Didn't have time to have all the issues on my radar. For posterity, if any Turkish-speaking person is encountering problems in using Backdrop, just send them my way and I'll try my best to help.</p>",
+        "id": 230196539,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615677216
+    }
+]

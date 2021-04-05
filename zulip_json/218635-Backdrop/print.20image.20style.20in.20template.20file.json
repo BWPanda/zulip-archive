@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>My frontend skills are not very good... can this be done in a template file after all? It's a field template for an image gallery, works pretty well, but I would like to print a different image style in line 65 (and maybe also the images title field content on the same line). It it's a bigger issue, I am also ready to hire someone.</p>\n<p><a href=\"/user_uploads/18319/39tg6_ip79bqhbeBUetp49UD/Screenshot-2020-03-13-at-16.36.30.png\" target=\"_blank\" title=\"Screenshot-2020-03-13-at-16.36.30.png\">Screenshot-2020-03-13-at-16.36.30.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/39tg6_ip79bqhbeBUetp49UD/Screenshot-2020-03-13-at-16.36.30.png\" target=\"_blank\" title=\"Screenshot-2020-03-13-at-16.36.30.png\"><img src=\"/user_uploads/18319/39tg6_ip79bqhbeBUetp49UD/Screenshot-2020-03-13-at-16.36.30.png\"></a></div>",
+        "id": 190518341,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1584114287
+    },
+    {
+        "content": "<p>If you have <code>devel</code> installed you should be able to use <code>dpm($item);</code> to see what data is available, and then use <code>theme_image_style</code> to adjust the image style that gets used.</p>",
+        "id": 190520507,
+        "sender_full_name": "Laryn",
+        "timestamp": 1584115251
+    },
+    {
+        "content": "<p>@Laryn thank you so much for your help, although it's quite embarrassing for me to NOT having tried with DPM (i simply have forgotten this, I am getting old;-<br>\n)</p>",
+        "id": 190588617,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1584176594
+    },
+    {
+        "content": "<p>There's also a built-in <code>debug</code> command which does the same but <code>dpm</code> formats it nicer. Remember to clear cache with each change</p>",
+        "id": 190592916,
+        "sender_full_name": "Herb",
+        "timestamp": 1584185204
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> I setup a similar template file to yours in my sandbox to play with this, and adding this line produced thumbnails that link to large images:<br>\n<code>&lt;a href=\"&lt;?php print image_style_url('large', $item['#item']['uri']); ?&gt;\"&gt;&lt;img src=\"&lt;?php print image_style_url('thumbnail', $item['#item']['uri']); ?&gt;\" /&gt;&lt;/a&gt;</code></p>",
+        "id": 190595521,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584188833
+    },
+    {
+        "content": "<p>This is a great help, thank you <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span></p>",
+        "id": 190697169,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1584350189
+    }
+]

@@ -1,0 +1,260 @@
+[
+    {
+        "content": "<p>This topic is a support group for people who still have to use Drupal.</p>",
+        "id": 206777052,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597288744
+    },
+    {
+        "content": "<p>Specifically version 8+</p>",
+        "id": 206777079,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597288780
+    },
+    {
+        "content": "<p>For example, who's tried to uninstall a Drupal module by going to the Modules page, only to discover all enabled modules have disabled checkboxes? <span aria-label=\"face palm\" class=\"emoji emoji-1f926\" role=\"img\" title=\"face palm\">:face_palm:</span></p>",
+        "id": 206777145,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597288856
+    },
+    {
+        "content": "<p>Oh, that's been like that for some time now <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ...the notion of disabling modules has been removed from D8 - there's only 2 states: enabled or uninstalled. See the issue: <a href=\"https://www.drupal.org/node/1199946\">https://www.drupal.org/node/1199946</a></p>",
+        "id": 206822308,
+        "sender_full_name": "klonos",
+        "timestamp": 1597329397
+    },
+    {
+        "content": "<p>...the change record: <a href=\"https://www.drupal.org/node/2193013\">https://www.drupal.org/node/2193013</a></p>",
+        "id": 206822337,
+        "sender_full_name": "klonos",
+        "timestamp": 1597329409
+    },
+    {
+        "content": "<p>...the discussions in the related documentation: <a href=\"https://www.drupal.org/forum/support/upgrading-drupal/2014-03-24/why-cant-i-uninstall-modules-in-drupal-8-explained\">https://www.drupal.org/forum/support/upgrading-drupal/2014-03-24/why-cant-i-uninstall-modules-in-drupal-8-explained</a></p>",
+        "id": 206822354,
+        "sender_full_name": "klonos",
+        "timestamp": 1597329417
+    },
+    {
+        "content": "<p>I know, it just gets me every time and I was having a whinge. This topic is very tongue-in-cheek.</p>",
+        "id": 206867930,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597351013
+    },
+    {
+        "content": "<p>My name is Greg, and I'm a D7 addict</p>",
+        "id": 206904856,
+        "sender_full_name": "klonos",
+        "timestamp": 1597389826
+    },
+    {
+        "content": "<p>(I think that everyone that joins this group should start by making a similar comment in this topic <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> )</p>",
+        "id": 206904913,
+        "sender_full_name": "klonos",
+        "timestamp": 1597389869
+    },
+    {
+        "content": "<p>My name is Peter, and I haven't used Drupal 8 in four and a half hours</p>",
+        "id": 206906327,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597391482
+    },
+    {
+        "content": "<p>My name is Alex and I suffer from a D8 in-release update anxiety disorder. I hide under the desk for hours then. <span aria-label=\"fear\" class=\"emoji emoji-1f628\" role=\"img\" title=\"fear\">:fear:</span><br>\n(Almost every time something breaks and needs to be mended, which sometimes takes 5 minutes, sometimes an hour or more.)</p>",
+        "id": 206942925,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1597419684
+    },
+    {
+        "content": "<p>A D8 site I do for work has 300 <code>*.html.twig</code> template files in its custom theme! Is 'template-itis' a thing...?</p>",
+        "id": 207476921,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597882748
+    },
+    {
+        "content": "<blockquote>\n<p>A D8 site I do for work has 300 <code>*.html.twig</code> template files in its custom theme! Is 'template-itis' a thing...?</p>\n</blockquote>\n<p>WOw. What?</p>",
+        "id": 207477822,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597883704
+    },
+    {
+        "content": "<p>What site? <a href=\"https://socialistsanddemocrats.eu/\">https://socialistsanddemocrats.eu/</a></p>",
+        "id": 207478040,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597883950
+    },
+    {
+        "content": "<p>Sounds like the kind of thing that happens when someone who doesn't fully understand Drupal tries to build a Drupal site.</p>",
+        "id": 207478241,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597884140
+    },
+    {
+        "content": "<p>Partly, yes. The team working on this site has told me on newer projects that we're trying to find better ways to theme that doesn't involve so many template files, like on SD.</p>",
+        "id": 207478574,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597884529
+    },
+    {
+        "content": "<p>But it's easy to think: with so many already, what's another one or two going to hurt...? <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 207478607,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597884590
+    },
+    {
+        "content": "<p>A template for H1, a template for H2...</p>",
+        "id": 207479854,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597885992
+    },
+    {
+        "content": "<p>Well, there are over 40 content types, 70 contexts, 12 vocabularies... To give you an idea of the scale of this site.</p>",
+        "id": 207480208,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597886406
+    },
+    {
+        "content": "<p>I'm trying to figure out a use-case where <strong>40</strong> different content types make sense... and fail. <span aria-label=\"confused\" class=\"emoji emoji-1f615\" role=\"img\" title=\"confused\">:confused:</span>  The most I ever used is 16 (for a fully blown community portal in D7).</p>",
+        "id": 207526350,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1597932738
+    },
+    {
+        "content": "<p>Over-abstraction perhaps?</p>",
+        "id": 207527309,
+        "sender_full_name": "klonos",
+        "timestamp": 1597933276
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/Drupal.208.2B.20support.20group/near/207526350\">said</a>:</p>\n<blockquote>\n<p>I'm trying to figure out a use-case where <strong>40</strong> different content types make sense... and fail. <span aria-label=\"confused\" class=\"emoji emoji-1f615\" role=\"img\" title=\"confused\">:confused:</span>  The most I ever used is 16 (for a fully blown community portal in D7).</p>\n</blockquote>\n<p>Large institution where they are using the content type to control permissions (instead of organic groups or other better method)?  Or just sloppy design?</p>",
+        "id": 207557237,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1597948169
+    },
+    {
+        "content": "<p>I was thinking not abstracted enough</p>",
+        "id": 207594009,
+        "sender_full_name": "Herb",
+        "timestamp": 1597974604
+    },
+    {
+        "content": "<p>Spent about 6 hrs trying to upgrade a Drupal 8.9.2 site to 9.1... never did end up getting it and had to settle with 8.9.11. \"Time well spent\" (sarcasm) <span aria-label=\"rolling eyes\" class=\"emoji emoji-1f644\" role=\"img\" title=\"rolling eyes\">:rolling_eyes:</span></p>",
+        "id": 221512043,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609758684
+    },
+    {
+        "content": "<p>What about going from 8.9.2 to 9.0.0?</p>",
+        "id": 221538312,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1609774706
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> I have no idea <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span> it didn't seem to like anything I did when it came to 9. The composer messages weren't very helpful in diagnosing it either.</p>",
+        "id": 221576303,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609792060
+    },
+    {
+        "content": "<p>I've got two Drupal 7 to 9 upgrades coming up this spring. One is really complicated with CiviCRM. The other is a great candidate for Backdrop but they wanted Drupal 9.</p>",
+        "id": 221605307,
+        "sender_full_name": "Herb",
+        "timestamp": 1609811639
+    },
+    {
+        "content": "<p>You can lead a horse to water...</p>",
+        "id": 221605351,
+        "sender_full_name": "Herb",
+        "timestamp": 1609811650
+    },
+    {
+        "content": "<p>So I'll get feel some pain soon</p>",
+        "id": 221605363,
+        "sender_full_name": "Herb",
+        "timestamp": 1609811675
+    },
+    {
+        "content": "<p>\"I need to update a few menu items on my D8 site\"<br>\n[goes to <code>/admin/structure/menu</code>, clicks 'Edit menu']<br>\n\"Here's the first link I need to edit\"<br>\n[clicks 'Edit', makes the change]<br>\n\"Done!\"<br>\n[clicks 'Save', gets taken back to <code>/admin/structure/menu</code>]<br>\n\"What the...!?\"<br>\n[tries all possible ways to edit a menu item without being taken back to the overview page on save - fails]<br>\n\"I hate Drupal...\" <span aria-label=\"angry\" class=\"emoji emoji-1f620\" role=\"img\" title=\"angry\">:angry:</span></p>",
+        "id": 222682054,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610603119
+    },
+    {
+        "content": "<p>...you mean that you'd expect to be taken back to the menu item list for the specific menu, and instead are taken to the menu listing with all the menus?</p>",
+        "id": 222705722,
+        "sender_full_name": "klonos",
+        "timestamp": 1610623690
+    },
+    {
+        "content": "<p><span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...it's the same in D9.1.2 <span aria-label=\"rolling eyes\" class=\"emoji emoji-1f644\" role=\"img\" title=\"rolling eyes\">:rolling_eyes:</span></p>",
+        "id": 222706132,
+        "sender_full_name": "klonos",
+        "timestamp": 1610623996
+    },
+    {
+        "content": "<p>Exactly! Backdrop handles this nicely. I'm sure D7 did too. Not sure what they were thinking when they changed it...</p>",
+        "id": 222706252,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610624069
+    },
+    {
+        "content": "<p>...yes. Just checked D7, and it's being handled properly there.</p>",
+        "id": 222706389,
+        "sender_full_name": "klonos",
+        "timestamp": 1610624185
+    },
+    {
+        "content": "<p>Not sure if it was an intentional change <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ...could be a side-effect from switching to Symfony-based routing.</p>",
+        "id": 222706923,
+        "sender_full_name": "klonos",
+        "timestamp": 1610624641
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> The 'Edit' link for an individual menu item is <code>/admin/structure/menu/item/[ID]/edit?destination=/admin/structure/menu</code></p>",
+        "id": 222707039,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610624737
+    },
+    {
+        "content": "<p>Same as Backdrop, but they put the <code>destination</code> redirect thing on the end...</p>",
+        "id": 222707129,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610624818
+    },
+    {
+        "content": "<p>So seems intentional to me.</p>",
+        "id": 222707151,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610624838
+    },
+    {
+        "content": "<p>Well at least there's an issue for that: <a href=\"https://www.drupal.org/project/drupal/issues/2957953\">https://www.drupal.org/project/drupal/issues/2957953</a></p>",
+        "id": 222707280,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610624940
+    },
+    {
+        "content": "<p>Open since April 2018 <span aria-label=\"face palm\" class=\"emoji emoji-1f926\" role=\"img\" title=\"face palm\">:face_palm:</span></p>",
+        "id": 222707918,
+        "sender_full_name": "klonos",
+        "timestamp": 1610625550
+    },
+    {
+        "content": "<p>Developing on my first D9 site, and I wonder if it's just me or does Drupal show \"The website encountered an unexpected error. Please try again later.\" for everyone when trying to access a new site for the first time? I have to manually go to <code>/code/install.php</code> to install the site. Is that normal? Shouldn't it redirect me to the installer automatically?</p>",
+        "id": 224421702,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611884803
+    },
+    {
+        "content": "<p>It should redirect...</p>",
+        "id": 224426855,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611890698
+    },
+    {
+        "content": "<p>(deleted)</p>",
+        "id": 224426930,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611890790
+    }
+]

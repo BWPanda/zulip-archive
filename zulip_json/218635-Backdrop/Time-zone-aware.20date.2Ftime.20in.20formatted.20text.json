@@ -1,0 +1,116 @@
+[
+    {
+        "content": "<p>I've encountered a use case where in many places within formatted text I need to give a date or time that renders in the user's local time zone. For example, \"The Zoom room will open April 1, 2021, 10 a.m. PDT\". I didn't find an easy way of doing this, so I wrote a small module called Time Tokens to support time-zone-aware date/time tokens. In any formatted text that supports the token filter, one could use a token like [time-tokens:datetime:2020-04-01 10:00 PDT|F j, g:ia T], and it would render appropriately in the user's time zone.</p>\n<p>I'd anticipate releasing this as a contrib module, but before I do, I'd like to solicit feedback on things like the module name, structure of the token, and/or anything else that stands out as a potential improvement. (And of course, if there's a way better way to do this sort of thing, I'd be happy to hear it.)</p>\n<p>The (draft) module is at <a href=\"https://github.com/bugfolder/time_tokens\">https://github.com/bugfolder/time_tokens</a>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/bugfolder/time_tokens\" style=\"background-image: url(https://avatars.githubusercontent.com/u/29214084?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/bugfolder/time_tokens\" title=\"bugfolder/time_tokens\">bugfolder/time_tokens</a></div><div class=\"message_embed_description\">A Backdrop module that supports embedding of time-zone-aware dates and times in formatted text. - bugfolder/time_tokens</div></div></div>",
+        "id": 223934665,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611597056
+    },
+    {
+        "content": "<p>Adding a data format and using that as your token didn't work (/admin/config/regional/date-time/formats/add)?</p>",
+        "id": 223936604,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611597918
+    },
+    {
+        "content": "<p>That would work for a single date data item (and that's what I use for date-type fields); but this is addressing the case where a date/time, or multiple date/times, needs to be embedded within a large block of narrative text, like the body of a page.</p>",
+        "id": 223937158,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611598192
+    },
+    {
+        "content": "<p>So this is for one-off dates within the text (not in a date field), right?</p>",
+        "id": 223941975,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611600381
+    },
+    {
+        "content": "<p>Some things that could be useful:</p>\n<ul>\n<li>an option in the token implmentation to display the timezone along with the date, or not.</li>\n<li>a token just for the user's timezone (without a date) (e.g. \"All times below are shown in MST\") -- <strong>This may exist already, I'm not sure</strong></li>\n</ul>",
+        "id": 223942286,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611600557
+    },
+    {
+        "content": "<p>Yes, one-off dates within the text. Or even multiple dates: with two tokens, you can create \"Runs from April 1–2\" and the like.<br>\nAnd since the formatting code is part of the token, it's possible to include the time zone or not, or show just the time zone, or the date with no time, or date and time together.</p>",
+        "id": 223943115,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611600999
+    },
+    {
+        "content": "<p><span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 223943233,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611601051
+    },
+    {
+        "content": "<p>It's definitely something for only fairly senior-permissions admins to be allowed to use, because it requires the \"can use tokens\" privilege, which would permit all sorts of other nefarious behaviors.</p>",
+        "id": 223943242,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611601058
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> Interesting - how does this play with the page cache? Is it supposed to work for anonymous (probably not, might need javascript)?</p>",
+        "id": 224003374,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611644662
+    },
+    {
+        "content": "<p>Anonymous users get the default time zone. I'm using backdrop_get_user_timezone() for the time zone.</p>",
+        "id": 224050199,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611673006
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> You might be thinking of this one: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4612\">https://github.com/backdrop/backdrop-issues/issues/4612</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4612\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4612\" title=\"Allow anonymous users to use a SESSION variable to set timezone · Issue #4612 · backdrop/backdrop-issues\">Allow anonymous users to use a SESSION variable to set timezone · Issue #4612 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need In Timezone Detect, I&#39;d like to allow the timezone to be detected and set in a SESSION variable for anonymous users, so website dates/times display in the timezone they ...</div></div></div>",
+        "id": 224050646,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611673204
+    },
+    {
+        "content": "<blockquote>\n<p>You might be thinking of this one:</p>\n</blockquote>\n<p>Right, that's what I wanted to try, in case I have too much spare time. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 224052263,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611673843
+    },
+    {
+        "content": "<p>I had pretty much assumed that anonymous users would have to live with the server time zone. But the issue <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> flagged  suggests it might be feasible, depending on future core support. So perhaps it would be a good idea now to wrap the rendered token in a span with attributes data-timestamp (for the time) and data-format (for the format, htmlspecialchars()-encoded) to give the option for Javascript re-rendering.</p>",
+        "id": 224071613,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611681328
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> I'm definitely interested. I didn't find the time yet to have a closer look at how your module does things and if it might be possible to include a (js) solution for anonymous.</p>",
+        "id": 224149173,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611734085
+    },
+    {
+        "content": "<p>It looks like <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>'s <a href=\"https://backdropcms.org/project/timezone_detect\">Timezone Detect</a> module provides the JS to do the detection. I'll work on adding support if that module is installed.</p>",
+        "id": 224210132,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611766084
+    },
+    {
+        "content": "<p>With the assistance of Time Zone Detect module plus another new module that wraps the Luxon.js DateTime library, I've now got it working for anonymous users and cached pages. <a href=\"https://github.com/bugfolder/utz_tokens\">https://github.com/bugfolder/utz_tokens</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/bugfolder/utz_tokens\" style=\"background-image: url(https://avatars.githubusercontent.com/u/29214084?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/bugfolder/utz_tokens\" title=\"bugfolder/utz_tokens\">bugfolder/utz_tokens</a></div><div class=\"message_embed_description\">A Backdrop module that supports embedding of time-zone-aware dates and times in formatted text. - bugfolder/utz_tokens</div></div></div>",
+        "id": 224511706,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611943683
+    },
+    {
+        "content": "<p>Sounds great! I'll have to test it at some point -- is that anonymous detection just working with the tokens, or with core date fields, too?</p>",
+        "id": 224520564,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611948072
+    },
+    {
+        "content": "<p>It just works with the tokens (for now, at least). Seems like the functionality and approach could be used with core date fields, though.</p>",
+        "id": 224521541,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611948579
+    },
+    {
+        "content": "<p>Yeah, it seems like maybe it could be integrated directly into Timezone Detect somehow. The project I needed that for is past but I'm sure the need will arise again at some point... I'll make a note in the issue queue on that module linking to your modules.</p>",
+        "id": 224522400,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611948965
+    }
+]

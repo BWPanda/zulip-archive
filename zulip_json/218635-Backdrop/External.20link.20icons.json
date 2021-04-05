@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>External link icons in core or not? <a href=\"https://github.com/backdrop/backdrop-issues/issues/4047\">https://github.com/backdrop/backdrop-issues/issues/4047</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4047\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4047\" title=\"Add a global/standardized way to add icon to external links · Issue #4047 · backdrop/backdrop-issues\">Add a global/standardized way to add icon to external links · Issue #4047 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In #4042 we have made it so that external links in the dashboard are indicated with an icon to the end of the link: I think that it would benefit all to have a consistent way to do this (say by add...</div></div></div>",
+        "id": 221259216,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609375228
+    },
+    {
+        "content": "<p>The extlink module gets added to pretty much all of my sites, so I'm not opposed.</p>\n<p>Personally, I use it for the target=\"new\".</p>\n<p>What settings would get pulled over?</p>",
+        "id": 221274678,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609399424
+    },
+    {
+        "content": "<p>Ah, just read the discussion. Sounds like nothing really... I could see a core config page for \"link handling\" that would use the extlink settings.</p>\n<p>Not a fan of making the theme handle the icons. It means every theme has to handle it. I do understand where that discussion is going though.</p>\n<p>This topic is where telemetry would come in handy.</p>",
+        "id": 221274845,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609399740
+    },
+    {
+        "content": "<p><code>target=\"_blank\"</code> is a little problematic regarding web accessibility. We've discussed that before in an unrelated issue (don't remember which one it was).</p>",
+        "id": 221279909,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609407829
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> IIRC, it was about exposing the \"Open the link destination in a new window\" checkbox in the \"Insert link\" dialog, so that it was outside the \"More link options\" fieldset: <a href=\"/user_uploads/18319/0XZ2rpSHJj5WAFWsGq_RADtP/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/0XZ2rpSHJj5WAFWsGq_RADtP/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/0XZ2rpSHJj5WAFWsGq_RADtP/image.png\"></a></div>",
+        "id": 221282059,
+        "sender_full_name": "klonos",
+        "timestamp": 1609410945
+    },
+    {
+        "content": "<p>...which btw, it's how it works in the <a href=\"https://www.drupal.org/project/linkit\">https://www.drupal.org/project/linkit</a> module: <a href=\"/user_uploads/18319/5fnuTQcR5xktBl87vdzzx4g9/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/5fnuTQcR5xktBl87vdzzx4g9/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/5fnuTQcR5xktBl87vdzzx4g9/image.png\"></a></div>",
+        "id": 221282076,
+        "sender_full_name": "klonos",
+        "timestamp": 1609410963
+    },
+    {
+        "content": "<blockquote>\n<p>Not a fan of making the theme handle the icons. It means every theme has to handle it.</p>\n</blockquote>\n<p>Almost missed that... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span>  Personally, and as a contrib themes maintainer, I'd prefer if core (system - not core themes) provides as few icons and images as possible. They'll never fit all designs and overriding theme functions is more work than just adding a little CSS based on provided selectors.</p>",
+        "id": 221285840,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609416080
+    },
+    {
+        "content": "<p>And as someone who tries to do as little theming as possible, I prefer these things to be handled for me with the option of changing it if I want. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<p>Curious why there would need to be a theme function if core were to just use CSS to display it in the first place? Override the icon in custom CSS and done?</p>\n<p>Seriously though, I think core is fine to handle the classes and let a contrib handle additional settings and even icons.</p>",
+        "id": 221306782,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609438115
+    }
+]

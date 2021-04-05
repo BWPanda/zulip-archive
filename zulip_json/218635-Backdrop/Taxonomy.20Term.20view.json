@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p>The default Taxonomy Term view with path <code>/taxonomy/term/%</code> (initially disabled) is for customising how nodes are displayed when viewing a term page. How does one go about customising node displays on term pages differently depending on the vocabulary? For example, say I have a 'Country' vocab and I want nodes on Country term pages displayed as a table, but I also have a 'Tags' vocab and I want nodes on Tag term pages displayed as teasers... How would I do that?</p>",
+        "id": 211443985,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601256054
+    },
+    {
+        "content": "<p>My initial thought is to use two displays of that view, each with a Vocabulary filter. But I don't believe they can both have the same path (<code>/taxonomy/term/%</code>) right?</p>",
+        "id": 211444043,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601256149
+    },
+    {
+        "content": "<p>Second thought is to use Layouts to do this somehow (haven't played with layouts too much to know off-hand how to do that however). But then I wonder why we have a disabled Taxonomy Term view instead of a disabled Taxonomy Term layout...</p>",
+        "id": 211444060,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601256216
+    },
+    {
+        "content": "<p>I haven't done this either, but my first reaction was also layouts + visibility conditions ...but I only see visibility conditions for terms - not for vocabularies <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 211444342,
+        "sender_full_name": "klonos",
+        "timestamp": 1601256607
+    },
+    {
+        "content": "<p>Looked up similar question for D7 and suggestions seemed to be to use Panels/Page manager (i.e. Layouts in Backdrop). But my problem with that is I'd then essentially have a copy of all regions (header, top, sidebar, bottom, footer, etc.), just to change the contents of the Content region. So if anything in the header, footer, etc. ever changed, that's all the more places I'd need to update (unnecessarily IMO).</p>",
+        "id": 211451927,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601269004
+    },
+    {
+        "content": "<p>I feel you <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span> ...see <a href=\"https://github.com/backdrop/backdrop-issues/issues/1691\">#1691</a>, <a href=\"https://github.com/backdrop/backdrop-issues/issues/1886\">#1886</a> and all other issues mentioned there.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1691\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1691\" title=\"[UX] Layout UI: Collapsible block groups. · Issue #1691 · backdrop/backdrop-issues\">[UX] Layout UI: Collapsible block groups. · Issue #1691 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;ve been reading the various issues people have recently opened about problems they are facing while trying to work with translation of various things in order to build multilingual sites and ...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1886\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1886\" title=\"[UX] Layout UI: Allow regions &amp; blocks within to be re-used (Copy Region) · Issue #1886 · backdrop/backdrop-issues\">[UX] Layout UI: Allow regions &amp; blocks within to be re-used (Copy Region) · Issue #1886 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">My Front layout has exactly the same header and footer as my Default layout, it&#39;s just the Content that&#39;s different (and the template). But I currently have to make any changes to the heade...</div></div></div>",
+        "id": 211453868,
+        "sender_full_name": "klonos",
+        "timestamp": 1601271905
+    },
+    {
+        "content": "<p>I keep forgetting to try this: <a href=\"https://github.com/backdrop-contrib/copy_blocks\">https://github.com/backdrop-contrib/copy_blocks</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/copy_blocks\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/copy_blocks\" title=\"backdrop-contrib/copy_blocks\">backdrop-contrib/copy_blocks</a></div><div class=\"message_embed_description\">Add blocks to your layout which are actually copies of other blocks or entire regions. - backdrop-contrib/copy_blocks</div></div></div>",
+        "id": 211456964,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601275912
+    },
+    {
+        "content": "<blockquote>\n<p>... my first reaction was also layouts + visibility conditions ...but I only see visibility conditions for terms - not for vocabularies <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>\n</blockquote>\n<p>In a Layout with Path / Context <code>taxonomy/term/%</code>, it should be possible to choose a vocabulary as visibility condition.</p>",
+        "id": 211525385,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601315136
+    },
+    {
+        "content": "<p>You're absolutely right <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...my bad.</p>",
+        "id": 211531218,
+        "sender_full_name": "klonos",
+        "timestamp": 1601317994
+    },
+    {
+        "content": "<p>No problem, <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> !</p>",
+        "id": 211541723,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601322921
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Also, <a href=\"https://github.com/backdrop-contrib/disable_term_node_listings\">https://github.com/backdrop-contrib/disable_term_node_listings</a> might be interesting for you.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/disable_term_node_listings\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/disable_term_node_listings\" title=\"backdrop-contrib/disable_term_node_listings\">backdrop-contrib/disable_term_node_listings</a></div><div class=\"message_embed_description\">Selectively disable content listings per vocabulary. - backdrop-contrib/disable_term_node_listings</div></div></div>",
+        "id": 211542155,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601323105
+    },
+    {
+        "content": "<p>I use Copy Blocks in cases where I need to mirror regions from another layout. It works well.</p>",
+        "id": 211580019,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601353937
+    },
+    {
+        "content": "<p>But disabling the default listing on certain vocabularies and rebuilding it with views blocks (and visibility conditions) is another good option in this case.</p>",
+        "id": 211580120,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601354080
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Taxonomy.20Term.20view/near/211444060\">said</a>:</p>\n<blockquote>\n<p>Second thought is to use Layouts to do this somehow (haven't played with layouts too much to know off-hand how to do that however). But then I wonder why we have a disabled Taxonomy Term view instead of a disabled Taxonomy Term layout...</p>\n</blockquote>\n<p>@BWPanda, in D7 there's a module called taxonomy term view or taxonomy term profile(or something like that) that allows you to assign a specific view to a term.  I've used it in both D6 and D7.  Maybe something worth porting?</p>",
+        "id": 211646049,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601396676
+    }
+]

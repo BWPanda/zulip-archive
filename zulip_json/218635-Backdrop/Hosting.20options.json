@@ -1,0 +1,1052 @@
+[
+    {
+        "content": "<p>The agency I work for has open-sourced/soft-lunched <a href=\"https://github.com/salsadigitalauorg/merlin-framework\" title=\"https://github.com/salsadigitalauorg/merlin-framework\">https://github.com/salsadigitalauorg/merlin-framework</a> which is a CMS-agnostic, any-to-any migration framework ...we've used it to migrate many projects to GovCMS (but unfortunately I wasn't involved in these migration projects, so don't know how to use it <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ) ...I thought that it might be of use to others.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/salsadigitalauorg/merlin-framework\" style=\"background-image: url(https://repository-images.githubusercontent.com/191843023/cdaec280-8641-11ea-80a8-72fe7b1db394)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/salsadigitalauorg/merlin-framework\" title=\"salsadigitalauorg/merlin-framework\">salsadigitalauorg/merlin-framework</a></div><div class=\"message_embed_description\">Merlin - The Migration Wizard. Contribute to salsadigitalauorg/merlin-framework development by creating an account on GitHub.</div></div></div>",
+        "id": 195366690,
+        "sender_full_name": "klonos",
+        "timestamp": 1587955606
+    },
+    {
+        "content": "<blockquote>\n<p>Merlin Framework provides a standardised method for migrating content from a website (markup) to more structured data.</p>\n<p>This allows for simplified migration of web content to a new CMS or other systems.</p>\n</blockquote>",
+        "id": 195366698,
+        "sender_full_name": "klonos",
+        "timestamp": 1587955656
+    },
+    {
+        "content": "<p>...I think that it roughly works by parsing a website and then creating db records based on a .yml configuration.</p>",
+        "id": 195366749,
+        "sender_full_name": "klonos",
+        "timestamp": 1587955711
+    },
+    {
+        "content": "<p>Interesting tool. It seems to grab publicly available content and re-structures it based on configuration (mappings based on Xpath). And it seems to ship with a crawler to automatically collect urls.</p>",
+        "id": 195389249,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587977825
+    },
+    {
+        "content": "<p>Yup, that's how it works. The framework/API is what we've open-sourced; there's also a GUI in the works, but I think that one will be kept proprietary.</p>",
+        "id": 195400238,
+        "sender_full_name": "klonos",
+        "timestamp": 1587984561
+    },
+    {
+        "content": "<p>What was the use case <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> ? Were there gov websites where they didn't have access to db?</p>",
+        "id": 195410127,
+        "sender_full_name": "Herb",
+        "timestamp": 1587990962
+    },
+    {
+        "content": "<p>Old/legacy gov sites built in things that do not have a migration path to Drupal (even plain HTML sites).</p>",
+        "id": 195438083,
+        "sender_full_name": "klonos",
+        "timestamp": 1588003288
+    },
+    {
+        "content": "<p>...there was also a requirement for close-to-zero downtime. They'd run the script multiple times until they were happy with the result, then they'd place a small content freeze and port to Drupal (GovCMS) ...as opposed to placing the content freeze for the entirety of the migration.</p>",
+        "id": 195438372,
+        "sender_full_name": "klonos",
+        "timestamp": 1588003427
+    },
+    {
+        "content": "<p>...a bit of more info on Merlin from the main developer involved in its development:</p>\n<blockquote>\n<p>It’s a soft launch as there are still a few things we’re hoping to clean up (namely around docs/onboarding) and a couple bugs to squash. ...Merlin was built first and foremost to help make migrations from legacy CMS (or any website) to Drupal easier. It crawls and scrapes content and creates structured json ready for import via migrate api.</p>\n<p>It’s got support for menus, taxonomy, content, paragraphs (incl. reusable paragraphs via library), media, linkit url rewriting, media, and plenty more. It’s also generic by nature, so can be used for migrations to Wordpress, or to create structured data for any other purpose (e.g ecommerce competitive pricing analysis, static site exporter, 404 link checker across sites)..</p>\n<p>We’ll aim to launch a blog series of how-to guides that help explain all the use cases, it’s still early days and an evolving tool but hopefully it’ll become a go-to when people think about content migration.</p>\n</blockquote>",
+        "id": 195482964,
+        "sender_full_name": "klonos",
+        "timestamp": 1588026543
+    },
+    {
+        "content": "<p>docs: <a href=\"https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started\" title=\"https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started\">https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started\" style=\"background-image: url(https://salsadigitalauorg.github.io/merlin-framework/img/undraw_online.svg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started\" title=\"Getting Started · Merlin\">Getting Started · Merlin</a></div><div class=\"message_embed_description\">&lt;p&gt;Merlin Framework provides a standardised method for migrating content from a website (markup) to more structured data.&lt;/p&gt;\n</div></div></div>",
+        "id": 195482986,
+        "sender_full_name": "klonos",
+        "timestamp": 1588026569
+    },
+    {
+        "content": "<p>just realised Gor isnt on Zulip. how do we ping him when Zen is acting up? go back to gitter?</p>",
+        "id": 195633587,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588111409
+    },
+    {
+        "content": "<p>Is @gor on Zulip? does anyone know?</p>",
+        "id": 195895845,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588277959
+    },
+    {
+        "content": "<blockquote>\n<p>The difference is that some people want to go back and see what they missed in the real-time discussion and to read several days of the real time discussion</p>\n</blockquote>\n<p>This is the opposite of real-time :)</p>",
+        "id": 195899490,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588279814
+    },
+    {
+        "content": "<blockquote>\n<p>I think that some of our users like Zulip, because if you choose to do that, it's much easier to catch up.</p>\n</blockquote>\n<p>I got the feeling from the Zulip issue queue that this was the intention of Zulip: to make it easier to read past convo's. And that the real-time discussion experience was not as important to the creators as the ease-of-reading what happened in the past</p>",
+        "id": 195899559,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588279840
+    },
+    {
+        "content": "<p>Since I'm a firm believer of \"anything important should exist somewhere other than chat\" I don't care what was said in chat yesterday. If it was important then it will also be summarized someplace where it is intended to be read (like an issue, or blog post). I use threads (when I remember) to move my side-conversations (...like \"mmmm sandwich\") out of the way of people who are here for a real conversation :)</p>",
+        "id": 195900007,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588280056
+    },
+    {
+        "content": "<p>And since I don't think anyone here tomorrow reading about weekly meetings today cares how good my sandwich was, i wanted to move that that out of the way for them, too. :D</p>",
+        "id": 195900113,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588280135
+    },
+    {
+        "content": "<p>ping <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span></p>",
+        "id": 196841995,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588893302
+    },
+    {
+        "content": "<p>pong;</p>",
+        "id": 196842035,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588893346
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> Did you fix the sanitize files and database exports recently?</p>",
+        "id": 196842449,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588893668
+    },
+    {
+        "content": "<p>no</p>",
+        "id": 196842465,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588893691
+    },
+    {
+        "content": "<p>It looks like it is working to me.</p>",
+        "id": 196842484,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588893717
+    },
+    {
+        "content": "<p>I cleaned off some of the old file from the previous release of the sanitizer.</p>",
+        "id": 196842541,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588893740
+    },
+    {
+        "content": "<p><em>sanitizer</em> ;)</p>",
+        "id": 196842547,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588893753
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> Am I missing something?</p>",
+        "id": 196842563,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588893773
+    },
+    {
+        "content": "<p>maybe when i checked it was too soon and the new file/db runs hadn't happened yet; not sure</p>",
+        "id": 196842791,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588893899
+    },
+    {
+        "content": "<p>what was i complaining about i forgot; maybe forum and api sites?</p>",
+        "id": 196842814,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588893919
+    },
+    {
+        "content": "<p>Those look okay to me.</p>",
+        "id": 196842951,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894029
+    },
+    {
+        "content": "<p>I It seems like something funny is going on with the file names.</p>",
+        "id": 196842983,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894052
+    },
+    {
+        "content": "<p>the files links are not downloading anything for me</p>",
+        "id": 196843077,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894117
+    },
+    {
+        "content": "<p>even for <a href=\"http://b.org\" title=\"http://b.org\">b.org</a></p>",
+        "id": 196843087,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894125
+    },
+    {
+        "content": "<p>Checking</p>",
+        "id": 196843117,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894163
+    },
+    {
+        "content": "<p>I am regenerating the files for <a href=\"http://b.org\" title=\"http://b.org\">b.org</a></p>",
+        "id": 196843127,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894178
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> Why is a symlink being created for each new file in addition to the file itself?</p>",
+        "id": 196843205,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894227
+    },
+    {
+        "content": "<p>also i don't see a <code>latest</code> for files for any of the sites</p>",
+        "id": 196843214,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894237
+    },
+    {
+        "content": "<p>the latest backup symlinks to <code>balbalbalbabla-LATEST.tar.gz</code> so i know how to get the latest on the client side</p>",
+        "id": 196843247,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894273
+    },
+    {
+        "content": "<p>I seem the symlink but it is not downloadable when the html link is created.</p>",
+        "id": 196843383,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894363
+    },
+    {
+        "content": "<p>maybe we need to tell nginx it is ok to follow symlinks?</p>",
+        "id": 196843413,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894383
+    },
+    {
+        "content": "<p>but the symlink for DB works though</p>",
+        "id": 196843430,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894399
+    },
+    {
+        "content": "<p>The symlink is broken.</p>",
+        "id": 196843446,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894416
+    },
+    {
+        "content": "<p>and i don't see any of the <code>latest</code> (symlinks) for the files on any of the sites</p>",
+        "id": 196843449,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894419
+    },
+    {
+        "content": "<p>I see it for <a href=\"http://b.org\" title=\"http://b.org\">b.org</a></p>",
+        "id": 196843463,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894430
+    },
+    {
+        "content": "<p>just for DBs</p>",
+        "id": 196843464,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894431
+    },
+    {
+        "content": "<p>second link down</p>",
+        "id": 196843535,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894450
+    },
+    {
+        "content": "<p>backdropcms.org-files-latest.tar.gz</p>",
+        "id": 196843541,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894457
+    },
+    {
+        "content": "<p>ahh; yeah; i see it now</p>",
+        "id": 196843558,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894487
+    },
+    {
+        "content": "<p>But in the filesystem, the file is not being generated by the cron job</p>",
+        "id": 196843581,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894506
+    },
+    {
+        "content": "<p>But there is a broken symlink.</p>",
+        "id": 196843592,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894518
+    },
+    {
+        "content": "<p>The symlink points to the directory where the files are anyway, perhaps we can just not use symlinks?</p>",
+        "id": 196843674,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894568
+    },
+    {
+        "content": "<p>I am going to run the cron job again</p>",
+        "id": 196843688,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894585
+    },
+    {
+        "content": "<p>unlink the broken symlink first</p>",
+        "id": 196843703,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894598
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code>backdrop@www2 ~/s/files_backups&gt; ls -la\ntotal 768320\ndrwxrwxr-x 2 backdrop backdrop      4096 May  7 23:36 ./\ndrwxrwxr-x 5 backdrop backdrop      4096 Mar 26 01:50 ../\n-rw-r--r-- 1 backdrop backdrop 393364883 May  7 23:29 backdropcmsorg-files-May-7-2020-182910.tar.gz\n-rw-r--r-- 1 backdrop backdrop 393364883 May  7 23:36 backdropcmsorg-files-May-7-2020-183630.tar.gz\nlrwxrwxrwx 1 backdrop backdrop        79 May  7 23:29 files-latest.tar.gz -&gt; /home/backdrop/sanitized_databases/files_backups/files-May-7-2020-182910.tar.gz\nlrwxrwxrwx 1 backdrop backdrop        79 May  7 23:36 files-May-7-2020-182910.tar.gz -&gt; /home/backdrop/sanitized_databases/files_backups/files-May-7-2020-183630.tar.gz\nbackdrop@www2 ~/s/files_backups&gt; ls\nbackdropcmsorg-files-May-7-2020-182910.tar.gz  files-latest.tar.gz@\nbackdropcmsorg-files-May-7-2020-183630.tar.gz  files-May-7-2020-182910.tar.gz@\nbackdrop@www2 ~/s/files_backups&gt;\n[0] 0:fish* 1:bash-                                                              &quot;fish  /home/backdrop/&quot; 23:41 07-May-20\n</code></pre></div>",
+        "id": 196844084,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894922
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/noVj3vCGNWWzyoJ2wn5igcFq/Screen-Shot-2020-05-07-at-5.41.51-PM.png\" title=\"Screen-Shot-2020-05-07-at-5.41.51-PM.png\">Screen-Shot-2020-05-07-at-5.41.51-PM.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/noVj3vCGNWWzyoJ2wn5igcFq/Screen-Shot-2020-05-07-at-5.41.51-PM.png\" title=\"Screen-Shot-2020-05-07-at-5.41.51-PM.png\"><img src=\"/user_uploads/18319/noVj3vCGNWWzyoJ2wn5igcFq/Screen-Shot-2020-05-07-at-5.41.51-PM.png\"></a></div>",
+        "id": 196844110,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894934
+    },
+    {
+        "content": "<p>It looks like the symlink for the latest is linking to a symlink and not the file.</p>",
+        "id": 196844136,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588894971
+    },
+    {
+        "content": "<p>looks like all the files are symlinking to DB files?</p>",
+        "id": 196844162,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588894988
+    },
+    {
+        "content": "<p>Those tarball of the files directory.</p>",
+        "id": 196844200,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588895030
+    },
+    {
+        "content": "<p>I am focused on that at the moment.</p>",
+        "id": 196844203,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588895034
+    },
+    {
+        "content": "<p>seems like prolly a bug in the <code>sql-dump-sanitize</code> script ... I don't have time to look now though; can you dump this into an issue so i can get to it later?</p>",
+        "id": 196844277,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588895054
+    },
+    {
+        "content": "<p>yeah, I will. I have to run now for dinner. But I am will be online after 9pm MT.</p>",
+        "id": 196844566,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1588895310
+    },
+    {
+        "content": "<p>I want to add a form_alter hook in core. Is the .module file of a module the recommended place for such hooks to live in, or the .admin.inc file?</p>",
+        "id": 197444476,
+        "sender_full_name": "klonos",
+        "timestamp": 1589389645
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I think it depends on the change you're wanting to add... If you're adding one or more new form fields/elements, then maybe <code>.admin.inc</code>. If it's just a simple change like adding a JS file for processing or changing a value, then maybe <code>.module</code>.</p>",
+        "id": 197444885,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589389801
+    },
+    {
+        "content": "<p>It's the later. ...is there any documentation on that? ...I am also wondering things like where the new hook function should go within the file? ...do we try to list functions alphabetically? ...do we add them based on co-relation?</p>",
+        "id": 197445136,
+        "sender_full_name": "klonos",
+        "timestamp": 1589389901
+    },
+    {
+        "content": "<p>Hmm, not sure any of that's really documented...</p>",
+        "id": 197445263,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589389940
+    },
+    {
+        "content": "<p>thought so <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...just looking for some sanity ...my OCDs start kicking in, and I start to twitch <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197445364,
+        "sender_full_name": "klonos",
+        "timestamp": 1589389979
+    },
+    {
+        "content": "<p>I try to keep all hook_* and *_alter functions in .module files and put other code that can be grouped together functionality-wise in *.inc files. Then I'm not confused when something is happening, and I can't find the code for it.</p>",
+        "id": 197447830,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589390908
+    },
+    {
+        "content": "<p>We generally put hooks in the module file, since you cant be sure if other files are loaded at all times, in which case the hook wouldnt fire. If you put it in an inc file, youd need a <code>include_once</code> or such in the module file.</p>",
+        "id": 197450411,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589392095
+    },
+    {
+        "content": "<p>I made the assumption that that would be done, but I should have been explicit, and you're right, without including the file, the hook won't get triggered.</p>",
+        "id": 197457984,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589395400
+    },
+    {
+        "content": "<p>That's great info. Can we capture all that in our documentation somewhere?</p>",
+        "id": 197462477,
+        "sender_full_name": "klonos",
+        "timestamp": 1589397416
+    },
+    {
+        "content": "<p>This seems like the best place: <a href=\"https://api.backdropcms.org/documentation/understanding-the-hook-system\">https://api.backdropcms.org/documentation/understanding-the-hook-system</a></p>",
+        "id": 197463688,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589397951
+    },
+    {
+        "content": "<p>That's gonna be nice: <a href=\"https://github.com/features/codespaces\">https://github.com/features/codespaces</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/features/codespaces\" style=\"background-image: url(https://github.githubassets.com/images/modules/site/social-cards/codespaces.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/features/codespaces\" title=\"Codespaces\">Codespaces</a></div><div class=\"message_embed_description\">Your instant dev environment</div></div></div>",
+        "id": 197493500,
+        "sender_full_name": "klonos",
+        "timestamp": 1589415084
+    },
+    {
+        "content": "<p>i signed up ... see what the feelz are about;</p>",
+        "id": 197550819,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589461947
+    },
+    {
+        "content": "<p>Some nice reviews about us here: <a href=\"https://www.g2.com/products/backdrop-cms/reviews\">https://www.g2.com/products/backdrop-cms/reviews</a></p>",
+        "id": 197827694,
+        "sender_full_name": "klonos",
+        "timestamp": 1589685487
+    },
+    {
+        "content": "<p>Nate had a good idea! <a href=\"https://github.com/backdrop/backdrop-issues/issues/4410\">https://github.com/backdrop/backdrop-issues/issues/4410</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4410\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4410\" title=\"Use admin-theme for Log In form · Issue #4410 · backdrop/backdrop-issues\">Use admin-theme for Log In form · Issue #4410 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need There should be a setting to use the admin theme for the log-in page, similar to how we have a checkbox to use the admin theme for the content edit form. This would prevent ...</div></div></div>",
+        "id": 198375092,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1590093981
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span>  could use your feedback on <a href=\"https://github.com/backdrop/backdrop-issues/issues/4408\">https://github.com/backdrop/backdrop-issues/issues/4408</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4408\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4408\" title=\"Show 'enabled' text filters above 'disabled' ones · Issue #4408 · backdrop/backdrop-issues\">Show 'enabled' text filters above 'disabled' ones · Issue #4408 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">On /admin/config/content/formats/[FORMAT] the filters are shown in a seemingly random order, with enabled and disabled ones mixed together. It&#39;d be nice to have all enabled ones shown first, th...</div></div></div>",
+        "id": 198376884,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1590094836
+    },
+    {
+        "content": "<p>Again, I need to filter a View by month... just in case that the PM has no idea what to include in 1.17;-), here's my personal hot candiate <a href=\"https://github.com/backdrop/backdrop-issues/issues/2766\">https://github.com/backdrop/backdrop-issues/issues/2766</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2766\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2766\" title=\"Restore missing &quot;Page by date&quot; Views pager plugin · Issue #2766 · backdrop/backdrop-issues\">Restore missing \"Page by date\" Views pager plugin · Issue #2766 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Date module was merged to Backdrop core in version 1.2.0 For some reason one views pager plugin wasn&#39;t ported (date_views\\includes\\date_views_plugin_pager.inc). I wonder was it intentional or w...</div></div></div>",
+        "id": 198535401,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1590239933
+    },
+    {
+        "content": "<p>Nice in-built feature for all the tab-maniacs out there using Chrome: <a href=\"https://blog.google/products/chrome/manage-tabs-with-google-chrome\">https://blog.google/products/chrome/manage-tabs-with-google-chrome</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://blog.google/products/chrome/manage-tabs-with-google-chrome\" style=\"background-image: url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Chrome_BlogHeader_TabGroups_May.max-1300x1300.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://blog.google/products/chrome/manage-tabs-with-google-chrome\" title=\"Keep tabs on your tabs in Google Chrome\">Keep tabs on your tabs in Google Chrome</a></div><div class=\"message_embed_description\">Tab grouping feature coming to Google Chrome</div></div></div>",
+        "id": 198705756,
+        "sender_full_name": "klonos",
+        "timestamp": 1590445279
+    },
+    {
+        "content": "<p>...can be enabled by visiting chrome://flags/#tab-groups</p>",
+        "id": 198705835,
+        "sender_full_name": "klonos",
+        "timestamp": 1590445374
+    },
+    {
+        "content": "<p>Huh! ...another (small) book on Backdrop: <a href=\"https://books.google.com/books/about/Exploring_Computing_Series_by_Arslan.html?id=1LZUuQEACAAJ\">https://books.google.com/books/about/Exploring_Computing_Series_by_Arslan.html?id=1LZUuQEACAAJ</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://books.google.com/books/about/Exploring_Computing_Series_by_Arslan.html?id=1LZUuQEACAAJ\" style=\"background-image: url(https://books.google.com/books/content?id=1LZUuQEACAAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;imgtk=AFLRE73VkSLfwyGHGZF-ATLZkQJQNmsS0Q5K9OelAkpL-ysXUyjVBiz8MKsGpoBq7PHVpR_UvjwGRAVgosCA5utuHC67vbml-DjQ0tFTaAdj7WEEgVmWd08FcWCRDUnaGP_2WahXw_qZ)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://books.google.com/books/about/Exploring_Computing_Series_by_Arslan.html?id=1LZUuQEACAAJ\" title=\"How to do installation of Backdrop CMS in FreeBSD Linux\">How to do installation of Backdrop CMS in FreeBSD Linux</a></div><div class=\"message_embed_description\">Learn and explore computing by implementing &quot;Explore Computing&quot; series by Arslan. Backdrop CMS is one of the most popular CMS used worldwide. Learn how to do the installation of Backdrop CMS on your server and make your website live.</div></div></div>",
+        "id": 199250951,
+        "sender_full_name": "klonos",
+        "timestamp": 1590836263
+    },
+    {
+        "content": "<p>....do you guys think it's worth adding to the list of books in the home page on <a href=\"http://b.org\">b.org</a>?</p>",
+        "id": 199250998,
+        "sender_full_name": "klonos",
+        "timestamp": 1590836302
+    },
+    {
+        "content": "<p>idk; $10 sounds like a lot to learn how to install Backdrop ... there are free videos to tell you how to do it ... i don't think i'd personally recommend it</p>",
+        "id": 199251935,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590837641
+    },
+    {
+        "content": "<p>FreeBSD != Linux</p>",
+        "id": 199252053,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590837788
+    },
+    {
+        "content": "<p>That's an odd sounding book. \"one of the most popular CMS used worldwide\"? Maybe they just did a search and replace from Drupal &gt; Backdrop</p>",
+        "id": 199268216,
+        "sender_full_name": "Herb",
+        "timestamp": 1590861122
+    },
+    {
+        "content": "<p>Interesting: <a href=\"https://weitzman.github.io/blog/drupalspoons-announcement\">https://weitzman.github.io/blog/drupalspoons-announcement</a></p>",
+        "id": 199514582,
+        "sender_full_name": "klonos",
+        "timestamp": 1591113782
+    },
+    {
+        "content": "<p>That's interesting! I just noticed the devel module logo. Is wearing a toque with a backwards Montreal Canadiens logo. Weird</p>",
+        "id": 199564052,
+        "sender_full_name": "Herb",
+        "timestamp": 1591139156
+    },
+    {
+        "content": "<p>Oh wait, it's a D.</p>",
+        "id": 199564105,
+        "sender_full_name": "Herb",
+        "timestamp": 1591139184
+    },
+    {
+        "content": "<p>Looks a lot like the Canadiens</p>",
+        "id": 199564119,
+        "sender_full_name": "Herb",
+        "timestamp": 1591139198
+    },
+    {
+        "content": "<p><a href=\"https://gitlab.com/drupalspoons/devel\">https://gitlab.com/drupalspoons/devel</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://gitlab.com/drupalspoons/devel\" style=\"background-image: url(https://gitlab.com/uploads/-/system/project/avatar/18040690/dhat.jpeg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://gitlab.com/drupalspoons/devel\" title=\"DrupalSpoons / Devel\">DrupalSpoons / Devel</a></div><div class=\"message_embed_description\">A suite of modules containing helpful tools for module developers and themers.</div></div></div>",
+        "id": 199564137,
+        "sender_full_name": "Herb",
+        "timestamp": 1591139225
+    },
+    {
+        "content": "<p>Compare with <a href=\"https://en.m.wikipedia.org/wiki/Montreal_Canadiens\">https://en.m.wikipedia.org/wiki/Montreal_Canadiens</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://en.m.wikipedia.org/wiki/Montreal_Canadiens\" style=\"background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Montreal_Canadiens.svg/1200px-Montreal_Canadiens.svg.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://en.m.wikipedia.org/wiki/Montreal_Canadiens\" title=\"Montreal Canadiens - Wikipedia\">Montreal Canadiens - Wikipedia</a></div><div class=\"message_embed_description\">\n</div></div></div>",
+        "id": 199564169,
+        "sender_full_name": "Herb",
+        "timestamp": 1591139275
+    },
+    {
+        "content": "<p>New Backdrop website for a Swiss music band, they are playing just fur fun. Including a switchable \"postponed\" or \"canceled\" badge on the concert schedule, due to the virus...  I developed the design around the existing logo, inspired by some existing southern music websites. And no, I have no idea where this band name comes from;-) <a href=\"https://meandtheoperators.ch/\">https://meandtheoperators.ch/</a></p>",
+        "id": 199582494,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591164345
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/aIDlb5TDz2WIgmK8WLzsmGlh/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/aIDlb5TDz2WIgmK8WLzsmGlh/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/aIDlb5TDz2WIgmK8WLzsmGlh/image.png\"></a></div>",
+        "id": 199587426,
+        "sender_full_name": "klonos",
+        "timestamp": 1591169598
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> Nice menu slide in. How did you do it?</p>",
+        "id": 199603582,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1591180876
+    },
+    {
+        "content": "<p>It's a basic snippet in UIKIT CSS framework, a competitor to Bootstrap. I was not happy with Bootstrap 3 years ago and made the switch, and now I have plenty of D7 sites who use it.</p>",
+        "id": 199604534,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591181517
+    },
+    {
+        "content": "<p>Good insight <span class=\"user-mention\" data-user-id=\"256666\">@Justin Keiser</span> . The question \"will Backdrop still be here in five years\" seems to be very important when evaluating a possible switch. The persona \"knows Drupal well, creates more than one or two sites a year, but looking for alternatives\" is an important target group.</p>",
+        "id": 199961494,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591429652
+    },
+    {
+        "content": "<p>There's plenty of room left from a branding perspective...e.g. this company offers Drupal and Wordpress development, did they ever consider to offer Backdrop too? I don't know....</p>",
+        "id": 199961599,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591429837
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/bTFk_5GbKpgaMnAO2EtiqBZY/Screenshot-2020-06-06-at-09.44.36.png\">Screenshot-2020-06-06-at-09.44.36.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/bTFk_5GbKpgaMnAO2EtiqBZY/Screenshot-2020-06-06-at-09.44.36.png\" title=\"Screenshot-2020-06-06-at-09.44.36.png\"><img src=\"/user_uploads/18319/bTFk_5GbKpgaMnAO2EtiqBZY/Screenshot-2020-06-06-at-09.44.36.png\"></a></div>",
+        "id": 199961604,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591429845
+    },
+    {
+        "content": "<p>From what I've seen of many local Las Vegas shops, they may only mention WordPress and/or Drupal because they are buzz words that people are looking for, not because they necessarily really push or support one or the other. Their mindset was more like they just build websites, and those are two ways of doing it. When Backdrop becomes a bigger buzz word, it'll get added to the list.</p>",
+        "id": 199975939,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1591451555
+    },
+    {
+        "content": "<p>The new autocomplete feature is soooo much of an improvement... how could I ever live without it?;-) Kudos to the core team!</p>",
+        "id": 200417336,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591796591
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ++</p>",
+        "id": 200500553,
+        "sender_full_name": "klonos",
+        "timestamp": 1591842789
+    },
+    {
+        "content": "<p>(peter)** - Dragon Fire (Karma: 29)</p>",
+        "id": 200500554,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1591842789
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"269428\">mazze.ch</span> <a href=\"#narrow/stream/218635-Backdrop/topic/(no.20topic)/near/199582494\">said</a>:</p>\n<blockquote>\n<p>New Backdrop website for a Swiss music band, they are playing just fur fun. Including a switchable \"postponed\" or \"canceled\" badge on the concert schedule, due to the virus...  I developed the design around the existing logo, inspired by some existing southern music websites. And no, I have no idea where this band name comes from;-) <a href=\"https://meandtheoperators.ch/\">https://meandtheoperators.ch/</a></p>\n</blockquote>\n<p>This looks great!  Are you going to submit it to the showcase on <a href=\"http://b.org\">b.org</a>?</p>",
+        "id": 200580292,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1591897579
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> I just realized that the example photo for the autocomplete in your blog post shows the old \"autocomplete editor links\" feature, not the new \"autocomplete everything\" feature from 1.16. I'm going to replace that photo but if you want to put in a better one, please do :)</p>",
+        "id": 200584333,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1591899266
+    },
+    {
+        "content": "<p>kk; thanks</p>",
+        "id": 200585441,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1591899787
+    },
+    {
+        "content": "<p>I don't know if it's me not being able to make time for contributions lately, or if the community activity in the issue queue has increased (or both), but I'm happy to see thing progress <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 200586237,
+        "sender_full_name": "klonos",
+        "timestamp": 1591900135
+    },
+    {
+        "content": "<p>I see a lot of overlap in the output of <code>system_rebuild_theme_data()</code> and <code>list_themes()</code></p>",
+        "id": 200618269,
+        "sender_full_name": "klonos",
+        "timestamp": 1591916594
+    },
+    {
+        "content": "<p>...I would like to return info on whether a theme is set as the default, and whether it is set as the admin theme. I would like these to be available as <code>is_default</code> and <code>is_admin</code> properties in the objects returned by <code>system_rebuild_theme_data()</code> and <code>list_themes()</code>. Thoughts?</p>",
+        "id": 200618444,
+        "sender_full_name": "klonos",
+        "timestamp": 1591916758
+    },
+    {
+        "content": "<p>...actually both of these functions seem to be calling <code>_system_rebuild_theme_data()</code>, so perhaps the best place to do that would be there.</p>",
+        "id": 200618562,
+        "sender_full_name": "klonos",
+        "timestamp": 1591916851
+    },
+    {
+        "content": "<p>(deleted)</p>",
+        "id": 200640284,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591946062
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> sure, I will put it to the references section</p>",
+        "id": 200640339,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591946141
+    },
+    {
+        "content": "<p>Hi everyone. I seem to be running into a permissions issue (I think). Ive created a tmp folder and private folder. But I believe Backdrop cannot reach them. I set them to 755, but when I try and save the string 'private' into the private settings field in backdrop UI, it doesn't save.</p>",
+        "id": 200643061,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591948794
+    },
+    {
+        "content": "<p>Hi, Eric Vander Wal. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 200643062,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1591948794
+    },
+    {
+        "content": "<p>When I try and use the built in module browser (to install new modules), it also has issues. I believe its because BD cannot access the tmp folder.</p>",
+        "id": 200643163,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591948840
+    },
+    {
+        "content": "<p>Trying to add private directory gives me the following in logs: <br>\nWarning: mkdir(): Permission denied in backdrop_mkdir() (line 2558 of /storage/v707/vrhealthinstitute/public_html/core/includes/file.inc).</p>",
+        "id": 200643202,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591948879
+    },
+    {
+        "content": "<p>I check through the forums, but didnt find any info on this topic. This is my third time installing backdrop (and my zillionth time installing D7). First time hitting up this specific issue.</p>",
+        "id": 200643342,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591948958
+    },
+    {
+        "content": "<p>Any advice would be welcome :)</p>",
+        "id": 200643357,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591948974
+    },
+    {
+        "content": "<p>I see the hosting is on nginx, not apache. I am not sure if this is an issue. I have the feeling it is a hosting issue (its managed hosting), but not sure what to direct them towards</p>",
+        "id": 200643799,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591949383
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> I'm running Backdrop sites on shared hosting with nginx , so that shouldn't be a problem per se.</p>",
+        "id": 200649028,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1591953215
+    },
+    {
+        "content": "<p>Thanks. I appreciate the reply <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> . I am bugging the host again, maybe they have an idea.</p>",
+        "id": 200649109,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591953276
+    },
+    {
+        "content": "<p>I'm not an expert regarding file system permissions at all, but sounds as if Backdrop isn't allowed to create directories <em>within</em> the <code>tmp</code> and the <code>private</code>  folder.</p>",
+        "id": 200649132,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1591953295
+    },
+    {
+        "content": "<p>I feel its something server side, but searched around to see if it could be fixed in the settings.php or htaccess files. So far didn't see anything.</p>",
+        "id": 200649427,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591953557
+    },
+    {
+        "content": "<p>Can you upload images into the editor or an image field?</p>",
+        "id": 200665973,
+        "sender_full_name": "Laryn",
+        "timestamp": 1591966486
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> Do you have ssh access on that host? If so, check the directory <em>owner</em> of your tmp and private folder. Backdrop needs to have write access, so compare that to the user your http processes run as. As a quick check (not permanently!) you could change the perms to 777 - if it works then, it's a mismatch regarding http-user/directory-owner.</p>",
+        "id": 200666760,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591966889
+    },
+    {
+        "content": "<p>I'll bet the user is the account, and the group is httpd, and the group is what needs write access to those directories.</p>",
+        "id": 200669481,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1591968439
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> , thanks. I did not try. I just did now. Image link comes back as 404.</p>",
+        "id": 200669680,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591968555
+    },
+    {
+        "content": "<p>I am trying this at <a href=\"http://Nestify.io\">Nestify.io</a> , which is a new host for me. They are pretty hands on, so I let them access the site now from the admin side to see if they can work it out. Its a new install.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://Nestify.io\" style=\"background-image: url(https://nestify.io/wp-content/uploads/2020/05/logo-og.pn)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://Nestify.io\" title=\"Home\">Home</a></div><div class=\"message_embed_description\">High performance Managed Wordpress and WooCommerce Hosting services from Nestify. Make your website lightning fast. 24x7 Support Included.</div></div></div>",
+        "id": 200669833,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591968627
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/jD2Ti1Qh3H50eTduAnfNeVHo/2020-06-12-21_30_43-Window.png\">2020-06-12-21_30_43-Window.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/jD2Ti1Qh3H50eTduAnfNeVHo/2020-06-12-21_30_43-Window.png\" title=\"2020-06-12-21_30_43-Window.png\"><img src=\"/user_uploads/18319/jD2Ti1Qh3H50eTduAnfNeVHo/2020-06-12-21_30_43-Window.png\"></a></div>",
+        "id": 200669889,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591968667
+    },
+    {
+        "content": "<p>Owner/group looks the same to me on filezillia. I am a bit of a Luddite when it comes to deploying things. Old habits die hard.</p>",
+        "id": 200669945,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591968706
+    },
+    {
+        "content": "<p>Well, it looks like the directories exist and the permissions of the directories seem to be okay. What about the permissions of files added inside of them?</p>",
+        "id": 200672290,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1591969893
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> done... (I guess you got notified) <a href=\"https://backdropcms.org/showcase/me-and-the-operators\">https://backdropcms.org/showcase/me-and-the-operators</a></p>",
+        "id": 200673402,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591970355
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> Did you put <code>/tmp</code> and <code>/private</code> in the filesystem settings (<strong>admin/config/media/file-system</strong>), or <code>tmp</code> and <code>private</code>?</p>",
+        "id": 200677195,
+        "sender_full_name": "Laryn",
+        "timestamp": 1591972248
+    },
+    {
+        "content": "<p>Success. According to the host, there was server side caching enabled, which was causing a conflict. Whatever they did, it seems to have fixed the issues. I am using tmp and private without the /</p>",
+        "id": 200698111,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591982270
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> , <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> , <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>  , <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span></p>",
+        "id": 200698267,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1591982344
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ...did you mean \"Backdrop\" instead of \"Drupal 7\" here?:</p>\n<blockquote>\n<p>... the more I saw the benefits of Drupal 7 config management ...</p>\n</blockquote>",
+        "id": 200705847,
+        "sender_full_name": "klonos",
+        "timestamp": 1591985986
+    },
+    {
+        "content": "<p>...as far as I know, there is no config management in D7</p>",
+        "id": 200705947,
+        "sender_full_name": "klonos",
+        "timestamp": 1591986013
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> i meant the D7 Feature module, which makes it possible to export e.g. a gallery setup to an installable module</p>",
+        "id": 200716798,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591991435
+    },
+    {
+        "content": "<p>i will rewrite this part tomorrow, it’s not clear enough</p>",
+        "id": 200717239,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591991672
+    },
+    {
+        "content": "<p>thx for checking <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span></p>",
+        "id": 200717284,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591991697
+    },
+    {
+        "content": "<p>Thank YOU for taking the time to write the showcase post</p>",
+        "id": 200727945,
+        "sender_full_name": "klonos",
+        "timestamp": 1591998294
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ++</p>",
+        "id": 200727948,
+        "sender_full_name": "klonos",
+        "timestamp": 1591998300
+    },
+    {
+        "content": "<p><strong>mazze.ch</strong> go team. (Karma: 2)</p>",
+        "id": 200727950,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1591998300
+    },
+    {
+        "content": "<p>@klonos Done:-)</p>",
+        "id": 200752715,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1592031135
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> I think that it's ready to be published. If you don't have permission to publish, then either I or anyone else with access can do it for you; let us know <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 200753592,
+        "sender_full_name": "klonos",
+        "timestamp": 1592033050
+    },
+    {
+        "content": "<p>@klonos I don't have the permission.</p>",
+        "id": 200753603,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1592033137
+    },
+    {
+        "content": "<p>No worries ...I've published it for you <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 200753784,
+        "sender_full_name": "klonos",
+        "timestamp": 1592033453
+    },
+    {
+        "content": "<p>Found a typo in the showcase post: „especially the ability to export configuration as reusable Features, .“ (the colon at the end)</p>",
+        "id": 200754922,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592035563
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...fixed.</p>",
+        "id": 200761456,
+        "sender_full_name": "klonos",
+        "timestamp": 1592046864
+    },
+    {
+        "content": "<p><span aria-label=\"thank you\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"thank you\">:thank_you:</span></p>",
+        "id": 200761875,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592047599
+    },
+    {
+        "content": "<p>Is javascript in HEAD broken for anyone else? <span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I can't get admin bar, the search box on the modules page, or drop-buttons so I'm guessing it's all JS that's broken? Rolling back to 1.16.1 fixes it (I'm on the modules page)</p>",
+        "id": 200851071,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592199253
+    },
+    {
+        "content": "<p>Looks like it was the recent change to show jQuery library versions that broke some pages (like /admin/modules). I've reverted the commit, see <a href=\"https://github.com/backdrop/backdrop-issues/issues/3879#issuecomment-643918861\">https://github.com/backdrop/backdrop-issues/issues/3879#issuecomment-643918861</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3879#issuecomment-643918861\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3879#issuecomment-643918861\" title=\"[UX] Status report page: show jQuery and jQuery UI as info instead of status. · Issue #3879 · backdrop/backdrop-issues\">[UX] Status report page: show jQuery and jQuery UI as info instead of status. · Issue #3879 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Current behavior: Proposed change: Reasoning: this belongs with the rest of the components that we simply need to communicate their version to the site admin. In D7, this was managed by contrib (ht...</div></div></div>",
+        "id": 200852825,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1592201814
+    },
+    {
+        "content": "<p>looks like <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> sorted it out and reverted the commit</p>",
+        "id": 200876555,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1592220569
+    },
+    {
+        "content": "<p>ty!</p>",
+        "id": 200936933,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592250777
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>  ++ That probably was the fastest bugfix ever! (rrssb)</p>",
+        "id": 201030316,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1592320534
+    },
+    {
+        "content": "<p><strong>laryn</strong> :-) (Karma: 9)</p>",
+        "id": 201030318,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1592320534
+    },
+    {
+        "content": "<p>Ha, it was an easy one. Although the project page is not picking up the most recent version as the default version (it is listed in the \"all releases\" list): <a href=\"https://backdropcms.org/project/rrssb\">https://backdropcms.org/project/rrssb</a></p>",
+        "id": 201038356,
+        "sender_full_name": "Laryn",
+        "timestamp": 1592323801
+    },
+    {
+        "content": "<p>Maybe because I forgot to include an extra <code>.0</code> on the other release so the <code>.1</code> isn't understood as a later release?</p>",
+        "id": 201038485,
+        "sender_full_name": "Laryn",
+        "timestamp": 1592323857
+    },
+    {
+        "content": "<p>Or maybe it was just a cache delay, seems okay now...</p>",
+        "id": 201038891,
+        "sender_full_name": "Laryn",
+        "timestamp": 1592324066
+    },
+    {
+        "content": "<p>Favorite moderately priced (30 dollar range) but scalable backdrop hosting solution. Something that is mostly managed? I tried <a href=\"http://nestify.io\">nestify.io</a> , which in theory sounds great (they do Wordpress mostly). But after my 1 week trial is about to end, I am still having a bunch of hosting issues.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://nestify.io\" style=\"background-image: url(https://nestify.io/wp-content/uploads/2020/05/logo-og.pn)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://nestify.io\" title=\"Home\">Home</a></div><div class=\"message_embed_description\">High performance Managed Wordpress and WooCommerce Hosting services from Nestify. Make your website lightning fast. 24x7 Support Included.</div></div></div>",
+        "id": 201117865,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592385612
+    },
+    {
+        "content": "<p>Ive got 1.5 days left on my trial. Time to export my DB :)</p>",
+        "id": 201118061,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592385769
+    },
+    {
+        "content": "<p>Looks like they're specialized on Wordpress - you probably can't benefit from their main services with a different CMS.</p>\n<p>What are the crucial features you need from a hoster?</p>",
+        "id": 201118394,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1592386059
+    },
+    {
+        "content": "<p>We will be getting lots of rest API calls to the site. Using the services module.</p>",
+        "id": 201118717,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592386260
+    },
+    {
+        "content": "<p>Its for a smaller start up, so they would like to see some growth. But want to avoid self hosting on azure or aws</p>",
+        "id": 201118774,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592386315
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> perhaps Pantheon or <a href=\"http://Platform.sh\">Platform.sh</a> would fit better. People are using both for hosting Backdrop. And they do lots of managing of the hosting for you</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://Platform.sh\" style=\"background-image: url(https://platform.sh/images/meta/Facebook_v2.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://Platform.sh\" title=\"PaaS for Multi-Cloud Hosting, Development, and Deployment with PHP, Java, Node.js, Ruby, Python, Golang\">PaaS for Multi-Cloud Hosting, Development, and Deployment with PHP, Java, Node.js, Ruby, Python, Golang</a></div><div class=\"message_embed_description\">The end-to-end web platform for agile teams. Build, evolve, and scale your website fleetâwith zero infrastructure management investment. Get hosting, CI/CD, automated updates, global 24x7 support. We support PHP, Node.js, Drupal, WordPress, Ruby, Golang, Python, MySQL, ElasticSearch, and more.</div></div></div>",
+        "id": 201140518,
+        "sender_full_name": "Herb",
+        "timestamp": 1592400608
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Aren’t those quite expensive? I don’t know US hosters but in Germany there are 10 € shared hosting services with SSH access which are perfect for Backdrop.</p>",
+        "id": 201141201,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592400906
+    },
+    {
+        "content": "<p>Yeah, a bit too pricy for my needs.</p>",
+        "id": 201141281,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592400955
+    },
+    {
+        "content": "<p>Nestify seems good in theory and has good reviews. Good specs on paper for the price point. Alas, just seems they cannot get the Nginx quite right for me.</p>",
+        "id": 201141433,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592401031
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> How much \"managed\" do you need? We all know that Backdrop runs fine even on shared webhosting. If you want ssh + git + $featureXY, try to search for a medium priced webspace. In general they should provide what you need. Which country / currency is preferred?</p>",
+        "id": 201141929,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1592401266
+    },
+    {
+        "content": "<p>I guess I have used most of the common hosts before, from goddady to Contegix (worst hosting experience). Was thinking maybe I overlooked a popular one maybe.</p>",
+        "id": 201142327,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592401437
+    },
+    {
+        "content": "<p>US for most of the customers, USD.</p>",
+        "id": 201142522,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592401512
+    },
+    {
+        "content": "<p>I don't know about \"expensive\". We've found for our clients that we used to offer cheaper hosting but maintenance starts getting expensive and so we had to increase our prices. For what you get I find Pantheon reasonable. I haven't used Platform much. But of course if you don't need it, not worth it</p>",
+        "id": 201142841,
+        "sender_full_name": "Herb",
+        "timestamp": 1592401662
+    },
+    {
+        "content": "<p>I enjoy those really specific hosting solutions, but I feel they are a bit of an overkill for many sites. Alas, its not my money, but the clients :)</p>",
+        "id": 201143023,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592401744
+    },
+    {
+        "content": "<p>I have to be honest though, I have had 10+ sites hosted on GoDaddy without any problems over the years. Except when they get really hard hit with traffic, but that's rare</p>",
+        "id": 201143140,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592401802
+    },
+    {
+        "content": "<p>you can get a linode or a digitalocean droplet for $5/mo ... but as far as I know they are not managed</p>",
+        "id": 201147905,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1592403826
+    },
+    {
+        "content": "<p>No, they are not managed. Though you can pay for some level of management from Linode, but I don't know what that includes.</p>",
+        "id": 201152935,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1592405798
+    },
+    {
+        "content": "<p>Thanks everyone. After all that, I went with ScalaHosting VPN. They have not too bad reviews and can adjust your hosting per need. Such as Ram, space, etc.</p>",
+        "id": 201172708,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1592414439
+    },
+    {
+        "content": "<p>For shared hosting, I really like NameCheap. The only downside is that they don't give you letsencrypt SSL certificates for free (yet). Instead, they give you one year of something else, with a discount on renewals. I'm hoping in the next year they'll figure out how to get letsencrypt for everyone</p>",
+        "id": 201174295,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592415088
+    },
+    {
+        "content": "<p>Hi everybody.  I have a not-necessarily Backdrop issue about which I could use some advice.  I have a client who is returning to me after trying something different for the last year, and they've asked me to recommend a host.  Before they left me, I had their thousand-node D7 site hosted on Pantheon, but the developers they gave it to created a parallax Gatsby/React thing with a Wordpress back end.  I need to park the current site somewhere in the US (it's currently hosted in the UK) for now, but then I'll pitch them on letting me maintain it again -- possibly on Backdrop if I can talk them into it, or Drupal if I can't.</p>\n<p>So I'm wondering if there are any hosting providers that offer dev-flow facilities like Pantheon and Acquia Cloud, but that can also host a simple static site.  I've only used Pantheon and ACH.  I'm thinking my answer might be <a href=\"http://Platform.sh\">Platform.sh</a>?  (They specifically support Gatsby w/Wordpress.)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://Platform.sh\" style=\"background-image: url(https://platform.sh/images/meta/Facebook_new.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://Platform.sh\" title=\"Platform.sh the end-to-end cloud PaaS for hosting, development, and deployment\">Platform.sh the end-to-end cloud PaaS for hosting, development, and deployment</a></div><div class=\"message_embed_description\">Get hosting, CI/CD, automated updates, global 24x7 support. We support PHP, Node.js, Drupal, WordPress, Java, Ruby, Python, MySQL, ElasticSearch, and more.</div></div></div>",
+        "id": 223954595,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1611606173
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@cellear (Luke McCormick)</span>  We do support both Backdrop and Drupal, and have a simpler dev workflow that our customer switching from Pantheon do like: <a href=\"https://www.altagrade.com/help/tutorials/develop/git\">https://www.altagrade.com/help/tutorials/develop/git</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.altagrade.com/help/tutorials/develop/git\" style=\"background-image: url(https://www.altagrade.com/sites/default/files/altagrade.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.altagrade.com/help/tutorials/develop/git\" title=\"Setup automatic deployment with Git • AltaGrade\">Setup automatic deployment with Git • AltaGrade</a></div><div class=\"message_embed_description\">Learn how to use Git to deploy a Drupal, Backdrop or WordPress website from your local repository, where you work and develop, to your AltaGrade server as a remote destination, where you can keep everything in sync and can work with your team and different machines.</div></div></div>",
+        "id": 223971108,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611613237
+    }
+]

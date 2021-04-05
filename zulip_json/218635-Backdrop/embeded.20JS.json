@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>Hi...,</p>\n<p>Can I embed js code into a page ?</p>\n<p>i.e.  In the Body of a page</p>\n<p>&lt;div class=\"mistvideo\" id=\"party_Y989oOjereEs\"&gt;<br>\n  &lt;noscript&gt;<br>\n    &lt;a href=\"<a href=\"http://ipaddress:8080/party.html\">http://ipaddress:8080/party.html</a>\" target=\"_blank\"&gt;<br>\n      Click here to play this video<br>\n    &lt;/a&gt;<br>\n  &lt;/noscript&gt;<br>\n  &lt;script&gt;<br>\n    var a = function(){<br>\n      mistPlay(\"party\",{<br>\n        target: document.getElementById(\"party_Y989oOjereEs\"),<br>\n        fillSpace: true<br>\n      });<br>\n    };<br>\n    if (!window.mistplayers) {<br>\n      var p = document.createElement(\"script\");<br>\n      p.src = \"http://[IP address]/player.js\"<br>\n      document.head.appendChild(p);<br>\n      p.onload = a;<br>\n    }<br>\n    else { a(); }<br>\n  &lt;/script&gt;<br>\n&lt;/div&gt;</p>",
+        "id": 215970785,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1604779283
+    },
+    {
+        "content": "<p>Depends on what input format you're using and if it strips out certain tags or not...</p>",
+        "id": 215971322,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604779946
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/embeded.20JS/near/215971322\">said</a>:</p>\n<blockquote>\n<p>Depends on what input format you're using and if it strips out certain tags or not...</p>\n</blockquote>\n<p>Full input format</p>",
+        "id": 215972136,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1604781150
+    },
+    {
+        "content": "<p>Should work then I think...</p>",
+        "id": 215974046,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604784101
+    }
+]

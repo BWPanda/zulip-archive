@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>Anyone think it's worth putting email obfuscation into core? Anyone have experience/knowledge of the accessibility of obfuscation? Please give your feedback: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3270#issuecomment-764424030\">https://github.com/backdrop/backdrop-issues/issues/3270#issuecomment-764424030</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3270#issuecomment-764424030\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3270#issuecomment-764424030\" title=\"[WP][SR] Add email obfuscator to core · Issue #3270 · backdrop/backdrop-issues\">[WP][SR] Add email obfuscator to core · Issue #3270 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">We have a contrib module that does this, but since WordPress has a function for this in core, I&#39;m wondering if we could/should too...? I&#39;m guessing most users setting up a Backdrop site wou...</div></div></div>",
+        "id": 223475200,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611212072
+    },
+    {
+        "content": "<p>In case anyone's wondering,... Email obfuscation is an anti-spam technique where email addresses are converted into code that the browser can read (so users still see the regular email address), but spambots can't. To varying degrees of success. This is what the Invisimail contrib module does, so this issue is basically about getting that into core.</p>",
+        "id": 223475394,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611212398
+    },
+    {
+        "content": "<p>I feel like this is important to protect people who are new to the web and don't understand the ramifications of putting an email address out on a website.</p>\n<p>It's additional code to have to add and maintain though, so is that part of it worth it?</p>",
+        "id": 223562969,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611259285
+    }
+]

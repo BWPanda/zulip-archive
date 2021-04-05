@@ -1,0 +1,158 @@
+[
+    {
+        "content": "<p>This is a Zulip topic/channel to be discussing anything related to Backdrop contrib projects.</p>",
+        "id": 184841326,
+        "sender_full_name": "klonos",
+        "timestamp": 1578216391
+    },
+    {
+        "content": "<p>Moved to <a class=\"stream\" data-stream-id=\"218770\" href=\"/#narrow/stream/218770-Contrib\">#Contrib</a> ...</p>",
+        "id": 184841829,
+        "sender_full_name": "klonos",
+        "timestamp": 1578217287
+    },
+    {
+        "content": "<p>sadness; <a href=\"https://travis-ci.org/github/backdrop-contrib/headless\" title=\"https://travis-ci.org/github/backdrop-contrib/headless\">https://travis-ci.org/github/backdrop-contrib/headless</a> ... i think i'm having problems w/ the <code>--url</code> on travis .. but none of my foos have worked so far;</p>",
+        "id": 195353673,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587936901
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span>  ^ if you'd be so kind to glance at that;</p>",
+        "id": 195353683,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587936958
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> ^</p>",
+        "id": 195358116,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587943418
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> So you're trying to get tests to run on Travis?</p>",
+        "id": 195358286,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1587943639
+    },
+    {
+        "content": "<p>correct;</p>",
+        "id": 195358307,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587943655
+    },
+    {
+        "content": "<p>if i can get this to work i can implement in <code>i18n</code> too</p>",
+        "id": 195358309,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587943669
+    },
+    {
+        "content": "<p>Usually with this sort of problem, the Apache vhost isn't lining up with the URL. I think 127.0.0.1 as the URL is correct but seems like there might be an issue with <a href=\"https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf\" title=\"https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf\">https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf\" title=\"backdrop-contrib/headless\">backdrop-contrib/headless</a></div><div class=\"message_embed_description\">Headless is an API to deliver nodes and lists of nodes as JSON data. - backdrop-contrib/headless</div></div></div>",
+        "id": 195358433,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1587943775
+    },
+    {
+        "content": "<p>Instead of running the tests, do you get Backdrop returning the login page if you <code>curl  http://127.0.0.1/user/login</code> ?</p>",
+        "id": 195358479,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1587943816
+    },
+    {
+        "content": "<p>can i <code>curl</code> from travis?</p>",
+        "id": 195358483,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587943839
+    },
+    {
+        "content": "<p>oh you mean put a <code>curl</code> in the travis file; will do</p>",
+        "id": 195358490,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587943884
+    },
+    {
+        "content": "<p>Yep, you should be able to. Instead of <code>php -d display_errors=\"stderr\" ./core/scripts/run-tests.sh --concurrency 12 --url 'http://127.0.0.1' --color --verbose --force BackdropHeadlessTestCase</code> just <code>curl  http://127.0.0.1/user/login</code> and see if you get back the response.</p>",
+        "id": 195358492,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1587943889
+    },
+    {
+        "content": "<p>tis building now <a href=\"https://travis-ci.org/github/backdrop-contrib/headless\" title=\"https://travis-ci.org/github/backdrop-contrib/headless\">https://travis-ci.org/github/backdrop-contrib/headless</a></p>",
+        "id": 195358646,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587944002
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span>The command &quot;vendor/bin/phpcs -n --standard=vendor/backdrop/coder/coder_sniffer/Backdrop --ignore=&quot;vendor/*,README.md&quot; --extensions=install,module,php,inc,theme,test .\n\n&quot; exited with 0.\n\n0.01s$ curl http://127.0.0.1/user/login\n\n&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;\n\n&lt;html&gt;&lt;head&gt;\n\n&lt;title&gt;404 Not Found&lt;/title&gt;\n\n&lt;/head&gt;&lt;body&gt;\n\n&lt;h1&gt;Not Found&lt;/h1&gt;\n\n&lt;p&gt;The requested URL was not found on this server.&lt;/p&gt;\n\n&lt;hr&gt;\n\n&lt;address&gt;Apache/2.4.18 (Ubuntu) Server at 127.0.0.1 Port 80&lt;/address&gt;\n\n&lt;/body&gt;&lt;/html&gt;\n</pre></div>",
+        "id": 195358744,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587944129
+    },
+    {
+        "content": "<p>Yeah, so no Backdrop response at all. I don't see how the code base is being linked to <code>/var/www</code>. <a href=\"https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf\" title=\"https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf\">https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf</a> includes this:</p>\n<div class=\"codehilite\"><pre><span></span>  DocumentRoot /var/www\n</pre></div>\n\n\n<p>But then the actual code is put into <code>/home/travis/web</code>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/headless/blob/simpletests/tests/misc/vhost.conf\" title=\"backdrop-contrib/headless\">backdrop-contrib/headless</a></div><div class=\"message_embed_description\">Headless is an API to deliver nodes and lists of nodes as JSON data. - backdrop-contrib/headless</div></div></div>",
+        "id": 195358843,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1587944298
+    },
+    {
+        "content": "<p>i'll try putting it in /var/www</p>",
+        "id": 195358852,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587944340
+    },
+    {
+        "content": "<p>So either symlink /var/www to /home/travis/web, make <code>DocumentRoot /home/travis/web</code>, or put the code directly in <code>/var/www</code>.</p>",
+        "id": 195358865,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1587944394
+    },
+    {
+        "content": "<p>ahh; still <code>404</code> <span aria-label=\"sad\" class=\"emoji emoji-2639\" role=\"img\" title=\"sad\">:sad:</span></p>",
+        "id": 195359192,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587945024
+    },
+    {
+        "content": "<p>Usually when dealing with CI like this I start off less ambitious and just try to access <a href=\"http://127.0.0.1/robots.txt\" title=\"http://127.0.0.1/robots.txt\">http://127.0.0.1/robots.txt</a>, then that rules out mod_rewrite and PHP issues at first.</p>",
+        "id": 195359197,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1587945109
+    },
+    {
+        "content": "<p>curl to <code>robots.txt</code> is a 404 too;</p>",
+        "id": 195359369,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587945469
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> I'm a bit confused re your vhost setup. You install apache mod fastcgi, but then try to use php-fpm (which requires proxy_fcgi_module instead). And you don't seem to install php7.2-fpm at all - are you sure, it's installed?</p>",
+        "id": 195390015,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587978342
+    },
+    {
+        "content": "<p>Oh, wait, that's Ubuntu xenial.... which has php 7.0 as default. Bionic would ship with 7.2</p>",
+        "id": 195390376,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587978581
+    },
+    {
+        "content": "<p>yeah; i'm lifting that from <a href=\"https://github.com/backdrop/backdrop/blob/1.1.x/.travis.yml\" title=\"https://github.com/backdrop/backdrop/blob/1.1.x/.travis.yml\">https://github.com/backdrop/backdrop/blob/1.1.x/.travis.yml</a> which is an example from back when backdrop/backdrop used to run tests on travisCI ... so something is amiss, but once we get it I can port it over to <code>i18n</code></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.1.x/.travis.yml\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.1.x/.travis.yml\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 195410204,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587990992
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256583\">Geoff St. Pierre (serundeputy)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Contrib/near/195410204\" title=\"#narrow/stream/218635-Backdrop/topic/Contrib/near/195410204\">said</a>:</p>\n<blockquote>\n<p>... once we get it I can port it over to <code>i18n</code></p>\n</blockquote>\n<p>Sure, cool thing. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> </p>\n<p>I've never used travisCI on my own, but I know how to setup a web server. So eventually I can be helpful here (or maybe not).</p>",
+        "id": 195411346,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587991743
+    },
+    {
+        "content": "<p>yeah; if you see a change that is relevant let me know please. I'm more nginx these days and i guess my apache chops have slipped</p>",
+        "id": 195413780,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587993000
+    }
+]

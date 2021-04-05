@@ -1,0 +1,72 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html">Config import/export functions</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="231717590"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20import/export%20functions/near/231717590" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html#231717590">(Mar 24 2021 at 22:09)</a>:</h4>
+<p>There are functions for syncing (importing) config (<a href="https://docs.backdropcms.org/api/backdrop/core%21modules%21config%21config.sync.inc/1">https://docs.backdropcms.org/api/backdrop/core%21modules%21config%21config.sync.inc/1</a>) but are there equivalent functions for <em>exporting</em> config? I'm not referring to the export single/full forms, since they let you <em>download</em> config files from the site. I'm looking for a way to export config from 'active' to 'staging'...</p>
+
+
+
+<a name="231731763"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20import/export%20functions/near/231731763" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html#231731763">(Mar 25 2021 at 00:41)</a>:</h4>
+<p>Other than using the drush command? I'm not sure</p>
+
+
+
+<a name="231731945"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20import/export%20functions/near/231731945" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html#231731945">(Mar 25 2021 at 00:43)</a>:</h4>
+<p>Drush just copies files on the filesystem. It also does that with config-import, even though there are dedicated functions for that that do a lot more (e.g. calling hooks that run on import). So not using Drush as the 'ideal' in this situation...</p>
+
+
+
+<a name="231754989"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20import/export%20functions/near/231754989" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html#231754989">(Mar 25 2021 at 06:54)</a>:</h4>
+<p>Worked it out I think:</p>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">$staging = config_get_config_storage('staging');</span>
+<span class="x">$staging-&gt;deleteAll();</span>
+
+<span class="x">$active = config_get_config_storage('active');</span>
+<span class="x">foreach ($active-&gt;listAll() as $name) {</span>
+<span class="x">  $data = $active-&gt;read($name);</span>
+<span class="x">  $staging-&gt;write($name, $data);</span>
+<span class="x">}</span>
+</code></pre></div>
+
+
+
+<a name="231755873"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20import/export%20functions/near/231755873" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html#231755873">(Mar 25 2021 at 07:06)</a>:</h4>
+<p>Seems about right.</p>
+
+
+
+<a name="231839234"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20import/export%20functions/near/231839234" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html#231839234">(Mar 25 2021 at 17:06)</a>:</h4>
+<p>Yes, that should work. What's the use case out of curiosity?</p>
+
+
+
+<a name="231860520"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20import/export%20functions/near/231860520" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20import.2Fexport.20functions.html#231860520">(Mar 25 2021 at 19:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> <a href="https://github.com/backdrop-contrib/bee/issues/114">https://github.com/backdrop-contrib/bee/issues/114</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/bee/issues/114" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/bee/issues/114" title="Add `config-import` and `config-export` commands · Issue #114 · backdrop-contrib/bee">Add `config-import` and `config-export` commands · Issue #114 · backdrop-contrib/bee</a></div><div class="message_embed_description">config-import and config-export commands should copy config JSON files between active and staging directories.</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

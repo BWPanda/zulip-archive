@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"367994\">@Sven Götze</span>  Ich habe gerade eine Kundenanfrage für ein Forum mit Backdrop CMS. Laut <a href=\"https://github.com/backdrop-contrib/forum/issues/27\">https://github.com/backdrop-contrib/forum/issues/27</a> hast du  das Forum-Modul mal genutzt oder ausprobiert. Funktioniert das insgesamt gut?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/forum/issues/27\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/forum/issues/27\" title=\"Can't open comment · Issue #27 · backdrop-contrib/forum\">Can't open comment · Issue #27 · backdrop-contrib/forum</a></div><div class=\"message_embed_description\">After leaving a reply/answer to a comment the page can&#39;t be loaded and the following error occurs: Argument 3 passed to comment_new_page_count() must be an instance of Node, instance of stdClas...</div></div></div>",
+        "id": 229741699,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615409405
+    },
+    {
+        "content": "<p>Ja, es funktioniert gut. Für den Issue gibt's ja einen Patch. Allerdings ist es halt nur ein sehr einfaches Forum, Module wie Advanced Forum etc. von D7 sind leider noch nicht verfügbar.</p>",
+        "id": 229760553,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1615416106
+    },
+    {
+        "content": "<p>Danke für die Rückmeldung; gut zu wissen, dass das Forum-Modul läuft, zumindest als Fallback-Lösung. Inzwischen überlege ich eher, die Funktionalität mit Taxonomie, eigenem Inhaltstyp, Views usw. nachzubauen. Dann kann ich besser auf individuelle Wünsche oder Anforderungen reagieren.</p>",
+        "id": 229767234,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615419516
+    },
+    {
+        "content": "<p>Hintergrund siehe den Thread hier:</p>\n<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Forum.20module/near/229713517\">said</a>:</p>\n<blockquote>\n<p>Is someone using the Forum module? I have a client who needs a forum site, and I'm wondering if it's working fine and how flexible the module is. Disclaimer: I don't know the module at all, never used it on D7.</p>\n</blockquote>",
+        "id": 229767258,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615419542
+    }
+]

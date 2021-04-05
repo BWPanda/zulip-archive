@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>Has someone encountered this issue with potential data loss? <a href=\"https://github.com/backdrop/backdrop-issues/issues/4933\">https://github.com/backdrop/backdrop-issues/issues/4933</a> Happens here and then to me, but already for a long time. <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> I recall we chatted about it a while ago.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4933\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4933\" title=\"Unable to save page after using CKEditor &quot;Maximize&quot; mode · Issue #4933 · backdrop/backdrop-issues\">Unable to save page after using CKEditor \"Maximize\" mode · Issue #4933 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug Sometimes I&#39;m not able to save a page after editing the body text in CKEditor. After hitting the &quot;Save&quot; button of the page edit form, the editor area changes: b...</div></div></div>",
+        "id": 225013410,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1612358440
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> I can reliably reproduce it. It only seems to be a problem when selecting an image from the library, while the editor is maximized. (I never used the editor in maximized mode before...).</p>",
+        "id": 225015417,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1612359371
+    },
+    {
+        "content": "<p>Thanks, also for the feedback in the issue thread. I'm quite sure, the issue for me happened also with new uploaded images.</p>",
+        "id": 225017425,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1612360394
+    }
+]

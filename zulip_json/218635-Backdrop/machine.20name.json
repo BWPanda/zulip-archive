@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Is there a core function that converts a string to a machine_name type string (lowercase/underscore etc)?</p>",
+        "id": 225102973,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1612397822
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> have you looked at <a href=\"https://docs.backdropcms.org/api/backdrop/1/search/form_process_machine_name\">https://docs.backdropcms.org/api/backdrop/1/search/form_process_machine_name</a> <a href=\"https://docs.backdropcms.org/api/backdrop/1/search/backdrop_html_class\">https://docs.backdropcms.org/api/backdrop/1/search/backdrop_html_class</a> and the likes?</p>",
+        "id": 225103620,
+        "sender_full_name": "klonos",
+        "timestamp": 1612398260
+    },
+    {
+        "content": "<p>yes, but none seem to do just that.</p>",
+        "id": 225104148,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1612398661
+    },
+    {
+        "content": "<p>Yeah, from what I saw, most functions seem to be using custom <code>preg_match()</code></p>",
+        "id": 225104253,
+        "sender_full_name": "klonos",
+        "timestamp": 1612398736
+    },
+    {
+        "content": "<p>...but perhaps we're looking at the wrong place. Doesn't the whole machine name generation happen via JS replacing characters as the user types in the dependent field?</p>",
+        "id": 225104365,
+        "sender_full_name": "klonos",
+        "timestamp": 1612398830
+    },
+    {
+        "content": "<p>yes the machine name field stuff is done by js. thought there'd be a PHP equivalent</p>",
+        "id": 225104609,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1612399008
+    },
+    {
+        "content": "<p>Hmm <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 225104634,
+        "sender_full_name": "klonos",
+        "timestamp": 1612399032
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> <a href=\"https://docs.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_html_class/1\">https://docs.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_html_class/1</a> ?</p>",
+        "id": 225352469,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1612557083
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>So for <a href=\"https://github.com/backdrop/backdrop-issues/issues/4354\" title=\"https://github.com/backdrop/backdrop-issues/issues/4354\">https://github.com/backdrop/backdrop-issues/issues/4354</a> we've decided to get rid of the entire UI changes and just leave the API additions. The API stuff was like the first 4 commits out of about 50 commits. How do I make a new branch that rolls back all the commits after those 4 I need?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4354\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4354\" title=\"[D8][WP][UX] Forward Revisions · Issue #4354 · backdrop/backdrop-issues\">[D8][WP][UX] Forward Revisions · Issue #4354 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Because issue #1475 has drifted from it&#39;s original intention and gone through so many changes/discussion, we decided to close that issue and open two new issues - including this one. Descriptio...</div></div></div>",
+        "id": 194957735,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1587573385
+    },
+    {
+        "content": "<p>What about just creating a new branch and then cherry picking the four commits you want?</p>",
+        "id": 194962228,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1587575415
+    },
+    {
+        "content": "<p>However, here is a Stack Overflow question that seems to provide an answer to your question:</p>\n<ul>\n<li><a href=\"https://stackoverflow.com/questions/8483983/how-to-create-the-branch-from-specific-commit-in-different-branch/8491176\" title=\"https://stackoverflow.com/questions/8483983/how-to-create-the-branch-from-specific-commit-in-different-branch/8491176\">https://stackoverflow.com/questions/8483983/how-to-create-the-branch-from-specific-commit-in-different-branch/8491176</a></li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/8483983/how-to-create-the-branch-from-specific-commit-in-different-branch/8491176\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/8483983/how-to-create-the-branch-from-specific-commit-in-different-branch/8491176\" title=\"How to create the branch from specific commit in different branch\">How to create the branch from specific commit in different branch</a></div><div class=\"message_embed_description\">I have made several commits in the master branch and then merged them to dev branch.\n\nI want to create a branch from a specific commit in dev branch, which was first committed in master branch.\n\nI ...</div></div></div>",
+        "id": 194962523,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1587575546
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Git.20help/near/194962228\" title=\"#narrow/stream/218635-Backdrop/topic/Git.20help/near/194962228\">said</a>:</p>\n<blockquote>\n<p>What about just creating a new branch and then cherry picking the four commits you want?</p>\n</blockquote>\n<p>this seems reasonable, if only I knew how to cherry-pick. will have to do some googling.</p>",
+        "id": 194964231,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1587576272
+    },
+    {
+        "content": "<p>It seems like that SO question might give you what you want, as long as all the commits are together and at the beginning of the branch. If not, then cherry picking might be a better option.</p>",
+        "id": 194964616,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1587576438
+    },
+    {
+        "content": "<p><code>git cherry-pick [HASH]</code></p>",
+        "id": 194965215,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1587576697
+    },
+    {
+        "content": "<p>And first do git log so you can find the hashes. Or look at GitHub I guess</p>",
+        "id": 194978469,
+        "sender_full_name": "Herb",
+        "timestamp": 1587583089
+    }
+]

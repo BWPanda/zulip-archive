@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>I must be tired, because this simple code gives different results to what I expected:</p>\n<div class=\"codehilite\"><pre><span></span>$i = 0;\n$sum = 5 + $i;\ndpm($sum);\n$i++;\ndpm($sum);\n$i++;\ndpm($sum);\n</pre></div>\n\n\n<p>It produces:</p>\n<div class=\"codehilite\"><pre><span></span>5\n5\n5\n</pre></div>\n\n\n<p>Whereas I was expecting:</p>\n<div class=\"codehilite\"><pre><span></span>5\n6\n7\n</pre></div>",
+        "id": 187482207,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580928356
+    },
+    {
+        "content": "<p>It looks like you never update $sum, only $i. The line where $sum is updated only happens once and before $i is updated. If you had that in a for loop, it would probably work like you expect.</p>",
+        "id": 187482521,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1580928533
+    },
+    {
+        "content": "<p>Yes ...or if you had a <code>sum($i)</code> function that was returning <code>5 + $i</code>, then if you were doing <code>dpm(sum($i));</code> it'd also work.</p>",
+        "id": 187497567,
+        "sender_full_name": "klonos",
+        "timestamp": 1580938584
+    }
+]

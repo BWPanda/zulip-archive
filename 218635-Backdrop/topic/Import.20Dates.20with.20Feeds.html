@@ -1,0 +1,89 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html">Import Dates with Feeds</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="207490396"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207490396" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207490396">(Aug 20 2020 at 05:37)</a>:</h4>
+<p>Looking for help formatting dates for feeds module.<br>
+<a href="https://forum.backdropcms.org/forum/how-do-i-import-dates-feeds-module">https://forum.backdropcms.org/forum/how-do-i-import-dates-feeds-module</a></p>
+
+
+
+<a name="207491983"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207491983" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207491983">(Aug 20 2020 at 06:17)</a>:</h4>
+<p>I'm doing this by exporting a date field from D7 as a custom format: <code>U</code> (i.e. Unix timestamp). Works fine for me.</p>
+
+
+
+<a name="207492096"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207492096" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207492096">(Aug 20 2020 at 06:19)</a>:</h4>
+<p>So, I'm creating the dates in a spreadsheet to import them. I've found that I may have to convert them all to Unix first. Early experiments are working and I've found a tool that does batch conversions to UNIX for me.</p>
+
+
+
+<a name="207492157"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207492157" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207492157">(Aug 20 2020 at 06:20)</a>:</h4>
+<p>Of course, it took some experiments to get the dates in a format that the batch conversion tool will understand.</p>
+
+
+
+<a name="207492186"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207492186" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207492186">(Aug 20 2020 at 06:21)</a>:</h4>
+<p>Ah ok</p>
+
+
+
+<a name="207492704"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207492704" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207492704">(Aug 20 2020 at 06:32)</a>:</h4>
+<p>Well, I got them in. But, it was a bit of a hassle. Will be easier next time</p>
+
+
+
+<a name="207518476"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207518476" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207518476">(Aug 20 2020 at 12:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> have you created the spreadsheet manually, or using views and <a href="https://github.com/backdrop-contrib/views_data_export">https://github.com/backdrop-contrib/views_data_export</a>? If the latter, then you could have formatted the date field in your view to use Unix timestamps:</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/views_data_export" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/views_data_export" title="backdrop-contrib/views_data_export">backdrop-contrib/views_data_export</a></div><div class="message_embed_description">Views Data Export. Contribute to backdrop-contrib/views_data_export development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="207518484"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207518484" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207518484">(Aug 20 2020 at 12:54)</a>:</h4>
+<p><a href="/user_uploads/18319/QlrEXYBYgPoDVjAkyg3Y5NyR/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/QlrEXYBYgPoDVjAkyg3Y5NyR/image.png" title="image.png"><img src="/user_uploads/18319/QlrEXYBYgPoDVjAkyg3Y5NyR/image.png"></a></div>
+
+
+
+<a name="207518512"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207518512" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207518512">(Aug 20 2020 at 12:54)</a>:</h4>
+<p>...I believe that this is what <span class="user-mention" data-user-id="256607">@BWPanda</span> was referring to.</p>
+
+
+
+<a name="207518594"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207518594" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207518594">(Aug 20 2020 at 12:55)</a>:</h4>
+<p>...that would have resulted in your spreadsheet having the dates in Unix timestamp to begin with, so no conversion would have been necessary.</p>
+
+
+
+<a name="207544871"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Import%20Dates%20with%20Feeds/near/207544871" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Import.20Dates.20with.20Feeds.html#207544871">(Aug 20 2020 at 16:41)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> - no, my problem was that I was importing bulk data generated by hand, not coming from anywhere else. You'll see what I'm talking about later today.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,134 @@
+[
+    {
+        "content": "<p>Anyone else experience an issue with importing content from D7 using Feeds where unpublished nodes aren't imported at all...?</p>",
+        "id": 209449284,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599602266
+    },
+    {
+        "content": "<p>I have a Published Status column in the CSV file, and am mapping that to Backdrop's Published field, but unpublished nodes just aren't importing. Will try investigating.</p>",
+        "id": 209449376,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599602318
+    },
+    {
+        "content": "<p>Are the unpublished nodes being exported?</p>",
+        "id": 209451242,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599603547
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> Yep, can see them in the CSV file.</p>",
+        "id": 209454062,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599605818
+    },
+    {
+        "content": "<p>Ah! Figured it out! I was seeing unpublished nodes in the CSV as I was logged in. When I downloaded the CSV as an anonymous user then there were no unpublished nodes in it.</p>",
+        "id": 209461036,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599612176
+    },
+    {
+        "content": "<p>Now to work out how to get unpublished nodes to export without making them accessible to everyone on the site in general...</p>",
+        "id": 209461172,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599612305
+    },
+    {
+        "content": "<p>I guess easiest way is to change my Feeds import in Backdrop from URL (which means the Drupal URL has to be accessible to anonymous users) to file upload (then I just download the file as an admin, and import that into Backdrop).</p>",
+        "id": 209461396,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599612514
+    },
+    {
+        "content": "<p>Proudly presenting... my first XML import from the Censhare publishing system (I used to work for them for some months, long time ago). The site will be a church website, getting the local events out of the national event calendar. The greatest thing is: it works with OOTB with Feeds and Feeds XPath Parse... thank you <span class=\"user-mention\" data-user-id=\"307798\">@Alexandr</span> for porting the module. <a href=\"/user_uploads/18319/3VPKdv67-yNyQHxUb40d-nkm/Screenshot-2021-02-03-at-16.12.04.png\">Screenshot-2021-02-03-at-16.12.04.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/3VPKdv67-yNyQHxUb40d-nkm/Screenshot-2021-02-03-at-16.12.04.png\" title=\"Screenshot-2021-02-03-at-16.12.04.png\"><img src=\"/user_uploads/18319/3VPKdv67-yNyQHxUb40d-nkm/Screenshot-2021-02-03-at-16.12.04.png\"></a></div>",
+        "id": 225030160,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1612365666
+    },
+    {
+        "content": "<p>A question to all the <em>Feeds</em> experts here: I'd like to import names from a CSV file to a <a href=\"https://backdropcms.org/project/multifield\">Multifield</a> consisting of the subfields \"First name\" and \"Last name\". At first sight, the node importer doesn't allow at all to select a multifield as a target. What can I do to import to a multifield? Do I need an additional module like Feeds Tamper or XPath Parser, or are there other approaches?</p>",
+        "id": 226845624,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1613668421
+    },
+    {
+        "content": "<p>Tamper helps with dividing and cleaning up the source but for the target you might need something more. Is there a feeds file in multifield module?</p>",
+        "id": 226859053,
+        "sender_full_name": "Herb",
+        "timestamp": 1613673732
+    },
+    {
+        "content": "<p>Maybe <a href=\"https://www.drupal.org/project/multifield/issues/2414049\">https://www.drupal.org/project/multifield/issues/2414049</a> ?</p>",
+        "id": 226866741,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613676712
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> that patch seems like it would work. Multifield maintainer will need to add this</p>",
+        "id": 226874121,
+        "sender_full_name": "Herb",
+        "timestamp": 1613679755
+    },
+    {
+        "content": "<p>...for Backdrop</p>",
+        "id": 226874136,
+        "sender_full_name": "Herb",
+        "timestamp": 1613679763
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Thanks for pointing to the Drupal issue! Had also found it but was wondering if it was already fixed in Backdrop (and I missing something else).</p>",
+        "id": 226876031,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1613680534
+    },
+    {
+        "content": "<p>Multifield maintainer? <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span> (I think I'm still technically a co-maintainer there (<span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> is the other) but am not actively using the module at the moment so probably won't have time to work on this one -- but since there's already a patch perhaps it can be converted to a PR for Backdrop by...someone? <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>? <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 226878678,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613681645
+    },
+    {
+        "content": "<p>Oh!</p>",
+        "id": 226878775,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613681685
+    },
+    {
+        "content": "<p>Was just going to add this as an issue and found this: <a href=\"https://github.com/backdrop-contrib/multifield/issues/39\">https://github.com/backdrop-contrib/multifield/issues/39</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/multifield/issues/39\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/multifield/issues/39\" title=\"Feeds importer support · Issue #39 · backdrop-contrib/multifield\">Feeds importer support · Issue #39 · backdrop-contrib/multifield</a></div><div class=\"message_embed_description\">I need to import a bunch of data from CSV spreadsheets, and would like my multifields to be populated from the sheet. I've got imports running with this change but would love help testing!</div></div></div>",
+        "id": 226878796,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613681695
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Is ahead of us. \"I've got imports running with this change but would love help testing!\"</p>",
+        "id": 226878887,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613681731
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ++</p>",
+        "id": 226878941,
+        "sender_full_name": "Laryn",
+        "timestamp": 1613681752
+    },
+    {
+        "content": "<p><strong>jenlampton</strong> leveled up! (Karma: 17)</p>",
+        "id": 226878942,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1613681752
+    },
+    {
+        "content": "<blockquote>\n<p>Was just going to add this as an issue and found this: <a href=\"https://github.com/backdrop-contrib/multifield/issues/39\">https://github.com/backdrop-contrib/multifield/issues/39</a></p>\n</blockquote>\n<p>Great, will test it soon!</p>",
+        "id": 226894949,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1613688227
+    },
+    {
+        "content": "<p>Tested <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span>'s Multifield PR, it works, thank you very much! <a href=\"https://github.com/backdrop-contrib/multifield/issues/39#issuecomment-782007079\">https://github.com/backdrop-contrib/multifield/issues/39#issuecomment-782007079</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/multifield/issues/39#issuecomment-782007079\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/multifield/issues/39#issuecomment-782007079\" title=\"Feeds importer support · Issue #39 · backdrop-contrib/multifield\">Feeds importer support · Issue #39 · backdrop-contrib/multifield</a></div><div class=\"message_embed_description\">I need to import a bunch of data from CSV spreadsheets, and would like my multifields to be populated from the sheet. I've got imports running with this change but would love help testing!</div></div></div>",
+        "id": 226949370,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1613733068
+    }
+]

@@ -1,0 +1,52 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Field.20display.3A.20even.20.2F.20odd.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Field.20display.3A.20even.20.2F.20odd.html">Field display: even / odd</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="216215468"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Field%20display%3A%20even%20/%20odd/near/216215468" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Field.20display.3A.20even.20.2F.20odd.html#216215468">(Nov 10 2020 at 14:07)</a>:</h4>
+<p>The <code>even</code> / <code>odd</code> class names of the Backdrop field display seem strange to me:</p>
+<div class="codehilite"><pre><span></span><code>&lt;div class=&quot;field ...&gt;
+  &lt;div class=&quot;field-items&quot;&gt;
+    &lt;div class=&quot;field-item even&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;field-item odd&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div>
+<p>Shouldn't the first field item have the class <code>odd</code>, and the second <code>even</code>?</p>
+
+
+
+<a name="216236185"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Field%20display%3A%20even%20/%20odd/near/216236185" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Field.20display.3A.20even.20.2F.20odd.html#216236185">(Nov 10 2020 at 16:28)</a>:</h4>
+<p>Are you starting the counting from 0 or 1? <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="216240054"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Field%20display%3A%20even%20/%20odd/near/216240054" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Field.20display.3A.20even.20.2F.20odd.html#216240054">(Nov 10 2020 at 16:55)</a>:</h4>
+<p>Well, at least Views starts with 1: <code>&lt;div class="views-row views-row-1 odd first ..."&gt;</code></p>
+
+
+
+<a name="216265316"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Field%20display%3A%20even%20/%20odd/near/216265316" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Field.20display.3A.20even.20.2F.20odd.html#216265316">(Nov 10 2020 at 19:56)</a>:</h4>
+<p>FWIW, I would also expect the first rendered row to be starting with "odd".</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

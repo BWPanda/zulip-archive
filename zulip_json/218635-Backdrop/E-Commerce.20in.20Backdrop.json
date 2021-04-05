@@ -1,0 +1,164 @@
+[
+    {
+        "content": "<p>Anyone here running or working on Backdrop sites that incorporate e-commerce? We're looking to migrate Drupal 7 clients who use Drupal Commerce or Ubercart and aren't sure where things stand in Backdrop.</p>",
+        "id": 188170797,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581643841
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"262176\">@Jack</span> - If you haven't seen this topic yet, I would start here.</p>",
+        "id": 188171031,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581644123
+    },
+    {
+        "content": "<p><a href=\"https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms\" target=\"_blank\" title=\"https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms\">https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms</a></p>",
+        "id": 188171033,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581644125
+    },
+    {
+        "content": "<p>Hehe, I was about to post that I'm already reading or have read all the forum posts!</p>",
+        "id": 188171044,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581644140
+    },
+    {
+        "content": "<p>Probably should have read them _before_ posting here. :)</p>",
+        "id": 188171054,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581644149
+    },
+    {
+        "content": "<blockquote>\n<p><a href=\"https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms\" target=\"_blank\" title=\"https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms\">https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms</a></p>\n</blockquote>\n<p>That forum topic is pretty helpful--didn't realize that anyone had started porting Commerce!</p>",
+        "id": 188171145,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581644231
+    },
+    {
+        "content": "<p>That forum post also doesn't mention anyone actually running an active e-commerce site in Backdrop. :) Curious to hear if anyone is!</p>",
+        "id": 188171221,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581644332
+    },
+    {
+        "content": "<p>We'll see if this generates more responses and/or specific examples:<br>\n<a href=\"https://twitter.com/backdropcms/status/1228133340932427776\" target=\"_blank\" title=\"https://twitter.com/backdropcms/status/1228133340932427776\">https://twitter.com/backdropcms/status/1228133340932427776</a></p>\n<div class=\"inline-preview-twitter\"><div class=\"twitter-tweet\"><a href=\"https://twitter.com/backdropcms/status/1228133340932427776\" target=\"_blank\"><img class=\"twitter-avatar\" src=\"https://pbs.twimg.com/profile_images/472494216887549952/vHOWTMqs_normal.png\"></a><p>Are you running an e-commerce site with Backdrop CMS? Tell us a little bit about it here:\n\n<a href=\"https://t.co/9AIozgktdv\" target=\"_blank\" title=\"https://t.co/9AIozgktdv\">https://forum.backdropcms.org/forum/e-commerce-solutions-backdropcms</a></p><span>- Backdrop CMS (@backdropcms)</span></div></div>",
+        "id": 188171786,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581645226
+    },
+    {
+        "content": "<p>Awesome, thanks <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> !</p>",
+        "id": 188171880,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581645343
+    },
+    {
+        "content": "<p>I have one site running Ubercart  and I file issues and PRs as I come across them. There are a number of others using it, based on issues being filed.</p>",
+        "id": 188174756,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581650193
+    },
+    {
+        "content": "<p>Ah, that's good to know, thanks @laryn! (And also a good idea re: checking these projects' issue queues to see what the buzz is like)</p>",
+        "id": 188253690,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581719465
+    },
+    {
+        "content": "<p>Hola <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>! Wondering how your Ubercart experiences have been going in the past months since I last asked? (We're even more actively evaluating our options for an upcoming site build and would love to keep things within Backdrop if possible!)</p>",
+        "id": 204150154,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1594937673
+    },
+    {
+        "content": "<p>Hola @Jack. I have one site using it actively (in small nonprofit terms, as in one or two small orders a day), and another has just activated it but is not anticipating a lot of orders. At least one more in the longer term works that I'll be using it for. It's working, with minor porting related issues that come up periodically but nothing major.</p>",
+        "id": 204150769,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594938089
+    },
+    {
+        "content": "<p>I'm pretty excited that my port of <code>uc_stripe</code> is going pretty smoothly. Just need a formal release of the <code>stripe</code> module and I think I can do an initial release of it. That makes PCI compliance much easier.<br>\n<a href=\"https://github.com/backdrop-contrib/uc_stripe\">https://github.com/backdrop-contrib/uc_stripe</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/uc_stripe\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/uc_stripe\" title=\"backdrop-contrib/uc_stripe\">backdrop-contrib/uc_stripe</a></div><div class=\"message_embed_description\">Ubercart payment gateway module for Stripe. Contribute to backdrop-contrib/uc_stripe development by creating an account on GitHub.</div></div></div>",
+        "id": 204150898,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594938177
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> You are the maintainer -- are you actively using Ubercart and/or have input here?</p>",
+        "id": 204151026,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594938258
+    },
+    {
+        "content": "<p>I'm not actively using it anymore. Sorry.</p>",
+        "id": 204151224,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594938430
+    },
+    {
+        "content": "<p>No worries, just thought I would check.</p>",
+        "id": 204151350,
+        "sender_full_name": "Laryn",
+        "timestamp": 1594938505
+    },
+    {
+        "content": "<p>Thanks for these responses, <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> and <span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span>!</p>",
+        "id": 204160632,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1594946485
+    },
+    {
+        "content": "<p>One or two small orders a day for a nonprofit is pretty much what we're looking at also :)</p>",
+        "id": 204160648,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1594946510
+    },
+    {
+        "content": "<p>Glad to know it's been working well enough for you Laryn; thanks for getting it to that point, Robert and others (I saw @docwilmot contributed tons to the initial port!)</p>",
+        "id": 204160910,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1594946790
+    },
+    {
+        "content": "<p>Wow, just played around with Ubercart (have quite a good knowledge in Drupal Commerce), this thing might not be the newest solution, but I see plenty of use cases for small shops (e.g. have a brewery customer where merchants place a few orders per week, no online payment required etc.;-) Thank you for porting this!</p>",
+        "id": 205004555,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1595684837
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"262176\">@Jack</span> I completed all the items marked for milestone 1.x-3.x on Ubercart. Any chance you or someone on your team can kick the tires before I do the release?</p>",
+        "id": 205164310,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595881628
+    },
+    {
+        "content": "<p>Thanks for the heads up <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>! Unfortunately I'm about to start my sabbatical and the rest of Palante is totally swamped right now, but hopefully folks will be in a position to help test stuff like this soon. Exciting that there's gonna be a new release though!</p>",
+        "id": 205440246,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1596082413
+    },
+    {
+        "content": "<p>Enjoy your time off <span class=\"user-mention\" data-user-id=\"262176\">@Jack</span></p>",
+        "id": 205467475,
+        "sender_full_name": "klonos",
+        "timestamp": 1596109024
+    },
+    {
+        "content": "<p>Thank you @klonos!</p>",
+        "id": 205521515,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1596137105
+    },
+    {
+        "content": "<p>Regarding commerce... I really like Ubercart, clicked through a couple of weeks ago. I did several bigger D7 Commerce sites in the past, and still maintain some of them. Ubercart is great for simple shops, the setup is quite easy. However, porting Commerce makes no sense IMO, it requires a lot of other modules to be ported, and the concept feels more and more outdated. I am not even sure if I should migrate the other shops to D9, it seems that Commerce 2.x can't keep up with the pace of the market. Important things still do not work properly.</p>",
+        "id": 209930404,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1600002323
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256666\">Justin Keiser</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Backdrop.20Live.20event/near/209935476\">said</a>:</p>\n<blockquote>\n<p>I just added another to the registration total.</p>\n</blockquote>\n<p>We've found Ubercart more than adequate.  Commerce was only used by 2 of our clients. One went out of business because the store was too expensive for them.  The other is still using Commerce but it's the payment portion of CRM Core, which has been a real disappointment.  It was a lovely alternative to CiVicRM when it came out, but it was quickly abandoned within a year or two of it's release.  That's a D7 client that will probably go to a custom solution like SalsaLabs when it's time to move, If I can get them to spend the money.  That is the level of functionality they want, but don't have the budget for.  The other was a custom printed T-shirt business that needed commerce for the way they sold the T-shirts. It turned out they couldn't afford the site though, so ...  We got the basics up for them, but they couldn't maintain it and quit.</p>",
+        "id": 209960270,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600050293
+    }
+]

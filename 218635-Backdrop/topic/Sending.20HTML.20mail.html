@@ -1,0 +1,305 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Sending.20HTML.20mail.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html">Sending HTML mail</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="187839061"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187839061" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187839061">(Feb 10 2020 at 17:48)</a>:</h4>
+<p>Is it really difficult to get a site to send HTML email for others? I feel like I struggle with this more often. Does anyone have a good "recipe" to follow? Which module(s) work best for this?</p>
+
+
+
+<a name="187840711"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187840711" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187840711">(Feb 10 2020 at 18:05)</a>:</h4>
+<p>Mailsystem, MimeMail, SMTP</p>
+
+
+
+<a name="187841141"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187841141" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187841141">(Feb 10 2020 at 18:09)</a>:</h4>
+<p>Before writing this, I had just installed Mail System and Mime Mail on a site and the settings for Mail System won't save in the "Site-wide default mail system" section -- keeps reverting from "Mime Mail" to "Default" after I click "Save".</p>
+
+
+
+<a name="187841251"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187841251" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187841251">(Feb 10 2020 at 18:10)</a>:</h4>
+<p>Maybe I can track down why...</p>
+
+
+
+<a name="187841568"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187841568" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187841568">(Feb 10 2020 at 18:14)</a>:</h4>
+<p>Nothing in the logs.</p>
+
+
+
+<a name="187848190"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187848190" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187848190">(Feb 10 2020 at 19:13)</a>:</h4>
+<p>I'm using SMTP on another site and that has its own "Allow to send e-mails formatted as Html" checkbox. But I don't currently have an external account set up for the site in question so can't use SMTP here.</p>
+
+
+
+<a name="187848419"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187848419" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187848419">(Feb 10 2020 at 19:15)</a>:</h4>
+<p>Is it just me, or in this day and age should sending HTML emails be supported OOTB in core...?</p>
+
+
+
+<a name="187848468"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187848468" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187848468">(Feb 10 2020 at 19:16)</a>:</h4>
+<p>Or failing that, install <em>one</em> contrib module to enable that ability, not three.</p>
+
+
+
+<a name="187848631"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187848631" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187848631">(Feb 10 2020 at 19:17)</a>:</h4>
+<p>Yes please.</p>
+
+
+
+<a name="187875474"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187875474" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187875474">(Feb 11 2020 at 01:21)</a>:</h4>
+<p>Technically sending html emails is supported in core. But there are different ways to do it</p>
+
+
+
+<a name="187875483"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187875483" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187875483">(Feb 11 2020 at 01:22)</a>:</h4>
+<p>But I think SMTP is even more important to support in core</p>
+
+
+
+<a name="187875529"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187875529" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187875529">(Feb 11 2020 at 01:22)</a>:</h4>
+<p>Which Mailsystem module are you using <span class="user-mention" data-user-id="256573">@Laryn</span> ?</p>
+
+
+
+<a name="187879134"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187879134" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187879134">(Feb 11 2020 at 02:49)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> MimeMail doesn't send mail, so that is probably why Mailsystem is reverting the setting. You need either of the SMTP or PHPMailer modules installed. Then it is likely that the Mailsystem setting will stick.</p>
+
+
+
+<a name="187879190"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187879190" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187879190">(Feb 11 2020 at 02:50)</a>:</h4>
+<p>I usually configure those modules in the other order PHPMailer -&gt; MimeMail -&gt; Mailsystem.</p>
+
+
+
+<a name="187922622"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187922622" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187922622">(Feb 11 2020 at 15:38)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256705">@Herb</span>  and <span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> . I activated PHPMailer after the fact and was having trouble getting that set up, so I decided to set up a temporary email address to use with the SMTP module, but that was giving me grief, too. This was supposed to be a quick little touch to make things nicer for the end users, but I just had to uninstall all three and go back to plain text for now due to time. I'll come back to this later.</p>
+
+
+
+<a name="187922734"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/187922734" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#187922734">(Feb 11 2020 at 15:39)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> I was just using the standard <a href="https://github.com/backdrop-contrib/mailsystem" target="_blank" title="https://github.com/backdrop-contrib/mailsystem">https://github.com/backdrop-contrib/mailsystem</a> (1.x-3.0.5).</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/mailsystem" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/mailsystem" target="_blank" title="backdrop-contrib/mailsystem">backdrop-contrib/mailsystem</a></div><div class="message_embed_description">Provides an Administrative UI and Developers API for safely updating the mail_system configuration variable. - backdrop-contrib/mailsystem</div></div></div>
+
+
+
+<a name="191793416"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191793416" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191793416">(Mar 25 2020 at 18:44)</a>:</h4>
+<p>I currently have Mail system and mime mail installed, as well as ubercart.  The mail system does not allow me to set the class to Mime Mail - <br>
+<a href="/user_uploads/18319/iJLowgcsPyMOqsRNBbjg8DIx/image.png" title="image.png">image.png</a> </p>
+<div class="message_inline_image"><a href="/user_uploads/18319/iJLowgcsPyMOqsRNBbjg8DIx/image.png" title="image.png"><img src="/user_uploads/18319/iJLowgcsPyMOqsRNBbjg8DIx/image.png"></a></div><p>I have tried to change this from default to MimeMail at least 3 times and every time I hit save - it goes back to 'Default' and the emails are unreadable (no line breaks or anything).  Please help?!!  I am using mime mail with ubercart and the order confirmation email looks like gibberish.  It's not even picking up the template</p>
+
+
+
+<a name="191794162"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191794162" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191794162">(Mar 25 2020 at 18:49)</a>:</h4>
+<p>Note - I read the stream and don't see an option to install phpmailer module.  We're not using an external SMTP server - the mail is sending fine but it is completely unformatted. Driving me crazy.  We're ready to go live and this looks terrible.</p>
+
+
+
+<a name="191796517"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191796517" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191796517">(Mar 25 2020 at 19:06)</a>:</h4>
+<p>I do not use  MimeMail module, but to change default you can try edit the system.mail.json file in your active config folder:</p>
+<div class="codehilite"><pre><span></span>  &quot;default-system&quot;: &quot;MimeMailSystem&quot;,
+</pre></div>
+
+
+
+<a name="191798362"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191798362" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191798362">(Mar 25 2020 at 19:21)</a>:</h4>
+<p>Vladimir,</p>
+<p>What do you use to send html formatted emails if you don’t use mime mail?</p>
+<p>Warmest regards,</p>
+<p>Elisabeth Garbeil, MBA PMP<br>
+Brainwrap LLC<br>
+"Being on the web doesn't have to make your head hurt."<br>
+<a href="http://www.brainwrap.com" title="http://www.brainwrap.com">www.brainwrap.com</a><br>
+(810) 560-7181<br>
+<a href="mailto:egarbeil@brainwrap.com" title="mailto:egarbeil@brainwrap.com">egarbeil@brainwrap.com</a></p>
+
+
+
+<a name="191799331"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191799331" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191799331">(Mar 25 2020 at 19:28)</a>:</h4>
+<p>phpmailer does not have an official release, but you can find and use it from here: <a href="https://github.com/backdrop-contrib/phpmailer" title="https://github.com/backdrop-contrib/phpmailer">https://github.com/backdrop-contrib/phpmailer</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/phpmailer" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/phpmailer" title="backdrop-contrib/phpmailer">backdrop-contrib/phpmailer</a></div><div class="message_embed_description">SMTP support for Backdrop CMS with PHPMailer. Contribute to backdrop-contrib/phpmailer development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="191800746"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191800746" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191800746">(Mar 25 2020 at 19:39)</a>:</h4>
+<p>Elisabeth, at this time I use very simple formatted messages for internal purpose. Additionally I found useful module <a href="https://backdropcms.org/project/maillog" title="https://backdropcms.org/project/maillog">"Maillog"</a> to keep Emails in the database (and set it as default mail system).<br>
+Hope it helps, best regards.</p>
+
+
+
+<a name="191845341"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191845341" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Graham Oliver <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191845341">(Mar 26 2020 at 07:00)</a>:</h4>
+<p><span class="user-mention" data-user-id="268008">@Elisabeth Garbeil</span> have you solved your mail problem yet? It is many months since I last investigated mail problems and I have never yet looked at Ubercart, but looking at your problem it seems to me that there are currently issues with both Ubercart and Mail System. Some while age I produced a contrib module Simple Mail System and checking this just now I find that it will enable the setting of the default mail system to be MimeMailSystem so I will now check why this is different from Mail System.<br>
+Then Simple Mail System is showing an option UbercartMailSystem and this is not showing in Mail System. But Mail System is showing an option name 'Store', produced by the Ubercart module. Also a Mail-ID named 'Mail_System' (which is a confusing name since it is specific to Ubercart) is being produced by Ubercart and appears in both Mail System and Simple Mail System.<br>
+I will take a look at these issue today, in particular the way Ubercart is setting its entries in the config file system.mail when installing. But others who know more about Ubercart may be better able to help.</p>
+
+
+
+<a name="191858464"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191858464" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191858464">(Mar 26 2020 at 09:34)</a>:</h4>
+<p>hhmm</p>
+
+
+
+<a name="191900287"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191900287" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191900287">(Mar 26 2020 at 15:23)</a>:</h4>
+<p>The below didn’t help.  Nothing has so far.</p>
+<p>Warmest regards,</p>
+<p>Elisabeth Garbeil, MBA PMP<br>
+Brainwrap LLC<br>
+"Being on the web doesn't have to make your head hurt."<br>
+<a href="http://www.brainwrap.com" title="http://www.brainwrap.com">www.brainwrap.com</a><br>
+(810) 560-7181<br>
+<a href="mailto:egarbeil@brainwrap.com" title="mailto:egarbeil@brainwrap.com">egarbeil@brainwrap.com</a></p>
+
+
+
+<a name="191900874"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191900874" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191900874">(Mar 26 2020 at 15:25)</a>:</h4>
+<p>Where is that file located? (path)</p>
+<p>Elisabeth</p>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191796517" title="#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191796517">said</a>:</p>
+<blockquote>
+<p>I do not use  MimeMail module, but to change default you can try edit the system.mail.json file in your active config folder:</p>
+<div class="codehilite"><pre><span></span>  &quot;default-system&quot;: &quot;MimeMailSystem&quot;,
+````
+</pre></div>
+
+
+</blockquote>
+
+
+
+<a name="191901765"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191901765" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191901765">(Mar 26 2020 at 15:31)</a>:</h4>
+<p>Something like "/files/config_&lt;random_long_hash&gt;/active/"</p>
+
+
+
+<a name="191901766"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191901766" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191901766">(Mar 26 2020 at 15:31)</a>:</h4>
+<p>Hi, Vladimir. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>
+<p>Here is a short (3 min) video to help you navigate Zulip. <a href="https://youtu.be/DN8YL2MrsSU" title="https://youtu.be/DN8YL2MrsSU">https://youtu.be/DN8YL2MrsSU</a></p>
+<div class="youtube-video message_inline_image"><a data-id="DN8YL2MrsSU" href="https://youtu.be/DN8YL2MrsSU" title="https://youtu.be/DN8YL2MrsSU"><img src="https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg"></a></div>
+
+
+
+<a name="191904951"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191904951" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191904951">(Mar 26 2020 at 15:49)</a>:</h4>
+<p>Found it.  The Simple Mail System module also allows setting that variable.  Seems overly cumbersome, but at least the emails are readable.  Now I can refine them a bit.</p>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191901765" title="#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191901765">said</a>:</p>
+<blockquote>
+<p>Something like "/files/config_&lt;random_long_hash&gt;/active/"</p>
+</blockquote>
+
+
+
+<a name="191905666"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191905666" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191905666">(Mar 26 2020 at 15:53)</a>:</h4>
+<p>Hmm, it sounds like there might be a bug there in the Mail System module.</p>
+
+
+
+<a name="191906322"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191906322" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191906322">(Mar 26 2020 at 15:57)</a>:</h4>
+<p>Also with Ubercart - it's not really picking up that class, but Mime Mail seems to work.  I just have to adjust the template.</p>
+<p>Elisabeth</p>
+<p><span class="user-mention silent" data-user-id="256627">oadaeh (Jason Flatt)</span> <a href="#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191905666" title="#narrow/stream/218635-Backdrop/topic/Sending.20HTML.20mail/near/191905666">said</a>:</p>
+<blockquote>
+<p>Hmm, it sounds like there might be a bug there in the Mail System module.</p>
+</blockquote>
+
+
+
+<a name="191927084"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191927084" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191927084">(Mar 26 2020 at 18:12)</a>:</h4>
+<p>Or it's a bug in ubercart. Mailsystem has been working for me</p>
+
+
+
+<a name="191927259"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191927259" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191927259">(Mar 26 2020 at 18:13)</a>:</h4>
+<p>We need to merge Mail System and Simple Mailsystem. It's confusing to have two modules</p>
+
+
+
+<a name="191929024"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191929024" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191929024">(Mar 26 2020 at 18:27)</a>:</h4>
+<p>Or better yet, the functionality should be in core</p>
+
+
+
+<a name="191934901"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/191934901" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Graham Oliver <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#191934901">(Mar 26 2020 at 19:13)</a>:</h4>
+<p>I have raised a new issue in Ubercart because in my view it is doing something odd with its mail settings - inherited from D7 I think.</p>
+
+
+
+<a name="192011203"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/192011203" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Graham Oliver <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#192011203">(Mar 27 2020 at 12:46)</a>:</h4>
+<p>I have now provided a PR for making a change in Ubercart. I will now check out Mail System.</p>
+<p><span class="user-mention" data-user-id="268008">@Elisabeth Garbeil</span> please can you tell me whether you need to use MimeMail as well or is the use of UbercartMailSystem proving adequate for your HTML need? If use of the MimeMail module is desirable I could propose an addition to Ubercart Admin that would enable use of the MimeMail module if installed, i.e. avoiding use of additional Mail System module to change the settings.</p>
+
+
+
+<a name="192013785"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/192013785" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#192013785">(Mar 27 2020 at 13:10)</a>:</h4>
+<p>I use mime mail for other things. Ubercart needs to use the ubercart mail system, because of special classes to display orders correctly.  </p>
+<p>Elisabeth Garbeil, MBA PMP<br>
+Brainwrap Web Design<br>
+(810) 560-7181<br>
+Sent from my iPhone</p>
+
+
+
+<a name="192053376"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/192053376" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#192053376">(Mar 27 2020 at 17:34)</a>:</h4>
+<p><span class="user-mention" data-user-id="256648">@Graham Oliver</span> I added a comment to your PR. It needs a change</p>
+
+
+
+<a name="192701516"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Sending%20HTML%20mail/near/192701516" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Sending.20HTML.20mail.html#192701516">(Apr 02 2020 at 17:43)</a>:</h4>
+<p>Graham,</p>
+<p>I did.  It turns out that Mail system was not picking up the change in variable of the Default Mail System to Mime Mail.  I had to change the variable manually and that worked. (SimpleMailSystem also allows you to change that variable, but I changed it manually anyway).  It's not picking up the Ubercart Mail System, but my guess is that the variable isn't correct (the ID it's using UC_ORDER_UBERCARTMAILSYSTEM) or the class (Store) isn't matching what's defined in Ubercart and I don't have the time to look through all the code to find the correct variable.   The email that prints with the Mime mail setting is not bad, just missing the printing of the logo.  The client is okay with it, so I've put it on the back burner for now.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

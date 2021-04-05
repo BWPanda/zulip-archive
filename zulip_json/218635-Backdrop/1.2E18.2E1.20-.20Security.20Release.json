@@ -1,0 +1,284 @@
+[
+    {
+        "content": "<p>I've pushed a PR for the security release, drafted the SA, and started on release notes. I'm going to be in a meeting until 1pm, but should be back after that to finish up change records and help with the release :)</p>",
+        "id": 224241703,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611778859
+    },
+    {
+        "content": "<p>Please feel free to merge all the RTBC things!!!! :) <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> or whoever else can help!</p>",
+        "id": 224241787,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611778900
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span>  this is a safe one: <a href=\"https://github.com/backdrop/backdrop/pull/3520/files\">https://github.com/backdrop/backdrop/pull/3520/files</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3520/files\" style=\"background-image: url(https://avatars.githubusercontent.com/u/2385329?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3520/files\" title=\"Issue #4915: Replace 'locale' with 'langcode' in install.sh. by BWPanda · Pull Request #3520 · backdrop/backdrop\">Issue #4915: Replace 'locale' with 'langcode' in install.sh. by BWPanda · Pull Request #3520 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4915</div></div></div>",
+        "id": 224243650,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611779785
+    },
+    {
+        "content": "<p>this one also. minimal change: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2836\">https://github.com/backdrop/backdrop-issues/issues/2836</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2836\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2836\" title=\"Unable to Filter Aliases on URL aliases page · Issue #2836 · backdrop/backdrop-issues\">Unable to Filter Aliases on URL aliases page · Issue #2836 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea I&#39;m not able to use the URL alias filter on the URL Aliases page for any URL containing a slash /. Steps to reproduce (if reporting a bug) navigate to the Url aliase...</div></div></div>",
+        "id": 224243714,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611779821
+    },
+    {
+        "content": "<p>this one just adds two update functions: <a href=\"https://github.com/backdrop/backdrop/pull/3504\">https://github.com/backdrop/backdrop/pull/3504</a> (I'll fix the release notes)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3504\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3504\" title=\"Issue #4888: add _config_translatables if incomplete by indigoxela · Pull Request #3504 · backdrop/backdrop\">Issue #4888: add _config_translatables if incomplete by indigoxela · Pull Request #3504 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4888\nAdd missing translatables in an update hook.</div></div></div>",
+        "id": 224243909,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611779902
+    },
+    {
+        "content": "<p>this one is also minimal change for huge benefit: <a href=\"https://github.com/backdrop/backdrop-issues/issues/1324\">https://github.com/backdrop/backdrop-issues/issues/1324</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1324\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1324\" title=\"Views exposed sort is not working. · Issue #1324 · backdrop/backdrop-issues\">Views exposed sort is not working. · Issue #1324 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">To reproduce: create a view add at least one sort criteria click on that sort criteria to edit it 3a) check the box for &quot;Expose this sort to visitors, to allow them to change it&quot; Apply th...</div></div></div>",
+        "id": 224244109,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611780005
+    },
+    {
+        "content": "<p>This is also a good one, minimal changes, and new tests! <a href=\"https://github.com/backdrop/backdrop-issues/issues/4856\">https://github.com/backdrop/backdrop-issues/issues/4856</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4856\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4856\" title=\"The &quot;this is a preview&quot; message appears after content has saved · Issue #4856 · backdrop/backdrop-issues\">The \"this is a preview\" message appears after content has saved · Issue #4856 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When you preview a node, you see a warning message stating that the node you are viewing has not yet been saved. This is good. However, when you click the &quot;save&quot; bu...</div></div></div>",
+        "id": 224244232,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611780082
+    },
+    {
+        "content": "<p>Also minimal, a change to an update function (only for sites newly moving from D7) <a href=\"https://github.com/backdrop/backdrop-issues/issues/4889\">https://github.com/backdrop/backdrop-issues/issues/4889</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4889\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4889\" title=\"D7 upgrade: language negotiation setting for multilingual sites not migrated properly · Issue #4889 · backdrop/backdrop-issues\">D7 upgrade: language negotiation setting for multilingual sites not migrated properly · Issue #4889 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When upgrading from Drupal 7, the language detection configuration does not get set. Steps To Reproduce Create a D7 site with multiple languages, with path prefix set for lan...</div></div></div>",
+        "id": 224244379,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611780151
+    },
+    {
+        "content": "<p>This is a good one too, tiny change to prevent PHP noice, and API docs update! <a href=\"https://github.com/backdrop/backdrop-issues/issues/4886\">https://github.com/backdrop/backdrop-issues/issues/4886</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4886\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4886\" title=\"Notice: Undefined index: label in filter_admin_format_form() (line 245 of /var/www/docroot/core/modules/filter/filter.admin.inc). · Issue #4886 · backdrop/backdrop-issues\">Notice: Undefined index: label in filter_admin_format_form() (line 245 of /var/www/docroot/core/modules/filter/filter.admin.inc). · Issue #4886 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug Implementation of hook_editor_info() in a custom module&#39;s function produces the error: Notice: Undefined index: label in filter_admin_format_form() (line 245 of /var/www/...</div></div></div>",
+        "id": 224244522,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611780234
+    },
+    {
+        "content": "<p>This is a fantastic tiny change :) <a href=\"https://github.com/backdrop/backdrop-issues/issues/4901\">https://github.com/backdrop/backdrop-issues/issues/4901</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4901\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4901\" title=\"Field UI: (Almost) empty page titles on display settings pages for user and comment · Issue #4901 · backdrop/backdrop-issues\">Field UI: (Almost) empty page titles on display settings pages for user and comment · Issue #4901 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug It starts in field_ui_menu(), where comment and user entities have no bundle argument, so only the string (bundle name) can get handed over to function field_ui_display_form(...</div></div></div>",
+        "id": 224245120,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611780572
+    },
+    {
+        "content": "<p>This one is an important fix <a href=\"https://github.com/backdrop/backdrop-issues/issues/4880\">https://github.com/backdrop/backdrop-issues/issues/4880</a> (and minimal!)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4880\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4880\" title=\"Backdrop 1.18 shows as &quot;security update&quot; · Issue #4880 · backdrop/backdrop-issues\">Backdrop 1.18 shows as \"security update\" · Issue #4880 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Not sure if this is a bug, so I start it as a question. On sites that had 1.18.0-preview installed (for testing), 1.18.0 shows as &quot;security update&quot;. The &quot;Available update&quot; page ...</div></div></div>",
+        "id": 224245266,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611780635
+    },
+    {
+        "content": "<p>All of those please <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 224245342,
+        "sender_full_name": "klonos",
+        "timestamp": 1611780681
+    },
+    {
+        "content": "<p>I'm starting work in ~1hr, so won't be able to help much. Sorry.</p>",
+        "id": 224245601,
+        "sender_full_name": "klonos",
+        "timestamp": 1611780801
+    },
+    {
+        "content": "<p>Also this is a quick one-line fix! <a href=\"https://github.com/backdrop/backdrop-issues/issues/4514\">https://github.com/backdrop/backdrop-issues/issues/4514</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4514\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4514\" title=\"Views link to node translation not showing · Issue #4514 · backdrop/backdrop-issues\">Views link to node translation not showing · Issue #4514 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug The &quot;Translate link&quot; in views never shows because of a mistake in an if clause. Steps To Reproduce To reproduce the behavior: Enable Content Translation module, add...</div></div></div>",
+        "id": 224246518,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611781238
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> I reviewed all the RTBC issues in 1.18.1 and I think they all look a-ok for today's release :) Nothing worrisome and all good fixes! Also, <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> thank you so much for so many PRs!</p>",
+        "id": 224247117,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611781503
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Updated PR as requested, but looks like you already moved issue to next milestone...</p>",
+        "id": 224249297,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611782511
+    },
+    {
+        "content": "<p>We can move it back, see if we can sneak it in :)</p>",
+        "id": 224250268,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611782978
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> has a meeting in 30 mins <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> maybe you can help review/merge some of these other issues?</p>",
+        "id": 224250504,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611783082
+    },
+    {
+        "content": "<p>Also <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span>  don't forget <a href=\"https://github.com/backdrop-ops/security/issues/109\">https://github.com/backdrop-ops/security/issues/109</a>.</p>",
+        "id": 224251731,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611783702
+    },
+    {
+        "content": "<p>All issue titles cleaned up, ready for release notes generator :)</p>",
+        "id": 224253215,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611784445
+    },
+    {
+        "content": "<p>Tags are cut for 1.18.1 and 1.17.6. <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Can you close the milestone and publish the releases?</p>",
+        "id": 224255235,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1611785223
+    },
+    {
+        "content": "<p>yes!</p>",
+        "id": 224255633,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611785417
+    },
+    {
+        "content": "<p>@bwpanda where do I find the changelog?</p>",
+        "id": 224255801,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611785521
+    },
+    {
+        "content": "<p>Found it :) <a href=\"https://github.com/backdrop/backdrop-issues/actions\">https://github.com/backdrop/backdrop-issues/actions</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/actions\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/actions\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 224255876,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611785548
+    },
+    {
+        "content": "<p>Obviously because the security issue was in another repo and not added to this milestone, it's not included. So you'll have to add that manually.</p>",
+        "id": 224255995,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611785620
+    },
+    {
+        "content": "<p>yes, I already have that one in the notes</p>",
+        "id": 224256008,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611785632
+    },
+    {
+        "content": "<p>ok, can I get a sanity check review on <a href=\"https://github.com/backdrop/backdrop-issues/issues/4896#issuecomment-768540405\">https://github.com/backdrop/backdrop-issues/issues/4896#issuecomment-768540405</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4896#issuecomment-768540405\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4896#issuecomment-768540405\" title=\"Backdrop 1.18.1 Release checklist · Issue #4896 · backdrop/backdrop-issues\">Backdrop 1.18.1 Release checklist · Issue #4896 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for Jan 27, 2021 - 1pm PT - 3pm PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release ...</div></div></div>",
+        "id": 224256321,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611785727
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> we also have some heading-weight issues. Can you add another # before the sub-headings for types of issues?</p>",
+        "id": 224256530,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611785784
+    },
+    {
+        "content": "<p>I can replace  the <strong>bold</strong> headings with ## in the release notes. Then we can have <code>##</code> for headings and <code>###</code>for sub-headings</p>",
+        "id": 224256564,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611785799
+    },
+    {
+        "content": "<p>@stpaultim I am going to do the tweet since I haven't seen you here yet today :)</p>",
+        "id": 224257122,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611786120
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I'm not sure it's currently possible (I couldn't see an option for that). But I've opened an issue to ask if it's currently (or in future) possible: <a href=\"https://github.com/spring-io/github-changelog-generator/issues/56\">https://github.com/spring-io/github-changelog-generator/issues/56</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/spring-io/github-changelog-generator/issues/56\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5138804?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/spring-io/github-changelog-generator/issues/56\" title=\"Specify heading levels · Issue #56 · spring-io/github-changelog-generator\">Specify heading levels · Issue #56 · spring-io/github-changelog-generator</a></div><div class=\"message_embed_description\">Is it possible to specify the level of the headings in the Markdown file? For example, currently my Markdown is being output like so: ## Bug fixes - ... But I&#39;d instead like it to be: ### Bug f...</div></div></div>",
+        "id": 224257726,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611786432
+    },
+    {
+        "content": "<p>I just got two security announcement emails...?</p>",
+        "id": 224257795,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611786475
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> were they the same?</p>",
+        "id": 224258135,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611786622
+    },
+    {
+        "content": "<p>Hm, I also got 2.</p>",
+        "id": 224258182,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611786649
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I just noticed a config file changed on <a href=\"http://b.org\">b.org</a> live for tugboat settings, is that something that happens automatically? or was it manually updated?</p>",
+        "id": 224259091,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611787173
+    },
+    {
+        "content": "<p>Manually</p>",
+        "id": 224259283,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611787316
+    },
+    {
+        "content": "<p>Just doing Tugboat stuff now</p>",
+        "id": 224259332,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611787331
+    },
+    {
+        "content": "<p>I wonder if we should combine that task and the <a href=\"http://b.org\">b.org</a> site update?</p>",
+        "id": 224259906,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611787697
+    },
+    {
+        "content": "<p>or mabe combine that task with the home page update?</p>",
+        "id": 224259942,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611787725
+    },
+    {
+        "content": "<p>one setting instead of two?</p>",
+        "id": 224259964,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611787739
+    },
+    {
+        "content": "<p>Sure</p>",
+        "id": 224259980,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611787746
+    },
+    {
+        "content": "<p>should the home page pull from the tugboat setting or vice versa? or should both pull from a master?</p>",
+        "id": 224260032,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611787782
+    },
+    {
+        "content": "<p>I think the Tugboat setting needs to happen <em>after</em> the other Tugboat stuff (otherwise people trying to Demo button will have problems).</p>",
+        "id": 224260157,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611787839
+    },
+    {
+        "content": "<p>The setting in question is literally just changing the Git Ref value here: <a href=\"https://backdropcms.org/admin/config/services/tugboat\">https://backdropcms.org/admin/config/services/tugboat</a> (i.e. from <code>1.18.0</code> to <code>1.18.1</code>)</p>",
+        "id": 224260225,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611787879
+    },
+    {
+        "content": "<p>okay, well then maybe they do need to stay separate :)</p>",
+        "id": 224261583,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611788611
+    },
+    {
+        "content": "<p>Maybe just make a note that updating <a href=\"http://B.org\">B.org</a> shouldn't happen until <em>after</em> the homepage and Tugboat have been updated?</p>",
+        "id": 224261689,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611788664
+    },
+    {
+        "content": "<p>That's a good idea.</p>",
+        "id": 224261710,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611788685
+    }
+]

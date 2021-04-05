@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>It seems like <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> opened another can of worms... <span aria-label=\"stuck out tongue wink\" class=\"emoji emoji-1f61c\" role=\"img\" title=\"stuck out tongue wink\">:stuck_out_tongue_wink:</span> Can someone here answer what the correct behavior would be for a menu item that switches from type MENU_NORMAL_ITEM to MENU_CALLBACK?</p>\n<p>Should the item get deleted from db table \"menu_links\", or should its value in column hidden get updated to <code>-1</code>?<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4844\">https://github.com/backdrop/backdrop-issues/issues/4844</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4844\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4844\" title=\"Fix layout and views menu items get undeletable but stay visible once created · Issue #4844 · backdrop/backdrop-issues\">Fix layout and views menu items get undeletable but stay visible once created · Issue #4844 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Problem When creating a menu item through a layout &quot;menu settings&quot; on a single URL path, it creates a &quot;hard coded&quot; link that persists even after removing that link from the menu...</div></div></div>",
+        "id": 221447210,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609674017
+    },
+    {
+        "content": "<p>It turned out that there's already a Drupal patch available, so I used that for my PR. It <em>deletes</em> the item from the menu_links table.</p>",
+        "id": 221450752,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609679978
+    },
+    {
+        "content": "<p>Aha! ... <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> noticed this with the deprecated menu items for the old update pages when he was reviewing my PR for <a href=\"https://github.com/backdrop/backdrop-issues/issues/2714#issuecomment-753546534\">https://github.com/backdrop/backdrop-issues/issues/2714#issuecomment-753546534</a> yesterday ...these links have been converted (in code) from <code>'type' =&gt; MENU_LOCAL_TASK,</code> to <code>'type' =&gt; MENU_CALLBACK,</code></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2714#issuecomment-753546534\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2714#issuecomment-753546534\" title=\"[UX] Merge all the &quot;Update core/module/theme/layout&quot; pages into a single page. · Issue #2714 · backdrop/backdrop-issues\">[UX] Merge all the \"Update core/module/theme/layout\" pages into a single page. · Issue #2714 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea Currently, in the &quot;Available Updates report&quot; page, the site admin can see which projects have updates, but the actions they can do are limited to a) downloadin...</div></div></div>",
+        "id": 221466351,
+        "sender_full_name": "klonos",
+        "timestamp": 1609701678
+    },
+    {
+        "content": "<p>...I could not reproduce this issue in the PR sandboxes, since the installation happened with my changes, before these deprecated menu items ever existed.</p>",
+        "id": 221466413,
+        "sender_full_name": "klonos",
+        "timestamp": 1609701769
+    },
+    {
+        "content": "<p>...so the issue would never occur on new sites, but it would happen on existing sites that got updated.</p>",
+        "id": 221466420,
+        "sender_full_name": "klonos",
+        "timestamp": 1609701799
+    },
+    {
+        "content": "<p>...I was meant to write an update hook that would get rid of these \"ghost\" menu entries, so thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> for the research and finding the existing Drupal issues <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 221466473,
+        "sender_full_name": "klonos",
+        "timestamp": 1609701869
+    },
+    {
+        "content": "<p>Y'all are amazing <span aria-label=\"sparkling heart\" class=\"emoji emoji-1f496\" role=\"img\" title=\"sparkling heart\">:sparkling_heart:</span></p>",
+        "id": 221467274,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609703014
+    }
+]

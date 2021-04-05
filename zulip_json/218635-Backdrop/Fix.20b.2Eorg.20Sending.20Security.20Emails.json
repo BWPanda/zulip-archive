@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> could you give <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/670\" title=\"https://github.com/backdrop-ops/backdropcms.org/issues/670\">https://github.com/backdrop-ops/backdropcms.org/issues/670</a> an eyeball? Others welcome as well of course. Wednesday's security release we encountered a problem with sending the email notifications.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/670\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/670\" title=\"Sending security announcement emails prevents saving nodes · Issue #670 · backdrop-ops/backdropcms.org\">Sending security announcement emails prevents saving nodes · Issue #670 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Today when we went to edit and then save the SA for today&#39;s security release, the browser hung for about 60 seconds, then the server threw a SQLSTATE[HY000]: General error: 1205 Lock wait timeo...</div></div></div>",
+        "id": 192093644,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1585352897
+    },
+    {
+        "content": "<p>approved by me; <a href=\"https://github.com/backdrop-ops/backdropcms.org/pull/672\" title=\"https://github.com/backdrop-ops/backdropcms.org/pull/672\">https://github.com/backdrop-ops/backdropcms.org/pull/672</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/pull/672\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/pull/672\" title=\"Issue #670: Delay sending security emails until after node is saved. by quicksketch · Pull Request #672 · backdrop-ops/backdropcms.org\">Issue #670: Delay sending security emails until after node is saved. by quicksketch · Pull Request #672 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Fixes #670.</div></div></div>",
+        "id": 192093887,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1585353229
+    },
+    {
+        "content": "<p>we should consider spinning up <code>mailhog</code> in the <code>.lando.yml</code> file</p>",
+        "id": 192093947,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1585353257
+    },
+    {
+        "content": "<p>Thank you!</p>",
+        "id": 192094046,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1585353369
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> is this <code>ini_set()</code> here permanent?: <a href=\"https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170\" title=\"https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170\">https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/100206?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170\" title=\"Issue #670: Delay sending security emails until after node is saved. by quicksketch · Pull Request #672 · backdrop-ops/backdropcms.org\">Issue #670: Delay sending security emails until after node is saved. by quicksketch · Pull Request #672 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Fixes #670.</div></div></div>",
+        "id": 192097191,
+        "sender_full_name": "klonos",
+        "timestamp": 1585357328
+    },
+    {
+        "content": "<p>...it seems so. Not 100% sure, but should we be doing an <code>ini_get('max_execution_time');</code> before setting it to 300, and then at the end of this function reset to what it was before we set it. ...if that's not how things work and I'm being silly, then please ignore me <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 192097247,
+        "sender_full_name": "klonos",
+        "timestamp": 1585357417
+    },
+    {
+        "content": "<p>I suppose we could shorten it again. It's intended to be permanent. It basically guarantees that the max execution time is at least 5 minutes. But as this will only fire when it's sending emails, it's not going to happen very frequently.</p>",
+        "id": 192136749,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1585421847
+    },
+    {
+        "content": "<p>Oops, this should have been in that previous commit. Just found it uncommitted on my copy. Pushed this up as well to only increase if lower: <a href=\"https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f\" title=\"https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f\">https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/100206?s=200&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f\" title=\"Issue #670: Only increase time if it's less than the current amount. · backdrop-ops/backdropcms.org@d6ad62f\">Issue #670: Only increase time if it's less than the current amount. · backdrop-ops/backdropcms.org@d6ad62f</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 192137077,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1585422261
+    }
+]

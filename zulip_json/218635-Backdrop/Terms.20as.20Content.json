@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I'm showing a client their new site (yet to launch), and they gave some feedback in that they thought I hadn't implemented certain features from their old site yet. This was because they have quite a few vocabularies and when they looked at the Dashboard they saw all the links to create new content of the different content types, but no links to create new terms of their vocabularies, so they thought they were missing. I pointed out the difference between terms and nodes, and showed them on the Dashboard where they can see and add terms, but it made me think - do we expect users to know the difference between content and terms and to look in different places in order to list and create them, or should we have them all under the one place (i.e. a Create Content block/menu that has links for content types <em>and</em> terms)?</p>",
+        "id": 213260738,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602665328
+    },
+    {
+        "content": "<p>While terms can be content or hold content, they are also quite different, e.g. a way to categorize content or a tool to filter something etc. I only would put them under one place in certain use cases. Maybe build a custom block for the dashboard of this client?</p>",
+        "id": 213275092,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1602675184
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> maybe once we have more fine grained permissions for adding/editing terms (I have a PR waiting for review but can't recall the number right now) then add a block?</p>",
+        "id": 213289490,
+        "sender_full_name": "Herb",
+        "timestamp": 1602682937
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I don't get it ...OOTB the Dashboard includes a \"Taxonomy\" block:</p>",
+        "id": 213300419,
+        "sender_full_name": "klonos",
+        "timestamp": 1602687130
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/cWwJED7wy11yCryRiIfrxyx7/screencapture-1-17-1-9nuanyerpog0bshaq5mlg83ob7htrnej-tugboat-qa-admin-dashboard-2020-10-14-17_24_56.png\">screencapture-1-17-1-9nuanyerpog0bshaq5mlg83ob7htrnej-tugboat-qa-admin-dashboard-2020-10-14-17_24_56.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/cWwJED7wy11yCryRiIfrxyx7/screencapture-1-17-1-9nuanyerpog0bshaq5mlg83ob7htrnej-tugboat-qa-admin-dashboard-2020-10-14-17_24_56.png\" title=\"screencapture-1-17-1-9nuanyerpog0bshaq5mlg83ob7htrnej-tugboat-qa-admin-dashboard-2020-10-14-17_24_56.png\"><img src=\"/user_uploads/18319/cWwJED7wy11yCryRiIfrxyx7/screencapture-1-17-1-9nuanyerpog0bshaq5mlg83ob7htrnej-tugboat-qa-admin-dashboard-2020-10-14-17_24_56.png\"></a></div>",
+        "id": 213300438,
+        "sender_full_name": "klonos",
+        "timestamp": 1602687139
+    },
+    {
+        "content": "<p>...perhaps we could make it so that \"Add new term\" is the default action instead of \"List terms\" (care to open a new issue for that, if you think that it would improve UX?)</p>",
+        "id": 213300557,
+        "sender_full_name": "klonos",
+        "timestamp": 1602687199
+    },
+    {
+        "content": "<blockquote>\n<p>or should we have them all under the one place (i.e. a Create Content block/menu that has links for content types and terms)?</p>\n</blockquote>\n<p>We test a block that does this as part of the Dashboard Plus module.<br>\n<a href=\"https://backdropcms.org/project/dashboard_plus\">https://backdropcms.org/project/dashboard_plus</a></p>\n<p>I'm not sure that this is a core feature, but think a contrib block that does this would be nice.</p>",
+        "id": 213348480,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1602708469
+    }
+]

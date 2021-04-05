@@ -1,0 +1,260 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  asked in the Zoom chat:</p>\n<blockquote>\n<p>What can we do to make Backdrop CMS more attractive to Drupal 7 site owners and developers?</p>\n</blockquote>",
+        "id": 230069025,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615570695
+    },
+    {
+        "content": "<p>And known.</p>",
+        "id": 230069110,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615570741
+    },
+    {
+        "content": "<p>My number-1 answer: make things more discoverable from within the UI. I learned several things during Tim's Layout session that I never would have discovered on my own .</p>",
+        "id": 230069121,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615570749
+    },
+    {
+        "content": "<p>My initial idea is to sprinkle \"additional information\" popups liberally through the UI: a ? in a circle icon, that when you click on it, brings up a short bit of information about the topic, plus one or more links to exactly that area of the documentation.</p>",
+        "id": 230069265,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615570805
+    },
+    {
+        "content": "<p>That's something that even people who are non-experts in development could contribute via PRs; you don't have to know the intricacies of how layouts do their thing, you just need to know useful bits that people might want to know (and how to put it into a tooltip and file a PR).</p>",
+        "id": 230069444,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615570881
+    },
+    {
+        "content": "<p>I did have a D5 site upgrade cross my path in the last year, but I think they moved on because their previous site builder did not think Backdrop would be good for them, based on their needs. But I think D9 is majorly overkill for their site, and will be way more expensive then they really can afford to pay.</p>",
+        "id": 230069447,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615570881
+    },
+    {
+        "content": "<p>So there's a case of someone in the know recommending a solution that is inappropriate, possibly because of perception, but I'm not sure.</p>",
+        "id": 230069629,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615570945
+    },
+    {
+        "content": "<p>The basic idea being, when someone is exploring the UI and encounters an unfamiliar term for the first time ('like \"flexible layout template\"), there's something right there they can click on to learn more, rather than having to go leave the site and start Google-searching or paging through the docs to find it.</p>",
+        "id": 230070138,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615571149
+    },
+    {
+        "content": "<p>My number-2 answer is (which I am making contributions to) is get Coder Upgrade working more completely, and then emphasize it in all docs talking about migration. From personal experience, it was a HUGE help in porting D7 modules (even with the current bugs).</p>",
+        "id": 230070344,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615571218
+    },
+    {
+        "content": "<p>People may not realize how close Backdrop is to D7 (Layouts and Config notwithstanding), but they really don't know that there's a tool that does a lot of the work for them in porting their custom modules.</p>",
+        "id": 230070503,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615571272
+    },
+    {
+        "content": "<p>could we design a quick permanent survey for people who recently considered backdrop but didn't? so people like <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> can just include a link at the end of one of your  emails? asking \"we heard you passed on using backdrop please answer our 2 question survey\", and also optionally collect their email permission to keep them informed.</p>",
+        "id": 230070633,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615571312
+    },
+    {
+        "content": "<blockquote>\n<p>My initial idea is to sprinkle \"additional information\" popups liberally through the UI: a ? in a circle icon, that when you click on it, brings up a short bit of information about the topic, plus one or more links to exactly that area of the documentation.</p>\n</blockquote>\n<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/3707\">https://github.com/backdrop/backdrop-issues/issues/3707</a></p>\n<p>Take a look at this issue and provide comments.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3707\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3707\" title=\"[UX] Add a help text indicator &amp; tooltip for placing next to things that may be confusing · Issue #3707 · backdrop/backdrop-issues\">[UX] Add a help text indicator &amp; tooltip for placing next to things that may be confusing · Issue #3707 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need There are some interfaces in Backdrop that are daunting to new users, and confusing even to experienced users. On these kinds of interfaces, it can be hard to agree on any c...</div></div></div>",
+        "id": 230076129,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615573670
+    },
+    {
+        "content": "<p>I'm still in the boat of \"get infront of those users\". The BUS module is the single best way to show d7 users how close (or far) they are away from being able to move their site from D7 to Backdrop.</p>\n<p>Just knowing about Backdrop isn't enough. Showing some of the differences isn't enough. Showing them \"your site is 90% ready to be ported\" is what that userbase is going to be the most interested in.</p>\n<p>I speak from experience. I could have cared less about Backdrop as an option until I found out that Ubercart was ported. That's what got me excited. Then I ran into the wall of realizing some of the powerhouse modules I need (for example entity reference) isn't available yet.</p>\n<p>I'm now in a holding pattern of learn more but not looking to port anytime soon.</p>\n<p>Point is, if we aren't able to show D7 users a clear and viable path to move from D7 to Backdrop, BD is nothing more than a novelty idea (to those users) that works but isn't polished enough to consider for mainstream porting. Maybe it's good enough as a small basic site to get the feet wet or good to start a brand new site on for moving forward, but if we can't prove to them it is good enough to port a tenured site, they are going to continue to weigh their options with more established projects and keep Backdrop in the far back of their minds.</p>",
+        "id": 230077999,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615574485
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> still question though: do they know Backdrop exists? They'll only get to BUS module if the answer is yes.</p>",
+        "id": 230078509,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615574719
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Agreed.</p>\n<p>However I don't feel like it's a good idea to get the BUS module in front of people if they're going to see say 30% of their site is ready for being ported. If we can get that closer to 65% or 75% for most sites, people will be much more willing to look closely at Backdrop as an option. This is why I would like to see the telemetry added to BUS, so we can see where to address focus and get more D7 sites to a 65 - 75% portability status.</p>\n<p>But yes, we need to get BUS and Backdrop in front of more Drupal folks as a viable option.</p>",
+        "id": 230088846,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615579329
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"335929\">bugfolder</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Making.20Backdrop.20more.20attractive/near/230070503\">said</a>:</p>\n<blockquote>\n<p>...but they really don't know that there's a tool that does a lot of the work for them in porting their custom modules.</p>\n</blockquote>\n<p>What's the tool?</p>",
+        "id": 230090798,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1615580142
+    },
+    {
+        "content": "<blockquote>\n<p>What's the tool?</p>\n</blockquote>\n<p><a href=\"http://backdropcms.org/project/coder_upgrade\">Coder Upgrade</a> will make a lot of the changes needed to port a module to D7. There's a few bugs (and some pending PRs that fix some of them), but it's still very helpful.</p>",
+        "id": 230091146,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615580315
+    },
+    {
+        "content": "<p>Adding info about Coder Upgrade into the BUS module would be a great addition in helping show D7 users how to port modules that haven't been ported yet.</p>",
+        "id": 230097547,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615583163
+    },
+    {
+        "content": "<p>My take: We need more marketing attention put into our homepage and main landing pages on <a href=\"http://backdropcms.org\">backdropcms.org</a>. More professionally comprehensive case-studies. And a design refresh. I think our product is good but we're not selling it effectively enough.</p>",
+        "id": 230122621,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1615597465
+    },
+    {
+        "content": "<blockquote>\n<p>And a design refresh.</p>\n</blockquote>\n<p>Ooh, interesting. Borg theme v2.0 <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 230122743,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615597564
+    },
+    {
+        "content": "<blockquote>\n<p>We need more marketing attention put into our homepage and main landing pages</p>\n</blockquote>\n<p><span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...I have for long now wanted to convert the \"Why use Backdrop\" section of our site to a views-generated listing, with each point being a link to more info ...and I have actually started that:</p>\n<ul>\n<li>there is a \"Feature\" content type in <a href=\"http://b.org\">b.org</a></li>\n<li>\n<p>there are placeholder nodes of such type for each one of these points/tiles<br>\n...all we need now is:</p>\n</li>\n<li>\n<p>a view for content of that type</p>\n</li>\n<li>a views block to replace the \"Why use Backdrop\" section</li>\n<li>some styling perhaps</li>\n</ul>",
+        "id": 230141693,
+        "sender_full_name": "klonos",
+        "timestamp": 1615617057
+    },
+    {
+        "content": "<p>...and I also like this section in <a href=\"http://d.org\">d.org</a>:</p>",
+        "id": 230141709,
+        "sender_full_name": "klonos",
+        "timestamp": 1615617073
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/EABmDhm88GvCddFNiyAOurTb/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/EABmDhm88GvCddFNiyAOurTb/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/EABmDhm88GvCddFNiyAOurTb/image.png\"></a></div>",
+        "id": 230141725,
+        "sender_full_name": "klonos",
+        "timestamp": 1615617106
+    },
+    {
+        "content": "<p>...although I would also like to see a \"site-owner\" persona</p>",
+        "id": 230141904,
+        "sender_full_name": "klonos",
+        "timestamp": 1615617277
+    },
+    {
+        "content": "<p>...issue from 2018: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/484\">https://github.com/backdrop-ops/backdropcms.org/issues/484</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/484\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/484\" title=\"Add &quot;Audience personas&quot; (pillars) on our homepage. · Issue #484 · backdrop-ops/backdropcms.org\">Add \"Audience personas\" (pillars) on our homepage. · Issue #484 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">This suggestion was mentioned during the outreach meeting today, and it is basically the same concept that is implemented in d.org: Proposed personas: Site Builders Site Owners Developers Marketers...</div></div></div>",
+        "id": 230142290,
+        "sender_full_name": "klonos",
+        "timestamp": 1615617735
+    },
+    {
+        "content": "<p>Very good points. A key aspect of each persona is the end game,  which is done quite well those examples. What does our product enable people to do?</p>",
+        "id": 230155347,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1615633438
+    },
+    {
+        "content": "<p>I did some research on SEO for Backdrop, and also sponsored a small Google Ads Campaign. The assumption was that people looking for \"drupal alternative(s)\" on Google might be pretty interesting target groups (while others are also welcome). Here are some key results... we are not even close to where we should be. This is how much organic SEO traffic we got for \"drupal alternatives\" during the past 12 months: FOUR clicks (organic only)</p>\n<p><a href=\"/user_uploads/18319/7AzEnFajmKSz7JQr_j_LkfKY/Screenshot-2021-03-13-at-12.32.47.png\">Screenshot-2021-03-13-at-12.32.47.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/7AzEnFajmKSz7JQr_j_LkfKY/Screenshot-2021-03-13-at-12.32.47.png\" title=\"Screenshot-2021-03-13-at-12.32.47.png\"><img src=\"/user_uploads/18319/7AzEnFajmKSz7JQr_j_LkfKY/Screenshot-2021-03-13-at-12.32.47.png\"></a></div>",
+        "id": 230157280,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1615635809
+    },
+    {
+        "content": "<p>Here's the reason... we rank on position 26 on Google for \"drupal alternatives\" (I stripped down the big table to just a few drupal related keywords). This table include the last three months (compared to 12 months of the screenshot above, but you get the idea) <a href=\"https://docs.google.com/spreadsheets/d/1vW47_aAp0Z9c-jseW4j62bVV4f9P3W1U5Pzz858oABE/edit#gid=1967407667\">https://docs.google.com/spreadsheets/d/1vW47_aAp0Z9c-jseW4j62bVV4f9P3W1U5Pzz858oABE/edit#gid=1967407667</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://docs.google.com/spreadsheets/d/1vW47_aAp0Z9c-jseW4j62bVV4f9P3W1U5Pzz858oABE/edit#gid=1967407667\" style=\"background-image: url(https://lh3.googleusercontent.com/BG8_N5jnSkH5UXRUtF77BeG7J789tg6fFSJpStB-Mwbsxw8-Nf0EY7DDDkSpqb_1YMwioPV_ioKFXQ=w1200-h630-p)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://docs.google.com/spreadsheets/d/1vW47_aAp0Z9c-jseW4j62bVV4f9P3W1U5Pzz858oABE/edit#gid=1967407667\" title=\"backdropcms.org | Organic Search for &quot;drupal alternatives&quot;\">backdropcms.org | Organic Search for \"drupal alternatives\"</a></div><div class=\"message_embed_description\">Suchanfragen\n\nKeywords,Klicks,Impressionen,CTR,Position\ndrupal alternative,1,853,0.12%,26.15,Only 1 out of 853 searches ended on our website\ndrupal alternatives,0,491,0%,29.7\ndrupal backdrop,23,38,60.53%,1\ndrupal backup and migrate,0,450,0%,23.07\ndrupal based cms,1,136,0.74%,9.35</div></div></div>",
+        "id": 230157381,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1615635961
+    },
+    {
+        "content": "<p>Two insights from the worldwide SEA campaing... clicks are expensive, but not as expensive as expected for a worldwide campaign (around 3.50 $). </p>\n<p><a href=\"https://docs.google.com/spreadsheets/d/1vrZuDDklWFIaTaLgEersN-2tsKY7USjnW_uIcchz3Iw/edit#gid=1891933420\">https://docs.google.com/spreadsheets/d/1vrZuDDklWFIaTaLgEersN-2tsKY7USjnW_uIcchz3Iw/edit#gid=1891933420</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://docs.google.com/spreadsheets/d/1vrZuDDklWFIaTaLgEersN-2tsKY7USjnW_uIcchz3Iw/edit#gid=1891933420\" style=\"background-image: url(https://lh5.googleusercontent.com/1DXpaOUlrohk3LThZ3SDU5s4EH1l4zA5V_wLfA26c2hq2ZVqJmRgegeWZgHm6WiFTkP9YqD-riRGLw=w1200-h630-p)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://docs.google.com/spreadsheets/d/1vrZuDDklWFIaTaLgEersN-2tsKY7USjnW_uIcchz3Iw/edit#gid=1891933420\" title=\"Backdrop CMS Google Ads | Search Terms\">Backdrop CMS Google Ads | Search Terms</a></div><div class=\"message_embed_description\">Backdrop CMS Google Ads | Search Terms\n\nKeywords,Kampagne,Clicks,Impressions,CTR,Average Click Price\ndrupal alternatives,BDP Drupal Alternative,20,182,10,99%,3,23\ndrupal alternative,BDP Drupal Alternative,19,73,26,03%,2,72\nalternatives to drupal,BDP Drupal Alternative,5,11,45,45%,5,36\ndrupal alte...</div></div></div>",
+        "id": 230157585,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1615636173
+    },
+    {
+        "content": "<p>And also interesting... searches per country (paid) <a href=\"https://docs.google.com/spreadsheets/d/1p9JMoFC5e7FCf_FWkSVP3Q-OEC98_DC0EMX9D2ttA_M/edit#gid=813263728\">https://docs.google.com/spreadsheets/d/1p9JMoFC5e7FCf_FWkSVP3Q-OEC98_DC0EMX9D2ttA_M/edit#gid=813263728</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://docs.google.com/spreadsheets/d/1p9JMoFC5e7FCf_FWkSVP3Q-OEC98_DC0EMX9D2ttA_M/edit#gid=813263728\" style=\"background-image: url(https://lh5.googleusercontent.com/0xf_6ekf7PYGiMrVZJVbtG4Xa7WSJHLpw5D4g3Y9spcTA-CAu3M1hLZ1ddL6yl3MJnO1t6YSVUN2Gg=w1200-h630-p)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://docs.google.com/spreadsheets/d/1p9JMoFC5e7FCf_FWkSVP3Q-OEC98_DC0EMX9D2ttA_M/edit#gid=813263728\" title=\"Backdrop CMS Google Ads | Countries\">Backdrop CMS Google Ads | Countries</a></div><div class=\"message_embed_description\">Backdrop CMS Google Ads | Countries\n\nBackdrop CMS Google Ads | Countries\nLocation,Clicks,Impr.,CTR,Avg. CPC,Cost\nUnited States,10,170,5,88%,6,73,67,26\nUnited Kingdom,4,57,7,02%,6,35,25,41\nIndia,4,40,10%,1,18,4,72\nGermany,9,38,23,68%,3,6,32,44\nSwitzerland,5,33,15,15%,2,56,12,79\nCanada,1,25,4%,6,69...</div></div></div>",
+        "id": 230157610,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1615636202
+    },
+    {
+        "content": "<p>So... I could not invest much time on improving SEO ranking for our website (as I promised earlier this year), but I will invest more during the weeks to come. Theres a high demand for \"drupal alternatives\", and we must (and will) perform better on this SEO-wise.</p>",
+        "id": 230157751,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1615636336
+    },
+    {
+        "content": "<p>And one last thing... the search volume for \"drupal alternatives\" is significantly higher today that it was a year ago.</p>",
+        "id": 230157835,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1615636445
+    },
+    {
+        "content": "<p>Thank you <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span>++ for doing all that work/research  ...and for planning to work on improving our SEO <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span></p>",
+        "id": 230164139,
+        "sender_full_name": "klonos",
+        "timestamp": 1615643621
+    },
+    {
+        "content": "<p><strong>mazze.ch</strong> 1000% (Karma: 14)</p>",
+        "id": 230164140,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1615643621
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ++</p>",
+        "id": 230173107,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615652470
+    },
+    {
+        "content": "<p><strong>mazze.ch</strong> 1000% (Karma: 15)</p>",
+        "id": 230173108,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1615652470
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> how do you determine what a D7 site owner reaching D7 EOL would search for?</p>",
+        "id": 230173393,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615652773
+    },
+    {
+        "content": "<p>Traffic for keywords with \"drupal 7\" included (e.g. D7 EOL) was surprisingly low. I am fully aware that a some \"drupal alternative\" searches are not searching for what Backdrop has to offer. So to put it short, I do not have enough information on the search intention;-)</p>",
+        "id": 230174054,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1615653437
+    },
+    {
+        "content": "<p>how do you find out? i know nothing about this to be honest. but I'm imagining that if you wanted to pay for ads you'd want to figure out what your potential market is likely to be searching for. is that how it works?</p>",
+        "id": 230174533,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615653967
+    },
+    {
+        "content": "<p>well, it's always SEO and SEA at the same time. You start with the keywords that already rank on a certain level... but right now, we are at a point where further investigation is not priority <a href=\"https://github.com/backdrop/backdrop-issues/issues/1\">#1</a>... when you have 5000 search queries for \"drupal alternative\",  resulting in 4 clicks, you better start to optimize pretty quickly, and re-evaluate search intentions after some month, and optimize again.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1\" title=\"Import the Sources · Issue #1 · backdrop/backdrop-issues\">Import the Sources · Issue #1 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">We need to find a suitable location in history from which to begin our repository. We definitely want pre-Drupal Kernel and the PSR-0 namespacing, but at the same time we&#39;d like at least a reas...</div></div></div>",
+        "id": 230175194,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1615654687
+    },
+    {
+        "content": "<p>This ties in somewhat to what we were discussing in the <a href=\"https://events.backdropcms.org/sessions/necessities-for-site-owners\">https://events.backdropcms.org/sessions/necessities-for-site-owners</a> discussion.<br>\nI think by improving the ranking of <a href=\"http://backdropcms.org\">backdropcms.org</a>, you will also be improving the Backdrop CMS product in this way (at least a little bit), and I am interested in helping with that.</p>",
+        "id": 230176808,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1615656311
+    },
+    {
+        "content": "<p>I missed the talk, but there was one about official tutorial videos?</p>",
+        "id": 230218263,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615704463
+    },
+    {
+        "content": "<p>What about classes on more popular sites like Pluaralsight or even Udemy, etc. This could also help raise visibility.</p>",
+        "id": 230218322,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615704518
+    }
+]

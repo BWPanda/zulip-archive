@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>I'm theming a site which has images which, when hovered over, have the title slide up into view and you can click on that to go to another page (the image isn't a link, just the title (which is hidden until the image is hovered over)). I just realised that this won't work on touch devices though... Anyone know of an easy way to fix this?</p>",
+        "id": 196668015,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588785778
+    },
+    {
+        "content": "<p>Don't use hover in the UI?</p>",
+        "id": 196671414,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1588787085
+    },
+    {
+        "content": "<p>Then it'd be a very boring website... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 196671537,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588787144
+    },
+    {
+        "content": "<p>I'd say that the only way would be breakpoint/device detection and then selectively implementing the hover-over niceness on devices that have pointers.</p>",
+        "id": 196671731,
+        "sender_full_name": "klonos",
+        "timestamp": 1588787219
+    },
+    {
+        "content": "<p>These have been useful in the past:<br>\n<a href=\"https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices\" title=\"https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices\">https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices</a><br>\n<a href=\"https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers\" title=\"https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers\">https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers</a><br>\n<a href=\"https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices\" title=\"https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices\">https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/2851663/how-do-i-simulate-a-hover-with-a-touch-in-touch-enabled-browsers\" title=\"How do I simulate a hover with a touch in touch enabled browsers?\">How do I simulate a hover with a touch in touch enabled browsers?</a></div><div class=\"message_embed_description\">With some HTML like this:\n\n&lt;p&gt;Some Text&lt;/p&gt;\r\nThen some CSS like this:\n\np {\n  color:black;\n}\n\np:hover {\n  color:red;\n}\r\nHow can I allow a long touch on a touch enabled device to replicate </div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices\" title=\"Changing :hover to touch/click for mobile devices\">Changing :hover to touch/click for mobile devices</a></div><div class=\"message_embed_description\">I've had a look around but can't quite find what i'm looking for.\n\nI currently have a css animation on my page which is triggered by :hover. I would like this to change to 'click' or 'touch' when the </div></div></div>",
+        "id": 196672172,
+        "sender_full_name": "klonos",
+        "timestamp": 1588787414
+    },
+    {
+        "content": "<p>Hmm, that last link suggests that <code>:active</code> should work. Will have to test that once the site is live...</p>",
+        "id": 196674433,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588788472
+    },
+    {
+        "content": "<p>should be able to right click and <code>inspect element</code> set to a mobile device and test now ... no need to <code>do it live</code> ;)</p>",
+        "id": 196679142,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588790697
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> Ah, indeed! Very nice, thanks! It works <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>",
+        "id": 196680255,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588791267
+    }
+]

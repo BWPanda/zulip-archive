@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>I'd need some guidance on how to merge upstream into an existing PR and resolve conflicts. Should I simply do that locally and push? Or are there any best practices for things like that? How are others doing that?</p>",
+        "id": 188722089,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1582283002
+    },
+    {
+        "content": "<p>If I'm working on a Backdrop core issue, I have a fork of the Backdrop repo that I use. I keep it -up-to-date with: <code>git checkout 1.x &amp;&amp; git fetch upstream &amp;&amp; git merge upstream/1.x &amp;&amp; git push -f</code>. If my issue-branch then needs updating, I switch to it, then: <code>git merge 1.x</code>. Sometimes it'll come up with conflicts, which I then just follow the prompts to fix (something like: open each file and fix the conflicts, <code>git add</code>, <code>git commit</code>). That help?</p>",
+        "id": 188723068,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1582284146
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> yeah, thanks for your help. That's actually what I had in mind but wanted to make sure.</p>",
+        "id": 188723686,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1582284774
+    },
+    {
+        "content": "<p>You'll see extra commits in your PR, but there will still only be the changes you made.</p>",
+        "id": 188723830,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1582284954
+    },
+    {
+        "content": "<p>And when the PR is merged it gets squashed so those extra commits don't show up</p>",
+        "id": 188733865,
+        "sender_full_name": "Herb",
+        "timestamp": 1582294125
+    },
+    {
+        "content": "<p>GitHub also helps with merge conflicts. Though I usually resolve them locally</p>",
+        "id": 188733947,
+        "sender_full_name": "Herb",
+        "timestamp": 1582294170
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-General/topic/resolving.20git.20conflicts.20with.20upstream/near/188733865\" title=\"#narrow/stream/218635-General/topic/resolving.20git.20conflicts.20with.20upstream/near/188733865\">said</a>:</p>\n<blockquote>\n<p>And when the PR is merged it gets squashed so those extra commits don't show up</p>\n</blockquote>\n<p>Yeah, actually I was hoping for something like that. I already did it, it worked like a charm.</p>",
+        "id": 188734673,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1582294656
+    },
+    {
+        "content": "<p>For what it's worth, I usually rebase when I'm updating PRs to get my changes on top of everything new. I also fix them locally and then force push over my previous PR branch.</p>\n<div class=\"codehilite\"><pre><span></span>git checkout 1.x\ngit pull backdrop 1.x\ngit checkout [my-branch-with-conflicts]\ngit rebase 1.x\n(fix conflicts)\ngit rebase --continue\ngit push origin [my-branch-with-conflicts] -f\n</pre></div>",
+        "id": 188750343,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1582303758
+    },
+    {
+        "content": "<p>I've been doing something that you guys will possibly find odd, but it has been working for me for years now, and I never have to update my fork...<br>\n...first off, I take for granted that my fork will be behind (and most likely also broken), but I <strong>never</strong> work off of it; it just serves the purpose of pushing other branches, and filing PRs against backdrop/backdrop. SO:</p>\n<ol>\n<li>I <strong>always</strong> <code>git clone</code> backdrop/backdrop instead of my fork (this ensures that I am working on the latest of what should be the source of truth)</li>\n<li>I checkout a new branch off of 1.x</li>\n<li>If there is another person's PR to work off of, I fetch that on top</li>\n<li>dev dev dev...</li>\n<li>Add changes to the branch I'm working on, and commit</li>\n<li>Push the branch to my fork</li>\n<li>Start a PR<br>\n...this has always worked for me, and I very rarely have conflicts to resolve (I only recall 2 times in the past 5 years ...and you know how many PRs I file <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ).<br>\nHere's the commands:</li>\n</ol>\n<div class=\"codehilite\"><pre><span></span>git clone https://github.com/backdrop/backdrop docroot\ncd docroot\ngit remote add klonos https://github.com/klonos/backdrop\n</pre></div>\n\n\n<p>If the issue has no PR already filed by another person:</p>\n<div class=\"codehilite\"><pre><span></span>git checkout -b issue-${ISSUE}\n</pre></div>\n\n\n<p>(where <code>${ISSUE}</code> the GitHub issue number of course)<br>\nIf there is another person's PR to work from:</p>\n<div class=\"codehilite\"><pre><span></span>git fetch origin pull/${PR}/head:issue-${ISSUE}\ngit checkout issue-${ISSUE}\n</pre></div>\n\n\n<p>(where the PR is the number of the PR in <a href=\"https://github.com/backdrop/backdrop/pulls\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop/pulls\">https://github.com/backdrop/backdrop/pulls</a>)<br>\n...when I have finished my work, I push to my fork:</p>\n<div class=\"codehilite\"><pre><span></span>git push -u klonos issue-${ISSUE\n</pre></div>\n\n\n<p>...then head to GitHub on my browser, to start a PR</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pulls\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pulls\" target=\"_blank\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 188757769,
+        "sender_full_name": "klonos",
+        "timestamp": 1582308069
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"258586\">Nate Lampton</span> <a href=\"#narrow/stream/218635-General/topic/resolving.20git.20conflicts.20with.20upstream/near/188750343\" title=\"#narrow/stream/218635-General/topic/resolving.20git.20conflicts.20with.20upstream/near/188750343\">said</a>:</p>\n<blockquote>\n<p>For what it's worth, I usually rebase when I'm updating PRs...</p>\n</blockquote>\n<p>Is rebase actually preferred? If so, how does GitHub handle previous comments on PRs then (reviews)? Are they lost or preserved?</p>",
+        "id": 188943146,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1582562706
+    },
+    {
+        "content": "<p>I think code comments are tied to file line numbers rather than commits? They seem to be maintained without any problem. When reviewing, it is a little easier to sort out the new commits when other commits aren't in the history, so rebasing is sometimes better. But as long as there aren't any conflicts I'm happy. :)</p>",
+        "id": 188943964,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1582563212
+    }
+]

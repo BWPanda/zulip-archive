@@ -1,0 +1,134 @@
+[
+    {
+        "content": "<p>Hi all, I applied as co-maintainer for Leaflet recently and plan to work on finalizing the port soon. There's no stable release yet, but does anyone of you use that module? If so, are you willing to test?</p>\n<p>Besides other things, I'd like to rearrange the structure a bit - put the submodules in a <code>modules</code> subdirectory (not nested), for instance. Or are there any concerns?</p>",
+        "id": 232551547,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617178140
+    },
+    {
+        "content": "<p>Oh, the link to the module: <a href=\"https://github.com/backdrop-contrib/leaflet\">https://github.com/backdrop-contrib/leaflet</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/leaflet\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/leaflet\" title=\"backdrop-contrib/leaflet\">backdrop-contrib/leaflet</a></div><div class=\"message_embed_description\">Integration with the Leaflet map scripting library. - backdrop-contrib/leaflet</div></div></div>",
+        "id": 232551910,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617178341
+    },
+    {
+        "content": "<p>Let me phrase this differently... <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span>  You don't have to do anything, no work, no testing, but: is anyone here using module Leaflet (the dev version) with Backdrop?</p>",
+        "id": 232746213,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617279247
+    },
+    {
+        "content": "<p>Ha, I know I've done some testing on it. I have to check if I'm actually using it or not, honestly don't recall in the top of my head!</p>",
+        "id": 232747858,
+        "sender_full_name": "Laryn",
+        "timestamp": 1617280076
+    },
+    {
+        "content": "<p>Not yet.</p>",
+        "id": 232756954,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1617284109
+    },
+    {
+        "content": "<p>Funny, it's my favorite map module in D7. It's about time to finalize the port.</p>",
+        "id": 232757860,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617284488
+    },
+    {
+        "content": "<p>My dad and I were planning to use it on some sites in the future, but we have not gotten to that yet.</p>",
+        "id": 232761063,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1617285711
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> getting a release out (even an alpha) will start collecting usage stats in <a href=\"http://b.org\">b.org</a>, so you will have an idea how many people are using it with Backdrop.</p>",
+        "id": 232785694,
+        "sender_full_name": "klonos",
+        "timestamp": 1617294448
+    },
+    {
+        "content": "<p>It's not about telemetry... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> I'm planning to do some possibly breaking changes and try to figure out, how cautious I have to be (update hooks and stuff).</p>",
+        "id": 232911416,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617376876
+    },
+    {
+        "content": "<p>Now that I'm official co-maintainer, I'd need more privileges on the Leaflet repo. Who can help? <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> maybe?</p>",
+        "id": 232990572,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617437566
+    },
+    {
+        "content": "<p>I'm using Leaflet (along with Leaflet views, Leaflet Markercluster, and Leaflet More Maps) so I can do some various testing.  Please don't break it.  <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span></p>",
+        "id": 232992594,
+        "sender_full_name": "tkcent",
+        "timestamp": 1617440164
+    },
+    {
+        "content": "<p>No, of course I won't break it. I'm trying to <em>fix</em> it. <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 232993056,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617440734
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> done <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...can you please check on your end, and confirm that you have all access required?</p>",
+        "id": 232993594,
+        "sender_full_name": "klonos",
+        "timestamp": 1617441417
+    },
+    {
+        "content": "<p>...on a second note, the user <code>gifad</code> no longer exists on GitHub. For security reasons perhaps remove them from the list of maintainers (someone may claim that username and potentially do harm if they request to be added)? ...we could add their name in the \"Credits\" section, and link to <a href=\"https://www.drupal.org/u/gifad\">https://www.drupal.org/u/gifad</a> instead. <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> can you please take care of that soon as you get a chance? Thanks.</p>",
+        "id": 232993768,
+        "sender_full_name": "klonos",
+        "timestamp": 1617441660
+    },
+    {
+        "content": "<p>...here's a PR for your consideration <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> : <a href=\"https://github.com/backdrop-contrib/leaflet/pull/12\">https://github.com/backdrop-contrib/leaflet/pull/12</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/leaflet/pull/12\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/leaflet/pull/12\" title=\"Remove gifad from current maintainer, and update their credits link by klonos · Pull Request #12 · backdrop-contrib/leaflet\">Remove gifad from current maintainer, and update their credits link by klonos · Pull Request #12 · backdrop-contrib/leaflet</a></div><div class=\"message_embed_description\">As per the Zulip discussion, https://github.com/gifad is not a valid GitHub account any more.</div></div></div>",
+        "id": 232993955,
+        "sender_full_name": "klonos",
+        "timestamp": 1617441895
+    },
+    {
+        "content": "<p>Confirmed, I can push and merge, your PR has been merged. <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 232996953,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617445588
+    },
+    {
+        "content": "<p>Does anyone know, whatever happened to user gifad?</p>",
+        "id": 232996965,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617445611
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> not sure, but their GitHub account seems to have been removed (404s), and <a href=\"https://www.drupal.org/user/395706/track/code\">https://www.drupal.org/user/395706/track/code</a> shows last couple of commits in Drupal-land by them were back in Jan 2019 (the actual patches provided and comments for those 2 issues were 4-5 years ago though) ...before that, previous commit history shows March 2017, so it seems that the specific user is inactive in <a href=\"http://d.org\">d.org</a> as well <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 232999327,
+        "sender_full_name": "klonos",
+        "timestamp": 1617448554
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"273888\">@tkcent</span> you volunteer for testing? <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span> Sure, the module has been restructured, so if you're testing don't just unpack the current code over the old one, but replace the whole leaflet directory. Updating the main js library from 0.7.5 to 0.7.7 (still legacy) seems to have worked.</p>",
+        "id": 233002750,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617452458
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> Looks good so far.  At first I didn't see the database updates, but once I ran that everything seems to be working just fine (using Google maps with Markercluster).  No console messages and no logged messages.</p>",
+        "id": 233010250,
+        "sender_full_name": "tkcent",
+        "timestamp": 1617460354
+    },
+    {
+        "content": "<p>Aaand now for the libraries... I updated all of them to their latest version (in a branch! I'm not crazy), see <a href=\"https://github.com/backdrop-contrib/leaflet/issues/7\">this issue</a> for details.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/leaflet/issues/7\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/leaflet/issues/7\" title=\"Update Leaflet libraries? · Issue #7 · backdrop-contrib/leaflet\">Update Leaflet libraries? · Issue #7 · backdrop-contrib/leaflet</a></div><div class=\"message_embed_description\">This module uses 0.7.5 and the current version is 1.5.1. I suspect that large of a jump will cause breakage, but the download page also lists 0.7.7 as the legacy version. Maybe short term we can dr...</div></div></div>",
+        "id": 233072359,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617532840
+    },
+    {
+        "content": "<blockquote>\n<p>in a branch! I'm not crazy</p>\n</blockquote>\n<p><span aria-label=\"laughter tears\" class=\"emoji emoji-1f602\" role=\"img\" title=\"laughter tears\">:laughter_tears:</span></p>",
+        "id": 233096159,
+        "sender_full_name": "klonos",
+        "timestamp": 1617553857
+    }
+]

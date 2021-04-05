@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>Examining the DB of a test Backdrop site, I see the <code>variable</code> table, though empty. Do we still need this table since all the variables (previously (d7) stored there) have been moved to either configuration files or <code>state</code> table? If yes, then for what purposes?</p>",
+        "id": 213727461,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1603057200
+    },
+    {
+        "content": "<p>It's for compatibility purposes, although deprecated. Mainly to make upgrades from D7 easier.</p>",
+        "id": 213746322,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1603087626
+    },
+    {
+        "content": "<p>I wonder if it doesn't get created if you set Drupal compatibility off in settings.php</p>",
+        "id": 213802378,
+        "sender_full_name": "Herb",
+        "timestamp": 1603120965
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I don't think so. This table simply gets installed via system_schema(), no conditions. It's just usually empty - and doesn't hurt anyone. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 213803448,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1603121429
+    }
+]

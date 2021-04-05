@@ -1,0 +1,165 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Dark.20mode.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html">Dark mode</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="215045168"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/215045168" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#215045168">(Oct 30 2020 at 00:29)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> Further to your comments in the dev meeting, I tried implementing a dark mode for my admin theme Lumi (<a href="https://github.com/backdrop-contrib/lumi/issues/1">https://github.com/backdrop-contrib/lumi/issues/1</a>) but had issues with icons throughout core not being visible on a dark background. So there's a potential blocker for any dark themes...</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/lumi/issues/1" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/lumi/issues/1" title="Add dark mode · Issue #1 · backdrop-contrib/lumi">Add dark mode · Issue #1 · backdrop-contrib/lumi</a></div><div class="message_embed_description">Part of the reason I started this theme was to create a theme with a dark mode for Backdrop. However when I started styling the dark mode part, I realised that I&#39;m not as much of a designer as ...</div></div></div>
+
+
+
+<a name="215045176"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/215045176" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#215045176">(Oct 30 2020 at 00:29)</a>:</h4>
+<p>Interesting</p>
+
+
+
+<a name="215045598"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/215045598" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#215045598">(Oct 30 2020 at 00:37)</a>:</h4>
+<p>It doesn't seem like front-end themes would suffer from that.  There aren't any included icons needed, are there?</p>
+
+
+
+<a name="215047871"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/215047871" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#215047871">(Oct 30 2020 at 01:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> I just configured Basis to use custom dark colours on my sandbox site, and the first problem I notice is Drop in the footer is hidden on a dark background.</p>
+
+
+
+<a name="215047930"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/215047930" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#215047930">(Oct 30 2020 at 01:24)</a>:</h4>
+<p>Also, if the front-end theme is also used for content editing, then there are icons like the autocomplete spinner that look ugly then.</p>
+
+
+
+<a name="215047955"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/215047955" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#215047955">(Oct 30 2020 at 01:25)</a>:</h4>
+<p>And CKEditor is still stark white. Not sure if/how it's possible to make that dark too...</p>
+
+
+
+<a name="215062245"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/215062245" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#215062245">(Oct 30 2020 at 07:15)</a>:</h4>
+<blockquote>
+<p>Not sure if/how it's possible to make that dark too...</p>
+</blockquote>
+<p>It's possible to get a dark content edit area via hook_ckeditor_settings_alter() - with something like <code>$settings['contentsCss'][] = $color_css;</code>.<br>
+Here's an example (Lateral with the "Night" preset):<br>
+<a href="/user_uploads/18319/fnjCMkCWrskdgTLcygniguEN/ckeditor-dark.png">ckeditor-dark.png</a> </p>
+<div class="message_inline_image"><a href="/user_uploads/18319/fnjCMkCWrskdgTLcygniguEN/ckeditor-dark.png" title="ckeditor-dark.png"><img src="/user_uploads/18319/fnjCMkCWrskdgTLcygniguEN/ckeditor-dark.png"></a></div><p>It's also possible to change css files only via <code>ckeditor_stylesheets[] = css/yourcss.css</code> in your theme's info file.</p>
+<p>I never tried to replace the CKEditor skin with <a href="https://ckeditor.com/cke4/addon/moono-dark">Moono Dark</a>. Has anyone done this before? Core only ships with moono-lisa.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://ckeditor.com/cke4/addon/moono-dark" style="background-image: url(https://ckeditor.com/cke4/sites/default/files/moono-dark/ckeditor-thumb.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://ckeditor.com/cke4/addon/moono-dark" title="Moono Dark">Moono Dark</a></div><div class="message_embed_description">This theme is a dark version of Moono Skin which originally was designed and developed as a CKEditor skin contest entry. Features: black UI new icons I would like to thank Craig McLeod (Build.) for his support and keeping this project going.</div></div></div>
+
+
+
+<a name="220583425"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/220583425" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#220583425">(Dec 21 2020 at 13:31)</a>:</h4>
+<p>There's now a module that provides additional CKEditor skins (work in progress). A dark one is included:</p>
+<p><a href="https://github.com/backdrop-contrib/ckeditor_skins">https://github.com/backdrop-contrib/ckeditor_skins</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/ckeditor_skins" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/ckeditor_skins" title="backdrop-contrib/ckeditor_skins">backdrop-contrib/ckeditor_skins</a></div><div class="message_embed_description">Additonal CKEditor skins for Backdrop CMS. Contribute to backdrop-contrib/ckeditor_skins development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="221930149"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/221930149" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#221930149">(Jan 07 2021 at 11:20)</a>:</h4>
+<p>Is this Backdrop's first dark mode-enabled theme...? <a href="https://github.com/backdrop-contrib/lumi">https://github.com/backdrop-contrib/lumi</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/lumi" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/lumi" title="backdrop-contrib/lumi">backdrop-contrib/lumi</a></div><div class="message_embed_description">A modern, customisable admin theme for Backdrop. Contribute to backdrop-contrib/lumi development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="221930284"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/221930284" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#221930284">(Jan 07 2021 at 11:22)</a>:</h4>
+<p>I just updated Lumi to a new version that now includes dark mode support! <span aria-label="tada" class="emoji emoji-1f389" role="img" title="tada">:tada:</span></p>
+
+
+
+<a name="221930325"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/221930325" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#221930325">(Jan 07 2021 at 11:23)</a>:</h4>
+<p>It's been a while in the making, and a learnt lots of (not-so-good) things about core in the process <span aria-label="smiling face" class="emoji emoji-263a" role="img" title="smiling face">:smiling_face:</span></p>
+
+
+
+<a name="221930368"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/221930368" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#221930368">(Jan 07 2021 at 11:23)</a>:</h4>
+<p>There's likely lots that can be improved, so have a play and open some issues.</p>
+
+
+
+<a name="221935112"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/221935112" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#221935112">(Jan 07 2021 at 12:19)</a>:</h4>
+<p>Did you find that any core changes would be helpful?</p>
+
+
+
+<a name="221938289"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/221938289" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#221938289">(Jan 07 2021 at 12:57)</a>:</h4>
+<p>So cool! <span aria-label="tada" class="emoji emoji-1f389" role="img" title="tada">:tada:</span></p>
+
+
+
+<a name="221991058"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/221991058" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#221991058">(Jan 07 2021 at 19:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> The main thing with core is the hard-coded icons - black PNGs. It'd be nice if they were more customisable (I.e. an icon font or SVGs).</p>
+
+
+
+<a name="222018923"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/222018923" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#222018923">(Jan 07 2021 at 23:59)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> Not sure I'd recommend it, but you could use CSS to invert the PNG to white: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert()">https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert()</a></p>
+
+
+
+<a name="222019259"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/222019259" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#222019259">(Jan 08 2021 at 00:03)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@quicksketch</span> Interesting... If it's a matter of me doing it specifically for the Lumi contrib theme though, then I'll just do what I did in other places (like the autocomplete spinner gif) and find/use FontAwesome icons instead. I just thought to mention it since any other dark-mode themes will have to fix this themselves too in future, so it'd be better if it were fixed in core once, rather than hacked in contrib multiple times <span aria-label="smiling face" class="emoji emoji-263a" role="img" title="smiling face">:smiling_face:</span></p>
+
+
+
+<a name="222023003"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/222023003" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#222023003">(Jan 08 2021 at 00:57)</a>:</h4>
+<p>...similar to the "there's a module for that" catch-phrase for Drupal, I would like to say "there's an issue for that": <a href="https://github.com/backdrop/backdrop-issues/issues/364">https://github.com/backdrop/backdrop-issues/issues/364</a> <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/364" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/364" title="Add an icon font to core · Issue #364 · backdrop/backdrop-issues">Add an icon font to core · Issue #364 · backdrop/backdrop-issues</a></div><div class="message_embed_description">We have a handful of icons in core that are currently images. We should replace these with an icon font instead. Up-sides of using an icon font in core: A complete set of matching core icons This l...</div></div></div>
+
+
+
+<a name="222024357"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/222024357" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#222024357">(Jan 08 2021 at 01:20)</a>:</h4>
+<p>Just tried Lumi, and it looks awesome <span class="user-mention" data-user-id="256607">@BWPanda</span> ++</p>
+
+
+
+<a name="222024358"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/222024358" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#222024358">(Jan 08 2021 at 01:20)</a>:</h4>
+<p><strong>bwpanda</strong> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> (Karma: 30)</p>
+
+
+
+<a name="222024386"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/222024386" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#222024386">(Jan 08 2021 at 01:21)</a>:</h4>
+<p>...already filed 2 issues for it, but imma stop now ...don't wanna turn it into the same situation as the core queue <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="222024463"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Dark%20mode/near/222024463" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Dark.20mode.html#222024463">(Jan 08 2021 at 01:22)</a>:</h4>
+<p>Here's n idea: different set of settings for the same theme, depending on whether it's being used as frontend or admin theme! ...so regular for frontend, whereas dark mode in admin pages.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

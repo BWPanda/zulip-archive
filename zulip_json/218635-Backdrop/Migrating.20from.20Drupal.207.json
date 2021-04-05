@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>Hi there,<br>\nI have migrated a site to backdrop from Drupal 7 and have user accounts with an image field.<br>\nIf I remove the image and hit Save or if I upload af new image and hit Save it return the following error:</p>\n<div class=\"codehilite\"><pre><span></span><code>EntityStorageException: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#39;intranet_bd.field_data_field_image&#39; doesn&#39;t exist i EntityDatabaseStorageController-&gt;save() (linje 676 af /usr/www/users/superej/intranet_bd/core/modules/entity/entity.controller.inc).\n</code></pre></div>\n\n\n<p>Hope somebody can help. :-)</p>",
+        "id": 199145121,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1590754272
+    },
+    {
+        "content": "<p>Ooops, not sure if I can help. The field's database table seems to be missing. Hm... field_data_field_image - isn't that one of the fields, Backdrop ships with by default? Is field_image the name of the field you're trying to delete? Does <code>field_image</code> still exist, when visiting the field UI?</p>",
+        "id": 199146810,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590755304
+    },
+    {
+        "content": "<p>Hi, Søren Bonde. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 199477462,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1591097217
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Migrating.20from.20Drupal.207/near/199146810\">said</a>:</p>\n<blockquote>\n<p>Ooops, not sure if I can help. The field's database table seems to be missing. Hm... field_data_field_image - isn't that one of the fields, Backdrop ships with by default? Is field_image the name of the field you're trying to delete? Does <code>field_image</code> still exist, when visiting the field UI?</p>\n</blockquote>\n<p>Thanks for your reply. :-)<br>\nThe <code>field_data_field_image</code> doesn't exist it is called <code>field_data_field_billede</code>.<br>\nSo it seems like Backdrop got the wrong system name for the image field imported from the Drupal 7 database.</p>",
+        "id": 199477839,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591097446
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307074\">@Søren Bonde</span> does a file named <code>field.field.field_image.json</code> exist in your config directory? That should be in a directory named like <code>files/config_ae3eclooonghashhere/active</code></p>",
+        "id": 199479311,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591098437
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> yes it does, should I remove it or edit the file and point it to <code>field_billede</code> instead?</p>",
+        "id": 199479611,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591098604
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307074\">@Søren Bonde</span> I wouldn't recommend that. Another question: what other field json files do you have in the config directory? Anything that starts with <code>field.field.</code>and <code>field.instance.</code></p>",
+        "id": 199481031,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591099562
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> yes I do, there is quite a few <code>field.field</code> and <code>field.instance</code>.<br>\nLooks like there is one for each fields from the Drupal 7 site.</p>",
+        "id": 199483562,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591101017
+    },
+    {
+        "content": "<p>Did your Drupal site have a <code>field_image</code> anyway? I guess, you followed this instruction: <a href=\"https://backdropcms.org/upgrade-from-drupal\">https://backdropcms.org/upgrade-from-drupal</a></p>\n<p>If your Drupal didn't have a field named <code>field_image</code> and the database table doesn't exist now, but the config exists, ... I suspect it's the default field that ships with Backdrop on install (attached to node type \"post\").</p>\n<p>If you do not need it anyway for your upgraded Drupal, you better delete it in Backdrop <em>before</em> you switch the database to your Drupal db. Hope this helps, I'm guessing a lot here...</p>",
+        "id": 199484587,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1591101615
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> No it didn't have field_image.<br>\nYes I followed the instructions you mentioned.</p>\n<p>Ok, will try and delete it before switching database and do another import.</p>\n<p>Thanks for you help! :-)</p>",
+        "id": 199484933,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591101821
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> ++</p>",
+        "id": 199518203,
+        "sender_full_name": "klonos",
+        "timestamp": 1591115329
+    },
+    {
+        "content": "<p><strong>indigoxela</strong> kudos (Karma: 4)</p>",
+        "id": 199518204,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1591115330
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I manually imported the missing field_image tables from a clean Backdrop install and removed the field form the UI. That solved the problem. :-)<br>\nThanks a lot for all your help! :-)<br>\nI ended up getting all other kinds of strange errors regarding the Logintoboggan module after I solved the image field issue, but uninstalled the module for now.</p>",
+        "id": 199705777,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591247247
+    }
+]

@@ -1,0 +1,52 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Config.20file.20not.20deleted.20on.20uninstall.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20file.20not.20deleted.20on.20uninstall.html">Config file not deleted on uninstall</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="220289036"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20file%20not%20deleted%20on%20uninstall/near/220289036" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20file.20not.20deleted.20on.20uninstall.html#220289036">(Dec 17 2020 at 19:20)</a>:</h4>
+<p>If I declare my mymodule.settings config file in hook_config_info() and create a default config file, the mymodule.settings.json file is created automatically in the config directory upon module installation, yay. But when I disable+uninstall the module, that file is left behind in the active config folder (unless I explicitly remove it in hook_uninstall()). Shouldn't it be automatically removed from the active config folder upon uninstallation? <a href="https://api.backdropcms.org/converting-modules-from-drupal">This page says so.</a> But it's not happening with 1.17.4.</p>
+
+
+
+<a name="220291784"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20file%20not%20deleted%20on%20uninstall/near/220291784" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20file.20not.20deleted.20on.20uninstall.html#220291784">(Dec 17 2020 at 19:40)</a>:</h4>
+<p>It should be removed automatically, yes</p>
+
+
+
+<a name="220294695"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20file%20not%20deleted%20on%20uninstall/near/220294695" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20file.20not.20deleted.20on.20uninstall.html#220294695">(Dec 17 2020 at 20:04)</a>:</h4>
+<p>Ah hah. I guess it helps if hook_config_info() actually returns $prefixes. (The auto-generated version from coder_upgrade module leaves out the "return $prefixes" line.)</p>
+
+
+
+<a name="220295494"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20file%20not%20deleted%20on%20uninstall/near/220295494" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20file.20not.20deleted.20on.20uninstall.html#220295494">(Dec 17 2020 at 20:10)</a>:</h4>
+<p>I noticed that too: <a href="https://github.com/backdrop-contrib/coder_upgrade/issues/28">https://github.com/backdrop-contrib/coder_upgrade/issues/28</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/coder_upgrade/issues/28" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/coder_upgrade/issues/28" title="hook_config_info cleanup · Issue #28 · backdrop-contrib/coder_upgrade">hook_config_info cleanup · Issue #28 · backdrop-contrib/coder_upgrade</a></div><div class="message_embed_description">Example from a recent port, hook_config_info comes out like this: /** * Implements hook_config_info(). */ function userprotect_config_info() { $prefixes[&#39;userprotect.settings&#39;] = array( &amp;#3...</div></div></div>
+
+
+
+<a name="220297390"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20file%20not%20deleted%20on%20uninstall/near/220297390" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20file.20not.20deleted.20on.20uninstall.html#220297390">(Dec 17 2020 at 20:27)</a>:</h4>
+<p>Yup, I just found that! Fixing it should also address <a href="https://github.com/backdrop-contrib/coder_upgrade/issues/21">https://github.com/backdrop-contrib/coder_upgrade/issues/21</a>, making the call superfluous, right?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/coder_upgrade/issues/21" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/coder_upgrade/issues/21" title="Use config()-&gt;delete() instead of config_clear() in .install file · Issue #21 · backdrop-contrib/coder_upgrade">Use config()-&gt;delete() instead of config_clear() in .install file · Issue #21 · backdrop-contrib/coder_upgrade</a></div><div class="message_embed_description">Please read backdrop/backdrop-issues#4186 (comment) to see that replacing Drupal 7&#39;s variable_del() function in .install files is not sufficient. Either config_clear() should be used in the .mo...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

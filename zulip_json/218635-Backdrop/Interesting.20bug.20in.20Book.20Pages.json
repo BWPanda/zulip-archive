@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>I have a series of help pages organized into a book, some of which are also referenced from the main nav. When accessed from the Help menu that takes people to the top of the book first it makes sense, but I've had people dropped into the middle of the book from the main nav, who then wondered where all the extra navigation was coming from (in the sidebar ToC and the prev/next at the bottom).</p>\n<p>So I went to take it out of the outline, and at first it appeared not to work—the page still presented as a book page, and it was still in the outline. This at first seemed to go away when I cleared cache—but I just noticed that it's still in the outline, just not showing any book nav as a page.</p>\n<p><a href=\"/user_uploads/18319/eVrfOCLHRTqCOhgxnPfIgAMe/Screen-Shot-2020-07-24-at-12.24.59-AM.png\">Screen-Shot-2020-07-24-at-12.24.59-AM.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/eVrfOCLHRTqCOhgxnPfIgAMe/Screen-Shot-2020-07-24-at-12.24.59-AM.png\" title=\"Screen-Shot-2020-07-24-at-12.24.59-AM.png\"><img src=\"/user_uploads/18319/eVrfOCLHRTqCOhgxnPfIgAMe/Screen-Shot-2020-07-24-at-12.24.59-AM.png\"></a></div><p><a href=\"/user_uploads/18319/AovLtMQFcLIPYSEHAWnr_2Zr/Screen-Shot-2020-07-24-at-12.25.10-AM.png\">Screen-Shot-2020-07-24-at-12.25.10-AM.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/AovLtMQFcLIPYSEHAWnr_2Zr/Screen-Shot-2020-07-24-at-12.25.10-AM.png\" title=\"Screen-Shot-2020-07-24-at-12.25.10-AM.png\"><img src=\"/user_uploads/18319/AovLtMQFcLIPYSEHAWnr_2Zr/Screen-Shot-2020-07-24-at-12.25.10-AM.png\"></a></div>",
+        "id": 204878517,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1595564871
+    },
+    {
+        "content": "<p>Somewhat ironically, this bug is pretty close to what I'd prefer to do here: have a single page appear as either a book page or a page depending on which menu item brought you to it, which I assume could be detected by using menu aliases? I.e., if there's an edit to the text on one page I want it reflected on the other. Which I realize is doable with custom blocks on only the two pages in question, but that would be much more difficult to maintain if there are a dozen such pages.</p>",
+        "id": 204878584,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1595564973
+    },
+    {
+        "content": "<p>In any case, this issue is not a particular problem here that I'm worried about, just reporting back for general interest.</p>",
+        "id": 204878630,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1595565039
+    },
+    {
+        "content": "<p>Trying hard to wrap my head around this <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...can you please provide simple steps to reproduce the bug on a vanilla installation <span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> ? ...better yet, can you please put all that in an issue in the core queue in GitHub?</p>",
+        "id": 204906937,
+        "sender_full_name": "klonos",
+        "timestamp": 1595591850
+    }
+]

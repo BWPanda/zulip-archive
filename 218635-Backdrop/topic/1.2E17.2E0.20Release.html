@@ -1,0 +1,359 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html">1.17.0 Release</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="209913754"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/209913754" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#209913754">(Sep 13 2020 at 04:50)</a>:</h4>
+<p>At this point, I think that we should be pushing all bug fixes and UX tasks slated for 1.16.3 (which also imply 1.x) to 1.17.1 instead. ...the only exception should be <a href="https://github.com/backdrop/backdrop-issues/issues/4604">#4604</a> and any other such critical issue. Is there anything else that is imperative to get in before 1.17.0?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4604" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4604" title="Layout context regression: Updating to 1.17.0 throws PHP fatal &quot;Unsupported operand types&quot; error · Issue #4604 · backdrop/backdrop-issues">Layout context regression: Updating to 1.17.0 throws PHP fatal "Unsupported operand types" error · Issue #4604 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug I am attempting to update a site from backdrop 1.15.0 to 1.17.0-preview, and I get the following PHP fatals when running update.php It appears as though core assumes $this-co...</div></div></div>
+
+
+
+<a name="209920061"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/209920061" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#209920061">(Sep 13 2020 at 08:18)</a>:</h4>
+<p>We need a solution for this one <a href="https://github.com/backdrop/backdrop-issues/issues/4614">https://github.com/backdrop/backdrop-issues/issues/4614</a> or if we're not able to fix, we need to revert.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4614" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4614" title="Date format for database log messages not always updated, &amp; undefined function date_format_type_options() · Issue #4614 · backdrop/backdrop-issues">Date format for database log messages not always updated, &amp; undefined function date_format_type_options() · Issue #4614 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug New date format for database log messages appears corrupted after update from older versions of backdrop: 1.15.x or earlier. Unrelated, but also: Let&#39;s not use _date_form...</div></div></div>
+
+
+
+<a name="209920126"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/209920126" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#209920126">(Sep 13 2020 at 08:21)</a>:</h4>
+<p>And here's a minor regression (dialog title) that has not even a PR yet: <a href="https://github.com/backdrop/backdrop-issues/issues/4609">https://github.com/backdrop/backdrop-issues/issues/4609</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4609" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4609" title="Wrong dialog title &quot;AJAX callback&quot; on form validation errors - custom context form · Issue #4609 · backdrop/backdrop-issues">Wrong dialog title "AJAX callback" on form validation errors - custom context form · Issue #4609 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug When adding or configuring a custom context, a dialog opens with the title &quot;Custom contexts&quot;. When the form fails validation and an error message shows up, the dial...</div></div></div>
+
+
+
+<a name="209924146"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/209924146" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#209924146">(Sep 13 2020 at 10:27)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256738">@indigoxela</span> <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...I just filed a 2-liner PR to fix that dialog regression: <a href="https://github.com/backdrop/backdrop/pull/3306">https://github.com/backdrop/backdrop/pull/3306</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/pull/3306" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/pull/3306" title="Issue #4609: Proper dialog title on custom context validation error by klonos · Pull Request #3306 · backdrop/backdrop">Issue #4609: Proper dialog title on custom context validation error by klonos · Pull Request #3306 · backdrop/backdrop</a></div><div class="message_embed_description">Fixes backdrop/backdrop-issues#4609</div></div></div>
+
+
+
+<a name="209924959"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/209924959" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#209924959">(Sep 13 2020 at 10:48)</a>:</h4>
+<p>@klonos Cool, but dialogs are a bit tricky...</p>
+
+
+
+<a name="209925026"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/209925026" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#209925026">(Sep 13 2020 at 10:50)</a>:</h4>
+<p>And yet another one better addressed before a stable release: <a href="https://github.com/backdrop/backdrop-issues/issues/4613">https://github.com/backdrop/backdrop-issues/issues/4613</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4613" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4613" title="Merge layout.context.admin into layout.admin? · Issue #4613 · backdrop/backdrop-issues">Merge layout.context.admin into layout.admin? · Issue #4613 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Just realised a small oops: during developing custom contexts, I put all the new code into a &quot;temporary&quot; layout.contexts.admin.inc file and included it with module_load_include(&#39;inc&amp;#...</div></div></div>
+
+
+
+<a name="210080535"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210080535" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210080535">(Sep 15 2020 at 00:52)</a>:</h4>
+<p>It's release day today! <span aria-label="tada" class="emoji emoji-1f389" role="img" title="tada">:tada:</span></p>
+
+
+
+<a name="210080545"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210080545" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210080545">(Sep 15 2020 at 00:52)</a>:</h4>
+<p>...in EU and AU at least <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="210187475"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210187475" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210187475">(Sep 15 2020 at 20:40)</a>:</h4>
+<p>I'm going to reroll <span class="user-mention" data-user-id="263951">@jenlampton</span>'s <a href="https://github.com/backdrop/backdrop-issues/issues/4614">https://github.com/backdrop/backdrop-issues/issues/4614</a> PR with the suggested fixes.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4614" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4614" title="Follow-ups for new dblog date format (PHP fatal: undefined function date_format_type_options(), update problems, config value name change) · Issue #4614 · backdrop/backdrop-issues">Follow-ups for new dblog date format (PHP fatal: undefined function date_format_type_options(), update problems, config value name change) · Issue #4614 · backdrop/backdrop-issues</a></div><div class="message_embed_description">TO address before 1.17.0 release: Occasionally PHP date format not properly updated, see description below: PHP fatal when date module not enabled: Call to undefined function date_format_type_optio...</div></div></div>
+
+
+
+<a name="210188683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210188683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210188683">(Sep 15 2020 at 20:50)</a>:</h4>
+<p>Hi all! It looks like we have one RTBC issue in <a href="https://github.com/backdrop/backdrop-issues/milestone/89">https://github.com/backdrop/backdrop-issues/milestone/89</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/milestone/89" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/milestone/89" title="backdrop/backdrop-issues">backdrop/backdrop-issues</a></div><div class="message_embed_description">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="210188790"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210188790" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210188790">(Sep 15 2020 at 20:51)</a>:</h4>
+<p>everything tagged with 1.16.3 can probably be bumped as anything critical relating to 1.17 should be in the 1.17 milestone</p>
+
+
+
+<a name="210188840"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210188840" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210188840">(Sep 15 2020 at 20:52)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@quicksketch</span> I'm going to review the 1.17 release checklist</p>
+
+
+
+<a name="210189397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210189397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210189397">(Sep 15 2020 at 20:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> we could use another review on <a href="https://github.com/backdrop/backdrop-issues/issues/4600">https://github.com/backdrop/backdrop-issues/issues/4600</a>, and if it's better than what we have now let's get it in, and iterate in 1.17.1 (or later)</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4600" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4600" title="[UX] text cleanup on new block administrative label/description · Issue #4600 · backdrop/backdrop-issues">[UX] text cleanup on new block administrative label/description · Issue #4600 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This is a follow-up to #4558 where we introduced the shiny new admin label and description setting for all blocks :) Current text is as follows: Fieldset title: Admin label Fieldset description: La...</div></div></div>
+
+
+
+<a name="210189782"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210189782" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210189782">(Sep 15 2020 at 20:59)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> or <span class="user-mention" data-user-id="256570">@StPaulTim</span> do you know if we have anyone working on a blog post?</p>
+
+
+
+<a name="210189916"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210189916" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210189916">(Sep 15 2020 at 21:00)</a>:</h4>
+<p>I haven't heard from <span class="user-mention" data-user-id="256729">@klonos</span> - I am not working on it yet. Juggling several things now, but might have time in about an hour.</p>
+
+
+
+<a name="210192459"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210192459" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210192459">(Sep 15 2020 at 21:22)</a>:</h4>
+<p>I'm at work till 9.30 eastern. I would mark <a href="https://github.com/backdrop/backdrop-issues/issues/4619">https://github.com/backdrop/backdrop-issues/issues/4619</a> as critical if we did such things.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4619" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4619" title="Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues">Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug 1.17 brings an exciting new feature: custom layout contexts. It&#39;s however not sufficiently checking for the existence of the entity needed for the context later on. The c...</div></div></div>
+
+
+
+<a name="210194152"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210194152" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210194152">(Sep 15 2020 at 21:37)</a>:</h4>
+<p>In the process of trying to get the current PR working, I found new issues with dblog date format issue. IMO I think we should revert it <a href="https://github.com/backdrop/backdrop-issues/issues/4614#issuecomment-692992579">https://github.com/backdrop/backdrop-issues/issues/4614#issuecomment-692992579</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4614#issuecomment-692992579" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4614#issuecomment-692992579" title="Follow-ups for new dblog date format (PHP fatal: undefined function date_format_type_options(), update problems, config value name change) · Issue #4614 · backdrop/backdrop-issues">Follow-ups for new dblog date format (PHP fatal: undefined function date_format_type_options(), update problems, config value name change) · Issue #4614 · backdrop/backdrop-issues</a></div><div class="message_embed_description">TO address before 1.17.0 release: Occasionally PHP date format not properly updated, see description below: PHP fatal when date module not enabled: Call to undefined function date_format_type_optio...</div></div></div>
+
+
+
+<a name="210203966"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210203966" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210203966">(Sep 15 2020 at 23:19)</a>:</h4>
+<p>all valid concerns. Let's revert :)</p>
+
+
+
+<a name="210208290"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210208290" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210208290">(Sep 16 2020 at 00:14)</a>:</h4>
+<p>Alright I think all issues are done that will get done for 1.17.0. Several got bumped (MySQL 8 support, some text changes, the issue <span class="user-mention" data-user-id="256757">@docwilmot</span> mentioned a few posts above). The dblog issue has been reverted. I think we're set for release.</p>
+
+
+
+<a name="210208823"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210208823" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210208823">(Sep 16 2020 at 00:21)</a>:</h4>
+<p>I'll start with the 1.16.3 release first.</p>
+
+
+
+<a name="210209204"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210209204" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210209204">(Sep 16 2020 at 00:26)</a>:</h4>
+<p>Anyone have any final thoughts on <a href="https://github.com/backdrop/backdrop-issues/issues/4600#issuecomment-693095138">https://github.com/backdrop/backdrop-issues/issues/4600#issuecomment-693095138</a>? <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> ?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4600#issuecomment-693095138" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4600#issuecomment-693095138" title="[UX] text cleanup on new block administrative label/description · Issue #4600 · backdrop/backdrop-issues">[UX] text cleanup on new block administrative label/description · Issue #4600 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This is a follow-up to #4558 where we introduced the shiny new admin label and description setting for all blocks :) Current text is as follows: Fieldset title: Admin label Fieldset description: La...</div></div></div>
+
+
+
+<a name="210209392"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210209392" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210209392">(Sep 16 2020 at 00:28)</a>:</h4>
+<p>The 1.16.3 release tag is cut. <span class="user-mention" data-user-id="263951">@jenlampton</span> could you mark the tasks in <a href="https://github.com/backdrop/backdrop-issues/issues/4595">https://github.com/backdrop/backdrop-issues/issues/4595</a> ? Do we have release notes for 1.16.3? There are <strong>53</strong> issues in that release!</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4595" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4595" title="Backdrop 1.16.3 Release checklist · Issue #4595 · backdrop/backdrop-issues">Backdrop 1.16.3 Release checklist · Issue #4595 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Release scheduled for September 15th, 2020 10am - 4pm PT Pre-release tasks Merge commits @quicksketch @serundeputy @herbdool @BWPanda Create the next bugfix milestone @jenlampton Move all unfinishe...</div></div></div>
+
+
+
+<a name="210209502"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210209502" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210209502">(Sep 16 2020 at 00:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@quicksketch</span> do you know if update.php needs to be run for 1.16.3?</p>
+
+
+
+<a name="210209770"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210209770" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210209770">(Sep 16 2020 at 00:34)</a>:</h4>
+<p>Let me double-check. It doesn't look like it at first glance.</p>
+
+
+
+<a name="210209800"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210209800" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210209800">(Sep 16 2020 at 00:34)</a>:</h4>
+<p>ok, let me update to it and confirm :)</p>
+
+
+
+<a name="210209947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210209947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210209947">(Sep 16 2020 at 00:37)</a>:</h4>
+<p>Hm, yes it does require update.php. And unfortunately, it appears that the front page is broken until you run it.</p>
+
+
+
+<a name="210209967"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210209967" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210209967">(Sep 16 2020 at 00:37)</a>:</h4>
+<p>Ah, or at least until caches are cleared. Seems related to the Views localization change.</p>
+
+
+
+<a name="210210067"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210067" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210067">(Sep 16 2020 at 00:39)</a>:</h4>
+<p>hm...</p>
+
+
+
+<a name="210210080"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210080" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210080">(Sep 16 2020 at 00:39)</a>:</h4>
+<p><a href="/user_uploads/18319/gNBggRk4Qw4oygE-T5zMHb3q/Screen-Shot-2020-09-15-at-5.39.10-PM.png">Screen-Shot-2020-09-15-at-5.39.10-PM.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/gNBggRk4Qw4oygE-T5zMHb3q/Screen-Shot-2020-09-15-at-5.39.10-PM.png" title="Screen-Shot-2020-09-15-at-5.39.10-PM.png"><img src="/user_uploads/18319/gNBggRk4Qw4oygE-T5zMHb3q/Screen-Shot-2020-09-15-at-5.39.10-PM.png"></a></div>
+
+
+
+<a name="210210098"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210098" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210098">(Sep 16 2020 at 00:39)</a>:</h4>
+<p>Yep, same. Two DB updates required.</p>
+
+
+
+<a name="210210172"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210172" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210172">(Sep 16 2020 at 00:40)</a>:</h4>
+<p>You also get <code>Error: Call to a member function init() on null in view-&gt;init_localization() (line 2009 of /app/core/modules/views/includes/view.inc).</code> on the homepage, since it's a view.</p>
+
+
+
+<a name="210210621"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210621" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210621">(Sep 16 2020 at 00:48)</a>:</h4>
+<p>Okay... on to 1.17.0...</p>
+
+
+
+<a name="210210632"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210632" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210632">(Sep 16 2020 at 00:48)</a>:</h4>
+<p>I'm a bit wary about leaving <a href="https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358">https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358</a> unfixed. Seems a person may want to test this new feature on their default layout and delete the test node and find their site broken, with no indication as to the cause. I'm still at work, can someone at least do a quick PR with:</p>
+<div class="codehilite"><pre><span></span><code>    // Do not render if the entity is not found on this layout.
+    if (empty($entity)) {
+      return NULL;
+    }
+</code></pre></div>
+
+
+<p>in <code>FieldBlock::getContent()</code>?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358" title="Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues">Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug 1.17 brings an exciting new feature: custom layout contexts. It&#39;s however not sufficiently checking for the existence of the entity needed for the context later on. The c...</div></div></div>
+
+
+
+<a name="210210642"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210642" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210642">(Sep 16 2020 at 00:48)</a>:</h4>
+<p>That would be good enough for preventing the fatal</p>
+
+
+
+<a name="210210752"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210752" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210752">(Sep 16 2020 at 00:51)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@quicksketch</span> can you look at <a href="https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358">https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358</a> ?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4619#issuecomment-692998358" title="Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues">Error: Call to a member function bundle() on boolean if entity required by custom layout context got deleted · Issue #4619 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug 1.17 brings an exciting new feature: custom layout contexts. It&#39;s however not sufficiently checking for the existence of the entity needed for the context later on. The c...</div></div></div>
+
+
+
+<a name="210210855"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210855" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210855">(Sep 16 2020 at 00:53)</a>:</h4>
+<p>I will write a quick PR baed on <span class="user-mention" data-user-id="256757">@docwilmot</span>'s suggestion.</p>
+
+
+
+<a name="210210869"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210869" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210869">(Sep 16 2020 at 00:53)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> we will have a release in 2 weeks, and can fix this before the Press about 1.17, but agree it would be nice if we could fix it</p>
+
+
+
+<a name="210210998"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210210998" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210210998">(Sep 16 2020 at 00:55)</a>:</h4>
+<p>Sorry I may have gotten to it first. Here's a bare-minimum PR <span class="user-mention" data-user-id="256757">@docwilmot</span> <a href="https://github.com/backdrop/backdrop/pull/3312/files">https://github.com/backdrop/backdrop/pull/3312/files</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/pull/3312/files" style="background-image: url(https://avatars1.githubusercontent.com/u/100206?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/pull/3312/files" title="Issue #4619: Avoid fatal error if layout's context entity has been deleted. by quicksketch · Pull Request #3312 · backdrop/backdrop">Issue #4619: Avoid fatal error if layout's context entity has been deleted. by quicksketch · Pull Request #3312 · backdrop/backdrop</a></div><div class="message_embed_description">A temporary fix for backdrop/backdrop-issues#4619.</div></div></div>
+
+
+
+<a name="210214031"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210214031" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210214031">(Sep 16 2020 at 01:54)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop/releases/tag/1.17.0">https://github.com/backdrop/backdrop/releases/tag/1.17.0</a> is out <span aria-label="tada" class="emoji emoji-1f389" role="img" title="tada">:tada:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/releases/tag/1.17.0" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/releases/tag/1.17.0" title="Release 1.17.0 · backdrop/backdrop">Release 1.17.0 · backdrop/backdrop</a></div><div class="message_embed_description">The Backdrop community is proud to release version 1.17.0 of Backdrop CMS, following our 4-month release cycle.
+Notes for updating:
+
+It will be necessary to run the update script (located at /updat...</div></div></div>
+
+
+
+<a name="210214235"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210214235" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210214235">(Sep 16 2020 at 01:58)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> Looks like you are working on the blog post. Thanks. </p>
+<p>I'm still pretty focused on Backdrop LIVE. I don't want to loose my momentum with only two days to go.</p>
+
+
+
+<a name="210214852"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210214852" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210214852">(Sep 16 2020 at 02:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> I think that's great! I'll keep writing this up but may have you proofread for typos before I publish?</p>
+
+
+
+<a name="210215117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210215117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210215117">(Sep 16 2020 at 02:15)</a>:</h4>
+<p>ok, ready for proofreading: <a href="https://backdropcms.org/news/backdrop-cms-117-released">https://backdropcms.org/news/backdrop-cms-117-released</a> :)</p>
+
+
+
+<a name="210215222"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210215222" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210215222">(Sep 16 2020 at 02:17)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> I think the blog post looks great. I would ask for a clearer description of Custom Contexts, but that would just be mean. ;-)</p>
+
+
+
+<a name="210215228"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210215228" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210215228">(Sep 16 2020 at 02:17)</a>:</h4>
+<p>I think it's good to go.</p>
+
+
+
+<a name="210215452"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210215452" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210215452">(Sep 16 2020 at 02:22)</a>:</h4>
+<p>Published! <a href="https://backdropcms.org/news/backdrop-cms-117-released">https://backdropcms.org/news/backdrop-cms-117-released</a></p>
+
+
+
+<a name="210243299"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210243299" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Tuhin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210243299">(Sep 16 2020 at 10:22)</a>:</h4>
+<p>I cannot test backdrop because MySQL 8 not supported.</p>
+
+
+
+<a name="210243955"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210243955" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210243955">(Sep 16 2020 at 10:30)</a>:</h4>
+<blockquote>
+<p>I cannot test backdrop because MySQL 8 not supported.</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="274685">@Tuhin</span> You may be able to help with testing <a href="https://github.com/backdrop/backdrop-issues/issues/4238">this issue PR</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4238" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4238" title="MySQL 8 support · Issue #4238 · backdrop/backdrop-issues">MySQL 8 support · Issue #4238 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need MySQL 8 has a number of incompatibilities with previous versions, including new keywords that need to be escaped, and removing of the NO_AUTO_CREATE_USER init SQL mode. This...</div></div></div>
+
+
+
+<a name="210244304"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210244304" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Tuhin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210244304">(Sep 16 2020 at 10:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> I'm aware of this issue</p>
+
+
+
+<a name="210299407"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210299407" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210299407">(Sep 16 2020 at 18:10)</a>:</h4>
+<p>Sorry I wasn't around as much this week for the release guys <span aria-label="sweat" class="emoji emoji-1f613" role="img" title="sweat">:sweat:</span> ...ISP issues at the apartment have caused me to lag behind at work-related tasks, and I was also trying to reach out to the Greek Drupal community re the Backdrop Live event (which I finally got around to just a couple of hrs ago).</p>
+
+
+
+<a name="210348094"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/210348094" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#210348094">(Sep 17 2020 at 04:53)</a>:</h4>
+<p>I've just updated our <a href="https://backdropcms.org/roadmap">https://backdropcms.org/roadmap</a> and <a href="https://backdropcms.org/user-guide/project-history">https://backdropcms.org/user-guide/project-history</a> pages <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...we should remember to be updating the "Features planned for version x.y.z" section as we are adding/removing milestones from issues in our queue.</p>
+
+
+
+<a name="211547433"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.17.0%20Release/near/211547433" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E17.2E0.20Release.html#211547433">(Sep 28 2020 at 20:40)</a>:</h4>
+<p>Just generated the language source file for Backdrop 1.17 and released it on <a href="https://localize.backdropcms.org">https://localize.backdropcms.org</a>.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

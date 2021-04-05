@@ -1,0 +1,76 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html">configure allowed extensions when uploading a file</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="199906232"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/configure%20allowed%20extensions%20when%20uploading%20a%20file/near/199906232" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html#199906232">(Jun 05 2020 at 17:03)</a>:</h4>
+<p>Is it my idea, or is it currently impossible to configure which extensions are allowed in <code>file/add</code>?</p>
+
+
+
+<a name="199906382"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/configure%20allowed%20extensions%20when%20uploading%20a%20file/near/199906382" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html#199906382">(Jun 05 2020 at 17:04)</a>:</h4>
+<p>...I've looked under <code>admin/structure/file-types/settings</code> and <code>admin/config/media/file-system</code>, but can't see anything that allows that.</p>
+
+
+
+<a name="199906754"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/configure%20allowed%20extensions%20when%20uploading%20a%20file/near/199906754" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html#199906754">(Jun 05 2020 at 17:08)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> looks like it is per field /admin/structure/types/manage/page/fields/field_j?destinations[0]=admin/structure/types/manage/page/fields</p>
+
+
+
+<a name="199906805"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/configure%20allowed%20extensions%20when%20uploading%20a%20file/near/199906805" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html#199906805">(Jun 05 2020 at 17:08)</a>:</h4>
+<p>add a file field to a content type and then in the field config you can set the allowed file extensions</p>
+
+
+
+<a name="199907494"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/configure%20allowed%20extensions%20when%20uploading%20a%20file/near/199907494" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html#199907494">(Jun 05 2020 at 17:15)</a>:</h4>
+<p>In D7, the settings are here: admin/config/media/file-settings In Backdrop, that page does not exist.<br>
+Also, the extensions for images are hard coded:</p>
+<ul>
+<li><a href="https://github.com/backdrop/backdrop-issues/issues/3136">https://github.com/backdrop/backdrop-issues/issues/3136</a></li>
+<li><a href="https://github.com/backdrop/backdrop-issues/issues/3851">https://github.com/backdrop/backdrop-issues/issues/3851</a></li>
+</ul>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3136" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3136" title="[D8] Allow image fields to use any extensions the current image toolkit supports · Issue #3136 · backdrop/backdrop-issues">[D8] Allow image fields to use any extensions the current image toolkit supports · Issue #3136 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Things to consider: Image uploads need to be allowed Allow it by default? No image styles for SVGs (only attribute mods)? Add support for image styles? (later?) This was addressed in Drupal 8.5.x: ...</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3851" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3851" title="Throw an error if an unsupported file extensions is added into the 'Allowed file extensions' box · Issue #3851 · backdrop/backdrop-issues">Throw an error if an unsupported file extensions is added into the 'Allowed file extensions' box · Issue #3851 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug I wanted to allow .svg uploads on backdropcms.org. For logos, I didn&#39;t need to use an image style, so I thought this would be okay. I as wrong. Steps To Reproduce I added...</div></div></div>
+
+
+
+<a name="199910504"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/configure%20allowed%20extensions%20when%20uploading%20a%20file/near/199910504" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html#199910504">(Jun 05 2020 at 17:42)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> ...I know that you can specify extensions/types per file field in content type + also per file type defined under <code>admin/structure/file-types</code> ...but I need to customize the extensions allowed to be uploaded via the "Add a file" link in "Manage files" ...allowing .zip (or other compressed file types) for example seems like a common use case.</p>
+
+
+
+<a name="199911369"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/configure%20allowed%20extensions%20when%20uploading%20a%20file/near/199911369" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html#199911369">(Jun 05 2020 at 17:50)</a>:</h4>
+<p>...seems that we need to expose the <code>file.settings.default_allowed_extensions</code> setting in the admin UI: <a href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/file/file.pages.inc#L1077">https://github.com/backdrop/backdrop/blob/1.x/core/modules/file/file.pages.inc#L1077</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/file/file.pages.inc#L1077" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/file/file.pages.inc#L1077" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="199912858"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/configure%20allowed%20extensions%20when%20uploading%20a%20file/near/199912858" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/configure.20allowed.20extensions.20when.20uploading.20a.20file.html#199912858">(Jun 05 2020 at 18:02)</a>:</h4>
+<p>...I've filed <a href="https://github.com/backdrop/backdrop-issues/issues/4435">https://github.com/backdrop/backdrop-issues/issues/4435</a> for it <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4435" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4435" title="Allow configuring the allowed extensions for the &quot;Upload a new file&quot; form · Issue #4435 · backdrop/backdrop-issues">Allow configuring the allowed extensions for the "Upload a new file" form · Issue #4435 · backdrop/backdrop-issues</a></div><div class="message_embed_description">When you click the &quot;+ Add new file&quot; link in the &quot;Manage files&quot; page (admin/content/files), you are taken to this page: The list of allowed extensions in this form is pulled from...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

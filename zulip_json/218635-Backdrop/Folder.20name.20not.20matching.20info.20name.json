@@ -1,0 +1,206 @@
+[
+    {
+        "content": "<p>Trying to resolve the long standing issue with node clone module. Should we require that every module's directory name match the info name? It's not clear from the documentation that it's required. For the most part it works even if they don't match except when trying to install from browser</p>",
+        "id": 199102604,
+        "sender_full_name": "Herb",
+        "timestamp": 1590712806
+    },
+    {
+        "content": "<p>We can either fix node clone or fix core</p>",
+        "id": 199102625,
+        "sender_full_name": "Herb",
+        "timestamp": 1590712848
+    },
+    {
+        "content": "<p>I'd vote for a fix in node clone. The naming thing (<code>clone.info</code>...) has baffled me several times in Drupal.</p>",
+        "id": 199123787,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590738989
+    },
+    {
+        "content": "<p>I agree. I think we should also fix the documentation to make it even clearer that the file names must match the directory</p>",
+        "id": 199141958,
+        "sender_full_name": "Herb",
+        "timestamp": 1590752158
+    },
+    {
+        "content": "<p>Question is how to fix node_clone. Could do it gradually or a breaking change</p>",
+        "id": 199142043,
+        "sender_full_name": "Herb",
+        "timestamp": 1590752200
+    },
+    {
+        "content": "<p>Hm... gradually? Isn't that like pulling a plaster off slowly? How about 1.x-2.x (major version change)? Or would you recommend to stay in sync with the D version numbers?</p>",
+        "id": 199146283,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590755033
+    },
+    {
+        "content": "<p>Related, I would love it if we had something more generic like <a href=\"https://www.drupal.org/project/entity_clone\">https://www.drupal.org/project/entity_clone</a> and <a href=\"https://www.drupal.org/project/entity_templates\">https://www.drupal.org/project/entity_templates</a> either in core or contrib (note: these are D8 modules).</p>",
+        "id": 199149728,
+        "sender_full_name": "klonos",
+        "timestamp": 1590756937
+    },
+    {
+        "content": "<p>...or <a href=\"https://www.drupal.org/project/replicate\">https://www.drupal.org/project/replicate</a> as mentioned on a forum post</p>",
+        "id": 199150148,
+        "sender_full_name": "klonos",
+        "timestamp": 1590757153
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/replicate\">https://github.com/backdrop-contrib/replicate</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/replicate\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/replicate\" title=\"backdrop-contrib/replicate\">backdrop-contrib/replicate</a></div><div class=\"message_embed_description\">Provides an API to duplicate / clone an entity. Contribute to backdrop-contrib/replicate development by creating an account on GitHub.</div></div></div>",
+        "id": 199151787,
+        "sender_full_name": "Laryn",
+        "timestamp": 1590757981
+    },
+    {
+        "content": "<p>I ported that for a specific purpose (so I could port/use replicate paragraphs for translations) so it isn't fully tested, and have not ported the replicate gui module yet...</p>",
+        "id": 199151980,
+        "sender_full_name": "Laryn",
+        "timestamp": 1590758090
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++</p>",
+        "id": 199152557,
+        "sender_full_name": "klonos",
+        "timestamp": 1590758372
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> it seems like replicate could replace node_clone if a few more modules were ported. I've never heard of it before.</p>",
+        "id": 199157297,
+        "sender_full_name": "Herb",
+        "timestamp": 1590760654
+    },
+    {
+        "content": "<p>Though people are still using node_clone on Backdrop so still might be worth fixing it</p>",
+        "id": 199157573,
+        "sender_full_name": "Herb",
+        "timestamp": 1590760787
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> major version change might be the way to go. And deprecate 1.x. It's mostly just to deal with the hooks</p>",
+        "id": 199157928,
+        "sender_full_name": "Herb",
+        "timestamp": 1590760956
+    },
+    {
+        "content": "<p>Or could create an empty repo at /clone to help prevent name space clashes for hooks, etc</p>",
+        "id": 199158054,
+        "sender_full_name": "Herb",
+        "timestamp": 1590761035
+    },
+    {
+        "content": "<p>The nice thing about node_clone is its simplicity. It's not very flexible, but it does one job really well.</p>",
+        "id": 199159316,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590761555
+    },
+    {
+        "content": "<p>I'll put <code>replicate_ui</code> on my list to port at some point soon. I've never used it on Drupal but discovered it when trying to figure out how to get translations working with Paragraphs.</p>",
+        "id": 199177361,
+        "sender_full_name": "Laryn",
+        "timestamp": 1590769327
+    },
+    {
+        "content": "<p>Agreed that it's still worth fixing <code>node_clone</code>.</p>",
+        "id": 199177396,
+        "sender_full_name": "Laryn",
+        "timestamp": 1590769341
+    },
+    {
+        "content": "<p>A bit of a rabbit hole. I was looking to see if there was any discussion on d7 regarding node_clone/clone issue. Came up with <a href=\"https://www.drupal.org/project/node_clone/issues/1809898\">https://www.drupal.org/project/node_clone/issues/1809898</a> which referenced <a href=\"https://www.drupal.org/project/google_analytics/issues/427770\">https://www.drupal.org/project/google_analytics/issues/427770</a>. For the latter the d8 version got files renamed.</p>",
+        "id": 199213591,
+        "sender_full_name": "Herb",
+        "timestamp": 1590787192
+    },
+    {
+        "content": "<p>I'd switch everything to <code>node_clone_x()</code> and do an update function and a compatibility functions for the hooks. There's no database so this should be doable. Dont know the effect on the <code>System</code> table entries when you change the info file. But I think its worth just getting this done.</p>",
+        "id": 199215374,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1590788249
+    },
+    {
+        "content": "<p>Its too confusing</p>",
+        "id": 199215401,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1590788272
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> I'm inclined that way too. I could test the system table with changing an info file easily enough. What do you mean by \"compatibility functions for the hooks\"?</p>",
+        "id": 199236588,
+        "sender_full_name": "Herb",
+        "timestamp": 1590810751
+    },
+    {
+        "content": "<p>Theres an API file, I'm assuming it provides hooks? Havent checked code. So I mean if another module is calling <code>my_module_clone_node_alter()</code> you might need to \"redirect\" that to <code>my_module_node_clone_node_alter()</code> once you've changed.</p>",
+        "id": 199237105,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1590811607
+    },
+    {
+        "content": "<p>Ah, I see what you mean. Yes, it has hooks. Seems to me that if we're going to redirect then we should also reserve <a href=\"http://github.com/backdrop-contrib/clone\">github.com/backdrop-contrib/clone</a> so that someone doesn't creating a module with potential hooks that clash with the old ones. Rare but good housekeeping</p>",
+        "id": 199237380,
+        "sender_full_name": "Herb",
+        "timestamp": 1590812058
+    },
+    {
+        "content": "<p>I've reserved <a href=\"http://github.com/backdrop-contrib/clone\">http://github.com/backdrop-contrib/clone</a> and I've added an empty node_clone.module. this is addition to a hidden <a href=\"http://node_clone.info\">node_clone.info</a>. I don't see the error anymore.</p>",
+        "id": 199301042,
+        "sender_full_name": "Herb",
+        "timestamp": 1590922230
+    },
+    {
+        "content": "<p>I'm having trouble seeing how we can rename everything. It's a bit of pulling oneself up by ones own bootstraps. My 1 year old nephew tried it yesterday. Didn't work</p>",
+        "id": 199301092,
+        "sender_full_name": "Herb",
+        "timestamp": 1590922327
+    },
+    {
+        "content": "<p>We'd have to leave the <a href=\"http://clone.info\">clone.info</a>, clone.module and clone.install behind so that we can update the system table to use the new name (I think)</p>",
+        "id": 199301108,
+        "sender_full_name": "Herb",
+        "timestamp": 1590922428
+    },
+    {
+        "content": "<p>Just copy everything from the <code>node_clone</code> repo to the new <code>clone</code> repo, (except the unnecessary <code>node_clone</code> stuff), then tell people to manually move over.</p>",
+        "id": 199317518,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590952600
+    },
+    {
+        "content": "<p>So you're suggesting we go back to using clone and not node_clone? <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span></p>",
+        "id": 199326694,
+        "sender_full_name": "Herb",
+        "timestamp": 1590969494
+    },
+    {
+        "content": "<p>I just read through the existing repo and it seems to all be named 'clone'... 'Node clone' seems to just be for the URL. Basically I'm suggesting that the new repo/URL should be named after whatever's in the System table. I think that'll be less code changes...</p>",
+        "id": 199327024,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590970106
+    },
+    {
+        "content": "<p>That's true but I think we were all talking about moving it the other way. That was the approach suggested in the <a href=\"http://d.org\">d.org</a> thread too. But maybe you're right.</p>",
+        "id": 199329894,
+        "sender_full_name": "Herb",
+        "timestamp": 1590975466
+    },
+    {
+        "content": "<p>Though at the moment it seems to be working with the 'hack'</p>",
+        "id": 199329936,
+        "sender_full_name": "Herb",
+        "timestamp": 1590975488
+    },
+    {
+        "content": "<p>Feel free to ignore me then <span aria-label=\"blush\" class=\"emoji emoji-1f60a\" role=\"img\" title=\"blush\">:blush:</span></p>",
+        "id": 199330180,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590975980
+    },
+    {
+        "content": "<p>Heres a crazy thought: dump all the code in <code>clone.module</code> into an <code>*.inc</code> file. Then on both modules just have an <code>include_once</code> as the only code. Then remove the dependency. Then add a <code>hook_requirements()</code> to both that declines to install the other, with a message. So users who already have <code>clone</code> in System would not need to do anything new, but new users could also install <code>node_clone</code> and have same functionality. Sounds like madness, though.</p>",
+        "id": 199405405,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591036150
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p>Hi.  For modules, you can create default settings under config/*.json.  Can you do this with themes?  Or is there any other way to have default configurations?  I have not been able to find mention of it in the documentation.</p>",
+        "id": 225259936,
+        "sender_full_name": "Vincent Stemen",
+        "timestamp": 1612498851
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"304759\">@Vincent Stemen</span> you can put some defaults in the .info but I'm not sure if you can have a default config file. You could test it out</p>",
+        "id": 225260510,
+        "sender_full_name": "Herb",
+        "timestamp": 1612499572
+    },
+    {
+        "content": "<p>@Herb What I was hoping to do is include a default hero background image in the files/ directory and have the hero block enabled by default on the front page.</p>",
+        "id": 225260762,
+        "sender_full_name": "Vincent Stemen",
+        "timestamp": 1612499882
+    },
+    {
+        "content": "<p>But I don't know what I would put in the .info file to accomplish that.  I assume it would require .json files if it's possible.</p>",
+        "id": 225260854,
+        "sender_full_name": "Vincent Stemen",
+        "timestamp": 1612500001
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"304759\">@Vincent Stemen</span> this is the issue you're looking for: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4829\">https://github.com/backdrop/backdrop-issues/issues/4829</a> ...feel free to chime in there <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4829\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4829\" title=\"Allow themes to be installed, uninstalled, and updated (treat them like modules) · Issue #4829 · backdrop/backdrop-issues\">Allow themes to be installed, uninstalled, and updated (treat them like modules) · Issue #4829 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This issue has come up in several places before, but most recently in #4814 when @BWPanda noticed the strange processes required for properly handling theme settings, or more specifically, how to s...</div></div></div>",
+        "id": 225273905,
+        "sender_full_name": "klonos",
+        "timestamp": 1612515427
+    },
+    {
+        "content": "<p>...that ^^ would effectively allow for install/uninstall hooks to be fired when enabling/disabling themes (same way as modules) ...which would also allow to ship themes with default config.</p>",
+        "id": 225274020,
+        "sender_full_name": "klonos",
+        "timestamp": 1612515513
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"304759\">@Vincent Stemen</span> doesn't sound possible and I'm not sure it's a good idea to allow themes to control other configuration such as layouts. That's what modules are for. You could have a module that overrides the home page</p>",
+        "id": 225293357,
+        "sender_full_name": "Herb",
+        "timestamp": 1612528876
+    },
+    {
+        "content": "<p>Sounds like you are interested in the \"recipe\" concept</p>",
+        "id": 225294701,
+        "sender_full_name": "Laryn",
+        "timestamp": 1612529708
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/3763\">https://github.com/backdrop/backdrop-issues/issues/3763</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3763\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3763\" title=\"Add 'recipe' project type to Backdrop · Issue #3763 · backdrop/backdrop-issues\">Add 'recipe' project type to Backdrop · Issue #3763 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is a spin-off of backdrop-ops/backdropcms.org#46 specifically for proposing a new project type for Backdrop: recipes. With Backdrop supporting modules for functionality, themes for styling, la...</div></div></div>",
+        "id": 225295585,
+        "sender_full_name": "Laryn",
+        "timestamp": 1612530210
+    },
+    {
+        "content": "<p>Or <a href=\"https://github.com/backdrop/backdrop-issues/wiki/New-%22Recipe%22-Project-Type\">https://github.com/backdrop/backdrop-issues/wiki/New-%22Recipe%22-Project-Type</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/wiki/New-%22Recipe%22-Project-Type\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/wiki/New-%22Recipe%22-Project-Type\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 225295641,
+        "sender_full_name": "Laryn",
+        "timestamp": 1612530242
+    },
+    {
+        "content": "<p>Were you thinking that for example to have a contrib theme that when enabled, installs a particular layout, with a particular block,  with a particular image?</p>",
+        "id": 225320024,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1612541950
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  yes.  Exactly.</p>",
+        "id": 225320811,
+        "sender_full_name": "Vincent Stemen",
+        "timestamp": 1612542293
+    },
+    {
+        "content": "<p>Thanks for the responses everybody.</p>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  Yes, issue 4829 sounds like the closest to what I was looking for.  What I envisioned was something like being able to put json configurations in the theme's config/ directory and have it automatically installed in the config_... directory when enabled like with modules.  I am doing some work on the \"Corporate KISS\" theme that I contributed.  It has no settings, but I was hoping to have a way to enable the hero block, with an included default background, in the \"Top\" region of the front page upon first activation so that, out of the box, it would look more like the thumbnail preview.</p>\n<p>My goal is to keep the theme clean of any code other than CSS, completely void of any php or template code, so that it relies fully on Backdrop's core layout system.</p>",
+        "id": 225375256,
+        "sender_full_name": "Vincent Stemen",
+        "timestamp": 1612570678
+    },
+    {
+        "content": "<p>Now that I think about it, I can see that this might be a problem though.  If a user already has a hero block enabled with different parameters when they enable the theme, you wouldn't want it to change any of their existing settings.</p>\n<p>Perhaps, what we need is a modification to the hero block configuration dialog to allow you to select an existing file, like with the content editing screen, and give it access to the image/ directory of the theme.  That way I can include a background image with a contributed theme and make it easy for the user to enable it.</p>\n<p>Right now it only has the ability to browse the local file system and upload a new image.  I remember similar discussions prior to the \"SELECT EXISTING FILE\" feature being added to the content editing screen.  Really, anywhere that prompts you to select a file, should have the ability to select from existing files that have already been uploaded or, in this case included with a theme.</p>",
+        "id": 225376705,
+        "sender_full_name": "Vincent Stemen",
+        "timestamp": 1612572063
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I'm porting the Menu Pager module which used to save block-specific settings to variables that had the block's <code>$delta</code> appended to the end. E.g. <code>variable_get('menu_pager_restrict_to_parent_' . $delta)</code>. The documentation for <code>hook_block_save()</code> says \"Most settings will automatically be saved if using the Layout module to position blocks...\", so that's good, but how do I convert the variables to block settings?</p>",
+        "id": 232536018,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617165997
+    },
+    {
+        "content": "<p>I'm used to converting variables to config, but this is different...</p>",
+        "id": 232536052,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617166040
+    },
+    {
+        "content": "<p>Hm. Can you construct something from (block-)machine_name + region_name? In theory that should be unique. Sure, that's longer than the delta, but in your module's config you don't need the module name prefix anymore. Create something with the bock's uuid might also work (and is also longer).<br>\nDo you have a custom block class (php)?</p>",
+        "id": 232543366,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617172806
+    },
+    {
+        "content": "<p>Sorry, I don't think I explained properly... I don't need/want to save settings to my module's config. Block settings are already saved to the block/layout config automatically. So everything works fine for new sites, but it's D7 upgrades that I'm trying to address - taking a block-specific variable and saving it to the appropriate block/layout config.</p>",
+        "id": 232545973,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617174814
+    },
+    {
+        "content": "<p>I think, now I get it.<br>\nWhen running the update... do the blocks get placed in a layout? The information is handled by the layout the blocks are in - did I understand that correctly? So if the blocks aren't placed, no info gets saved. Or do they get placed, but you don't know which setting to apply?</p>",
+        "id": 232546661,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1617175242
+    },
+    {
+        "content": "<p>I haven't tried an upgrade, I'm just porting the code.</p>",
+        "id": 232547018,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617175447
+    },
+    {
+        "content": "<p>I opened an issue for this: <a href=\"https://github.com/backdrop-contrib/menu_pager/issues/1\">https://github.com/backdrop-contrib/menu_pager/issues/1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/menu_pager/issues/1\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/menu_pager/issues/1\" title=\"Add D7 upgrade path · Issue #1 · backdrop-contrib/menu_pager\">Add D7 upgrade path · Issue #1 · backdrop-contrib/menu_pager</a></div><div class=\"message_embed_description\">The D7 version used block-specific variables (e.g. variable_get(&#39;menu_pager_restrict_to_parent_&#39; . $delta, FALSE)). In Backdrop, block settings are saved automatically to each block&#39;s l...</div></div></div>",
+        "id": 232696642,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617245914
+    }
+]

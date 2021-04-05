@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>Hallo,<br>\nich hoffe, unter uns gibt es jemanden, der mir helfen kann. Ich bin leider überhaupt nicht tief genug drin, um ein eigenes Modul zu entwickeln, aber ich gelobe Besserung. Ich betreibe mehrere gemeinnützige Drupal 7-Seiten (bspw. <a href=\"http://www.halle-im-bild.de\">www.halle-im-bild.de</a>), die ich gern zeitnah auf Backdrop umstellen möchte. Allerdings ist auch eine Erweiterung geplant.</p>\n<p>Folgendes Problem: Es sollen interaktive Panorama-Touren (verlinkte Szenen) integriert werden können. Diese bestehen in ihrer Ordnerstruktur bei den gängigen Open Source-Varianten Pannellum und Marzipano im jeweiligen Root aus einer html- und js-Datei, die einzelnen Kacheln sind in Unterordner gepackt. Auch krPano und Pano2VR (kostenpflichtig) funktionieren nach einem ähnlichen Schema, grundsätzlich unterscheidet sich nur die Namensgebung in der Syntax. Diese werden also als zip-Datei gepackt und sollen dann auf der Webseite integrierbar sein.</p>\n<p>Ich bin also auf der Suche nach einem Modul, was Folgendes abbilden kann:</p>\n<ol>\n<li>\n<p>Nutzbar als Datei-Feld, FileField-Paths-Support<br>\n1.1. Auswahl, welche Panoramatechnologie verwendet werden soll (s.o.) //evt. Abfrage erforderlicher Archivinhalte wie im Core-Update-Modul?</p>\n</li>\n<li>\n<p>Upload-Widget für Archive (.zip)<br>\n2.1. Entpackt automatisch (Token-gestützt) //evt. nutzbar aus Pack &amp; Upload<br>\n2.2. Löscht das Zipfile<br>\n2.3. Bindet die Ziel-HTML-Datei aus dem Subfolder als Inhalt des Feldes ein</p>\n</li>\n<li>\n<p>Ausgabe der HTML-Datei in einem IFrame, bspw. per Views stylebar</p>\n</li>\n</ol>\n<p>Ich hoffe, das ist einigermaßen verständlich. Kann mir jemand helfen?</p>",
+        "id": 221173346,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1609280916
+    },
+    {
+        "content": "<p>Hallo Sven, ich habe leider außer HTML und CSS kaum Coding-Skills und kenne mich auch mit Panorama-Tools nicht aus. Schlechte Voraussetzungen also. Drupal-Module für die Tools gibt es vermutlich nicht, oder? Ich glaube, ich muss mir Pannellum usw erstmal ansehen, versuche ich morgen mal.</p>",
+        "id": 221174147,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1609281818
+    },
+    {
+        "content": "<p>Nein, solch ein Modul gibt es noch nicht. Hatte mir für Drupal 8 mal ein kleines Helfer-Modul für FileFieldPaths bauen lassen, aber das ist auf Dauer jetzt auch nicht wirklich geeignet. Daher meine Idee für das \"Komplettpaket\". Alternativ könnte man es sicher auch so aufbauen:</p>\n<ol>\n<li>Submodul für File, welches das Entpacken übernimmt und auf die entsprechende HTML-Datei verweist</li>\n<li>Integration von IMCE in das IFrame-Modul (bspw. per Submodul), um hiermit die entsprechende html-Datei auszuwählen, die vorher per Pack &amp; Upload hochgeladen wurde<br>\n(Beides könnte so konfiguriert werden, dass es bspw. auf /files/panoramen/uid/ verweist. Das wäre sicher und auch nur ein Klick mehr).</li>\n</ol>",
+        "id": 221177826,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1609286075
+    },
+    {
+        "content": "<p>Hallo <span class=\"user-mention\" data-user-id=\"367994\">@Sven Götze</span> - gerade entdeckt: <a href=\"https://backdropcms.org/project/pannellum\">https://backdropcms.org/project/pannellum</a></p>",
+        "id": 221198660,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1609317818
+    },
+    {
+        "content": "<p>Hallo <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> das Modul löst keine Probleme <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> es rendert nur ein einzelnes Image in ein interaktives Panorama, kann jedoch keine Tour abbilden.</p>",
+        "id": 221204317,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1609325263
+    },
+    {
+        "content": "<p>Hm, das klingt nach einem komplexen Modul für den Einstieg. Ich bin nicht sicher, ob es nicht mehr Sinn machen würde, jemanden dafür zu bezahlen (nicht mich <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span>).</p>\n<p><span class=\"user-mention\" data-user-id=\"367994\">@Sven Götze</span> Wieviel Zeit hast du denn, bis es fertig sein muss?</p>",
+        "id": 221211118,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609333802
+    },
+    {
+        "content": "<blockquote>\n<p>das Modul (...) rendert nur ein einzelnes Image in ein interaktives Panorama, kann jedoch keine Tour abbilden</p>\n</blockquote>\n<p>Okay, aber wäre <a href=\"https://backdropcms.org/project/pannellum\">https://backdropcms.org/project/pannellum</a> nicht trotzdem ein vielversprechender Ansatz? Potenziell müsste das Modul sich doch so erweitern lassen, dass auch Touren abbildbar sind. (Vgl. zum Konzept etwa das Colorbox-Modul, dort gibt es ja z.B. in den Anzeige-Einstellungen eine Option, eine Bildergalerie aus allen Bildern eines 'node' zu generieren.)</p>",
+        "id": 221211969,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1609334628
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> naja, ich dachte, ich könnte da schrittweise in die Materie eintauchen. Da es alles gemeinnützige Hobbysachen sind, ist das Geld für sowas rar...</p>",
+        "id": 221213631,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1609336282
+    },
+    {
+        "content": "<blockquote>\n<p>Da es alles gemeinnützige Hobbysachen sind, ist das Geld für sowas rar...</p>\n</blockquote>\n<p>Das kann ich natürlich nachvollziehen.</p>\n<p>Der Tipp von <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> hat übrigens was: mit dem pannellum Modul anfangen und dann weiterhangeln so gut es geht. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 221213868,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609336470
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> Pannellum habe ich bereits im Einsatz. Das Modul hat aber den falschen Ansatz für meinen Usecase: Es rendert nur eine einzelne Image-Datei. Es bringt quasi einen Display Formatter mit sich und lädt die Library.</p>\n<p>Für eine vollständige Tour werden je Image die Fotos in kleine Kacheln unterteilt und in einer Ordnerstruktur abgelegt. Es muss also ein Upload möglich sein und eine Einbindung der hrml- und js-Datei, die das zusammenführen.</p>",
+        "id": 221214587,
+        "sender_full_name": "Sven Götze",
+        "timestamp": 1609337145
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"367994\">@Sven Götze</span> Ich verstehe, dass das Pannellum-Modul zur Zeit nicht das richtige für deinen Use-Case bietet. Ich denke aber nach wie vor, dass das Modul sich prinzipiell so erweitern lassen müsste, dass alle Bilddateien eines 'node' zu einer Tour zusammengesetzt werden. Postest du mal einen Link auf den Teil der Pannellum-Doku, in dem vollständige Touren, wie du sie benötigst, erläutert werden?</p>",
+        "id": 221254935,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1609370313
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>I noticed that when I access a vanilla install of Backdrop, there are two session cookies and a google analytics cookie:<br>\n[_ga] =&gt; GA1.2.877217365.1601902998<br>\nIs this from one of the CDNs we use, or just to track Backdrop usage statistics?<br>\nThey were only set for a logged in user.<br>\nThanks for any information, I appreciate it.</p>",
+        "id": 220133600,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1608134311
+    },
+    {
+        "content": "<p>Two session cookies are normal, but for sure Backdrop core adds no google analytics cookies. Which modules do you have installed?</p>",
+        "id": 220134858,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608134926
+    },
+    {
+        "content": "<p>no contrib modules at all.<br>\nI'm perplexed. <span aria-label=\"neutral\" class=\"emoji emoji-1f610\" role=\"img\" title=\"neutral\">:neutral:</span><br>\nThank you, I appreciate the info.</p>",
+        "id": 220135360,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1608135139
+    },
+    {
+        "content": "<p>Maybe you can figure out more if you delete all cookies (flush all browser cache, too) and log in again?</p>\n<p>Another thought - do you have a custom theme? Or is that vanilla core, too?</p>",
+        "id": 220136112,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608135347
+    },
+    {
+        "content": "<p>Very odd <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> ...Backdrop is definitely not adding any GA cookies.</p>",
+        "id": 220136122,
+        "sender_full_name": "klonos",
+        "timestamp": 1608135352
+    },
+    {
+        "content": "<p>This might be a long shot, but what about the hosting environment?</p>",
+        "id": 220137425,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1608135884
+    },
+    {
+        "content": "<p>And yet another thought... Is that Backdrop site on a subdomain?</p>",
+        "id": 220138034,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608136134
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>  yes<br>\nLet me check a few things on the server and on my google analytics account and I'll update this thread</p>",
+        "id": 220138189,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1608136193
+    },
+    {
+        "content": "<p>Im using Firefox Developer edition and when I deleted the cookie in question it dissappeared everywhere it was showing up (two different domains)<br>\nThis is still perplexing, but it does not seem to be a Backdrop issue. Thanks, all.</p>",
+        "id": 220140366,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1608137204
+    }
+]

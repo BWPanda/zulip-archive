@@ -1,0 +1,206 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Compact.20Forms.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html">Compact Forms</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="197796490"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197796490" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197796490">(May 16 2020 at 13:47)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> I can't seem to get the 1.x-2.x branch to work, had to downgrade to 1.x-1.x. What's the trick? I tried using the form ID with dashes and then with underscores but it doesn't seem to take.</p>
+
+
+
+<a name="197796606"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197796606" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197796606">(May 16 2020 at 13:50)</a>:</h4>
+<p>Make sure its the actual hidden form id value, not the CSS id.</p>
+
+
+
+<a name="197803210"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197803210" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197803210">(May 16 2020 at 16:24)</a>:</h4>
+<p>Maybe I'm not understanding what that is. The form HTML comes out like this (default comment form):</p>
+<div class="codehilite"><pre><span></span><code>&lt;form id=&quot;comment-form&quot; class=&quot;comment-node-post-form comment-form user-info-from-cookie antibot&quot; action=&quot;/antibot&quot; method=&quot;post&quot; accept-charset=&quot;UTF-8&quot;&gt;
+</code></pre></div>
+
+
+<p>I've tried both <code>comment-form</code> and <code>comment_form</code> but neither seemed to work.</p>
+
+
+
+<a name="197805660"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197805660" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197805660">(May 16 2020 at 17:23)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Here's an example of a Backdrop form:<br>
+<a href="/user_uploads/18319/SLTE-L5rEBXZiOpE_6igVuOk/image.png">image.png</a> <br>
+The form ID is: <code>comment_node_post_form</code> as per the highlighted line. Note how the hidden <code>form_id</code> element value is different from the CSS ID.</p>
+<div class="message_inline_image"><a href="/user_uploads/18319/SLTE-L5rEBXZiOpE_6igVuOk/image.png" title="image.png"><img src="/user_uploads/18319/SLTE-L5rEBXZiOpE_6igVuOk/image.png"></a></div>
+
+
+
+<a name="197815970"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197815970" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197815970">(May 16 2020 at 21:27)</a>:</h4>
+<p>I've learned something new. And now that you've explained it the help text seems pretty clear when I re-read it. I was going to put some of the details in the wiki but it's turned off for that module -- is that intentional?</p>
+
+
+
+<a name="197815973"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197815973" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197815973">(May 16 2020 at 21:27)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> ++</p>
+
+
+
+<a name="197815974"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197815974" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197815974">(May 16 2020 at 21:27)</a>:</h4>
+<p>(peter)** :-) (Karma: 25)</p>
+
+
+
+<a name="197816683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197816683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197816683">(May 16 2020 at 21:45)</a>:</h4>
+<p>I think the wiki has to be turned on per project.</p>
+
+
+
+<a name="197827714"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197827714" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197827714">(May 17 2020 at 03:19)</a>:</h4>
+<p>I turn off the wiki on my projects as I've never seen a need for it. Issues or the README usually suffices.</p>
+
+
+
+<a name="197849148"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197849148" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197849148">(May 17 2020 at 13:26)</a>:</h4>
+<p>Ok. BTW, I'm really liking the 2.x version!</p>
+
+
+
+<a name="197850017"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197850017" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197850017">(May 17 2020 at 13:46)</a>:</h4>
+<p><span aria-label="thumbs up" class="emoji emoji-1f44d" role="img" title="thumbs up">:thumbs_up:</span> Glad to hear it <span aria-label="blush" class="emoji emoji-1f60a" role="img" title="blush">:blush:</span></p>
+
+
+
+<a name="197854477"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197854477" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197854477">(May 17 2020 at 15:31)</a>:</h4>
+<p>I see by the message of the last commit that support for webforms has been added. What else is different in 2.x <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> ?</p>
+
+
+
+<a name="197855018"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197855018" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197855018">(May 17 2020 at 15:44)</a>:</h4>
+<p>...btw, I've never seen cases being repeated in <code>switch</code> like in <a href="https://github.com/backdrop-contrib/compact_forms/blob/1.x-2.x/compact_forms.module#L123">https://github.com/backdrop-contrib/compact_forms/blob/1.x-2.x/compact_forms.module#L123</a> ...what sort of witchcraft is that?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/compact_forms/blob/1.x-2.x/compact_forms.module#L123" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/compact_forms/blob/1.x-2.x/compact_forms.module#L123" title="backdrop-contrib/compact_forms">backdrop-contrib/compact_forms</a></div><div class="message_embed_description">Presents text fields for selected forms in a more compact fashion using jQuery. - backdrop-contrib/compact_forms</div></div></div>
+
+
+
+<a name="197858966"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197858966" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197858966">(May 17 2020 at 17:13)</a>:</h4>
+<blockquote>
+<p>Compact Forms has been re-written to be simpler and to use form #placeholder properties instead of overlaying the label on the field.</p>
+</blockquote>
+
+
+
+<a name="197859032"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197859032" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197859032">(May 17 2020 at 17:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> see the description on the 2.0.0 release for more detail <span aria-label="wait one second" class="emoji emoji-261d" role="img" title="wait one second">:wait_one_second:</span>️</p>
+
+
+
+<a name="197859036"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197859036" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197859036">(May 17 2020 at 17:14)</a>:</h4>
+<p>Thanks. Just did <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="197859203"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197859203" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197859203">(May 17 2020 at 17:18)</a>:</h4>
+<p>Yeah, 1.x basically moved the field label on top of the field and then used JS to show/hide it. I found I always had to add styling to make it look half decent. 2.x uses placeholder text instead, so no JS needed and forms look nice OOTB.</p>
+
+
+
+<a name="197859340"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197859340" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197859340">(May 17 2020 at 17:20)</a>:</h4>
+<p>As for <code>switch</code> statements, that is how they work, and is why you normally need to add a <code>break;</code> at the end of each (to prevent them following-through to each other). It's also why it works when you do this:</p>
+<div class="codehilite"><pre><span></span><code><span class="x">switch (condition) {</span>
+<span class="x">  case 1:</span>
+<span class="x">  case 2:</span>
+<span class="x">  case 3:</span>
+<span class="x">    // Do something for cases 1, 2 &amp; 3.</span>
+<span class="x">  break;</span>
+<span class="x">}</span>
+</code></pre></div>
+
+
+
+<a name="197859362"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197859362" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197859362">(May 17 2020 at 17:21)</a>:</h4>
+<p>This looks like a good explanation if you're interested: <a href="http://phpswitch.com/">http://phpswitch.com/</a></p>
+
+
+
+<a name="197859424"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197859424" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197859424">(May 17 2020 at 17:22)</a>:</h4>
+<p>Thanks ...reading <span aria-label="eyes" class="emoji emoji-1f440" role="img" title="eyes">:eyes:</span></p>
+
+
+
+<a name="197859622"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197859622" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197859622">(May 17 2020 at 17:26)</a>:</h4>
+<p>Yeah, it seems that I have been using the simplest way of switch/case ...good to know that it can be used to achieve more. <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span>++</p>
+
+
+
+<a name="197859623"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/197859623" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#197859623">(May 17 2020 at 17:26)</a>:</h4>
+<p>(peter)** kudos (Karma: 26)</p>
+
+
+
+<a name="199690995"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/199690995" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#199690995">(Jun 03 2020 at 23:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Can you tell me what forms you've activated in <a href="https://github.com/backdrop-contrib/compact_forms/issues/8">https://github.com/backdrop-contrib/compact_forms/issues/8</a> ?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/compact_forms/issues/8" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/compact_forms/issues/8" title="Notice: Undefined index: #type in _compact_forms_process_fields() · Issue #8 · backdrop-contrib/compact_forms">Notice: Undefined index: #type in _compact_forms_process_fields() · Issue #8 · backdrop-contrib/compact_forms</a></div><div class="message_embed_description">I&#39;m seeing this in the logs after upgrading to the latest version and clearing caches: Notice: Undefined index: #type in _compact_forms_process_fields() (line 123 of /path/modules/contrib/compa...</div></div></div>
+
+
+
+<a name="199691009"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/199691009" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#199691009">(Jun 03 2020 at 23:45)</a>:</h4>
+<p>I'm trying to reproduce...</p>
+
+
+
+<a name="199691032"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/199691032" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#199691032">(Jun 03 2020 at 23:45)</a>:</h4>
+<p>(Hmm, just realised that statement could be taken out of context...)</p>
+
+
+
+<a name="199691117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/199691117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#199691117">(Jun 03 2020 at 23:46)</a>:</h4>
+<p>On the site in question the only form activated is <code>webform_client_form_xx</code></p>
+
+
+
+<a name="199691231"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Compact%20Forms/near/199691231" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Compact.20Forms.html#199691231">(Jun 03 2020 at 23:48)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda (Peter)</span> <a href="#narrow/stream/218635-Backdrop/topic/Compact.20Forms/near/199691009">said</a>:</p>
+<blockquote>
+<p>I'm trying to reproduce...</p>
+</blockquote>
+<p>Stop bothering the man <span class="user-mention" data-user-id="256573">@Laryn</span>, cant you see he is busy?</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

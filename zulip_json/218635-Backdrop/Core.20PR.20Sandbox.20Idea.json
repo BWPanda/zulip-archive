@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>Would it be worth discussing the idea to add a way to pull PRs directly from Git within the GUI of core? Basically a Search for the PR then install it in the current environment, all without leaving the browser.</p>\n<p>There are a lot of PRs that need tested, and there are a lot of PRs that are 85 - 99% there, but just haven't been committed and it would be nice to either use the PR as-is on a live site until it gets added to a release, and(or) be able to do testing on specific PRs that need testing and feedback.</p>\n<p>Yes, I know PRs can be pulled through CLI or manually downloaded, but a lot of folks won't mess with it because they don't know how or it's too involved. But if they could visit a page in core and type a git PR number and have it installed for them within say 15 seconds of finding the PR number, I think we would see a lot more people engaging in testing of the PRs.</p>\n<p>I could see two modules to handle this: 1) PR Installer module and 2) Factory Reset module. The first one would handle the communication with Git, searching for PRs, showing which PRs are installed etc. The second one would be used to completely wipe the site's database and put it back to a fresh state like right after the install profile was finished.</p>\n<p>It would be a bit of upfront work to get it going but I think the long-term payoff could be worth it.</p>",
+        "id": 224143393,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611727175
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Interesting idea. I don't see it being a core feature (the whole '80% use case' thing), but certainly a contrib module (or two) would be a good place for this functionality. If that were the case, we could even try installing those modules automatically in demo sandboxes...</p>",
+        "id": 224143553,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611727334
+    },
+    {
+        "content": "<p>Interesting idea for contrib ...I've seen <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> mention that she manually maintains certain patches that she re-applies to some of her sites each time she updates. ...we could consider porting <a href=\"https://www.drupal.org/project/patch_manager\">https://www.drupal.org/project/patch_manager</a> to contrib, and then allow it to take advantage of the feature that GitHub provides, where if you add .patch at the end of a PR URL, you get the patch/diff file version of it.</p>",
+        "id": 224145600,
+        "sender_full_name": "klonos",
+        "timestamp": 1611729891
+    },
+    {
+        "content": "<p>...also see: <a href=\"https://github.com/davereid/drush-patchfile\">https://github.com/davereid/drush-patchfile</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/davereid/drush-patchfile\" style=\"background-image: url(https://avatars.githubusercontent.com/u/62967?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/davereid/drush-patchfile\" title=\"davereid/drush-patchfile\">davereid/drush-patchfile</a></div><div class=\"message_embed_description\">Utilities for maintaining patches on a Drupal installation - davereid/drush-patchfile</div></div></div>",
+        "id": 224145671,
+        "sender_full_name": "klonos",
+        "timestamp": 1611729996
+    },
+    {
+        "content": "<p>I have strong feelings on patch management. Any kind of automated tool is going to be bad for whatever open source project uses it. (Which is one of the reasons I hate composer so much -- it makes it really easy to do the wrong thing and hard to do the right thing). I haven't sed patch_manager, but I have a feeling I'm not going to like it...</p>",
+        "id": 224236170,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611776238
+    },
+    {
+        "content": "<p>Yep, the first \"feature\" listed is an open-source worst practice... \"patches are stored on the filesystem\". this is a huge no-no. You should never ever attempt to <em>blindly</em> re-apply a patch to a newer version of the project.</p>",
+        "id": 224236429,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611776352
+    },
+    {
+        "content": "<p>It's a security issue for you site, <strong>and</strong> bad for the open source project.</p>",
+        "id": 224236608,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611776415
+    },
+    {
+        "content": "<p><em>strong feelings stirred</em></p>",
+        "id": 224236615,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611776426
+    },
+    {
+        "content": "<p>I would be open to porting the module to Backdrop and then making it work in a way that's not dangerous for your site or bad for Backdrop :)</p>",
+        "id": 224236959,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611776605
+    },
+    {
+        "content": "<p>I don't think the \"how\" is as important as the \"why\" and I totally understand that it could cause more harm than good but it would be a great way to get people involved who might not get involved because the process is too involved <span aria-label=\"stuck out tongue closed eyes\" class=\"emoji emoji-1f61d\" role=\"img\" title=\"stuck out tongue closed eyes\">:stuck_out_tongue_closed_eyes:</span></p>\n<p>Core vs contrib, I only mentioned core so it could be in front of people without them having to learn about it somewhere else or go digging for it. But yes, it would be better left to contrib.</p>",
+        "id": 224240869,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611778461
+    }
+]

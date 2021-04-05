@@ -1,0 +1,152 @@
+[
+    {
+        "content": "<p>I have this issue since my very first Backdrop project from time to time, and now it happens within the same site... </p>\n<ul>\n<li>I use main_image_field in Content Type A and B</li>\n<li>But one of them does not show the image browser correctly when placing existing image</li>\n</ul>\n<p>Is this a known bug in Backdrop...? <a href=\"/user_uploads/18319/8EBR7bnjGmxsNtsgFbHgkg6o/Screenshot-2020-07-30-at-15.10.38.png\">Screenshot-2020-07-30-at-15.10.38.png</a> <a href=\"/user_uploads/18319/C2vrX7NDlzGmKd2eOmRuxqWt/Screenshot-2020-07-30-at-15.10.19.png\">Screenshot-2020-07-30-at-15.10.19.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/8EBR7bnjGmxsNtsgFbHgkg6o/Screenshot-2020-07-30-at-15.10.38.png\" title=\"Screenshot-2020-07-30-at-15.10.38.png\"><img src=\"/user_uploads/18319/8EBR7bnjGmxsNtsgFbHgkg6o/Screenshot-2020-07-30-at-15.10.38.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/C2vrX7NDlzGmKd2eOmRuxqWt/Screenshot-2020-07-30-at-15.10.19.png\" title=\"Screenshot-2020-07-30-at-15.10.19.png\"><img src=\"/user_uploads/18319/C2vrX7NDlzGmKd2eOmRuxqWt/Screenshot-2020-07-30-at-15.10.19.png\"></a></div>",
+        "id": 205477391,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596115285
+    },
+    {
+        "content": "<p>I don't think this is a known bug, at least I haven't seen this before. Which browser?</p>",
+        "id": 205477942,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1596115590
+    },
+    {
+        "content": "<p>Any browser...</p>",
+        "id": 205479056,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596116203
+    },
+    {
+        "content": "<p>some filter.css does not seem to load, for whatever reason</p>",
+        "id": 205479308,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596116361
+    },
+    {
+        "content": "<p>Specific themes or different themes? Conflicting modules?... There's a wide range of possible root causes.</p>",
+        "id": 205480224,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1596116875
+    },
+    {
+        "content": "<p>probably... my hope is that this looks familiar to someone, because there are plenty of possible reasons indeed;-)</p>",
+        "id": 205481235,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596117440
+    },
+    {
+        "content": "<p>Seems that the image browser only works as long as the content type has a body field, strange...</p>",
+        "id": 206340072,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596878539
+    },
+    {
+        "content": "<p>Update: at least one field in the CT needs the CKeditor being enabled, otherwise the image browser does not load correctly.</p>",
+        "id": 206340128,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596878665
+    },
+    {
+        "content": "<p>I have case where no \"Body\" field and no CKeditor at all, but image browser works as expected. \"Full HTML\" format is used, if it helps.</p>",
+        "id": 206341746,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1596881703
+    },
+    {
+        "content": "<p>Thank you <span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> , but where do you set the Full HTML option when there's no textarea field?</p>",
+        "id": 206346259,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1596889895
+    },
+    {
+        "content": "<p>I didn't say \"no textarea field\", just no \"Body\" field.</p>",
+        "id": 206346646,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1596890494
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> I saw you finally found the reason and opened an Issue. <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> </p>\n<p>It's not the body field or editor, the problem occurs if no field has a \"filter\".</p>",
+        "id": 206350856,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1596898184
+    },
+    {
+        "content": "<p>Is there any way to replace the internal image browser with IMCE?  The internal one does not load subdirectories and basically is pretty bad.</p>",
+        "id": 208853878,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599065329
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> have you tried <a href=\"https://backdropcms.org/project/imce\">https://backdropcms.org/project/imce</a> ?</p>",
+        "id": 208855125,
+        "sender_full_name": "klonos",
+        "timestamp": 1599065885
+    },
+    {
+        "content": "<p>...re not loading subdirectories, it sounds like a bug. Can you please open an issue for that in <a href=\"https://github.com/backdrop/backdrop-issues/issues/new/choose\">https://github.com/backdrop/backdrop-issues/issues/new/choose</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/new/choose\" style=\"background-image: url(https://github.githubassets.com/images/modules/open_graph/github-octocat.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/new/choose\" title=\"Build software better, together\">Build software better, together</a></div><div class=\"message_embed_description\">GitHub is where people build software. More than 50 million people use GitHub to discover, fork, and contribute to over 100 million projects.</div></div></div>",
+        "id": 208855253,
+        "sender_full_name": "klonos",
+        "timestamp": 1599065945
+    },
+    {
+        "content": "<p>Yes, I use it everywhere.  But the image browser that comes with the image field is not IMCE and I want it to be.  Trying to figure out where the heck to make that chane there.</p>",
+        "id": 208855273,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599065954
+    },
+    {
+        "content": "<p>Sounds like a feature request for <a href=\"https://github.com/backdrop-contrib/imce/issues\">https://github.com/backdrop-contrib/imce/issues</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/imce/issues\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/imce/issues\" title=\"backdrop-contrib/imce\">backdrop-contrib/imce</a></div><div class=\"message_embed_description\">Backdrop port of Drupal 7 module. Image/file uploader and browser - backdrop-contrib/imce</div></div></div>",
+        "id": 208855480,
+        "sender_full_name": "klonos",
+        "timestamp": 1599066048
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Image.20Browser.20Issue/near/208855253\">said</a>:</p>\n<blockquote>\n<p>...re not loading subdirectories, it sounds like a bug. Can you please open an issue for that in <a href=\"https://github.com/backdrop/backdrop-issues/issues/new/choose\">https://github.com/backdrop/backdrop-issues/issues/new/choose</a> ?</p>\n</blockquote>\n<p>IMCE loads and works just fine. What I want to do is replace the image browser that is used with the image field with the IMCE file browser.  I don't want to use the internal one, so no bug report unless it's to allow the image field to choose the IMCE browser as a widget.   Not sure if that's a feature request for IMCE or for core?</p>",
+        "id": 208855556,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599066077
+    },
+    {
+        "content": "<p>I'm assuming that the IMCE contrib module would need to override the core dialog. So sounds like a feature request for the contrib module. If it turns that we have implemented the dialog in core in a way that doesn't allow contrib to override it, then that would be a core bug issue.</p>",
+        "id": 208855907,
+        "sender_full_name": "klonos",
+        "timestamp": 1599066235
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Image.20Browser.20Issue/near/208855907\">said</a>:</p>\n<blockquote>\n<p>I'm assuming that the IMCE contrib module would need to override the core dialog. So sounds like a feature request for the contrib module. If it turns that we have implemented the dialog in core in a way that doesn't allow contrib to override it, then that would be a core bug issue.</p>\n</blockquote>\n<p>It's the same file browser that shows up under the User tabs - I assume that's also supplied by IMCE.  I will log the feature request today.  it's a pretty big deal for me,  the internal image browser is pretty bad and does not load or support subdirectories.  Many of my sites have hundreds or thousands of images.  That's not navigable via the internal image browser.</p>",
+        "id": 208856109,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599066323
+    },
+    {
+        "content": "<p>The internal browser is just a view. That view can be modified, or any other view can be used instead.</p>",
+        "id": 208917441,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599104760
+    },
+    {
+        "content": "<p>IIRC, IMCE doesn't work that way  though-- it doesn't integrate with the CMS at all. I think it assumes people FTP images up to a specific location on the server, then allows you to look in that location to select files. It works more like the \"upload\" dialog than the internal Browser (but the source of the files also happens to be on the server, instead of on your computer). The files would only get recorded by the CMS after they are used for the first time (at that point they will show up in the internal browser since the CMS would know about them)...  I'm getting off track.</p>",
+        "id": 208917800,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599105158
+    },
+    {
+        "content": "<p>My point was that IMCE wouldn't be able to replace the view for the internal browser. It would need to add another option for how to load files instead. A good example of this is the filefield_sources module for D6 and D7. It had support for IMCE and I bet that code could be repurposed for use in Backdrop. :)</p>",
+        "id": 208917915,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599105304
+    },
+    {
+        "content": "<p>The file handling thingy in CKEditor is a normal backdrop form, so a little form-alter on it should do the trick :)</p>",
+        "id": 208918001,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599105406
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"263951\">jenlampton</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Image.20Browser.20Issue/near/208917800\">said</a>:</p>\n<blockquote>\n<p>I think it assumes people FTP images up to a specific location on the server...</p>\n</blockquote>\n<p>No FTP needed, IMCE have built-in upload button/dialog.</p>\n<p>...And flawless integration to the user profile page via new tab.</p>",
+        "id": 208924900,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1599113988
+    }
+]

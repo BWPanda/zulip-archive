@@ -1,0 +1,62 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/l10n_update.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/l10n_update.html">l10n_update</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="215508988"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/l10n_update/near/215508988" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/l10n_update.html#215508988">(Nov 03 2020 at 20:56)</a>:</h4>
+<p>I've got Localization Update sort of working. <a href="https://github.com/backdrop-contrib/l10n_update">https://github.com/backdrop-contrib/l10n_update</a> I worked on it for a client but I'm only half-motivated to have it all working since currently Backdrop-specific translations are only available for core. Anyone else interested in testing and figuring out how to get it fully working. <span class="user-mention" data-user-id="256738">@indigoxela</span> <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/l10n_update" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/l10n_update" title="backdrop-contrib/l10n_update">backdrop-contrib/l10n_update</a></div><div class="message_embed_description">Helps to keep the translation of your Backdrop core and contributed modules up to date with automatic updates. - backdrop-contrib/l10n_update</div></div></div>
+
+
+
+<a name="215509166"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/l10n_update/near/215509166" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/l10n_update.html#215509166">(Nov 03 2020 at 20:58)</a>:</h4>
+<p>One issue seems to be the version numbers. l10n_update assumes a core of 1.x but the actual files on <a href="http://localize.backdrocms.org">localize.backdrocms.org</a> have it as 1.17 etc. And it is also inconsistent in the versions: 1.17 versus 1.13.0.</p>
+
+
+
+<a name="215509184"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/l10n_update/near/215509184" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/l10n_update.html#215509184">(Nov 03 2020 at 20:58)</a>:</h4>
+<p>E.g. <a href="https://localize.backdropcms.org/translate/languages/fr">https://localize.backdropcms.org/translate/languages/fr</a></p>
+
+
+
+<a name="215517315"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/l10n_update/near/215517315" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/l10n_update.html#215517315">(Nov 03 2020 at 22:24)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> Re version numbers, they were changed at a certain point by <span class="user-mention" data-user-id="263951">@jenlampton</span> , see <a href="https://github.com/backdrop-ops/localize.backdropcms.org/issues/27#issuecomment-497838789">https://github.com/backdrop-ops/localize.backdropcms.org/issues/27#issuecomment-497838789</a> and below.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/localize.backdropcms.org/issues/27#issuecomment-497838789" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/localize.backdropcms.org/issues/27#issuecomment-497838789" title="Add core releases and source files · Issue #27 · backdrop-ops/localize.backdropcms.org">Add core releases and source files · Issue #27 · backdrop-ops/localize.backdropcms.org</a></div><div class="message_embed_description">The translation server needs a new language source file for every Backdrop release, and we have to make a translation release of it. We&#39;re planning to generate the language files automatically....</div></div></div>
+
+
+
+<a name="215518191"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/l10n_update/near/215518191" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/l10n_update.html#215518191">(Nov 03 2020 at 22:34)</a>:</h4>
+<blockquote>
+<p>currently Backdrop-specific translations are only available for core</p>
+</blockquote>
+<p>We could provide other projects as well. Care to open an issue in the localize queue? I‘m not at the computer atm.</p>
+
+
+
+<a name="215608126"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/l10n_update/near/215608126" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/l10n_update.html#215608126">(Nov 04 2020 at 16:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> <a href="https://github.com/backdrop-ops/localize.backdropcms.org/issues/41">https://github.com/backdrop-ops/localize.backdropcms.org/issues/41</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/localize.backdropcms.org/issues/41" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/localize.backdropcms.org/issues/41" title="Provide translations for contrib projects · Issue #41 · backdrop-ops/localize.backdropcms.org">Provide translations for contrib projects · Issue #41 · backdrop-ops/localize.backdropcms.org</a></div><div class="message_embed_description">Currently Backdrop-specific translations are only available for core. Let's also provide translations for modules and other contrib projects.</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

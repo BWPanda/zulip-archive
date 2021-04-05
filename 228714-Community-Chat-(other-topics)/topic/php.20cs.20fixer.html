@@ -1,0 +1,246 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html">php cs fixer</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="202779238"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202779238" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202779238">(Jul 03 2020 at 08:26)</a>:</h4>
+<p>I'm having a hard time configuring php cs fixer to follow backdrop's coding standards. I found a setting which follows that standard except by allowing else and elseif on a new line. Any one found a solution for this? Thanks.</p>
+
+
+
+<a name="202779947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202779947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202779947">(Jul 03 2020 at 08:35)</a>:</h4>
+<p>To be honest, I'm using the Drupal version for phpcbf (<code>"drupal/coder": "^8.3"</code>). I also have <code>"backdrop/coder": "^1.0"</code> for the checks. For both versions (installed via composer) I have different shell wrapper scripts using different parameters. Maybe not the most elegant solution, but works fine for me. And it wasn't too complicated to get it running.</p>
+
+
+
+<a name="202789854"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202789854" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202789854">(Jul 03 2020 at 10:39)</a>:</h4>
+<p>I'll give a try to it. Let's see how it goes with lando... Thanks.</p>
+
+
+
+<a name="202816834"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202816834" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202816834">(Jul 03 2020 at 15:48)</a>:</h4>
+<p>I don't manage to use nor php cs fixer nor phpcbf with VS Code on lando. I can install the plugings and the sniffers, but not any of the Backdrop (from coder review) nor Drupal rules. Maybe <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> might give me a clue?</p>
+
+
+
+<a name="202873569"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202873569" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202873569">(Jul 04 2020 at 13:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="300022">@Robert Garrigos</span> </p>
+<p><code>lando composer require backdrop/coder</code></p>
+<p>in your <code>.lando.yml</code> file:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">tooling</span><span class="p">:</span>
+  <span class="nt">phpcs</span><span class="p">:</span>
+    <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">appserver</span>
+    <span class="nt">cmd</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;/app/vendor/bin/phpcs</span><span class="nv"> </span><span class="s">-n</span><span class="nv"> </span><span class="s">--report=full</span><span class="nv"> </span><span class="s">--standard=Backdrop</span><span class="nv"> </span><span class="s">--ignore=vendor/*,README.md</span><span class="nv"> </span><span class="s">--extensions=install,module,php,inc,theme&quot;</span>
+</code></pre></div>
+
+
+
+<a name="202876786"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202876786" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202876786">(Jul 04 2020 at 14:45)</a>:</h4>
+<p>thanks <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> I was doing it right, but just slightly different. I see what was the problem. First, I also installed drupal/coder, which installed a different version of php_codesniffer. Installing only backdrop/coder fixed that. But also, I needed to set Backdrop as standard with </p>
+<div class="codehilite"><pre><span></span><code>lando phpcs --config-set installed_paths /app/vendor/backdrop/coder/coder_sniffer
+</code></pre></div>
+
+
+<p>otherwise I got:</p>
+<div class="codehilite"><pre><span></span><code>ERROR: the &quot;Backdrop&quot; coding standard is not installed. The installed coding standards are MySource, PEAR, PHPCS, PSR1, PSR2, Squiz and Zend
+</code></pre></div>
+
+
+<p>Now it works. However, I got this:</p>
+<div class="codehilite"><pre><span></span><code>UPGRADE TO PHP_CODESNIFFER 2.0 TO FIX ERRORS AUTOMATICALLY
+</code></pre></div>
+
+
+<p>And what I really wanted was an automatic fix. Tried to update php_codesniffer to 2.0.0 but got:</p>
+<div class="codehilite"><pre><span></span><code>Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - backdrop/coder 1.0.1 requires squizlabs/php_codesniffer &gt;=1.4.6,&lt;2.0.0 -&gt; satisfiable by squizlabs/php_codesniffer[1.4.6, 1.4.7, 1.4.8, 1.5.0, 1.5.0RC1, 1.5.0RC2, 1.5.0RC3, 1.5.0RC4, 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.x-dev] but these conflict with your requirements or minimum-stability.
+</code></pre></div>
+
+
+<p>So, got stuck again. Any way to get the code automatically fixed to Backdrop standards with VS Code and lando? Not yet?</p>
+
+
+
+<a name="202877819"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202877819" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202877819">(Jul 04 2020 at 15:12)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> and <span class="user-mention" data-user-id="300022">@Robert Garrigos</span> <span aria-label="pray" class="emoji emoji-1f64f" role="img" title="pray">:pray:</span> ...I was getting the same error as well, and running the <code>lando phpcs --config-set installed_paths</code> command made that go away:</p>
+<div class="codehilite"><pre><span></span><code>→ lando phpcs
+ERROR: the &quot;Backdrop&quot; coding standard is not installed. The installed coding standards are PEAR, PHPCS, Zend, PSR2, MySource, Squiz and PSR1
+→ lando phpcs --config-set installed_paths /app/docroot/vendor/backdrop/coder/coder_sniffer
+Config value &quot;installed_paths&quot; added successfully
+</code></pre></div>
+
+
+
+<a name="202877833"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202877833" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202877833">(Jul 04 2020 at 15:12)</a>:</h4>
+<p>...when running <code>lando phpcs</code> now though, I get no output. Is that normal? ...does it take some time to produce something?</p>
+
+
+
+<a name="202877916"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202877916" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202877916">(Jul 04 2020 at 15:15)</a>:</h4>
+<p>This is my command:</p>
+<div class="codehilite"><pre><span></span><code>lando phpcs --standard=Backdrop www/modules/node_feedback/node_feedback.module
+</code></pre></div>
+
+
+<p>and got some results:</p>
+<div class="codehilite"><pre><span></span><code>FILE: /app/www/modules/node_feedback/node_feedback.module
+--------------------------------------------------------------------------------
+FOUND 11 ERROR(S) AFFECTING 9 LINE(S)
+--------------------------------------------------------------------------------
+   2 | ERROR | You must use &quot;/**&quot; style comments for a file comment
+   3 | ERROR | No space before comment text; expected &quot;// TODO edit this&quot; but
+     |       | found &quot;//TODO edit this&quot;
+   3 | ERROR | Inline comments must end in full-stops, exclamation marks, or
+     |       | question marks
+  73 | ERROR | else must start on a new line
+ 246 | ERROR | Closing brace indented incorrectly; expected 2 spaces, found 4
+ 277 | ERROR | elseif must start on a new line
+ 282 | ERROR | else must start on a new line
+ 317 | ERROR | Inline comments must end in full-stops, exclamation marks, or
+     |       | question marks
+ 385 | ERROR | Missing parameter type at position 1
+ 391 | ERROR | No space before comment text; expected &quot;// TODO implement edit
+     |       | actions on feedbacks&quot; but found &quot;//TODO implement edit actions
+     |       | on feedbacks&quot;
+ 391 | ERROR | Inline comments must end in full-stops, exclamation marks, or
+     |       | question marks
+--------------------------------------------------------------------------------
+UPGRADE TO PHP_CODESNIFFER 2.0 TO FIX ERRORS AUTOMATICALLY
+--------------------------------------------------------------------------------
+</code></pre></div>
+
+
+
+<a name="202877976"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202877976" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202877976">(Jul 04 2020 at 15:16)</a>:</h4>
+<p>This is what I was doing different from <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> suggestion: I put all the options in the lando command, not in the lando config file. I leave the lando config file with:</p>
+<div class="codehilite"><pre><span></span><code>phpcs:
+    service: appserver
+    cmd: /app/vendor/bin/phpcs
+</code></pre></div>
+
+
+
+<a name="202880030"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880030" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880030">(Jul 04 2020 at 16:05)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> no output means no coding standards violations</p>
+
+
+
+<a name="202880078"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880078" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880078">(Jul 04 2020 at 16:06)</a>:</h4>
+<p>I wish <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="202880108"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880108" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880108">(Jul 04 2020 at 16:07)</a>:</h4>
+<p>...it seems that the command is still running. I don't return back to where I can enter new commands.</p>
+
+
+
+<a name="202880117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880117">(Jul 04 2020 at 16:07)</a>:</h4>
+<p>...I need to control+C</p>
+
+
+
+<a name="202880171"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880171" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880171">(Jul 04 2020 at 16:08)</a>:</h4>
+<p><span class="user-mention" data-user-id="300022">@Robert Garrigos</span> a few people have asked for the automatic fixing; i originally pinned the phpcs verston to keep support for php 5.3, but now i don't thing people that are running php 5.3 are running phpcs in backdrop land ... so i'm not opposed to upping the version and adjusting the code standards to work w/ new version, but I'm not going to jump on that immediately either ... if you wanna give it a shot: <a href="https://github.com/serundeputy/coder">https://github.com/serundeputy/coder</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/serundeputy/coder" style="background-image: url(https://avatars3.githubusercontent.com/u/6763671?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/serundeputy/coder" title="serundeputy/coder">serundeputy/coder</a></div><div class="message_embed_description">Developer tool which reviews your code identifying coding style problems and where updates to the API are required. - serundeputy/coder</div></div></div>
+
+
+
+<a name="202880193"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880193" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880193">(Jul 04 2020 at 16:08)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> having to <code>ctrl+c</code> is not expected behaviour;</p>
+
+
+
+<a name="202880218"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880218" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880218">(Jul 04 2020 at 16:09)</a>:</h4>
+<p>will do. thanks.</p>
+
+
+
+<a name="202880479"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880479" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880479">(Jul 04 2020 at 16:15)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> perhaps you did not provide a file path for <code>phpcs</code> check, i.e.</p>
+<p>wrong: <code>phpcs</code><br>
+right: <code>phpcs modules/custom/blah/blah.module</code></p>
+
+
+
+<a name="202880490"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202880490" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202880490">(Jul 04 2020 at 16:15)</a>:</h4>
+<p>Yup, that's what's happened <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...I thought no path = check everything</p>
+
+
+
+<a name="202882405"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202882405" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202882405">(Jul 04 2020 at 17:00)</a>:</h4>
+<p><code>phpcs .</code></p>
+
+
+
+<a name="202882430"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202882430" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202882430">(Jul 04 2020 at 17:00)</a>:</h4>
+<p>I personally prefer to fix the things myself. That is one automation I have never gotten used to.</p>
+
+
+
+<a name="202882733"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202882733" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202882733">(Jul 04 2020 at 17:08)</a>:</h4>
+<p><a href="https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.0.0a1">https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.0.0a1</a></p>
+<blockquote>
+<ul>
+<li>Added support for only checking files that have been locally modified or added in a git repo<ul>
+<li>Use <code>--filter=gitmodified</code> to check these files</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.0.0a1" style="background-image: url(https://avatars2.githubusercontent.com/u/997547?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/squizlabs/PHP_CodeSniffer/releases/tag/3.0.0a1" title="Release 3.0.0a1 · squizlabs/PHP_CodeSniffer">Release 3.0.0a1 · squizlabs/PHP_CodeSniffer</a></div><div class="message_embed_description">This is the first alpha release of the 3.0.0 version, and is a large refactoring of the code base. It breaks backwards compatibility for all custom sniffs and custom reports. An upgrade guide for s...</div></div></div>
+
+
+
+<a name="202882811"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202882811" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202882811">(Jul 04 2020 at 17:10)</a>:</h4>
+<p>^^ this is something we decided we'd like to have, as I recall from a previous weekly meeting.</p>
+
+
+
+<a name="202882825"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/php%20cs%20fixer/near/202882825" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/php.20cs.20fixer.html#202882825">(Jul 04 2020 at 17:10)</a>:</h4>
+<p>...ideally, it could do only changed lines too.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

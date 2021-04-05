@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>I am working on porting <a href=\"https://drupal.org/project/webform2pdf\">the Webform2PDF module</a> (port in progress is <a href=\"https://github.com/bugfolder/webform2pdf\">here</a>). This module uses the open-source <a href=\"https://github.com/tecnickcom/TCPDF\">TCPDF library</a>. in the Drupal version of the module, TCPDF lived in the /libraries folder; in Backdrop, though, we are supposed to <a href=\"https://api.backdropcms.org/modules\">bundle libraries within the module</a>.</p>\n<p>Now, Webform2PDF is GPLv2, while TCPDF is LGPLv3. I'd like to double-check my assumptions with anyone here who knows the proper way of dealing with this issue about the proper thing to do in the distribution.</p>\n<p>My assumption is that it's OK to organize the module like this:</p>\n<div class=\"codehilite\"><pre><span></span><code>webform2pdf\n    libraries\n        tcpdf\n            ...files...\n            LICENSE.txt (LGPLv3)\n    webform2pdf.module\n    ...more module files...\n    LICENSE.txt (GPLv2)\n    README.md\n</code></pre></div>\n<p>And then in the README.md (<a href=\"https://github.com/bugfolder/webform2pdf\">which you can see here</a>) list the two licenses separately.</p>\n<p>Is that the right way to deal with this situation?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/bugfolder/webform2pdf\" style=\"background-image: url(https://avatars0.githubusercontent.com/u/29214084?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/bugfolder/webform2pdf\" title=\"bugfolder/webform2pdf\">bugfolder/webform2pdf</a></div><div class=\"message_embed_description\">Contribute to bugfolder/webform2pdf development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/tecnickcom/TCPDF\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/4163527?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/tecnickcom/TCPDF\" title=\"tecnickcom/TCPDF\">tecnickcom/TCPDF</a></div><div class=\"message_embed_description\">Official clone of PHP library to generate PDF documents and barcodes - tecnickcom/TCPDF</div></div></div>",
+        "id": 217564756,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1606071926
+    },
+    {
+        "content": "<blockquote>\n<p>Is that the right way to deal with this situation?</p>\n</blockquote>\n<p>I have wondered the same thing, but don't know the answer. Hopefully, we have documented this somewhere. I would start by looking for an existing contrib module that has dealt with this.</p>",
+        "id": 217566588,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1606074368
+    },
+    {
+        "content": "<p>I'll put this on my list of things to bring up during a dev meeting, if it hasn't been clarified before that.</p>",
+        "id": 217566622,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1606074454
+    },
+    {
+        "content": "<p>...this is already documented: <a href=\"https://github.com/backdrop-ops/contrib#new-project-checklist\">https://github.com/backdrop-ops/contrib#new-project-checklist</a></p>\n<blockquote>\n<ul>\n<li>If your project includes a library that is licensed under GPL-3.0, LGPL-3.0, Apache-2.0, AGPL-3, or any other license that the Free Software Foundation has determined to <a href=\"http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses\">only be compatible with GPL-3.0</a>, then you must license your project as GPL-3.0. Please use <a href=\"https://raw.githubusercontent.com/backdrop-ops/contrib/master/examples/LICENSE-GPL-3-0.txt\">this text for GPL-3.0</a>.</li>\n<li>The GPL-3.0 license will prevent your project from one day being included in Backdrop core, so please only use this license when necessary.</li>\n</ul>\n</blockquote>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib#new-project-checklist\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib#new-project-checklist\" title=\"backdrop-ops/contrib\">backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Apply to join the contributed code developer team. - backdrop-ops/contrib</div></div></div>",
+        "id": 217570237,
+        "sender_full_name": "klonos",
+        "timestamp": 1606079439
+    },
+    {
+        "content": "<p><a href=\"http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses\">http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses</a> lists LGPL v3 as GPL-compatible, so there you have it: TCPDF can be bundled with the module, and the entire module may be licensed as GPL v3, and <a href=\"https://raw.githubusercontent.com/backdrop-ops/contrib/master/examples/LICENSE-GPL-3-0.txt\">https://raw.githubusercontent.com/backdrop-ops/contrib/master/examples/LICENSE-GPL-3-0.txt</a> should be used instead.</p>",
+        "id": 217570356,
+        "sender_full_name": "klonos",
+        "timestamp": 1606079587
+    },
+    {
+        "content": "<p>Thanks, <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>, that's clear (and I've bookmarked the checklist).</p>\n<p>Since Webform2PDF is an add-on to Webform, it seems an unlikely candidate to ever go into core.</p>",
+        "id": 217573075,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1606083392
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>Did someone implement multiple addresses on ONE map yet...?<br>\n<a href=\"https://forum.backdropcms.org/forum/adding-multiple-addressesnodes-map-using-views?page=0%2C0#comment-2640\">https://forum.backdropcms.org/forum/adding-multiple-addressesnodes-map-using-views?page=0%2C0#comment-2640</a></p>",
+        "id": 226245774,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1613224084
+    },
+    {
+        "content": "<p>It's possible, but no fun - the necessary modules aren't stable yet:</p>\n<p>Install:</p>\n<ul>\n<li>geofield</li>\n<li>leaflet (no stable release)</li>\n<li>libraries (not needed, but a useless dependency)</li>\n<li>geophp (no dependency, but actually required to prevent fatal errors)</li>\n</ul>\n<p>Then:</p>\n<ul>\n<li>Create a content type with a geofield that stores lat/lon</li>\n<li>Enable leaflet_views submodule</li>\n<li>Create a view  of type \"leaflet map\"</li>\n<li>Filtered for your content type, don't forget to add a geofield to the view</li>\n</ul>\n<p>Works, but... <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> the Leaflet module really needs some loving care.</p>",
+        "id": 226247813,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1613227187
+    },
+    {
+        "content": "<p>Thank you <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>... so maybe fixing the geomap module (which apparently has Views support) might be also an option? Or is there an easy way to hardcode this from scratch for demo purposes?</p>",
+        "id": 226248273,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1613227788
+    },
+    {
+        "content": "<blockquote>\n<p>so maybe fixing the geomap module (which apparently has Views support) might be also an option?</p>\n</blockquote>\n<p>Which one is that? Do you mean \"Geofield Map\"? I'm not sure if Geofield Map is supposed to display more than one markers. I never used it before and don't get it to display any map. Leaflet views at least produces maps with multiple markers on it. But I'm more familiar with that as I use it with Drupal regularly.</p>",
+        "id": 226248779,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1613228497
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> - I have been away from computer, but will try to write up instructions today. I have done this a couple of times and it works pretty smoothly. I am pretty sure that <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> also has sites doing this.</p>",
+        "id": 226265997,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613248982
+    },
+    {
+        "content": "<p>This is my only public example of it - <a href=\"https://www.riverton.org/community/map-of-all-communities\">https://www.riverton.org/community/map-of-all-communities</a></p>\n<p>But, I've done it on test sites additional times.</p>",
+        "id": 226266030,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613249028
+    },
+    {
+        "content": "<p>Yeah, I have one at <a href=\"http://arf.berkeley.edu/\">http://arf.berkeley.edu/</a> that's been working pretty well. Also on this site <a href=\"https://www.bootfitters.com/shops/boot-pro-ludlow\">https://www.bootfitters.com/shops/boot-pro-ludlow</a></p>",
+        "id": 226275995,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613260638
+    },
+    {
+        "content": "<p>I've been meaning to write a tutorial for a while. Here is my first draft. Would love feedback,corrections, or better ideas.<br>\n<a href=\"https://simplo.site/posts/putting-multiple-locations-map-backdrop-cms\">https://simplo.site/posts/putting-multiple-locations-map-backdrop-cms</a></p>",
+        "id": 226287268,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613281088
+    },
+    {
+        "content": "<p>thank you <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> for investigating... the Google API does not seem to be the problem, for me it works on a one-location-per-map basis.</p>",
+        "id": 226301063,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1613304006
+    },
+    {
+        "content": "<p>Beautiful and simple <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ++</p>",
+        "id": 226313312,
+        "sender_full_name": "klonos",
+        "timestamp": 1613320463
+    },
+    {
+        "content": "<p><strong>stpaultim</strong> GG (Karma: 34)</p>",
+        "id": 226313313,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1613320464
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"269428\">mazze.ch</span> <a href=\"#narrow/stream/218635-Backdrop/topic/map/near/226301063\">said</a>:</p>\n<blockquote>\n<p>thank you <span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> for investigating... the Google API does not seem to be the problem, for me it works on a one-location-per-map basis.</p>\n</blockquote>\n<p>Yeah, I'm not blaming the Google API. But, I am wondering if their is a problem with the GeoCoder Module and the Google API OR if I'm just doing something wrong. However, I am able to display Google Maps, which also requires the Google API - so it's something specific to Geocoding that is blocking me.</p>",
+        "id": 226320215,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613330418
+    },
+    {
+        "content": "<p>I've updated my blog post slightly to take into account some feedback. I added another screenshot of settings for the geofield.</p>",
+        "id": 226322501,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613333464
+    }
+]

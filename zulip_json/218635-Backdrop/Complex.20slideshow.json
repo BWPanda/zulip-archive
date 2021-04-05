@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>A client has asked me to make a slideshow made up of sections: each section will have some text, and some images that transition in the background. Once a section has shown all its images, the next section is displayed. My problem is that I don't know how to do 'section's in a slideshow. As far as I'm aware, slideshows are just a collection of slides, each with a background and optional text. To have the same text stay in place while the background changes is fine if that's the entire slideshow, but this is like having multiple slideshows all together... Anyone done anything like this before?</p>",
+        "id": 191712232,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585125025
+    },
+    {
+        "content": "<p>And I know I can just create multiple slides with the same text and different background, but then the text will transition with the background which'll look weird IMO...</p>",
+        "id": 191712284,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585125065
+    },
+    {
+        "content": "<p>How about 2 overlapping slideshows?: 1 slideshow holds the images, the other one the text. The one with the text has transparent images as background, so the background of the image-only slideshow is shown \"under\" the text-only slideshow. ...may need some coordination between the two slideshows.</p>",
+        "id": 191725524,
+        "sender_full_name": "klonos",
+        "timestamp": 1585132375
+    },
+    {
+        "content": "<blockquote>\n<p>may need some coordination between the two slideshows.</p>\n</blockquote>\n<p>Yeah, that'd be the tricky bit...</p>",
+        "id": 191726122,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585132686
+    },
+    {
+        "content": "<p>Maybe you find a way combining a regular slideshow with some css animations? I did freaky stuff with <code>@keyframes</code> and css3 transition/transform. Or maybe you get some inspiration from this D module: <a href=\"https://www.drupal.org/project/animate_css\" title=\"https://www.drupal.org/project/animate_css\">https://www.drupal.org/project/animate_css</a></p>",
+        "id": 191745547,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585143649
+    },
+    {
+        "content": "<p>A slideshow of slideshows? It just seems really wrong. When clients ask me stuff like that I usually say it's not accessible and it's not affordable. But then I often have clients who have tight budgets</p>",
+        "id": 191755355,
+        "sender_full_name": "Herb",
+        "timestamp": 1585147504
+    },
+    {
+        "content": "<p>does the text in all slideshows animate? if the text is static in place, you could have one slideshow, but groups of slides with the same text.</p>",
+        "id": 191763951,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1585150342
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> the current implementation of slideshow modules for D7/Backdrop scroll each slide and the respective text as a single item. <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> wants to scroll the background images of the slides independently of the text, because some slides have the same text. So my understanding is that the slideshow looks something like this:</p>\n<ul>\n<li>bg image 1 with text 1</li>\n<li>bg image 2 with text 1</li>\n<li>bg image 3 with text 1</li>\n<li>bg image 4 with text 2</li>\n<li>bg image 5 with text 2</li>\n<li>bg image 6 with text 3</li>\n<li>bg image 7 with text 3<br>\n...animating images 1, 2, and 3 should NOT animate text 1<br>\n...animating from image 3 to image 4 should animate from text 1 to text 2<br>\n...animating images 4 and 5 should NOT animate text 2<br>\n...animating from image 5 to image 6 should animate from text 2 to text 3<br>\n...animating images 6 and 7 should NOT animate text 3<br>\n...animating from image 7 to image 1 should animate from text 3 to text 1</li>\n</ul>",
+        "id": 191806618,
+        "sender_full_name": "klonos",
+        "timestamp": 1585168066
+    },
+    {
+        "content": "<p>Exactly!</p>",
+        "id": 191807221,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585168340
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> I've done that using position:absolute on the text before.</p>",
+        "id": 191809698,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1585169734
+    },
+    {
+        "content": "<p>Are these slides going to be updated often, or can you code CSS for specific ones?</p>",
+        "id": 191809737,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1585169757
+    },
+    {
+        "content": "<p>Wondering if animated png could be a possible solution here ...if you do not care about IE11 support that is: <a href=\"https://caniuse.com/#feat=apng\" title=\"https://caniuse.com/#feat=apng\">https://caniuse.com/#feat=apng</a></p>",
+        "id": 191810054,
+        "sender_full_name": "klonos",
+        "timestamp": 1585169896
+    },
+    {
+        "content": "<p>(Edge started supporting it since Jan 2020)</p>",
+        "id": 191810120,
+        "sender_full_name": "klonos",
+        "timestamp": 1585169933
+    }
+]

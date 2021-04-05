@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>Will have portions of the site that are accessible only to authenticated users; I see the module to set permissions by role for menus, but not to set them for individual pages or particular paths and wildcards? (Vaguely recalling this could be done with layouts, but not sure if that's the right tree in this forest.)</p>",
+        "id": 194628905,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1587350405
+    },
+    {
+        "content": "<p>There are a few different \"access\" modules. I've used this one on a few sites: <a href=\"https://backdropcms.org/project/content_view_access\" title=\"https://backdropcms.org/project/content_view_access\">https://backdropcms.org/project/content_view_access</a></p>",
+        "id": 194633444,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587358975
+    },
+    {
+        "content": "<p>So if I'm reading that right, the simplest way about this is to install that module, then create a content-type such as \"members page\" which anonymous users can't reach?</p>",
+        "id": 194705759,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1587402811
+    },
+    {
+        "content": "<p>Yes, that's how this one works. <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 194707691,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587403752
+    },
+    {
+        "content": "<p>I've also created custom module for one off sites where a field is added to a content type and then check for the status of that field with the access hook</p>",
+        "id": 194729295,
+        "sender_full_name": "Herb",
+        "timestamp": 1587414901
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> this thread got me to thinking about porting Taxonomy Access Control or Taxonomy Access Control Lite. <br>\nnoticed that you started on tac_lite a while ago. <br>\nwondering if you think I should start from forking your repo or start from scratch?</p>",
+        "id": 194973451,
+        "sender_full_name": "ericfg",
+        "timestamp": 1587580564
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"259074\">@ericfg</span> - I need to verify this later, but have to run out now. BUT, I believe that the only thing I did was copy the Drupal module to Backdrop CMS, possibly run it through the coder upgrade module (or whatever it is called). You can start over OR you can just work with my repo. I would be happy to share access (if that is necessary). I would also be happy to just turn over this project to you, if that is helpful. </p>\n<p>I believe I started this for someone else. I was not working on this for myself, rather at the request of another user.</p>",
+        "id": 194982024,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1587584721
+    },
+    {
+        "content": "<p>I'll look more later tonight to verify what I'm telling you from memory.</p>",
+        "id": 194982041,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1587584731
+    },
+    {
+        "content": "<p>I don't expect to get back to it anytime soon.</p>",
+        "id": 194982060,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1587584744
+    },
+    {
+        "content": "<p>cool. thanks. that's consistent with the note you left in the repo.</p>",
+        "id": 194986341,
+        "sender_full_name": "ericfg",
+        "timestamp": 1587586863
+    },
+    {
+        "content": "<p>for now I'll just fork your repo and start from there, other details we can worry about later</p>",
+        "id": 195081843,
+        "sender_full_name": "ericfg",
+        "timestamp": 1587657395
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"259074\">ericfg</span> <a href=\"#narrow/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F/near/195081843\" title=\"#narrow/stream/218635-Backdrop/topic/How.20to.20create.20members-only.20pages.3F/near/195081843\">said</a>:</p>\n<blockquote>\n<p>for now I'll just fork your repo and start from there, other details we can worry about later</p>\n</blockquote>\n<p>I don't know if I needed to grant to extra permissions on the module or not, but I've given you maintainer permissions. Feel free to add yourself as the maintainer on the Readme and simply take over this module.</p>",
+        "id": 195113261,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1587672603
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/tac_lite\" title=\"https://github.com/backdrop-contrib/tac_lite\">https://github.com/backdrop-contrib/tac_lite</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/tac_lite\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/tac_lite\" title=\"backdrop-contrib/tac_lite\">backdrop-contrib/tac_lite</a></div><div class=\"message_embed_description\">Simple access control based on categories. Contribute to backdrop-contrib/tac_lite development by creating an account on GitHub.</div></div></div>",
+        "id": 195113291,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1587672619
+    }
+]

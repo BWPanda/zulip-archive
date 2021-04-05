@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>If I enter HTML tags in a node title, the tags are escaped and printed out whenever the node title is displayed. Is there any easy way to override this to avoid escaping HTML tags in titles?</p>",
+        "id": 208073928,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598437114
+    },
+    {
+        "content": "<p>Do you want to strip the tags instead, or do you want to allow them?</p>",
+        "id": 208074137,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598437281
+    },
+    {
+        "content": "<p>I want to allow them (to format parts of the title differently)</p>",
+        "id": 208074861,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598437748
+    },
+    {
+        "content": "<p>Do you have a theme?</p>",
+        "id": 208074916,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598437798
+    },
+    {
+        "content": "<p>Uh, Basis...?</p>",
+        "id": 208075006,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598437838
+    },
+    {
+        "content": "<p>I've actually just worked out how to add <code>&lt;span&gt;</code> tags where I want them via Javascript, but if there's an eaier way with PHP, etc., then I might opt for that instead.</p>",
+        "id": 208075079,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598437887
+    },
+    {
+        "content": "<p>Ah, OK, no custom theme in that case... I'd only know a quick trick in theme_preprocess_layout(), but in that case you can't implement that.</p>",
+        "id": 208075522,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598438205
+    },
+    {
+        "content": "<p>Well I'll likely sub-theme Basis to make my own changes here and there. Would <code>theme_preprocess_layout()</code> work everywhere node titles are displayed (e.g. teasers, page titles, views, etc.)?</p>",
+        "id": 208075667,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598438311
+    },
+    {
+        "content": "<p>If you also need node teasers and stuff, you probably need additional preprocessors for node.tpl.php. Views... could be tricky.</p>",
+        "id": 208076553,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598439033
+    },
+    {
+        "content": "<p>Hmm ok, think I'll stick with JS then :-)</p>",
+        "id": 208077589,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598439740
+    },
+    {
+        "content": "<p>I guess, the minimum you need is template_preprocess_node and template_preprocess_layout - depends on what and where... js could be the easier thing.</p>",
+        "id": 208077734,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598439893
+    },
+    {
+        "content": "<p>(Curiosity is my cryptonite...)<br>\nin YOURTHEME_preprocess_layout()</p>\n<div class=\"codehilite\"><pre><span></span><code>  if ($node = menu_get_object()) {\n    $variables[&#39;title&#39;] = filter_xss($node-&gt;title, array(&#39;strong&#39;, &#39;span&#39;, &#39;em&#39;));\n  }\n</code></pre></div>\n\n\n<p>In YOURTHEME_preprocess_node:</p>\n<div class=\"codehilite\"><pre><span></span><code>  $node = $variables[&#39;node&#39;];\n  $variables[&#39;title&#39;] = filter_xss($node-&gt;title, array(&#39;strong&#39;, &#39;span&#39;, &#39;em&#39;));\n</code></pre></div>\n\n\n<p>That keeps strong/span/em and strips anything else.</p>",
+        "id": 208078035,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598440123
+    }
+]

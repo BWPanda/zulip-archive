@@ -1,0 +1,137 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html">Exporting data from Drupal to import into Backdrop</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="204031696"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204031696" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204031696">(Jul 16 2020 at 00:42)</a>:</h4>
+<p>I need to export a D7 site's data (content, taxonomy, users, etc.) to Backdrop. Just wondering if D7 <code>views_data_export</code> and B <code>feeds</code> are the best tools for this...?</p>
+
+
+
+<a name="204032826"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204032826" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204032826">(Jul 16 2020 at 00:59)</a>:</h4>
+<p>Might work</p>
+
+
+
+<a name="204032835"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204032835" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204032835">(Jul 16 2020 at 00:59)</a>:</h4>
+<p>Or you could port the migrate module</p>
+
+
+
+<a name="204032837"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204032837" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> sdubois <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204032837">(Jul 16 2020 at 00:59)</a>:</h4>
+<p>I just tried out backdrop for the first time today and did an D7 migration. I just imported the D7 database right into the backdrop database, ran drush updb and all my data was there.</p>
+
+
+
+<a name="204032899"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204032899" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> sdubois <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204032899">(Jul 16 2020 at 01:00)</a>:</h4>
+<p><a href="https://backdropcms.org/upgrade-from-drupal">https://backdropcms.org/upgrade-from-drupal</a></p>
+
+
+
+<a name="204032956"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204032956" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204032956">(Jul 16 2020 at 01:01)</a>:</h4>
+<p>Yeah, doing an actual migration of the site as a whole was my first thought, but once I started looking at the site in detail, I realised there was a whole bunch of stuff/junk there (possibly from D6) that I didn't want to copy over, and removing it beforehand or changing it to a better system mid-migration looked too difficult. So decided easier in this case to setup a new Backdrop site and just import the necessary content.</p>
+
+
+
+<a name="204033026"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204033026" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> sdubois <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204033026">(Jul 16 2020 at 01:02)</a>:</h4>
+<p>That makes sense</p>
+
+
+
+<a name="204033958"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204033958" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204033958">(Jul 16 2020 at 01:17)</a>:</h4>
+<p>Biolithic started porting the migrate module some years ago: <a href="https://github.com/backdrop-contrib/migrate">https://github.com/backdrop-contrib/migrate</a><br>
+Due to the project I've been working on the last couple of months, I've been trying to finish it up and include the new things that have been added to the D7 module since the initial start.<br>
+I'm also going to port the WordPress Migrate module <a href="https://www.drupal.org/project/wordpress_migrate">https://www.drupal.org/project/wordpress_migrate</a> and the Drupal-to-Drupal data migration (renamed to Drupal-to-Backdrop data migration) module <a href="https://www.drupal.org/project/migrate_d2d">https://www.drupal.org/project/migrate_d2d</a>.<br>
+At least I'm going to see how far along I can get them. I think they might be quite handy real soon.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/migrate" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/migrate" title="backdrop-contrib/migrate">backdrop-contrib/migrate</a></div><div class="message_embed_description">the early conversion beginning of Migrate module Drupal 7 port - backdrop-contrib/migrate</div></div></div>
+
+
+
+<a name="204033959"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204033959" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204033959">(Jul 16 2020 at 01:17)</a>:</h4>
+<p>Is someone talking about Wordpress again?</p>
+
+
+
+<a name="204034009"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204034009" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204034009">(Jul 16 2020 at 01:18)</a>:</h4>
+<p>Yeah, Feeds sounds like a good option in that case <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> ...this reminds me of what <span class="user-mention" data-user-id="256664">@Luke McCormick</span> often keeps mentioning re not "locking" people's data, and how WP allows to easily export it:</p>
+
+
+
+<a name="204034049"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204034049" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204034049">(Jul 16 2020 at 01:18)</a>:</h4>
+<p><a href="/user_uploads/18319/kmBrzMn6GX9_7VZRJ1Eh3tcu/Screen-Shot-2020-07-16-at-4.17.46-am.png">Screen-Shot-2020-07-16-at-4.17.46-am.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/kmBrzMn6GX9_7VZRJ1Eh3tcu/Screen-Shot-2020-07-16-at-4.17.46-am.png" title="Screen-Shot-2020-07-16-at-4.17.46-am.png"><img src="/user_uploads/18319/kmBrzMn6GX9_7VZRJ1Eh3tcu/Screen-Shot-2020-07-16-at-4.17.46-am.png"></a></div>
+
+
+
+<a name="204034057"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204034057" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204034057">(Jul 16 2020 at 01:18)</a>:</h4>
+<p><a href="/user_uploads/18319/C-K6uZOxVrulRSxiowNzXmGu/Screen-Shot-2020-07-16-at-4.18.21-am.png">Screen-Shot-2020-07-16-at-4.18.21-am.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/C-K6uZOxVrulRSxiowNzXmGu/Screen-Shot-2020-07-16-at-4.18.21-am.png" title="Screen-Shot-2020-07-16-at-4.18.21-am.png"><img src="/user_uploads/18319/C-K6uZOxVrulRSxiowNzXmGu/Screen-Shot-2020-07-16-at-4.18.21-am.png"></a></div>
+
+
+
+<a name="204034181"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204034181" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204034181">(Jul 16 2020 at 01:20)</a>:</h4>
+<p><a href="/user_uploads/18319/5ZJ78RtCtqkz-34FRVNn5Gpo/Screen-Shot-2020-07-16-at-4.20.35-am.png">Screen-Shot-2020-07-16-at-4.20.35-am.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/5ZJ78RtCtqkz-34FRVNn5Gpo/Screen-Shot-2020-07-16-at-4.20.35-am.png" title="Screen-Shot-2020-07-16-at-4.20.35-am.png"><img src="/user_uploads/18319/5ZJ78RtCtqkz-34FRVNn5Gpo/Screen-Shot-2020-07-16-at-4.20.35-am.png"></a></div>
+
+
+
+<a name="204034215"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204034215" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204034215">(Jul 16 2020 at 01:21)</a>:</h4>
+<p><a href="/user_uploads/18319/dx9QZSMoJMv5PgB_sh7XhMSo/Screen-Shot-2020-07-16-at-4.21.42-am.png">Screen-Shot-2020-07-16-at-4.21.42-am.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/dx9QZSMoJMv5PgB_sh7XhMSo/Screen-Shot-2020-07-16-at-4.21.42-am.png" title="Screen-Shot-2020-07-16-at-4.21.42-am.png"><img src="/user_uploads/18319/dx9QZSMoJMv5PgB_sh7XhMSo/Screen-Shot-2020-07-16-at-4.21.42-am.png"></a></div>
+
+
+
+<a name="204034532"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204034532" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204034532">(Jul 16 2020 at 01:27)</a>:</h4>
+<p>There's also <a href="https://www.drupal.org/project/views_data_export">https://www.drupal.org/project/views_data_export</a> ...but not able to find a D7 module that imports that data <span aria-label="disappointed" class="emoji emoji-1f61e" role="img" title="disappointed">:disappointed:</span> ...only D8: <a href="https://www.drupal.org/project/csv_importer">https://www.drupal.org/project/csv_importer</a> and <a href="https://www.drupal.org/project/contentimport">https://www.drupal.org/project/contentimport</a></p>
+
+
+
+<a name="204036095"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204036095" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204036095">(Jul 16 2020 at 01:55)</a>:</h4>
+<p>...and I'm glad that we have an issue for it <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span> <a href="https://github.com/backdrop/backdrop-issues/issues/487">#487</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/487" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/487" title="[WP] Data import and export · Issue #487 · backdrop/backdrop-issues">[WP] Data import and export · Issue #487 · backdrop/backdrop-issues</a></div><div class="message_embed_description">For years, my biggest gripe with Drupal has been how hard it is to get data in and out. When I started (mid D6) the best solution was the Node Import module. It worked ok, but the interface struck ...</div></div></div>
+
+
+
+<a name="204127308"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204127308" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204127308">(Jul 16 2020 at 18:58)</a>:</h4>
+<p>I'd recommend feeds, but build your own views for it. Depending on the content you need to export, you could even do RSS or JSON formats.</p>
+
+
+
+<a name="204127385"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Exporting%20data%20from%20Drupal%20to%20import%20into%20Backdrop/near/204127385" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Exporting.20data.20from.20Drupal.20to.20import.20into.20Backdrop.html#204127385">(Jul 16 2020 at 18:59)</a>:</h4>
+<p>the down-side of doing exports and imports is that you won't be able to keep the IDs the same. so if you had content that referenced terms, that might need to be re-mapped after the import.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

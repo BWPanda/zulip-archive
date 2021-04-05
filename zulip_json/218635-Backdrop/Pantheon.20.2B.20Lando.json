@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Does anyone here have experience with developing a Pantheon Backdrop site locally using Lando?</p>",
+        "id": 230625804,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615944977
+    },
+    {
+        "content": "<p>I have a good bit of experience with Lando, but none whatsoever with Pantheon... I hit a snag trying to pull the DB from Pantheon into Lando, and am hoping maybe someone can help...</p>",
+        "id": 230625841,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615945032
+    },
+    {
+        "content": "<p>Ping <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> maybe?</p>",
+        "id": 230625845,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615945040
+    },
+    {
+        "content": "<p>Unless I'm mistaken, <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> works with Pantheon.</p>",
+        "id": 230629234,
+        "sender_full_name": "klonos",
+        "timestamp": 1615948421
+    },
+    {
+        "content": "<p>Yes, but not Lando. This is actually a site I'm working on with her <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 230629381,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615948553
+    },
+    {
+        "content": "<p>That's why I'm using Pantheon forthe first time.</p>",
+        "id": 230629439,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615948586
+    },
+    {
+        "content": "<p>Is there a handy lando-sync command to grab the db <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ? I usually grab it from the UI of the pantheon dashboard myself, or use drush sql-sync commands (with aliases)</p>",
+        "id": 230631127,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1615950393
+    },
+    {
+        "content": "<p>though, I don't know if I've tried the drush command on a backdrop site...</p>",
+        "id": 230631146,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1615950417
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Yep: <code>lando pull</code> - pulls down the DB, files and/or code: <a href=\"https://docs.lando.dev/config/pantheon.html#importing-your-database-and-files\">https://docs.lando.dev/config/pantheon.html#importing-your-database-and-files</a></p>",
+        "id": 230631211,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615950489
+    },
+    {
+        "content": "<p>I was trying it last week and was getting an error re. the DB:</p>\n<div class=\"codehilite\"><pre><span></span><code>Pulling your database... This miiiiight take a minute\n [warning] This environment is in read-only Git mode. If you want to make changes to the codebase of this site (e.g. updating modules or plugins), you will need to toggle into read/write SFTP mode first.\nUnable to load class Drush\\Sql\\Sql                                   [error]   ]\nDrush\\Sql\\SqlException: Unable to find a matching SQL Class. Drush   [error]\ncannot find your database connection details. in\n/opt/pantheon/drush/commands/sql/sql.drush.inc:577\n</code></pre></div>\n<p>Because Drush is involved, I'm working whether it's something to do with Backdrop's Drush extension (missing or otherwise not compatible)...?</p>",
+        "id": 230631353,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615950612
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>, ironically (taking into attention I promised AltaGrade will contribute all the database-related functions to Bee soon), brush does remote connections easily. I'm currently working with <a href=\"https://in.backdrop.org\">https://in.backdrop.org</a> and when I need to sync the DB I just <code>brush -y sql-sync @prod @dev</code>. So if you really need to do it regularly via CLI then use brush for now. But as I told database commands for Bee coming soon...</p>",
+        "id": 230631776,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1615951053
+    },
+    {
+        "content": "<p>I think the drush extension is missing something</p>",
+        "id": 230634999,
+        "sender_full_name": "Herb",
+        "timestamp": 1615953845
+    }
+]

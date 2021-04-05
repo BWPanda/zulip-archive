@@ -1,0 +1,170 @@
+[
+    {
+        "content": "<p>FYI - AmyJune offered to spend some time doing an accessibility audit of Backdrop CMS. I'm not sure what has been done in this regard in the past or what we might share with them.</p>",
+        "id": 210674017,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1600619581
+    },
+    {
+        "content": "<p>Here's a new feature request relating to accessibility: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4812\">https://github.com/backdrop/backdrop-issues/issues/4812</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4812\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4812\" title=\"Add 'aria-sort' attribute to Views' tables · Issue #4812 · backdrop/backdrop-issues\">Add 'aria-sort' attribute to Views' tables · Issue #4812 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Sortable tables outside of Views have an aria-sort attribute indicating the sort direction: However, tables created with Views don&#39;t have this: Can we please add the aria-sort attribute to View...</div></div></div>",
+        "id": 220333187,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608261625
+    },
+    {
+        "content": "<p>Is there a set of rules within Backdrop policies that address accessibility and when it is necessary for a given issue or is it just inherently expected that anything and everything that is accessibility related, has to be designed around the topic?</p>",
+        "id": 227391626,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614065480
+    },
+    {
+        "content": "<p>My understanding is that any code changes that touch the UI should be tested for accessibility, but that may not be feasible for the size of our community yet. My understanding is that Drupal now has an \"accessibility gate\" that all issues must pass, but the larger Drupal community has more members that are either directly use accessibility features, or it's part of their daily job to do that (I mean that they are UX/accessibility experts by profession).</p>",
+        "id": 227392719,
+        "sender_full_name": "klonos",
+        "timestamp": 1614066434
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> does it make sense to enforce accessibility on every UI issue when we don't even have a way of knowing how many people are using accessibility features in the first place?</p>",
+        "id": 227502368,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614114040
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Accessibility/near/227502368\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> does it make sense to enforce accessibility on every UI issue when we don't even have a way of knowing how many people are using accessibility features in the first place?</p>\n</blockquote>\n<p>just throwing in an opinion, I feel that it's important because in reality, accessibility should not be an option people should be able to decide to not have available.  you never know when lack of accessibility is blocking access to folks.</p>",
+        "id": 227504424,
+        "sender_full_name": "ericfg",
+        "timestamp": 1614114878
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"259074\">@ericfg</span> I agree and understand this, but there are areas that are far more important than others. For example, a contact webform on a website. Yes, this needs accessibility consideration.</p>\n<p>But how many people using accessibility features are going to create a layout? Or view? Or logging in to add images to a site?</p>\n<p>I'm not saying these shouldn't have accessibility at some point, but like <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> pointed out, the community doesn't have the resources to cater to every single use-case situation.</p>\n<p>If an accessibility API can be created around it where core and contrib call on that API without having to think about it and it gets added automatically based on the scenario I'm all game. But until then, I feel like there should be some sort of policy that helps dictate when it should be a blocker to an issue and when it should be allowed to slide \"temporarily\" so the overall scope can be implemented for the majority.</p>\n<p>Maybe there needs to be a specific place on <a href=\"http://b.org\">b.org</a> where accessibility folks can go to ask for it when it isn't available.</p>\n<p>Maybe when telemetry gets up and running, we can add accessibility as a collection point (for non GDPR countries) to gauge the actual use of these features and where.</p>\n<p>Maybe core needs to have two themes that can live together where one is for non-accessability and the other toggles for accessibility, allowing UX and UI focus on one and accessibility focus on the other.</p>\n<p>I dunno... When you get a couple of issues closed without discussion because of \"accessibility concerns\", it makes one step back and wonder what policy dictates suggestions in one area but not others.</p>",
+        "id": 227509398,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614116966
+    },
+    {
+        "content": "<p>oh sure I can see those points. sometimes (always?) an orthodox approach will step on other good ideas and prevent progress<br>\ndon't want to block a user's ability to do their work easily -- although I'd make an annoying semantic argument that this is a form of accessibility and that we're balancing different needs against each other</p>",
+        "id": 227509855,
+        "sender_full_name": "ericfg",
+        "timestamp": 1614117167
+    },
+    {
+        "content": "<p>to continue thinking out loud here. I feel that if at all possible, things that backdrop does just because it's the cms should focus very carefully on accessibility; we should make it easy for the end user to produce accessible content; we should not try to prevent people from doing what they want and cutting corners they feel they need to, even if we think some of their actions are, well, stupid</p>",
+        "id": 227510191,
+        "sender_full_name": "ericfg",
+        "timestamp": 1614117331
+    },
+    {
+        "content": "<p>also worth note, I'm just sticking my toes back in here after about a year of being otherwise distracted so I have no idea where things are at and what the current issues are that the community is working on. So I don't have full context and my statements might not be fully informed.</p>",
+        "id": 227510409,
+        "sender_full_name": "ericfg",
+        "timestamp": 1614117439
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"259074\">@ericfg</span> no worries. Discussion is always good provided people learn and better form their opinions based on the discussion.</p>\n<p>I guess I'm just wondering if it's a good idea to always put emphasis on certain \"ethical\" issues when the use-case for that ethical issue is comparatively small but still takes away from the task it's trying to accomplish.</p>\n<p>I for one am notorious for getting caught up in the details, but I have learned that the details don't usually matter in the grand scheme. It's always good to think about and consider the details, but also just as bad to get caught up in them.</p>\n<p>I should note I am no expert in this area, so if there is a solid argument as to \"why\" this discussion warrants so much attention for every situation, I'm all for changing my viewpoint.</p>",
+        "id": 227515542,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614119135
+    },
+    {
+        "content": "<p>Are there currently any issues where accessibility concerns are blocking overall progress (on that issue).</p>",
+        "id": 227517764,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614120196
+    },
+    {
+        "content": "<p>I'm still learning but I think accessibility should definitely be considered/discussed on every UI/UX issue.</p>",
+        "id": 227518621,
+        "sender_full_name": "Laryn",
+        "timestamp": 1614120619
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> No, they ended up being closed. I took it as \"advancements that would interfere with accessibility needs\"; therefore it wouldn't be considered. Maybe there was a more concrete reason and I just missed it. (more likely)</p>\n<p>Either way, lesson learned that if I'm going to present a UX/UI issue, don't give any direct clues on how it can be accomplished but rather leave the issue open-ended and generalized enough that the people who have accessibility experience can figure out how to fix it. Otherwise, I'll end up with \"This has accessibility implications so we aren't going to do it.\" <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<p>Mainly just trying to figure out my game-plan for crafting future issues.</p>",
+        "id": 227519721,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614121141
+    },
+    {
+        "content": "<p>I also agree that we shouldn't let anything slip in that we <em>know</em> is an accessibility issue. There's almost always another way to achieve what we need.  Making the software accessable doesn't just mean that screen readers will be able to navigate it. Things like better contrast and larger fonts make the experience better for everyone. :)</p>",
+        "id": 227529616,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614126770
+    },
+    {
+        "content": "<p>I understand the points made above, but wanted to point that ignoring accessibility is considered a form of exclusion. ...having said that, I need to also point out that:<br>\na) there is nothing in our <a href=\"https://backdropcms.org/philosophy\">https://backdropcms.org/philosophy</a> page specific to accessibility. We in fact have 2 of our principles mention the \"majority\", and unfortunate as it may be, the majority does not need accessibility (although as <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> said, we'd need metrics/data to back that up). If we were to change that, then it would require a PMC decision.<br>\nb) even if accessibility is not our priority, I am not sure if it is ethical to be introducing something that we know for sure that it is proven to have known accessibility issues. It is one thing to not be checking features going into core for accessibility, and another to ignore accessibility issues when they are known. It just doesn't feel right.<br>\n...also worth noting:</p>\n<ul>\n<li>Accessibility was a huge + when choosing <a href=\"https://www.smartmenus.org\">https://www.smartmenus.org</a> over other 3rd party tools for our OOTB drop-down menus feature.</li>\n<li>On the other hand, we decided against making the alt text on image fields required. The main reason was that we would cause frustration to sighted users, and quoting <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> form a comment in the issue queue:<blockquote>\n<p>I don't know how to measure frustrated-more-sighted-users vs happy-less-sighted-users. <span aria-label=\"confused\" class=\"emoji emoji-1f615\" role=\"img\" title=\"confused\">:confused:</span> I think we need more feedback!</p>\n</blockquote>\n</li>\n</ul>\n<p>...interesting opinions and research facts in both <a href=\"https://github.com/backdrop/backdrop-issues/issues/3006\">https://github.com/backdrop/backdrop-issues/issues/3006</a> and <a href=\"https://github.com/backdrop/backdrop-issues/issues/4551\">https://github.com/backdrop/backdrop-issues/issues/4551</a> for anyone interested <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3006\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3006\" title=\"ALT tags should be required by default · Issue #3006 · backdrop/backdrop-issues\">ALT tags should be required by default · Issue #3006 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea I want to make ALT tags on images required. There is a module I could port but I think this should probably be in core and active as a default for new image fields. Side...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4551\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4551\" title=\"Empty alt attribute added to images · Issue #4551 · backdrop/backdrop-issues\">Empty alt attribute added to images · Issue #4551 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Steps To Reproduce Create a post in a vanilla Backdrop installation. Add an image to it, but leave the &quot;Alternate text&quot; optional field empty. Save. Inspect the image code in your browser ...</div></div></div>",
+        "id": 227914407,
+        "sender_full_name": "klonos",
+        "timestamp": 1614338935
+    },
+    {
+        "content": "<p>Not sure, which tendencies this discussion has or is supposed to have...</p>\n<ul>\n<li>I'm convinced that our claim should always be: do it as good as possible. Providing an inaccessible UI - deliberately or by laziness - is not OK</li>\n<li>If we just didn't realize (which obviously can happen), we should fix it just like any other bug - bad accessibility is a bug IMO</li>\n</ul>\n<p>The decision for the given example (img alt attributes not enforced) has possibly happened, because bad (enforced hence potentially silly) alt texts can be worse than no alt text at all. Obviously we sometimes disagree (like with empty alt being better or worse than no alt), but maybe only because we can't determine what's better or worse.</p>",
+        "id": 227918266,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1614341278
+    },
+    {
+        "content": "<p>I agree with all that you said <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 227920139,
+        "sender_full_name": "klonos",
+        "timestamp": 1614342409
+    },
+    {
+        "content": "<p>One of the web sites we have created is for a parish council and needed accessibility...</p>\n<p>We added a free tool from <a href=\"http://userway.org\">userway.org</a></p>\n<p>You can compare the free vs paid for version here...</p>\n<p><a href=\"https://userway.org/compare\">https://userway.org/compare</a></p>\n<p>It may be that all you/we need to do it point people to a \"better fit\" instead of reinventing the wheel.</p>\n<p>Hope this helps.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://userway.org\" style=\"background-image: url(https://userway.org/open-graph/og.homepage.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://userway.org\" title=\"WCAG 2.1 &amp; ADA Compliance | Web Accessibility is UserWay\">WCAG 2.1 &amp; ADA Compliance | Web Accessibility is UserWay</a></div><div class=\"message_embed_description\">The world's #1 AI-Powered Website Accessibility Solution. Ensure full ADA and WCAG compliance with UserWay's Accessibility Widget powering accessibility on more than 700k websites. Protect your business from accessibility-related lawsuits today.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://userway.org/compare\" style=\"background-image: url(https://userway.org/open-graph/og.homepage.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://userway.org/compare\" title=\"Free vs UserWay's Full AI-Powered Widget\">Free vs UserWay's Full AI-Powered Widget</a></div><div class=\"message_embed_description\">The world's #1 AI-Powered Website Accessibility Solution. Ensure full ADA and WCAG compliance with UserWay's Accessibility Widget powering accessibility on more than 700k websites. Protect your business from accessibility-related lawsuits today.</div></div></div>",
+        "id": 227947068,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1614354862
+    },
+    {
+        "content": "<p>The problem with making alt text required (I do this now on all my drupal<br>\nsites) is that editors don't know how to write pepper alt text, so add<br>\nthings like \"image\" which is worse for unsighted users than not having<br>\nanything at all :(</p>",
+        "id": 227957212,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1614358821
+    },
+    {
+        "content": "<p>Just throwing myself into this chat for future reference :)</p>",
+        "id": 230167813,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615647651
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> , I think you are maintaining this one. I asked a dev I use as a gun for hire to make a pull request on it: <a href=\"https://github.com/backdrop-contrib/views_bootstrap\">https://github.com/backdrop-contrib/views_bootstrap</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/views_bootstrap\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/views_bootstrap\" title=\"backdrop-contrib/views_bootstrap\">backdrop-contrib/views_bootstrap</a></div><div class=\"message_embed_description\">This module provides a set of styles for the Views module. It allows you to create responsive Bootstrap 3.x components, such as grids, carousels, tabs, and tables, all within the configuration sett...</div></div></div>",
+        "id": 230228315,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615716714
+    },
+    {
+        "content": "<p>To change bootstrap accordian view. The title of the accordian is set by default to H3. But depending on where it is on the page (semantics wise), it might should be H2, H3, H4 etc.</p>",
+        "id": 230228378,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615716765
+    },
+    {
+        "content": "<p>So I asked him to add that option in views (to adjust the tag for the title). Does that sound ok?</p>",
+        "id": 230228383,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615716783
+    },
+    {
+        "content": "<p>For accessibility, it requires that all H tags are in semantic order. (Should not ever go H1 and then next H3). As this skipped H3. Screen readers can use the H tags to organize content better.</p>",
+        "id": 230228604,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615717043
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/WFsbrRKewg5YL_L0RqZP1_uU/Frequently-Asked-Questions-Content-2.png\">Frequently-Asked-Questions-Content-2.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/WFsbrRKewg5YL_L0RqZP1_uU/Frequently-Asked-Questions-Content-2.png\" title=\"Frequently-Asked-Questions-Content-2.png\"><img src=\"/user_uploads/18319/WFsbrRKewg5YL_L0RqZP1_uU/Frequently-Asked-Questions-Content-2.png\"></a></div>",
+        "id": 230229078,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615717545
+    },
+    {
+        "content": "<p>Pull request here: <a href=\"https://github.com/backdrop-contrib/views_bootstrap/pull/52\">https://github.com/backdrop-contrib/views_bootstrap/pull/52</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/views_bootstrap/pull/52\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/views_bootstrap/pull/52\" title=\"Make accodrion title tag configurable by dench0 · Pull Request #52 · backdrop-contrib/views_bootstrap\">Make accodrion title tag configurable by dench0 · Pull Request #52 · backdrop-contrib/views_bootstrap</a></div><div class=\"message_embed_description\">\nHave a question about this project? Sign up for a free GitHub account to open an issue and contact its maintainers and the community.\n  </div></div></div>",
+        "id": 230230477,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615719280
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span> ...I made a couple of wording suggestions, but the code otherwise looks good <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...I haven't tested though.</p>",
+        "id": 230246389,
+        "sender_full_name": "klonos",
+        "timestamp": 1615736887
+    }
+]

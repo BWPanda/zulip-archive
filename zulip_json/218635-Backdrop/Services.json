@@ -1,0 +1,260 @@
+[
+    {
+        "content": "<p>I know <a href=\"https://backdropcms.org/project/services\">https://backdropcms.org/project/services</a> exists...but that's not always the same as it working :) Is anyone using Services to feed an iOS app in Backdrop?</p>",
+        "id": 228956105,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1614952387
+    },
+    {
+        "content": "<p>Well... unfunny story: though I ported this, I confess I did so at a time when I was curious about all this web stuff works, and making this work was exciting and I have very little clue what I was doing. So I should actually remove myself as \"maintainer\" TBH, since I couldnt even tell you how well this module works. Thought back then I could do cool stuff with it, but in the end never used it.</p>",
+        "id": 228964749,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1614955566
+    },
+    {
+        "content": "<p>However 13 installs and no issues inthe queue seems suspiciously stable</p>",
+        "id": 228964816,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1614955587
+    },
+    {
+        "content": "<p>Though that could all be abandoned test sites.</p>",
+        "id": 228964839,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1614955600
+    },
+    {
+        "content": "<p>Thanks for the transparency :)</p>",
+        "id": 228964851,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1614955605
+    },
+    {
+        "content": "<p>Did you basically just do all the bare bones work to convert the D7 version to Backdrop and, when testing, you didn't get any obvious errors?</p>",
+        "id": 228964988,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1614955654
+    },
+    {
+        "content": "<p>It looks like maybe <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> did some work on it as recent as last year?</p>",
+        "id": 228965263,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1614955781
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"298007\">Rob Feature</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Services/near/228964988\">said</a>:</p>\n<blockquote>\n<p>Did you basically just do all the bare bones work to convert the D7 version to Backdrop and, when testing, you didn't get any obvious errors?</p>\n</blockquote>\n<p>Essentially that.</p>",
+        "id": 228980099,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1614961120
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"298007\">@Rob Feature</span> I basically merged the commits from the 7.x module, in order to bring us in par with it. The trigger I believe was a security update (and being part of the Bug Squad, I just did my part).</p>",
+        "id": 229158425,
+        "sender_full_name": "klonos",
+        "timestamp": 1615094606
+    },
+    {
+        "content": "<p>\"Bug Squad\" being this: <a href=\"https://backdropcms.org/leadership/bug-squad\">https://backdropcms.org/leadership/bug-squad</a></p>",
+        "id": 229158489,
+        "sender_full_name": "klonos",
+        "timestamp": 1615094658
+    },
+    {
+        "content": "<p>...it was a security release: <a href=\"https://github.com/backdrop-contrib/services/releases/tag/1.x-3.0.5-beta\">https://github.com/backdrop-contrib/services/releases/tag/1.x-3.0.5-beta</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/services/releases/tag/1.x-3.0.5-beta\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/services/releases/tag/1.x-3.0.5-beta\" title=\"Release 1.x-3.0.5-beta · backdrop-contrib/services\">Release 1.x-3.0.5-beta · backdrop-contrib/services</a></div><div class=\"message_embed_description\">BACKDROP-SA-CONTRIB-2020-002 https://backdropcms.org/security/backdrop-sa-contrib-2020-002</div></div></div>",
+        "id": 229159745,
+        "sender_full_name": "klonos",
+        "timestamp": 1615096036
+    },
+    {
+        "content": "<p>...I have now again merged a couple of commits from 7.x and made a new release: <a href=\"https://github.com/backdrop-contrib/services/releases\">https://github.com/backdrop-contrib/services/releases</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/services/releases\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/services/releases\" title=\"Releases · backdrop-contrib/services\">Releases · backdrop-contrib/services</a></div><div class=\"message_embed_description\">A standardized solution for building API's so that external clients can communicate with Backdrop. - backdrop-contrib/services</div></div></div>",
+        "id": 229159982,
+        "sender_full_name": "klonos",
+        "timestamp": 1615096297
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"298007\">@Rob Feature</span> once (if?) you have tested this enough, and have found no major issues, then we could ditch the \"beta\" indicator from the releases <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 229160046,
+        "sender_full_name": "klonos",
+        "timestamp": 1615096363
+    },
+    {
+        "content": "<p>Yes, we are using it. We are not officially in production use but have done tons of beta</p>",
+        "id": 229171326,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615107927
+    },
+    {
+        "content": "<p>Using services and views services to an xamarin C# app that runs on both iOS and Android.</p>",
+        "id": 229171340,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615107961
+    },
+    {
+        "content": "<p>Not too many issues that have come up. I believe some of the end points are different than the last D7 version however.</p>",
+        "id": 229171452,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615108066
+    },
+    {
+        "content": "<p>I am exclusively using the JSON format option.</p>",
+        "id": 229171498,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615108086
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> are you using Views to power your services? I'm wondering about a Backdrop replacement for Services Views module in D7 (<a href=\"https://www.drupal.org/project/services_views\">https://www.drupal.org/project/services_views</a>). EDIT: Just realized you said you're using Views Services...is that a separate module?</p>",
+        "id": 229332446,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615221807
+    },
+    {
+        "content": "<p>Hmm, I don't see it in my github. I think one of my team ported it. Let me grab a copy from my site and put it in github for you.</p>",
+        "id": 229341573,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615224944
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> You Rock, thank you!</p>",
+        "id": 229341693,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615224977
+    },
+    {
+        "content": "<p>No worries. Let me know if it works. <a href=\"https://github.com/ericvanderwal/Services-Views\">https://github.com/ericvanderwal/Services-Views</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/ericvanderwal/Services-Views\" style=\"background-image: url(https://avatars.githubusercontent.com/u/25902459?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/ericvanderwal/Services-Views\" title=\"ericvanderwal/Services-Views\">ericvanderwal/Services-Views</a></div><div class=\"message_embed_description\">Backdrop services views module port from Drupal 7 version - ericvanderwal/Services-Views</div></div></div>",
+        "id": 229343000,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615225531
+    },
+    {
+        "content": "<p>Will do! I'm just in the stage of making a list of modules that exist/don't for Backdrop...so I may not know very soon, but will report back when I do.</p>",
+        "id": 229343284,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615225654
+    },
+    {
+        "content": "<p>Yeah, no rush. We are using it on our site on a daily basis. So good so far.</p>",
+        "id": 229343367,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615225685
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> wondering why you haven't considered moving the module to the official Backdrop contrib repo.</p>",
+        "id": 229344150,
+        "sender_full_name": "klonos",
+        "timestamp": 1615226035
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , no reason in specific. Not sure it meets standards and honestly haven't had time.</p>",
+        "id": 229344257,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226064
+    },
+    {
+        "content": "<p>There are a few modules from our project that should be contributed.</p>",
+        "id": 229344280,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226075
+    },
+    {
+        "content": "<p>I am a D7 site builder for small clients, but actually a .net / c# developer, so my PHP is just basic. Someone else on my team did the work for me.</p>",
+        "id": 229344398,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226127
+    },
+    {
+        "content": "<p>any modules you have would be appreciated, even if theyre in a github repo that isn't up to the coding standards etc.  I'd always rather have something working than something perfect. :)</p>",
+        "id": 229344428,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615226141
+    },
+    {
+        "content": "<p>Ill see if I can get them organized but probably after this weekend. But just to let you know, I have a JWT services module, that returns a JWT via services when users login</p>",
+        "id": 229344590,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226202
+    },
+    {
+        "content": "<p>and a mail login for services. So accounts can be logged in using email rather than usernames.</p>",
+        "id": 229344638,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226224
+    },
+    {
+        "content": "<p>I'd love to see a way that modules can be contributed without being up to standards.  At least that gives other developers a starting point.</p>",
+        "id": 229344643,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615226225
+    },
+    {
+        "content": "<p>And path2ban</p>",
+        "id": 229344718,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226255
+    },
+    {
+        "content": "<p>which bans IP addrresses if they hit incorrect pages too many times. Also a port. Good for people mostly probing Wordpress sites and such.</p>",
+        "id": 229344793,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226283
+    },
+    {
+        "content": "<p>path2ban has been a crucial tool for us to add banned ips to a firewall.  Having that available would be great too.</p>",
+        "id": 229344918,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615226338
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/ahHgqt9kV35t1w84ol_-o0Uf/path2ban.rar\">path2ban.rar</a></p>",
+        "id": 229344950,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226352
+    },
+    {
+        "content": "<p>here it is</p>",
+        "id": 229344959,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226356
+    },
+    {
+        "content": "<p>If you want to make it release ready or such, please feel free, for anything. It should all be under the GNU licenses, the same as the original I believe.</p>",
+        "id": 229345053,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226402
+    },
+    {
+        "content": "<p>great</p>",
+        "id": 229345122,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615226411
+    },
+    {
+        "content": "<p>i'll probably at least drop it into a repo for future use</p>",
+        "id": 229345161,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615226425
+    },
+    {
+        "content": "<p>But its been running for about 6 months now through various backdrop updates without issue.</p>",
+        "id": 229345203,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226442
+    },
+    {
+        "content": "<p>So a good start :)</p>",
+        "id": 229345218,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615226447
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"298007\">Rob Feature</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Services/near/229344643\">said</a>:</p>\n<blockquote>\n<p>I'd love to see a way that modules can be contributed without being up to standards.  At least that gives other developers a starting point.</p>\n</blockquote>\n<p>Just push to Backdrop contrib on GH but don't make a release. It wont be listed on <a href=\"http://backdropcms.org\">backdropcms.org</a> until you release.</p>",
+        "id": 229345316,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615226484
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span>  I added it to github just so I didn't lose it :) <a href=\"https://github.com/bobchristenson/backdrop-path2ban/\">https://github.com/bobchristenson/backdrop-path2ban/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/bobchristenson/backdrop-path2ban/\" style=\"background-image: url(https://avatars.githubusercontent.com/u/282873?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/bobchristenson/backdrop-path2ban/\" title=\"bobchristenson/backdrop-path2ban\">bobchristenson/backdrop-path2ban</a></div><div class=\"message_embed_description\">path2ban port of D7 for Backdrop. Contribute to bobchristenson/backdrop-path2ban development by creating an account on GitHub.</div></div></div>",
+        "id": 229352029,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1615229002
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>Well I might have just freaked out a little bit... Got an email from one client site saying \"Your version of Drupal is no longer supported.\" On the site in question the Update page says:</p>\n<div class=\"codehilite\"><pre><span></span>Drupal core 7.69\nProject not supported: This project is no longer supported, and is no longer available for download. Disabling everything included by this project is strongly recommended!\n</pre></div>\n\n\n<p>But <a href=\"http://Drupal.org\" target=\"_blank\" title=\"http://Drupal.org\">Drupal.org</a> says 7.69 is still the recommended version of D7, so guessing this was just a glitch somewhere...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://Drupal.org\" style=\"background-image: url(https://www.drupal.org/sites/all/themes/bluecheese/images/og.jpg)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://Drupal.org\" target=\"_blank\" title=\"Drupal - Open Source CMS\">Drupal - Open Source CMS</a></div><div class=\"message_embed_description\">Drupal - the leading open-source CMS for ambitious digital experiences that reach your audience across multiple channels. Because we all have different needs, Drupal allows you to create a unique space in a world of cookie-cutter solutions.</div></div></div>",
+        "id": 190632014,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584251790
+    },
+    {
+        "content": "<p>Indeed, refreshing the update page shows Drupal core is up-to-date.</p>",
+        "id": 190632021,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584251852
+    },
+    {
+        "content": "<p>Perhaps they've been doing test-runs in <a href=\"http://d.org\" target=\"_blank\" title=\"http://d.org\">d.org</a> ...in preparation for how people will react on Nov 2021 <span aria-label=\"laughter tears\" class=\"emoji emoji-1f602\" role=\"img\" title=\"laughter tears\">:laughter_tears:</span></p>",
+        "id": 190633102,
+        "sender_full_name": "klonos",
+        "timestamp": 1584253877
+    },
+    {
+        "content": "<p>That was a bug with semantic versioning: <a href=\"https://www.drupal.org/project/project/issues/3119831\" target=\"_blank\" title=\"https://www.drupal.org/project/project/issues/3119831\">https://www.drupal.org/project/project/issues/3119831</a>. But, yeah, that was irritating. <span aria-label=\"stuck out tongue wink\" class=\"emoji emoji-1f61c\" role=\"img\" title=\"stuck out tongue wink\">:stuck_out_tongue_wink:</span></p>",
+        "id": 190639829,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1584266419
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I've upgraded a drupal 7 to backdrop and realize that some database updates have not being run. How can I force to run the upgrade functions? I guess by changing the schema_version number in system table, but cannot find the right ones. All my figures there are 70xx while in a backdrop install are 10xx.</p>",
+        "id": 204650223,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1595413802
+    },
+    {
+        "content": "<p>I see that the upgrade process should create a state table, which is hasn't been created in my upgrade process and running update.php doesn't do it either.</p>",
+        "id": 204651789,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1595415175
+    },
+    {
+        "content": "<p>forget-it. my fault. wrong ddbb</p>",
+        "id": 204652122,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1595415545
+    },
+    {
+        "content": "<p><span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 204726537,
+        "sender_full_name": "klonos",
+        "timestamp": 1595454364
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> when this happens to me I create a custom module, add an update hook, then manually call the update that has not been run. It's safer than fussing with the schema version column in the system table -- but that works too in a pinch</p>",
+        "id": 204832923,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1595527904
+    },
+    {
+        "content": "<p>:)</p>",
+        "id": 204832941,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1595527913
+    },
+    {
+        "content": "<p>Thanks for the tip <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span></p>",
+        "id": 204854409,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1595538899
+    }
+]

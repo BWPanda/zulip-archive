@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>What are people doing for automated offsite backups using Backup and Migrate, now that Node Squirrel is no more?</p>",
+        "id": 194338659,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587057767
+    },
+    {
+        "content": "<p>I only use B&amp;M for clients who wanted to backup their sites themselves (gives them a feeling of security since they can't see/access the backups I do otherwise). Otherwise I use a custom backup script for files &amp; DB on the same server every day/week/etc., and then Linode's automated backups (which are the offsite ones).</p>",
+        "id": 194339144,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1587057991
+    },
+    {
+        "content": "<p>i'd like to add an offsite option to this; <a href=\"https://github.com/serundeputy/sql-dump-sanitize\" title=\"https://github.com/serundeputy/sql-dump-sanitize\">https://github.com/serundeputy/sql-dump-sanitize</a> but you know time</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/serundeputy/sql-dump-sanitize\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/6763671?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/serundeputy/sql-dump-sanitize\" title=\"serundeputy/sql-dump-sanitize\">serundeputy/sql-dump-sanitize</a></div><div class=\"message_embed_description\">The purpose of this script is to backup and optionally --sanitize the database of your Backdrop CMS website. - serundeputy/sql-dump-sanitize</div></div></div>",
+        "id": 194340365,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587058554
+    },
+    {
+        "content": "<p>^ that is what <a href=\"http://b.org\" title=\"http://b.org\">b.org</a> uses;</p>",
+        "id": 194340439,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587058575
+    },
+    {
+        "content": "<p>My work on my own sites this week has led me to take a renewed interest in the Backup and Migrate module - <a href=\"https://backdropcms.org/project/backup_migrate\">https://backdropcms.org/project/backup_migrate</a>.  Since there obviously aren't enough topics in Zulip, and I couldn't find one suitable for this, I've created a new one <span aria-label=\"stuck out tongue\" class=\"emoji emoji-1f61b\" role=\"img\" title=\"stuck out tongue\">:stuck_out_tongue:</span> </p>\n<p>Fun fact: in the dev meeting yesterday, <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> pointed out that BaM is currently the most-downloaded Backdrop module, so it doesn't seem unwarranted to give it some love.</p>",
+        "id": 218105060,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1606491950
+    },
+    {
+        "content": "<p>My interest in BaM stems from the challenges I've faced creating a local copy of a site I'm working on in the Simplo hosting environment that <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  is developing. (Which, by the way, led me down this rabbit hole:  </p>\n<p><a href=\"https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html\">https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html</a></p>\n<p>\"It is preferable to create MySQL accounts with CREATE USER rather than GRANT. NO_AUTO_CREATE_USER is deprecated and the default SQL mode includes NO_AUTO_CREATE_USER. Assignments to sql_mode that change the NO_AUTO_CREATE_USER mode state produce a warning, except assignments that set sql_mode to DEFAULT. Expect NO_AUTO_CREATE_USER to be be removed in a future release of MySQL, and its effect to be enabled at all times (and for GRANT not to create accounts any longer).\"</p>\n<p>Which was addressed here:</p>\n<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4238\">https://github.com/backdrop/backdrop-issues/issues/4238</a></p>\n<p>But: I discovered it when I I found I wasn't able to create new Backdrop sites in Backdrop 1.17.1, which was released Sept 30.  Apparently my new Ubuntu system is pretty aggressive about upgrades, and had updated MySQL to 5.8.</p>\n<p>This probably happens to you guys all the time, but I found it pretty shocking to have what seemed like correct new-site technique met with this:</p>\n<p><a href=\"/user_uploads/18319/Pw06OxpbBUhaagonV6Id2oSW/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/Pw06OxpbBUhaagonV6Id2oSW/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/Pw06OxpbBUhaagonV6Id2oSW/image.png\"></a></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4238\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4238\" title=\"MySQL 8 support · Issue #4238 · backdrop/backdrop-issues\">MySQL 8 support · Issue #4238 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need MySQL 8 has a number of incompatibilities with previous versions, including new keywords that need to be escaped, and removing of the NO_AUTO_CREATE_USER init SQL mode. This...</div></div></div>",
+        "id": 218109630,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1606494850
+    },
+    {
+        "content": "<p>Interesting.</p>",
+        "id": 218115911,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1606499179
+    },
+    {
+        "content": "<p>Also interesting (for me) to see that my “new” Zulip topic isn’t new at all.</p>",
+        "id": 218116096,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1606499394
+    },
+    {
+        "content": "<p>Oh, I forgot to mention my main thought about BaM: I think it should also be able to backup and restore CMI config.  Otherwise it’s not very useful for Backdrop, since you need to keep the config and database synced pretty well.  (My feeling is that this is a shortcoming in CMI, but I’m not comfortable that I know enough to authoritatively conclude that.)</p>",
+        "id": 218116700,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1606499843
+    },
+    {
+        "content": "<p>I'm pretty sure that's been mentioned at some point in the recent past.</p>",
+        "id": 218118290,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1606501091
+    },
+    {
+        "content": "<p>There's an issue for that  in the bam queue, I think.</p>",
+        "id": 218119064,
+        "sender_full_name": "Laryn",
+        "timestamp": 1606501878
+    },
+    {
+        "content": "<p>Indeed there is: <a href=\"https://github.com/backdrop-contrib/backup_migrate/issues/35\">https://github.com/backdrop-contrib/backup_migrate/issues/35</a></p>\n<p>(As well as this: <a href=\"https://github.com/backdrop-contrib/backup_migrate/issues/59\">https://github.com/backdrop-contrib/backup_migrate/issues/59</a>)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/backup_migrate/issues/35\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/backup_migrate/issues/35\" title=\"Include config as an option in &quot;Entire site&quot; backups · Issue #35 · backdrop-contrib/backup_migrate\">Include config as an option in \"Entire site\" backups · Issue #35 · backdrop-contrib/backup_migrate</a></div><div class=\"message_embed_description\">I&#39;m not sure how much work it would take, but I think it would be great to expand B&amp;M scope to also include config. I had started a site in one place and then was going to duplicate on my l...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/backup_migrate/issues/59\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/backup_migrate/issues/59\" title=\"Backup Config Files · Issue #59 · backdrop-contrib/backup_migrate\">Backup Config Files · Issue #59 · backdrop-contrib/backup_migrate</a></div><div class=\"message_embed_description\">Feature request. When updating a site, I believe that it probably makes sense to backup the database, the files, and the config directory. I can backup the database and files (and code) with Backup...</div></div></div>",
+        "id": 218121405,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1606503974
+    },
+    {
+        "content": "<p>The code for BaM is very confusing. I didn't make much headway when I looked at it</p>",
+        "id": 218138835,
+        "sender_full_name": "Herb",
+        "timestamp": 1606523800
+    }
+]

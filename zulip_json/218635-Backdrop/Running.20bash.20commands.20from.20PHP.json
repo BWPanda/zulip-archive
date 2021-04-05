@@ -1,0 +1,14 @@
+[
+    {
+        "content": "<p>I need to run some Bash commands from a PHP file using something like <code>exec()</code>. This works fine, except that the commands are run as the <code>www-data</code> user. This causes issues with permissions/access. I'm specifically trying to download modules with <code>b</code> and also <code>git clone</code> a repo. The files are downloaded and assigned to the <code>www-data</code> owner, and the <code>git clone</code> doesn't work because it's not using my account/SSH key. I've read something about allowing the <code>www-data</code> user to <code>sudo</code> to me (without a password), and then only allowing specific commands, but I'm wondering if there are other solutions...?</p>",
+        "id": 198517298,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590207365
+    },
+    {
+        "content": "<p>I use the <code>laravel/envoy</code> task runner for things like this; it can operate on multiple servers including the localhost; here is an example: <a href=\"https://github.com/aturnintime/howtobackdrop.com/blob/master/Envoy.blade.php\">https://github.com/aturnintime/howtobackdrop.com/blob/master/Envoy.blade.php</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/aturnintime/howtobackdrop.com/blob/master/Envoy.blade.php\" style=\"background-image: url(https://avatars0.githubusercontent.com/u/58274044?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/aturnintime/howtobackdrop.com/blob/master/Envoy.blade.php\" title=\"aturnintime/howtobackdrop.com\">aturnintime/howtobackdrop.com</a></div><div class=\"message_embed_description\">Videos, posts, and how-tos on Backdrop CMS. Contribute to aturnintime/howtobackdrop.com development by creating an account on GitHub.</div></div></div>",
+        "id": 198536550,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590241640
+    }
+]

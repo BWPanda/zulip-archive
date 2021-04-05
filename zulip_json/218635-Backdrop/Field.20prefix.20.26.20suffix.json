@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I have a decimal field configured with a prefix of <code>$</code> and a suffix of <code>AUD</code>. I'm outputting the field in Views, and I've configured to output the prefix and suffix too.</p>",
+        "id": 219289194,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607478755
+    },
+    {
+        "content": "<p>When it's output, the prefix and suffix are appended/prepended onto the field value, so there's no way of styling the prefix/suffix separately to the field value.</p>",
+        "id": 219289213,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607478792
+    },
+    {
+        "content": "<p>(I'd like to display the <code>AUD</code> part in a smaller font for example)</p>",
+        "id": 219289225,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607478807
+    },
+    {
+        "content": "<p>Anyone know if the prefix/suffix should be output differently or, if not, how I'd go about doing that myself?</p>",
+        "id": 219289302,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607478854
+    },
+    {
+        "content": "<p>Just discovered that I can add HTML to the suffix field. Added a span with a class and that works for me.</p>",
+        "id": 219294413,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607484884
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> the other option is to add a global field with the manually typed prefix/suffix and styling, then add the number field without the prefix/suffix and rewrite the number field to have both tokens.</p>",
+        "id": 219304189,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607498663
+    },
+    {
+        "content": "<p>Your route is much easier, but if you need more styling, the route I suggested opens more flexibility.</p>",
+        "id": 219304211,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1607498714
+    }
+]

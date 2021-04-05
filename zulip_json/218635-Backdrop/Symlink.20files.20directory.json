@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>Looking for some quick help here - i have the symbolic link up for sites/default/files to files (files is the source), but Backdrop isn't picking it up.  It shows up on the command line and is working - I can list /sites/default/files and see all the files in /files, but not in backdrop<br>\nAny ideas?</p>",
+        "id": 212849701,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602261996
+    },
+    {
+        "content": "<p>Maybe web-server configuration, for example:<br>\n<code>&lt;Directory YOUR_PATH&gt;\n    Options FollowSymLinks\n    AllowOverride All\n    ....\n&lt;/Directory&gt;</code></p>",
+        "id": 212855608,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1602265375
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/New.20site.20launch/near/212855608\">said</a>:</p>\n<blockquote>\n<p>Maybe web-server configuration, for example:<br>\n<code>&lt;Directory YOUR_PATH&gt;\n    Options FollowSymLinks\n    AllowOverride All\n    ....\n&lt;/Directory&gt;</code></p>\n</blockquote>\n<p>What file to edit?</p>",
+        "id": 212856215,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602265691
+    },
+    {
+        "content": "<p>In case of Debian GNU/Linux - /etc/apache2/apache2.conf (Otherwise, httpd.conf)</p>",
+        "id": 212856523,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1602265910
+    },
+    {
+        "content": "<p>Backup, restart or reload is required, you know.</p>",
+        "id": 212856786,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1602266051
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268468\">Vladimir</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Symlink.20files.20directory/near/212856786\">said</a>:</p>\n<blockquote>\n<p>Backup, restart or reload is required, you know.</p>\n</blockquote>\n<p>Yep, will do through WHM.  I know where to look.</p>",
+        "id": 212861422,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602268697
+    }
+]

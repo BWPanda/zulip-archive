@@ -1,0 +1,152 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> - What are you looking for in a discussion about porting organic groups? Are you looking for help? Did you just want to see if there was interest?</p>",
+        "id": 208114271,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598458951
+    },
+    {
+        "content": "<p>To me, I suppose the question that are relevant would be:<br>\n1) Is this an important enough suite of modules that we should be making a special effort to encourage it being ported?<br>\n2) If it's that important, why hasn't it been ported already? Is it just to complex?<br>\n3) Are there other complex modules that should be ported but are not getting ported on their own?</p>",
+        "id": 208114614,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598459136
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  I want to see if there is interest and I am looking for help if my conclusion is true (from my issue):</p>\n<blockquote>\n<p>I think this requires in-depth expertise in core programming also. We should find an expert who can port this module.</p>\n</blockquote>\n<p>An average porting programmer can use only one \"tool\": A description on <a href=\"http://Backdropcms.org\">Backdropcms.org</a> about the converting. It is not enough for OG module. Can anybody continue my unfinished porting?</p>\n<p>These are my thoughts on your questions:<br>\n1) I guess yes. I think we need Organic Group module too, if we want to captivate the D7 users. It is included in the list of top 125 modules (by <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ): <a href=\"https://github.com/backdrop-ops/contrib/issues/34\">https://github.com/backdrop-ops/contrib/issues/34</a><br>\n2) I think the problem is the complexity. Consider the number of D7 users of OG, and the OG module is the dependecy of other modules.<br>\n3) I think yes, and we should file an issue at <code>backdrop-ops/contrib</code> if we find a too compex (and important) module for an average porting programmer.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/34\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/34\" title=\"How are we doing so far? · Issue #34 · backdrop-ops/contrib\">How are we doing so far? · Issue #34 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Drupal 7.x modules list by most installed (top 125): (thought it would be nice to see what&#39;s missing - we&#39;re not doing too bad!) Key: Unported Ported In core or replaced Modules: Views (par...</div></div></div>",
+        "id": 208131656,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1598467492
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> it would help if you could run the code through coder upgrade, and start a repo in Backdrop contrib.</p>",
+        "id": 208152519,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1598477971
+    },
+    {
+        "content": "<p>I got at least that far recently: <a href=\"https://github.com/laryn/og\">https://github.com/laryn/og</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/laryn/og\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/871421?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/laryn/og\" title=\"laryn/og\">laryn/og</a></div><div class=\"message_embed_description\">Contribute to laryn/og development by creating an account on GitHub.</div></div></div>",
+        "id": 208160304,
+        "sender_full_name": "Laryn",
+        "timestamp": 1598482959
+    },
+    {
+        "content": "<p>Then stalled here for now: <a href=\"https://github.com/backdrop-contrib/entity_plus/issues/32\">https://github.com/backdrop-contrib/entity_plus/issues/32</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/entity_plus/issues/32\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/entity_plus/issues/32\" title=\"Entity Views · Issue #32 · backdrop-contrib/entity_plus\">Entity Views · Issue #32 · backdrop-contrib/entity_plus</a></div><div class=\"message_embed_description\">@hosef It looks like somewhere along the way the views folder got chopped out. I was trying to do a quick-and-dirty &quot;Coder Upgrade&quot; on organic groups just as a test, but it looks like it ...</div></div></div>",
+        "id": 208160328,
+        "sender_full_name": "Laryn",
+        "timestamp": 1598482987
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> I worked a lot on porting OG module, my conclusion: <a href=\"https://github.com/backdrop-ops/contrib/issues/420\">https://github.com/backdrop-ops/contrib/issues/420</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/420\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/420\" title=\"Port request for Organic groups · Issue #420 · backdrop-ops/contrib\">Port request for Organic groups · Issue #420 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Name of the module, theme, or layout Organic groups Link to the drupal.org module, theme, or layout https://www.drupal.org/project/og It is a very useful module, but I couldn&#39;t convert it: http...</div></div></div>",
+        "id": 208181527,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1598509210
+    },
+    {
+        "content": "<p>It's exciting to see movement on Organic Groups for Backdrop CMS. <br>\n<a href=\"https://github.com/laryn/og/issues\">https://github.com/laryn/og/issues</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/laryn/og/issues\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/871421?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/laryn/og/issues\" title=\"laryn/og\">laryn/og</a></div><div class=\"message_embed_description\">Contribute to laryn/og development by creating an account on GitHub.</div></div></div>",
+        "id": 216813911,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605473761
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> - I'm testing again now.</p>",
+        "id": 216816390,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605476939
+    },
+    {
+        "content": "<p>@Laryn ++</p>",
+        "id": 216816718,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1605477276
+    },
+    {
+        "content": "<p>laryn thanks for all you do (Karma: 1)</p>",
+        "id": 216816719,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1605477276
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Are you interested in taking a crack at the role  ID issue?</p>",
+        "id": 216817255,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605478039
+    },
+    {
+        "content": "<p>Checking now</p>",
+        "id": 216817260,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605478056
+    },
+    {
+        "content": "<p>Sure, I'll try now.</p>",
+        "id": 216817307,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605478092
+    },
+    {
+        "content": "<p>Just restarting my test, but only enabling og and og_ui to see if that works better.</p>",
+        "id": 216817317,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605478134
+    },
+    {
+        "content": "<p>Yeah that's what I've mostly been doing, at least to start. But the role  ID fix may be needed in submodules too.</p>",
+        "id": 216817394,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605478261
+    },
+    {
+        "content": "<p>OK, I'm working on that issue. Not sure how equipped I am for it, but I'll post progress reports and questions here:<br>\n<a href=\"https://github.com/laryn/og/issues/5\">https://github.com/laryn/og/issues/5</a></p>\n<p>Tips welcome. </p>\n<p>Also - if I'm blocking anything else and someone can do this quicker, feel free to jump in.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/laryn/og/issues/5\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/871421?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/laryn/og/issues/5\" title=\"Convert role ID query to use CMI · Issue #5 · laryn/og\">Convert role ID query to use CMI · Issue #5 · laryn/og</a></div><div class=\"message_embed_description\">In various places, queries and references to &quot;role ID&quot; need to be converted to work with Backdrop&#39;s CMI. For example: https://github.com/laryn/og/blob/1.x-2.x/og.module#L2687 @stpault...</div></div></div>",
+        "id": 216817791,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605479015
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I won't be able to test again until tonight. Thanks for your work.</p>",
+        "id": 216913987,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605552258
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Indeed, thanks for porting Organic Groups. Just started testing, here's a first issue: <a href=\"https://github.com/laryn/og/issues/16\">https://github.com/laryn/og/issues/16</a>. I've not much time these days but I'm eager to do more testing.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/laryn/og/issues/16\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/871421?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/laryn/og/issues/16\" title=\"Admin people view missing · Issue #16 · laryn/og\">Admin people view missing · Issue #16 · laryn/og</a></div><div class=\"message_embed_description\">On the OG settings page admin/config/group/settings, there is a list to select &quot;the View that should be used to show and control the people in the group&quot;. As far as I know, it should be t...</div></div></div>",
+        "id": 216943028,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1605566410
+    },
+    {
+        "content": "<p>Thanks! I have a PR in process that may resolve a bunch of the issues. I can post back here when it's ready for more testing.</p>",
+        "id": 216944342,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605567245
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> <span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Ready for further testing. Some issues are still open but there should be major progress. I've closed a few issues -- reopen if you see it as still a problem.</p>",
+        "id": 217021161,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605628505
+    },
+    {
+        "content": "<p>I wasn't able to test last night. But, looking forward to checking out progress today.</p>",
+        "id": 217043840,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605638083
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> - I'm watching progress with excitement, but just don't have time to help right now. I wish I did. I will get back in the queue as soon as possible.</p>",
+        "id": 217204637,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605738002
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I'm also eager to help! :)</p>",
+        "id": 217216701,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1605746664
+    },
+    {
+        "content": "<p>Just started over to test <a href=\"https://github.com/backdrop-contrib/og\">https://github.com/backdrop-contrib/og</a>, following <a href=\"http://modulesunraveled.com/organic-groups-7x-2x\">http://modulesunraveled.com/organic-groups-7x-2x</a>, chapters \"2. Organic Groups Setup\" and \"3. Organic Groups Views\". Went fine so far, only smaller issues.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/og\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/og\" title=\"backdrop-contrib/og\">backdrop-contrib/og</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/og development by creating an account on GitHub.</div></div></div>",
+        "id": 217743701,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1606219306
+    }
+]

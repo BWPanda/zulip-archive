@@ -1,0 +1,110 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Features.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html">Features</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="213230135"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213230135" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213230135">(Oct 13 2020 at 23:27)</a>:</h4>
+<p>Anyone have experience with D7 Features module? I'm looking to migrate a D7 site that has a few custom Features and I want to get rid of Features and its dependencies, but keep the functionality (views, content types, settings, etc.)...</p>
+
+
+
+<a name="213230154"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213230154" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213230154">(Oct 13 2020 at 23:27)</a>:</h4>
+<p>Don’t we all :)</p>
+
+
+
+<a name="213231105"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213231105" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213231105">(Oct 13 2020 at 23:41)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> there is this: <a href="https://www.drupal.org/project/unfeaturize">https://www.drupal.org/project/unfeaturize</a><br>
+<span class="user-mention" data-user-id="263951">@jenlampton</span> also wrote a blog post / gave a presentation on what you're asking for, but I cannot locate it.</p>
+
+
+
+<a name="213231534"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213231534" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213231534">(Oct 13 2020 at 23:48)</a>:</h4>
+<p>Yeah I found that, but it seems to only refer to content types... My features have all sorts of stuff.</p>
+
+
+
+<a name="213231556"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213231556" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213231556">(Oct 13 2020 at 23:49)</a>:</h4>
+<p>I think it'll probably just be easier to setup a new Backdrop site from scratch and migrate things manually... (for this site anyway)</p>
+
+
+
+<a name="213231653"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213231653" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213231653">(Oct 13 2020 at 23:50)</a>:</h4>
+<p>As long as all the things in your feature are in the database (and not only in code) an upgrade from Drupal 7 should work normally. I usually just disable my feature modules in D7 and confirm everything is still there... then, update.php!</p>
+
+
+
+<a name="213232406"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213232406" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213232406">(Oct 14 2020 at 00:01)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/Features/near/213231534">said</a>:</p>
+<blockquote>
+<p>Yeah I found that, but it seems to only refer to content types... My features have all sorts of stuff.</p>
+</blockquote>
+<p>Feeds!!!  I'm thinking at one point I should (we should as a group) write an article on when to upgrade vs. migrate using Feeds.</p>
+
+
+
+<a name="213232687"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213232687" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213232687">(Oct 14 2020 at 00:05)</a>:</h4>
+<p>Yep. This site has ~700 'Product' nodes which were/are imported from the client's SAGE database using a CSV file and Feeds in D7. So we're just going to use Feeds for them in Backdrop too. The rest of the site consists of about 5 other nodes, which I'll just copy over by hand <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="213273933"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213273933" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213273933">(Oct 14 2020 at 11:19)</a>:</h4>
+<p>copy over by hand ++</p>
+
+
+
+<a name="213273934"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213273934" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213273934">(Oct 14 2020 at 11:19)</a>:</h4>
+<p>hand kudos (Karma: 1)</p>
+
+
+
+<a name="213407754"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213407754" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213407754">(Oct 15 2020 at 10:56)</a>:</h4>
+<p>The Unfeaturize module was mentioned in <a href="https://api.backdropcms.org/documentation/upgrading-from-drupal-7">https://api.backdropcms.org/documentation/upgrading-from-drupal-7</a>. I just linkified the mention to it, so it'd be easier for people to know what we are talking about.</p>
+
+
+
+<a name="213421935"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213421935" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213421935">(Oct 15 2020 at 13:10)</a>:</h4>
+<p>I finally remembered where I had seen Jen's presentation on sites w/o Features and found it: <a href="https://www.youtube.com/watch?v=Rvywmim87DE&amp;list=PLpeDXSh4nHjRa80iIpiO7iFncC9nO5l6f&amp;index=94">YouTube - DrupalCon Seattle 2019: A world without features - save time by managing exportables</a></p>
+<div class="youtube-video message_inline_image"><a data-id="Rvywmim87DE" href="https://www.youtube.com/watch?v=Rvywmim87DE&amp;list=PLpeDXSh4nHjRa80iIpiO7iFncC9nO5l6f&amp;index=94"><img src="https://i.ytimg.com/vi/Rvywmim87DE/default.jpg"></a></div>
+
+
+
+<a name="213425021"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213425021" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213425021">(Oct 15 2020 at 13:28)</a>:</h4>
+<p>Okay, I just went and re-watched/listened to it, and it doesn't apply to <span class="user-mention" data-user-id="256607">@BWPanda</span>'s situation, like I thought it did.</p>
+
+
+
+<a name="213427348"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Features/near/213427348" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Features.html#213427348">(Oct 15 2020 at 13:46)</a>:</h4>
+<p>maybe we should create a Features Converter module for upgrades.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

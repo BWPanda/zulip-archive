@@ -1,0 +1,92 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/API.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html">API</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="195575121"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/195575121" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Bryan Ollendyke <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#195575121">(Apr 28 2020 at 14:50)</a>:</h4>
+<p>is there an API equivalent for hook_page_build? I was adding preload headers into the head of the document via a module and I can't find a way to do this now</p>
+
+
+
+<a name="195575395"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/195575395" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Bryan Ollendyke <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#195575395">(Apr 28 2020 at 14:52)</a>:</h4>
+<p>looks like hook_html_head_alter might work</p>
+
+
+
+<a name="195576028"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/195576028" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Bryan Ollendyke <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#195576028">(Apr 28 2020 at 14:56)</a>:</h4>
+<p>ok. <code>hook_init</code> with <code>backdrop_add_html_head</code> good now :)</p>
+
+
+
+<a name="195743019"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/195743019" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Attila Vasas <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#195743019">(Apr 29 2020 at 17:24)</a>:</h4>
+<p><span class="user-mention" data-user-id="269151">@Bryan Ollendyke</span>  Related: <a href="https://api.backdropcms.org/change-records/new-layout-module-implements-drag-drop-model-building-layouts" title="https://api.backdropcms.org/change-records/new-layout-module-implements-drag-drop-model-building-layouts">https://api.backdropcms.org/change-records/new-layout-module-implements-drag-drop-model-building-layouts</a></p>
+
+
+
+<a name="196031080"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/196031080" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#196031080">(May 02 2020 at 03:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="269151">@Bryan Ollendyke</span> When porting modules I usually go for hook_preprocess_page(), pretty much the last thing that fires just before making the HTML page.</p>
+
+
+
+<a name="196031180"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/196031180" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#196031180">(May 02 2020 at 03:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@Nate Lampton</span>  I don't think we have a hook_preprocess_page in Backdrop.  page is the only template that doesn't have a preprocess.</p>
+
+
+
+<a name="196031188"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/196031188" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#196031188">(May 02 2020 at 03:51)</a>:</h4>
+<p>hm, the API says it still exists...  <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21theme.inc/function/template_preprocess_page/1" title="https://api.backdropcms.org/api/backdrop/core%21includes%21theme.inc/function/template_preprocess_page/1">https://api.backdropcms.org/api/backdrop/core%21includes%21theme.inc/function/template_preprocess_page/1</a></p>
+
+
+
+<a name="196032213"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/196032213" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#196032213">(May 02 2020 at 04:16)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> <code>hook_preprocess_page()</code> is how the admin bar is added. Definitely still there. You might be thinking of <code>hook_process_page()</code>?</p>
+
+
+
+<a name="196032220"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/196032220" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#196032220">(May 02 2020 at 04:16)</a>:</h4>
+<p>maybe it just doesn't exist for themes?</p>
+
+
+
+<a name="196032305"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/196032305" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#196032305">(May 02 2020 at 04:18)</a>:</h4>
+<p>No, there are no process hooks for anything. I remembered there being one template that didn't have preprocess, and thought it was page b/c that template <code>was special</code> (since it added all the script tags and everything)</p>
+
+
+
+<a name="196032332"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/196032332" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#196032332">(May 02 2020 at 04:19)</a>:</h4>
+<p>Maybe I'm thinking of html in drupal 8 :)</p>
+
+
+
+<a name="196032392"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/API/near/196032392" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/API.html#196032392">(May 02 2020 at 04:20)</a>:</h4>
+<p>it's definitely still there for themes too: <a href="https://api.backdropcms.org/api/backdrop/core%21themes%21basis%21template.php/function/basis_preprocess_page/1" title="https://api.backdropcms.org/api/backdrop/core%21themes%21basis%21template.php/function/basis_preprocess_page/1">https://api.backdropcms.org/api/backdrop/core%21themes%21basis%21template.php/function/basis_preprocess_page/1</a></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

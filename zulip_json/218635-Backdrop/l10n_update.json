@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>I've got Localization Update sort of working. <a href=\"https://github.com/backdrop-contrib/l10n_update\">https://github.com/backdrop-contrib/l10n_update</a> I worked on it for a client but I'm only half-motivated to have it all working since currently Backdrop-specific translations are only available for core. Anyone else interested in testing and figuring out how to get it fully working. <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/l10n_update\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/l10n_update\" title=\"backdrop-contrib/l10n_update\">backdrop-contrib/l10n_update</a></div><div class=\"message_embed_description\">Helps to keep the translation of your Backdrop core and contributed modules up to date with automatic updates. - backdrop-contrib/l10n_update</div></div></div>",
+        "id": 215508988,
+        "sender_full_name": "Herb",
+        "timestamp": 1604436986
+    },
+    {
+        "content": "<p>One issue seems to be the version numbers. l10n_update assumes a core of 1.x but the actual files on <a href=\"http://localize.backdrocms.org\">localize.backdrocms.org</a> have it as 1.17 etc. And it is also inconsistent in the versions: 1.17 versus 1.13.0.</p>",
+        "id": 215509166,
+        "sender_full_name": "Herb",
+        "timestamp": 1604437103
+    },
+    {
+        "content": "<p>E.g. <a href=\"https://localize.backdropcms.org/translate/languages/fr\">https://localize.backdropcms.org/translate/languages/fr</a></p>",
+        "id": 215509184,
+        "sender_full_name": "Herb",
+        "timestamp": 1604437115
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Re version numbers, they were changed at a certain point by <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> , see <a href=\"https://github.com/backdrop-ops/localize.backdropcms.org/issues/27#issuecomment-497838789\">https://github.com/backdrop-ops/localize.backdropcms.org/issues/27#issuecomment-497838789</a> and below.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/localize.backdropcms.org/issues/27#issuecomment-497838789\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/localize.backdropcms.org/issues/27#issuecomment-497838789\" title=\"Add core releases and source files · Issue #27 · backdrop-ops/localize.backdropcms.org\">Add core releases and source files · Issue #27 · backdrop-ops/localize.backdropcms.org</a></div><div class=\"message_embed_description\">The translation server needs a new language source file for every Backdrop release, and we have to make a translation release of it. We&#39;re planning to generate the language files automatically....</div></div></div>",
+        "id": 215517315,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1604442289
+    },
+    {
+        "content": "<blockquote>\n<p>currently Backdrop-specific translations are only available for core</p>\n</blockquote>\n<p>We could provide other projects as well. Care to open an issue in the localize queue? I‘m not at the computer atm.</p>",
+        "id": 215518191,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1604442844
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> <a href=\"https://github.com/backdrop-ops/localize.backdropcms.org/issues/41\">https://github.com/backdrop-ops/localize.backdropcms.org/issues/41</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/localize.backdropcms.org/issues/41\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/localize.backdropcms.org/issues/41\" title=\"Provide translations for contrib projects · Issue #41 · backdrop-ops/localize.backdropcms.org\">Provide translations for contrib projects · Issue #41 · backdrop-ops/localize.backdropcms.org</a></div><div class=\"message_embed_description\">Currently Backdrop-specific translations are only available for core. Let's also provide translations for modules and other contrib projects.</div></div></div>",
+        "id": 215608126,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1604508244
+    }
+]

@@ -1,0 +1,140 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html">resolving git conflicts with upstream</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="188722089"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188722089" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188722089">(Feb 21 2020 at 11:03)</a>:</h4>
+<p>I'd need some guidance on how to merge upstream into an existing PR and resolve conflicts. Should I simply do that locally and push? Or are there any best practices for things like that? How are others doing that?</p>
+
+
+
+<a name="188723068"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188723068" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188723068">(Feb 21 2020 at 11:22)</a>:</h4>
+<p>If I'm working on a Backdrop core issue, I have a fork of the Backdrop repo that I use. I keep it -up-to-date with: <code>git checkout 1.x &amp;&amp; git fetch upstream &amp;&amp; git merge upstream/1.x &amp;&amp; git push -f</code>. If my issue-branch then needs updating, I switch to it, then: <code>git merge 1.x</code>. Sometimes it'll come up with conflicts, which I then just follow the prompts to fix (something like: open each file and fix the conflicts, <code>git add</code>, <code>git commit</code>). That help?</p>
+
+
+
+<a name="188723686"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188723686" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188723686">(Feb 21 2020 at 11:32)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> yeah, thanks for your help. That's actually what I had in mind but wanted to make sure.</p>
+
+
+
+<a name="188723830"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188723830" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188723830">(Feb 21 2020 at 11:35)</a>:</h4>
+<p>You'll see extra commits in your PR, but there will still only be the changes you made.</p>
+
+
+
+<a name="188733865"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188733865" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188733865">(Feb 21 2020 at 14:08)</a>:</h4>
+<p>And when the PR is merged it gets squashed so those extra commits don't show up</p>
+
+
+
+<a name="188733947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188733947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188733947">(Feb 21 2020 at 14:09)</a>:</h4>
+<p>GitHub also helps with merge conflicts. Though I usually resolve them locally</p>
+
+
+
+<a name="188734673"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188734673" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188734673">(Feb 21 2020 at 14:17)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256705">Herb</span> <a href="#narrow/stream/218635-General/topic/resolving.20git.20conflicts.20with.20upstream/near/188733865" title="#narrow/stream/218635-General/topic/resolving.20git.20conflicts.20with.20upstream/near/188733865">said</a>:</p>
+<blockquote>
+<p>And when the PR is merged it gets squashed so those extra commits don't show up</p>
+</blockquote>
+<p>Yeah, actually I was hoping for something like that. I already did it, it worked like a charm.</p>
+
+
+
+<a name="188750343"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188750343" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188750343">(Feb 21 2020 at 16:49)</a>:</h4>
+<p>For what it's worth, I usually rebase when I'm updating PRs to get my changes on top of everything new. I also fix them locally and then force push over my previous PR branch.</p>
+<div class="codehilite"><pre><span></span>git checkout 1.x
+git pull backdrop 1.x
+git checkout [my-branch-with-conflicts]
+git rebase 1.x
+(fix conflicts)
+git rebase --continue
+git push origin [my-branch-with-conflicts] -f
+</pre></div>
+
+
+
+<a name="188757769"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188757769" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188757769">(Feb 21 2020 at 18:01)</a>:</h4>
+<p>I've been doing something that you guys will possibly find odd, but it has been working for me for years now, and I never have to update my fork...<br>
+...first off, I take for granted that my fork will be behind (and most likely also broken), but I <strong>never</strong> work off of it; it just serves the purpose of pushing other branches, and filing PRs against backdrop/backdrop. SO:</p>
+<ol>
+<li>I <strong>always</strong> <code>git clone</code> backdrop/backdrop instead of my fork (this ensures that I am working on the latest of what should be the source of truth)</li>
+<li>I checkout a new branch off of 1.x</li>
+<li>If there is another person's PR to work off of, I fetch that on top</li>
+<li>dev dev dev...</li>
+<li>Add changes to the branch I'm working on, and commit</li>
+<li>Push the branch to my fork</li>
+<li>Start a PR<br>
+...this has always worked for me, and I very rarely have conflicts to resolve (I only recall 2 times in the past 5 years ...and you know how many PRs I file <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ).<br>
+Here's the commands:</li>
+</ol>
+<div class="codehilite"><pre><span></span>git clone https://github.com/backdrop/backdrop docroot
+cd docroot
+git remote add klonos https://github.com/klonos/backdrop
+</pre></div>
+
+
+<p>If the issue has no PR already filed by another person:</p>
+<div class="codehilite"><pre><span></span>git checkout -b issue-${ISSUE}
+</pre></div>
+
+
+<p>(where <code>${ISSUE}</code> the GitHub issue number of course)<br>
+If there is another person's PR to work from:</p>
+<div class="codehilite"><pre><span></span>git fetch origin pull/${PR}/head:issue-${ISSUE}
+git checkout issue-${ISSUE}
+</pre></div>
+
+
+<p>(where the PR is the number of the PR in <a href="https://github.com/backdrop/backdrop/pulls" target="_blank" title="https://github.com/backdrop/backdrop/pulls">https://github.com/backdrop/backdrop/pulls</a>)<br>
+...when I have finished my work, I push to my fork:</p>
+<div class="codehilite"><pre><span></span>git push -u klonos issue-${ISSUE
+</pre></div>
+
+
+<p>...then head to GitHub on my browser, to start a PR</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/pulls" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/pulls" target="_blank" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="188943146"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188943146" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188943146">(Feb 24 2020 at 16:45)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="258586">Nate Lampton</span> <a href="#narrow/stream/218635-General/topic/resolving.20git.20conflicts.20with.20upstream/near/188750343" title="#narrow/stream/218635-General/topic/resolving.20git.20conflicts.20with.20upstream/near/188750343">said</a>:</p>
+<blockquote>
+<p>For what it's worth, I usually rebase when I'm updating PRs...</p>
+</blockquote>
+<p>Is rebase actually preferred? If so, how does GitHub handle previous comments on PRs then (reviews)? Are they lost or preserved?</p>
+
+
+
+<a name="188943964"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/resolving%20git%20conflicts%20with%20upstream/near/188943964" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/resolving.20git.20conflicts.20with.20upstream.html#188943964">(Feb 24 2020 at 16:53)</a>:</h4>
+<p>I think code comments are tied to file line numbers rather than commits? They seem to be maintained without any problem. When reviewing, it is a little easier to sort out the new commits when other commits aren't in the history, so rebasing is sometimes better. But as long as there aren't any conflicts I'm happy. :)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

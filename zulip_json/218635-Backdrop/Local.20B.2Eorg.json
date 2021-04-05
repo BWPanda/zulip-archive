@@ -1,0 +1,200 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> <span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> I have a local copy of <a href=\"http://B.org\">B.org</a> in Lando that I use for PRs, etc. Let me know if I can help you setup your own copies.</p>",
+        "id": 215036191,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604010268
+    },
+    {
+        "content": "<p>I'll give it another shot; I think last time I tried I had trouble navigating CMI issues.</p>",
+        "id": 215036264,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604010333
+    },
+    {
+        "content": "<p>Besides a copy of the repo and a cleaned database, is there anything else you need?  (Files, perhaps?)</p>",
+        "id": 215036440,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604010447
+    },
+    {
+        "content": "<p>Two things:</p>\n<ol>\n<li>The <a href=\"http://B.org\">B.org</a> repo (<a href=\"https://github.com/backdrop-ops/backdropcms.org\">https://github.com/backdrop-ops/backdropcms.org</a>) includes a Lando file that should get you started</li>\n<li>See the config README (<a href=\"https://github.com/backdrop-ops/backdropcms.org/tree/main/config\">https://github.com/backdrop-ops/backdropcms.org/tree/main/config</a>) for CMI instructions</li>\n</ol>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/tree/main/config\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/tree/main/config\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 215036467,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604010460
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> A sanitised database and files directory, both available from <a href=\"https://sanitize.backdropcms.org/\">https://sanitize.backdropcms.org/</a></p>",
+        "id": 215036593,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604010520
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> - If we set up a Zoom call to work through this together, when is good for you. Friday afternoon, evening, weekend, or next week. If we put something on calendar, then I'll make time to do this.</p>",
+        "id": 215036648,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604010572
+    },
+    {
+        "content": "<p>Side note, I have a plan for making the Lando setup easier/more automated. I have made a PR (<a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/91\">https://github.com/backdrop-ops/api.backdropcms.org/issues/91</a>) to the API repo with suggested changes to Lando and, if that's approved, I'll make similar changes to the <a href=\"http://B.org\">B.org</a> repo (and Forum repo too). This'll mean you can just run a command in Lando to pull in the latest DB and Files directory.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/91\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/91\" title=\"Add Lando tooling to allow pulling the latest DB/files · Issue #91 · backdrop-ops/api.backdropcms.org\">Add Lando tooling to allow pulling the latest DB/files · Issue #91 · backdrop-ops/api.backdropcms.org</a></div><div class=\"message_embed_description\">I'd like to do the same here as we did in backdrop-ops/backdropcms.org#678 - adding a Lando command for pulling in and setting up the latest API website DB/files.</div></div></div>",
+        "id": 215037192,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604010925
+    },
+    {
+        "content": "<p>But I need people to test the API repo changes before I'm comfortable making those same changes to other repos.</p>",
+        "id": 215037227,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604010947
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Local.20B.2Eorg/near/215036648\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256664\">Luke McCormick</span> - If we set up a Zoom call to work through this together, when is good for you. Friday afternoon, evening, weekend, or next week. If we put something on calendar, then I'll make time to do this.</p>\n</blockquote>\n<p>Tomorrow would be great.  I'm free after 11:00AM PDT;</p>",
+        "id": 215038734,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604012003
+    },
+    {
+        "content": "<p>I could meet at 11:00am (PDT) - <span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span></p>",
+        "id": 215046101,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604018847
+    },
+    {
+        "content": "<p>11:00 works for me, I’ll put it on my calendar.</p>",
+        "id": 215047622,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604020606
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> You around. I'm getting ready</p>",
+        "id": 215130739,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604081239
+    },
+    {
+        "content": "<p>I was just looking for the location.  I’m in meetings-new already</p>",
+        "id": 215130783,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604081265
+    },
+    {
+        "content": "<p>OK, I'll come</p>",
+        "id": 215130815,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604081280
+    },
+    {
+        "content": "<p>Or we can do chat.  Not sure of the format.  Happy to wait a few if you want.</p>",
+        "id": 215130816,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604081281
+    },
+    {
+        "content": "<p>I need a few minutes</p>",
+        "id": 215130882,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604081294
+    },
+    {
+        "content": "<p>Is anybody else involved, or is it just you and me?  If just us, I wouldn’t mind 15 minutes — I’ll eat some breakfast</p>",
+        "id": 215130955,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604081325
+    },
+    {
+        "content": "<p>Let's meet in 15 minutes.</p>",
+        "id": 215131064,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604081385
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> and I are working on installing <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a> locally. If anyone wants to join us, we'll be in the Backdrop Zoom room.</p>",
+        "id": 215131212,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604081438
+    },
+    {
+        "content": "<p>How'd it go?</p>",
+        "id": 215141770,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604086934
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> got his version working locally. I'm having a drush problem.</p>",
+        "id": 215142007,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604087049
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/LsMd8IGXGSlBdAQICe6Jytnl/Screenshot_10_30_20__2_44_PM_.png\">Screenshot_10_30_20__2_44_PM_.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/LsMd8IGXGSlBdAQICe6Jytnl/Screenshot_10_30_20__2_44_PM_.png\" title=\"Screenshot_10_30_20__2_44_PM_.png\"><img src=\"/user_uploads/18319/LsMd8IGXGSlBdAQICe6Jytnl/Screenshot_10_30_20__2_44_PM_.png\"></a></div>",
+        "id": 215142114,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604087116
+    },
+    {
+        "content": "<p>Both Luke and I got this error, but we can get around it by going to /user and logging in.</p>",
+        "id": 215142138,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604087137
+    },
+    {
+        "content": "<p>During Lando start, I get this error \"The drush command 'version' could not be executed.\"</p>",
+        "id": 215142255,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604087191
+    },
+    {
+        "content": "<p>Then the site works, but drush does not</p>",
+        "id": 215142264,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604087200
+    },
+    {
+        "content": "<p>I get that drush error a lot when rebuilding/starting Lando, but it doesn't seem to affect anything after that (I.e. drush still works for me).</p>",
+        "id": 215146900,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604089885
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> got the same error and it was not a problem for him. But, my lando drush commands are not working at all, which seems weird. I use lando within drush frequently.</p>",
+        "id": 215150909,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604092284
+    },
+    {
+        "content": "<p>I've tried 'lando rebuild' a few times, but it does seem to help.</p>",
+        "id": 215150943,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604092309
+    },
+    {
+        "content": "<p>I'm stuck here:<br>\n<a href=\"https://forum.backdropcms.org/forum/installing-civicrm-backdrop-cms-lando\">https://forum.backdropcms.org/forum/installing-civicrm-backdrop-cms-lando</a></p>\n<p>Trying to connect CiviCRM to my local version of BackdropCMS, using Lando.</p>",
+        "id": 215171653,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604114644
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> !</p>",
+        "id": 215178395,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604128104
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> Here's a PR for making it easier to build local copy of <a href=\"http://b.org\">b.org</a>: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/725\">https://github.com/backdrop-ops/backdropcms.org/issues/725</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/725\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/725\" title=\"Make it easier to pull in DB/files in Lando · Issue #725 · backdrop-ops/backdropcms.org\">Make it easier to pull in DB/files in Lando · Issue #725 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">We have the Sanitize site providing DBs and Files for Backdrop sites, but it&#39;s still a bit tricky/involved getting them working in Lando. I propose updating the Lando script to provide commands...</div></div></div>",
+        "id": 215802889,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604633444
+    },
+    {
+        "content": "<p>Note that unlike what was mentioned in the meeting, I'm not trying to make this automatic and bypass the sanitize login. But I am trying to make it easier to use.</p>",
+        "id": 215802911,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604633478
+    },
+    {
+        "content": "<p>Sorry, if I misrepresented your intentions. Thanks for making this easier.</p>",
+        "id": 215808555,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604641597
+    }
+]

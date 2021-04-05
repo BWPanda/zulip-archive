@@ -1,0 +1,147 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html">Time-zone-aware date/time in formatted text</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="223934665"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/223934665" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#223934665">(Jan 25 2021 at 17:50)</a>:</h4>
+<p>I've encountered a use case where in many places within formatted text I need to give a date or time that renders in the user's local time zone. For example, "The Zoom room will open April 1, 2021, 10 a.m. PDT". I didn't find an easy way of doing this, so I wrote a small module called Time Tokens to support time-zone-aware date/time tokens. In any formatted text that supports the token filter, one could use a token like [time-tokens:datetime:2020-04-01 10:00 PDT|F j, g:ia T], and it would render appropriately in the user's time zone.</p>
+<p>I'd anticipate releasing this as a contrib module, but before I do, I'd like to solicit feedback on things like the module name, structure of the token, and/or anything else that stands out as a potential improvement. (And of course, if there's a way better way to do this sort of thing, I'd be happy to hear it.)</p>
+<p>The (draft) module is at <a href="https://github.com/bugfolder/time_tokens">https://github.com/bugfolder/time_tokens</a>.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/bugfolder/time_tokens" style="background-image: url(https://avatars.githubusercontent.com/u/29214084?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/bugfolder/time_tokens" title="bugfolder/time_tokens">bugfolder/time_tokens</a></div><div class="message_embed_description">A Backdrop module that supports embedding of time-zone-aware dates and times in formatted text. - bugfolder/time_tokens</div></div></div>
+
+
+
+<a name="223936604"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/223936604" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#223936604">(Jan 25 2021 at 18:05)</a>:</h4>
+<p>Adding a data format and using that as your token didn't work (/admin/config/regional/date-time/formats/add)?</p>
+
+
+
+<a name="223937158"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/223937158" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#223937158">(Jan 25 2021 at 18:09)</a>:</h4>
+<p>That would work for a single date data item (and that's what I use for date-type fields); but this is addressing the case where a date/time, or multiple date/times, needs to be embedded within a large block of narrative text, like the body of a page.</p>
+
+
+
+<a name="223941975"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/223941975" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#223941975">(Jan 25 2021 at 18:46)</a>:</h4>
+<p>So this is for one-off dates within the text (not in a date field), right?</p>
+
+
+
+<a name="223942286"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/223942286" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#223942286">(Jan 25 2021 at 18:49)</a>:</h4>
+<p>Some things that could be useful:</p>
+<ul>
+<li>an option in the token implmentation to display the timezone along with the date, or not.</li>
+<li>a token just for the user's timezone (without a date) (e.g. "All times below are shown in MST") -- <strong>This may exist already, I'm not sure</strong></li>
+</ul>
+
+
+
+<a name="223943115"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/223943115" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#223943115">(Jan 25 2021 at 18:56)</a>:</h4>
+<p>Yes, one-off dates within the text. Or even multiple dates: with two tokens, you can create "Runs from April 1–2" and the like.<br>
+And since the formatting code is part of the token, it's possible to include the time zone or not, or show just the time zone, or the date with no time, or date and time together.</p>
+
+
+
+<a name="223943233"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/223943233" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#223943233">(Jan 25 2021 at 18:57)</a>:</h4>
+<p><span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="223943242"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/223943242" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#223943242">(Jan 25 2021 at 18:57)</a>:</h4>
+<p>It's definitely something for only fairly senior-permissions admins to be allowed to use, because it requires the "can use tokens" privilege, which would permit all sorts of other nefarious behaviors.</p>
+
+
+
+<a name="224003374"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224003374" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224003374">(Jan 26 2021 at 07:04)</a>:</h4>
+<p><span class="user-mention" data-user-id="335929">@bugfolder</span> Interesting - how does this play with the page cache? Is it supposed to work for anonymous (probably not, might need javascript)?</p>
+
+
+
+<a name="224050199"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224050199" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224050199">(Jan 26 2021 at 14:56)</a>:</h4>
+<p>Anonymous users get the default time zone. I'm using backdrop_get_user_timezone() for the time zone.</p>
+
+
+
+<a name="224050646"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224050646" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224050646">(Jan 26 2021 at 15:00)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> You might be thinking of this one: <a href="https://github.com/backdrop/backdrop-issues/issues/4612">https://github.com/backdrop/backdrop-issues/issues/4612</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4612" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4612" title="Allow anonymous users to use a SESSION variable to set timezone · Issue #4612 · backdrop/backdrop-issues">Allow anonymous users to use a SESSION variable to set timezone · Issue #4612 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need In Timezone Detect, I&#39;d like to allow the timezone to be detected and set in a SESSION variable for anonymous users, so website dates/times display in the timezone they ...</div></div></div>
+
+
+
+<a name="224052263"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224052263" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224052263">(Jan 26 2021 at 15:10)</a>:</h4>
+<blockquote>
+<p>You might be thinking of this one:</p>
+</blockquote>
+<p>Right, that's what I wanted to try, in case I have too much spare time. <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="224071613"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224071613" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224071613">(Jan 26 2021 at 17:15)</a>:</h4>
+<p>I had pretty much assumed that anonymous users would have to live with the server time zone. But the issue <span class="user-mention" data-user-id="256573">@Laryn</span> flagged  suggests it might be feasible, depending on future core support. So perhaps it would be a good idea now to wrap the rendered token in a span with attributes data-timestamp (for the time) and data-format (for the format, htmlspecialchars()-encoded) to give the option for Javascript re-rendering.</p>
+
+
+
+<a name="224149173"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224149173" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224149173">(Jan 27 2021 at 07:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="335929">@bugfolder</span> I'm definitely interested. I didn't find the time yet to have a closer look at how your module does things and if it might be possible to include a (js) solution for anonymous.</p>
+
+
+
+<a name="224210132"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224210132" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224210132">(Jan 27 2021 at 16:48)</a>:</h4>
+<p>It looks like <span class="user-mention" data-user-id="256573">@Laryn</span>'s <a href="https://backdropcms.org/project/timezone_detect">Timezone Detect</a> module provides the JS to do the detection. I'll work on adding support if that module is installed.</p>
+
+
+
+<a name="224511706"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224511706" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224511706">(Jan 29 2021 at 18:08)</a>:</h4>
+<p>With the assistance of Time Zone Detect module plus another new module that wraps the Luxon.js DateTime library, I've now got it working for anonymous users and cached pages. <a href="https://github.com/bugfolder/utz_tokens">https://github.com/bugfolder/utz_tokens</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/bugfolder/utz_tokens" style="background-image: url(https://avatars.githubusercontent.com/u/29214084?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/bugfolder/utz_tokens" title="bugfolder/utz_tokens">bugfolder/utz_tokens</a></div><div class="message_embed_description">A Backdrop module that supports embedding of time-zone-aware dates and times in formatted text. - bugfolder/utz_tokens</div></div></div>
+
+
+
+<a name="224520564"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224520564" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224520564">(Jan 29 2021 at 19:21)</a>:</h4>
+<p>Sounds great! I'll have to test it at some point -- is that anonymous detection just working with the tokens, or with core date fields, too?</p>
+
+
+
+<a name="224521541"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224521541" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224521541">(Jan 29 2021 at 19:29)</a>:</h4>
+<p>It just works with the tokens (for now, at least). Seems like the functionality and approach could be used with core date fields, though.</p>
+
+
+
+<a name="224522400"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Time-zone-aware%20date/time%20in%20formatted%20text/near/224522400" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Time-zone-aware.20date.2Ftime.20in.20formatted.20text.html#224522400">(Jan 29 2021 at 19:36)</a>:</h4>
+<p>Yeah, it seems like maybe it could be integrated directly into Timezone Detect somehow. The project I needed that for is past but I'm sure the need will arise again at some point... I'll make a note in the issue queue on that module linking to your modules.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

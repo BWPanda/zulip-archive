@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>Hi Guys...,</p>\n<p>Using the latest version of BackDrop and all modules are up to date.</p>\n<p>I've created a View which has a PDF file.  </p>\n<p>Formatter is \"Generic file\"<br>\nRewrite output \"Output this field as a link\"<br>\nTarget \"_blank\"</p>\n<p>and it's not opening in a blank window.</p>\n<p>I've also tried the Formatter as a \"Download link\"</p>\n<p>I've also tried using the [title] as a replacement text but then a space is added to the filename in the URL.</p>\n<p>Any help or pointers to a solution would be appreciated :)</p>\n<p>Thanks in advance.</p>",
+        "id": 192381045,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1585657461
+    },
+    {
+        "content": "<p>Hi, Steve Moorhouse. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\" title=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\" title=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 192381046,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1585657461
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"280045\">@Steve Moorhouse</span>, Can you paste here the HTML link that's being generated?</p>",
+        "id": 192381198,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585657558
+    },
+    {
+        "content": "<p>&lt;div class=\"view view-accounts-finance view-id-accounts_finance view-display-id-page view-dom-id-35d214949f53b0ef3aa247b4da87deb3 contextual-links-region\"&gt;<br>\n      &lt;div class=\"contextual-links-wrapper\"&gt;&lt;ul class=\"contextual-links\"&gt;&lt;li class=\"views-ui-configure odd first last\"&gt;&lt;a href=\"/admin/structure/views/view/accounts_finance/configure/page?destination=accounts-finance\"&gt;Configure view&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;  </p>\n<div class=\"codehilite\"><pre><span></span>  &lt;div class=&quot;view-content&quot;&gt;\n  &lt;table class=&quot;views-table cols-0&quot;&gt;\n   &lt;tbody&gt;\n      &lt;tr class=&quot;odd first&quot;&gt;\n              &lt;td class=&quot;views-field views-field-field-date&quot; &gt;\n        &lt;span class=&quot;date-display-single&quot;&gt;23/05/2019&lt;/span&gt;          &lt;/td&gt;\n              &lt;td class=&quot;views-field views-field-title&quot; &gt;\n        Certificate of Exemption          &lt;/td&gt;\n              &lt;td class=&quot;views-field views-field-field-pdf&quot; &gt;\n        &lt;span class=&quot;file&quot;&gt;&lt;img class=&quot;file-icon&quot; alt=&quot;PDF icon&quot; title=&quot;application/pdf&quot; src=&quot;/core/modules/file/icons/application-pdf.png&quot; /&gt; &lt;a href=&quot;https://bmpc.albanytest.co.uk/files/pdfs/Exemption.pdf&quot; type=&quot;application/pdf; length=866125&quot;&gt;Exemption.pdf&lt;/a&gt;&lt;/span&gt;          &lt;/td&gt;\n          &lt;/tr&gt;\n      &lt;tr class=&quot;even&quot;&gt;\n              &lt;td class=&quot;views-field views-field-field-date&quot; &gt;\n        &lt;span class=&quot;date-display-single&quot;&gt;01/06/2019&lt;/span&gt;          &lt;/td&gt;\n              &lt;td class=&quot;views-field views-field-title&quot; &gt;\n        Notice of Public Rights          &lt;/td&gt;\n              &lt;td class=&quot;views-field views-field-field-pdf&quot; &gt;\n        &lt;span class=&quot;file&quot;&gt;&lt;img class=&quot;file-icon&quot; alt=&quot;PDF icon&quot; title=&quot;application/pdf&quot; src=&quot;/core/modules/file/icons/application-pdf.png&quot; /&gt; &lt;a href=&quot;https://bmpc.albanytest.co.uk/files/pdfs/pub_rights.pdf&quot; type=&quot;application/pdf; length=89538&quot;&gt;pub_rights.pdf&lt;/a&gt;&lt;/span&gt;          &lt;/td&gt;\n          &lt;/tr&gt;\n      &lt;tr class=&quot;odd last&quot;&gt;\n              &lt;td class=&quot;views-field views-field-field-date&quot; &gt;\n        &lt;span class=&quot;date-display-single&quot;&gt;31/03/2019&lt;/span&gt;          &lt;/td&gt;\n              &lt;td class=&quot;views-field views-field-title&quot; &gt;\n        Income / Expenses          &lt;/td&gt;\n              &lt;td class=&quot;views-field views-field-field-pdf&quot; &gt;\n        &lt;span class=&quot;file&quot;&gt;&lt;img class=&quot;file-icon&quot; alt=&quot;PDF icon&quot; title=&quot;application/pdf&quot; src=&quot;/core/modules/file/icons/application-pdf.png&quot; /&gt; &lt;a href=&quot;https://bmpc.albanytest.co.uk/files/pdfs/Income_expen.pdf&quot; type=&quot;application/pdf; length=85984&quot;&gt;Income_expen.pdf&lt;/a&gt;&lt;/span&gt;          &lt;/td&gt;\n          &lt;/tr&gt;\n  &lt;/tbody&gt;\n</pre></div>\n\n\n<p>&lt;/table&gt;<br>\n    &lt;/div&gt;</p>\n<p>&lt;/div&gt;</p>",
+        "id": 192381659,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1585657814
+    },
+    {
+        "content": "<blockquote>\n<p><code>&lt;a href=\"https://bmpc.albanytest.co.uk/files/pdfs/Exemption.pdf\" type=\"application/pdf; length=866125\"&gt;Exemption.pdf&lt;/a&gt;</code></p>\n</blockquote>\n<p>Well it seems like it's not applying the <code>target=\"_blank\"</code> part at all...</p>",
+        "id": 192382305,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585658179
+    },
+    {
+        "content": "<p>Nope, but, there is an icon of a pdf document and this has a different url to the file and it has a space character in front of the file name.  When you click on that, that opens in a new windows.</p>\n<p>Tried it with Firefox and Chrome.</p>\n<p><a href=\"https://bmpc.albanytest.co.uk/accounts-finance\" title=\"https://bmpc.albanytest.co.uk/accounts-finance\">https://bmpc.albanytest.co.uk/accounts-finance</a></p>\n<p>&lt;td class=\"views-field views-field-field-pdf\"&gt;<br>\n            &lt;a href=\"/files/pdfs/%20Exemption.pdf\" target=\"_blank\"&gt;&lt;span class=\"file\"&gt;&lt;img class=\"file-icon\" alt=\"PDF icon\" title=\"application/pdf\" src=\"/core/modules/file/icons/application-pdf.png\"&gt; &lt;/span&gt;&lt;/a&gt;&lt;a href=\"<a href=\"https://bmpc.albanytest.co.uk/files/pdfs/Exemption.pdf\" title=\"https://bmpc.albanytest.co.uk/files/pdfs/Exemption.pdf\">https://bmpc.albanytest.co.uk/files/pdfs/Exemption.pdf</a>\" type=\"application/pdf; length=866125\"&gt;Exemption.pdf&lt;/a&gt;          &lt;/td&gt;</p>",
+        "id": 192384218,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1585659112
+    },
+    {
+        "content": "<p>I think you need to override <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21file%21file.theme.inc/function/theme_file_link/1\" title=\"https://api.backdropcms.org/api/backdrop/core%21modules%21file%21file.theme.inc/function/theme_file_link/1\">theme_file_link</a> in your theme instead of doing this via the Views UI. Reason is that the file is being output as an icon followed by a textual link. When you add your own link using Views, it wraps all of that in another link. Since you can't have a link within a link, then your Views link is being applied to just the icon and it's using this theme function's link for the text. So the only way to override that is via the theme function (or use a different formatter in Views).</p>",
+        "id": 192386791,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1585660380
+    },
+    {
+        "content": "<p>Thanks Pete...,</p>\n<p>I was just about to post that it looks like it's the default theme that's causing the trouble :)</p>\n<p>Many thanks.</p>",
+        "id": 192386966,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1585660455
+    },
+    {
+        "content": "<p>Just changed the PDF file to a \"URL to File\" then made it hidden.</p>\n<p>In the title - changed to output as a link and used the field id for the PDF.</p>",
+        "id": 192387847,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1585660856
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"280045\">@Steve Moorhouse</span> ++</p>",
+        "id": 192941998,
+        "sender_full_name": "klonos",
+        "timestamp": 1586062593
+    },
+    {
+        "content": "<p>moorhouse** GG (Karma: 1)</p>",
+        "id": 192941999,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1586062593
+    }
+]

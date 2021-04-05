@@ -1,0 +1,158 @@
+[
+    {
+        "content": "<p>Please review, try, give some feedback on the new module created for Backdrop <a href=\"https://github.com/backdrop-contrib/activity_calendar\">https://github.com/backdrop-contrib/activity_calendar</a> Drupal's equivalent on <a href=\"https://www.drupal.org/project/acal\">https://www.drupal.org/project/acal</a> uses different library, and it seems abandoned and broken.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/activity_calendar\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/activity_calendar\" title=\"backdrop-contrib/activity_calendar\">backdrop-contrib/activity_calendar</a></div><div class=\"message_embed_description\">Visualizes users' activity over the yearly calendar.  - backdrop-contrib/activity_calendar</div></div></div>",
+        "id": 224456768,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611918464
+    },
+    {
+        "content": "<p>Cool! Many thanks for this new module, I'll try to play with it soon.<br>\nOne hint: you should also give credits to the developers of the external libraries in the README credits section and add info about their license. At least, that's what I usually do.</p>",
+        "id": 224458110,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611919347
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> The library mentioned in the Requirements section, though it's nice point about the Credit section.</p>",
+        "id": 224458684,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611919777
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/activity_calendar/blob/1.x-1.x/README.md#credits\">https://github.com/backdrop-contrib/activity_calendar/blob/1.x-1.x/README.md#credits</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/activity_calendar/blob/1.x-1.x/README.md#credits\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/activity_calendar/blob/1.x-1.x/README.md#credits\" title=\"backdrop-contrib/activity_calendar\">backdrop-contrib/activity_calendar</a></div><div class=\"message_embed_description\">Visualizes users' activity over the yearly calendar.  - backdrop-contrib/activity_calendar</div></div></div>",
+        "id": 224459138,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611920049
+    },
+    {
+        "content": "<p>Perfect! And so quick... <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>",
+        "id": 224459186,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611920095
+    },
+    {
+        "content": "<p>Ooops, typo: \"eveloped\", but no need to rush.</p>",
+        "id": 224459238,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611920140
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/new.20Activity.20Calendar.20module/near/224459238\">said</a>:</p>\n<blockquote>\n<p>Ooops, typo: \"eveloped\", but no need to rush.</p>\n</blockquote>\n<p>My bad. Fixed.</p>",
+        "id": 224459350,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611920219
+    },
+    {
+        "content": "<p>Cool! Curious why GPL-3.0 though?</p>",
+        "id": 224489753,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611935344
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/new.20Activity.20Calendar.20module/near/224489753\">said</a>:</p>\n<blockquote>\n<p>Cool! Curious why GPL-3.0 though?</p>\n</blockquote>\n<p>Just choose because it seemed newer, maybe up-to-dated version. Never reserached the difference between 2 and 3. Any recommendations for Backdrop contrib modules? Should they be uploaded under version 2?</p>",
+        "id": 224547444,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611961027
+    },
+    {
+        "content": "<p>I think the recommendation is \"GPL-2.0 or later\" unless it is necessary to do \"GPL-3.0\" because of bundled license compatibility.</p>",
+        "id": 224549001,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611962094
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-ops/contrib#new-project-checklist\">https://github.com/backdrop-ops/contrib#new-project-checklist</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib#new-project-checklist\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib#new-project-checklist\" title=\"backdrop-ops/contrib\">backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Apply to join the contributed code developer team. - backdrop-ops/contrib</div></div></div>",
+        "id": 224549187,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611962231
+    },
+    {
+        "content": "<p>GPL3 contrib modules apparently have no chance of ever being merged into core.</p>",
+        "id": 224552944,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611965268
+    },
+    {
+        "content": "<p>I thought GPL-3.0 is considered \"later\" and was attributing it to several other contrib modules. Now after seeing your and <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>'s comment on this, I will have to change them all to DPL-2 Thanks for noting!</p>",
+        "id": 224554541,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611966682
+    },
+    {
+        "content": "<p>Have just updated the License.txt file by replacing the text to GPL v.2 and now I have this discrepancy on top of the page: <a href=\"/user_uploads/18319/2z1zYHL403JSmRmi1_RmEENU/Screenshot-from-2021-01-29-17-36-33.png\">Screenshot-from-2021-01-29-17-36-33.png</a> Probably, it's a GitHub bug - not being able to update the License text without completely deleting and re-creating it choosing another one.</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/2z1zYHL403JSmRmi1_RmEENU/Screenshot-from-2021-01-29-17-36-33.png\" title=\"Screenshot-from-2021-01-29-17-36-33.png\"><img src=\"/user_uploads/18319/2z1zYHL403JSmRmi1_RmEENU/Screenshot-from-2021-01-29-17-36-33.png\"></a></div>",
+        "id": 224555085,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611967142
+    },
+    {
+        "content": "<p>New version is rolled out with the user activity block added.</p>",
+        "id": 224584362,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1612011979
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> - Just for fun, I added the Activity Calendar module to the survey site. The user activity block is enabled on user pages and all authenticated users are able to view user profiles. </p>\n<p>The user activity calendar tracks \"adding feature ideas\" and \"comments.\" I don't think it supports tracking FLAGS as a user activity, which is what we are using for voting.</p>",
+        "id": 224611495,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612049413
+    },
+    {
+        "content": "<p>If anyone wants to see the Activity Calendar module in action, create an account on <a href=\"https://survey.backdropcms.org/\">https://survey.backdropcms.org/</a></p>",
+        "id": 224611512,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612049462
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Thanks! In fact, I decided to come up with this module, because I wanted to track user activity for translating Backdrop to Russian language on <a href=\"http://Backdrop.ru\">Backdrop.ru</a>. But then tracking nodes and comments was the obvious features. However, eventually I'd like to make an API so other modules can track anything they want - translations, voting, etc</p>",
+        "id": 224611590,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1612049586
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Also it's better to put the block as shown on <a href=\"https://www.backdrop.ru\">https://www.backdrop.ru</a>. If you use the last version of the module it also comes with user activity block</p>",
+        "id": 224611698,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1612049755
+    },
+    {
+        "content": "<p>Whose activity is being shown for anonymous users?</p>",
+        "id": 224611764,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1612049848
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I believe you are on outdated dev, because <a href=\"https://github.com/backdrop-contrib/activity_calendar/issues/1\">https://github.com/backdrop-contrib/activity_calendar/issues/1</a> had already been resolved, but on <a href=\"https://survey.backdropcms.org\">https://survey.backdropcms.org</a> I see the nav buttons even if I had not entries a year ago. So please download the latest version.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/activity_calendar/issues/1\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/activity_calendar/issues/1\" title=\"Remove nav buttons if no previous years · Issue #1 · backdrop-contrib/activity_calendar\">Remove nav buttons if no previous years · Issue #1 · backdrop-contrib/activity_calendar</a></div><div class=\"message_embed_description\">Otherwise, they look strange on a new Backdrop website:</div></div></div>",
+        "id": 224611876,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1612050025
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Activity.20Calendar.20module/near/224611764\">said</a>:</p>\n<blockquote>\n<p>Whose activity is being shown for anonymous users?</p>\n</blockquote>\n<p><a href=\"https://github.com/backdrop-contrib/activity_calendar/issues/4\">https://github.com/backdrop-contrib/activity_calendar/issues/4</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/activity_calendar/issues/4\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/activity_calendar/issues/4\" title=\"Limit views access for the module block to only registered users · Issue #4 · backdrop-contrib/activity_calendar\">Limit views access for the module block to only registered users · Issue #4 · backdrop-contrib/activity_calendar</a></div><div class=\"message_embed_description\">subj. because the block is useless for anonymous users.</div></div></div>",
+        "id": 224611880,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1612050058
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> I know the visibility can be controlled on the block settings, but I'd like to prevent it from showing to anonymous users at all.</p>",
+        "id": 224611890,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1612050100
+    },
+    {
+        "content": "<p>That makes sense.</p>",
+        "id": 224611895,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1612050114
+    },
+    {
+        "content": "<blockquote>\n<p>@StPaulTim Also it's better to put the block as shown on <a href=\"https://www.backdrop.ru\">https://www.backdrop.ru</a>. </p>\n</blockquote>\n<p>Done <span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span></p>",
+        "id": 224617255,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612059080
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> for your work on this module and for adding the \"flag activity\" feature.</p>",
+        "id": 226109809,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613119213
+    }
+]

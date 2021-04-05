@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I'm going through the logs on a site I'm working on and see a lot of <code>devel</code> warnings. That led me down a little rabbit hole to <a href=\"https://github.com/backdrop-contrib/devel/issues/44#issuecomment-557629440\" title=\"https://github.com/backdrop-contrib/devel/issues/44#issuecomment-557629440\">your comment here</a>, asking for a nudge to make a new release of <code>devel</code>... <strong>nudge</strong> <span aria-label=\"stuck out tongue wink\" class=\"emoji emoji-1f61c\" role=\"img\" title=\"stuck out tongue wink\">:stuck_out_tongue_wink:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/devel/issues/44#issuecomment-557629440\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/devel/issues/44#issuecomment-557629440\" title=\"&quot;Parameter must be an array or an object that implements Countable&quot; · Issue #44 · backdrop-contrib/devel\">\"Parameter must be an array or an object that implements Countable\" · Issue #44 · backdrop-contrib/devel</a></div><div class=\"message_embed_description\">I get this warning every time I use dpm(): Warning: count(): Parameter must be an array or an object that implements Countable in dprint_r() (line 1697 of /[SNIP]/modules/devel/devel.module). Resea...</div></div></div>",
+        "id": 193207493,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586274222
+    },
+    {
+        "content": "<p>Sure. I have been testing the dev version of the module for a few months now, but I would like some others to have tested and reported no issues before I make a release. Can you please try that for a week or so and let me know if you spotted anything wrong?</p>",
+        "id": 193207743,
+        "sender_full_name": "klonos",
+        "timestamp": 1586274337
+    },
+    {
+        "content": "<p>Sure.</p>",
+        "id": 193208223,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586274530
+    },
+    {
+        "content": "<p>I've provided some feedback and a PR for <a href=\"https://github.com/backdrop-contrib/devel/issues/42\">https://github.com/backdrop-contrib/devel/issues/42</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/devel/issues/42\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/devel/issues/42\" title=\"Notice: Array to string conversion in devel_is_compatible_optimizer() · Issue #42 · backdrop-contrib/devel\">Notice: Array to string conversion in devel_is_compatible_optimizer() · Issue #42 · backdrop-contrib/devel</a></div><div class=\"message_embed_description\">I get 8 of these each time I enable/disable theme debug: Notice: Array to string conversion in devel_is_compatible_optimizer() (line 1140 of /var/www/modules/devel/devel.module).</div></div></div>",
+        "id": 220606913,
+        "sender_full_name": "klonos",
+        "timestamp": 1608571058
+    }
+]

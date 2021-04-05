@@ -1,0 +1,67 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/D7.20to.20Backdrop.20session.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20session.html">D7 to Backdrop session</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="210549887"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20session/near/210549887" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20session.html#210549887">(Sep 18 2020 at 17:20)</a>:</h4>
+<p>I'm going to paste my notes from the session. Here's my paraphrasing of the comments people posted:</p>
+<p>article:<br>
+<a href="https://www.freeform.ca/upgrading-website-drupal-7-backdrop-cms">https://www.freeform.ca/upgrading-website-drupal-7-backdrop-cms</a></p>
+<p>--<br>
+Fixing links or file paths that are embedded in body fields:<br>
+• <a href="https://github.com/interconnectit/Search-Replace-DB">https://github.com/interconnectit/Search-Replace-DB</a> <br>
+• port <a href="https://www.drupal.org/project/scanner">https://www.drupal.org/project/scanner</a><br>
+• Pathologic (already exists in Backdrop)<br>
+• make a symlink</p>
+<div class="codehilite"><pre><span></span><code>cd sites/default
+ln -s ../../files files
+</code></pre></div>
+
+
+<p>--<br>
+If you are using feeds to migrate - you can use feeds tamper to do some of this as well. </p>
+<p>In more complex sites, we migrate using feeds to bring in content rather than upgrade. I have found it to be a better solution. </p>
+<p>--<br>
+Watch out for dates! <br>
+And files and images when migrating ... <br>
+file and image fields, not in body</p>
+<p>--<br>
+Here’s a Drupal 7 module that will tell you the status of all your Drupal 7 modules for Backdrop: <a href="https://github.com/backdrop-contrib/backdrop_upgrade_status">https://github.com/backdrop-contrib/backdrop_upgrade_status</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/interconnectit/Search-Replace-DB" style="background-image: url(https://avatars1.githubusercontent.com/u/1242291?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/interconnectit/Search-Replace-DB" title="interconnectit/Search-Replace-DB">interconnectit/Search-Replace-DB</a></div><div class="message_embed_description">This script was made to aid the process of migrating PHP and MySQL based websites. Works with most common CMSes. - interconnectit/Search-Replace-DB</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/backdrop_upgrade_status" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/backdrop_upgrade_status" title="backdrop-contrib/backdrop_upgrade_status">backdrop-contrib/backdrop_upgrade_status</a></div><div class="message_embed_description">Checks to see if the installed modules on a Drupal 7 site are ready for upgrade to Backdrop CMS. - backdrop-contrib/backdrop_upgrade_status</div></div></div>
+
+
+
+<a name="210552177"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20session/near/210552177" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20session.html#210552177">(Sep 18 2020 at 17:39)</a>:</h4>
+<p>I forgot to mention a couple things: make sure d7 code is all up to date before trying to upgrade. And as <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> mentioned I think we need to manually enable ckeditor for each text format</p>
+
+
+
+<a name="210552337"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20session/near/210552337" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20session.html#210552337">(Sep 18 2020 at 17:41)</a>:</h4>
+<p>Thanks, <span class="user-mention" data-user-id="256705">@Herb</span></p>
+
+
+
+<a name="210553458"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20session/near/210553458" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20session.html#210553458">(Sep 18 2020 at 17:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="268008">@Elisabeth Garbeil</span> you're welcome</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

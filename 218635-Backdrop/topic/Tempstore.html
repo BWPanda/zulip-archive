@@ -1,0 +1,175 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Tempstore.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html">Tempstore</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="211136365"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211136365" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211136365">(Sep 24 2020 at 14:10)</a>:</h4>
+<p>Is tempstore automatically private per session, or if it was stored for one user could another user theoretically read/overwrite it?</p>
+
+
+
+<a name="211137657"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211137657" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211137657">(Sep 24 2020 at 14:19)</a>:</h4>
+<p>Trying to figure out how obscure key names need to be.</p>
+
+
+
+<a name="211138801"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211138801" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211138801">(Sep 24 2020 at 14:28)</a>:</h4>
+<p>For <code>$form_state</code>? Webform does them like this (example): <code>form-2M4aji0w-0Zam5YVo_NP_unlwUkZk8shQvUhsRCt0b8</code>. Maybe just copy how they do it? What's the use-case?</p>
+
+
+
+<a name="211139498"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211139498" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211139498">(Sep 24 2020 at 14:32)</a>:</h4>
+<p>I need to access data from the first page of a multi-page webform after the submission is completed.</p>
+
+
+
+<a name="211139695"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211139695" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211139695">(Sep 24 2020 at 14:34)</a>:</h4>
+<p>I see this in <code>$form_state</code>, maybe that will work: <code>'form_build_id' =&gt; 'form-Cbgefd2KpEC1GIytgkBAQboavoDVxPJArDaZasVmpq3'</code></p>
+
+
+
+<a name="211139817"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211139817" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211139817">(Sep 24 2020 at 14:34)</a>:</h4>
+<p>That's what you're suggesting, right <span class="user-mention" data-user-id="256738">@indigoxela</span> ?</p>
+
+
+
+<a name="211140587"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211140587" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211140587">(Sep 24 2020 at 14:39)</a>:</h4>
+<p>Oh, did I recommend something? I didn't even get yet, what you're trying to accomplish <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span><br>
+You're trying to fish something out of the database - don't you have any other access to it? What sort of data and what to do with it?</p>
+
+
+
+<a name="211141325"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211141325" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211141325">(Sep 24 2020 at 14:44)</a>:</h4>
+<p><span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="211141595"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211141595" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211141595">(Sep 24 2020 at 14:45)</a>:</h4>
+<p>It's a webform that contains page breaks. I'm working with the <code>webform_registration</code> module and I'd like to wait to create the user until the final submission of the webform (not the first page submission, for example). But webform doesn't seem to retain submission data from earlier pages so I need to store the fields from earlier pages in <code>tempstore</code> (at least that's my plan) until the final submission is complete, then use them.</p>
+
+
+
+<a name="211141679"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211141679" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211141679">(Sep 24 2020 at 14:46)</a>:</h4>
+<p>I'm just trying to figure out what kind of key I should use in tempstore to save this data.</p>
+
+
+
+<a name="211141702"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211141702" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211141702">(Sep 24 2020 at 14:46)</a>:</h4>
+<p><a href="https://github.com/backdrop-contrib/webform_registration/issues/4">https://github.com/backdrop-contrib/webform_registration/issues/4</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/webform_registration/issues/4" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/webform_registration/issues/4" title="Does not work with multi-page webforms · Issue #4 · backdrop-contrib/webform_registration">Does not work with multi-page webforms · Issue #4 · backdrop-contrib/webform_registration</a></div><div class="message_embed_description">This issue has also been reported over the years in the D7 issue queue: https://www.drupal.org/project/webform_registration/issues/2705253 Using this module on a webform with several pages does not...</div></div></div>
+
+
+
+<a name="211141785"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211141785" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211141785">(Sep 24 2020 at 14:47)</a>:</h4>
+<p>Oh dear... webform_registration... now I see.</p>
+
+
+
+<a name="211141851"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211141851" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211141851">(Sep 24 2020 at 14:47)</a>:</h4>
+<p>I'll do some testing with your suggestion. Thanks -- even if you didn't know you were suggesting it. <span aria-label="rolling on the floor laughing" class="emoji emoji-1f923" role="img" title="rolling on the floor laughing">:rolling_on_the_floor_laughing:</span></p>
+
+
+
+<a name="211142581"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211142581" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211142581">(Sep 24 2020 at 14:52)</a>:</h4>
+<p>That looks like a tricky chicken-and-egg problem. No clue how to solve it, or what to recommend. <span aria-label="innocent" class="emoji emoji-1f607" role="img" title="innocent">:innocent:</span></p>
+
+
+
+<a name="211160786"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211160786" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211160786">(Sep 24 2020 at 17:04)</a>:</h4>
+<p>The <code>form_build_id</code> appears to change when submitting additional pages. Back to the drawing board.</p>
+
+
+
+<a name="211161570"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211161570" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211161570">(Sep 24 2020 at 17:11)</a>:</h4>
+<p>Re-upping my original question: <br>
+<span aria-label="question" class="emoji emoji-2753" role="img" title="question">:question:</span> "Is tempstore automatically private per session, or if it was stored for one user could another user theoretically read/overwrite it? Trying to figure out how obscure key names need to be."</p>
+
+
+
+<a name="211161918"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211161918" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211161918">(Sep 24 2020 at 17:14)</a>:</h4>
+<p>I assume you have searched &amp; reviewed Drupal 7 specific solutions and they do not help.</p>
+
+
+
+<a name="211162022"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211162022" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211162022">(Sep 24 2020 at 17:15)</a>:</h4>
+<p>Like <a href="https://drupal.stackexchange.com/questions/37526/get-the-submitted-values-of-a-multistep-webform">https://drupal.stackexchange.com/questions/37526/get-the-submitted-values-of-a-multistep-webform</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://drupal.stackexchange.com/questions/37526/get-the-submitted-values-of-a-multistep-webform" style="background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)"></a><div class="data-container"><div class="message_embed_title"><a href="https://drupal.stackexchange.com/questions/37526/get-the-submitted-values-of-a-multistep-webform" title="Get the submitted values of a multistep webform">Get the submitted values of a multistep webform</a></div><div class="message_embed_description">I need to get the submitted values of a multistep webform. It looks like webform doesn't save values from earlier steps in the usual place: $form_state['values']['submitted'] or $form_state['input']['</div></div></div>
+
+
+
+<a name="211162372"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211162372" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211162372">(Sep 24 2020 at 17:18)</a>:</h4>
+<p>I did not find a solution, but I did not find that specific page, either. Will look it over! I am still curious about the answer to my question, though. And also, how does tempstore relate to session variables? When should each be used?</p>
+
+
+
+<a name="211168411"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211168411" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211168411">(Sep 24 2020 at 18:02)</a>:</h4>
+<p>Tempstore has be specifically set up. As far as I understand it's only being used for Views admin, Layout admin and node previews. Is it being used with webforms?</p>
+
+
+
+<a name="211168694"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211168694" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211168694">(Sep 24 2020 at 18:04)</a>:</h4>
+<p>No but I was considering using it in a contrib module  if appropriate. Trying to learn what it is and what it's meant for.</p>
+
+
+
+<a name="211176965"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211176965" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211176965">(Sep 24 2020 at 19:13)</a>:</h4>
+<p>Tempstore is actually used in <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/calls/tempstore_set/1.">a few more things</a><br>
+<span class="user-mention" data-user-id="256573">@Laryn</span> layouts sets a "locked" property based on UID on each layout while its being manipulated and before its saved, see <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.module/function/layout_set_layout_tempstore/1">layout_set_layout_tempstore</a>. Maybe you could do the same for your use case.</p>
+
+
+
+<a name="211182488"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211182488" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211182488">(Sep 24 2020 at 20:00)</a>:</h4>
+<p>The first link gives page not found. But easy enough to look for <code>tempstore_set</code></p>
+
+
+
+<a name="211184581"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211184581" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211184581">(Sep 24 2020 at 20:18)</a>:</h4>
+<p><a href="https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/calls/tempstore_set/1">https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/calls/tempstore_set/1</a></p>
+
+
+
+<a name="211184620"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Tempstore/near/211184620" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Tempstore.html#211184620">(Sep 24 2020 at 20:19)</a>:</h4>
+<p>sorry. stray punctuation in that first link</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

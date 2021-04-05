@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>Is there a standard way (I can't find) to detach comment form and comments from the node view and put them in a block? There are a few modules for drupal to to this. Cannot be done with backdrop's core nor contrib module (yet), is it? What I want to achieve is to print the main node content, then a view's block and then the comment form and comments. Thanks.</p>",
+        "id": 204293592,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1595065238
+    },
+    {
+        "content": "<p>I don't have an answer but interested in this too.</p>",
+        "id": 204299695,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595077087
+    },
+    {
+        "content": "<p>For now, what I've done is to add every field in a layout for the corresponding node type in the proper order, plus every other block needed, then list the \"main content\" block at the end. Create a new template file for that node type and get rid of everything in there except by the comments section.</p>\n<p>This way I get that effect. It would be nice to be able to add a comment form block and a comments block in the layout page instead of hacking the template file. Couldn't be these comment blocks something provided by core??</p>",
+        "id": 204303657,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1595084340
+    },
+    {
+        "content": "<p>I think we split the comments form for the official forums. Check the forum repo, might give some ideas.</p>",
+        "id": 204305420,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1595087286
+    }
+]

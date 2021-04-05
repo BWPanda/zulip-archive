@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>Is Zen broken for you? Cant get to any of the testbot details pages.</p>",
+        "id": 209156450,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599271883
+    },
+    {
+        "content": "<p>And theyre back. Excuse the noise.</p>",
+        "id": 209156498,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599271946
+    },
+    {
+        "content": "<p>Some of Zen CI is always broken. While much of it keeps working.</p>",
+        "id": 209157705,
+        "sender_full_name": "Herb",
+        "timestamp": 1599273852
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> I've been plagued by <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/276\">https://github.com/backdrop-ops/backdropcms.org/issues/276</a> for years now. I think that it's most likely the same thing for you nw.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/276\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/276\" title=\"Upon restarting one test set (php53 or php70) through the zen.ci UI, a &quot;-1&quot; is appended to the URL of &quot;details&quot; link of the other test and you get &quot;Page not found&quot;. · Issue #276 · backdrop-ops/backdropcms.org\">Upon restarting one test set (php53 or php70) through the zen.ci UI, a \"-1\" is appended to the URL of \"details\" link of the other test and you get \"Page not found\". · Issue #276 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">I had what seemed to be a random php70 failure in backdrop/backdrop#1461 So I used the newly-added &quot;restart&quot; feature to restart the tests. This time php70 passed green, but php53 shows as...</div></div></div>",
+        "id": 209201617,
+        "sender_full_name": "klonos",
+        "timestamp": 1599351546
+    },
+    {
+        "content": "<p>It fixed itself at once it seemed.</p>",
+        "id": 209201763,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1599351895
+    },
+    {
+        "content": "<p>Yeah, I've noticed in the past that sometimes it gets auto-sorted if you give it enough(?) time ...but most often it doesn't <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span></p>",
+        "id": 209203060,
+        "sender_full_name": "klonos",
+        "timestamp": 1599354880
+    },
+    {
+        "content": "<p>...been getting a loot of \"request timed out\" for the zenci/deploy component in my PRs lately <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span></p>",
+        "id": 219263881,
+        "sender_full_name": "klonos",
+        "timestamp": 1607462278
+    }
+]

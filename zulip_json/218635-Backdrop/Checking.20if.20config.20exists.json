@@ -1,0 +1,158 @@
+[
+    {
+        "content": "<p>What is the best way to check if a configuration file exists?</p>",
+        "id": 205261132,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595955033
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> - Besides looking in the config directory?  ;-)</p>",
+        "id": 205263843,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1595956373
+    },
+    {
+        "content": "<p>Yes, I mean checking from within code.</p>",
+        "id": 205263893,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595956408
+    },
+    {
+        "content": "<p><span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 205263899,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595956412
+    },
+    {
+        "content": "<p>If you dont know which exact one then <code>config_get_names_with_prefix()</code><br>\notherwise just call <code>config()</code>.</p>",
+        "id": 205268101,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1595958596
+    },
+    {
+        "content": "<p>or <code>config_get()</code></p>",
+        "id": 205268312,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1595958698
+    },
+    {
+        "content": "<p>If I do <code>$config = config('config_name')</code> and that doesn't exist, does it just return NULL?</p>",
+        "id": 205272987,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595961150
+    },
+    {
+        "content": "<p>May be moot point. The error I'm chasing may be from another section of code.</p>",
+        "id": 205273865,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595961565
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> try this and compare the objects returned:</p>\n<div class=\"codehilite\"><pre><span></span><code>dpm(config(&#39;system.core&#39;), &#39;existing&#39;);\ndpm(config(&#39;i-do-not-exist&#39;), &#39;non-existing&#39;);\n</code></pre></div>\n\n\n<p>...for the file that does exist, the <code>isNew:protected </code> property is <code>FALSE</code>, whereas for the non-existing one is <code>TRUE</code><br>\n...then also the <code>data:protected</code> property is an empty array for the non-existing one.</p>",
+        "id": 205278574,
+        "sender_full_name": "klonos",
+        "timestamp": 1595963888
+    },
+    {
+        "content": "<p>...for better DX, perhaps we should have <code>config()</code> return FALSE or NULL if the config file does not exist?</p>",
+        "id": 205278793,
+        "sender_full_name": "klonos",
+        "timestamp": 1595964026
+    },
+    {
+        "content": "<p><code>$config = config('config_name')-&gt;get()</code> should return empty, so that should do the trick.</p>",
+        "id": 205280532,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1595964941
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> best way is to do something like this:</p>\n<div class=\"codehilite\"><pre><span></span><code>$config = config(&#39;mymodule.settings&#39;);\nif (!$config-&gt;isNew()) {\n</code></pre></div>",
+        "id": 205281717,
+        "sender_full_name": "Herb",
+        "timestamp": 1595965570
+    },
+    {
+        "content": "<p>If the config has never existed before then it'll exist only as an object and have the isNew flag. Otherwise you know it existed previously</p>",
+        "id": 205281874,
+        "sender_full_name": "Herb",
+        "timestamp": 1595965667
+    },
+    {
+        "content": "<p>This seems like a discussion that should be documented somewhere or added to the forum for future reference.</p>",
+        "id": 205283107,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1595966333
+    },
+    {
+        "content": "<p><a href=\"https://forum.backdropcms.org/forum/how-tell-if-config-file-exists\">https://forum.backdropcms.org/forum/how-tell-if-config-file-exists</a></p>",
+        "id": 205317338,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595996906
+    },
+    {
+        "content": "<p>Thanks all!</p>",
+        "id": 205317344,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595996922
+    },
+    {
+        "content": "<p>Posted some alternatives (in the forum)</p>",
+        "id": 205318025,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1595998175
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ++</p>",
+        "id": 205339272,
+        "sender_full_name": "klonos",
+        "timestamp": 1596018496
+    },
+    {
+        "content": "<p><strong>stpaultim</strong> 1000% (Karma: 19)</p>",
+        "id": 205339273,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1596018497
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++</p>",
+        "id": 205339278,
+        "sender_full_name": "klonos",
+        "timestamp": 1596018501
+    },
+    {
+        "content": "<p><strong>laryn</strong> :-) (Karma: 11)</p>",
+        "id": 205339279,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1596018501
+    },
+    {
+        "content": "<p>@herb++</p>",
+        "id": 205339282,
+        "sender_full_name": "klonos",
+        "timestamp": 1596018504
+    },
+    {
+        "content": "<p>herb 1000% (Karma: 1)</p>",
+        "id": 205339283,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1596018504
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ++</p>",
+        "id": 205339291,
+        "sender_full_name": "klonos",
+        "timestamp": 1596018511
+    },
+    {
+        "content": "<p>(peter)** - Dragon Fire (Karma: 30)</p>",
+        "id": 205339292,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1596018511
+    },
+    {
+        "content": "<p>...some people do not have as much karma as they deserve here <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 205339321,
+        "sender_full_name": "klonos",
+        "timestamp": 1596018545
+    }
+]

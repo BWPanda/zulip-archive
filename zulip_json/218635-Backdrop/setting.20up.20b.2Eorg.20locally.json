@@ -1,0 +1,128 @@
+[
+    {
+        "content": "<p>Been a while since I last set up <a href=\"http://b.org\">b.org</a> on my local. Thank you <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> for setting up the .lando file and commiting it in the repo. It made things easier. ...still the process of setting up <a href=\"http://b.org\">b.org</a> on my local needed a bit of fiddling around <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span> ...for those of you that are working with <a href=\"http://b.org\">b.org</a> on your local and using lando, do you get 404s when trying to access the <code>/modules</code>, <code>/themes</code>, <code>/layouts</code> pages (not the admin pages - the public-facing ones). Nothing is logged in dblog <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 211515336,
+        "sender_full_name": "klonos",
+        "timestamp": 1601310445
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> have you had this 404 issue before? ^^</p>",
+        "id": 211515356,
+        "sender_full_name": "klonos",
+        "timestamp": 1601310458
+    },
+    {
+        "content": "<p>(<code>/add-ons</code> works fine by the way)</p>",
+        "id": 211516024,
+        "sender_full_name": "klonos",
+        "timestamp": 1601310733
+    },
+    {
+        "content": "<p>Haven't tried <a href=\"http://B.org\">B.org</a> for a while, been working a lot on API. But don't recall any issues when I did... Can try later for you.</p>",
+        "id": 211548097,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601325989
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Testing <a href=\"http://B.org\">B.org</a> lando setup now</p>",
+        "id": 211561600,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601334177
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Works for me. I'd suggest destroying your instance and starting again (assuming you've had it running for a while with different branches, PRs, etc.). That's what I did.</p>",
+        "id": 211566355,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601337838
+    },
+    {
+        "content": "<p>In any case, let me know when you're online and I can try to help you debug.</p>",
+        "id": 211566616,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601338047
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ...I'm working at the moment, but it was the first time I've used lando to set <a href=\"http://b.org\">b.org</a> on my local ...I'll try destroying and rebuilding and will let you know if that fixes things.</p>",
+        "id": 211567180,
+        "sender_full_name": "klonos",
+        "timestamp": 1601338528
+    },
+    {
+        "content": "<p>Well destroying won't do anything if you've only just set it up for the first time... Here's a list of things to make sure you do:</p>\n<ul>\n<li>Clone repo (your fork or the main one, just make sure it's up-to-date)</li>\n<li>Setup your <code>.env</code> file (for accessing <a href=\"http://sanitize.backdropcms.org\">sanitize.backdropcms.org</a>)</li>\n<li>Start Lando</li>\n<li>Run <code>lando pulldb</code> to get the latest DB</li>\n<li>Run <code>lando php scripts/lp-pull.php --files</code> to get the latest files</li>\n<li>Manually unzip and move them to the first place (I aim to automate this a bit more, see <a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/91\">https://github.com/backdrop-ops/api.backdropcms.org/issues/91</a>)</li>\n<li>You might need to add the Lando URL to settings.php for the 'trusted_host_patterns' thing</li>\n<li>Copy all <code>live-active</code> config to <code>staging</code> and <code>dev-active</code> (normally you'd run <code>drush bcim</code> to update <code>dev-active</code>, but I couldn't run that because it was empty and wouldn't work until I did it manually first)</li>\n<li>Access site and make sure everything works (on the <code>main</code> branch)</li>\n<li>Switch to issue branch</li>\n<li>Run <code>lando drush bcim</code> to import issue-specific config</li>\n<li>Run <code>lando drush cc all</code> just for the heck of it</li>\n<li>Make sure issue-branch works as expected</li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/91\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/91\" title=\"Add Lando tooling to allow pulling the latest DB/files · Issue #91 · backdrop-ops/api.backdropcms.org\">Add Lando tooling to allow pulling the latest DB/files · Issue #91 · backdrop-ops/api.backdropcms.org</a></div><div class=\"message_embed_description\">I'd like to do the same here as we did in backdrop-ops/backdropcms.org#678 - adding a Lando command for pulling in and setting up the latest API website DB/files.</div></div></div>",
+        "id": 211567279,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601338657
+    },
+    {
+        "content": "<p>Is this documented somewhere? If not, should it be?</p>",
+        "id": 211578891,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601352233
+    },
+    {
+        "content": "<p>Looks like the wiki is disabled on <a href=\"https://github.com/backdrop-ops/api.backdropcms.org\">https://github.com/backdrop-ops/api.backdropcms.org</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/api.backdropcms.org\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/api.backdropcms.org\" title=\"backdrop-ops/api.backdropcms.org\">backdrop-ops/api.backdropcms.org</a></div><div class=\"message_embed_description\">API website for displaying Backdrop CMS source code and developer documentation. - backdrop-ops/api.backdropcms.org</div></div></div>",
+        "id": 211578946,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601352297
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ...I've done all the above, with these exceptions:</p>\n<ul>\n<li>I've manually downloaded and extracted the files in the <code>/files</code> directory</li>\n<li>I've copied config from <code>live-active</code> into <code>dev-active</code> BUT did not copy them into <code>staging</code>. Is that required? (and if so, then why?)</li>\n<li>I did not switch to the branch that I needed to test - I was working off of the <code>main</code> branch</li>\n<li>Did NOT run <code>lando drush bcim</code> (even after running it, I got \"There are no configuration changes to import.\" - as expected of course)<br>\n...I've tried <code>lando drush cc all</code> a couple of times, but that did NOT make any difference.</li>\n</ul>",
+        "id": 211586189,
+        "sender_full_name": "klonos",
+        "timestamp": 1601362357
+    },
+    {
+        "content": "<p>And still getting weird messages on some pages?</p>",
+        "id": 211586215,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601362410
+    },
+    {
+        "content": "<p>All other pages I've test work fine ...it's just those 3 pages that have the issue ...and it's not a \"weird\" issue per se; just a \"404 page not found\"</p>",
+        "id": 211586349,
+        "sender_full_name": "klonos",
+        "timestamp": 1601362551
+    },
+    {
+        "content": "<p>Are you trying as anonymous or logged in?</p>",
+        "id": 211586412,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601362598
+    },
+    {
+        "content": "<p>...these pages are provided by the \"Project listings\" view, which is enabled</p>",
+        "id": 211586414,
+        "sender_full_name": "klonos",
+        "timestamp": 1601362600
+    },
+    {
+        "content": "<p>BTW, I use <code>drush uli</code> to login as user 1</p>",
+        "id": 211586417,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601362612
+    },
+    {
+        "content": "<p>Yup, I use the same ...I've tested as user1, as <code>klonos</code> (after resetting my password), and in incognito as anonymous.</p>",
+        "id": 211586443,
+        "sender_full_name": "klonos",
+        "timestamp": 1601362664
+    },
+    {
+        "content": "<p>Hmm, curious. I'm assuming it's not DB related since the page is a view and that's in config... Also assuming it's not Lando-related. Care to zip up your site and share it with me? I'll see if I can replicate.</p>",
+        "id": 211586622,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601362848
+    },
+    {
+        "content": "<p>Dinner now, back in a few hours.</p>",
+        "id": 211586624,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601362854
+    },
+    {
+        "content": "<p>Enjoy dinner <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> ...I'll dig deeper and then will share my setup if I'm still stuck. Thanks for offering to help <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span></p>",
+        "id": 211586671,
+        "sender_full_name": "klonos",
+        "timestamp": 1601362903
+    }
+]

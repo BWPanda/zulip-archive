@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>I've tried to answer <a href=\"https://forum.backdropcms.org/forum/translating-authordate-format-content-type-settings\">https://forum.backdropcms.org/forum/translating-authordate-format-content-type-settings</a> to the best of my knowledge, but not sure what will need to happen so that config translation is enabled in content types by default. Also unsure how to declare translatable things if they are nested in the config file. Anyone done this before? <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ?</p>",
+        "id": 205260482,
+        "sender_full_name": "klonos",
+        "timestamp": 1595954710
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Never done. Maybe <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> has an idea how to do it?</p>",
+        "id": 205291282,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1595970671
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I've however found some related comments (by you ;-) in the issue queue:</p>\n<ul>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/2379#issuecomment-590002664\">https://github.com/backdrop/backdrop-issues/issues/2379#issuecomment-590002664</a></li>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/3515#issuecomment-590001162\">https://github.com/backdrop/backdrop-issues/issues/3515#issuecomment-590001162</a></li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2379#issuecomment-590002664\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2379#issuecomment-590002664\" title=\"Allow per-content-type customization of author and date display (a.k.a.: &quot;submitted_by in core&quot;) · Issue #2379 · backdrop/backdrop-issues\">Allow per-content-type customization of author and date display (a.k.a.: \"submitted_by in core\") · Issue #2379 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Currently, like in Drupal, there is just one option: on/off, for displaying the author and date on a content type. Ideally we&#39;d be able to change the wording and the date format. Perhaps allow ...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3515#issuecomment-590001162\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3515#issuecomment-590001162\" title=\"Assign translatable config for Views, Layouts and Image Styles · Issue #3515 · backdrop/backdrop-issues\">Assign translatable config for Views, Layouts and Image Styles · Issue #3515 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Follow-up to #704 and related to #3455</div></div></div>",
+        "id": 205291833,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1595970964
+    },
+    {
+        "content": "<p>I don't know the answer to this specific question. I would have to refresh my memory and not sure when I'd have time</p>",
+        "id": 205361511,
+        "sender_full_name": "Herb",
+        "timestamp": 1596031869
+    }
+]

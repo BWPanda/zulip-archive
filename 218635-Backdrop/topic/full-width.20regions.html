@@ -1,0 +1,161 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/full-width.20regions.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html">full-width regions</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="224578683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224578683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224578683">(Jan 30 2021 at 10:30)</a>:</h4>
+<p>Inexcusable question on my part, but is Boxton the only layout template that has support for full width hero blocks in its top region?</p>
+
+
+
+<a name="224578917"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224578917" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224578917">(Jan 30 2021 at 10:37)</a>:</h4>
+<blockquote>
+<p>is Boxton the only layout template that has support for full width hero blocks in its top region?</p>
+</blockquote>
+<p>Hm. doesn't that depend on the theme?</p>
+<p>For sure all flexible layout templates have settings for that via "Configure row" / "Row width behavior ".</p>
+
+
+
+<a name="224579111"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224579111" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224579111">(Jan 30 2021 at 10:43)</a>:</h4>
+<p>Yep, flexible templates allow that, which is actually my point ...if you try to change the home page layout on a vanilla installation to another template, say to one that provides a sidebar, then the hero block remains in the respective "Top" region, but it loses its full-width-ness. I see that as an unexpected WTF.</p>
+
+
+
+<a name="224579807"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224579807" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224579807">(Jan 30 2021 at 11:03)</a>:</h4>
+<blockquote>
+<p>... the hero block remains in the respective "Top" region, but it loses its full-width-ness.</p>
+</blockquote>
+<p>I see the point (WTF). It really seems that most, if not all core layouts except Boxton wrap everything in "container" class, which prevents them from being full-width.<br>
+But I don't think that we can change that now, as this would break things for existing sites. <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span> And there are alternatives available (flexible templates)</p>
+
+
+
+<a name="224581079"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224581079" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224581079">(Jan 30 2021 at 11:34)</a>:</h4>
+<p>Maybe there's a way to label core layout regions of they're full width or not</p>
+
+
+
+<a name="224582835"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224582835" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224582835">(Jan 30 2021 at 12:26)</a>:</h4>
+<p>Thanks for the feedback <span class="user-mention" data-user-id="256705">@Herb</span> and <span class="user-mention" data-user-id="256738">@indigoxela</span> <span aria-label="pray" class="emoji emoji-1f64f" role="img" title="pray">:pray:</span> ...I've created <a href="https://github.com/backdrop/backdrop-issues/issues/4929">https://github.com/backdrop/backdrop-issues/issues/4929</a> so we can see if we can address this issue, so that there is no WTF OOTB.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4929" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4929" title="[UX] Switching the layout template for the home page layout to anything other than Boxton makes the hero block lose its full width. · Issue #4929 · backdrop/backdrop-issues">[UX] Switching the layout template for the home page layout to anything other than Boxton makes the hero block lose its full width. · Issue #4929 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Steps To Reproduce To reproduce the behavior: Vanilla backdrop installation Edit the default home page layout, and switch the template it uses from Boxton to any other core-provided template - &gt;...</div></div></div>
+
+
+
+<a name="224923026"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224923026" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224923026">(Feb 02 2021 at 19:27)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/218635-Backdrop/topic/full-width.20regions/near/224579807">said</a>:</p>
+<blockquote>
+<blockquote>
+<p>... the hero block remains in the respective "Top" region, but it loses its full-width-ness.</p>
+</blockquote>
+<p>I see the point (WTF). It really seems that most, if not all core layouts except Boxton wrap everything in "container" class, which prevents them from being full-width.<br>
+But I don't think that we can change that now, as this would break things for existing sites. <span aria-label="shrug" class="emoji emoji-1f937" role="img" title="shrug">:shrug:</span> And there are alternatives available (flexible templates)</p>
+</blockquote>
+<p>If I'm following this correctly, this jumps out to me as a serious limitation.  Full-width images (and other content) seems like a critical capability for a broad category of websites.  I feel that being able to create them should be the default.  If it's true that only one of the built-in layouts supports this, I propose we change that.  Is there a way to add full-width capability while maintaining backwards compatibility?</p>
+
+
+
+<a name="224923420"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224923420" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224923420">(Feb 02 2021 at 19:31)</a>:</h4>
+<p>Or <a href="https://github.com/backdrop-contrib/hero">https://github.com/backdrop-contrib/hero</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/hero" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/hero" title="backdrop-contrib/hero">backdrop-contrib/hero</a></div><div class="message_embed_description">Versions of core layouts with container classes inside the wrapper, and with a full-width hero region - backdrop-contrib/hero</div></div></div>
+
+
+
+<a name="224923926"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224923926" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224923926">(Feb 02 2021 at 19:34)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256757">docwilmot</span> <a href="#narrow/stream/218635-Backdrop/topic/full-width.20regions/near/224923420">said</a>:</p>
+<blockquote>
+<p>Or <a href="https://github.com/backdrop-contrib/hero">https://github.com/backdrop-contrib/hero</a></p>
+</blockquote>
+<p>That's a solution for experts, but non-gurus will never find that.  I think this capability should be in core.</p>
+<p>Sample size of one, but I've tried unsuccessfully to create full-width blocks in Backdrop in the recent past.  I wasn't able to, but I assumed I just didn't know how.  It never occurred to me that it might be impossible without adding customizations.</p>
+
+
+
+<a name="224924544"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224924544" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224924544">(Feb 02 2021 at 19:39)</a>:</h4>
+<blockquote>
+<p>That's a solution for experts, but non-gurus will never find that. I think this capability should be in core.</p>
+</blockquote>
+<p>Not so sure I agree. Backdrop and Drupal are both built to be modular. If a person cannot find an add-on layout, assume they cant find any additional module or theme. That would mean we have a much bigger problem on our hands.</p>
+
+
+
+<a name="224924631"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224924631" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224924631">(Feb 02 2021 at 19:39)</a>:</h4>
+<p>Ideally fix <a href="http://bdcms.org">bdcms.org</a> search, and allow searching projects by tags and categories. We have outstanding issues for both.</p>
+
+
+
+<a name="224924931"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224924931" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224924931">(Feb 02 2021 at 19:41)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256757">docwilmot</span> <a href="#narrow/stream/218635-Backdrop/topic/full-width.20regions/near/224924544">said</a>:</p>
+<blockquote>
+<p>If a person cannot find an add-on layout, assume they cant find any additional module or theme. That would mean we have a much bigger problem on our hands.</p>
+</blockquote>
+<p>I think we should aspire to solve that much bigger problem <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span>   Drupal is and always has been unnecessarily convoluted; we should compare our usability to Wordpress, Wix, and AEM -- and try to do better.</p>
+
+
+
+<a name="224927512"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224927512" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224927512">(Feb 02 2021 at 19:59)</a>:</h4>
+<p>In my head (and thinking end-users-first) ideally, we'd move the existing core layouts to <a href="https://github.com/backdrop/backdrop/tree/1.x/core/layouts/legacy">https://github.com/backdrop/backdrop/tree/1.x/core/layouts/legacy</a>, and replace them with ones that allow configuring regions to be full width or not. Existing sites would still use the legacy layouts, while new sites would use the new ones.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/tree/1.x/core/layouts/legacy" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/tree/1.x/core/layouts/legacy" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="224927875"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224927875" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224927875">(Feb 02 2021 at 20:01)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256729">klonos</span> <a href="#narrow/stream/218635-Backdrop/topic/full-width.20regions/near/224927512">said</a>:</p>
+<blockquote>
+<p>In my head (and thinking end-users-first) ideally, we'd move the existing core layouts to <a href="https://github.com/backdrop/backdrop/tree/1.x/core/layouts/legacy">https://github.com/backdrop/backdrop/tree/1.x/core/layouts/legacy</a>, and replace them with ones that allow configuring regions to be full width or not. Existing sites would still use the legacy layouts, while new sites would use the new ones.</p>
+</blockquote>
+<p>Would that break existing sites if they upgraded to a new version of core?</p>
+
+
+
+<a name="224927925"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224927925" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224927925">(Feb 02 2021 at 20:01)</a>:</h4>
+<p>As I said:</p>
+<blockquote>
+<p>Existing sites would still use the legacy layouts</p>
+</blockquote>
+
+
+
+<a name="224929868"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/224929868" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#224929868">(Feb 02 2021 at 20:15)</a>:</h4>
+<p>The problem here is the wrappers in our current core layouts. We have a big <code>container</code> class with a width restriction, and all the rows are in that. The Hero layouts swap this, to have a wrapper that can be overridden to have no margins, and each row has the fixed width <code>container</code> class <em>within</em> the row. It would be a simple change to do this, and then we could as <span class="user-mention" data-user-id="256729">@klonos</span> suggested, just park the current ones in the legacy folder.</p>
+
+
+
+<a name="226071306"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/full-width%20regions/near/226071306" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/full-width.20regions.html#226071306">(Feb 11 2021 at 23:04)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> <a href="https://github.com/backdrop/backdrop-issues/issues/4929">https://github.com/backdrop/backdrop-issues/issues/4929</a> Want to weigh in? It would help re your Opera theme.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4929" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4929" title="[UX] Switching the layout template for the home page layout to anything other than Boxton makes the hero block lose its full width. · Issue #4929 · backdrop/backdrop-issues">[UX] Switching the layout template for the home page layout to anything other than Boxton makes the hero block lose its full width. · Issue #4929 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Steps To Reproduce To reproduce the behavior: Vanilla backdrop installation Edit the default home page layout, and switch the template it uses from Boxton to any other core-provided template - &gt;...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

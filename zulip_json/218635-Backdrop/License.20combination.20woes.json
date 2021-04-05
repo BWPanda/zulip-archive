@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>I'm working on a port of the 7.x-2.x branch of the D7 <a href=\"http://drupal.org/project/gauth\">Google Auth module</a>, which is GPL2. It uses the Google API PHP Client, which is Apache 2. In D7, the Google library is separate and resides in the libraries folder (and depends on the Libraries module, which is deprecated in BD). In Backdrop, we are supposed to include such libraries within the module, which thereby raises the problem.</p>\n<p><a href=\"https://law.stackexchange.com/questions/15835/can-i-bundle-apache-2-0-licensed-components-in-a-gpl-3-licensed-project\">According to here</a>, I can include Apache 2.0 code in a GPL 3 package, but not GPL 2.</p>\n<p>And <a href=\"https://softwareengineering.stackexchange.com/questions/267744/including-gplv2-code-in-gplv3-code\">according to here</a> I can't include GPL2 code (the original module) in a GPL 3 package.</p>\n<p>So, if I'm understanding correctly, the only way forward would be to persuade the original developer to re-release the 7.x-2.x module under GPL3, base the BD port off of that, and then I could include the Google module with the Apache licensed code.</p>\n<p>Is this correct? Or are there other approaches to consider?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://law.stackexchange.com/questions/15835/can-i-bundle-apache-2-0-licensed-components-in-a-gpl-3-licensed-project\" style=\"background-image: url(https://cdn.sstatic.net/Sites/law/Img/apple-touch-icon@2.png?v=b5e7f3e10c16)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://law.stackexchange.com/questions/15835/can-i-bundle-apache-2-0-licensed-components-in-a-gpl-3-licensed-project\" title=\"Can I bundle Apache 2.0 licensed components in a GPL 3 licensed project?\">Can I bundle Apache 2.0 licensed components in a GPL 3 licensed project?</a></div><div class=\"message_embed_description\">I am creating a project that I would like to open source and license under the GPL 3 License. The project will come with a bundled version of an open source component which is licensed under the Ap...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://softwareengineering.stackexchange.com/questions/267744/including-gplv2-code-in-gplv3-code\" style=\"background-image: url(https://cdn.sstatic.net/Sites/softwareengineering/Img/apple-touch-icon@2.png?v=1ef7363febba)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://softwareengineering.stackexchange.com/questions/267744/including-gplv2-code-in-gplv3-code\" title=\"Including GPLv2 code in GPLv3 code\">Including GPLv2 code in GPLv3 code</a></div><div class=\"message_embed_description\">I would like to use some code that was released under GPLv2 in my project.\n\nI released my project with the GPLv3 license. Can I do this, or do I have to downgrade to GPLv2?</div></div></div>",
+        "id": 220499511,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1608433182
+    },
+    {
+        "content": "<p>Have you read the README.md file for the Libraries API module? It suggests a possible option by using Backdrop core equivalent functions. I haven't gone down that path myself, so I don't know if that would help or not.</p>",
+        "id": 220500157,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1608434460
+    },
+    {
+        "content": "<p>Another option is to specify in the README.md file of the module you're porting that the person using needs to download the library themselves and place it somewhere of your choosing. I realize that is taking a giant step back to the days when there was no consistent way of handling libraries in Drupal.</p>",
+        "id": 220500158,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1608434461
+    },
+    {
+        "content": "<p>Anything in Drupal's ecosystem is Gpl-2 or later, if I remember correctly.</p>",
+        "id": 220501039,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608436296
+    },
+    {
+        "content": "<p>So you should be able to release a fork as Gpl-3.</p>",
+        "id": 220501084,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608436324
+    },
+    {
+        "content": "<p><a href=\"https://www.drupal.org/about/licensing#project-licensing\">https://www.drupal.org/about/licensing#project-licensing</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.drupal.org/about/licensing#project-licensing\" style=\"background-image: url(https://www.drupal.org/sites/all/themes/bluecheese/images/og.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.drupal.org/about/licensing#project-licensing\" title=\"Licensing\">Licensing</a></div><div class=\"message_embed_description\">These are answers to frequently asked questions about licensing of the Drupal project.</div></div></div>",
+        "id": 220501253,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608436658
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>, <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span>, thanks, both helpful, good to know.</p>",
+        "id": 220522959,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1608475525
+    },
+    {
+        "content": "<p>Another possibility would be creating a separate gpl-3 wrapper module that just wraps the library, and make the gpl-2 module depend on it. Two installs but... should work.</p>",
+        "id": 220523513,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608476578
+    },
+    {
+        "content": "<p>Ehmmm, right, licenses... If I include foreign code which is dual-licensed (actually triple), do I have to mention all these licenses?</p>",
+        "id": 220583535,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608557554
+    },
+    {
+        "content": "<p>I don't think there's a hardline no on using the libraries module. It's just that it's not as user friendly. But sounds like the best is to list it as gpl3. Which is fine for contrib.</p>",
+        "id": 220608764,
+        "sender_full_name": "Herb",
+        "timestamp": 1608572186
+    },
+    {
+        "content": "<blockquote>\n<p>I don't think there's a hardline no on using the libraries module.</p>\n</blockquote>\n<p>That wasn't actually my question... The libraries module is <a href=\"https://backdropcms.org/project/libraries\">deprecated</a>, BTW.<br>\nMy question was: what should I list if external code has multiple licenses. Here's the reason for my question: <a href=\"https://github.com/backdrop-contrib/ckeditor_skins\">ckeditor_skins</a></p>\n<p>And which license must the contrib module have? Note that CKEditor itself has the same three licenses and is part of core.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ckeditor_skins\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ckeditor_skins\" title=\"backdrop-contrib/ckeditor_skins\">backdrop-contrib/ckeditor_skins</a></div><div class=\"message_embed_description\">Additonal CKEditor skins for Backdrop CMS. Contribute to backdrop-contrib/ckeditor_skins development by creating an account on GitHub.</div></div></div>",
+        "id": 220664212,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608620902
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I think I was replying to someone else but can't recall. Your question is good. I don't think I can help</p>",
+        "id": 220868350,
+        "sender_full_name": "Herb",
+        "timestamp": 1608814601
+    }
+]

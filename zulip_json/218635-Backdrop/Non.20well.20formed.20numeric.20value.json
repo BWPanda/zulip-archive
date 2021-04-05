@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>I'm seeing this notice quite a bit in the Backdrop Forum site logs:</p>\n<blockquote>\n<p>Notice: A non well formed numeric value encountered in views_plugin_pager_full-&gt;query() (line 266 of /home/forum/repo/www/core/modules/views/plugins/views_plugin_pager_full.inc).</p>\n</blockquote>\n<p>Anyone come across that before?</p>",
+        "id": 216845844,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605517093
+    },
+    {
+        "content": "<p>Already part of this issue: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3853\">https://github.com/backdrop/backdrop-issues/issues/3853</a></p>\n<p>Drupal fix not yet ported. <a href=\"https://www.drupal.org/node/2885660\">Drupal issue</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3853\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3853\" title=\"crossport views commits from 7.x-3.22 - 7.x-3.23 · Issue #3853 · backdrop/backdrop-issues\">crossport views commits from 7.x-3.22 - 7.x-3.23 · Issue #3853 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Has separate issues/PRs: #4075 | e19e3546 | Issue #2900405 by collinhaines, jenlampton, sano, paulbeaney, jyraya: Undefined index in views_handler_filter-&gt;store_exposed_input(). #4075 | ddaeddc3...</div></div></div>",
+        "id": 216846659,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605517654
+    },
+    {
+        "content": "<p>My goodness! Issues like that scare me.</p>",
+        "id": 216846876,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605517792
+    },
+    {
+        "content": "<p>Meh, the porting of the fixes is straight-forward. Just takes time/effort.</p>",
+        "id": 216847027,
+        "sender_full_name": "klonos",
+        "timestamp": 1605517899
+    }
+]

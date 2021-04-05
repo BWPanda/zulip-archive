@@ -1,0 +1,137 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Random.20token.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html">Random token</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="211773243"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211773243" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211773243">(Sep 30 2020 at 15:02)</a>:</h4>
+<p>In a Backdrop site (upgraded from D7), the token <code>[random:number]</code> doesn't work. In Backdrop, <em>Random</em> tokens aren't available in the Token browser.  In D7 I had used the token as a default value in a webform text field, and I need it for the Backdrop site, too. Does anyone have a idea how to add Random tokens to Backdrop?</p>
+
+
+
+<a name="211775432"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211775432" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211775432">(Sep 30 2020 at 15:15)</a>:</h4>
+<p>Ooops, right, no random tokens. And no contrib module either providing them... At least, none that I found.</p>
+<p>You can add custom token types in a module using <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_token_info/1">hook_token_info</a>.</p>
+<p>These one's are missing in backdrop: <a href="https://git.drupalcode.org/project/token/-/blob/7.x-1.x/token.tokens.inc#L346">https://git.drupalcode.org/project/token/-/blob/7.x-1.x/token.tokens.inc#L346</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://git.drupalcode.org/project/token/-/blob/7.x-1.x/token.tokens.inc#L346" style="background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://git.drupalcode.org/project/token/-/blob/7.x-1.x/token.tokens.inc#L346" title="token.tokens.inc · 7.x-1.x · project / token">token.tokens.inc · 7.x-1.x · project / token</a></div><div class="message_embed_description">For more information about this repository, visit the project page at https://www.drupal.org/project/token</div></div></div>
+
+
+
+<a name="211779508"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211779508" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211779508">(Sep 30 2020 at 15:41)</a>:</h4>
+<p>Thanks for the hint, <span class="user-mention" data-user-id="256738">@indigoxela</span> ! Well, when it comes to coding, I'm not sure how to do it right. I've written a custom module with the code below. As a result, random tokens are available in the Token browser (yay!) ... but not displayed as default value in the Webform text field. What am I missing?</p>
+<div class="codehilite"><pre><span></span><code>/**
+ * Implements hook_token_info().
+ */
+function custom_random_tokens_token_info() {
+  $info[&#39;types&#39;][&#39;random&#39;] = array(
+    &#39;name&#39; =&gt; t(&#39;Random&#39;),
+    &#39;description&#39; =&gt; (&#39;Tokens related to random data.&#39;),
+  );
+  $info[&#39;tokens&#39;][&#39;random&#39;][&#39;number&#39;] = array(
+    &#39;name&#39; =&gt; t(&#39;Number&#39;),
+    &#39;description&#39; =&gt; t(&#39;A random number from 0 to @max.&#39;, array(&#39;@max&#39; =&gt; mt_getrandmax())),
+  );
+  $info[&#39;tokens&#39;][&#39;random&#39;][&#39;hash&#39;] = array(
+    &#39;name&#39; =&gt; t(&#39;Hash&#39;),
+    &#39;description&#39; =&gt; t(&#39;A random hash. The possible hashing algorithms are: @hash-algos.&#39;, array(&#39;@hash-algos&#39; =&gt; implode(&#39;, &#39;, hash_algos()))),
+    &#39;dynamic&#39; =&gt; TRUE,
+  );
+
+  return $info;
+}
+</code></pre></div>
+
+
+
+<a name="211783813"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211783813" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211783813">(Sep 30 2020 at 16:08)</a>:</h4>
+<p>Okay, below is what I missed. When I add it to the module file, it works! Thanks again, <span class="user-mention" data-user-id="256738">@indigoxela</span></p>
+<div class="codehilite"><pre><span></span><code>/**
+ * Implements hook_tokens().
+ */
+function custom_random_tokens_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  $replacements = array();
+
+  if ($type == &#39;random&#39;) {
+    foreach ($tokens as $name =&gt; $original) {
+      switch ($name) {
+        case &#39;number&#39;:
+          $replacements[$original] = mt_rand();
+          break;
+      }
+    }
+
+    // [custom:hash:*] dynamic token.
+    if ($hash_tokens = token_find_with_prefix($tokens, &#39;hash&#39;)) {
+      $algos = hash_algos();
+      foreach ($hash_tokens as $name =&gt; $original) {
+        if (in_array($name, $algos)) {
+          $replacements[$original] = hash($name, backdrop_random_bytes(55));
+        }
+      }
+    }
+  }
+
+return $replacements;
+}
+</code></pre></div>
+
+
+
+<a name="211784010"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211784010" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211784010">(Sep 30 2020 at 16:10)</a>:</h4>
+<p>At first sight, it didn't work but then I recalled there is the magical "Flush all cashes" link ;-)</p>
+
+
+
+<a name="211784139"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211784139" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211784139">(Sep 30 2020 at 16:11)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256674">Olaf Grabienski</span> <a href="#narrow/stream/218635-Backdrop/topic/Random.20token/near/211784010">said</a>:</p>
+<blockquote>
+<p>At first sight, it didn't work but then I recalled there is the magical "Flush all cashes" link ;-)</p>
+</blockquote>
+<p>That gets all of us!!!</p>
+
+
+
+<a name="211789796"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211789796" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211789796">(Sep 30 2020 at 16:55)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> ++</p>
+
+
+
+<a name="211789797"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211789797" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211789797">(Sep 30 2020 at 16:55)</a>:</h4>
+<p>grabienski** :-) (Karma: 13)</p>
+
+
+
+<a name="211789941"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211789941" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211789941">(Sep 30 2020 at 16:56)</a>:</h4>
+<p>...if these tokens were in the 7.x Token module and not in Backdrop, then they should be. Can you please open an issue for it if that's the case <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> ?</p>
+
+
+
+<a name="211818128"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Random%20token/near/211818128" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Random.20token.html#211818128">(Sep 30 2020 at 20:46)</a>:</h4>
+<p>Good idea, <span class="user-mention" data-user-id="256729">@klonos</span> , will do.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

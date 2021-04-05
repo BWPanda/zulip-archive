@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I have a dev site that I've upgraded from Drupal 7. Now I'd like to take the user account table from the live D7 site and insert it into the dev Backdrop site, mostly so everyone's passwords don't change (if possible). Will swapping user tables in the database work?</p>",
+        "id": 202461719,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593534906
+    },
+    {
+        "content": "<p>you could try it on a dev site and see; otherwise you can <code>describe users</code> on D7 and on Backdrop and see if they line up</p>",
+        "id": 202463552,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593535658
+    },
+    {
+        "content": "<p>^ in a <code>mysql</code> shell</p>",
+        "id": 202463584,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1593535674
+    },
+    {
+        "content": "<p>Copying an encrypted password from Drupal to Backdrop seems to work...</p>",
+        "id": 202468876,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593538068
+    },
+    {
+        "content": "<p>I thought that user accounts were retained when upgrading D7 -&gt; Backdrop. Is that not the case?</p>",
+        "id": 202519080,
+        "sender_full_name": "klonos",
+        "timestamp": 1593564095
+    },
+    {
+        "content": "<p>They are, but the development took a while and the user accounts got out of sync.</p>",
+        "id": 202520515,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593565495
+    },
+    {
+        "content": "<p>Right, gotcha! <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 202577686,
+        "sender_full_name": "klonos",
+        "timestamp": 1593614922
+    }
+]

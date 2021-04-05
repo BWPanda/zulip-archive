@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>Hello, <br>\nI am new to Backdrop and was wondering if (and why) it was a good alternative to the D7 extended support (adjusted due to COVID).<br>\nBasically, we proposed a D8/D9 upgrade to one of our client, but now, because it's quite expensive and the D7 support has been extended, they don't have the budget anymore for a D8 upgrade, so they want to delay the D8 upgrade until the end of the support. For the context, that website is quite complex (lots of contrib modules) and we will always have some maintenance tasks, new features to implement.<br>\nThanks</p>",
+        "id": 208080325,
+        "sender_full_name": "Sev",
+        "timestamp": 1598442012
+    },
+    {
+        "content": "<p>Hi, Sev. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 208080326,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1598442012
+    },
+    {
+        "content": "<p>Hi @Sev and welcome. If you are asking if Backdrop is a good alternative <em>until</em> you're ready to upgrade to D8/9, probably not. If you're asking if it would be cheaper and could be an alternative <em>instead of</em> upgrading to D8/9, likely yes, depending on the needs of the site.</p>",
+        "id": 208080656,
+        "sender_full_name": "Laryn",
+        "timestamp": 1598442307
+    },
+    {
+        "content": "<p>Have you looked into which of the contrib modules you are using have already been ported, and which have not?</p>",
+        "id": 208080744,
+        "sender_full_name": "Laryn",
+        "timestamp": 1598442363
+    },
+    {
+        "content": "<p>Thank you for your answer<br>\nNot yet, it is the next step</p>",
+        "id": 208081022,
+        "sender_full_name": "Sev",
+        "timestamp": 1598442598
+    },
+    {
+        "content": "<p>Hi, <span class=\"user-mention\" data-user-id=\"333896\">@Sev</span>, your situation sounds familiar. I guess, many people are currently hesitant regarding existing D7 web projects and how to proceed.</p>\n<p>The extended D7 support (and after that long-term-support) gives people more time to evaluate, but perhaps doesn't make the decision easier. Keep in mind - it may happen that contrib modules your projects rely on run out of support, although D7 core still gets updates.<br>\nAlso consider that D7 won't get new features or significant enhancements.</p>\n<p>Overall, it's some sort of poker. My suggestion would be that you try Backdrop out in a new (smaller) project to figure out if it works for you (I'm confident it will <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> ).<br>\nAnd when you have enough trust and moving more complex projects to Backdrop looks feasible... then just do it.</p>",
+        "id": 208085128,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598445369
+    },
+    {
+        "content": "<p>Thank you all for your answers. What about the PHP updates? PHP 74 will end in Jan 2023, do we know if Backdrop will support PHP 8? I am thinking about security here</p>",
+        "id": 208101061,
+        "sender_full_name": "Sev",
+        "timestamp": 1598453192
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"333896\">Sev</span> <a href=\"#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/D7.20extended.20support.20vs.20Backdrop/near/208101061\">said</a>:</p>\n<blockquote>\n<p>What about the PHP updates? PHP 74 will end in Jan 2023, do we know if Backdrop will support PHP 8?</p>\n</blockquote>\n<p>Why should we put so much effort in improving the CMS and then suddenly stop supporting recent PHP versions? <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span> <br>\nYes, sure, Backdrop CMS will support PHP 8. It's not meant to be a temporary solution, but a real alternative.</p>",
+        "id": 208102844,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1598453865
+    },
+    {
+        "content": "<p>I ask because the roadmap says \"Version 2.0 (not before Jan 2024)\" and I've got the feeling that PHP8 may imply a major release, but I could be wrong. What version of PHP does Backdrop support today?</p>",
+        "id": 208104337,
+        "sender_full_name": "Sev",
+        "timestamp": 1598454440
+    },
+    {
+        "content": "<p>As long as we don't use the new language constructs, we should be able to support PHP 8 without a major version change.</p>",
+        "id": 208104628,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1598454593
+    },
+    {
+        "content": "<p>I believe that we currently support everything from PHP 5.3 to the latest 7.x version.</p>",
+        "id": 208104904,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1598454711
+    }
+]

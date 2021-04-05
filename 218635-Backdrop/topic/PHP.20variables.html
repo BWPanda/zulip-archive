@@ -1,0 +1,60 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/PHP.20variables.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20variables.html">PHP variables</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="187482207"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20variables/near/187482207" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20variables.html#187482207">(Feb 05 2020 at 18:45)</a>:</h4>
+<p>I must be tired, because this simple code gives different results to what I expected:</p>
+<div class="codehilite"><pre><span></span>$i = 0;
+$sum = 5 + $i;
+dpm($sum);
+$i++;
+dpm($sum);
+$i++;
+dpm($sum);
+</pre></div>
+
+
+<p>It produces:</p>
+<div class="codehilite"><pre><span></span>5
+5
+5
+</pre></div>
+
+
+<p>Whereas I was expecting:</p>
+<div class="codehilite"><pre><span></span>5
+6
+7
+</pre></div>
+
+
+
+<a name="187482521"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20variables/near/187482521" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20variables.html#187482521">(Feb 05 2020 at 18:48)</a>:</h4>
+<p>It looks like you never update $sum, only $i. The line where $sum is updated only happens once and before $i is updated. If you had that in a for loop, it would probably work like you expect.</p>
+
+
+
+<a name="187497567"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/PHP%20variables/near/187497567" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/PHP.20variables.html#187497567">(Feb 05 2020 at 21:36)</a>:</h4>
+<p>Yes ...or if you had a <code>sum($i)</code> function that was returning <code>5 + $i</code>, then if you were doing <code>dpm(sum($i));</code> it'd also work.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

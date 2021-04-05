@@ -1,0 +1,81 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Home.20Page.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Home.20Page.html">Home Page</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="221165364"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Home%20Page/near/221165364" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Home.20Page.html#221165364">(Dec 29 2020 at 20:45)</a>:</h4>
+<p>Quote from github issue queue (<span class="user-mention" data-user-id="330989">@Phil Ward</span> ) - talking about default home page setting</p>
+<blockquote>
+<p>even for experienced Drupal users where every single one of them is expecting to have to go change it. Instead, it should very rarely be changed because the OOTB experience is the most ideal for most situations</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> - I know what your talking about in Drupal 7, but I think that the Backdrop CMS layout system largely addresses this issue for me. I seldom change change the home page path anymore, because the home page layout is so flexible that I can do almost anything I want with it. </p>
+<p>If I want a node on the front page, I drop a node block onto the front page. If I want a view on the front page, I drop a view block onto the front page layout. I have a hard time thinking of a reason why I would want to change the default home page in Backdrop (unlike Drupal 7).</p>
+
+
+
+<a name="221165571"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Home%20Page/near/221165571" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Home.20Page.html#221165571">(Dec 29 2020 at 20:48)</a>:</h4>
+<p>Now, I would agree - that this might not be obvious to users coming from Drupal 7. Wrapping my head around layouts was the most difficult thing for me while adjusting to Backdrop. But, having used the layout system for a while, I really like having a home page layout and don't see why I would change the default home page (which I think would be confusing to users later on).</p>
+
+
+
+<a name="221165644"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Home%20Page/near/221165644" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Home.20Page.html#221165644">(Dec 29 2020 at 20:49)</a>:</h4>
+<p>Having said that, I think it is unnecessarily confusing for users that choose to change their default home page.</p>
+
+
+
+<a name="221167775"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Home%20Page/near/221167775" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Home.20Page.html#221167775">(Dec 29 2020 at 21:16)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> right. I feel like it's half-way there but the experience of "what to expect" is what is kind of throwing things off.</p>
+<p>If it were me, I would add a description on the site default page that says something like "Before you change your home page, you might want to edit the existing home page layout at [link to home layout]</p>
+<p>I think if we can address the problem where single page layouts are living in the same space as multi-page layouts, this will become a lot more clear for most people.</p>
+
+
+
+<a name="221168296"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Home%20Page/near/221168296" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Home.20Page.html#221168296">(Dec 29 2020 at 21:22)</a>:</h4>
+<p>Also looking at the OOTB layout page, it would also be good to separate the layouts based on /admin links vs non /admin links. For example the Dashboard is a single page layout that only manipulates things on the /admin backend. That should be separated away from front facing layouts like /home</p>
+<p>Site Layouts</p>
+<ul>
+<li>Page Layouts</li>
+<li>Multi-Page Layouts</li>
+</ul>
+<p>Admin Layouts</p>
+<ul>
+<li>Page Layouts</li>
+<li>Multi-Page Layouts (this could probably be omitted completely)</li>
+</ul>
+
+
+
+<a name="221339320"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Home%20Page/near/221339320" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Home.20Page.html#221339320">(Jan 01 2021 at 06:57)</a>:</h4>
+<p>I'll be curious about what folks think of this idea. Something like this was discussed after the meetings today and I wanted to give it a try to see what other folks think. I welcome feedback and ideas for improvement.<br>
+<a href="https://github.com/backdrop/backdrop-issues/issues/4849">https://github.com/backdrop/backdrop-issues/issues/4849</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4849" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4849" title="[UX] Replace the current default &quot;Promoted Content&quot; block with a page on Home page · Issue #4849 · backdrop/backdrop-issues">[UX] Replace the current default "Promoted Content" block with a page on Home page · Issue #4849 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need We&#39;ve had a number of frustrated users report problems understanding how to use the home page layout in Backdrop CMS. Coming from Drupal, many users assume the need to c...</div></div></div>
+
+
+
+<a name="221339556"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Home%20Page/near/221339556" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Home.20Page.html#221339556">(Jan 01 2021 at 07:04)</a>:</h4>
+<p>Nice! Looks like we both edited the issue labels at the same time, so it seems I removed your label. I'll let you re-add it <span class="user-mention" data-user-id="256570">@StPaulTim</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

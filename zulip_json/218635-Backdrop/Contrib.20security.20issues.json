@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>I wonder, how we can deal with potential security issues in contrib modules.</p>\n<p>A real life example: <a href=\"https://github.com/backdrop-contrib/ckeditor_addon\">https://github.com/backdrop-contrib/ckeditor_addon</a></p>\n<p>This contrib module ships with an outdated ckeditor version (ships with 4.5.7 but 4.15.1 was a security release). Note that there has never been a stable release and the module seems abandoned, but people might have installed (or might still be installing) the dev version. There is no warning, when doing so.</p>\n<p>What's the procedure to handle that? Is there any?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ckeditor_addon\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ckeditor_addon\" title=\"backdrop-contrib/ckeditor_addon\">backdrop-contrib/ckeditor_addon</a></div><div class=\"message_embed_description\">Freedom, fixes, and enhancements to Backdrop core CKEditor - backdrop-contrib/ckeditor_addon</div></div></div>",
+        "id": 224155447,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611738698
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> <a href=\"https://backdropcms.org/security\">https://backdropcms.org/security</a></p>",
+        "id": 224155558,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611738782
+    },
+    {
+        "content": "<blockquote>\n<p><strong>If you have found a security issue in Backdrop Core or a Contributed Project, send an email to security@backdropcms.org.</strong> Do not file an issue on GitHub if you think you have encountered a security issue. The Backdrop Security Team uses a private repository on GitHub where security issues are discussed and managed. When a security issue that affects Backdrop CMS is resolved, a release will come out on the following Wednesday.</p>\n</blockquote>",
+        "id": 224155575,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611738804
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Ah, I see, same procedure as for core. Many thanks! <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 224155796,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611738946
+    }
+]

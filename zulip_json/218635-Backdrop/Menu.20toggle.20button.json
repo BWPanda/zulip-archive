@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p>When you're theming a site and you need to change when a drop-down menu changes to a menu toggle button (i.e. a hamburger menu), how do you do that?</p>",
+        "id": 211717608,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601444088
+    },
+    {
+        "content": "<p>I think I've previously copied <code>menu-toggle.theme.css</code> and <code>menu-dropdown.theme.css</code> to my theme, then changed the media query breakpoints. But I'm hoping/looking for a better way...</p>",
+        "id": 211717712,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601444235
+    },
+    {
+        "content": "<p>Just opened this related issue: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4663\">https://github.com/backdrop/backdrop-issues/issues/4663</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4663\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4663\" title=\"Add setting to menu block for changing breakpoint · Issue #4663 · backdrop/backdrop-issues\">Add setting to menu block for changing breakpoint · Issue #4663 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need When you tick &#39;Display menu toggle button on small screens&#39; in a menu block, it changes the menu to a menu toggle button on small screens. What seems to determine th...</div></div></div>",
+        "id": 211718362,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601445043
+    },
+    {
+        "content": "<p>It would expand the scope of what you are suggesting, but I wonder if we should consider adding breakpoint functionality to core as D8 has done. This would allow core to manage breakpoints that could be used by modules, themes, layouts, ...</p>",
+        "id": 211767111,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601475773
+    },
+    {
+        "content": "<p>I started work on porting that module from D7: <a href=\"https://github.com/backdrop-ops/contrib/issues/409\">https://github.com/backdrop-ops/contrib/issues/409</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/409\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/409\" title=\"Port request for Breakpoints · Issue #409 · backdrop-ops/contrib\">Port request for Breakpoints · Issue #409 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Name of the module, theme, or layout Breakpoints Link to the drupal.org module, theme, or layout https://www.drupal.org/project/breakpoints Related forum post https://forum.backdropcms.org/forum/al...</div></div></div>",
+        "id": 211767222,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601475825
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Menu.20toggle.20button/near/211717608\">said</a>:</p>\n<blockquote>\n<p>When you're theming a site and you need to change when a drop-down menu changes to a menu toggle button (i.e. a hamburger menu), how do you do that?</p>\n</blockquote>\n<p>it's fairly easy.  Just use @media with the breakpoint you want and then hide the dropdown menu (display:none) and unhide the menu-toggle.  ex: <br>\n@media screen and (max-width: 48em) {  <br>\n     #main-menu { display:none; }<br>\n     #menu-toggle-button {display:block;}<br>\n}<br>\nThe exact syntax and breakpoints depend on your particular theme and use case.  I find I prefer to go to the menu toggle at the biggest point it makes sense.</p>",
+        "id": 211782328,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601481608
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> Yeah I started with that, but then realised I needed to add more and more CSS into those media queries to get everything working properly. There's quite a lot in the core CSS files I mentioned above that needs accounting for that make simply overriding the media queries nontrivial.</p>",
+        "id": 211816205,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601497922
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Menu.20toggle.20button/near/211816205\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> Yeah I started with that, but then realised I needed to add more and more CSS into those media queries to get everything working properly. There's quite a lot in the core CSS files I mentioned above that needs accounting for that make simply overriding the media queries nontrivial.</p>\n</blockquote>\n<p>That's one of the reasons I pick a theme that's going to allow me to customize fairly heavily (i.e. just the bare bones of what I need - because I know I'm adding the rest).  But it's a challenge if the theme has everything else you want.  I don't know that there's any easier way to do it.  That's really a theme dependent question.</p>",
+        "id": 211972280,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601585205
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Menu.20toggle.20button/near/211717712\">said</a>:</p>\n<blockquote>\n<p>When you're theming a site and you need to change when a drop-down menu changes to a menu toggle button (i.e. a hamburger menu), how do you do that?</p>\n<p>I think I've previously copied menu-toggle.theme.css and menu-dropdown.theme.css to my theme, then changed the media query breakpoints. But I'm hoping/looking for a better way...</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I could need this currently for a site with a <em>Basis</em> sub-theme. (As long as the respective setting isn't in core.) Did you also use <em>Basis</em>, and do you remember which exact files you had to copy and change?</p>",
+        "id": 219208158,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607435495
+    },
+    {
+        "content": "<p>Hope it help you: <a href=\"https://www.jenlampton.com/blog/changing-smartmenus-breakpoint-backdrop-cms\">https://www.jenlampton.com/blog/changing-smartmenus-breakpoint-backdrop-cms</a></p>",
+        "id": 219211775,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1607437431
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> ! I'm curious if it also works in a <em>Basis</em> sub-theme. Will try it (tomorrow).</p>",
+        "id": 219213051,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607438057
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> You could try applying this patch to your site, to help us test this so we can get it into core: <a href=\"https://patch-diff.githubusercontent.com/raw/backdrop/backdrop/pull/3343.patch\">https://patch-diff.githubusercontent.com/raw/backdrop/backdrop/pull/3343.patch</a></p>",
+        "id": 219253103,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607456908
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Thanks for the patch link! The patch is really extensive and the site in question isn't a test site. Therefore, I'd prefer a custom change in my theme. Apart of that, I guess <a href=\"https://github.com/backdrop/backdrop-issues/issues/4663\">the feature request</a> doesn't need more testing but a decision. (Will try to chime in there.)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4663\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4663\" title=\"Add setting to menu block for changing breakpoint · Issue #4663 · backdrop/backdrop-issues\">Add setting to menu block for changing breakpoint · Issue #4663 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Status [19th Nov]: PR needs review and testing. Description of the need When you tick &#39;Display menu toggle button on small screens&#39; in a menu block, it changes the menu to a menu toggle but...</div></div></div>",
+        "id": 219310375,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607504256
+    },
+    {
+        "content": "<blockquote>\n<p>Will try to chime in there.</p>\n</blockquote>\n<p>Done.</p>",
+        "id": 219313927,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607506522
+    },
+    {
+        "content": "<p>I've finally adapted the hints for my <em>Basis</em> sub-theme: I've copied <code>menu-toggle.theme.css</code> (from system module) and <code>menu-dropdown.css</code> (from Basis core theme) to my sub-theme and changed the breakpoints.</p>",
+        "id": 219359444,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607530739
+    },
+    {
+        "content": "<p>This works generally. One thing is strange, though. In the <code>.info</code> file, I've declared the CSS files in this order:</p>\n<p>stylesheets[all][] = css/menu-dropdown.css<br>\nstylesheets[all][] = css/menu-toggle.theme.css<br>\nstylesheets[all][] = css/skin.css</p>\n<p>In the document HEAD, <code>skin.css</code> is imported first, before the other two files. I guess because I use the name <code>skin.css</code>, which is also a file in <em>Basis</em>. Is it possible to change the order, so that <code>skin.css</code> is imported last?</p>",
+        "id": 219360659,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1607531227
+    }
+]

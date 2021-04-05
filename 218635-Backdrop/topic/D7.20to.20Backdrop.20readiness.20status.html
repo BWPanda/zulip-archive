@@ -1,0 +1,190 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html">D7 to Backdrop readiness status</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217375876"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217375876" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217375876">(Nov 20 2020 at 09:02)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> <span class="user-mention" data-user-id="256664">@Luke McCormick</span> <span class="user-mention" data-user-id="263951">@jenlampton</span> </p>
+<p>Hey, I wanted to expand just a bit on my thoughts from the meeting and create some discussion around focusing on the Drupal 7 userbase.</p>
+<p>First of all, I gave a bit of my background and late acceptance to Backdrop in attempt to point out that I haven't been around for all of the previous discussions, so I just want to apologize for not being around sooner for those and I honestly feel bad bringing up some topics that may have already been hashed.</p>
+<p>I understand this has been discussed in the past, however, since I wasn't in on those discussions I have to wonder how far back they go? (recent or has it been a while?)</p>
+<p>So here's what I'm thinking and would like to get some collaboration going for Drupal 7 outreach.</p>
+<p><strong>Known Issue:</strong><br>
+Based on Luke's comment, there are folks in the community who are wondering why the D7 userbase is still so closely focused on and why more effort isn't being pushed towards non-drupal users.</p>
+<p>My thought is that the community will grow faster and stronger with a userbase that is already familiar with the platform. Trying to get a wordpress user to look at Backdrop for example, will be a lot more difficult. According to some stats I ran across the other day, there are approximately 300,000 in-use Drupal 7 sites. If we can be in front of just 10% of them, that's a huge potential boost to the community long term.</p>
+<p><strong>Let's look at where BD is today:</strong><br>
+Very stable with a good chunk of common modules in core and a LOT of effort put into porting. I personally have not looked closely at Backdrop before now because of the perceived friction of figuring out "how hard" it will be to upgrade. Specifically regarding the D7 module compatibility. I had no idea until a week ago that there was already a module for that. Excellent start.</p>
+<p><strong>Ultimate Goal:</strong></p>
+<ul>
+<li>Get in front of as many D7 maintainers as possible</li>
+<li>Show the D7 community there is an option other than Drupal "new"</li>
+<li>Gain precise data on exactly which modules are in use on D7 to help make informed decisions on where to focus ports.</li>
+</ul>
+<p>Here's the ToDo I would like to propose on getting the Drupal7 Outreach initiative going:</p>
+<p><strong>Step 1: Telemetry</strong></p>
+<ul>
+<li>The telemetry to collect specifically is the list of modules in use on a given D7 site.</li>
+<li>I feel like Telemetry within the upgrade status will be crucial in understanding the needs of the general D7 group and help provide direction on where to focus.</li>
+<li>Telemetry within Backdrop Upgrade Status should be seen as a separate issue from the Backdrop Telemetry issue except for one possible overlap which is "where and how to store the data". In all honesty, this could be completely separate from the BD initiative since this information has nothing to do with the actual Backdrop telemetry initiative.</li>
+<li>Suggesting to make this separate from the official telemetry issue because they serve two completely different needs and platforms. One is short term (2-3 years), the other is long term (10+).</li>
+<li>Wondering if .json format best for the data structure.</li>
+<li>Suggestion to assign each site with a unique ID for better aggregating. (Don't want one guy spamming the submit button 100 times... Need a way to factor out the extra 99 submissions)</li>
+<li>Suggestion to create a link to the formatted .json file for review by the D7 site owner (so they know exactly what is being sent)</li>
+<li>This stage should only focus on the collection of the data, not the final pretty output (that can come later)</li>
+<li>After some discussion, it has been decided this should be an opt-in through a submittal button on the upgrade status page. This needs to be structured as a high converting CTA. For example, it would be at the top of the status page with something like:</li>
+</ul>
+<blockquote>
+<p>Would you like to help Backdrop with porting modules? Anonymously send us your list of modules today so we can work on making sure your site will be ready for upgrade! [Send My List]<br>
+(Note: No personally identifiable information is sent to our servers. View the output .json we will receive {here})</p>
+</blockquote>
+<p><strong>Step 2: Add to Drupal.org</strong><br>
+In order for people to realize how close their site is to being compatible, they need an easy, familiar way of installing a module on their Drupal 7 sites. I don't suggest adding Upgrade Status to <a href="http://b.org">b.org</a> until the telemetry portion is setup and working.</p>
+<p><strong>Step 3: Add Backdrop Upgrade Status to b.org</strong></p>
+<ul>
+<li>Advertise the module on <a href="http://b.org">b.org</a> home page</li>
+<li>Advertise the module on <a href="http://b.org/upgrade-from-drupal">b.org/upgrade-from-drupal</a> page</li>
+<li>Advertise the module on <a href="http://b.org/modules">b.org/modules</a> (This was one of the first places I went when doing research. "I wonder what kind of modules they have?")</li>
+<li>etc.</li>
+</ul>
+<p><strong>Step 4: Collect Data</strong></p>
+<ul>
+<li>Wait for the data to come in</li>
+<li>Figure out if the data is (easily) made publicly available such as on the website, or simply aggregated and stuck somewhere that the core folks can utilize.</li>
+<li>Decide if and how to make the data pretty so it's easier to understand.</li>
+<li>Begin making decisions based on the data coming in.</li>
+</ul>
+<p><strong>Step 5: Possible Further Outreach</strong></p>
+<ul>
+<li>Push an updated Backdrop Upgrade Status that has an opt-in email subscription for notifying a user when a module on their list has been ported.</li>
+<li>This will keep these folks in the loop and Backdrop at the front of their minds.</li>
+<li>Honestly, having this added on the day it goes to <a href="http://drupal.org">drupal.org</a>, would be fantastic. It might be too much to get this going up-front though which is why I suggest it as an after-thought.</li>
+</ul>
+
+
+
+<a name="217393350"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217393350" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217393350">(Nov 20 2020 at 12:16)</a>:</h4>
+<p>I agree with this as an initiative <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...I really like the idea of providing a more data-based readiness status of Backdrop ported contrib modules. ...we should break this into actionable "baby steps"</p>
+
+
+
+<a name="217411311"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217411311" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217411311">(Nov 20 2020 at 15:01)</a>:</h4>
+<p>I like the steps. A question about Step 2: though I think it would be good to add the module to <a href="http://drupal.org">drupal.org</a>, do you think it will get rejected? I was looking for another example of a module that is meant to move someone off Drupal. I haven't found one yet.</p>
+
+
+
+<a name="217412076"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217412076" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217412076">(Nov 20 2020 at 15:06)</a>:</h4>
+<blockquote>
+<p>I was looking for another example of a module that is meant to move someone off Drupal. I haven't found one yet.</p>
+</blockquote>
+<p>Can it do harm if we try? What are possible problems we could run into? (Except that it's getting rejected.)</p>
+
+
+
+<a name="217413632"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217413632" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217413632">(Nov 20 2020 at 15:17)</a>:</h4>
+<p>I think it's worth trying but perhaps need to consider the approach. Such as, does having "backdrop" in the name make it more likely to get rejected?</p>
+
+
+
+<a name="217456176"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217456176" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217456176">(Nov 20 2020 at 20:40)</a>:</h4>
+<p>I would be surprised if <a href="http://D.org">D.org</a> bans a module because it's helping move to a different platform.</p>
+<p>I say get it thrown in and see what happens.</p>
+<p>Oh, and technically, it isn't actually doing anything to move anyone off D7. It is simply an information module.</p>
+<p>I have a feeling that if <span class="user-mention" data-user-id="263951">@jenlampton</span> or <span class="user-mention" data-user-id="258586">@quicksketch</span> post it to their Drupal account, not a word will be said by the DA. I could be wrong though <span aria-label="joy" class="emoji emoji-1f602" role="img" title="joy">:joy:</span></p>
+
+
+
+<a name="217560583"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217560583" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Sarvasri <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217560583">(Nov 22 2020 at 17:18)</a>:</h4>
+<p>I'm not a developer. Just a site builder. I have two D7 sites I'm trying to switch to BD, plus two others with just a skeleton D7 to also switch. I went to <a href="https://www.youtube.com/watch?v=5YIPWVYim1Q">YouTube - Session: Moving from Drupal 7 to Backdrop CMS</a> to try to understand the process, but got totally lost with the video example. We definitely need a much better way to update for site builders without so much required developer skill, if it's possible. Again, I've been stymied for weeks trying to figure out how to switch my simple D7 sites.</p>
+<div class="youtube-video message_inline_image"><a data-id="5YIPWVYim1Q" href="https://www.youtube.com/watch?v=5YIPWVYim1Q"><img src="https://i.ytimg.com/vi/5YIPWVYim1Q/default.jpg"></a></div>
+
+
+
+<a name="217561868"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217561868" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217561868">(Nov 22 2020 at 17:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="330989">@Phil Ward</span> said: "Oh, and technically, it isn't actually doing anything to move anyone off D7. It is simply an information module."</p>
+<p>Exactly. It could, in fact, convince people to move to D8/9 instead of BD because the particular module they need is not on BD but is on D8 (which they can see with the <a href="https://www.drupal.org/project/upgrade_status">upgrade_status module</a>). It helps them make an informed decision, whichever way they go.</p>
+
+
+
+<a name="217567983"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217567983" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217567983">(Nov 22 2020 at 20:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="333206">@Sarvasri</span> I have not moved a site yet, so I may not be much help... This is how I would approach it without studying the docs first (cuz I'm a dude and stupid stubborn <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span>)</p>
+<p>Pre 1) create a second domain to use for testing the new site. Example <a href="http://mig.sitename.com">mig.sitename.com</a> (mig for migrate)</p>
+<p>This should have been step 1, but I'm too invested (became an after thought)</p>
+<p>1) you need a backup of the database. Always make sure you have a pristine D7 database to work from in case things go sideways.</p>
+<p>The way I have done this when upgrading D6 -&gt; D7 in the past, is to duplicate (export/import) the D7 database as a new name: sitenamed7 -&gt; sitenamebd1 for example. So, I now have the exact same database twice, with two different names.</p>
+<p>(Don't forget to set a username/password on the new database)</p>
+<p>2) you need a backup of the folders and files in case things go sideways.</p>
+<p>Copy /d7sitefolder.orig -&gt; /d7sitefolder.mig</p>
+<p>3) create a new folder/file area with ONLY  the latest backdrop code</p>
+<p>/bd1sitefolder.new</p>
+<p>4) Download the BD files and extract them to /bd1sitefolder.new</p>
+<p>5) Run the BD installer like you're going to do a brand new site. When it gets to the database page, enter the duplicated database name: sitenamebd1</p>
+<p>Enter the username/password</p>
+<p>6) when it gets to the "update database" page, cross your fingers and expect it to blow up.</p>
+<p>if the update works without blowing up and you can get to the site, you're 85% there.</p>
+<p>7) copy any files from the d7sitename.orig folder to the <a href="http://bd1sitename.new">bd1sitename.new</a> folder</p>
+<p>./files<br>
+./themes</p>
+<p>8) visit the modules folder and look for missing modules</p>
+<p>This is the step that might be way different than what I'm used to and will need some back and forth between the old site and new site.</p>
+<p>Look for any modules that are missing and begin adding them to the new site. (If they're available)</p>
+<p>Once the modules are good, from here it's a matter of dealing with the little annoyances of trying to figure out what is different and needs fixed or tweaked.</p>
+<hr>
+<p>Note: in the video, it is mentioned to add the modules to the new site before converting the database. I don't know how necessary this is. It makes things easier in some ways, but I personally like focusing just on the core files first and making sure that is working, before trying to add contribs. Sometimes, contribs can cause major problems but core is fine. Adding contribs early can make this difficult to trouble shoot </p>
+<p>Note 2: I like making copies of the database between major milestones.</p>
+<p>For example:</p>
+<p>M1: D7 Base copy<br>
+M2: D7 Modules disabled<br>
+M3: Successful update to BD<br>
+M4-?: After installing a handful of modules</p>
+<p>These milestone backups save a lot of time if you have to go backwards and have to troubleshoot. Simply import the latest milestone copy and go from there. I have upgraded Drupal sites in the past without making milestone backups and had to start over from scratch. Not fun.</p>
+<p>Note 3: I did not mention "disable modules on D7 first" because the docs and video mention it so I thought it was a given. I do recommend this step and usually do it right after the first db backup. Once disabled, I create the 2nd db milestone.</p>
+
+
+
+<a name="217568662"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217568662" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217568662">(Nov 22 2020 at 20:36)</a>:</h4>
+<p>Oh, all of this can be done from a GUI. I use cPanel for exporting/importing databases. The only time I use a command line is for making folders and moving files. This can all be done from a GUI folder manager though. Command line is just faster.</p>
+
+
+
+<a name="217569259"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217569259" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Sarvasri <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217569259">(Nov 22 2020 at 20:51)</a>:</h4>
+<p>The process needs to be standardized and documented if we want people to be able to move to backdrop easily and not be overwhelmed with support issues. We need to put the best heads together to create and promote a system of upgrading that minimizes pain and maximizes happiness :)</p>
+
+
+
+<a name="217571911"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20readiness%20status/near/217571911" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20readiness.20status.html#217571911">(Nov 22 2020 at 21:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="333206">@Sarvasri</span> agreed.</p>
+<p>So it has been proposed to add telemetry to the backdrop upgrade status. This will give the team really good insight into which modules to focus on that are popular, but not as widely known about.</p>
+<p>This will in theory, lower the barrier.</p>
+<p>Once that happens, it will be a lot easier to support the move for people because the friction will be a lot less.</p>
+<p>Maybe this is already a thing, but I envision a module where you can visit a page that shows which D7 modules are in the backdrop database, then check to see if they've been ported (from within backdrop). From there you check off the ones you want and hit install where it automatically downloads those modules for you (so we don't have to go back and forth). It's something to shoot for long term.</p>
+<p>I would like to see the upgrade status module have priority on getting data from existing D7 sites and making sure it is on <a href="http://drupal.org">drupal.org</a> first.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

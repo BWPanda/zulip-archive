@@ -1,0 +1,88 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/cleaning.20git.20history.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html">cleaning git history</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="192403395"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192403395" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192403395">(Mar 31 2020 at 15:15)</a>:</h4>
+<p>I just made a port of Entity Tokens. TO keep the history, I just renamed the folder from Entity to Entity Tokens, and deleted all files except the two necessary ones. But Entity has lots of history. I've seen many suggestions to use <code>filter-branch</code> to remove an individual file history, but none that shows how to remove ALL history except a specific file (two files in this case. Any recommendations?</p>
+
+
+
+<a name="192404423"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192404423" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192404423">(Mar 31 2020 at 15:22)</a>:</h4>
+<p>This might be different to what you're asking, but maybe not... <a href="https://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/" title="https://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/">https://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/</a></p>
+
+
+
+<a name="192406325"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192406325" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192406325">(Mar 31 2020 at 15:35)</a>:</h4>
+<p><a href="https://stackoverflow.com/questions/21213001/how-to-remove-all-traces-of-a-single-file-in-git" title="https://stackoverflow.com/questions/21213001/how-to-remove-all-traces-of-a-single-file-in-git">https://stackoverflow.com/questions/21213001/how-to-remove-all-traces-of-a-single-file-in-git</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://stackoverflow.com/questions/21213001/how-to-remove-all-traces-of-a-single-file-in-git" style="background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded)"></a><div class="data-container"><div class="message_embed_title"><a href="https://stackoverflow.com/questions/21213001/how-to-remove-all-traces-of-a-single-file-in-git" title="How to remove all traces of a single file in git">How to remove all traces of a single file in git</a></div><div class="message_embed_description">I recently noticed that I had a file with sensitive information under version control in git. I have now added this file to my .gitignore list, but how can I remove all mention of it from my commit </div></div></div>
+
+
+
+<a name="192409656"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192409656" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192409656">(Mar 31 2020 at 15:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> thats the opposite of what I need actually.</p>
+
+
+
+<a name="192409706"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192409706" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192409706">(Mar 31 2020 at 15:56)</a>:</h4>
+<p>Not a single file but everything else except</p>
+
+
+
+<a name="192409746"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192409746" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192409746">(Mar 31 2020 at 15:57)</a>:</h4>
+<p>sorry misunderstood; looks like Bwpandas is the opposite of mine so that should work?</p>
+
+
+
+<a name="192409747"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192409747" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192409747">(Mar 31 2020 at 15:57)</a>:</h4>
+<p>I think <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> might be on to someting</p>
+
+
+
+<a name="192409755"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192409755" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192409755">(Mar 31 2020 at 15:57)</a>:</h4>
+<p>when I'm more awake will try it.</p>
+
+
+
+<a name="192431269"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192431269" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192431269">(Mar 31 2020 at 18:34)</a>:</h4>
+<p>I found and used those instructions when I exported the Tugboat module from BackdropCMS.org's repo and made it its own repo: <a href="https://github.com/backdrop-contrib/tugboat" title="https://github.com/backdrop-contrib/tugboat">https://github.com/backdrop-contrib/tugboat</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/tugboat" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/tugboat" title="backdrop-contrib/tugboat">backdrop-contrib/tugboat</a></div><div class="message_embed_description">Integrates with Tugboat.qa to allow creating on-the-fly preview sites. - backdrop-contrib/tugboat</div></div></div>
+
+
+
+<a name="192941923"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192941923" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192941923">(Apr 05 2020 at 04:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> ++</p>
+
+
+
+<a name="192941924"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/cleaning%20git%20history/near/192941924" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/cleaning.20git.20history.html#192941924">(Apr 05 2020 at 04:54)</a>:</h4>
+<p>(peter)** <span aria-label="grinning" class="emoji emoji-1f600" role="img" title="grinning">:grinning:</span>  <span aria-label="heart" class="emoji emoji-2764" role="img" title="heart">:heart:</span> (Karma: 22)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

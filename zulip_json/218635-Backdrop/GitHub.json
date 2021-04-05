@@ -1,0 +1,356 @@
+[
+    {
+        "content": "<p>I didn't know that we could add modules and themes to our PR sandboxes in Github.</p>\n<p>I know now.</p>",
+        "id": 189035749,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1582648622
+    },
+    {
+        "content": "<p>Yes. The fact the until recently we could not do that with the tugboat sandboxes is why I have been maintaining <a href=\"https://github.com/backdrop/backdrop/pull/2206\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop/pull/2206\">https://github.com/backdrop/backdrop/pull/2206</a> ...and <a href=\"https://github.com/backdrop/backdrop/pull/1831\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop/pull/1831\">https://github.com/backdrop/backdrop/pull/1831</a> before that <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/2206\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/2206\" target=\"_blank\" title=\"Please ignore this by klonos · Pull Request #2206 · backdrop/backdrop\">Please ignore this by klonos · Pull Request #2206 · backdrop/backdrop</a></div><div class=\"message_embed_description\">...using this PR as a sandbox generator.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/1831\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/1831\" target=\"_blank\" title=\"Please ignore this by klonos · Pull Request #1831 · backdrop/backdrop\">Please ignore this by klonos · Pull Request #1831 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Just need a PR sandbox. Sorry for polluting the PR queue.</div></div></div>",
+        "id": 189036276,
+        "sender_full_name": "klonos",
+        "timestamp": 1582648966
+    },
+    {
+        "content": "<p>^^ these are both \"empty\" PRs (just a single dot added in the README) ...which was my cheeky way of keeping temporary sandboxes around, in the pre-tugboat era.</p>",
+        "id": 189036423,
+        "sender_full_name": "klonos",
+        "timestamp": 1582649053
+    },
+    {
+        "content": "<p>GitHub is a bit flaky <a href=\"https://www.githubstatus.com\" title=\"https://www.githubstatus.com\">https://www.githubstatus.com</a></p>",
+        "id": 194824815,
+        "sender_full_name": "klonos",
+        "timestamp": 1587485195
+    },
+    {
+        "content": "<p>I just got an update for Git on my computer. Maybe it was related... (i.e. GitHub updating stuff)?</p>",
+        "id": 194833693,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1587489265
+    },
+    {
+        "content": "<p>This has been announced for some time now: <a href=\"https://github.blog/changelog/2020-04-21-code-navigation-is-now-available-for-all-javascript-php-and-typescript-repositories/\" title=\"https://github.blog/changelog/2020-04-21-code-navigation-is-now-available-for-all-javascript-php-and-typescript-repositories/\">https://github.blog/changelog/2020-04-21-code-navigation-is-now-available-for-all-javascript-php-and-typescript-repositories/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.blog/changelog/2020-04-21-code-navigation-is-now-available-for-all-javascript-php-and-typescript-repositories/\" style=\"background-image: url(https://github.blog/wp-content/uploads/2019/03/blog-card.png?resize=1024,538)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.blog/changelog/2020-04-21-code-navigation-is-now-available-for-all-javascript-php-and-typescript-repositories/\" title=\"Code navigation is now available for all JavaScript, PHP, and TypeScript repositories\">Code navigation is now available for all JavaScript, PHP, and TypeScript repositories</a></div><div class=\"message_embed_description\">Code navigation is now available for all JavaScript, PHP, and TypeScript repositories</div></div></div>",
+        "id": 196933505,
+        "sender_full_name": "klonos",
+        "timestamp": 1588962910
+    },
+    {
+        "content": "<p>...but it doesn't work on our repo. Does anyone have any idea if we need to do something on our end?</p>",
+        "id": 196933560,
+        "sender_full_name": "klonos",
+        "timestamp": 1588962951
+    },
+    {
+        "content": "<p>I believe that it only works with .php files.</p>",
+        "id": 196934679,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588963533
+    },
+    {
+        "content": "<p>Not 100% sure though</p>",
+        "id": 196934709,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588963557
+    },
+    {
+        "content": "<p>JS works: <a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/misc/autocomplete.js#L208\" title=\"https://github.com/backdrop/backdrop/blob/1.x/core/misc/autocomplete.js#L208\">https://github.com/backdrop/backdrop/blob/1.x/core/misc/autocomplete.js#L208</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/misc/autocomplete.js#L208\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/misc/autocomplete.js#L208\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 196935081,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588963704
+    },
+    {
+        "content": "<p>Interesting: <a href=\"https://github.blog/changelog/2020-05-11-account-successors\">https://github.blog/changelog/2020-05-11-account-successors</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.blog/changelog/2020-05-11-account-successors\" style=\"background-image: url(https://github.blog/wp-content/uploads/2019/03/blog-card.png?resize=1024,538)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.blog/changelog/2020-05-11-account-successors\" title=\"Account successors\">Account successors</a></div><div class=\"message_embed_description\">Account successors</div></div></div>",
+        "id": 198304533,
+        "sender_full_name": "klonos",
+        "timestamp": 1590055655
+    },
+    {
+        "content": "<p>Oooh! Just discovered dark mode in GitHub: <a href=\"/user_uploads/18319/adSZpZeTG71W6lv13crcyZ0L/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/adSZpZeTG71W6lv13crcyZ0L/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/adSZpZeTG71W6lv13crcyZ0L/image.png\"></a></div>",
+        "id": 219745998,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1607838596
+    },
+    {
+        "content": "<p>I just switched to the dark side too (relax, not switching to D8/9 <span aria-label=\"smiling imp\" class=\"emoji emoji-1f608\" role=\"img\" title=\"smiling imp\">:smiling_imp:</span> ) ...takes some getting used to. Especially the code diff in the PRs, but hey, we need to save the environment, and our eyes <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 220450214,
+        "sender_full_name": "klonos",
+        "timestamp": 1608346871
+    },
+    {
+        "content": "<p>I find it very neon <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> But slowly getting used to it.</p>",
+        "id": 220450306,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608346966
+    },
+    {
+        "content": "<p>The animation when switching is sooo cute.</p>",
+        "id": 220461242,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608368443
+    },
+    {
+        "content": "<p>Hello, <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  and myself are having access issues for the search_api_db repo. He's trying to add me as the maintainer.<br>\n<a href=\"https://github.com/backdrop-contrib/search_api_db/pull/3\">https://github.com/backdrop-contrib/search_api_db/pull/3</a><br>\n<a href=\"https://github.com/backdrop-contrib/search_api_db/issues/2\">https://github.com/backdrop-contrib/search_api_db/issues/2</a><br>\nThanks in advance...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/search_api_db/pull/3\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/search_api_db/pull/3\" title=\"Add earlyburg as a maintainer by earlyburg · Pull Request #3 · backdrop-contrib/search_api_db\">Add earlyburg as a maintainer by earlyburg · Pull Request #3 · backdrop-contrib/search_api_db</a></div><div class=\"message_embed_description\">#2\n@docwilmot Hello I'm just making this official.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/search_api_db/issues/2\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/search_api_db/issues/2\" title=\"Request to become a maintainer. · Issue #2 · backdrop-contrib/search_api_db\">Request to become a maintainer. · Issue #2 · backdrop-contrib/search_api_db</a></div><div class=\"message_embed_description\">Hello @docwilmot, I respectfully request that I be added as a maintainer of this module, and be given adequate permissions to update the repo as necessary. I thank you. Happy Holidays!</div></div></div>",
+        "id": 221522968,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1609767090
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span></p>",
+        "id": 221546811,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1609778292
+    },
+    {
+        "content": "<p>All done <span class=\"user-mention\" data-user-id=\"367848\">@earlyburg</span> and <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 221565210,
+        "sender_full_name": "klonos",
+        "timestamp": 1609786766
+    },
+    {
+        "content": "<p>Many Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span></p>",
+        "id": 221675083,
+        "sender_full_name": "earlyburg",
+        "timestamp": 1609867485
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> We have separated our code repo (<a href=\"https://github.com/backdrop/backdrop\">https://github.com/backdrop/backdrop</a>) from our issue repo (<a href=\"https://github.com/backdrop/backdrop-issues\">https://github.com/backdrop/backdrop-issues</a>) for reasons I can't recall. Are those reasons still valid, or is it time to start considering merging them both into one repo...?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 223991236,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611628858
+    },
+    {
+        "content": "<p>My understanding is that we have different repos, because of permissions. It was my understanding that permissions in the issue queue are tied to permissions for the repo and we would either have to be very conservative in granting permission for managing issues or be very liberal in granting access to the code. </p>\n<p>I think that was the original reason for two different repos. I don't know if Github has made it easier for us to accommodate both.</p>",
+        "id": 223993305,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1611631398
+    },
+    {
+        "content": "<p>It is easier to manage now than it was before, but it's still not ideal. The main reason for not combining now is that we'd have a problem with issue numbers (since PRs are issues too) we'd have conflicts merging the two repos.</p>",
+        "id": 223995913,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611634977
+    },
+    {
+        "content": "<p>I think if we're going to declare PR bankruptcy and close/delete them all, we should do that at a nice clean milestone, like 2.x.</p>",
+        "id": 223995925,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611635006
+    },
+    {
+        "content": "<p>Interesting reading. Finally got why two repоs. </p>\n<p><span class=\"user-mention silent\" data-user-id=\"263951\">jenlampton</span> <a href=\"#narrow/stream/218635-Backdrop/topic/GitHub/near/223995913\">said</a>:</p>\n<blockquote>\n<p>It is easier to manage now than it was before, but it's still not ideal. The main reason for not combining now is that we'd have a problem with issue numbers (since PRs are issues too) we'd have conflicts merging the two repos.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> , do you think this solution <a href=\"https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories\">https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories</a> could mitigate the issue somehow?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories\" title=\"How do you merge two Git repositories?\">How do you merge two Git repositories?</a></div><div class=\"message_embed_description\">Consider the following scenario:\n\nI have developed a small experimental project A in its own Git repo. It has now matured, and I'd like A to be part of larger project B, which has its own big repos...</div></div></div>",
+        "id": 223997680,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611637265
+    },
+    {
+        "content": "<p>Sounds like that's specific to keeping git commit history, whereas our main problem is merging GitHub functionality - issues and PRs...</p>",
+        "id": 223997994,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611637566
+    },
+    {
+        "content": "<p>yeah. We'd also need to remove the \"code\" from the issues repo, but we could move that to ops pretty easily</p>",
+        "id": 223998095,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611637711
+    },
+    {
+        "content": "<p>the problem is that there are issues with the same issue number as PRs for core</p>",
+        "id": 223998106,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611637751
+    },
+    {
+        "content": "<p>and the only way to solve that is to sacrifice all the PRs, and overwrite them with the issues.</p>",
+        "id": 223998108,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611637764
+    },
+    {
+        "content": "<p>Wonder if there's a way to automatically create PRs in the issues repo (with new IDs), linking to the same issue as before...</p>",
+        "id": 223998167,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611637857
+    },
+    {
+        "content": "<p>I've submitted a ticket to GitHub asking about the possibility of merging the repos, to see if it's possible and how we might go about it.</p>",
+        "id": 224116817,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611701674
+    },
+    {
+        "content": "<p>We had a previous conversation similar to this at <a href=\"https://github.com/backdrop/backdrop-issues/issues/4041\">https://github.com/backdrop/backdrop-issues/issues/4041</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4041\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4041\" title=\"How can we use the new GitHub &quot;triage&quot; role for managing issues? · Issue #4041 · backdrop/backdrop-issues\">How can we use the new GitHub \"triage\" role for managing issues? · Issue #4041 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Back in May 2019, GitHub introduced a new feature for a &quot;Triage&quot; role that allows users to add and remove tags, milestones, and assignees but without the permission to push to the reposit...</div></div></div>",
+        "id": 224394823,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1611869128
+    },
+    {
+        "content": "<p>Just opened a GitHub link in a different browser profile than I normally use (so I'm logged out), and the lack of dark mode startled me for a moment. Everything looks so bright and white! My eyes! <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 228331508,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614644243
+    },
+    {
+        "content": "<p>I just noticed this: <a href=\"/user_uploads/18319/iXKf1bmw0io8H_H07LOhuyhV/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/iXKf1bmw0io8H_H07LOhuyhV/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/iXKf1bmw0io8H_H07LOhuyhV/image.png\"></a></div>",
+        "id": 230211048,
+        "sender_full_name": "klonos",
+        "timestamp": 1615695432
+    },
+    {
+        "content": "<p>...wondering how you can \"resolve\" comments <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> ...I really like that feature in PR comments, but cannot see how it would work in issues(?)</p>",
+        "id": 230211117,
+        "sender_full_name": "klonos",
+        "timestamp": 1615695517
+    },
+    {
+        "content": "<p>I can't see this. Do you have 'beta' access or something <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> ?</p>",
+        "id": 230211327,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615695725
+    },
+    {
+        "content": "<p>Right <span aria-label=\"face palm\" class=\"emoji emoji-1f926\" role=\"img\" title=\"face palm\">:face_palm:</span> ...I keep forgetting that. ...not beta access, but <a href=\"https://github.com/sindresorhus/refined-github\">https://github.com/sindresorhus/refined-github</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/sindresorhus/refined-github\" style=\"background-image: url(https://repository-images.githubusercontent.com/51769689/98757400-4600-11ea-925f-98aafaa62d4d)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/sindresorhus/refined-github\" title=\"sindresorhus/refined-github\">sindresorhus/refined-github</a></div><div class=\"message_embed_description\">:octocat: Browser extension that simplifies the GitHub interface and adds useful features - sindresorhus/refined-github</div></div></div>",
+        "id": 230211420,
+        "sender_full_name": "klonos",
+        "timestamp": 1615695844
+    },
+    {
+        "content": "<p>...it was added as a `conversation activity filter\" feature in a recent release, about 9 days ago: <a href=\"https://github.com/sindresorhus/refined-github/pull/4029\">https://github.com/sindresorhus/refined-github/pull/4029</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/sindresorhus/refined-github/pull/4029\" style=\"background-image: url(https://repository-images.githubusercontent.com/51769689/98757400-4600-11ea-925f-98aafaa62d4d)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/sindresorhus/refined-github/pull/4029\" title=\"Add `conversation-activity-filter` feature by fregante · Pull Request #4029 · sindresorhus/refined-github\">Add `conversation-activity-filter` feature by fregante · Pull Request #4029 · sindresorhus/refined-github</a></div><div class=\"message_embed_description\">Closes #3764\nCloses #615\nReplaces #3847\nScreenshot\n(readme screenshot wip)\n\n\n\nTest\nEvery event is on #4030\nSome events are on #3847 but you can also test the native &quot;X event hidden&quot; there...</div></div></div>",
+        "id": 230211488,
+        "sender_full_name": "klonos",
+        "timestamp": 1615695960
+    },
+    {
+        "content": "<p>It's interesting to be used to Backdrop's ways of using GitHub, then see how other projects do things. I just witnessed an issue being closed in favour of a PR... <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 231388563,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616448939
+    },
+    {
+        "content": "<p>Ooooh! ...even moar features on GitHub:<br>\n<a href=\"/user_uploads/18319/ApqHQYcNMNyxH9enFKgS1_93/image.png\">image.png</a> <br>\n<a href=\"/user_uploads/18319/b1Nhg7XtPVuJNNe4Po2oNCov/image.png\">image.png</a> <br>\n<a href=\"/user_uploads/18319/01qYEt2Uohv3v619CSjyuVys/image.png\">image.png</a> <br>\n<a href=\"/user_uploads/18319/cm0yxe36hlkTetQ9SbP4Y4WR/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/ApqHQYcNMNyxH9enFKgS1_93/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/ApqHQYcNMNyxH9enFKgS1_93/image.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/b1Nhg7XtPVuJNNe4Po2oNCov/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/b1Nhg7XtPVuJNNe4Po2oNCov/image.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/01qYEt2Uohv3v619CSjyuVys/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/01qYEt2Uohv3v619CSjyuVys/image.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/cm0yxe36hlkTetQ9SbP4Y4WR/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/cm0yxe36hlkTetQ9SbP4Y4WR/image.png\"></a></div>",
+        "id": 231971944,
+        "sender_full_name": "klonos",
+        "timestamp": 1616768319
+    },
+    {
+        "content": "<p>Whats going on with notifications? Why do I have 80+ GH notifications in my email about subscribing to CI User?</p>",
+        "id": 232210681,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1616985159
+    },
+    {
+        "content": "<p>I'm not sure about the \"subscribing to CI User\" bit, but I got a bunch of notifications in GitHub too right after I rebased a PR. I think it was because I originally made the PR branch in the core repo (as opposed to my own fork), so maybe that triggered it...? If so, sorry, my bad.</p>",
+        "id": 232211063,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616985549
+    },
+    {
+        "content": "<p>I got 10 emails from BackdropCMS CI User (55 minutes ago). Maybe <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> got more, because he is involved in more issues. </p>\n<p>Most of these emails say I received them, because i was mentioned in the issue.</p>",
+        "id": 232212039,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616986634
+    },
+    {
+        "content": "<p>yes, my mistake, theyre all just about backdrop-ci making new comments.</p>",
+        "id": 232212199,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1616986808
+    },
+    {
+        "content": "<p>Is anyone else having weird issues with Github today.  If I go here: <a href=\"https://github.com/backdrop/backdrop-issues\">https://github.com/backdrop/backdrop-issues</a></p>\n<p>I can not see the menu link to the issue queue as per usual. If I follow a direct link to the issue queue, I am able to access it and navigate around. <a href=\"https://github.com/backdrop/backdrop-issues/issues/\">https://github.com/backdrop/backdrop-issues/issues/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 232339033,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1617053208
+    },
+    {
+        "content": "<p>Looks fine to me on mobile...</p>",
+        "id": 232339136,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617053266
+    },
+    {
+        "content": "<p>OK, when I login as Triplo (my business account) it work as expected. This is only effecting my personal account. I might have changed some setting somewhere, but I don't understand what I did.</p>",
+        "id": 232343781,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1617055651
+    },
+    {
+        "content": "<p>Seem like I just had to clear my browser cache. I don't understand how this happened, but I've cleared it up.</p>",
+        "id": 232347479,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1617058074
+    },
+    {
+        "content": "<p>Same thing with my account <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span></p>",
+        "id": 232356261,
+        "sender_full_name": "klonos",
+        "timestamp": 1617064271
+    },
+    {
+        "content": "<p>...this is what I see: <a href=\"/user_uploads/18319/O3uHxbY1XZfSO0fLoUaGqN7f/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/O3uHxbY1XZfSO0fLoUaGqN7f/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/O3uHxbY1XZfSO0fLoUaGqN7f/image.png\"></a></div>",
+        "id": 232356289,
+        "sender_full_name": "klonos",
+        "timestamp": 1617064293
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/XJ8s7OkAEPOcCD6rj03DnAgh/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/XJ8s7OkAEPOcCD6rj03DnAgh/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/XJ8s7OkAEPOcCD6rj03DnAgh/image.png\"></a></div>",
+        "id": 232356376,
+        "sender_full_name": "klonos",
+        "timestamp": 1617064346
+    },
+    {
+        "content": "<p>...the top navigation is either gone, or messed up <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 232356401,
+        "sender_full_name": "klonos",
+        "timestamp": 1617064370
+    },
+    {
+        "content": "<p>...not only the Backdrop repo ...other repos as well (both private and public)</p>",
+        "id": 232356463,
+        "sender_full_name": "klonos",
+        "timestamp": 1617064414
+    },
+    {
+        "content": "<p>...happens on multiple browsers, and in incognito mode too.</p>",
+        "id": 232356633,
+        "sender_full_name": "klonos",
+        "timestamp": 1617064541
+    },
+    {
+        "content": "<p>That is exactly what I saw, except if I logged in on another browser it was fine. I cleared my cache and it was all fine.</p>",
+        "id": 232358913,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1617066440
+    },
+    {
+        "content": "<p>These weird notifications are still happening. I;m getting a bunch of <code>You are receiving this because you were mentioned.</code> emails often, for issues long past, without anyone having recently commented or pushed.</p>",
+        "id": 233165175,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1617625483
+    },
+    {
+        "content": "<p>Got this one today: <a href=\"https://github.com/backdrop-ops/backdrop-composer/commit/7966fb71cef191a0c82d10426b56d19050a68b70\">https://github.com/backdrop-ops/backdrop-composer/commit/7966fb71cef191a0c82d10426b56d19050a68b70</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdrop-composer/commit/7966fb71cef191a0c82d10426b56d19050a68b70\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdrop-composer/commit/7966fb71cef191a0c82d10426b56d19050a68b70\" title=\"Issue #4555: Change 'wildcard' to 'placeholder' on Layout Add form, a… · backdrop-ops/backdrop-composer@7966fb7\">Issue #4555: Change 'wildcard' to 'placeholder' on Layout Add form, a… · backdrop-ops/backdrop-composer@7966fb7</a></div><div class=\"message_embed_description\">…nd add exmaples of core paths.\n\nBy @jenlampton, @stpaultim, @klonos &amp; @docwilmot.</div></div></div>",
+        "id": 233165200,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1617625502
+    },
+    {
+        "content": "<p>Not even a recent issue. And composer?</p>",
+        "id": 233165246,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1617625536
+    },
+    {
+        "content": "<p>It's because it was updated to 1.18.2: <a href=\"https://github.com/backdrop-ops/backdrop-composer/commit/144a550f573876e29e07052d6b6dbd568b6b0f7d\">https://github.com/backdrop-ops/backdrop-composer/commit/144a550f573876e29e07052d6b6dbd568b6b0f7d</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdrop-composer/commit/144a550f573876e29e07052d6b6dbd568b6b0f7d\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdrop-composer/commit/144a550f573876e29e07052d6b6dbd568b6b0f7d\" title=\"Update to Backdrop 1.18.2 · backdrop-ops/backdrop-composer@144a550\">Update to Backdrop 1.18.2 · backdrop-ops/backdrop-composer@144a550</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop-ops/backdrop-composer development by creating an account on GitHub.</div></div></div>",
+        "id": 233225491,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617654926
+    },
+    {
+        "content": "<p>I've previously asked about alternative ways of updating these extra repos, to avoid all the notifications, but they wanted them to have a history of all commits, so we have to put up with this notification influx every update...</p>",
+        "id": 233225762,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617655048
+    }
+]

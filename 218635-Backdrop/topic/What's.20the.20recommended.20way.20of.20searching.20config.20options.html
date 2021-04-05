@@ -1,0 +1,87 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html">What's the recommended way of searching config options</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="224445215"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224445215" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224445215">(Jan 29 2021 at 09:07)</a>:</h4>
+<p>Assume you don't know what is exact <code>$option</code> in <code>$config-&gt;get($option);</code>, you only know part of the option's name. What's the best way to find the option?</p>
+
+
+
+<a name="224445362"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224445362" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224445362">(Jan 29 2021 at 09:09)</a>:</h4>
+<p><code>$config</code> implies you've already done <code>$config = config('module.type');</code>, so just look in that file would be easiest <span aria-label="smiling face" class="emoji emoji-263a" role="img" title="smiling face">:smiling_face:</span></p>
+
+
+
+<a name="224445653"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224445653" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224445653">(Jan 29 2021 at 09:12)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> I need to programmatically find option</p>
+
+
+
+<a name="224445675"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224445675" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224445675">(Jan 29 2021 at 09:12)</a>:</h4>
+<p>knowing only part of its name</p>
+
+
+
+<a name="224445693"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224445693" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224445693">(Jan 29 2021 at 09:12)</a>:</h4>
+<p>Ah</p>
+
+
+
+<a name="224445707"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224445707" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224445707">(Jan 29 2021 at 09:12)</a>:</h4>
+<p>Does my script really needs to deal with the file itself?</p>
+
+
+
+<a name="224445844"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224445844" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224445844">(Jan 29 2021 at 09:14)</a>:</h4>
+<p>Any possibility to iterate through all options?</p>
+
+
+
+<a name="224445949"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224445949" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224445949">(Jan 29 2021 at 09:15)</a>:</h4>
+<div class="codehilite" data-code-language="PHP"><pre><span></span><code><span class="x">$option = 'partial';</span>
+<span class="x">$config = config('system.core');</span>
+<span class="x">foreach ($config-&gt;get() as $key =&gt; $value) {</span>
+<span class="x">  if (strpos($key, $option) !== FALSE) {</span>
+<span class="x">    // Tada! $value</span>
+<span class="x">  }</span>
+<span class="x">}</span>
+</code></pre></div>
+
+
+
+<a name="224446055"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224446055" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224446055">(Jan 29 2021 at 09:16)</a>:</h4>
+<p>Ah, <code>$config-&gt;get() </code> gets all values. Good to know. Thanks!</p>
+
+
+
+<a name="224446071"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%27s%20the%20recommended%20way%20of%20searching%20config%20options/near/224446071" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What's.20the.20recommended.20way.20of.20searching.20config.20options.html#224446071">(Jan 29 2021 at 09:16)</a>:</h4>
+<p>Basically <code>config_get()</code>/<code>$config-&gt;get()</code> without specifying the key will return all values</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

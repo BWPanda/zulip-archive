@@ -1,0 +1,128 @@
+[
+    {
+        "content": "<p><code>curl -I https://updates.backdropcms.org/\ncurl: (60) SSL certificate problem: certificate has expired</code></p>",
+        "id": 199274009,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1590869433
+    },
+    {
+        "content": "<p>Am getting an error searching for a module from within Backdrop <code>Status message\nEncountered an error when trying to fetch results from Backdrop. Error 0 : Error opening socket ssl://projects.backdropcms.org:443</code> which might be related?</p>",
+        "id": 199276472,
+        "sender_full_name": "Kevin Golding",
+        "timestamp": 1590873694
+    },
+    {
+        "content": "<p>Hi, Kevin Golding. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 199276473,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1590873694
+    },
+    {
+        "content": "<p>@all anyone else having an SSL issue with update server? I haven't checked</p>",
+        "id": 199277737,
+        "sender_full_name": "Herb",
+        "timestamp": 1590875799
+    },
+    {
+        "content": "<p>I just did a <code>CHECK MANUALLY</code> on <code>/admin/reports/updates</code> from one of my sites and no error for me.</p>",
+        "id": 199280183,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590879876
+    },
+    {
+        "content": "<p>After 2020-05-31 11:00 UTC one site cannot get update information. An example from dblog: <br>\nHTTP request to <a href=\"https://updates.backdropcms.org/release-history/bueditor/1.x?site_key=...&amp;version=1.x-2.1&amp;list=bueditor\">https://updates.backdropcms.org/release-history/bueditor/1.x?site_key=...&amp;version=1.x-2.1&amp;list=bueditor</a> failed with error: Error opening socket ssl://updates.backdropcms.org:443.<br>\nServer - Linode Dallas, TX, USA (Debian 8 LTS)</p>",
+        "id": 199291688,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1590902872
+    },
+    {
+        "content": "<p>Hm... Can't reproduce a problem here. Neither on command line nor with a real browser.</p>\n<p><code>openssl s_client -connect updates.backdropcms.org:443</code></p>\n<p>The Commodo certificate shows as being valid until 6. October 2020, 23:59:59 GMT</p>",
+        "id": 199295622,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590910846
+    },
+    {
+        "content": "<p>This is only one site running on old but fully updated version  of Debian - 8.11. Sites on Debian 9 get update info as usual, but even from such server if I try \"curl\" - I see same certificate problem report.</p>",
+        "id": 199296250,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1590912277
+    },
+    {
+        "content": "<p>I don't have a Debian 8 anymore, the oldest I have is 9 (Stretch). And on a Debian 9 I could reproduce the problem with <strong>curl</strong> (and only curl). I bet that's rather a curl bug than a problem with Backdrop. On Debian Buster (10) everything works fine.</p>",
+        "id": 199296651,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590913309
+    },
+    {
+        "content": "<p>A quick thought on this: the TLS version? Recent clients (command line or graphical) are using Protocol  : TLSv1.3. Maybe the older curl versions aren't aware of this?</p>",
+        "id": 199296839,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590913730
+    },
+    {
+        "content": "<p>Probably this is really kind of problem from old software, but curiously: what changed just yesterday?</p>",
+        "id": 199297648,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1590915583
+    },
+    {
+        "content": "<p>There seems to be a problem. I gave ssllabs a try - and that shows the certificate as expired as of yesterday:</p>\n<p><a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=updates.backdropcms.org\">https://www.ssllabs.com/ssltest/analyze.html?d=updates.backdropcms.org</a></p>\n<p>Details:<br>\n<a href=\"/user_uploads/18319/4oQGA2DCy97Fl2abRB6WJDYz/screenshot-expired-cert.png\">screenshot-expired-cert.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/4oQGA2DCy97Fl2abRB6WJDYz/screenshot-expired-cert.png\" title=\"screenshot-expired-cert.png\"><img src=\"/user_uploads/18319/4oQGA2DCy97Fl2abRB6WJDYz/screenshot-expired-cert.png\"></a></div><p>Are some dev-ops around? Could someone please restart nginx? Some processes still seem to have the old cert loaded.</p>",
+        "id": 199298007,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590916237
+    },
+    {
+        "content": "<p>Related info - <a href=\"https://news.ycombinator.com/item?id=23362759\">https://news.ycombinator.com/item?id=23362759</a></p>",
+        "id": 199298532,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1590917294
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> or <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> please see above about old cert</p>",
+        "id": 199300407,
+        "sender_full_name": "Herb",
+        "timestamp": 1590921000
+    },
+    {
+        "content": "<p>I have the same problem both on shared hosting Jino and on OpenServer. Does it depend on the region? In Russia, we have a lot of sites under the ban in recent years.<br>\n<a href=\"/user_uploads/18319/ZA7xsWaqpKkNSJ-Lizio81TS/Jino-Backdrop-443.JPG\">Jino-Backdrop-443.JPG</a> <a href=\"/user_uploads/18319/3AXNNgknJi4k6e2uH_wXSqgt/OpenServer-Backdrop-443.JPG\">OpenServer-Backdrop-443.JPG</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/ZA7xsWaqpKkNSJ-Lizio81TS/Jino-Backdrop-443.JPG\" title=\"Jino-Backdrop-443.JPG\"><img src=\"/user_uploads/18319/ZA7xsWaqpKkNSJ-Lizio81TS/Jino-Backdrop-443.JPG\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/3AXNNgknJi4k6e2uH_wXSqgt/OpenServer-Backdrop-443.JPG\" title=\"OpenServer-Backdrop-443.JPG\"><img src=\"/user_uploads/18319/3AXNNgknJi4k6e2uH_wXSqgt/OpenServer-Backdrop-443.JPG\"></a></div>",
+        "id": 199313921,
+        "sender_full_name": "Alexandr",
+        "timestamp": 1590946152
+    },
+    {
+        "content": "<p>Hi, Alexandr. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 199313922,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1590946152
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"307798\">@Alexandr</span> problem is not specific for a region, if you prefer read on Russian: <a href=\"https://www.opennet.ru/opennews/art.shtml?num=53061\">https://www.opennet.ru/opennews/art.shtml?num=53061</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.opennet.ru/opennews/art.shtml?num=53061\" style=\"background-image: url(https://www.opennet.ru/opennet_192tg.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.opennet.ru/opennews/art.shtml?num=53061\" title=\"Устаревание корневого сертификата AddTrust привело к массовым сбоям\">Устаревание корневого сертификата AddTrust привело к массовым сбоям</a></div><div class=\"message_embed_description\">30 мая истёк 20-летний срок действия корневого сертификата  AddTrust , который  применялся   для формирования перекрёстной подписи (cross-signed) в сертификатах  одного из крупнейших удостоверяющих центров Sectigo (Comodo). Перекрёстная подпись позволяла обеспечить совместимость с устаревшими устройствами, в хранилище корневых сертификатов которых не был добавлен новый корневой сертификат USERTRust</div></div></div>",
+        "id": 199314181,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1590946620
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> thanks for fast reply! I think I get it :)</p>",
+        "id": 199314450,
+        "sender_full_name": "Alexandr",
+        "timestamp": 1590947103
+    },
+    {
+        "content": "<p>Hi Folks! Thanks for the heads-up. I'll take a look.</p>",
+        "id": 199321131,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590959026
+    },
+    {
+        "content": "<p>We're affected by <a href=\"https://www.namecheap.com/support/knowledgebase/article.aspx/10228/14/sectigo-root-certificate-expiring-may-30-2020/\">https://www.namecheap.com/support/knowledgebase/article.aspx/10228/14/sectigo-root-certificate-expiring-may-30-2020/</a> While our direct cert has not yet expired, the root certificate that qualifies ours expired yesterday. Weird that would happen at all. I'll reissue the cert</p>",
+        "id": 199322245,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590961308
+    },
+    {
+        "content": "<p>Root certificates are fixed with updated versions . Increased our cipher security as well so we're now A rated. Thanks <span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> for raising this issue! <a href=\"/user_uploads/18319/JkJB2MtLqeqUJ0FP50VO1FYP/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/JkJB2MtLqeqUJ0FP50VO1FYP/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/JkJB2MtLqeqUJ0FP50VO1FYP/image.png\"></a></div>",
+        "id": 199323229,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1590963197
+    }
+]

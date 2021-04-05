@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>Heads-up: I have multiple tabs open in my browser, where I have drafted several new issues from the various topics discussed during the weekly UX/design meeting on Dec. 31. (I regret having missed that meeting, but it was on 10pm on the NYE for me).<br>\nAnyway, I just wanted to make a note with regards to the discussion around layouts, blocks, visibility conditions, and handling paths (the part tha happens ~50min into the call: <a href=\"https://youtu.be/Fc-oQ55LQi0?t=3080\">YouTube - YouTube</a>). This has come up before in the past, but it seems to me that people either do not realize that there are 2 ways to approach things, or they keep forgetting it until reminded:</p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"Fc-oQ55LQi0\" href=\"https://youtu.be/Fc-oQ55LQi0?t=3080\"><img src=\"https://i.ytimg.com/vi/Fc-oQ55LQi0/default.jpg\"></a></div><ul>\n<li><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> and <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> seem to prefer or have gotten used to using a single layout for a path, and then use multiple similar blocks. Visibility conditions are added to each block, in order to define what each user will see (think logged-in vs anon users)</li>\n<li>\n<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> on the other hand seems to prefer having 2 separate layouts for the same path, with each different block added to the respective layout (one for logged-in + another for anon users). In this case, the visibility conditions are added to the layouts instead of the blocks.<br>\n...I'm not saying that one way is better than the other, because:</p>\n</li>\n<li>\n<p>On the one hand, using a single layout for a path, and then placing 2 (or more) blocks which are basically the same thing but with different visibility conditions may work, but it may not always be ideal. Over time, we have improved UX by adding features like visibility condition preview/summary for each block + better admin block titles. All that may help somewhat, but you may still end up having to deal with huge lists of blocks within the same layout.</p>\n</li>\n<li>On the other hand, if you use 2 layouts + visibility conditions on the layouts instead of the blocks, it makes it relatively easier to know which layout you need to edit, and each layout is kept \"tidy\" (small amount of blocks to deal with). The downside is that you will need to duplicate blocks that should be visible in both layouts. When you configure a \"common\" block in one layout (logged-in users), you then need to repeat the configuration on the other layout too (the one for anon users). Instead of switching between layouts, one can have them both open on separate browser tabs. This may work, but still not ideal having to repeat configuration.<br>\n...<br>\n...the reason why I've taken the time to write all the above, is that <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> keep mentioning that this is a bug, while <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> kept trying to say that he thinks not ...I agree with <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span>  with regards to it NOT being a bug, but not necessarily that it is the best way to handle things ...I think that somewhere in that discussion you all were talking about similar but different things ...and I think that terminology confusion occurred at some point <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...anyway, it's really hard to put all thoughts down in words, so I would love to revisit that discussion during the next UX meeting, and clarify certain things.</li>\n</ul>",
+        "id": 222449131,
+        "sender_full_name": "klonos",
+        "timestamp": 1610466242
+    },
+    {
+        "content": "<p>Cooles Modul... kann ich bestehende Einträge auch wieder entfernen? <a href=\"/user_uploads/18319/E5XBU38OTdLZKVHdTOquUTTy/Screenshot-2021-01-12-at-18.39.30.png\">Screenshot-2021-01-12-at-18.39.30.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/E5XBU38OTdLZKVHdTOquUTTy/Screenshot-2021-01-12-at-18.39.30.png\" title=\"Screenshot-2021-01-12-at-18.39.30.png\"><img src=\"/user_uploads/18319/E5XBU38OTdLZKVHdTOquUTTy/Screenshot-2021-01-12-at-18.39.30.png\"></a></div>",
+        "id": 222467516,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1610473222
+    },
+    {
+        "content": "<p>The layout method appears to be documented here: <a href=\"https://backdropcms.org/user-guide/deep-dive-advanced-layout-options\">https://backdropcms.org/user-guide/deep-dive-advanced-layout-options</a> (in \"Set multiple layouts on one path using visibility conditions\"), while the only thing I found for the block method is what appears to be a reference to the \"Set multiple layouts on one path using visibility conditions\" section in <a href=\"https://backdropcms.org/user-guide/deep-dive-configuring-blocks\">https://backdropcms.org/user-guide/deep-dive-configuring-blocks</a> (\"Completing adding a block to a layout\").</p>",
+        "id": 222484729,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1610480924
+    },
+    {
+        "content": "<p>Granted, I did not read all pages, and I did not read the ones I did thoroughly, so I might have missed something.</p>",
+        "id": 222484884,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1610480997
+    },
+    {
+        "content": "<p>I was thinking about this discussion the other day and I feel like \"both should work\". I think the use-case of one over the other depends on the person and the situation. I understand it makes documentation/tutorials more confusing when there are multiple ways to accomplish the same task so that might need to be a consideration.</p>\n<p>Ah, and I just remembered I ran into the problem of keeping \"panes\" synced in panels. I always envisioned a way to make a pane (block in this case) a default for a given variant (layout) and any changes to it would propagate to the other variants (layouts). Kind of like views. It could be done, but adds an additional layer of complexity.</p>",
+        "id": 222493065,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1610484929
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/copy_blocks\">https://github.com/backdrop-contrib/copy_blocks</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/copy_blocks\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/copy_blocks\" title=\"backdrop-contrib/copy_blocks\">backdrop-contrib/copy_blocks</a></div><div class=\"message_embed_description\">Add blocks to your layout which are actually copies of other blocks or entire regions. - backdrop-contrib/copy_blocks</div></div></div>",
+        "id": 222493637,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610485175
+    },
+    {
+        "content": "<blockquote>\n<p>I always envisioned a way to make a pane (block in this case) a default for a given variant (layout) and any changes to it would propagate to the other variants (layouts). Kind of like views. It could be done, but adds an additional layer of complexity.</p>\n</blockquote>\n<p>That's not necessarily that complex, if you use (existing node) content. Updating the node should update it in every layout. Might depend on your workflow - if you use config sync it might be complex.</p>",
+        "id": 222541457,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610521715
+    }
+]

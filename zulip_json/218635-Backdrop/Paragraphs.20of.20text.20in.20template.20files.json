@@ -1,0 +1,14 @@
+[
+    {
+        "content": "<p>What's the best practice for including paragraphs worth of text in template files? Just adding it in as-is, like old-school <code>.html</code> files? Wrapping it all in <code>&lt;?php ?&gt;</code> tags and then using the <code>t()</code> function to translate it? Moving it to a preprocess function?</p>",
+        "id": 190608792,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584211949
+    },
+    {
+        "content": "<p>I'm guessing there isn't a best practice? If you don't need to translate just add as-is I suggest.</p>",
+        "id": 190626617,
+        "sender_full_name": "Herb",
+        "timestamp": 1584240905
+    }
+]

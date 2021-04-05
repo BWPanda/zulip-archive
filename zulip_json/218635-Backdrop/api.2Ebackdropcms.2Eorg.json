@@ -1,0 +1,278 @@
+[
+    {
+        "content": "<p>Is there a reason no one on the API site has the 'View hidden paths' permission? Was it an oversight, or on purpose?</p>",
+        "id": 208169354,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598491202
+    },
+    {
+        "content": "<p>I've given that permission to Developers, just so I can see hidden nodes after I create them.</p>",
+        "id": 208169410,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598491253
+    },
+    {
+        "content": "<p>That permission was added as part of <a href=\"https://github.com/backdrop/backdrop-issues/issues/100\">#100</a>, with <a href=\"https://github.com/backdrop/backdrop/pull/2286\">https://github.com/backdrop/backdrop/pull/2286</a> ...that change included only a single update hook, and it was not about giving that permission to roles on existing sites.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/100\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/100\" title=\"Add a system of page-less nodes · Issue #100 · backdrop/backdrop-issues\">Add a system of page-less nodes · Issue #100 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Since we will soon have relegated blocks to being an admin-only text-only layout element that&#39;s saved into config, we are going to need a content-based alternative that is a fieldable entity! B...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/2286\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/2286\" title=\"Add ability to hide full content path from users. by herbdool · Pull Request #2286 · backdrop/backdrop\">Add ability to hide full content path from users. by herbdool · Pull Request #2286 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Addresses backdrop/backdrop-issues#100</div></div></div>",
+        "id": 208171019,
+        "sender_full_name": "klonos",
+        "timestamp": 1598492991
+    },
+    {
+        "content": "<p>...I guess what I'm trying to say is that <a href=\"http://api.b.org\">api.b.org</a> was built before that change, and when the site got updated, nobody updated existing roles with that new permission.</p>",
+        "id": 208171092,
+        "sender_full_name": "klonos",
+        "timestamp": 1598493036
+    },
+    {
+        "content": "<p>Is there a link to the change records page on the api site?</p>",
+        "id": 213448921,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602778074
+    },
+    {
+        "content": "<p>I might just be blind, but I could not find it and had to use Google to find the page</p>",
+        "id": 213449028,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602778117
+    },
+    {
+        "content": "<p><a href=\"https://api.backdropcms.org/change-records\">https://api.backdropcms.org/change-records</a></p>",
+        "id": 213449588,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1602778386
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> It's in the main menu under Developer Documentation &gt; Converting Drupal Code &gt; Change Records. That whole section is expanded by default, so its visible straight away.</p>",
+        "id": 213476351,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602790299
+    },
+    {
+        "content": "<p>Cool. Thanks</p>",
+        "id": 213476475,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1602790347
+    },
+    {
+        "content": "<p>FYI, <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> and I have scheduled time today (~7 hours from now) to work on changing the API site to the new Docs site.</p>",
+        "id": 224246457,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611781208
+    },
+    {
+        "content": "<p>Can you also coordinate a temporary dev site for testing <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\">https://github.com/backdrop-ops/backdropcms.org/issues/487</a> please?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/487\" title=\"Support a little more data in .info files · Issue #487 · backdrop-ops/backdropcms.org\">Support a little more data in .info files · Issue #487 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">This is a spin-off from #100 I have added several fields to the project content types on backdropcms.org: unlimited value term reference field &quot;Project Tags&quot; -- the list of tags has been ...</div></div></div>",
+        "id": 224248890,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611782320
+    },
+    {
+        "content": "<p>See convo <a href=\"#narrow/stream/218635-Backdrop/topic/Ubercart.20module.20titles.20and.20packages/near/222494239\">https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Ubercart.20module.20titles.20and.20packages/near/222494239</a></p>",
+        "id": 224249020,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611782397
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> Would a Tugboat site suffice? I know the demo ones only last 1 hour, but if I login to Tugboat and create a site manually, it'll last until it's manually deleted... Would that work?</p>",
+        "id": 224250838,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611783232
+    },
+    {
+        "content": "<p>If you can figure the authentication issues, then sure. See convo about that same suggestion here: <a href=\"#narrow/stream/218635-Backdrop/topic/More.20data.20in.20info.20files/near/224240307\">https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/More.20data.20in.20info.20files/near/224240307</a></p>",
+        "id": 224252858,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611784278
+    },
+    {
+        "content": "<p>Hmm, not sure then. I can help with doing stuff if I have step-by-step instructions on what exactly is needed.</p>",
+        "id": 224253354,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611784520
+    },
+    {
+        "content": "<p>We need someone who can sort out authentication bits with Backdrop org's GH acct, thats what we need.</p>",
+        "id": 224254893,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611785046
+    },
+    {
+        "content": "<p>Feel free to ignore my request then till <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> gets the time.</p>",
+        "id": 224254937,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611785074
+    },
+    {
+        "content": "<p>Sounds good and I will see you then.</p>",
+        "id": 224260587,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611788074
+    },
+    {
+        "content": "<p>The <a href=\"http://docs.backdropcms.org\">docs.backdropcms.org</a>  site has been implemented: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/747\">https://github.com/backdrop-ops/backdropcms.org/issues/747</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/747\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/747\" title=\"Setup new docs.backdropcms.org website for *all* documentation · Issue #747 · backdrop-ops/backdropcms.org\">Setup new docs.backdropcms.org website for *all* documentation · Issue #747 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">The Idea I made a comment about Backdrop&#39;s documentation a while ago. Now I&#39;d like to expand upon it and make an official request for my suggestions... Let&#39;s setup a new (Backdrop-power...</div></div></div>",
+        "id": 224287875,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611814151
+    },
+    {
+        "content": "<p>Tried to open <a href=\"http://doc.backdropcms.org\">doc.backdropcms.org</a> at work and got \"Access to <a href=\"http://docs.backdropcms.org\">docs.backdropcms.org</a> has been blocked because it has been categorized as a security risk\". Any valid reason for this?</p>",
+        "id": 224331810,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611843747
+    },
+    {
+        "content": "<p>Yup. I'm also getting <code>ERR_NAME_NOT_RESOLVED</code> ...pinging <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> and <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span></p>",
+        "id": 224333210,
+        "sender_full_name": "klonos",
+        "timestamp": 1611844283
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> it seems that we are both blind <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...it's <code>docs.</code> not <code>doc.</code> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 224333347,
+        "sender_full_name": "klonos",
+        "timestamp": 1611844326
+    },
+    {
+        "content": "<p>...but I forgive you for typing in \"doc\" ...it's your profession after all <span aria-label=\"stuck out tongue closed eyes\" class=\"emoji emoji-1f61d\" role=\"img\" title=\"stuck out tongue closed eyes\">:stuck_out_tongue_closed_eyes:</span></p>",
+        "id": 224333408,
+        "sender_full_name": "klonos",
+        "timestamp": 1611844362
+    },
+    {
+        "content": "<p>actually it was <a href=\"http://docs.backdropcms.org\">docs.backdropcms.org</a> that gave the error</p>",
+        "id": 224334530,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611844792
+    },
+    {
+        "content": "<p>Just to clarify, this is a different environment than <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a>?</p>",
+        "id": 224372414,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611859133
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> yes. <a href=\"http://api.b.org\">api.b.org</a> was always a separate site (holding mainly API and developer documentation). This has now become <a href=\"http://docs.b.org\">docs.b.org</a>, and my understanding is that we intend to move the documentation pages from <a href=\"http://b.org\">b.org</a> (non-developer user guide) to this new <a href=\"http://docs.b.org\">docs.b.org</a> site.</p>",
+        "id": 224377608,
+        "sender_full_name": "klonos",
+        "timestamp": 1611861234
+    },
+    {
+        "content": "<p>Are these planned to be public login sites or only for a select few? Trying to gauge whether it's worth exploring a unified login between the different environments</p>",
+        "id": 224377886,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611861340
+    },
+    {
+        "content": "<p>I'm excited to help with <a href=\"https://docs.backdropcms.org/\">https://docs.backdropcms.org/</a> (which opened fine for me, btw.)  Currently it looks like the old api site did.  I helped set up <a href=\"http://api.backdropcms.org\">api.backdropcms.org</a> a <em>long</em> time ago, but haven't done anything with it since.  I'm very enthusiastic about improving and maintaining our docs, though.  Let me help!</p>",
+        "id": 224381875,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1611862920
+    },
+    {
+        "content": "<p>The error has now changed to <code>NET::ERR_CERT_AUTHORITY_INVALID</code></p>",
+        "id": 224382980,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611863372
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> could it be browser or network cache?</p>",
+        "id": 224383901,
+        "sender_full_name": "klonos",
+        "timestamp": 1611863766
+    },
+    {
+        "content": "<p>no clue. how do i test that?</p>",
+        "id": 224384205,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611863900
+    },
+    {
+        "content": "<p>Re browser, either use a different on, or <a href=\"https://www.pcmag.com/how-to/how-to-clear-your-cache-on-any-browser\">https://www.pcmag.com/how-to/how-to-clear-your-cache-on-any-browser</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.pcmag.com/how-to/how-to-clear-your-cache-on-any-browser\" style=\"background-image: url(https://i.pcmag.com/imagery/articles/03ZU5ss8WP5hvZmuWJlftYx-17.1569485173.fit_lim.size_1200x630.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.pcmag.com/how-to/how-to-clear-your-cache-on-any-browser\" title=\"How to Clear Your Cache on Any Browser\">How to Clear Your Cache on Any Browser</a></div><div class=\"message_embed_description\">Don't let your internet history fall into the wrong hands. It's not always a straightforward process, but it's a good idea to delete your browser history and internet cache on occasion. Here's how to do it on the desktop and mobile.</div></div></div>",
+        "id": 224384692,
+        "sender_full_name": "klonos",
+        "timestamp": 1611864117
+    },
+    {
+        "content": "<p>...for network, try logging in via your mobile phone, or another WiFi network.</p>",
+        "id": 224384773,
+        "sender_full_name": "klonos",
+        "timestamp": 1611864141
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> We user to have a single sign-on system between Backdrop's sites, but it was buggy so we disabled it. There's an open issue to fix it I believe.</p>",
+        "id": 224385497,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611864446
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@cellear (Luke McCormick)</span> Keep an eye on the <a href=\"http://docs.b.org\">docs.b.org</a> issue queue for things you can help with.</p>",
+        "id": 224385643,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611864503
+    },
+    {
+        "content": "<p>Same cert error message on incognito browsing on three browsers on my workplace network. Works fine on my phone, but that  isnt connected to the same network.</p>",
+        "id": 224385701,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611864530
+    },
+    {
+        "content": "<p>Sounds like some network caching issue then <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ...we have similar issues reported by government people in GovCMS. Most (if not all) of the times, it turns out to be their network caching/security policy/settings <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 224385899,
+        "sender_full_name": "klonos",
+        "timestamp": 1611864644
+    },
+    {
+        "content": "<p>(deleted)</p>",
+        "id": 224394038,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1611868723
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256664\">@cellear (Luke McCormick)</span> </p>\n<blockquote>\n<p>I'm very enthusiastic about improving and maintaining our docs, though. Let me help!</p>\n</blockquote>\n<p>Please see this issue:  <a href=\"https://github.com/backdrop-ops/docs.backdropcms.org/issues/114\">https://github.com/backdrop-ops/docs.backdropcms.org/issues/114</a><br>\n<span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  Do  you think it is ready to publish?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/docs.backdropcms.org/issues/114\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/docs.backdropcms.org/issues/114\" title=\"Recommended updates for the module port page · Issue #114 · backdrop-ops/docs.backdropcms.org\">Recommended updates for the module port page · Issue #114 · backdrop-ops/docs.backdropcms.org</a></div><div class=\"message_embed_description\">Original issue from @VasasA at backdrop-ops/backdropcms.org#532: I improved a document from api.backdropcms.org: Original: Converting modules to Backdrop from Drupal 7 Improved draft Changes: Vasas...</div></div></div>",
+        "id": 224396019,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1611869796
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> do you have a link to the PR? It needs to be on the main project so we can see what will be actually merged. Your current changes look ok but they aren't in a PR. Unless I missed it</p>",
+        "id": 224434033,
+        "sender_full_name": "Herb",
+        "timestamp": 1611900317
+    },
+    {
+        "content": "<p>This change record seems like a temporary copy-paste, and is not very helpful: <a href=\"https://docs.backdropcms.org/change-records/meta-various-other-theme-system-cleanup-tasks-196\">https://docs.backdropcms.org/change-records/meta-various-other-theme-system-cleanup-tasks-196</a></p>",
+        "id": 224435721,
+        "sender_full_name": "klonos",
+        "timestamp": 1611902433
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I don't have a PR, I want to create one. But I don't know which repository should be forked?</p>",
+        "id": 224437127,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1611904180
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> you would fork <a href=\"https://github.com/backdrop-ops/docs.backdropcms.org\">https://github.com/backdrop-ops/docs.backdropcms.org</a> if you haven't already and then with your changes in your fork you would like see a button to Compare or create PR (I can't recall exactly). If you don't see the button you can also go to the main repo (not your fork) and click a link to compare.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/docs.backdropcms.org\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/docs.backdropcms.org\" title=\"backdrop-ops/docs.backdropcms.org\">backdrop-ops/docs.backdropcms.org</a></div><div class=\"message_embed_description\">API website for displaying Backdrop CMS source code and developer documentation. - backdrop-ops/docs.backdropcms.org</div></div></div>",
+        "id": 224475290,
+        "sender_full_name": "Herb",
+        "timestamp": 1611929583
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  I forked the repo, but I couldn't find the document file of \"Converting modules to Backdrop from Drupal 7\" in this.</p>",
+        "id": 224479616,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1611931522
+    },
+    {
+        "content": "<p>Oh then I don't know where it is</p>",
+        "id": 224483753,
+        "sender_full_name": "Herb",
+        "timestamp": 1611933190
+    },
+    {
+        "content": "<p>I think it is in the ''field_data_body\" table in the database of <a href=\"http://docs.b.org\">docs.b.org</a></p>",
+        "id": 224514292,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1611944874
+    }
+]

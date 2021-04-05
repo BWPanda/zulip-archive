@@ -1,0 +1,132 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/maintenance.20mode.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html">maintenance mode</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="213401981"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213401981" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213401981">(Oct 15 2020 at 09:53)</a>:</h4>
+<p>Putting Drupal 7 website to maintenance mode using configuration overrides was pretty easy - by simply placing <code>$conf['maintenance_mode'] = 1;</code> in settings.php file. AFAIK in Backdrop the maintenance_mode is under domain of state, not configuration. Is there any easy way of keeping one of two environments (which constantly sync databases with each other) under the maintenance mode?</p>
+
+
+
+<a name="213404673"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213404673" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213404673">(Oct 15 2020 at 10:21)</a>:</h4>
+<p>For now after every sync, we are running:</p>
+<div class="codehilite"><pre><span></span><code>brush sql-query &quot;UPDATE state SET value = &#39;b:1;&#39; WHERE name=&#39;maintenance_mode&#39;;&quot;
+</code></pre></div>
+
+
+<p>(since drush and b won't work with sql-queries for now).</p>
+<p>However, I hope there is a simpler way for putting one of the environments offline while pushing DB to it from another live enfironment</p>
+
+
+
+<a name="213405930"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213405930" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213405930">(Oct 15 2020 at 10:34)</a>:</h4>
+<p>Just've found this <a href="https://drupal.stackexchange.com/questions/229662/how-can-i-enforce-maintenance-mode-at-all-times-in-a-specific-environment">https://drupal.stackexchange.com/questions/229662/how-can-i-enforce-maintenance-mode-at-all-times-in-a-specific-environment</a> Seems the issue for Drupal 8 also has not been resolved.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://drupal.stackexchange.com/questions/229662/how-can-i-enforce-maintenance-mode-at-all-times-in-a-specific-environment" style="background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)"></a><div class="data-container"><div class="message_embed_title"><a href="https://drupal.stackexchange.com/questions/229662/how-can-i-enforce-maintenance-mode-at-all-times-in-a-specific-environment" title="How can I enforce maintenance_mode at all times in a specific environment?">How can I enforce maintenance_mode at all times in a specific environment?</a></div><div class="message_embed_description">In Drupal 7, we could override the $conf variables in settings.php to force a site (e.g. development) in maintenance mode. In Drupal 8, this has changed to $config, but the maintenance mode variabl...</div></div></div>
+
+
+
+<a name="213406327"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213406327" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213406327">(Oct 15 2020 at 10:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> are you aware that <a href="https://api.backdropcms.org/change-records/any-config-value-can-be-overridden-via-settingsphp">any config value can now be overridden via settings.php</a>?</p>
+
+
+
+<a name="213464061"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213464061" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213464061">(Oct 15 2020 at 17:57)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256729">klonos</span> <a href="#narrow/stream/218635-Backdrop/topic/maintenance.20mode/near/213406327">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="258960">Alan Mels</span> are you aware that <a href="https://api.backdropcms.org/change-records/any-config-value-can-be-overridden-via-settingsphp">any config value can now be overridden via settings.php</a>?</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> AFAIK maintenance_mode is not a configuration anymore, it's a state</p>
+
+
+
+<a name="213743639"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213743639" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213743639">(Oct 19 2020 at 05:04)</a>:</h4>
+<p>If someone will be interested I've just pushed <a href="https://github.com/backdrop-contrib/state_override">https://github.com/backdrop-contrib/state_override</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/state_override" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/state_override" title="backdrop-contrib/state_override">backdrop-contrib/state_override</a></div><div class="message_embed_description">Contribute to backdrop-contrib/state_override development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="213744738"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213744738" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213744738">(Oct 19 2020 at 05:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> Looks like you have a typo in the function name: <a href="https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6">https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6" title="backdrop-contrib/state_override">backdrop-contrib/state_override</a></div><div class="message_embed_description">Contribute to backdrop-contrib/state_override development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="213744751"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213744751" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213744751">(Oct 19 2020 at 05:30)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/maintenance.20mode/near/213744738">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="258960">Alan Mels</span> Looks like you have a typo in the function name: <a href="https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6">https://github.com/backdrop-contrib/state_override/blob/735098921de0acb5a3a2561b0230c44bf2bcaa90/state_override.module#L6</a></p>
+</blockquote>
+<p>O ye, been trying to fix it by <a href="https://github.com/backdrop-contrib/state_override/pull/1">https://github.com/backdrop-contrib/state_override/pull/1</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/state_override/pull/1" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/state_override/pull/1" title="Update state_override.module by alanmels · Pull Request #1 · backdrop-contrib/state_override">Update state_override.module by alanmels · Pull Request #1 · backdrop-contrib/state_override</a></div><div class="message_embed_description">Invoke the state_set function only if $config array is not empty.</div></div></div>
+
+
+
+<a name="213744754"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213744754" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213744754">(Oct 19 2020 at 05:31)</a>:</h4>
+<p>But have not enough permission</p>
+
+
+
+<a name="213802246"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213802246" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213802246">(Oct 19 2020 at 15:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> @klonos can either of you fix permissions on that project?</p>
+
+
+
+<a name="213838089"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/213838089" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#213838089">(Oct 19 2020 at 20:07)</a>:</h4>
+<p>For state override? Yes, I just fixed that one...  lmk if anything else comes up. And sorry again -- we really need to get contrib clenaed up :(</p>
+
+
+
+<a name="214002161"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/214002161" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#214002161">(Oct 21 2020 at 02:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> ++ for putting that contrib module together...</p>
+
+
+
+<a name="214002162"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/214002162" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#214002162">(Oct 21 2020 at 02:26)</a>:</h4>
+<p>mels** - Dragon Fire (Karma: 2)</p>
+
+
+
+<a name="214002190"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/214002190" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#214002190">(Oct 21 2020 at 02:27)</a>:</h4>
+<p>...it seems that this should be supported natively by core (although I would go with something like <code>$state['maintenance_mode'] = TRUE;</code> instead of <code>$config['state']['maintenance_mode'] = TRUE;</code>)</p>
+
+
+
+<a name="214004831"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/maintenance%20mode/near/214004831" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/maintenance.20mode.html#214004831">(Oct 21 2020 at 03:29)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256729">klonos</span> <a href="#narrow/stream/218635-Backdrop/topic/maintenance.20mode/near/214002190">said</a>:</p>
+<blockquote>
+<p>...it seems that this should be supported natively by core (although I would go with something like <code>$state['maintenance_mode'] = TRUE;</code> instead of <code>$config['state']['maintenance_mode'] = TRUE;</code>)</p>
+</blockquote>
+<p>That was my initial idea, however hook_boot didn't return @state declared in settings.php, but did return @config without issues.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

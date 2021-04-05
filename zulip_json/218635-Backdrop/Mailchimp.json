@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p>Does anyone use Mailchimp module with Backdrop? I remember some discussions, but do not find them anymore. One of my customers has a D7 site, where news articles can be used to create a newsletter directly in the CMS, now he wants the same in Backdrop.</p>",
+        "id": 199013486,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1590668156
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ^ what say you?</p>",
+        "id": 199022953,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590672952
+    },
+    {
+        "content": "<p>I ported it for my own use, and I used it before in Backdrop but to a limited extent so the bits I needed worked fine. TBH even in D7 I found the UI confusing so stopped using it after a while.</p>",
+        "id": 199028144,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1590675558
+    },
+    {
+        "content": "<p>Only one install noted on <a href=\"http://b.org\">b.org</a></p>",
+        "id": 199028188,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1590675579
+    },
+    {
+        "content": "<p>Only one install noted on <a href=\"http://b.org\">b.org</a></p>",
+        "id": 199028286,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1590675614
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> Is Simplenews an option, or does it have to be Mailchimp?</p>",
+        "id": 199045283,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590683048
+    },
+    {
+        "content": "<p>I tried MC in Backdrop a while ago to get the subscription form, but when it didn't work I gave up and just embedded the code directly instead.</p>",
+        "id": 199047932,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1590684349
+    },
+    {
+        "content": "<p>I've always interacted directly w/ the mailchimp API via custom module</p>",
+        "id": 199048357,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590684556
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> no, Mailchimp has evolved into a MarTech platform... we are open for alternatives, i used Simplenews years ago and know the maintainers from DUG Zurich</p>",
+        "id": 199052040,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1590686183
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> And there is an official Backdrop release! Haven't used the Backdrop version, but followed the discussion during porting and had the impression it's usable.</p>",
+        "id": 199082605,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590697921
+    },
+    {
+        "content": "<p>I've a couple of D7 sites with Simplenews configured in a way that editors are able to embed selected existing website content (e.g. newer posts) in the newsletter. Works quite good! Making the mails looking good in various mail clients was quite some work, though.</p>",
+        "id": 199083373,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590698326
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> yeah, some mail clients are still too dumb to understand anything else than html tables for formatting... <span aria-label=\"stuck out tongue wink\" class=\"emoji emoji-1f61c\" role=\"img\" title=\"stuck out tongue wink\">:stuck_out_tongue_wink:</span> </p>\n<p>Simplenews (usually) sends mail out directly via the webserver Drupal / Backdrop is installed on. This limits the max number of subscribers to something your hoster tolerates as mass mailing from webhosts. One can do some throttling, though. (Didn't use the Backdrop version yet.)</p>",
+        "id": 199123609,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590738860
+    },
+    {
+        "content": "<p>Does someone use Sendgrid or simliar in conjuction with SimpleNews? I'd prefer to have an external service for sending.</p>",
+        "id": 199125248,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1590740014
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"269428\">mazze.ch</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Mailchimp/near/199125248\">said</a>:</p>\n<blockquote>\n<p>Does someone use Sendgrid or simliar in conjuction with SimpleNews? I'd prefer to have an external service for sending.</p>\n</blockquote>\n<p>If your main concern is the sending host / server, a module like _smtp_ could be a possible solution. That way you can use a dedicated email account for sending. You might have better control over SPF records and DKIM then. (Depends on hosting)</p>",
+        "id": 199127892,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590741739
+    }
+]

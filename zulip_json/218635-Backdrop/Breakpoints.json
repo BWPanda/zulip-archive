@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Visibility.20conditions/near/213343521\">said</a>:</p>\n<blockquote>\n<p>I have a long-term goal of getting Breakpoints and Picture ported, but in the meantime this is a DIY implementation of <code>&lt;picture&gt;</code> functionality, so on small screens it uses one image style and on larger screens it uses another.</p>\n</blockquote>\n<p>If you do manage to tackle this, just a thought... Maybe re-work how breakpoints work from a UX standpoint? I love its purpose, but never use it because of its design. I always felt it was too cumbersome to setup and maintain. The UX just didn't jive with me. I felt like it should be simple to use, but couldn't fully wrap my head around how to use it. With the advancements of Flex and Grid, I kind of feel like breakpoints should be relegated specifically to images as opposed to themes or layouts though I do know there might still be a place for those. All I ever really wanted from breakpoints was to use it for image file size control based on viewport. (specifically smaller file sizes on mobile)</p>\n<p>What I would suggest, is move the breakpoints to the image styles themselves instead of using it global for the site.</p>\n<p>Totally hijacked this topic, so we can start a new one if you're interested in collaborating more.</p>",
+        "id": 215278392,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604290941
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Visibility.20conditions/near/215278392\">said</a>:</p>\n<blockquote>\n<p>I kind of feel like breakpoints should be relegated specifically to images as opposed to themes or layouts though I do know there might still be a place for those. All I ever really wanted from breakpoints was to use it for image file size control based on viewport. (specifically smaller file sizes on mobile)</p>\n</blockquote>\n<p>I agree image sizes (and the Picture module) are the big benefit of working on Breakpoints, but in the ideal world those breakpoints also directly correlate to the breakpoints used in the layout, for example. Or in the menu (ie. at what breakpoint it turns into a mobile menu). So I think long term, having a central breakpoints configuration apart from image styles directly is still important. Otherwise you have to keep setting the same breakpoints in a bunch of different places.</p>",
+        "id": 215331906,
+        "sender_full_name": "Laryn",
+        "timestamp": 1604330285
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Breakpoints/near/215331906\">said</a>:</p>\n<blockquote>\n<p>... but in the ideal world those breakpoints also directly correlate to the breakpoints used in the layout, for example. Or in the menu (ie. at what breakpoint it turns into a mobile menu).</p>\n</blockquote>\n<p>Yeah, didn't think about menus. The themes (mainly bootstrap) I've used over the years generally just handle menu sizing.</p>\n<p>Either way, I think the functionality is warranted but the execution could be a lot better.</p>",
+        "id": 215376929,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604350306
+    }
+]

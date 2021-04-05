@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Hi Guys...,</p>\n<p>I've just installed the <em>Youtube</em> module with 1.17.0 and received an error (see below) - Brand new install - I even deleted the site and started again with just the Color module installed the once Youtube was installed I received the error.</p>\n<p>syntax error, unexpected '$domain' (T_VARIABLE)</p>\n<p>An issue was created <a href=\"https://github.com/backdrop-contrib/youtube/issues/20\">https://github.com/backdrop-contrib/youtube/issues/20</a>  which says it's a duplicate of <a href=\"https://github.com/backdrop/backdrop-issues/issues/20\">#20</a>... while according to the URL this is the <a href=\"https://github.com/backdrop/backdrop-issues/issues/20\">#20</a>... <br>\nI've done a search but can't find the original Issue...  </p>\n<p>Can someone point me to the original issue please?  or help?</p>\n<p>Many thanks</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/youtube/issues/20\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/youtube/issues/20\" title=\"Cannot activate &quot;YouTube Field Colorbox&quot; submodule · Issue #20 · backdrop-contrib/youtube\">Cannot activate \"YouTube Field Colorbox\" submodule · Issue #20 · backdrop-contrib/youtube</a></div><div class=\"message_embed_description\">When trying to activate &quot;YouTube Field Colorbox&quot; submodule, the system shows the following error: ParseError: syntax error, unexpected &#39;$domain&#39; (T_VARIABLE) in backdrop_load() (l...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/20\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/20\" title=\"Remove Poll module · Issue #20 · backdrop/backdrop-issues\">Remove Poll module · Issue #20 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">sub-issue from #7</div></div></div>",
+        "id": 211059786,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1600893785
+    },
+    {
+        "content": "<p>Maybe this one? <a href=\"https://github.com/backdrop-contrib/youtube/issues/18\">https://github.com/backdrop-contrib/youtube/issues/18</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/youtube/issues/18\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/youtube/issues/18\" title=\"Missing semicolon · Issue #18 · backdrop-contrib/youtube\">Missing semicolon · Issue #18 · backdrop-contrib/youtube</a></div><div class=\"message_embed_description\">ParseError: syntax error, unexpected '$domain' (T_VARIABLE) in module_load_include() (line 165 of /path/modules/youtube/modules/youtube_colorbox/youtube_colorbox.module).</div></div></div>",
+        "id": 211060517,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600894192
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Youtube.20module.20-.20activation.20error/near/211060517\">said</a>:</p>\n<p>Could be, but must be a different issue due to that # 18 as this one has been fixed.</p>",
+        "id": 211061060,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1600894477
+    },
+    {
+        "content": "<p>But not released in a new version yet...</p>",
+        "id": 211062264,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600895166
+    },
+    {
+        "content": "<p>Sounds like a task for the bug squad, unless <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> wants to cut a new release (she's a maintainer of the module).</p>",
+        "id": 211287768,
+        "sender_full_name": "klonos",
+        "timestamp": 1601054683
+    },
+    {
+        "content": "<p>uhoh, yep. I can both merge and release :)</p>",
+        "id": 211290009,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1601055783
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 211290307,
+        "sender_full_name": "klonos",
+        "timestamp": 1601055916
+    },
+    {
+        "content": "<p>...you seem to have merged the change last year - just not released since.</p>",
+        "id": 211290358,
+        "sender_full_name": "klonos",
+        "timestamp": 1601055941
+    },
+    {
+        "content": "<p>yeah, there were a lot of things I wanted to do before the next release.... but since it's been a year I'm just going to do this bug-fix release and then work on those things for the next one :)</p>",
+        "id": 211301134,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1601060966
+    },
+    {
+        "content": "<p>new version out now...  d.o cross-ports done on a separate branch for the next release (not comfortable releasing without more testing)</p>",
+        "id": 211301802,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1601061137
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ++</p>",
+        "id": 211314988,
+        "sender_full_name": "klonos",
+        "timestamp": 1601066232
+    },
+    {
+        "content": "<p><strong>jenlampton</strong> go team. (Karma: 11)</p>",
+        "id": 211314989,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601066232
+    }
+]

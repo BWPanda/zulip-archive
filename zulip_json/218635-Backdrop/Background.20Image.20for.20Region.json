@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Does anyone know of a contrib module (or another alternative) to add a background image to a region (through the UI, without touching the CSS directly)?</p>",
+        "id": 217484867,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605934304
+    },
+    {
+        "content": "<p>Hmm... The only thing I can think of is to output an image URL using Views, then change the template file to display it as a background image instead of an image element.</p>",
+        "id": 217485276,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605934924
+    },
+    {
+        "content": "<p>We did something like this in D8 here: <a href=\"https://socialistsanddemocrats.eu/taxjustice\">https://socialistsanddemocrats.eu/taxjustice</a> The images on the right of each section are background images. So a similar technique could be used in Backdrop for a region.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://socialistsanddemocrats.eu/taxjustice\" style=\"background-image: url(https://socialistsanddemocrats.eu)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://socialistsanddemocrats.eu/taxjustice\" title=\"Tax Justice | Socialists &amp; Democrats\">Tax Justice | Socialists &amp; Democrats</a></div><div class=\"message_embed_description\">The COVID-19 pandemic breakout caused both a health and socio-economic crisis that caught the world and its leaders by surprise. As part of national responses, member states granted tax facilities to companies and citizens. The recovery should be based on a just taxation system, and it is also an opportunity to close tax loopholes and continue the fight against tax evasion and tax avoidance.</div></div></div>",
+        "id": 217485405,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605935143
+    },
+    {
+        "content": "<p>That's a nice  looking site. </p>\n<p>We have a way in Backdrop Core to add a background image to a block, but I'd like to be able to put a background image behind a region with multiple blocks through the UI.</p>",
+        "id": 217485520,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605935293
+    },
+    {
+        "content": "<p>Yeah, I was also thinking perhaps using an image field block within a region. Then may it would work with some <code>z-index</code> and other CSS fiddling, to get the image to be shown underneath all other blocks within the region <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> ...sounds like it could be done via templates, but if it needs to be changed via the admin UI, then sounds like contrib <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span></p>",
+        "id": 217533142,
+        "sender_full_name": "klonos",
+        "timestamp": 1606017958
+    }
+]

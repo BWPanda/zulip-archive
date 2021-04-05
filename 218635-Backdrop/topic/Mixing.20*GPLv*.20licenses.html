@@ -1,0 +1,82 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Mixing.20*GPLv*.20licenses.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Mixing.20*GPLv*.20licenses.html">Mixing *GPLv* licenses</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217564756"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Mixing%20%2AGPLv%2A%20licenses/near/217564756" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Mixing.20*GPLv*.20licenses.html#217564756">(Nov 22 2020 at 19:05)</a>:</h4>
+<p>I am working on porting <a href="https://drupal.org/project/webform2pdf">the Webform2PDF module</a> (port in progress is <a href="https://github.com/bugfolder/webform2pdf">here</a>). This module uses the open-source <a href="https://github.com/tecnickcom/TCPDF">TCPDF library</a>. in the Drupal version of the module, TCPDF lived in the /libraries folder; in Backdrop, though, we are supposed to <a href="https://api.backdropcms.org/modules">bundle libraries within the module</a>.</p>
+<p>Now, Webform2PDF is GPLv2, while TCPDF is LGPLv3. I'd like to double-check my assumptions with anyone here who knows the proper way of dealing with this issue about the proper thing to do in the distribution.</p>
+<p>My assumption is that it's OK to organize the module like this:</p>
+<div class="codehilite"><pre><span></span><code>webform2pdf
+    libraries
+        tcpdf
+            ...files...
+            LICENSE.txt (LGPLv3)
+    webform2pdf.module
+    ...more module files...
+    LICENSE.txt (GPLv2)
+    README.md
+</code></pre></div>
+<p>And then in the README.md (<a href="https://github.com/bugfolder/webform2pdf">which you can see here</a>) list the two licenses separately.</p>
+<p>Is that the right way to deal with this situation?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/bugfolder/webform2pdf" style="background-image: url(https://avatars0.githubusercontent.com/u/29214084?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/bugfolder/webform2pdf" title="bugfolder/webform2pdf">bugfolder/webform2pdf</a></div><div class="message_embed_description">Contribute to bugfolder/webform2pdf development by creating an account on GitHub.</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/tecnickcom/TCPDF" style="background-image: url(https://avatars1.githubusercontent.com/u/4163527?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/tecnickcom/TCPDF" title="tecnickcom/TCPDF">tecnickcom/TCPDF</a></div><div class="message_embed_description">Official clone of PHP library to generate PDF documents and barcodes - tecnickcom/TCPDF</div></div></div>
+
+
+
+<a name="217566588"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Mixing%20%2AGPLv%2A%20licenses/near/217566588" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Mixing.20*GPLv*.20licenses.html#217566588">(Nov 22 2020 at 19:46)</a>:</h4>
+<blockquote>
+<p>Is that the right way to deal with this situation?</p>
+</blockquote>
+<p>I have wondered the same thing, but don't know the answer. Hopefully, we have documented this somewhere. I would start by looking for an existing contrib module that has dealt with this.</p>
+
+
+
+<a name="217566622"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Mixing%20%2AGPLv%2A%20licenses/near/217566622" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Mixing.20*GPLv*.20licenses.html#217566622">(Nov 22 2020 at 19:47)</a>:</h4>
+<p>I'll put this on my list of things to bring up during a dev meeting, if it hasn't been clarified before that.</p>
+
+
+
+<a name="217570237"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Mixing%20%2AGPLv%2A%20licenses/near/217570237" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Mixing.20*GPLv*.20licenses.html#217570237">(Nov 22 2020 at 21:10)</a>:</h4>
+<p>...this is already documented: <a href="https://github.com/backdrop-ops/contrib#new-project-checklist">https://github.com/backdrop-ops/contrib#new-project-checklist</a></p>
+<blockquote>
+<ul>
+<li>If your project includes a library that is licensed under GPL-3.0, LGPL-3.0, Apache-2.0, AGPL-3, or any other license that the Free Software Foundation has determined to <a href="http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses">only be compatible with GPL-3.0</a>, then you must license your project as GPL-3.0. Please use <a href="https://raw.githubusercontent.com/backdrop-ops/contrib/master/examples/LICENSE-GPL-3-0.txt">this text for GPL-3.0</a>.</li>
+<li>The GPL-3.0 license will prevent your project from one day being included in Backdrop core, so please only use this license when necessary.</li>
+</ul>
+</blockquote>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/contrib#new-project-checklist" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/contrib#new-project-checklist" title="backdrop-ops/contrib">backdrop-ops/contrib</a></div><div class="message_embed_description">Apply to join the contributed code developer team. - backdrop-ops/contrib</div></div></div>
+
+
+
+<a name="217570356"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Mixing%20%2AGPLv%2A%20licenses/near/217570356" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Mixing.20*GPLv*.20licenses.html#217570356">(Nov 22 2020 at 21:13)</a>:</h4>
+<p><a href="http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses">http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses</a> lists LGPL v3 as GPL-compatible, so there you have it: TCPDF can be bundled with the module, and the entire module may be licensed as GPL v3, and <a href="https://raw.githubusercontent.com/backdrop-ops/contrib/master/examples/LICENSE-GPL-3-0.txt">https://raw.githubusercontent.com/backdrop-ops/contrib/master/examples/LICENSE-GPL-3-0.txt</a> should be used instead.</p>
+
+
+
+<a name="217573075"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Mixing%20%2AGPLv%2A%20licenses/near/217573075" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Mixing.20*GPLv*.20licenses.html#217573075">(Nov 22 2020 at 22:16)</a>:</h4>
+<p>Thanks, <span class="user-mention" data-user-id="256729">@klonos</span>, that's clear (and I've bookmarked the checklist).</p>
+<p>Since Webform2PDF is an add-on to Webform, it seems an unlikely candidate to ever go into core.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,124 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/i18n-module-usage-poll.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html">i18n-module-usage-poll</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="189909377"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/189909377" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#189909377">(Mar 06 2020 at 16:27)</a>:</h4>
+<p>Hey, Drupal 7 users out there,<br>
+are you using i18n in D7 projects?</p>
+<p>This is sort of a poll to figure out the most used i18n submodules.<br>
+Which ones do you always turn on, which ones do you hardly ever or never use?</p>
+<p>And as this is a Backdrop chat - what i18n functionality are you missing the most in Backdrop core?</p>
+
+
+
+<a name="189915019"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/189915019" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#189915019">(Mar 06 2020 at 17:27)</a>:</h4>
+<p>Looking on the biggest <code>i18n</code> D7 site I manage, we've got:</p>
+<ul>
+<li>Blocks (there is some block translation in core now, which could be improved)</li>
+<li>Fields</li>
+<li>Menu (there is some menu translation in core now)</li>
+<li>Content</li>
+<li>Path</li>
+<li>Sync</li>
+<li>Taxonomy (I'd flag this one as the biggest weak spot, maybe...)</li>
+<li>Redirect</li>
+<li>Variable</li>
+<li>Views</li>
+</ul>
+
+
+
+<a name="189916784"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/189916784" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#189916784">(Mar 06 2020 at 17:47)</a>:</h4>
+<p>from a complex multilingual site we maintain:</p>
+<ul>
+<li>Administration language (admin_language)</li>
+<li>Block languages (i18n_block)</li>
+<li>Contact translation (i18n_contact)</li>
+<li>Field translation (i18n_field)</li>
+<li>Menu translation (i18n_menu) </li>
+<li>Multilingual content (i18n_node) </li>
+<li>Multilingual forum (i18n_forum)</li>
+<li>Multilingual select (i18n_select)</li>
+<li>Path translation (i18n_path)</li>
+<li>Rules translation (rules_i18n)</li>
+<li>String translation (i18n_string)</li>
+<li>Synchronize translations (i18n_sync)</li>
+<li>Taxonomy translation (i18n_taxonomy)</li>
+<li>Translation redirect (i18n_redirect)</li>
+<li>Translation sets (i18n_translation) </li>
+<li>User mail translation (i18n_user)</li>
+<li>Variable translation (i18n_variable)</li>
+<li>Views translation (i18nviews)</li>
+</ul>
+<p>I have not tried to move this site to backdrop yet so I can't speak to the needs, but want to note that the client that this site is for has been unhappy with i18n in general in Drupal7; they have been told that D8 sorts this out better and I am hoping that by the time they are ready to do something new, Backdrop will also do this better. <br>
+So, my question; has much/anything changed between D7 and Backdrop in how i18n works?</p>
+
+
+
+<a name="189927066"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/189927066" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#189927066">(Mar 06 2020 at 19:41)</a>:</h4>
+<p>Do you have more detail about the pain points they are dealing with?</p>
+
+
+
+<a name="189942003"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/189942003" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> ericfg <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#189942003">(Mar 06 2020 at 22:42)</a>:</h4>
+<p>I've asked them to write it up and I'll pass it along</p>
+
+
+
+<a name="190006785"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/190006785" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#190006785">(Mar 08 2020 at 09:12)</a>:</h4>
+<p>Hi <span class="user-mention" data-user-id="256738">@indigoxela</span> great that you tackle this issues... I did a lot of multilingual projects in D7 and also one in Backdrop (<a href="https://herzpraxis-schuetzenmattpark.ch/en/welcome" target="_blank" title="https://herzpraxis-schuetzenmattpark.ch/en/welcome">https://herzpraxis-schuetzenmattpark.ch/en/welcome</a>). The most urgent one could be the i18n Variable module. The current core taxonomy works pretty well, IMO.</p>
+
+
+
+<a name="190013676"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/190013676" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#190013676">(Mar 08 2020 at 13:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span>  Just to verify I understand it right - currently in core you can have multilingual taxonomy but not translated taxonomy, right?</p>
+
+
+
+<a name="190014677"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/190014677" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#190014677">(Mar 08 2020 at 13:55)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> I'm afraid, for i18n Variables we will need a complete new concept.</p>
+
+
+
+<a name="190022652"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/190022652" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#190022652">(Mar 08 2020 at 18:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> I think you're correct. There is no "translation set" in core. Only for content</p>
+
+
+
+<a name="190022670"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/190022670" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#190022670">(Mar 08 2020 at 18:15)</a>:</h4>
+<p>i18n variable is not an end in itself though. What exactly is it needed for still?</p>
+
+
+
+<a name="190045029"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/i18n-module-usage-poll/near/190045029" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/i18n-module-usage-poll.html#190045029">(Mar 09 2020 at 06:56)</a>:</h4>
+<p>@Laryn you are right with the taxonomy issue, it's not a translated entity.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

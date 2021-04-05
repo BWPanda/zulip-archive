@@ -1,0 +1,530 @@
+[
+    {
+        "content": "<p>If I remember correctly from the last dev meeting (I'm in a bit of a fog this week), we're going to try and push a bug-fix release on Sunday afternoon. Just mentioning this in case anyone was unaware and wants to try and get any bug fixes done. </p>\n<p>Are there any particular bug fixes that need testing (or that folks really want to be tested)? I'll try to spend a little time getting ready for the release tomorrow.</p>",
+        "id": 215917066,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604705310
+    },
+    {
+        "content": "<p>...I would like to get <a href=\"https://github.com/backdrop/backdrop-issues/issues/4732\">https://github.com/backdrop/backdrop-issues/issues/4732</a> in. We have 3 different/alternative PRs (filed by yours truly - sorry <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ) ...they all solve the problem, but not sure which approach is the best <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span> ...I'll wait for <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> and <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> to have another look when they are up/available, but perhaps also our other core committers like <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  or <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> can chime in.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4732\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4732\" title=\"Errors when adding a Number (integer) field to a Layout · Issue #4732 · backdrop/backdrop-issues\">Errors when adding a Number (integer) field to a Layout · Issue #4732 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When adding a Number (integer) field to a layout, the layout page produces errors: Steps To Reproduce To reproduce the behavior: Add a Number (integer) field to a content typ...</div></div></div>",
+        "id": 215918656,
+        "sender_full_name": "klonos",
+        "timestamp": 1604706756
+    },
+    {
+        "content": "<p>I'm happy with PR3</p>",
+        "id": 215924892,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604713370
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I've closed the 1st PR, but I think that we should merge the 2nd and 3rd PR code changes into one, and that that should be the final solution. Please see my last couple of comments in the issue when you get a chance.</p>",
+        "id": 215940623,
+        "sender_full_name": "klonos",
+        "timestamp": 1604729607
+    },
+    {
+        "content": "<p>I've merged all RTBC issues, except for <a href=\"https://github.com/backdrop/backdrop-issues/issues/4111\">https://github.com/backdrop/backdrop-issues/issues/4111</a> which I personally marked RTBC just the other day. So another core committers eyes on that would be appreciated please.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4111\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4111\" title=\"PHP warning: Headers already sent on PHP 7.2.+ · Issue #4111 · backdrop/backdrop-issues\">PHP warning: Headers already sent on PHP 7.2.+ · Issue #4111 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">When installing Backdrop using ./core/scripts/install.sh I see lots of the following warnings: PHP Warning: ini_set(): Headers already sent. You cannot change the session module&#39;s ini settings ...</div></div></div>",
+        "id": 215946457,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604741380
+    },
+    {
+        "content": "<p>Here's one that I'd like to get into the next release: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4640\">https://github.com/backdrop/backdrop-issues/issues/4640</a></p>\n<p>Two people already reviewed/commented, all requested changes have been applied, but the final review is missing.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4640\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4640\" title=\"PHP notices when installing modules that have sub-modules · Issue #4640 · backdrop/backdrop-issues\">PHP notices when installing modules that have sub-modules · Issue #4640 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Just wanted to quickly raise this (found while testing another PR on my local): The error: Notice: Undefined index: hidden in installer_browser_installation_enable_form() (line 653 of installer.pag...</div></div></div>",
+        "id": 215948708,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1604745095
+    },
+    {
+        "content": "<p>THanks for the prompt <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>. Just request a comment wording change.</p>",
+        "id": 215949574,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604746536
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Many thanks for having a look, comment has been updated.</p>",
+        "id": 215953212,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1604752831
+    },
+    {
+        "content": "<p>Hi folks! I will need to push back my starting time for the 1.17.2 release to 1pm PT (about 1.5 hours from now). But I'm excited to get our progress out! Thanks <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> for getting the RTBC queue nearly cleared out!</p>",
+        "id": 216021809,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604864346
+    },
+    {
+        "content": "<p>I can do the Tugboat release stuff if you like. In about 5 hrs.</p>",
+        "id": 216023319,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604866545
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Thanks that would be great. :D</p>",
+        "id": 216023369,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604866568
+    },
+    {
+        "content": "<p>I'm going to look at the remaining RTBC issues and run through our agenda issues to see if there's any last things for 1.17.2.</p>",
+        "id": 216025999,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604870581
+    },
+    {
+        "content": "<p>Last chance if anyone has any objections to MySQL 8 support: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4238\">https://github.com/backdrop/backdrop-issues/issues/4238</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4238\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4238\" title=\"MySQL 8 support · Issue #4238 · backdrop/backdrop-issues\">MySQL 8 support · Issue #4238 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need MySQL 8 has a number of incompatibilities with previous versions, including new keywords that need to be escaped, and removing of the NO_AUTO_CREATE_USER init SQL mode. This...</div></div></div>",
+        "id": 216026012,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604870609
+    },
+    {
+        "content": "<p>I'm available to help as needed.</p>",
+        "id": 216026928,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604871981
+    },
+    {
+        "content": "<p>I'm also running later than expected, but here for a while.</p>",
+        "id": 216026933,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604871994
+    },
+    {
+        "content": "<p>I am all set up. What can I do to help?</p>",
+        "id": 216027622,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604873008
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>! Great to have your help. We don't yet have a 1.17.2 release issue. Could you copy it from <a href=\"https://github.com/backdrop/backdrop-issues/blob/master/procedures/issue-template--release--bug-fix.md\">https://github.com/backdrop/backdrop-issues/blob/master/procedures/issue-template--release--bug-fix.md</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/blob/master/procedures/issue-template--release--bug-fix.md\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/blob/master/procedures/issue-template--release--bug-fix.md\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 216027769,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604873233
+    },
+    {
+        "content": "<p>Maybe. I'm having some connection issues.</p>",
+        "id": 216027833,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604873298
+    },
+    {
+        "content": "<p>:-)</p>",
+        "id": 216027834,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604873300
+    },
+    {
+        "content": "<p>Busy trying to send photo of me sitting by lake working on release, but connection is not strong enough.</p>",
+        "id": 216027927,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604873441
+    },
+    {
+        "content": "<p>At this point we've got in all the RTBC issues, the MySQL 8 issue, and I'm going through the \"Works for me\" issues that also are \"Needs review\". We could cut off and make the release at any point now.</p>",
+        "id": 216028158,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604873790
+    },
+    {
+        "content": "<p>I looking forward tothis getting in <a href=\"https://github.com/backdrop/backdrop-issues/issues/4073\">https://github.com/backdrop/backdrop-issues/issues/4073</a> <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4073\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4073\" title=\"Add module_set_weight() API function · Issue #4073 · backdrop/backdrop-issues\">Add module_set_weight() API function · Issue #4073 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Right now when we need to set module weight (which determines hook execution order), a module has to manually update its weight in the system table in hook_install() like th...</div></div></div>",
+        "id": 216028247,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604873979
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/ha5A70LgHFPVkunjE4aL2yZ_/image-6c9b9da9-8207-4a1c-94de-9a5d11e8f011.jpg\">image-6c9b9da9-8207-4a1c-94de-9a5d11e8f011.jpg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/ha5A70LgHFPVkunjE4aL2yZ_/image-6c9b9da9-8207-4a1c-94de-9a5d11e8f011.jpg\" title=\"image-6c9b9da9-8207-4a1c-94de-9a5d11e8f011.jpg\"><img src=\"/user_uploads/18319/ha5A70LgHFPVkunjE4aL2yZ_/image-6c9b9da9-8207-4a1c-94de-9a5d11e8f011.jpg\"></a></div>",
+        "id": 216028362,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604874137
+    },
+    {
+        "content": "<p>Is that a multi-storey keyboard? <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 216028381,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604874189
+    },
+    {
+        "content": "<p>Ah, my photo finally went through. I tried to send this about 7 times, so hopefully they don't all come through eventually.</p>",
+        "id": 216028571,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604874468
+    },
+    {
+        "content": "<p>Yes, I have a very sophisticated keyboard setup. My original keyboard is toast, so I carry around a bluetooth keyboard and set it on top of the original keyboard.</p>",
+        "id": 216028622,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604874519
+    },
+    {
+        "content": "<p>;-)</p>",
+        "id": 216028623,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604874522
+    },
+    {
+        "content": "<p>Hoping to get a new computer soon. Planning on Linux machine, but getting nervous about that.</p>",
+        "id": 216028637,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604874572
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4742\">https://github.com/backdrop/backdrop-issues/issues/4742</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4742\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4742\" title=\"Backdrop 1.17.2 Release checklist · Issue #4742 · backdrop/backdrop-issues\">Backdrop 1.17.2 Release checklist · Issue #4742 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for Nov 8th, 2020 3pm - 6pm PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release mile...</div></div></div>",
+        "id": 216028640,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604874584
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  Don't be nervous about Linux! <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span> It depends what you do on your computer as to what OS is best for you. My Aunty is no kind of computer expert, but I've had her using Linux for years now as she only does internet, emails and word processing. Obviously if you're into online gaming or photo/video production, etc. then you'll need to research more carefully if Linux will work for you.</p>",
+        "id": 216028776,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604874758
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> what distribution do you prefer?  I’ve been experimenting with putting Linux on a mini HP i have around. Ubuntu worked ok, but some variety of RHEL seems to be jive with enterprise gigs. I’m not looking to pay licensing, which leads me to centOS. But there’s a bewildering variety of other options.</p>",
+        "id": 216028944,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604874981
+    },
+    {
+        "content": "<p>(I ran lots of Linux as home systems since 1994; ran my own mail servers until 2004. )</p>",
+        "id": 216028971,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604875035
+    },
+    {
+        "content": "<p>Do any of them have GUIs for Vhosts and such?  Everybody knows by now how I dislike editing config files <span aria-label=\"smirk\" class=\"emoji emoji-1f60f\" role=\"img\" title=\"smirk\">:smirk:</span></p>",
+        "id": 216029042,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1604875143
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I think if we make one change to the module_set_weight() PR we can get that one in. Can you check out <a href=\"https://github.com/backdrop/backdrop-issues/issues/4073#issuecomment-723678944\">https://github.com/backdrop/backdrop-issues/issues/4073#issuecomment-723678944</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4073#issuecomment-723678944\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4073#issuecomment-723678944\" title=\"Add module_set_weight() API function · Issue #4073 · backdrop/backdrop-issues\">Add module_set_weight() API function · Issue #4073 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Right now when we need to set module weight (which determines hook execution order), a module has to manually update its weight in the system table in hook_install() like th...</div></div></div>",
+        "id": 216029998,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604876544
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I think we're done merging issues (other than possibly the one above). Are you familiar with making release notes?</p>",
+        "id": 216030250,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604876919
+    },
+    {
+        "content": "<p>Sorry, I was offline again. But, I'm back and can look at release notes. I've done them before.</p>",
+        "id": 216030265,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604876957
+    },
+    {
+        "content": "<p>Do we need to run update script on this release?</p>",
+        "id": 216030596,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604877366
+    },
+    {
+        "content": "<p>I'll check...</p>",
+        "id": 216030712,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604877547
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> No update.php needed and no .htaccess changes.</p>",
+        "id": 216030889,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604877755
+    },
+    {
+        "content": "<p>OK, I'm drafting in WIKI so that we dont' have formatting problems. Not sure how else to draft them, because I can't open a new tag.</p>",
+        "id": 216030916,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604877807
+    },
+    {
+        "content": "<p>Last time I drafted in Google docs and that wasn't good.</p>",
+        "id": 216030919,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604877822
+    },
+    {
+        "content": "<p>:-(</p>",
+        "id": 216030920,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604877824
+    },
+    {
+        "content": "<p>Yeah I usually post it as a comment on the issue, then you can toggle back and forth between the \"Preview\" tab if needed.</p>",
+        "id": 216031145,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604878122
+    },
+    {
+        "content": "<p>I'm able to do the same in the wiki, but a comment is also good.</p>",
+        "id": 216031520,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604878589
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> PR updated for that issue.</p>",
+        "id": 216031571,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604878671
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> - I followed the 1.16.1 release format. I listed every PR by title. <br>\n<a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.3\">https://github.com/backdrop/backdrop/releases/tag/1.16.3</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.3\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.3\" title=\"Release 1.16.3 · backdrop/backdrop\">Release 1.16.3 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Maintenance release for Backdrop CMS. This update contains bug fixes and usability improvements only.\nNotes for updating:\n\nIt will be necessary to run the update script (located at /update.php) for...</div></div></div>",
+        "id": 216031772,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604878960
+    },
+    {
+        "content": "<p>I put it in a comment on the checklist</p>",
+        "id": 216031774,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604878970
+    },
+    {
+        "content": "<p>I'm double checking now, but you can look.</p>",
+        "id": 216031777,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604878978
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Looks good! Perhaps we should clarify \"Remove 'Spock' from Backdrop.\" lol, that's just a confusing title. I squeezed in <a href=\"https://github.com/backdrop/backdrop-issues/issues/4073\">https://github.com/backdrop/backdrop-issues/issues/4073</a> as the last issue to be merged.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4073\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4073\" title=\"Add module_set_weight() API function · Issue #4073 · backdrop/backdrop-issues\">Add module_set_weight() API function · Issue #4073 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Right now when we need to set module weight (which determines hook execution order), a module has to manually update its weight in the system table in hook_install() like th...</div></div></div>",
+        "id": 216032140,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604879540
+    },
+    {
+        "content": "<p>I thought about that. ;-)</p>\n<p>But, I like having a Spock issue in core for future trivia night.</p>",
+        "id": 216032149,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604879572
+    },
+    {
+        "content": "<p>I'll clarify it.</p>",
+        "id": 216032152,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604879577
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> Done</p>",
+        "id": 216032208,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604879657
+    },
+    {
+        "content": "<p>Super duper! Okay let's kick off the release <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 216032378,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604879971
+    },
+    {
+        "content": "<p>I love these releases where it's just one version and no need for security coordination.</p>",
+        "id": 216032384,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604879991
+    },
+    {
+        "content": "<p>Release is out <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.2\">https://github.com/backdrop/backdrop/releases/tag/1.17.2</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.2\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.2\" title=\"Release 1.17.2 · backdrop/backdrop\">Release 1.17.2 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Maintenance release for Backdrop CMS. This update contains bug fixes and usability improvements only.\nNotes for updating:\nIt will not be necessary to run the update script (located at /update.php) ...</div></div></div>",
+        "id": 216032612,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604880279
+    },
+    {
+        "content": "<p>About to tweet</p>",
+        "id": 216032780,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604880536
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> - I don't know if you noticed, but issues in release notes were listed newest to oldest, but I put MYSQL 8 issue at the top, because I thought it might be the most important.</p>",
+        "id": 216032856,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604880631
+    },
+    {
+        "content": "<p><a href=\"https://twitter.com/backdropcms/status/1325593172148367361\">https://twitter.com/backdropcms/status/1325593172148367361</a></p>\n<div class=\"inline-preview-twitter\"><div class=\"twitter-tweet\"><a href=\"https://twitter.com/backdropcms/status/1325593172148367361\"><img class=\"twitter-avatar\" src=\"https://pbs.twimg.com/profile_images/472494216887549952/vHOWTMqs_normal.png\"></a><p>We just released Backdrop CMS version 1.17.2. \n\nThis is a maintenance release for Backdrop CMS. This update contains:\n\n* Bug fixes\n* Usability improvements\n* Support for MySQL 8\n\n31 issues closed with this release. \n\n<a href=\"https://t.co/SWWokqXsj0\">https://github.com/backdrop/backdrop/releases/tag/1.17.2</a></p><span>- Backdrop CMS (@backdropcms)</span></div></div>",
+        "id": 216033106,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604881060
+    },
+    {
+        "content": "<p>Will have lunch, put my daughter down for a nap, then come and update Tugboat demos with new core release.</p>",
+        "id": 216033527,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604881633
+    },
+    {
+        "content": "<p>It's all good <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>. Agreed I sometimes do some rearrangement in the release notes but don't sweat it.</p>",
+        "id": 216034023,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604882334
+    },
+    {
+        "content": "<p>Dang. That's a lot of changes for a maintenance release.</p>",
+        "id": 216034319,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1604882824
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> If you're still around, I accidentally made Tugboat's new tag with dots instead of dashes: <a href=\"https://github.com/backdrop-ops/tugboat-demos/releases\">https://github.com/backdrop-ops/tugboat-demos/releases</a> Do you think that matters? Should I redo it?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/tugboat-demos/releases\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/tugboat-demos/releases\" title=\"Releases · backdrop-ops/tugboat-demos\">Releases · backdrop-ops/tugboat-demos</a></div><div class=\"message_embed_description\">Backdrop CMS demo sites powered by Tugboat. Contribute to backdrop-ops/tugboat-demos development by creating an account on GitHub.</div></div></div>",
+        "id": 216035903,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604885285
+    },
+    {
+        "content": "<p>Seems to work ok, so will leave it for now unless I hear back from you. Can always fix later if needbe I guess.</p>",
+        "id": 216036158,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604885706
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I don't think it matters. I did dashes because the tag ends up in the URLs, but turns out Tugboat automatically converts dots  so it didn't matter.</p>",
+        "id": 216036723,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604886560
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Not sure if you're done yet but my 1.17.2 demo sandbox seems to have failed: <a href=\"https://backdropcms.org/demo/5fa8a00a3ffc7f72f6bf7576\">https://backdropcms.org/demo/5fa8a00a3ffc7f72f6bf7576</a></p>",
+        "id": 216036794,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604886632
+    },
+    {
+        "content": "<p>Hmmm, log says:</p>\n<div class=\"codehilite\"><pre><span></span><code>2020-11-09T01:49:08.110Z - 5fa8a00b3ffc7f2c4bbf75c3# git -C /var/lib/tugboat fetch origin tags/1.17.2\nFrom github.com:backdrop-ops/tugboat-demos\n * tag               1.17.2     -&gt; FETCH_HEAD\n2020-11-09T01:49:08.631Z - 5fa8a00b3ffc7f2c4bbf75c3# git -C /var/lib/tugboat checkout tags/1.17.2\nerror: pathspec &#39;tags/1.17.2&#39; did not match any file(s) known to git\n2020-11-09T01:49:09.568Z - Command Failed (Tugboat Error 1064): Exit code (1)\n</code></pre></div>",
+        "id": 216036866,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604886726
+    },
+    {
+        "content": "<p>It obviously exists though: <a href=\"https://github.com/backdrop-ops/tugboat-demos/releases/tag/1.17.2\">https://github.com/backdrop-ops/tugboat-demos/releases/tag/1.17.2</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/tugboat-demos/releases/tag/1.17.2\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/tugboat-demos/releases/tag/1.17.2\" title=\"Release 1.17.2 · backdrop-ops/tugboat-demos\">Release 1.17.2 · backdrop-ops/tugboat-demos</a></div><div class=\"message_embed_description\">Update to Backdrop 1.17.2.</div></div></div>",
+        "id": 216036878,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604886791
+    },
+    {
+        "content": "<p>Not sure what I did wrong <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span> Are you able to help <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> ?</p>",
+        "id": 216036956,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604886930
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Oh I know what this is. Apparently our sandboxes are not sending the proper tag request, so the default base preview gets used. This is my sandbox in the Tugboat dashboard: <a href=\"/user_uploads/18319/ka2Pymiv6X4zc3rvBtSb3fRX/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/ka2Pymiv6X4zc3rvBtSb3fRX/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/ka2Pymiv6X4zc3rvBtSb3fRX/image.png\"></a></div>",
+        "id": 216037019,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604887017
+    },
+    {
+        "content": "<p>See how it built from 1-17-1 even though it supposedly was trying to build tag 1.17.2? Our API requests are apparently not specifying the base preview ID.</p>",
+        "id": 216037037,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604887068
+    },
+    {
+        "content": "<p>So the trick for the time being is to  remove <code>1-17-1</code> as a base preview entirely, then the only base preview remaining (<code>1.17.2</code>) will be used as the base.</p>",
+        "id": 216037095,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604887112
+    },
+    {
+        "content": "<p>Won't that mean all 1-17-1 demos will grow to full-size?</p>",
+        "id": 216037119,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604887144
+    },
+    {
+        "content": "<p>No, apparently any preview can be used as a base preview. So I'm not deleting the <code>1-17-1</code> base preview, just unmarking it as an \"official\" base preview. There's a terminology problem there. Every preview can be used as a base. The \"Base Previews\" section in the tugboat dashboard really should be called \"Automatic Base Previews\" or something.</p>",
+        "id": 216037203,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604887268
+    },
+    {
+        "content": "<p>Ah ok</p>",
+        "id": 216037270,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604887345
+    },
+    {
+        "content": "<p>I think we may need another setting in the Tugboat module for \"Base Preview ID\" or something. Though that's kind of annoying that we would need to both ask for \"Git Ref\" and \"Base Preview ID\".</p>",
+        "id": 216037310,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604887420
+    },
+    {
+        "content": "<p>Indeed</p>",
+        "id": 216037315,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604887437
+    },
+    {
+        "content": "<p>Or maybe we just update the release instructions to say \"delete the base preview from two version ago, and unmark the last version as a base preview\"...?</p>",
+        "id": 216037407,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604887520
+    },
+    {
+        "content": "<p>So then we only ever have one base preview in that repo.</p>",
+        "id": 216037418,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604887544
+    },
+    {
+        "content": "<p>Yeah there we go. Unmarking <code>1-17-1</code> preview as a base preview has fixed them. Latest test sandbox is <a href=\"https://backdropcms.org/demo/5fa8a3b62dbb90b92e5375f2\">https://backdropcms.org/demo/5fa8a3b62dbb90b92e5375f2</a> and it works fine now.</p>",
+        "id": 216037419,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604887546
+    },
+    {
+        "content": "<p>Last release, I filed an issue with the Tugboat team saying this behavior was \"broken\" and they responded back saying that \"you're doing it wrong\". The base preview thing is incredibly confusing.</p>",
+        "id": 216037503,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604887635
+    },
+    {
+        "content": "<p>Yeah. The API docs mention \"anchored Base Previews\", so maybe that's what they mean by the ones listed seperately from the rest</p>",
+        "id": 216037565,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604887715
+    },
+    {
+        "content": "<p>Well thanks for finding and fixing the problem <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> !</p>",
+        "id": 216037939,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604888304
+    },
+    {
+        "content": "<p>I updated the release instructions so I know for next time what to do.</p>",
+        "id": 216038365,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604888964
+    },
+    {
+        "content": "<blockquote>\n<p>It will not be necessary to run the update script</p>\n</blockquote>\n<p>It IS necessary because of translation_update_1001() (Fix Views which still have the Drupal 7 version...), so the release comment should be updated.</p>",
+        "id": 216049831,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1604906374
+    },
+    {
+        "content": "<p>Updated.</p>",
+        "id": 216050125,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604906728
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>! I installed Backdrop 1.17.1 and then updated to 1.17.2. But I didn't enable Translation module. Nice catch.</p>",
+        "id": 216107319,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1604938781
+    },
+    {
+        "content": "<p>The links to the respective issues in the release description also need to be fixed, as they currently 404 ...they are in the form of <code>https://github.com/backdrop/backdrop/blob/1.17.2/backdrop/backdrop-issues/issues/1604</code> when they should be <code>https://github.com/backdrop/backdrop-issues/issues/4638</code></p>",
+        "id": 216129293,
+        "sender_full_name": "klonos",
+        "timestamp": 1604948616
+    },
+    {
+        "content": "<blockquote>\n<p>The links to the respective issues in the release description also need to be fixed</p>\n</blockquote>\n<p>Sorry about that. I tested them all when they were still in the comment section of the release issue. But, clearly the links are relative and not working on the actual release page.</p>",
+        "id": 216140754,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604954759
+    }
+]

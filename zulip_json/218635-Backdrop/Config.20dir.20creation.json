@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>When installing a brand new Backdrop site, if the config directories specified in settings.php don't exist, Backdrop will create them. Does anyone know where in Backdrop's code this dir creation happens? I can't seem to find it...</p>",
+        "id": 206566566,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597147534
+    },
+    {
+        "content": "<p>Are you searching for <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21install.inc/function/backdrop_install_config_directories/1\">backdrop_install_config_directories</a> or possibly <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/ConfigFileStorage%3A%3AinitializeStorage/1\">initializeStorage</a> ?</p>",
+        "id": 206567970,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1597148738
+    },
+    {
+        "content": "<p>initializeStorage is what I was looking for, thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>!</p>",
+        "id": 206572616,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597151640
+    }
+]

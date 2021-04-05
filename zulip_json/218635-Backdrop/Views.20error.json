@@ -1,0 +1,14 @@
+[
+    {
+        "content": "<p>Also seeing what I think is a new error:</p>\n<blockquote>\n<p>Notice: Array to string conversion in views_handler_filter-&gt;admin_summary() (line 160 of /app/core/modules/views/handlers/views_handler_filter.inc).</p>\n</blockquote>\n<p>Maybe it's just something with these views, but wondering if it has anything to do with new admin summary or title for blocks?</p>",
+        "id": 212695790,
+        "sender_full_name": "Herb",
+        "timestamp": 1602166531
+    },
+    {
+        "content": "<p>scratch that: probably because of broken filter: language changed in upgrade</p>",
+        "id": 212696062,
+        "sender_full_name": "Herb",
+        "timestamp": 1602166598
+    }
+]

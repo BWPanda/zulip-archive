@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p>Here's a question for the Linux/technical gurus out there... I need a better backup solution for my laptop. I'm currently using an external HD and running an <code>rsync</code> command manually every few days. But I'd like a solution that's: 1. automated (so it should backup to somewhere that's always available (my external HDs not always plugged in)) and 2. physically away from my laptop (my external HD sits next to my laptop on the desk so if my house burns down then everything's gone).</p>",
+        "id": 214638754,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603749634
+    },
+    {
+        "content": "<p>I'm considering paying for a server where I can backup files using <code>rsync</code> run via cron (fits all my requirements), but I'm concerned about security/privacy. I don't want others (server admins, etc.) having access to my files.</p>",
+        "id": 214638951,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603749738
+    },
+    {
+        "content": "<p>I believe that means I need encryption... Is that correct, or is there another way to prevent someone with access to your files from reading them?</p>",
+        "id": 214639025,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603749787
+    },
+    {
+        "content": "<p>I ask because, as far as I'm aware, if I encrypt my files before or during transfer, then they're stored on the server as encrypted and I can't read them myself without decrypting them.</p>",
+        "id": 214639082,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603749829
+    },
+    {
+        "content": "<p>One of my other requirements (well, not so much as a requirement as a nice-to-have) is that I'd like to be able to browse my files on the backup server and copy them back to my laptop (or another device) without having to perform a full restore.</p>",
+        "id": 214639189,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603749896
+    },
+    {
+        "content": "<p>Is that possible while still denying access to others, or is it an all-or-nothing deal?</p>",
+        "id": 214639213,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603749912
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/Backups/near/214639025\">said</a>:</p>\n<blockquote>\n<p>I believe that means I need encryption... Is that correct, or is there another way to prevent someone with access to your files from reading them?</p>\n</blockquote>\n<p>yep, you need encryption and you might run into issues with bandwidth if you're doing remote backups to a cloud server, so look at that very closely if you do decide to go that route.  Another way to do it if you're planning on leasing a server is to have the files there all the time (think github) and just connect when you need them and save them back to the server.  You can purchase a backup product when you lease the server - many come with.</p>",
+        "id": 214639381,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603750034
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/Backups/near/214639189\">said</a>:</p>\n<blockquote>\n<p>One of my other requirements (well, not so much as a requirement as a nice-to-have) is that I'd like to be able to browse my files on the backup server and copy them back to my laptop (or another device) without having to perform a full restore.</p>\n</blockquote>\n<p>This really depends on how your backup is set up.  If the files are backed up to a single file, compressed and then encrypted - then you will have to download the whole backup and unencrypt it before finding your file.</p>",
+        "id": 214639556,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603750153
+    },
+    {
+        "content": "<p>I think it also depends on what files you're trying to backup.  You may want a combination of solutions - for example an external drive that you use to backup system files so that you can restore your linux box if anything (say a hard drive) dies and a separate backup for the projects you're working on.</p>\n<p>For example, I use an external hard drive to backup my laptop nightly (automated), but we have separate leased servers where our clients sites and development reside and those are in a six sigma data center with an automated backup solution.</p>",
+        "id": 214639893,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603750344
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/Backups/near/214639556\">said</a>:</p>\n<blockquote>\n<p>This really depends on how your backup is set up.</p>\n</blockquote>\n<p>Well backing up to a single file is obviously not what I want to do then <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> Is there another way?</p>",
+        "id": 214639909,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603750359
+    },
+    {
+        "content": "<p>I'm looking to backup my personal laptop (all my documents, emails, photos, etc.). Nothing to do with website or clients.</p>",
+        "id": 214639982,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603750436
+    },
+    {
+        "content": "<p>Basically I want a secure, private, exact-copy of my laptop's home directory stored somewhere out there in the world. Away from prying eyes, but accessible to me as if I was accessing my own laptop.</p>",
+        "id": 214640089,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603750503
+    },
+    {
+        "content": "<blockquote>\n<p>Well backing up to a single file is obviously not what I want to do then <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> Is there another way?</p>\n</blockquote>\n<p>There's any number of combinations, depending on the solution you go with. Many backup softwares have the ability to search within a back file and restore a single file from an encrypted backup.  I don't have a linux system, but you could cruise the net and see what the best backup options are.    If you are planning on leasing a server  - Don't go with GoDaddy. They're the largest, but they don't provide good service and will nickel and dime you to death (it gets very expensive very quickly).  Depending on where you're located, there are good hosting providers.  We use Liquidweb and used to use MediaTemple before they were sold.   Cloud servers are a good option for smaller requirements and less maintenance.</p>",
+        "id": 214640248,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1603750614
+    },
+    {
+        "content": "<p>I pay for SpiderOak for an external, cloud backup. They pride themselves on pretty strong security and privacy features. I run Ubuntu locally. I also back things up to a HD using Ubuntu's backup tool</p>",
+        "id": 214651635,
+        "sender_full_name": "Herb",
+        "timestamp": 1603760799
+    },
+    {
+        "content": "<p>...I always wanted to give <a href=\"https://www.bacula.org\">https://www.bacula.org</a> a go but never got the chance to.</p>",
+        "id": 214766850,
+        "sender_full_name": "klonos",
+        "timestamp": 1603834274
+    },
+    {
+        "content": "<p>I ended up choosing to try BorgBackup again. I've signed up for a free trial of <a href=\"https://www.borgbase.com/\">https://www.borgbase.com/</a> (the server space for storing backups remotely), and am using their Vorta desktop software (<a href=\"https://vorta.borgbase.com/\">https://vorta.borgbase.com/</a>). If it all works nicely, I'll pay for a larger account and start using that for my personal backups.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.borgbase.com/\" style=\"background-image: url(https://www.borgbase.com/static/landing.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.borgbase.com/\" title=\"BorgBase - Secure hosting for your BorgBackup Repos\">BorgBase - Secure hosting for your BorgBackup Repos</a></div><div class=\"message_embed_description\">Simple and Secure Hosting for your Borg Repositories. From $2/month or $.005/GB.</div></div></div>",
+        "id": 214768133,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603834952
+    }
+]

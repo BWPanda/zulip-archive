@@ -1,0 +1,194 @@
+[
+    {
+        "content": "<p>Has anyone built a site yet which is multilingual and uses an exposed filter for taxonomy term selection? I can't seem to get the localized version of the terms to show up in the Views exposed filter (although they show up localized when adding content, for example).</p>",
+        "id": 231540358,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616532113
+    },
+    {
+        "content": "<p>Are you using i18n too? I suggest trying the latest dev to see if it helps</p>",
+        "id": 231554869,
+        "sender_full_name": "Herb",
+        "timestamp": 1616539041
+    },
+    {
+        "content": "<p>Though we should get it working anyway since both are in core</p>",
+        "id": 231554895,
+        "sender_full_name": "Herb",
+        "timestamp": 1616539063
+    },
+    {
+        "content": "<p>Ah yes, didn't think about the fact that there might be a more recent dev of i18n. I'll try that tomorrow.</p>",
+        "id": 231565863,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616546420
+    },
+    {
+        "content": "<p>Hmm... I don't think that solves it. It did \"mess up\" a few things (I know I was working with a dev version, not complaining) that I've sorted out, but Views still seems to have trouble grabbing the localized content. Noticing it in the exposed filter but also in a regular old view -- it's pulling the English/source instead of the localized version.</p>",
+        "id": 231626156,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616589767
+    },
+    {
+        "content": "<p>One thing I noticed in the interface that seems strange is that the English/source is set to \"Language &gt; All\" on the vocabulary page. Seems like it should be listed as English -- but maybe that's a quirk of localization over full translation?</p>",
+        "id": 231626253,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616589839
+    },
+    {
+        "content": "<p>When editing the main term in English I don't see a language selector to try changing \"All\" to \"English\"</p>",
+        "id": 231626364,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616589884
+    },
+    {
+        "content": "<p>@laryn maybe you struggle with the \"localized\" vs. \"translated\" problem... Localized terms (same applies to localized menu items) are actually language neutral and i18n does a little trick to pipe them through <code>t()</code>, their actual setting in the database is language neutral, though. That's a pretty special thing, I first realized when working on the i18n port.</p>",
+        "id": 231641787,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616595650
+    },
+    {
+        "content": "<p>I think I am struggling with this, yes... <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> If a term is localized, shouldn't views pull the localized version automatically?</p>",
+        "id": 231645481,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616596924
+    },
+    {
+        "content": "<p>Views is just a database-abstraction-layer-abstraction-layer - and the value in the database is \"language neutral\", so maybe that's the reason.</p>\n<p>Hm... Let me experiment a bit... on my testing web.</p>",
+        "id": 231645899,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616597089
+    },
+    {
+        "content": "<p>Nope. Not even when using the field value (instead of related term). It won't get run through <code>t()</code>. Might need an extra views display handler.</p>",
+        "id": 231646342,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616597261
+    },
+    {
+        "content": "<p>Perhaps this is where bits of <a href=\"https://github.com/backdrop-contrib/i18n/issues/52\">https://github.com/backdrop-contrib/i18n/issues/52</a> may still be needed?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/i18n/issues/52\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/i18n/issues/52\" title=\"Wrap i18nviews back in? · Issue #52 · backdrop-contrib/i18n\">Wrap i18nviews back in? · Issue #52 · backdrop-contrib/i18n</a></div><div class=\"message_embed_description\">Pulling out a few comments from an earlier thread: @laryn: Should i18n Views be wrapped (back) in since Views is in core now? @mazzech: I used i18n Views several times, there are a few hickups, but...</div></div></div>",
+        "id": 231646590,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616597359
+    },
+    {
+        "content": "<p>Maybe not needed as a separate module but just wrapped into <code>i18n</code> directly.</p>",
+        "id": 231646777,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616597417
+    },
+    {
+        "content": "<p>No, that's unrelated. The problem is that the \"i18n trick\" with t() doesn't get applied to the form value, neither for select lists nor for autocomplete.</p>",
+        "id": 231646804,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616597426
+    },
+    {
+        "content": "<p>I'm also seeing this on a localized vocabulary when just trying to pull the term data for display in a view (not using any exposed filters). If I set a filter for \"Term language = Current user's language\" it pulls nothing in any language, not even English.</p>",
+        "id": 231648793,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616598063
+    },
+    {
+        "content": "<p>If I remove that filter it just shows English for every language.</p>",
+        "id": 231648905,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616598093
+    },
+    {
+        "content": "<p>Also just realized, that's also not piped through t(). If displaying <em>the field</em> in a view, it works.</p>",
+        "id": 231649265,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616598202
+    },
+    {
+        "content": "<p>This is what I mean - localized display (only for fields in views):<br>\n<a href=\"/user_uploads/18319/ilm6QXPH_B6lE-bBgi4fR-72/localized-term-views.png\">localized-term-views.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/ilm6QXPH_B6lE-bBgi4fR-72/localized-term-views.png\" title=\"localized-term-views.png\"><img src=\"/user_uploads/18319/ilm6QXPH_B6lE-bBgi4fR-72/localized-term-views.png\"></a></div>",
+        "id": 231650388,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616598588
+    },
+    {
+        "content": "<p>Which field is that? In the view I'm working on, I have set it to show fields and I'm including three fields: an image field, term name, and term description. I don't see that on (for example) the term name field.</p>",
+        "id": 231650582,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616598639
+    },
+    {
+        "content": "<p>Oops, I'm supposed to be working, actually <span aria-label=\"laughter tears\" class=\"emoji emoji-1f602\" role=\"img\" title=\"laughter tears\">:laughter_tears:</span> See you later...</p>",
+        "id": 231650600,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616598646
+    },
+    {
+        "content": "<p>Doing a quick-and-dirty port of <code>i18nviews</code> and it seems to have something there that's helpful in this case. Going to do some more minor cleanup to see if it solves all the issues and will post results in the issue linked above.</p>",
+        "id": 231665289,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616603493
+    },
+    {
+        "content": "<p>Ah, you're already working on it. If any of those handlers/plugins is helpful - I'd bet on this one: <a href=\"https://git.drupalcode.org/project/i18nviews/-/blob/7.x-3.x/includes/i18nviews_handler_field_taxonomy_term_name.inc\">https://git.drupalcode.org/project/i18nviews/-/blob/7.x-3.x/includes/i18nviews_handler_field_taxonomy_term_name.inc</a></p>\n<p>Most of the other stuff just duplicates everything that core and i18n already provide.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/i18nviews/-/blob/7.x-3.x/includes/i18nviews_handler_field_taxonomy_term_name.inc\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/i18nviews/-/blob/7.x-3.x/includes/i18nviews_handler_field_taxonomy_term_name.inc\" title=\"includes/i18nviews_handler_field_taxonomy_term_name.inc · 7.x-3.x · project / i18nviews\">includes/i18nviews_handler_field_taxonomy_term_name.inc · 7.x-3.x · project / i18nviews</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/i18nviews</div></div></div>",
+        "id": 231666927,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616604097
+    },
+    {
+        "content": "<p>It should be possible to incorporate that handler in i18n without all the overhead this module would provide.</p>",
+        "id": 231667255,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616604217
+    },
+    {
+        "content": "<p>No, wrong link, THAT one: <a href=\"https://git.drupalcode.org/project/i18nviews/-/blob/7.x-3.x/includes/i18nviews_handler_filter_taxonomy_term_name.inc\">https://git.drupalcode.org/project/i18nviews/-/blob/7.x-3.x/includes/i18nviews_handler_filter_taxonomy_term_name.inc</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/i18nviews/-/blob/7.x-3.x/includes/i18nviews_handler_filter_taxonomy_term_name.inc\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/i18nviews/-/blob/7.x-3.x/includes/i18nviews_handler_filter_taxonomy_term_name.inc\" title=\"includes/i18nviews_handler_filter_taxonomy_term_name.inc · 7.x-3.x · project / i18nviews\">includes/i18nviews_handler_filter_taxonomy_term_name.inc · 7.x-3.x · project / i18nviews</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/i18nviews</div></div></div>",
+        "id": 231667648,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616604343
+    },
+    {
+        "content": "<p>No, the first one was correct... I'm obviously a little tired. <span aria-label=\"smirk\" class=\"emoji emoji-1f60f\" role=\"img\" title=\"smirk\">:smirk:</span></p>",
+        "id": 231667814,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616604402
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> -- I appreciate the help. I think there's at least two that are useful in my case. I'll try to figure out which ones they are and open an issue. Should it be core or <code>i18n</code>?</p>",
+        "id": 231668489,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616604663
+    },
+    {
+        "content": "<p>Hm, if they depend on a function provided by i18n(_taxonomy), then it should go to the i18n queue. I suppose, that's the case, as this thread is about \"localized\" terms mostly. Term translation also is done via i18n (translation sets), so core isn't involved that much, either.</p>",
+        "id": 231668879,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616604815
+    },
+    {
+        "content": "<p>Maybe I'll just pick up the conversation in the issue I linked earlier in the <code>i18n</code> queue then. <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 231669267,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616604942
+    },
+    {
+        "content": "<p>Sure, if it's still understandable...</p>",
+        "id": 231669445,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616604996
+    },
+    {
+        "content": "<p>Have you ever used that one? <a href=\"https://git.drupalcode.org/project/views_exposed_multilingual_taxonomy_filter/-/blob/7.x-1.x/includes/views/views_exposed_multilingual_taxonomy_filter_handler_filter_term_node_tid.inc\">https://git.drupalcode.org/project/views_exposed_multilingual_taxonomy_filter/-/blob/7.x-1.x/includes/views/views_exposed_multilingual_taxonomy_filter_handler_filter_term_node_tid.inc</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/views_exposed_multilingual_taxonomy_filter/-/blob/7.x-1.x/includes/views/views_exposed_multilingual_taxonomy_filter_handler_filter_term_node_tid.inc\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/views_exposed_multilingual_taxonomy_filter/-/blob/7.x-1.x/includes/views/views_exposed_multilingual_taxonomy_filter_handler_filter_term_node_tid.inc\" title=\"includes/views/views_exposed_multilingual_taxonomy_filter_handler_filter_term_node_tid.inc · 7.x-1.x · project / views_exposed_multilingual_taxonomy_filter\">includes/views/views_exposed_multilingual_taxonomy_filter_handler_filter_term_node_tid.inc · 7.x-1.x · project / views_exposed_multilingual_taxonomy_filter</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/views_exposed_multilingual_taxonomy_filter</div></div></div>",
+        "id": 231669545,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616605040
+    },
+    {
+        "content": "<p>Seems to add language labels. Not quite what we're currently after, but maybe useful.</p>",
+        "id": 231669744,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616605103
+    },
+    {
+        "content": "<p>Interesting. No I haven't. Usage stats says at least 9 people have though <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 231669965,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616605185
+    }
+]

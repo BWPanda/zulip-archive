@@ -1,0 +1,140 @@
+[
+    {
+        "content": "<p>I don't know how up to date these [META] issues usually are, but I added a bunch of block related issues to:<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/1427\">https://github.com/backdrop/backdrop-issues/issues/1427</a></p>\n<p>And I created a section for \"Issues around block titles\" which contains a number of overlapping issues, maybe duplicates. I think it would be good for someone to sort through some of these issues and close the duplicates.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1427\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1427\" title=\"[META] Blocks Blocks Blocks · Issue #1427 · backdrop/backdrop-issues\">[META] Blocks Blocks Blocks · Issue #1427 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Meta issue to help keep track of all the block related issues and initiatives, including converting the existing custom blocks into fieldable entities and creating a new type of custom text block t...</div></div></div>",
+        "id": 207595528,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597977172
+    },
+    {
+        "content": "<p>On it...</p>",
+        "id": 207596006,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597977964
+    },
+    {
+        "content": "<p>Having worked with Drupal8 for the past few years, one feature I really miss with Backdrop is fieldable blocks. I've looked through the issues and see some references to fieldable blocks or page-less nodes but I'm not quite sure where these stand. Is something still being considered? And if not, what do others use for Call-to-Action type blocks where you might want an image, subtitle, text, and button/link?</p>",
+        "id": 210755453,
+        "sender_full_name": "Danita Bowman",
+        "timestamp": 1600701173
+    },
+    {
+        "content": "<p>Hi, Danita Bowman. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 210755455,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1600701173
+    },
+    {
+        "content": "<p>\"Page-less\" nodes  are in Backdrop - the feature was adapted from Rabbit Hole module.</p>",
+        "id": 210755644,
+        "sender_full_name": "Herb",
+        "timestamp": 1600701259
+    },
+    {
+        "content": "<p>When configuring a content type you can configure it to not display the node on its own (except for those with explicit permissions)</p>",
+        "id": 210755727,
+        "sender_full_name": "Herb",
+        "timestamp": 1600701299
+    },
+    {
+        "content": "<p>Ah! Thanks. I totally missed that in the configuration. Guess I just wasn't aware of that until I started searching. But now I see it.</p>",
+        "id": 210756679,
+        "sender_full_name": "Danita Bowman",
+        "timestamp": 1600701612
+    },
+    {
+        "content": "<p>it's easy to miss</p>",
+        "id": 210757300,
+        "sender_full_name": "Herb",
+        "timestamp": 1600701903
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"344037\">@Danita Bowman</span> I think you could probably get something close with a hero block and the configurable block style module, although you would get more control if you made your own block type.</p>",
+        "id": 210760348,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1600703263
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/configurable_block_style\">https://github.com/backdrop-contrib/configurable_block_style</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/configurable_block_style\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/configurable_block_style\" title=\"backdrop-contrib/configurable_block_style\">backdrop-contrib/configurable_block_style</a></div><div class=\"message_embed_description\">Ability to style blocks through UI. Contribute to backdrop-contrib/configurable_block_style development by creating an account on GitHub.</div></div></div>",
+        "id": 210760353,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1600703267
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> Thanks! I looked at configurable block style module and it does get me part-way there.  My own block type might be the way to go unless I am able to get a template for my page-less node type instead of having to make one for each node-block for that type. I'll keep working on it. Page-less nodes  get me a little closer at this point.</p>",
+        "id": 210762060,
+        "sender_full_name": "Danita Bowman",
+        "timestamp": 1600703954
+    },
+    {
+        "content": "<p>I also have started a port of Display Suite which you might be able to use to control the layout of the pageless nodes without a template. I am not 100% sure that everything is working though.</p>",
+        "id": 210762632,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1600704170
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> Is Display Suite ready for testing?</p>",
+        "id": 210766039,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600705743
+    },
+    {
+        "content": "<p>Yes, if you would like to try it out that would be great.</p>",
+        "id": 210777197,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1600711065
+    },
+    {
+        "content": "<p>Actually, I think the modals are not working at the moment, so you might not be able to create the custom Display Suite fields.</p>",
+        "id": 210777368,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1600711136
+    },
+    {
+        "content": "<p>Ok, thank you, it’s on my list.</p>",
+        "id": 210780125,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600712353
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"344037\">@Danita Bowman</span> are you referring to <a href=\"https://www.drupal.org/project/entity_block\">https://www.drupal.org/project/entity_block</a> ? ...because as far as I know, the idea of fieldable blocks in Drupal core was rejected. See <a href=\"https://www.drupal.org/project/drupal/issues/430886\">https://www.drupal.org/project/drupal/issues/430886</a> and <a href=\"https://www.drupal.org/project/drupal/issues/1833872\">https://www.drupal.org/project/drupal/issues/1833872</a> which were both closed as \"won't fix\". Perhaps if you explained what it is exactly that you are trying to achieve, then we could help you further.</p>",
+        "id": 210889517,
+        "sender_full_name": "klonos",
+        "timestamp": 1600789407
+    },
+    {
+        "content": "<p>...right. You must be referring to <a href=\"https://www.drupal.org/project/drupal/issues/1871772\">https://www.drupal.org/project/drupal/issues/1871772</a> and <a href=\"https://www.drupal.org/node/1933768\">https://www.drupal.org/node/1933768</a> ...I missed those.</p>",
+        "id": 210891609,
+        "sender_full_name": "klonos",
+        "timestamp": 1600790294
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> In D8 I can create a custom block type and add fields to it. I can then use these custom blocks in layout builder for things like CTAs (maybe an image, text, and button) with different display modes to have a CTA with an image on the left and text on right or at CTA with an Image on top and text on bottom, etc. Page-less nodes in Backdrop seem to provide similar function but I'm still trying to figure out how (or if possible) to change the layout in a template.</p>",
+        "id": 210891621,
+        "sender_full_name": "Danita Bowman",
+        "timestamp": 1600790299
+    },
+    {
+        "content": "<p>You can also use individual node fields in a layout, if you add the <code>node/%</code> context to it.</p>",
+        "id": 210891808,
+        "sender_full_name": "klonos",
+        "timestamp": 1600790377
+    },
+    {
+        "content": "<p>...you can then place individual fields in whichever region of the layout you want.</p>",
+        "id": 210891860,
+        "sender_full_name": "klonos",
+        "timestamp": 1600790398
+    },
+    {
+        "content": "<p>Custom block module is in core in D8. And yes, I used a layout on the page-less node I created but the layout isn't respected in the page where I added that page-less node block?</p>",
+        "id": 210892034,
+        "sender_full_name": "Danita Bowman",
+        "timestamp": 1600790452
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"344037\">@Danita Bowman</span> if I understand that seems right to me. I don't think we can do nested layouts</p>",
+        "id": 210953956,
+        "sender_full_name": "Herb",
+        "timestamp": 1600828687
+    }
+]

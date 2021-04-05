@@ -1,0 +1,62 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/force.20update.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/force.20update.html">force update</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="204650223"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/force%20update/near/204650223" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/force.20update.html#204650223">(Jul 22 2020 at 10:30)</a>:</h4>
+<p>I've upgraded a drupal 7 to backdrop and realize that some database updates have not being run. How can I force to run the upgrade functions? I guess by changing the schema_version number in system table, but cannot find the right ones. All my figures there are 70xx while in a backdrop install are 10xx.</p>
+
+
+
+<a name="204651789"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/force%20update/near/204651789" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/force.20update.html#204651789">(Jul 22 2020 at 10:52)</a>:</h4>
+<p>I see that the upgrade process should create a state table, which is hasn't been created in my upgrade process and running update.php doesn't do it either.</p>
+
+
+
+<a name="204652122"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/force%20update/near/204652122" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/force.20update.html#204652122">(Jul 22 2020 at 10:59)</a>:</h4>
+<p>forget-it. my fault. wrong ddbb</p>
+
+
+
+<a name="204726537"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/force%20update/near/204726537" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/force.20update.html#204726537">(Jul 22 2020 at 21:46)</a>:</h4>
+<p><span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="204832923"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/force%20update/near/204832923" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/force.20update.html#204832923">(Jul 23 2020 at 18:11)</a>:</h4>
+<p><span class="user-mention" data-user-id="300022">@Robert Garrigos</span> when this happens to me I create a custom module, add an update hook, then manually call the update that has not been run. It's safer than fussing with the schema version column in the system table -- but that works too in a pinch</p>
+
+
+
+<a name="204832941"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/force%20update/near/204832941" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/force.20update.html#204832941">(Jul 23 2020 at 18:11)</a>:</h4>
+<p>:)</p>
+
+
+
+<a name="204854409"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/force%20update/near/204854409" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/force.20update.html#204854409">(Jul 23 2020 at 21:14)</a>:</h4>
+<p>Thanks for the tip <span class="user-mention" data-user-id="263951">@jenlampton</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

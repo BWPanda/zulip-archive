@@ -1,0 +1,114 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html">Taxonomy Term view</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="211443985"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211443985" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211443985">(Sep 28 2020 at 01:20)</a>:</h4>
+<p>The default Taxonomy Term view with path <code>/taxonomy/term/%</code> (initially disabled) is for customising how nodes are displayed when viewing a term page. How does one go about customising node displays on term pages differently depending on the vocabulary? For example, say I have a 'Country' vocab and I want nodes on Country term pages displayed as a table, but I also have a 'Tags' vocab and I want nodes on Tag term pages displayed as teasers... How would I do that?</p>
+
+
+
+<a name="211444043"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211444043" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211444043">(Sep 28 2020 at 01:22)</a>:</h4>
+<p>My initial thought is to use two displays of that view, each with a Vocabulary filter. But I don't believe they can both have the same path (<code>/taxonomy/term/%</code>) right?</p>
+
+
+
+<a name="211444060"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211444060" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211444060">(Sep 28 2020 at 01:23)</a>:</h4>
+<p>Second thought is to use Layouts to do this somehow (haven't played with layouts too much to know off-hand how to do that however). But then I wonder why we have a disabled Taxonomy Term view instead of a disabled Taxonomy Term layout...</p>
+
+
+
+<a name="211444342"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211444342" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211444342">(Sep 28 2020 at 01:30)</a>:</h4>
+<p>I haven't done this either, but my first reaction was also layouts + visibility conditions ...but I only see visibility conditions for terms - not for vocabularies <span aria-label="thinking" class="emoji emoji-1f914" role="img" title="thinking">:thinking:</span></p>
+
+
+
+<a name="211451927"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211451927" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211451927">(Sep 28 2020 at 04:56)</a>:</h4>
+<p>Looked up similar question for D7 and suggestions seemed to be to use Panels/Page manager (i.e. Layouts in Backdrop). But my problem with that is I'd then essentially have a copy of all regions (header, top, sidebar, bottom, footer, etc.), just to change the contents of the Content region. So if anything in the header, footer, etc. ever changed, that's all the more places I'd need to update (unnecessarily IMO).</p>
+
+
+
+<a name="211453868"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211453868" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211453868">(Sep 28 2020 at 05:45)</a>:</h4>
+<p>I feel you <span class="user-mention" data-user-id="256607">@BWPanda</span> <span aria-label="sweat" class="emoji emoji-1f613" role="img" title="sweat">:sweat:</span> ...see <a href="https://github.com/backdrop/backdrop-issues/issues/1691">#1691</a>, <a href="https://github.com/backdrop/backdrop-issues/issues/1886">#1886</a> and all other issues mentioned there.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1691" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1691" title="[UX] Layout UI: Collapsible block groups. · Issue #1691 · backdrop/backdrop-issues">[UX] Layout UI: Collapsible block groups. · Issue #1691 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I&#39;ve been reading the various issues people have recently opened about problems they are facing while trying to work with translation of various things in order to build multilingual sites and ...</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1886" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1886" title="[UX] Layout UI: Allow regions &amp; blocks within to be re-used (Copy Region) · Issue #1886 · backdrop/backdrop-issues">[UX] Layout UI: Allow regions &amp; blocks within to be re-used (Copy Region) · Issue #1886 · backdrop/backdrop-issues</a></div><div class="message_embed_description">My Front layout has exactly the same header and footer as my Default layout, it&#39;s just the Content that&#39;s different (and the template). But I currently have to make any changes to the heade...</div></div></div>
+
+
+
+<a name="211456964"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211456964" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211456964">(Sep 28 2020 at 06:51)</a>:</h4>
+<p>I keep forgetting to try this: <a href="https://github.com/backdrop-contrib/copy_blocks">https://github.com/backdrop-contrib/copy_blocks</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/copy_blocks" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/copy_blocks" title="backdrop-contrib/copy_blocks">backdrop-contrib/copy_blocks</a></div><div class="message_embed_description">Add blocks to your layout which are actually copies of other blocks or entire regions. - backdrop-contrib/copy_blocks</div></div></div>
+
+
+
+<a name="211525385"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211525385" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211525385">(Sep 28 2020 at 17:45)</a>:</h4>
+<blockquote>
+<p>... my first reaction was also layouts + visibility conditions ...but I only see visibility conditions for terms - not for vocabularies <span aria-label="thinking" class="emoji emoji-1f914" role="img" title="thinking">:thinking:</span></p>
+</blockquote>
+<p>In a Layout with Path / Context <code>taxonomy/term/%</code>, it should be possible to choose a vocabulary as visibility condition.</p>
+
+
+
+<a name="211531218"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211531218" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211531218">(Sep 28 2020 at 18:33)</a>:</h4>
+<p>You're absolutely right <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...my bad.</p>
+
+
+
+<a name="211541723"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211541723" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211541723">(Sep 28 2020 at 19:55)</a>:</h4>
+<p>No problem, <span class="user-mention" data-user-id="256729">@klonos</span> !</p>
+
+
+
+<a name="211542155"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211542155" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211542155">(Sep 28 2020 at 19:58)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> Also, <a href="https://github.com/backdrop-contrib/disable_term_node_listings">https://github.com/backdrop-contrib/disable_term_node_listings</a> might be interesting for you.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/disable_term_node_listings" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/disable_term_node_listings" title="backdrop-contrib/disable_term_node_listings">backdrop-contrib/disable_term_node_listings</a></div><div class="message_embed_description">Selectively disable content listings per vocabulary. - backdrop-contrib/disable_term_node_listings</div></div></div>
+
+
+
+<a name="211580019"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211580019" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211580019">(Sep 29 2020 at 04:32)</a>:</h4>
+<p>I use Copy Blocks in cases where I need to mirror regions from another layout. It works well.</p>
+
+
+
+<a name="211580120"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211580120" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211580120">(Sep 29 2020 at 04:34)</a>:</h4>
+<p>But disabling the default listing on certain vocabularies and rebuilding it with views blocks (and visibility conditions) is another good option in this case.</p>
+
+
+
+<a name="211646049"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Taxonomy%20Term%20view/near/211646049" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Taxonomy.20Term.20view.html#211646049">(Sep 29 2020 at 16:24)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/Taxonomy.20Term.20view/near/211444060">said</a>:</p>
+<blockquote>
+<p>Second thought is to use Layouts to do this somehow (haven't played with layouts too much to know off-hand how to do that however). But then I wonder why we have a disabled Taxonomy Term view instead of a disabled Taxonomy Term layout...</p>
+</blockquote>
+<p>@BWPanda, in D7 there's a module called taxonomy term view or taxonomy term profile(or something like that) that allows you to assign a specific view to a term.  I've used it in both D6 and D7.  Maybe something worth porting?</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

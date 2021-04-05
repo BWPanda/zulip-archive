@@ -1,0 +1,14 @@
+[
+    {
+        "content": "<p>Is anyone else having trouble with the newly added htaccess files in config directories when running simpletests with caching on?</p>\n<p>Could this be related to server setup?</p>\n<p>See details in <a href=\"https://github.com/backdrop/backdrop-issues/issues/4685\">this issue</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4685\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4685\" title=\"Simpletest: Exceptions with htaccess files when tests run with profile caching · Issue #4685 · backdrop/backdrop-issues\">Simpletest: Exceptions with htaccess files when tests run with profile caching · Issue #4685 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug Recently the active and staging config directories got protection via htaccess. These files are causing problems when running tests with caching on, as the file permission is...</div></div></div>",
+        "id": 212422790,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601988910
+    },
+    {
+        "content": "<p>Yeah, it's in my backlog of problems, I can't move fast enough. I'll comment on the issue.</p>",
+        "id": 212446099,
+        "sender_full_name": "Brad Bulger",
+        "timestamp": 1601998751
+    }
+]

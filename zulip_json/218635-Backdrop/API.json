@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>is there an API equivalent for hook_page_build? I was adding preload headers into the head of the document via a module and I can't find a way to do this now</p>",
+        "id": 195575121,
+        "sender_full_name": "Bryan Ollendyke",
+        "timestamp": 1588085447
+    },
+    {
+        "content": "<p>looks like hook_html_head_alter might work</p>",
+        "id": 195575395,
+        "sender_full_name": "Bryan Ollendyke",
+        "timestamp": 1588085555
+    },
+    {
+        "content": "<p>ok. <code>hook_init</code> with <code>backdrop_add_html_head</code> good now :)</p>",
+        "id": 195576028,
+        "sender_full_name": "Bryan Ollendyke",
+        "timestamp": 1588085776
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269151\">@Bryan Ollendyke</span>  Related: <a href=\"https://api.backdropcms.org/change-records/new-layout-module-implements-drag-drop-model-building-layouts\" title=\"https://api.backdropcms.org/change-records/new-layout-module-implements-drag-drop-model-building-layouts\">https://api.backdropcms.org/change-records/new-layout-module-implements-drag-drop-model-building-layouts</a></p>",
+        "id": 195743019,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1588181071
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269151\">@Bryan Ollendyke</span> When porting modules I usually go for hook_preprocess_page(), pretty much the last thing that fires just before making the HTML page.</p>",
+        "id": 196031080,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1588391211
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span>  I don't think we have a hook_preprocess_page in Backdrop.  page is the only template that doesn't have a preprocess.</p>",
+        "id": 196031180,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588391426
+    },
+    {
+        "content": "<p>hm, the API says it still exists...  <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21theme.inc/function/template_preprocess_page/1\" title=\"https://api.backdropcms.org/api/backdrop/core%21includes%21theme.inc/function/template_preprocess_page/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21theme.inc/function/template_preprocess_page/1</a></p>",
+        "id": 196031188,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588391473
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <code>hook_preprocess_page()</code> is how the admin bar is added. Definitely still there. You might be thinking of <code>hook_process_page()</code>?</p>",
+        "id": 196032213,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1588392963
+    },
+    {
+        "content": "<p>maybe it just doesn't exist for themes?</p>",
+        "id": 196032220,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588392983
+    },
+    {
+        "content": "<p>No, there are no process hooks for anything. I remembered there being one template that didn't have preprocess, and thought it was page b/c that template <code>was special</code> (since it added all the script tags and everything)</p>",
+        "id": 196032305,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588393107
+    },
+    {
+        "content": "<p>Maybe I'm thinking of html in drupal 8 :)</p>",
+        "id": 196032332,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588393168
+    },
+    {
+        "content": "<p>it's definitely still there for themes too: <a href=\"https://api.backdropcms.org/api/backdrop/core%21themes%21basis%21template.php/function/basis_preprocess_page/1\" title=\"https://api.backdropcms.org/api/backdrop/core%21themes%21basis%21template.php/function/basis_preprocess_page/1\">https://api.backdropcms.org/api/backdrop/core%21themes%21basis%21template.php/function/basis_preprocess_page/1</a></p>",
+        "id": 196032392,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588393205
+    }
+]

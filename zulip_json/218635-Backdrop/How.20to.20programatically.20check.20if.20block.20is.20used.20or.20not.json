@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>Hello everyone and happy holidays!<br>\nIt was fairly easy to check if a block was enabled or not on Drupal 7 just by using</p>\n<div class=\"codehilite\"><pre><span></span><code>db_result(db_query(&quot;SELECT status FROM {blocks} where module = &#39;%s&#39; and delta = &#39;%s&#39;&quot;, &quot;user&quot;, &quot;0&quot;));\n</code></pre></div>\n<p>Now, on Backdrop usage of blocks is not reflected on DB, but configuration file <code>layout.layout.default.json</code>. I could just grep, but thought maybe someones knows better way on how to check if a block is used or not.</p>",
+        "id": 220777635,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1608719983
+    },
+    {
+        "content": "<p>Using <code>layout_get_block_usage()</code> is just giving <code>Call to undefined function layout_get_block_usage() </code></p>",
+        "id": 220777732,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1608720064
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> Probably just have to <code>include layout.admin.inc</code> to use that function...</p>",
+        "id": 220777833,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608720145
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> , thanks, will try now. Meanwhile, don't we have something like <a href=\"https://api.drupal.org/api/drupal/modules!block!block.module/function/block_list/7.x\">https://api.drupal.org/api/drupal/modules!block!block.module/function/block_list/7.x</a></p>",
+        "id": 220777942,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1608720255
+    },
+    {
+        "content": "<p>Does this page have what you need: <code>/admin/reports/blocks</code>? If so, see where it gets its info: <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.admin.inc/function/layout_block_list/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.admin.inc/function/layout_block_list/1</a></p>",
+        "id": 220778441,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608720715
+    },
+    {
+        "content": "<p>Ok, this worked like a charm:</p>\n<div class=\"codehilite\"><pre><span></span><code>module_load_include(&#39;inc&#39;, &#39;layout&#39;, &#39;layout.admin&#39;);\nif (!empty(layout_get_block_usage(&#39;custom_module&#39;, &#39;block_delta&#39;))) {\n</code></pre></div>\n<p>Thanks for the hint, <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> !</p>",
+        "id": 220778681,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1608720913
+    },
+    {
+        "content": "<p>Let me know if you think using <code>include layout.admin.inc</code> is better, though I couldn't get it working</p>",
+        "id": 220778722,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1608720958
+    },
+    {
+        "content": "<p>No sorry, <code>module_load_include()</code> is correct. Glad you got it working.</p>",
+        "id": 220778902,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608721145
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ++</p>",
+        "id": 220837546,
+        "sender_full_name": "klonos",
+        "timestamp": 1608767163
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span>  <span aria-label=\"heart\" class=\"emoji emoji-2764\" role=\"img\" title=\"heart\">:heart:</span> (Karma: 24)</p>",
+        "id": 220837550,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608767163
+    }
+]

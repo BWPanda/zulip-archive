@@ -1,0 +1,47 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/odd.20permissions.20requirement.20for.20node.2Fadd.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/odd.20permissions.20requirement.20for.20node.2Fadd.html">odd permissions requirement for node/add</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="224924630"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/odd%20permissions%20requirement%20for%20node/add/near/224924630" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/odd.20permissions.20requirement.20for.20node.2Fadd.html#224924630">(Feb 02 2021 at 19:39)</a>:</h4>
+<p>I have a feeling this is something that wasn't required in Drupal 7. I just tested on a fresh Backdrop site. A non-admin user with "Create post" but no permission for "view published content". I would have thought that the user would be able to add the node but not view it. But that doesn't seem to be the case.</p>
+
+
+
+<a name="224980524"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/odd%20permissions%20requirement%20for%20node/add/near/224980524" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/odd.20permissions.20requirement.20for.20node.2Fadd.html#224980524">(Feb 03 2021 at 07:01)</a>:</h4>
+<blockquote>
+<p>I have a feeling this is something that wasn't required in Drupal 7...</p>
+</blockquote>
+<p>Your feeling's misleading. The behavior is like in D7. Without the "view" permission ("access content") you can't create/edit.</p>
+
+
+
+<a name="225010963"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/odd%20permissions%20requirement%20for%20node/add/near/225010963" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/odd.20permissions.20requirement.20for.20node.2Fadd.html#225010963">(Feb 03 2021 at 13:01)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256738">@indigoxela</span>. I had thought one would be able to create the node but get an access denied after saving. But that's fine. I'm doing a d7 upgrade so want it to behave the same</p>
+
+
+
+<a name="225015669"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/odd%20permissions%20requirement%20for%20node/add/near/225015669" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/odd.20permissions.20requirement.20for.20node.2Fadd.html#225015669">(Feb 03 2021 at 13:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span>  Ah, I think I know, what you had in mind: when nodes are unpublished by default, and unprivileged users don't have the permission to see unpublished content... When they save a node, they're not allowed to see it after saving.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

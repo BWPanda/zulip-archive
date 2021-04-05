@@ -1,0 +1,86 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Office.20Hours.20module.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html">Office Hours module</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="185228900"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185228900" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185228900">(Jan 09 2020 at 16:30)</a>:</h4>
+<p>As a library website with multiple locations, I've always been interested in modules like Office Hours but never used them.  <a href="https://www.drupal.org/project/office_hours" target="_blank" title="https://www.drupal.org/project/office_hours">https://www.drupal.org/project/office_hours</a>  I downloaded the D7 version and made the changes to the .info file and it magically works in a Backdrop site.  I'm not sure if there's anything else to change beyond making it work.</p>
+
+
+
+<a name="185229462"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185229462" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185229462">(Jan 09 2020 at 16:35)</a>:</h4>
+<p>I haven't looked at this module. Backdrop allows deprecated variables from d7 but to be fully Backdrop compatible might need to convert variables to config</p>
+
+
+
+<a name="185229933"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185229933" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185229933">(Jan 09 2020 at 16:39)</a>:</h4>
+<p>In searching the .module file there is one instance of variable_get.  If that's what you're looking for.</p>
+
+
+
+<a name="185230278"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185230278" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185230278">(Jan 09 2020 at 16:42)</a>:</h4>
+<p>That, but also variable_set().</p>
+
+
+
+<a name="185231304"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185231304" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185231304">(Jan 09 2020 at 16:52)</a>:</h4>
+<p>The variable_get is all that's there.  I guess another question is that a dependency in D7 was date_api.  Was that included in the Date module in Backdrop core?  The only thing that appears to not be working is that I need to enter the time using the 24 hour format but then it displays a.m. and p.m. but when using the 12 hour format to enter in the fields it doesn't work.</p>
+
+
+
+<a name="185232393"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185232393" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185232393">(Jan 09 2020 at 17:01)</a>:</h4>
+<p>should be able to remove date_api dependency.</p>
+
+
+
+<a name="185232482"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185232482" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185232482">(Jan 09 2020 at 17:02)</a>:</h4>
+<p>If there are any <code>module_exists</code> for date_api you can remove those and see if it works better</p>
+
+
+
+<a name="185232840"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185232840" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185232840">(Jan 09 2020 at 17:05)</a>:</h4>
+<p>I removed the dependency to get it to turn on.  Don't find any of those module_exists yet.  I'll keep messing with it.  I'm just amazed it worked this easily!  Especially not being a php developer...yet.</p>
+
+
+
+<a name="185232862"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185232862" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185232862">(Jan 09 2020 at 17:05)</a>:</h4>
+<p>When I search the whole module I see <code>variable_get</code>, <code>variable_set</code>, <code>variable_del</code></p>
+
+
+
+<a name="185232892"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185232892" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185232892">(Jan 09 2020 at 17:06)</a>:</h4>
+<p>I think it wouldn't take too much work to convert fully</p>
+
+
+
+<a name="185233006"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Office%20Hours%20module/near/185233006" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Office.20Hours.20module.html#185233006">(Jan 09 2020 at 17:06)</a>:</h4>
+<p>Ah, I was searching individual files not the whole thing.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

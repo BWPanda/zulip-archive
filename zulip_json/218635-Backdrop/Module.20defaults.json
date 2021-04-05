@@ -1,0 +1,122 @@
+[
+    {
+        "content": "<p>I want to mention setting defaults in a module's configuration form. That's what I started to do:</p>\n<div class=\"codehilite\"><pre><span></span>&#39;#description&#39; =&gt; t(&#39;Additional body class for pages with a Tocbot block.&lt;br /&gt;\n    Default: &lt;code&gt;toc-is-active&lt;/code&gt;&#39;),\n</pre></div>\n\n\n<p>Instead, I'd like to make use of <code>'#default_value' =&gt; $config-&gt;get('tocbot_extrabodyclass'),</code> for the display of defaults. Is it possible, and could someone post an example?</p>",
+        "id": 185016599,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578408298
+    },
+    {
+        "content": "<p>Here is a complete example block of my current situation:</p>\n<div class=\"codehilite\"><pre><span></span>$form[&#39;moduleSettings&#39;][&#39;tocbot_extrabodyclass&#39;] = array(\n    &#39;#type&#39; =&gt; &#39;textfield&#39;,\n    &#39;#title&#39; =&gt; t(&#39;Body class&#39;),\n    &#39;#description&#39; =&gt; t(&#39;Additional body class for pages with a Tocbot block.&lt;br /&gt;\n    Default: &lt;code&gt;toc-is-active&lt;/code&gt;&#39;),\n    &#39;#default_value&#39; =&gt; $config-&gt;get(&#39;tocbot_extrabodyclass&#39;),\n  );\n</pre></div>",
+        "id": 185016763,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578408389
+    },
+    {
+        "content": "<p>I don't think I understand what you're trying to do. What does \"mention setting defaults...\" mean?</p>",
+        "id": 185019820,
+        "sender_full_name": "Herb",
+        "timestamp": 1578410277
+    },
+    {
+        "content": "<p>I think what you would have to do is to get the config setting before setting the form array, check to see if it is empty or not, and if it is empty, set the default value. Something like this untested snippet:<br>\n<code>$default_value = $config-&gt;get('tocbot_extrabodyclass');\nif (empty($default_value)) {\n  $default_value = '&lt;code&gt;toc-is-active&lt;/code&gt;';\n}\n$form['moduleSettings']['tocbot_extrabodyclass'] = array(\n    '#type' =&gt; 'textfield',\n    '#title' =&gt; t('Body class'),\n    '#description' =&gt; t('Additional body class for pages with a Tocbot block.&lt;br /&gt;\n    Default: &lt;code&gt;toc-is-active&lt;/code&gt;'),\n    '#default_value' =&gt; $default_value,\n  );</code></p>",
+        "id": 185024200,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578412762
+    },
+    {
+        "content": "<p>Well, the code formatting isn't very nice.</p>",
+        "id": 185024236,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578412799
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> Yeah, was a bit unclear! I'd like to display default settings in the description text of the setting.</p>",
+        "id": 185024291,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578412808
+    },
+    {
+        "content": "<p>I think you already have that by adding it to <code>#description</code>.</p>",
+        "id": 185024341,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578412859
+    },
+    {
+        "content": "<p>You mean you want to print the variable in the description?</p>",
+        "id": 185024445,
+        "sender_full_name": "Herb",
+        "timestamp": 1578412914
+    },
+    {
+        "content": "<p>Yes!</p>",
+        "id": 185024500,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578412927
+    },
+    {
+        "content": "<p>If someone changes the value in the variable, it will no longer be displaying the default, but what is currently set.</p>",
+        "id": 185024576,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578412991
+    },
+    {
+        "content": "<p>Hm, good point! Is there a way to get the value for the description text from (in my case) <code>tocbot/config/tocbot.settings.json</code>? AFAIK, a changed value would be from the config file in the Backdrop active config directory instead.</p>",
+        "id": 185025255,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578413363
+    },
+    {
+        "content": "<p>If there isn't a obvious approach, I'm however fine to hardcode the default values in the description texts. I guess they won't change so often.</p>",
+        "id": 185025694,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578413638
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> The only place default values exist is in your module's <code>config/*.json</code> file. Once the module's installed and that file's copied into the active config, it can change. I don't believe there's any (easy) way to read from your module's default config file, so hard-coding is the only way (and I don't think it's the wrong way either - default values are hard-coded in the default config file, so they can be hard-coded in a description text too, just remember to update both places should they ever change).</p>",
+        "id": 185040810,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578422890
+    },
+    {
+        "content": "<blockquote>\n<p>hard-coding is the only way (and I don't think it's the wrong way either - default values are hard-coded in the default config file, so they can be hard-coded in a description text too, just remember to update both places should they ever change)</p>\n</blockquote>\n<p>Thanks for your feedback, <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>! Good to know that hardcoding the values isn't the 'wrong' way in this case. Re \"remember to update both places\". Actually, there are <em>three</em> places as there is also the install file. And my module has a lot of config values. Unfortunately, all three places are in slightly different format. But as you say: should they <em>ever</em> change ...</p>",
+        "id": 185058418,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578433686
+    },
+    {
+        "content": "<p>Seems that we need a <code>$config-&gt;getDefault('what.have.you')</code> ...could be a feature request <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 185060574,
+        "sender_full_name": "klonos",
+        "timestamp": 1578435213
+    },
+    {
+        "content": "<p>...there you go: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4262\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/4262\">https://github.com/backdrop/backdrop-issues/issues/4262</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4262\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4262\" target=\"_blank\" title=\"[DX] provide a way to retrieve default/OOTB config values · Issue #4262 · backdrop/backdrop-issues\">[DX] provide a way to retrieve default/OOTB config values · Issue #4262 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This came up in the Zulip chat: @olafgrabienski I want to mention setting defaults in a module&#39;s configuration form. That&#39;s what I started to do: &#39;#description&#39; =&gt; t(&#39;Additio...</div></div></div>",
+        "id": 185061439,
+        "sender_full_name": "klonos",
+        "timestamp": 1578435908
+    },
+    {
+        "content": "<p>^^ this could open the doors for config revert to OOTB defaults (although that can already be achieved by disabling -&gt; uninstalling -&gt; reinstalling a module)</p>",
+        "id": 185061613,
+        "sender_full_name": "klonos",
+        "timestamp": 1578435983
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> What's the third one in install...?</p>",
+        "id": 185081236,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578459210
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> It's <a href=\"https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install\" target=\"_blank\" title=\"https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install\">https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install</a>. Not sure if it's the correct way. IIRC, it's a result of  the <em>Coder Upgrade</em> parsing.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install\" target=\"_blank\" title=\"backdrop-contrib/tocbot\">backdrop-contrib/tocbot</a></div><div class=\"message_embed_description\">Builds a table of contents (TOC) from content headings. - backdrop-contrib/tocbot</div></div></div>",
+        "id": 185094760,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578477822
+    },
+    {
+        "content": "<p>Ah OK. Makes sense.</p>",
+        "id": 185098027,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578480555
+    }
+]

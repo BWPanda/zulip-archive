@@ -1,0 +1,126 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/403.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html">403</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217467435"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217467435" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217467435">(Nov 20 2020 at 22:35)</a>:</h4>
+<p>I'm getting a 403 trying to access a page which is a view to a list of a content type. I have three different content types and two work ok but my /modules one is displaying a 403. Am looking for pointers of what to check. I can't see anything in the log.</p>
+
+
+
+<a name="217469300"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217469300" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217469300">(Nov 20 2020 at 22:59)</a>:</h4>
+<p>Hmm, interesting. I get the same on my site (without a view though). I suspect it thinks you're trying to access the <code>modules</code> directory in your filesystem...</p>
+
+
+
+<a name="217469332"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217469332" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217469332">(Nov 20 2020 at 22:59)</a>:</h4>
+<p>Same happens with <code>themes</code> and <code>layouts</code>.</p>
+
+
+
+<a name="217469629"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217469629" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217469629">(Nov 20 2020 at 23:02)</a>:</h4>
+<p>If I change it to modulex it works. So do you think /modules is hard coded somewhere?</p>
+
+
+
+<a name="217469849"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217469849" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217469849">(Nov 20 2020 at 23:05)</a>:</h4>
+<p>Not hard-coded so much as just a matching directory in the filesystem.</p>
+
+
+
+<a name="217469992"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217469992" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217469992">(Nov 20 2020 at 23:06)</a>:</h4>
+<p>Aha, so maybe an htaccess issue?</p>
+
+
+
+<a name="217470804"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217470804" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217470804">(Nov 20 2020 at 23:16)</a>:</h4>
+<p>I remove <code>module</code> in <code>.htaccess</code> and it doesn't help - looks like my choice of <code>/modules</code> clashes with the directory name... I've changed it just `/module/ and it's working</p>
+
+
+
+<a name="217519035"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217519035" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217519035">(Nov 21 2020 at 21:07)</a>:</h4>
+<p>No time for Backdropcms today. Helping <span class="user-mention" data-user-id="270372">@Wilbur Ince</span> with his new roof.</p>
+
+
+
+<a name="217519050"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217519050" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217519050">(Nov 21 2020 at 21:07)</a>:</h4>
+<p><a href="/user_uploads/18319/FFHhB_1Vcd6DoBMUMJRd51Ps/IMG_20201121_143506049.jpg">IMG_20201121_143506049.jpg</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/FFHhB_1Vcd6DoBMUMJRd51Ps/IMG_20201121_143506049.jpg" title="IMG_20201121_143506049.jpg"><img src="/user_uploads/18319/FFHhB_1Vcd6DoBMUMJRd51Ps/IMG_20201121_143506049.jpg"></a></div>
+
+
+
+<a name="217521157"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217521157" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217521157">(Nov 21 2020 at 21:58)</a>:</h4>
+<p>Glad it's you and not me! <span class="user-mention" data-user-id="256570">@StPaulTim</span>  <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="217521947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217521947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217521947">(Nov 21 2020 at 22:18)</a>:</h4>
+<p>Couldn't he have planned for that to be in a warmer month?</p>
+
+
+
+<a name="217533499"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217533499" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217533499">(Nov 22 2020 at 04:17)</a>:</h4>
+<p>Roofs are important <span class="user-mention" data-user-id="256570">@StPaulTim</span> ++ <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="217533500"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217533500" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217533500">(Nov 22 2020 at 04:17)</a>:</h4>
+<p><strong>stpaultim</strong> go team. (Karma: 31)</p>
+
+
+
+<a name="217534501"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/217534501" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#217534501">(Nov 22 2020 at 04:51)</a>:</h4>
+<blockquote>
+<p>Couldn't he have planned for that to be in a warmer month?</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> - I asked him the same thing!</p>
+
+
+
+<a name="218013992"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/218013992" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#218013992">(Nov 26 2020 at 15:29)</a>:</h4>
+<p>Happy US Thanksgiving, Worldwide Backdrop community!</p>
+
+
+
+<a name="218014020"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/218014020" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#218014020">(Nov 26 2020 at 15:29)</a>:</h4>
+<p><span aria-label="turkey" class="emoji emoji-1f983" role="img" title="turkey">:turkey:</span></p>
+
+
+
+<a name="218035054"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/403/near/218035054" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/403.html#218035054">(Nov 26 2020 at 20:08)</a>:</h4>
+<p>I'm thankful for the cause that Backdrop CMS is, and all of you guys working on it <span aria-label="pray" class="emoji emoji-1f64f" role="img" title="pray">:pray:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Hi Guys...,</p>\n<p>What's the best way to access Webform Submission fields in  Views?</p>\n<p>Update...<br>\nFound it...  relationship: Webform Submissions.</p>\n<p>Hmmm...   I have two submissions and the view is showing ten <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span>  and I can't filter on a submission field <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>\n<p>Any clues how I can get around this please?</p>\n<p>Thanks in advance.</p>",
+        "id": 209797267,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1599838909
+    },
+    {
+        "content": "<p>There‘s an option „query settings“ or similar in Views, whre you can hide duplicates.</p>",
+        "id": 209802389,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1599841205
+    },
+    {
+        "content": "<p>The option is in the \"Other\" section on the right-hand side, and the setting is \"Distinct.\"</p>",
+        "id": 209802787,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599841416
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"269428\">mazze.ch</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Views.20and.20Webform/near/209802389\">said</a>:</p>\n<blockquote>\n<p>There‘s an option „query settings“ or similar in Views, whre you can hide duplicates.</p>\n</blockquote>\n<p>Many thanks for your reply...</p>\n<p>Tried both areas, Use aggregation and Query settings (Distinct and pure distinct) <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>\n<p>Fudged it for now... there aren't that many submissions so I will manually add them to a custom content type.</p>",
+        "id": 209807226,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1599843689
+    },
+    {
+        "content": "<p>Is there a field that is returning multiple values?</p>",
+        "id": 209831270,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599856195
+    }
+]

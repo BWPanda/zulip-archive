@@ -1,0 +1,140 @@
+[
+    {
+        "content": "<p>The new Form API Reference page is live! <a href=\"https://api.backdropcms.org/form_api\">https://api.backdropcms.org/form_api</a> This page is built in Backdrop using content types and views (the old page was a single Body field full of hand-coded HTML). This page should be much easier to update now, as most of the heavy-lifting has been automated. If you're an editor on the site, you'll see contextual Edit links next to each element/property. Take a look and let us know (here or in the API issue queue) if there are any bugs.</p>",
+        "id": 210807966,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600727090
+    },
+    {
+        "content": "<p>Some things are still being changed, but the most part is done and live. E.g. still deciding exactly how many properties should be shown in the table at the top (all of them or just the main ones).</p>",
+        "id": 210808016,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600727153
+    },
+    {
+        "content": "<p>Oh, and the old page is still available here if you need it for any reason: <a href=\"https://api.backdropcms.org/form_api_old\">https://api.backdropcms.org/form_api_old</a></p>",
+        "id": 210808116,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600727213
+    },
+    {
+        "content": "<p>Looks pretty good. <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 210808968,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1600727858
+    },
+    {
+        "content": "<p>And for quick access, here's the API issue queue: <a href=\"https://github.com/backdrop-ops/api.backdropcms.org\">https://github.com/backdrop-ops/api.backdropcms.org</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/api.backdropcms.org\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/api.backdropcms.org\" title=\"backdrop-ops/api.backdropcms.org\">backdrop-ops/api.backdropcms.org</a></div><div class=\"message_embed_description\">API website for displaying Backdrop CMS source code and developer documentation. - backdrop-ops/api.backdropcms.org</div></div></div>",
+        "id": 210809740,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600728416
+    },
+    {
+        "content": "<p>Thanks for all the time/effort you've put into this <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>++</p>",
+        "id": 210823294,
+        "sender_full_name": "klonos",
+        "timestamp": 1600742588
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> - Dragon Fire (Karma: 5)</p>",
+        "id": 210823295,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1600742588
+    },
+    {
+        "content": "<p>Maybe put a link from the old page to the new one?</p>",
+        "id": 210852802,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600771202
+    },
+    {
+        "content": "<p>Ah, good idea! The old page will become out-of-date soon, as I plan to update the new one now that it's easier to do so.</p>\n<p>EDIT: Done.</p>",
+        "id": 210855341,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600772909
+    },
+    {
+        "content": "<p>Amazing</p>",
+        "id": 210856800,
+        "sender_full_name": "Herb",
+        "timestamp": 1600774127
+    },
+    {
+        "content": "<p>Well done</p>",
+        "id": 210860598,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600776707
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ++</p>",
+        "id": 210860629,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600776723
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> (Karma: 6)</p>",
+        "id": 210860633,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1600776723
+    },
+    {
+        "content": "<p>Curious: now that form elements are separate entities (nodes?), can they be displayed separately? Say if I wanted to create a blog post about the email element can I link to just a display of just the email bit? Or include it in the body of an article? Or even include it in a block?</p>",
+        "id": 210861026,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600776970
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> I have enabled 'Hide path display' for FAPI Element and Property nodes, so currently they can't be viewed on their own by anonymous users. However it's easy enough to disable that setting and then style the nodes appropriately so they could be viewed on their own page... I'd suggest opening an issue to that effect if it's something you're interested in.</p>",
+        "id": 210861339,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600777199
+    },
+    {
+        "content": "<p>E.g. if you can login to the API site, you can view the Date element here: <a href=\"https://api.backdropcms.org/form_api/date\">https://api.backdropcms.org/form_api/date</a></p>",
+        "id": 210861432,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600777252
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/qPObzTUijFpk_K1_fJROt-xw/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/qPObzTUijFpk_K1_fJROt-xw/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/qPObzTUijFpk_K1_fJROt-xw/image.png\"></a></div>",
+        "id": 210861502,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600777306
+    },
+    {
+        "content": "<p>Not particularly interested in it for myself, just wondering. We could do that if the need ever arises.</p>",
+        "id": 210865034,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600779150
+    },
+    {
+        "content": "<p>I want to start cleaning up the Form API content now that the new page is ready, but I first need feedback on this: <a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/93\">https://github.com/backdrop-ops/api.backdropcms.org/issues/93</a> <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Is this worth bringing up during a meeting?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/93\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/api.backdropcms.org/issues/93\" title=\"Form API: When to display properties (and when to not) · Issue #93 · backdrop-ops/api.backdropcms.org\">Form API: When to display properties (and when to not) · Issue #93 · backdrop-ops/api.backdropcms.org</a></div><div class=\"message_embed_description\">In the Form API Reference there are elements (e.g. &#39;checkbox&#39;) and there are properties (e.g. &#39;#access&#39;). All elements utilise multiple properties, but not all properties are utilis...</div></div></div>",
+        "id": 210981624,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600855339
+    },
+    {
+        "content": "<p>Everything needs to be documented. All elements, and all properties, even<br>\nthe special ones.</p>\n<p>On the current page, the more standard elements are in the first table, and<br>\nthe more unusual ones are in the second table, IIRC. I think that<br>\nseparation makes sense.</p>\n<p>The grid layout makes it clear when one of the properties doesn't apply to<br>\nmany elements, so I think they should all still be displayed.</p>",
+        "id": 211023281,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600876457
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> So all properties should be added as Property nodes and displayed in the tables? If so, I'll need to go through all the non-standard properties and add them too.</p>",
+        "id": 211198188,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600987208
+    },
+    {
+        "content": "<p>I don't know the architecture bits, but every property should appear in one of the two tables, even if they only apply to one element. (like <code>action</code>)</p>",
+        "id": 211199795,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600988203
+    },
+    {
+        "content": "<p>I'd been trying to organize the tables so elements that share most properties are in the top table, and the more specialized elements were in the second table. So there are lots of checks-in-boxes in the top table, and few in the bottom one</p>",
+        "id": 211199965,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1600988289
+    }
+]

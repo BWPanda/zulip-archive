@@ -1,0 +1,116 @@
+[
+    {
+        "content": "<p>Two related questions: 1) Is it possible to update from a lower major release version to a higher major release version of a module from within the UI?<br>\n2) Can I gain access to designate which version is recommended by <a href=\"http://backdropcms.org\">backdropcms.org</a> project listing, or do I need to ping somebody specific each time?</p>",
+        "id": 206275328,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596816146
+    },
+    {
+        "content": "<p>Last time I checked (was many months ago), you could specify the preferred version by editing either the project node, or the specific release node. I can't see any such option any longer <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span> ...perhaps <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> knows?</p>",
+        "id": 206284069,
+        "sender_full_name": "klonos",
+        "timestamp": 1596820578
+    },
+    {
+        "content": "<p>...I would like us to eventually port and use something like <a href=\"https://www.drupal.org/project/nodeownership\">https://www.drupal.org/project/nodeownership</a> (I like its email notification options), or use one of the many node access modules (I think that <a href=\"https://github.com/backdrop-contrib/nodeaccess_userreference\">https://github.com/backdrop-contrib/nodeaccess_userreference</a> is the best-fitting), so that we are able to specify users as project maintainers, and allow them to manage their projects/releases on their own.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/nodeaccess_userreference\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/nodeaccess_userreference\" title=\"backdrop-contrib/nodeaccess_userreference\">backdrop-contrib/nodeaccess_userreference</a></div><div class=\"message_embed_description\">Gives content access permissions to users for content that references the users with User reference or Entity reference. - backdrop-contrib/nodeaccess_userreference</div></div></div>",
+        "id": 206285039,
+        "sender_full_name": "klonos",
+        "timestamp": 1596821096
+    },
+    {
+        "content": "<p>We don't have recommended versions yet. Right now the latest is always the<br>\nrecommended.</p>",
+        "id": 206299269,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596828171
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> For example: <a href=\"https://backdropcms.org/project/ubercart/\">https://backdropcms.org/project/ubercart/</a></p>",
+        "id": 206301042,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596829211
+    },
+    {
+        "content": "<p>Oh, this is bringing back a memory...  I think we have a hidden tab.</p>",
+        "id": 206308959,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596834105
+    },
+    {
+        "content": "<p>Aha! <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  see <a href=\"https://backdropcms.org/node/1470/edit/releases\">https://backdropcms.org/node/1470/edit/releases</a></p>",
+        "id": 206308968,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596834110
+    },
+    {
+        "content": "<p>you have to add /releases after edit</p>",
+        "id": 206308976,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596834115
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>until we can get github account verification + maintainer verification you'll need to ping an editor to make a release recommended. But since we also trust you we can make you an editor</p>",
+        "id": 206309167,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596834210
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> you already are an editor :) Can you try the node/NID/edit/releases  and see if you can access it?</p>",
+        "id": 206309265,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596834253
+    },
+    {
+        "content": "<p>@klonos we can also change the author of any node to give that person edit access. (For future reference -  if someone asks you for edit access to a node for a project they maintain)</p>",
+        "id": 206309528,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596834397
+    },
+    {
+        "content": "<p>but that secret /releases thing should be fixed</p>",
+        "id": 206309547,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596834406
+    },
+    {
+        "content": "<p>I'm still getting access denied.</p>",
+        "id": 206312449,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596836265
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I've changed the recommended version to 3.x for you.</p>",
+        "id": 206313671,
+        "sender_full_name": "klonos",
+        "timestamp": 1596837249
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> is that issue with the Project module?</p>",
+        "id": 206313700,
+        "sender_full_name": "klonos",
+        "timestamp": 1596837276
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> do you want me to also mark 1.x as unsupported?</p>",
+        "id": 206313742,
+        "sender_full_name": "klonos",
+        "timestamp": 1596837306
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> no I think it might be the Seven theme (core issue)? the sub-tabs aren't showing</p>",
+        "id": 206313867,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1596837365
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> yes that would be great, thanks!</p>",
+        "id": 206316135,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596839081
+    },
+    {
+        "content": "<p>Done: <a href=\"/user_uploads/18319/cPWBWPQ233MQSwQb0IytXnjK/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/cPWBWPQ233MQSwQb0IytXnjK/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/cPWBWPQ233MQSwQb0IytXnjK/image.png\"></a></div>",
+        "id": 206316173,
+        "sender_full_name": "klonos",
+        "timestamp": 1596839121
+    }
+]

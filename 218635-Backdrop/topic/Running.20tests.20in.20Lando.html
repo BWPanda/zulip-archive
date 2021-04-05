@@ -1,0 +1,38 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Running.20tests.20in.20Lando.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Running.20tests.20in.20Lando.html">Running tests in Lando</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="224392083"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Running%20tests%20in%20Lando/near/224392083" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Running.20tests.20in.20Lando.html#224392083">(Jan 28 2021 at 21:01)</a>:</h4>
+<p>I've done this before but forget: how to run tests via the CLI in Lando?</p>
+
+
+
+<a name="224396753"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Running%20tests%20in%20Lando/near/224396753" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Running.20tests.20in.20Lando.html#224396753">(Jan 28 2021 at 21:44)</a>:</h4>
+<p>Not sure if it helps, but <code>lando ssh</code> brings you in the container, and you can run things there, or you can use <code>lando drush [command]</code>.</p>
+
+
+
+<a name="224397679"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Running%20tests%20in%20Lando/near/224397679" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Running.20tests.20in.20Lando.html#224397679">(Jan 28 2021 at 21:53)</a>:</h4>
+<p>I figured it out. I used <code>lando php ./core/scripts/run-tests.sh --list</code></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

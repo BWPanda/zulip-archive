@@ -1,0 +1,51 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/pdo.20when.20running.20tests.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/pdo.20when.20running.20tests.html">pdo when running tests</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="196622397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/pdo%20when%20running%20tests/near/196622397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/pdo.20when.20running.20tests.html#196622397">(May 06 2020 at 11:52)</a>:</h4>
+<p>Hey people, I wonder if one of you has seen this before, when running the tests via command line. Am I doing something wrong or can it be related to the cache feature (tests ran fine without it). Or is there a problem in the test classes? <a href="/user_uploads/18319/in6WOcTvCvWfjySdlD1rAiWX/key-length.png" title="key-length.png">key-length.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/in6WOcTvCvWfjySdlD1rAiWX/key-length.png" title="key-length.png"><img src="/user_uploads/18319/in6WOcTvCvWfjySdlD1rAiWX/key-length.png"></a></div>
+
+
+
+<a name="196665919"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/pdo%20when%20running%20tests/near/196665919" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/pdo.20when.20running.20tests.html#196665919">(May 06 2020 at 17:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span>  I have run into this before. I believe it is related to the key length when using a multi-byte character set. The cache system converts all of the tables to MyISAM after the install process in order to save time when copying the tables.</p>
+
+
+
+<a name="196666329"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/pdo%20when%20running%20tests/near/196666329" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/pdo.20when.20running.20tests.html#196666329">(May 06 2020 at 17:11)</a>:</h4>
+<p>In <code>run-tests.sh</code> you can change <code>$test-&gt;prepareCache();</code> to <code>$test-&gt;prepareCache(TRUE);</code> to stop it from trying to convert the tables.</p>
+
+
+
+<a name="196666373"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/pdo%20when%20running%20tests/near/196666373" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/pdo.20when.20running.20tests.html#196666373">(May 06 2020 at 17:12)</a>:</h4>
+<p>Leaving the tables as INNODB will make the tests take a lot longer though</p>
+
+
+
+<a name="196729643"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/pdo%20when%20running%20tests/near/196729643" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/pdo.20when.20running.20tests.html#196729643">(May 07 2020 at 05:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> sounds plausible. But isn't that a bug then? I ran into this with travisCI and Bionic with mysql 5.7 (without any modifications). Wouldn't that mean that tests with caching on can't ever run on Bionic with mysql?</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>If a project <code>1.x-1.46.2-alpha</code> is ready to release a beta, should I be next releasing <code>1.x-1.46.2-beta</code> or up to <code>1.x-1.46.3-beta</code>or down to <code>1.x-1.46.0-beta</code>?</p>",
+        "id": 207544266,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597941420
+    },
+    {
+        "content": "<p>It should be like the first one, <code>1.x-1.46.2-beta</code>, but usually there is some number afterward, in case there are multiple beta versions, like <code>1.x-1.46.2-beta-0</code>, but that part's up to you.</p>",
+        "id": 207555200,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1597947028
+    },
+    {
+        "content": "<p>See <a href=\"https://semver.org\">https://semver.org</a> <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> :</p>",
+        "id": 207561120,
+        "sender_full_name": "klonos",
+        "timestamp": 1597950140
+    },
+    {
+        "content": "<p>... <a href=\"https://semver.org/#spec-item-10\">https://semver.org/#spec-item-10</a> and <a href=\"https://semver.org/#spec-item-11\">https://semver.org/#spec-item-11</a> specifically</p>",
+        "id": 207561177,
+        "sender_full_name": "klonos",
+        "timestamp": 1597950170
+    },
+    {
+        "content": "<blockquote>\n<p>Precedence for two pre-release versions with the same major, minor, and patch version MUST be determined by comparing each dot separated identifier from left to right until a difference is found as follows:</p>\n</blockquote>",
+        "id": 207561197,
+        "sender_full_name": "klonos",
+        "timestamp": 1597950191
+    },
+    {
+        "content": "<p>...</p>",
+        "id": 207561248,
+        "sender_full_name": "klonos",
+        "timestamp": 1597950222
+    },
+    {
+        "content": "<blockquote>\n<p>Example: 1.0.0-alpha &lt; 1.0.0-alpha.1 &lt; 1.0.0-alpha.beta &lt; 1.0.0-beta &lt; 1.0.0-beta.2 &lt; 1.0.0-beta.11 &lt; 1.0.0-rc.1 &lt; 1.0.0.</p>\n</blockquote>",
+        "id": 207561251,
+        "sender_full_name": "klonos",
+        "timestamp": 1597950224
+    }
+]

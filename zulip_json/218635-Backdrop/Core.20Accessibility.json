@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>I thought I would start a new thread for this, as thoughts come up.</p>",
+        "id": 230229161,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615717622
+    },
+    {
+        "content": "<p>The admin bar, 'Menu Search' input field is missing a label.</p>",
+        "id": 230229407,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615717940
+    },
+    {
+        "content": "<p>You can see an explanation and sample solution listed here: <a href=\"https://blog.pope.tech/2020/02/28/missing-form-label-search/\">https://blog.pope.tech/2020/02/28/missing-form-label-search/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://blog.pope.tech/2020/02/28/missing-form-label-search/\" style=\"background-image: url(https://blog.pope.tech/wp-content/uploads/2020/02/image-15.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://blog.pope.tech/2020/02/28/missing-form-label-search/\" title=\"Missing Form Label - Site Search example - Pope Tech Blog\">Missing Form Label - Site Search example - Pope Tech Blog</a></div><div class=\"message_embed_description\">Real world example on the Missing Form Label Error found on a site search form and possible solution.</div></div></div>",
+        "id": 230229412,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615717955
+    },
+    {
+        "content": "<p>This code specifically</p>\n<div class=\"codehilite\"><pre><span></span><code>&lt;input placeholder=&quot;Menu search&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; type=&quot;search&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-search&quot;&gt;\n</code></pre></div>",
+        "id": 230229417,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615717978
+    },
+    {
+        "content": "<p>That should be an easy fix (either with label or with aria-label, didn't look at the code yet). Mind to open an issue for that?</p>",
+        "id": 230229643,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615718218
+    },
+    {
+        "content": "<p>Therefore the change should be to add an ID to the class. And create a seperate label field, which is hidden using CSS, but shown using a screen reader. Then if a device for some reason doesnt use area-label, it should still show</p>",
+        "id": 230229655,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615718248
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code>&lt;label for=&quot;menuSearch&quot; class=&quot;sr-only&quot;&gt;Administration Bar Menu Search&lt;/label&gt;\n&lt;input id=&quot;menuSearch&quot; placeholder=&quot;Menu search&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; type=&quot;search&quot; size=&quot;60&quot; maxlength=&quot;128&quot; class=&quot;form-search&quot;&gt;\n</code></pre></div>",
+        "id": 230229657,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615718260
+    },
+    {
+        "content": "<p>Sure, I will give it a try :)</p>",
+        "id": 230229663,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615718275
+    },
+    {
+        "content": "<p>Thank you for the suggestion. Ive added it here: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4997\">https://github.com/backdrop/backdrop-issues/issues/4997</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4997\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4997\" title=\"Backdrop Admin Bar Menu Search Input Field - Accessibility Suggestion · Issue #4997 · backdrop/backdrop-issues\">Backdrop Admin Bar Menu Search Input Field - Accessibility Suggestion · Issue #4997 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need The backdrop CMS admin bar has an input field for Menu Search. Currently, this input field has no label. &lt;input placeholder=&quot;Menu search&quot; autocomplete=&quot;off...</div></div></div>",
+        "id": 230230418,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615719233
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> You're welcome! Happy testing, a pull request exists now. If you need any help with our sandboxes, just ask.</p>",
+        "id": 230234764,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1615724049
+    }
+]

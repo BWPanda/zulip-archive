@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>Using a subtheme from Basis, there's no page.tpl.php as expected that would allow me to move around some elements on the page. (Specifically, to move the timestamp and author to the bottom of the page.) I can see node.tpl.php in core, but don't know how to safely hack at that?</p>",
+        "id": 194628856,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1587350294
+    },
+    {
+        "content": "<p>You can duplicate node.tpl.php in your subtheme templates folder and edit it there.</p>",
+        "id": 194633569,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587359073
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Do I need to add a line to the .info file or does it automatically override?</p>",
+        "id": 194716474,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1587408173
+    },
+    {
+        "content": "<p>it will override automatically once it is in your theme and named correctly (in you case just keep the same name)</p>",
+        "id": 194718251,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587409042
+    },
+    {
+        "content": "<p>You may need to clear caches.</p>",
+        "id": 194721276,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587410683
+    },
+    {
+        "content": "<p>definitely need to clear caches after adding a new file ... good point</p>",
+        "id": 194721922,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587411058
+    }
+]

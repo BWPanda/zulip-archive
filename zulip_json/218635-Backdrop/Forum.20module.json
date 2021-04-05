@@ -1,0 +1,188 @@
+[
+    {
+        "content": "<p>Is someone using the Forum module? I have a client who needs a forum site, and I'm wondering if it's working fine and how flexible the module is. Disclaimer: I don't know the module at all, never used it on D7.</p>",
+        "id": 229713517,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615399452
+    },
+    {
+        "content": "<blockquote>\n<p>I'm wondering if it's working fine</p>\n</blockquote>\n<p>Well we're using it on <a href=\"https://forum.backdropcms.org/\">https://forum.backdropcms.org/</a> so I'd say it's working fine <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 229725469,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615403802
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Forum.20module/near/229725469\">said</a>:</p>\n<blockquote>\n<blockquote>\n<p>I'm wondering if it's working fine</p>\n</blockquote>\n<p>Well we're using it on <a href=\"https://forum.backdropcms.org/\">https://forum.backdropcms.org/</a> so I'd say it's working fine <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>\n</blockquote>\n<p>We're not, actually. We use a combo of Views and custom code <code>borg_forum</code> there.</p>",
+        "id": 229728047,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615404704
+    },
+    {
+        "content": "<p>Ha, interesting! Well there you go. Looks like we removed it from core... Makes sense I guess, based on how broken/weird I remember it being in D7. I thought we must have fixed it. Shame.</p>",
+        "id": 229729008,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615405044
+    },
+    {
+        "content": "<p>Yeah, I wish that we improved/fixed the contrib forum module instead of \"hacking\" our own \"special\" version for <a href=\"http://forum.b.org\">forum.b.org</a> ...that way the larger community would benefit from that.</p>",
+        "id": 229730168,
+        "sender_full_name": "klonos",
+        "timestamp": 1615405524
+    },
+    {
+        "content": "<p>Maybe we should release our version as an alternative solution...</p>",
+        "id": 229733043,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615406559
+    },
+    {
+        "content": "<p>Thanks for your feedback so far! I was aware the Backdrop Forum wasn't built with the contrib module, and I'm curious if the custom module would be a realistic alternative. <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  you seem to know both the contrib module and the custom one. What was the reason to not use the contrib module?</p>",
+        "id": 229740668,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615409033
+    },
+    {
+        "content": "<p>Hm, does it make even more sense to build a forum with site building tools? Basically a vocabulary for different Forums, a custom content type for Topics, comments for Replies, and Views to display various lists?</p>",
+        "id": 229746218,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615410982
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> That sounds reasonable. I think that is how D8 does it (or similar anyway).</p>",
+        "id": 229746556,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615411131
+    },
+    {
+        "content": "<blockquote>\n<p>That sounds reasonable</p>\n</blockquote>\n<p>Yep, at least at first sight! Wondering if there are any drawbacks, or pitfalls.</p>",
+        "id": 229747054,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615411315
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Forum.20module/near/229740668\">said</a>:</p>\n<blockquote>\n<p>What was the reason to not use the contrib module?</p>\n</blockquote>\n<p>In a word: <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span></p>",
+        "id": 229750208,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615412546
+    },
+    {
+        "content": "<p>See <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/18#issuecomment-70576237\">https://github.com/backdrop-ops/backdropcms.org/issues/18#issuecomment-70576237</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/18#issuecomment-70576237\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/18#issuecomment-70576237\" title=\"Discussion: Where should we start a discussion forum? · Issue #18 · backdrop-ops/backdropcms.org\">Discussion: Where should we start a discussion forum? · Issue #18 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">I was interested in the concept of Backdrop from the start, but I am not sure how to contribute. GitHub seems (to me) to be a place for code, not community, and I notice that most open source proje...</div></div></div>",
+        "id": 229750221,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615412553
+    },
+    {
+        "content": "<p>Is there interest in a Backdrop LIVE discussion about forums and ideas for how to implement forums in Backdrop? Is anyone willing to host it? (I would be interested in participating).</p>",
+        "id": 229752128,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615413301
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I'd also be interested. Guess I won't be able to host or facilitate the discussion, though.</p>",
+        "id": 229756612,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615414431
+    },
+    {
+        "content": "<p>I could do that I think. When is a slot available?</p>",
+        "id": 229758839,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615415274
+    },
+    {
+        "content": "<p>Take a look at the spreadsheet and add the topic yourself. Then just a note here to let us know that you have done that.</p>\n<blockquote>\n<p>I could do that I think. When is a slot available?</p>\n</blockquote>\n<p><a href=\"http://bit.ly/3e5zfrN\">http://bit.ly/3e5zfrN</a></p>\n<p>Atten <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>  - Thanks</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://bit.ly/3e5zfrN\" style=\"background-image: url(https://lh3.googleusercontent.com/b4f0QZEGXKSC2CGRwZLwZ1uKq9X8x8KkS4Qx9rKb3Kw5ssSOHsZLNqoRt7ad2J_Gbglb7KuCzsthaQ=w1200-h630-p)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://bit.ly/3e5zfrN\" title=\"Backdrop LIVE Schedule\">Backdrop LIVE Schedule</a></div><div class=\"message_embed_description\">Sheet1\n\nShort link to this document: &lt;a href=\"http://bit.ly/3e5zfrN\"&gt;http://bit.ly/3e5zfrN&lt;/a&gt;,&lt;a href=\"https://events.backdropcms.org/\"&gt;Register for Backdrop LIVE&lt;/a&gt;\nAnyone can suggest a topic for the schedule. Contact us in Zulip or on the &lt;a href=\"http://events.backdropcms.org/\"&gt;events.backdr...</div></div></div>",
+        "id": 229760293,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615415982
+    },
+    {
+        "content": "<p>Excuse my ignorance but not sure I follow. I can do Friday 10 or 11am EST. How do I \"claim\" this slot?</p>",
+        "id": 229760729,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615416192
+    },
+    {
+        "content": "<blockquote>\n<p>Hm, does it make even more sense to build a forum with site building tools? Basically a vocabulary for different Forums, a custom content type for Topics, comments for Replies, and Views to display various lists?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>  This is exactly what we did with the forum site. The forum module was in core before core had views. With taxonomy, node types and views, my argument was that we didn't need a module to make a forum anymore, and instead, we should make sure that core could do everything in forum module.</p>",
+        "id": 229765091,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1615418338
+    },
+    {
+        "content": "<blockquote>\n<p>Maybe we should release our version as an alternative solution...</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>  The custom borg_forum module on <a href=\"http://b.org\">b.org</a> is <em>not</em> a replacement for the old forum module (since, we don't need a forum module anymore) instead, it's \"a collection of all the misc stuff on the forum site\". Most of my sites have one of these. If the site were named GobbledyGook, the module would have been mamed \"borg_gobbledygook\".  Sorry for the confusion!</p>",
+        "id": 229765612,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1615418611
+    },
+    {
+        "content": "<blockquote>\n<p>The custom borg_forum module on <a href=\"http://b.org\">b.org</a> is not a replacement for the old forum module</p>\n</blockquote>\n<p>That's good news, thanks for the clarification!</p>",
+        "id": 229766473,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1615419122
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I understand that's just a custom module of miscellaneous functionality/fixes, but my point still stands. Maybe we should create a contrib module that creates the content type, view, terms, etc. needed to setup a forum...</p>",
+        "id": 229766740,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615419242
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> or a recipe?</p>",
+        "id": 229767257,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1615419538
+    },
+    {
+        "content": "<p>If they ever get off the ground...</p>",
+        "id": 229767294,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615419562
+    },
+    {
+        "content": "<p>My point was that the \"custom module of miscellaneous functionality/fixes\" is unrelated to the site being a forum. But! We could export all the config that <em>does</em> make the site a forum and post that somewhere for people to use. Even if it's not an official \"recipe\" it could still be valuable.</p>",
+        "id": 229767423,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1615419632
+    },
+    {
+        "content": "<p>Yes, that's what I was saying too <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 229769433,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1615420847
+    },
+    {
+        "content": "<p>Actually Forum Module version 2.0 does exactly that. I sort of abandoned it 5 yrs ago but it seems to work just fine, providing a Views based Forum.</p>",
+        "id": 229769729,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615421002
+    },
+    {
+        "content": "<p><span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> ...is an upgrade path from the 7.x core module all that remains to be done then?</p>",
+        "id": 229769833,
+        "sender_full_name": "klonos",
+        "timestamp": 1615421049
+    },
+    {
+        "content": "<p>No I think just an indication that anyone wanted a Views based Forum. But 5 yrs later...</p>",
+        "id": 229770676,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1615421512
+    },
+    {
+        "content": "<p>Is it this one? <a href=\"https://github.com/backdrop-contrib/forum_ng\">https://github.com/backdrop-contrib/forum_ng</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/forum_ng\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/forum_ng\" title=\"backdrop-contrib/forum_ng\">backdrop-contrib/forum_ng</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/forum_ng development by creating an account on GitHub.</div></div></div>",
+        "id": 231258871,
+        "sender_full_name": "Herb",
+        "timestamp": 1616382527
+    },
+    {
+        "content": "<p>Wow! Looks like <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>'s reaction to <a href=\"https://github.com/backdrop-contrib/forum/issues/38\">https://github.com/backdrop-contrib/forum/issues/38</a>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/forum/issues/38\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/forum/issues/38\" title=\"Create new project from the 1.x-2.x branch · Issue #38 · backdrop-contrib/forum\">Create new project from the 1.x-2.x branch · Issue #38 · backdrop-contrib/forum</a></div><div class=\"message_embed_description\">On Backdrop LIVE (March 2021), there was a session about the different options to build forums with Backdrop CMS. While the official release (v1) is a port of the Drupal core Forum module and well ...</div></div></div>",
+        "id": 231278291,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1616403197
+    },
+    {
+        "content": "<p>Hey, I've started to test <a href=\"https://github.com/backdrop-contrib/forum_ng\">https://github.com/backdrop-contrib/forum_ng</a>. Ran into an issue soon, and now I don't know how to continue: <a href=\"https://github.com/backdrop-contrib/forum_ng/issues/3\">https://github.com/backdrop-contrib/forum_ng/issues/3</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/forum_ng\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/forum_ng\" title=\"backdrop-contrib/forum_ng\">backdrop-contrib/forum_ng</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/forum_ng development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/forum_ng/issues/3\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/forum_ng/issues/3\" title=\"Fix configuration page · Issue #3 · backdrop-contrib/forum_ng\">Fix configuration page · Issue #3 · backdrop-contrib/forum_ng</a></div><div class=\"message_embed_description\">When I try to visit admin/structure/forum_ng, I get a blank page with the following error: Argument 3 passed to taxonomy_overview_terms() must be an instance of TaxonomyVocabulary, boolean given, c...</div></div></div>",
+        "id": 232999694,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1617448956
+    }
+]

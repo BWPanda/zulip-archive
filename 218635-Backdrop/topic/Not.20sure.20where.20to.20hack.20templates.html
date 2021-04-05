@@ -1,0 +1,47 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Not.20sure.20where.20to.20hack.20templates.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Not.20sure.20where.20to.20hack.20templates.html">Not sure where to hack templates</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="196263585"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Not%20sure%20where%20to%20hack%20templates/near/196263585" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Jeff Porten <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Not.20sure.20where.20to.20hack.20templates.html#196263585">(May 05 2020 at 03:08)</a>:</h4>
+<p>I have a bunch of things I want to do changing how content is displayed in various nodes. (For example: author should not be published if it's user 1, but other authors should be; some taxonomies should only appear for certain user types.) I'm poking through various .tpl files in Basis and core, and I'm not seeing where these things are set up—it all appears to be one big $content variable. Suggestions? Even better: ways of doing this that don't require me to delve into PHP. (I know, that's probably asking for springtime Christmas.)</p>
+
+
+
+<a name="196263607"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Not%20sure%20where%20to%20hack%20templates/near/196263607" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Jeff Porten <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Not.20sure.20where.20to.20hack.20templates.html#196263607">(May 05 2020 at 03:09)</a>:</h4>
+<p>Ah, I see <span class="user-mention" data-user-id="256573">@Laryn</span> already told me to make hacks to node.tpl.php—but that's where I'm seeing one big $content variable that seems to encompass all the things I want to change.</p>
+
+
+
+<a name="196263790"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Not%20sure%20where%20to%20hack%20templates/near/196263790" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Not.20sure.20where.20to.20hack.20templates.html#196263790">(May 05 2020 at 03:14)</a>:</h4>
+<p>Check in the documentation block in that tpl file, you should be able to use 'hide ($content ['field_name'])' or similar. I'm not by the computer right now or would type more thoroughly.</p>
+
+
+
+<a name="196275873"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Not%20sure%20where%20to%20hack%20templates/near/196275873" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Not.20sure.20where.20to.20hack.20templates.html#196275873">(May 05 2020 at 07:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="294810">@Jeff Porten</span> definitely not springtime Christmas, but you can usually access all variables in preprocessor functions. <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21theme.api.php/function/hook_preprocess_HOOK/1" title="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21theme.api.php/function/hook_preprocess_HOOK/1">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21theme.api.php/function/hook_preprocess_HOOK/1</a></p>
+<p>These hooks go to your theme's template.php</p>
+<p>Try: <code>YOURTHEME_preprocess_page(&amp;$variables)</code> or <code>YOURTHEME_preprocess_node(&amp;$variables)</code></p>
+<p>To figure out what's in those "$variables", try <code>debug($variables);</code> in the preprocessor of your choice. Hope this helps, although coding is required.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

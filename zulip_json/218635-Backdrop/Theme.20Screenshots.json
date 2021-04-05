@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>I wonder how bdrop packaging handles theme screenshots (png). I just released a new version - with a new screenshot - and the release zip file <em>ships</em> with the new screenshot, but it wasn't updated in the regular install. I ran the normal Backdrop update via web UI. Anyone else experiencing this?</p>\n<p>Background for this: I'm unhappy with the awkward display of theme screenshots on b-org (scale-and-crop). Personally, I don't think it's optimal for theme promotion, if the only images people can see are those cropped mini images.</p>",
+        "id": 203358085,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594280418
+    },
+    {
+        "content": "<p>This issue looks related to me: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/566\">https://github.com/backdrop-ops/backdropcms.org/issues/566</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/566\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/566\" title=\"Theme screenshot should update if a new screenshot is put into the theme · Issue #566 · backdrop-ops/backdropcms.org\">Theme screenshot should update if a new screenshot is put into the theme · Issue #566 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">I created a new theme using an old screenshot of Basis. I changed the screenshot and cut a new release, but the old screenshot is still showing up on BackdropCMS.org. Here is the new screenshot: ht...</div></div></div>",
+        "id": 203385778,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1594301855
+    },
+    {
+        "content": "<p>Also kind of related (to the background): <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/567\">https://github.com/backdrop-ops/backdropcms.org/issues/567</a> .The <code>backdrop-ops/backdropcms.org</code> issue queue seems however to be the right place for improvements.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/567\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/567\" title=\"Include screenshots on the themes page. · Issue #567 · backdrop-ops/backdropcms.org\">Include screenshots on the themes page. · Issue #567 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Backdrop doesn&#39;t currently include what themes look like on the themes page, at https://backdropcms.org/themes As per docwilmot on forum discussion: We&#39;re working on adding more features an...</div></div></div>",
+        "id": 203385944,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1594301944
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> yeah, right, both issues are still pending.</p>",
+        "id": 203389709,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594303687
+    },
+    {
+        "content": "<p>Any idea if the problem with the screenshot not updated in locally <em>installed</em> themes is a known one?</p>\n<p>Ah, wait, I can answer that myself - that was a problem with the update cache (Backdrop downloaded the old version again). There's a core Issue for that somewhere... Unrelated here.</p>",
+        "id": 203390415,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594304086
+    }
+]

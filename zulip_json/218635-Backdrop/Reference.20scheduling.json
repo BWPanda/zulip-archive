@@ -1,0 +1,104 @@
+[
+    {
+        "content": "<p>I have a (rendered) node reference to a webform on an event content type. (Different events reference the same webform.) What I'm trying to achieve now: The option to disable a node reference automatically at a date which can be specified by editors. Has somebody ever done something similar?</p>",
+        "id": 192792941,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1585915204
+    },
+    {
+        "content": "<p>Nope, sounds like a custom module or rule is needed</p>",
+        "id": 192885767,
+        "sender_full_name": "Herb",
+        "timestamp": 1585968609
+    },
+    {
+        "content": "<p>Hi Olaf, did you try to create a reference list in Views (e.g. show only the dates which are in the future minus 1 day)? You then can reference it in the field. Does this answer your question...?</p>",
+        "id": 192904172,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1586001237
+    },
+    {
+        "content": "<blockquote>\n<p>sounds like a custom module or rule is needed</p>\n</blockquote>\n<p>Speaking of \"rule\", I saw there is a \"Rules Scheduler\" submodule, I might give it a try. <span class=\"user-mention\" data-user-id=\"256648\">@Graham Oliver</span> Do you know something about the current status of Rules Scheduler? (Haven't used Rules in Backdrop at all so far.)</p>",
+        "id": 193093483,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586203285
+    },
+    {
+        "content": "<blockquote>\n<p>did you try to create a reference list in Views (...)?</p>\n</blockquote>\n<p>No, didn't try. I <em>think</em> that's not what I need but I should verify my assumption.</p>",
+        "id": 193094590,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586203811
+    },
+    {
+        "content": "<p>Thanks for your feedback, <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> and <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> !</p>",
+        "id": 193094639,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586203846
+    },
+    {
+        "content": "<p>I was thinking that @mazze.ch idea made sense to me but perhaps I don't fully understand your case</p>",
+        "id": 193122082,
+        "sender_full_name": "Herb",
+        "timestamp": 1586222004
+    },
+    {
+        "content": "<p>@OIaf, the problem with my solution might be that you need the function in the frontend, not backend, right?</p>",
+        "id": 193145939,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1586241790
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193122082\" title=\"#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193122082\">said</a>:</p>\n<blockquote>\n<p>I was thinking that @mazze.ch idea made sense to me but perhaps I don't fully understand your case</p>\n</blockquote>\n<p>Yes, I should explain it better, also because I'm not sure if I understand the suggestion.</p>",
+        "id": 193209401,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586275040
+    },
+    {
+        "content": "<p>So, here's a (simplified) description:</p>\n<ul>\n<li>I have an Event content type with Title, Body text, Location, the Event date, and a Registration deadline date. There are several events on the website.</li>\n<li>On the Event content type there is another field: a node reference autocomplete to webforms. If I select the webform in question (always the same, see below), it will be displayed / embedded on the Event page.</li>\n<li>The webform is built to allow registering for different Events. The form is always the same, and it doesn't hold a date. It contains only a Name field, contact details, and a checkbox \"I want to attend\". (There is also a token-based read-only field which holds the Event title so that I can filter the submissions by event.)</li>\n</ul>\n<p>Now, when I reference the webform as an editor, it will be embedded on the Event page. Then, at the Registration deadline date, I have to disable the form manually. My goal is to build something which disables the form automatically at the deadline date.</p>",
+        "id": 193213267,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586276606
+    },
+    {
+        "content": "<p>Maybe a Views block that takes the current page nid to get the event info, then links to webform via a relationship (on the reference field), and filters on event dates in the future?</p>",
+        "id": 193219062,
+        "sender_full_name": "Laryn",
+        "timestamp": 1586279302
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193219062\" title=\"#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193219062\">said</a>:</p>\n<blockquote>\n<p>Maybe a Views block that takes the current page nid to get the event info, then links to webform via a relationship (on the reference field), and filters on event dates in the future?</p>\n</blockquote>\n<p>Sounds interesting, will give it a try!</p>",
+        "id": 193245804,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586292496
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> I have had a quick look at Rules Scheduler and found a small bug. I have made a PR. The UI is a bit obscure initially because you have to start by setting up a 'Component' which you then schedule.</p>",
+        "id": 193276810,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1586323240
+    },
+    {
+        "content": "<p>Great to hear, <span class=\"user-mention\" data-user-id=\"256648\">@Graham Oliver</span>, thank you! Will test it as soon as possible.</p>",
+        "id": 193282885,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586330607
+    },
+    {
+        "content": "<blockquote>\n<p>Will test it as soon as possible.</p>\n</blockquote>\n<p>Hm, while trying to test Rules Scheduler, I found an issue with Rules itself (or Backdrop core). Have filed an issue in the Rules queue.</p>",
+        "id": 193386708,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1586385184
+    },
+    {
+        "content": "<p>Re <a href=\"#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193213267\" title=\"#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193213267\">https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193213267</a>: A friend helped me with this use-case writing a custom module. On my event node, it sets the node reference to a webform back to an empty value when the deadline date for Event registration is arrived (or, at the next cron run).</p>",
+        "id": 195895886,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1588277989
+    },
+    {
+        "content": "<p>In case someone needs a similar functionality, I'll be happy to share the code. (Maybe also of interest for your event registration use-case, <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ?)</p>",
+        "id": 195896180,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1588278134
+    }
+]

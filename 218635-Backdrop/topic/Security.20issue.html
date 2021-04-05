@@ -1,0 +1,82 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Security.20issue.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html">Security issue</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217102513"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/217102513" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#217102513">(Nov 18 2020 at 07:15)</a>:</h4>
+<p>Someone posted a (possible) security issue publicly in the queue. Not sure, if it's a B issue anyway, looks rather like a D8 issue, actually. The variable he refers to does not exist in Backdrop. I think this needs clarification <a href="https://github.com/backdrop/backdrop-issues/issues/4761">https://github.com/backdrop/backdrop-issues/issues/4761</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4761" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4761" title="SQL layer: $match_operator is vulnerable to injection attack · Issue #4761 · backdrop/backdrop-issues">SQL layer: $match_operator is vulnerable to injection attack · Issue #4761 · backdrop/backdrop-issues</a></div><div class="message_embed_description">is making core vulnerable to a SQL injection attack. It is well known that a) one should escape user input (a check_plain() would not be enough though) b) not trust user input (yes, need a white li...</div></div></div>
+
+
+
+<a name="217718089"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/217718089" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#217718089">(Nov 24 2020 at 06:19)</a>:</h4>
+<p><a href="https://www.helpnetsecurity.com/2020/11/23/cve-2020-13671/">https://www.helpnetsecurity.com/2020/11/23/cve-2020-13671/</a></p>
+<p>This issue reminds me of one I brought up with Drupal around the time the "public -&gt; private" security hole was announced. I'd have to dig it up, but essentially, the temp directory can be a place for malicious or even benign code to be uploaded and then used as a file sharing service. The issue never went anywhere because Cron "usually" clears out the temp directory after a decent amount of time (usually 8hrs or less), but as a test, I was able to witness a file living in the <a href="http://d.org">d.org</a> temp file area for somewhere around 4 weeks.</p>
+<p>All somebody has to do is write a bot to reupload the file and it becomes a place to house files that shouldn't be there.</p>
+<p>To reproduce, upload a file on a node, copy the url to the file then exit the node without saving it. Most file fields on most sites aren't a big deal for malicious code, but <a href="http://d.org">d.org</a> allows quite a few file types. Image fields for example could be used to serve porn or illegal images.</p>
+<p>So, not sure if this was ever mitigated in BD. I haven't thought about it until this extension exploit came out.</p>
+<hr>
+<div class="message_embed"><a class="message_embed_image" href="https://www.helpnetsecurity.com/2020/11/23/cve-2020-13671/" style="background-image: url(https://img.helpnetsecurity.com/wp-content/uploads/2019/02/09095150/drupal.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="https://www.helpnetsecurity.com/2020/11/23/cve-2020-13671/" title="Drupal-based sites open to attack via double extension files (CVE-2020-13671) - Help Net Security">Drupal-based sites open to attack via double extension files (CVE-2020-13671) - Help Net Security</a></div><div class="message_embed_description">Admins of Drupal-based sites should plug a critical security hole (CVE-2020-13671) that may be exploited to take over vulnerable sites.</div></div></div>
+
+
+
+<a name="218407299"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/218407299" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#218407299">(Dec 01 2020 at 11:10)</a>:</h4>
+<p>Hm, there's still an outdated note on the page <a href="https://backdropcms.org/security/advisories">https://backdropcms.org/security/advisories</a>, as recently described in the issue <a href="https://github.com/backdrop-ops/backdropcms.org/issues/731">https://github.com/backdrop-ops/backdropcms.org/issues/731</a>. <span class="user-mention" data-user-id="256607">@BWPanda</span> or <span class="user-mention" data-user-id="256729">@klonos</span> Is one of you up to remove the mentioned note?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/issues/731" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/issues/731" title="Remove outdated Note from https://backdropcms.org/security/advisories · Issue #731 · backdrop-ops/backdropcms.org">Remove outdated Note from https://backdropcms.org/security/advisories · Issue #731 · backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">The note on the top of https://backdropcms.org/security/advisories page says: Note: No new Backdrop core security updates have been released since April 18, 2019. The Backdrop core security advisor...</div></div></div>
+
+
+
+<a name="218407496"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/218407496" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#218407496">(Dec 01 2020 at 11:12)</a>:</h4>
+<p>Hmm, that notice is part of a view header, so not something I'm comfortable just removing directly. Not sure if we need a PR for that or what... Maybe <span class="user-mention" data-user-id="263951">@jenlampton</span> knows...?</p>
+
+
+
+<a name="218425868"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/218425868" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#218425868">(Dec 01 2020 at 14:07)</a>:</h4>
+<p>I've manually removed it for now. We can follow up with a PR if required <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="218426006"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/218426006" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#218426006">(Dec 01 2020 at 14:08)</a>:</h4>
+<p>Thanks for bringing it up here <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="218430279"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/218430279" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#218430279">(Dec 01 2020 at 14:42)</a>:</h4>
+<p>Thank <em>you</em>, <span class="user-mention" data-user-id="256729">@klonos</span> !</p>
+
+
+
+<a name="218479559"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/218479559" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#218479559">(Dec 01 2020 at 20:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> thank you for noticing that issue, and for your reply.</p>
+
+
+
+<a name="218480165"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Security%20issue/near/218480165" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Security.20issue.html#218480165">(Dec 01 2020 at 20:55)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> if we need to make a change like the security veiw header update directly on live, that's fine. The important bit is to commit the changed config file, and ideally, also copy it to staging and commit it there too. That way we reduce the risk of reverting the change in the future.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

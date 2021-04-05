@@ -1,0 +1,446 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span>  when you get a chance can you have a look see at this: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/677\" title=\"https://github.com/backdrop-ops/backdropcms.org/issues/677\">https://github.com/backdrop-ops/backdropcms.org/issues/677</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/677\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/677\" title=\"[DX] Updte sql-dump-sanitize to add a *-latest.sql.gz and *-latest.tar.gz for automatic downloading feature. · Issue #677 · backdrop-ops/backdropcms.org\">[DX] Updte sql-dump-sanitize to add a *-latest.sql.gz and *-latest.tar.gz for automatic downloading feature. · Issue #677 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">@larsdesigns Can you update the sql-dump-sanitize script to either latest master or this tag https://github.com/serundeputy/sql-dump-sanitize/releases/tag/1.1.0 update the cron jobs for files and d...</div></div></div>",
+        "id": 193974577,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586912671
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> ++</p>",
+        "id": 193974583,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586912679
+    },
+    {
+        "content": "<p><strong>larsdesigns</strong> GG (Karma: 1)</p>",
+        "id": 193974584,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1586912679
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> Can you test and see if it is working as expected?</p>",
+        "id": 194060413,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586969728
+    },
+    {
+        "content": "<p>it is thanks so much!</p>",
+        "id": 194060453,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586969750
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> ++</p>",
+        "id": 194060462,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586969755
+    },
+    {
+        "content": "<p><strong>larsdesigns</strong> <span aria-label=\"pancakes\" class=\"emoji emoji-1f95e\" role=\"img\" title=\"pancakes\">:pancakes:</span> (Karma: 2)</p>",
+        "id": 194060463,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1586969755
+    },
+    {
+        "content": "<p>Okay, awesome.</p>",
+        "id": 194060547,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586969779
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> , Perhaps I can configure a git pull cron job so that you can push to it whenever you like using the master branch?</p>",
+        "id": 194060605,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586969811
+    },
+    {
+        "content": "<p>that would be fine</p>",
+        "id": 194060670,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586969843
+    },
+    {
+        "content": "<p>we should document that in the README.md so we don't forget and cause sadness</p>",
+        "id": 194060801,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586969895
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span>, I think that would be good. Let me check with the powers that be and I will make it so.</p>",
+        "id": 194060870,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586969932
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ^^</p>",
+        "id": 194061244,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586970115
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> Would every 2 minutes be okay?</p>",
+        "id": 194061882,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586970393
+    },
+    {
+        "content": "<p>yes; is that too much overhead?</p>",
+        "id": 194061940,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586970440
+    },
+    {
+        "content": "<p>I see other jobs for 5 minutes.</p>",
+        "id": 194062233,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586970598
+    },
+    {
+        "content": "<p>kk</p>",
+        "id": 194062331,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586970639
+    },
+    {
+        "content": "<p>I will go with that precedent.</p>",
+        "id": 194062361,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586970660
+    },
+    {
+        "content": "<p>It is done. <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> would you like to test it?</p>",
+        "id": 194062504,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586970728
+    },
+    {
+        "content": "<p>Update the readme file?</p>",
+        "id": 194062554,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586970755
+    },
+    {
+        "content": "<p>no i'm scared;</p>",
+        "id": 194062577,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586970767
+    },
+    {
+        "content": "<p>*now</p>",
+        "id": 194062599,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586970781
+    },
+    {
+        "content": "<p>yeah</p>",
+        "id": 194062609,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586970789
+    },
+    {
+        "content": "<p>you wanna just update the README.md and see if that takes?</p>",
+        "id": 194062705,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586970828
+    },
+    {
+        "content": "<p>yes</p>",
+        "id": 194062764,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586970844
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span>  Let me know when you are done.</p>",
+        "id": 194063329,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586971186
+    },
+    {
+        "content": "<p>Zulip is a little unusual but I am learning to like it.</p>",
+        "id": 194063430,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586971236
+    },
+    {
+        "content": "<p>just pushed up a change</p>",
+        "id": 194063752,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586971411
+    },
+    {
+        "content": "<p>Looks good to me  <code>commit 24454586c776145261137a007eeaadadd98b5ee2</code></p>",
+        "id": 194065024,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586971851
+    },
+    {
+        "content": "<p>nice;</p>",
+        "id": 194065244,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586971929
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span>  I don't think we should use the master branch, that sounds too dangerous. Can you have it pull the latest stable release instead?</p>",
+        "id": 194217068,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1586979630
+    },
+    {
+        "content": "<p>also <span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> checking for updates every 5 mins is extreme for something that only changes a few times a year. Checking once per day is more than enough.</p>",
+        "id": 194217123,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1586979668
+    },
+    {
+        "content": "<p>I added that into the ticket, but since the ticket was for something unrelated (and is now closed) let me know if you want another one?</p>",
+        "id": 194217231,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1586979725
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> okay, I will make the changes.</p>",
+        "id": 194339927,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1587058341
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> ++</p>",
+        "id": 194469620,
+        "sender_full_name": "klonos",
+        "timestamp": 1587142569
+    },
+    {
+        "content": "<p>(serundeputy)** <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span>  <span aria-label=\"heart\" class=\"emoji emoji-2764\" role=\"img\" title=\"heart\">:heart:</span> (Karma: 11)</p>",
+        "id": 194469622,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1587142569
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> ++</p>",
+        "id": 194469639,
+        "sender_full_name": "klonos",
+        "timestamp": 1587142574
+    },
+    {
+        "content": "<p><strong>larsdesigns</strong> Cheers (Karma: 3)</p>",
+        "id": 194469640,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1587142574
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ++</p>",
+        "id": 194469655,
+        "sender_full_name": "klonos",
+        "timestamp": 1587142579
+    },
+    {
+        "content": "<p><strong>jenlampton</strong> <span aria-label=\"pancakes\" class=\"emoji emoji-1f95e\" role=\"img\" title=\"pancakes\">:pancakes:</span> (Karma: 4)</p>",
+        "id": 194469657,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1587142579
+    },
+    {
+        "content": "<p>/me nods at <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span></p>",
+        "id": 194484646,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1587149611
+    },
+    {
+        "content": "<p>how many folks are using lando for dev on <a href=\"http://backdropcms.org\" title=\"http://backdropcms.org\">backdropcms.org</a>?</p>",
+        "id": 194552134,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587226550
+    },
+    {
+        "content": "<p>If you are this <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/678\" title=\"https://github.com/backdrop-ops/backdropcms.org/issues/678\">https://github.com/backdrop-ops/backdropcms.org/issues/678</a> will allow you to <code>lando pulldb</code> and get the latest sanitized backup piped into your lando app</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/678\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/678\" title=\"[DX] Add lando tooling to easily grab latest sanitized db. · Issue #678 · backdrop-ops/backdropcms.org\">[DX] Add lando tooling to easily grab latest sanitized db. · Issue #678 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">In #677 we added the symlink to the latest database backup. In this issue let's add tooling to automate grabbing the latest backup and piping it into our local backdropcms.org lando app. PR: #679</div></div></div>",
+        "id": 194552204,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1587226601
+    },
+    {
+        "content": "<p>Ooh ooh, me! <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 194553992,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1587229230
+    },
+    {
+        "content": "<p>How would one get an account on <a href=\"http://api.backdropcms.org\" title=\"http://api.backdropcms.org\">api.backdropcms.org</a>?</p>",
+        "id": 196064407,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588444623
+    },
+    {
+        "content": "<p>I am going to work on change records for the 2 cache tickets in the 1.16 milestone.</p>",
+        "id": 196064483,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588444696
+    },
+    {
+        "content": "<p>Not sure what the rules are for who gets an account. Not sure there are any rules. If <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> OK with it I can add you.</p>",
+        "id": 196064642,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1588444973
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> i'd say it's fine and desirable to add an account for <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span></p>",
+        "id": 196071906,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588456589
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ++</p>",
+        "id": 196071910,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588456598
+    },
+    {
+        "content": "<p><strong>docwilmot</strong> Cheers (Karma: 7)</p>",
+        "id": 196071911,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1588456599
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> ++</p>",
+        "id": 196071915,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588456608
+    },
+    {
+        "content": "<p>flatt** great work (Karma: 1)</p>",
+        "id": 196071916,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1588456608
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> did you get added yet?</p>",
+        "id": 196071979,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588456707
+    },
+    {
+        "content": "<p>ohhp; i can not add accounts just see them;</p>",
+        "id": 196072035,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588456814
+    },
+    {
+        "content": "<p>I have not been added as far as I know.</p>",
+        "id": 196072229,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1588457185
+    },
+    {
+        "content": "<p>i thought i could do it, but I can't :(</p>",
+        "id": 196072292,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1588457335
+    },
+    {
+        "content": "<p>There are no rules. Once we can get SSO working everyone can have an<br>\naccount!</p>",
+        "id": 196121084,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588537328
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Hybridauth module may do the job for sso. Haven't tested GitHub login yet but have Google login working on a dev site.</p>",
+        "id": 196123244,
+        "sender_full_name": "Laryn",
+        "timestamp": 1588539914
+    },
+    {
+        "content": "<p>We're using bakery.</p>",
+        "id": 196127915,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1588547586
+    },
+    {
+        "content": "<p>I would say not everyone should get an account ...unless we want to implement the same model of only being able to create drafts - not publish. It just feels that the API site should be by invite/request only.</p>",
+        "id": 196659444,
+        "sender_full_name": "klonos",
+        "timestamp": 1588782079
+    },
+    {
+        "content": "<p>Is this the issue for getting SSO working on *.backdropcms.org, or is there another one?: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/332\">https://github.com/backdrop-ops/backdropcms.org/issues/332</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/332\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/332\" title=\"set up bakery module so cookies can be shared across all *.backdropcms.org sites · Issue #332 · backdrop-ops/backdropcms.org\">set up bakery module so cookies can be shared across all *.backdropcms.org sites · Issue #332 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">We want to have one master set of user account data. This will include email address, username, and password, but also all other profile data collected on bacldropcms.org. Users should be able to l...</div></div></div>",
+        "id": 224399411,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611871430
+    },
+    {
+        "content": "<p>I also found:</p>\n<ul>\n<li><a href=\"https://github.com/backdrop-ops/forum.backdropcms.org/issues/21\">https://github.com/backdrop-ops/forum.backdropcms.org/issues/21</a></li>\n<li><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/178\">https://github.com/backdrop-ops/backdropcms.org/issues/178</a></li>\n</ul>\n<p>The latter one could affect or be affected by *.backdropcms.org SSO, but I didn't read through the issue to understand its purpose.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/forum.backdropcms.org/issues/21\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/forum.backdropcms.org/issues/21\" title=\"Better Bakery UX · Issue #21 · backdrop-ops/forum.backdropcms.org\">Better Bakery UX · Issue #21 · backdrop-ops/forum.backdropcms.org</a></div><div class=\"message_embed_description\">I think we should solve the bakery UX problem mentioned here the same way d.o did. Only let&#39;s include our fix in the Backdrop Bakery module, and if possible provide a patch back to the d.o issu...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/178\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/178\" title=\"Allow single-sign-on with GitHub · Issue #178 · backdrop-ops/backdropcms.org\">Allow single-sign-on with GitHub · Issue #178 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">We would like to allow people to sign on from GitHub, so existing GitHub users do not need to create new accounts on backdropcms.org. This will also allow backdrop contributors an additional level ...</div></div></div>",
+        "id": 224400208,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611871671
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> Yep, one of those <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>",
+        "id": 224403487,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611872850
+    },
+    {
+        "content": "<p>Something pretty weird going on on <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a>. Seems relatively serious, since quite a few modules are not showing up in search at all, even if you search their exact name.</p>\n<p><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/755\">https://github.com/backdrop-ops/backdropcms.org/issues/755</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/755\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/755\" title=\"Some contrib modules are not displaying properly on b.org · Issue #755 · backdrop-ops/backdropcms.org\">Some contrib modules are not displaying properly on b.org · Issue #755 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">I have been finding that some modules are NOT showing up on the modules page AND the download link is not showing up on their Backdropcms.org page. For example: https://backdropcms.org/project/bloc...</div></div></div>",
+        "id": 224442977,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1611909667
+    },
+    {
+        "content": "<p>I think we may need to schedule an infrastructure sprint sometime soon!</p>",
+        "id": 224444984,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1611911112
+    },
+    {
+        "content": "<p>Ping <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/635\">https://github.com/backdrop-ops/backdropcms.org/issues/635</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/635\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/635\" title=\"Create new Backdrop NameCheap account and transfer all domains into it · Issue #635 · backdrop-ops/backdropcms.org\">Create new Backdrop NameCheap account and transfer all domains into it · Issue #635 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">It&#39;s come up several times that it is a problem that only one person has access to DNS for Backdrop properties. In order to move this forward I am going to create a new NameCheap account so tha...</div></div></div>",
+        "id": 226940930,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1613728029
+    },
+    {
+        "content": "<p>User profiles on <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a> now list all projects a user is/has been involved with! <a href=\"/user_uploads/18319/uQW5Ujxuwuuxtrjt5bAzb8g9/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/uQW5Ujxuwuuxtrjt5bAzb8g9/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/uQW5Ujxuwuuxtrjt5bAzb8g9/image.png\"></a></div>",
+        "id": 227159512,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1613904329
+    },
+    {
+        "content": "<p>How is the list generated actually?</p>",
+        "id": 227170667,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1613917295
+    },
+    {
+        "content": "<p>This is really nice! Thanks for adding that!</p>\n<p>Any chance of adding \"has submitted a PR on the module\" to the inclusion criteria?</p>",
+        "id": 227170949,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613917565
+    },
+    {
+        "content": "<p>Related: is there any way to generate a list of projects which are on GH but haven't had a release? Just realised, seeing my list, that there are a few that I worked on but never released.</p>",
+        "id": 227171305,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1613917948
+    },
+    {
+        "content": "<p>By the way, some account pages seem to be spam holders, for example:<br>\n<a href=\"https://backdropcms.org/account/vipsbobet88\">https://backdropcms.org/account/vipsbobet88</a><br>\n<a href=\"https://backdropcms.org/account/studiokristo\">https://backdropcms.org/account/studiokristo</a><br>\n<a href=\"https://backdropcms.org/account/tecocraftpvt\">https://backdropcms.org/account/tecocraftpvt</a><br>\n<a href=\"https://backdropcms.org/account/purencool\">https://backdropcms.org/account/purencool</a><br>\n<a href=\"https://backdropcms.org/account/vedaoils\">https://backdropcms.org/account/vedaoils</a></p>",
+        "id": 227190157,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1613937418
+    },
+    {
+        "content": "<blockquote>\n<p>How is the list generated actually?</p>\n</blockquote>\n<p>If the user profile has a GitHub username (in the Social field), it uses that. Otherwise it uses the normal username field. It then searches for that username in the Body field of project nodes on <a href=\"http://B.org\">B.org</a> and returns matching results.</p>",
+        "id": 227190769,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1613938070
+    },
+    {
+        "content": "<blockquote>\n<p>Any chance of adding \"has submitted a PR on the module\" to the inclusion criteria?</p>\n</blockquote>\n<p>Not with the current implementation, but it might be possible if we re-wrote it to use GitHub's API instead... I recommend opening an issue if you want to investigate that option.</p>",
+        "id": 227190944,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1613938249
+    },
+    {
+        "content": "<blockquote>\n<p>Related: is there any way to generate a list of projects which are on GH but haven't had a release? Just realised, seeing my list, that there are a few that I worked on but never released.</p>\n</blockquote>\n<p>I'm not sure. I have a list of projects I maintain on GitHub because I've 'watched' them. But I had to do this manually because I couldn't find another way to get this list automatically. Maybe there's a way with GitHub's API to find a list of repos where you've been given Admin access...</p>",
+        "id": 227191175,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1613938445
+    }
+]

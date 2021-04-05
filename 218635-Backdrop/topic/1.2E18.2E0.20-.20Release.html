@@ -1,0 +1,737 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html">1.18.0 - Release</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="218245965"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218245965" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218245965">(Nov 30 2020 at 03:46)</a>:</h4>
+<p>How are folks feeling about progress on 1.18. I'm going to try and spend more time in the core issue queue this month. We have feature freeze in 4 weeks.</p>
+
+
+
+<a name="218256193"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218256193" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218256193">(Nov 30 2020 at 07:50)</a>:</h4>
+<p>Maybe not really affected by a feature freeze (is a bugfix), but one issue really needs some testers:</p>
+<p><a href="https://github.com/backdrop/backdrop-issues/issues/3792">https://github.com/backdrop/backdrop-issues/issues/3792</a></p>
+<p>Unfortunately this issue blocks yet another bugfix issue.</p>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> maybe you could test the new step validation approach, especially regarding decimals. No complicated math, just create a decimal field and try to input different values.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3792" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3792" title="Simple decimals fail to pass validation · Issue #3792 · backdrop/backdrop-issues">Simple decimals fail to pass validation · Issue #3792 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug I am running into a problem where a number/decimal field is not allowing values that should pass the validation. It is possibly related to this Drupal 8 issue? Not certain bu...</div></div></div>
+
+
+
+<a name="218282244"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218282244" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218282244">(Nov 30 2020 at 12:53)</a>:</h4>
+<p>Started working on context relationships this weekend. To sow more confusion. <span aria-label="grinning face with smiling eyes" class="emoji emoji-1f601" role="img" title="grinning face with smiling eyes">:grinning_face_with_smiling_eyes:</span>.</p>
+
+
+
+<a name="218309356"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218309356" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218309356">(Nov 30 2020 at 16:23)</a>:</h4>
+<blockquote>
+<p>...context relationships... sow more confusion</p>
+</blockquote>
+<p>Success - I'm confused. <span aria-label="big smile" class="emoji emoji-1f604" role="img" title="big smile">:big_smile:</span> What are context relationships and ... ehm ... in which context are you planning to add them. Layouts?</p>
+
+
+
+<a name="218318297"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218318297" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218318297">(Nov 30 2020 at 17:30)</a>:</h4>
+<p><span aria-label="grinning face with smiling eyes" class="emoji emoji-1f601" role="img" title="grinning face with smiling eyes">:grinning_face_with_smiling_eyes:</span> <br>
+<a href="https://github.com/backdrop/backdrop-issues/issues/2134">https://github.com/backdrop/backdrop-issues/issues/2134</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2134" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2134" title="Add support for &quot;Relationships&quot; to Layout Contexts · Issue #2134 · backdrop/backdrop-issues">Add support for "Relationships" to Layout Contexts · Issue #2134 · backdrop/backdrop-issues</a></div><div class="message_embed_description">In many situations when working with Layouts you want or need information related to the primary thing being displayed. For example if you had created a layout configuration for the path node/%, yo...</div></div></div>
+
+
+
+<a name="218318592"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218318592" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218318592">(Nov 30 2020 at 17:32)</a>:</h4>
+<p>This is a logical progression from the issue for custom contexts, which some of us never quite understood after multiple explanations.</p>
+
+
+
+<a name="218318706"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218318706" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218318706">(Nov 30 2020 at 17:33)</a>:</h4>
+<p>I expect this one to be even more opaque</p>
+
+
+
+<a name="218328113"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218328113" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218328113">(Nov 30 2020 at 18:47)</a>:</h4>
+<p>Would that also allow for reference module to dynamically allow contexts based on reference fields?</p>
+
+
+
+<a name="218988125"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218988125" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218988125">(Dec 06 2020 at 14:02)</a>:</h4>
+<p>Hey guys <span aria-label="wave" class="emoji emoji-1f44b" role="img" title="wave">:wave:</span> ...sorry I've missed the past 2-3 dev meetings, but I'm looking to update <a href="https://backdropcms.org/roadmap">https://backdropcms.org/roadmap</a> and noticed that some of the "usual gang members" are not officially listed as advocates for any feature for 1.18.0. It is my understanding that besides those listed in the dev agenda, the following people are advocating for the respective issues; please correct me if wrong:</p>
+<ul>
+<li><span class="user-mention" data-user-id="256757">@docwilmot</span> <a href="https://github.com/backdrop/backdrop-issues/issues/2134">https://github.com/backdrop/backdrop-issues/issues/2134</a></li>
+<li><span class="user-mention" data-user-id="263951">@jenlampton</span> ???</li>
+<li><span class="user-mention" data-user-id="256729">@klonos</span> <a href="https://github.com/backdrop/backdrop-issues/issues/2714">https://github.com/backdrop/backdrop-issues/issues/2714</a><br>
+...any others?</li>
+</ul>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2134" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2134" title="Add support for &quot;Relationships&quot; to Layout Contexts · Issue #2134 · backdrop/backdrop-issues">Add support for "Relationships" to Layout Contexts · Issue #2134 · backdrop/backdrop-issues</a></div><div class="message_embed_description">In many situations when working with Layouts you want or need information related to the primary thing being displayed. For example if you had created a layout configuration for the path node/%, yo...</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2714" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2714" title="[UX] Merge all the &quot;Update core/module/theme/layout&quot; pages into a single page. · Issue #2714 · backdrop/backdrop-issues">[UX] Merge all the "Update core/module/theme/layout" pages into a single page. · Issue #2714 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Describe your issue or idea Currently, in the &quot;Available Updates report&quot; page, the site admin can see which projects have updates, but the actions they can do are limited to a) downloadin...</div></div></div>
+
+
+
+<a name="218994151"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218994151" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218994151">(Dec 06 2020 at 16:41)</a>:</h4>
+<p>Doesn't <span class="user-mention" data-user-id="263951">@jenlampton</span> have like 20 issues she's advocating?</p>
+
+
+
+<a name="218994486"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218994486" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218994486">(Dec 06 2020 at 16:50)</a>:</h4>
+<p>...same can be said for me though <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...we need to pick one at a time, drive it to finish, then pick another.</p>
+
+
+
+<a name="218998656"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/218998656" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#218998656">(Dec 06 2020 at 18:46)</a>:</h4>
+<p>Anyone can advocate for as many issues as they like, but one can only be an Advocate for one at a time. ;-)</p>
+
+
+
+<a name="219003830"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/219003830" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#219003830">(Dec 06 2020 at 19:49)</a>:</h4>
+<p>In general yes, but my 1.18 issue is happening in contrib (and, not very quickly) so I don't really have one this time.</p>
+
+
+
+<a name="219009377"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/219009377" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#219009377">(Dec 06 2020 at 20:19)</a>:</h4>
+<p>Can I go ahead and advocate for the .htaccess Brotli fix? 1.18 seems like a good candidate for this small fix.</p>
+
+
+
+<a name="219009682"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/219009682" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#219009682">(Dec 06 2020 at 20:21)</a>:</h4>
+<p>The question is, who can I talk into doing the PR for it because I have no idea how to do that.</p>
+
+
+
+<a name="219009749"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/219009749" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#219009749">(Dec 06 2020 at 20:21)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop-issues/issues/4748">https://github.com/backdrop/backdrop-issues/issues/4748</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4748" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4748" title="Disable Brotli for pre-compressed CSS and JS · Issue #4748 · backdrop/backdrop-issues">Disable Brotli for pre-compressed CSS and JS · Issue #4748 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need When Brotli is in use on a web server that serves pages through https and &quot;aggregate css and(or) aggregate js&quot; are enabled, the CSS and JS files do not &quot;decod...</div></div></div>
+
+
+
+<a name="220544426"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/220544426" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#220544426">(Dec 21 2020 at 00:20)</a>:</h4>
+<p>Hey <span class="user-mention" data-user-id="256757">@docwilmot</span> <span aria-label="wave" class="emoji emoji-1f44b" role="img" title="wave">:wave:</span> ...it seems that you have been advocating for <a href="https://github.com/backdrop/backdrop-issues/issues/2134">https://github.com/backdrop/backdrop-issues/issues/2134</a> to get in for 1.18.0, but you have not explicitly added yourself as the advocate, so we cannot add the 1.18.0 milestone to the issue. If you ley me know, that you are indeed advocating, I can do all that for you <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2134" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2134" title="Add support for &quot;Relationships&quot; to Layout Contexts · Issue #2134 · backdrop/backdrop-issues">Add support for "Relationships" to Layout Contexts · Issue #2134 · backdrop/backdrop-issues</a></div><div class="message_embed_description">In many situations when working with Layouts you want or need information related to the primary thing being displayed. For example if you had created a layout configuration for the path node/%, yo...</div></div></div>
+
+
+
+<a name="220544440"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/220544440" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#220544440">(Dec 21 2020 at 00:20)</a>:</h4>
+<p>...and I can then add it to <a href="https://backdropcms.org/roadmap">https://backdropcms.org/roadmap</a> too</p>
+
+
+
+<a name="222812714"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222812714" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222812714">(Jan 15 2021 at 02:28)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> I made a suggestion for you here re. the PHP Weekly newsletter: <a href="https://github.com/backdrop/backdrop-issues/issues/4876#issuecomment-760603002">https://github.com/backdrop/backdrop-issues/issues/4876#issuecomment-760603002</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4876#issuecomment-760603002" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4876#issuecomment-760603002" title="Backdrop 1.18.0 Release checklist · Issue #4876 · backdrop/backdrop-issues">Backdrop 1.18.0 Release checklist · Issue #4876 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Scheduled for January 15, 2021 10am - 4pm PT Pre-release tasks Merge minor release commits @quicksketch Draft Release notes @jenlampton Copy Preview release release notes, update as follows Include...</div></div></div>
+
+
+
+<a name="222843546"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222843546" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222843546">(Jan 15 2021 at 11:01)</a>:</h4>
+<p>I was considering making a new (birthday celebration) <a href="https://gource.io/">Gource</a> video showing Backdrop's development over the past 12 months. Then I realised the last 12 months of Backdrop development has been during 'covid'. Now I'm wondering if Gource has an option to make the little animated characters social-distance from each other... <span aria-label="grinning face with smiling eyes" class="emoji emoji-1f601" role="img" title="grinning face with smiling eyes">:grinning_face_with_smiling_eyes:</span></p>
+
+
+
+<a name="222931064"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222931064" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222931064">(Jan 15 2021 at 21:58)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@quicksketch</span> is it time?</p>
+
+
+
+<a name="222932556"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222932556" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222932556">(Jan 15 2021 at 22:11)</a>:</h4>
+<p>not time yet...</p>
+
+
+
+<a name="222939888"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222939888" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222939888">(Jan 15 2021 at 23:18)</a>:</h4>
+<p>I don't know about Gource.</p>
+
+
+
+<a name="222942153"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222942153" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222942153">(Jan 15 2021 at 23:48)</a>:</h4>
+<p>So, as assigned, I'm trying to write a blog post.  The biggest thing I need is the list of what features the release contains.  So far, I have this (from <a href="https://backdropcms.org/roadmap">https://backdropcms.org/roadmap</a>)</p>
+<ol>
+<li>Support for WebP image format (if the installed PHP version supports it)</li>
+<li>Menu blocks: allow defining custom breakpoints</li>
+<li>Advanced Caching (a.k.a. cache tags and cache max-age)</li>
+<li>Media library dialog: allow filtering by filename</li>
+<li>Upgrade UI module (similar to Migrate UI in D8) to help with moving from D7</li>
+</ol>
+
+
+
+<a name="222942360"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222942360" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222942360">(Jan 15 2021 at 23:50)</a>:</h4>
+<p>Which of those made it?  What else is in it?</p>
+<p>(I've been looking through Github, but it's not clear to me which items are identifiable features that are part of this release)</p>
+
+
+
+<a name="222942414"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222942414" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222942414">(Jan 15 2021 at 23:51)</a>:</h4>
+<p>Let's see if I can be of anny help.</p>
+
+
+
+<a name="222942495"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222942495" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222942495">(Jan 15 2021 at 23:52)</a>:</h4>
+<p>I don't know if changing full_html to raw_html is worth highlighting.</p>
+
+
+
+<a name="222942561"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222942561" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222942561">(Jan 15 2021 at 23:53)</a>:</h4>
+<p>I think this is probably your best source of info:<br>
+<a href="https://github.com/backdrop/backdrop/releases/tag/1.18.0-preview">https://github.com/backdrop/backdrop/releases/tag/1.18.0-preview</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/releases/tag/1.18.0-preview" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/releases/tag/1.18.0-preview" title="Release 1.18.0-preview · backdrop/backdrop">Release 1.18.0-preview · backdrop/backdrop</a></div><div class="message_embed_description">This is the preview release of the next version of Backdrop. The official 1.18.0 version will be released January 15, 2021. Please use this version to test new features and ensure compatibility bef...</div></div></div>
+
+
+
+<a name="222942661"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222942661" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222942661">(Jan 15 2021 at 23:55)</a>:</h4>
+<p>Lots of changes in this version, but not many that are headliners.</p>
+
+
+
+<a name="222943164"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222943164" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222943164">(Jan 16 2021 at 00:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> Did you see this one I made 6 years ago? <a href="https://youtu.be/bU3wlCETHcM">YouTube - YouTube</a></p>
+<div class="youtube-video message_inline_image"><a data-id="bU3wlCETHcM" href="https://youtu.be/bU3wlCETHcM"><img src="https://i.ytimg.com/vi/bU3wlCETHcM/default.jpg"></a></div>
+
+
+
+<a name="222943177"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222943177" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222943177">(Jan 16 2021 at 00:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span> - take a look at closed issues on the milestone. <br>
+<a href="https://github.com/backdrop/backdrop-issues/milestone/93?closed=1">https://github.com/backdrop/backdrop-issues/milestone/93?closed=1</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/milestone/93?closed=1" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/milestone/93?closed=1" title="backdrop/backdrop-issues">backdrop/backdrop-issues</a></div><div class="message_embed_description">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="222943431"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222943431" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222943431">(Jan 16 2021 at 00:05)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> - No, I never saw that before. Cool!</p>
+
+
+
+<a name="222944485"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222944485" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222944485">(Jan 16 2021 at 00:20)</a>:</h4>
+<p>Hi folks! There are few more RTBC issues I want to get in and then we'll start the release process!</p>
+
+
+
+<a name="222944660"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222944660" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222944660">(Jan 16 2021 at 00:23)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> that is so cool!!! (How have I never seen this before?!?!)</p>
+
+
+
+<a name="222945770"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222945770" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222945770">(Jan 16 2021 at 00:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> No idea. Guess I'm just a better developer than I am a marketer <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="222946409"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222946409" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222946409">(Jan 16 2021 at 00:47)</a>:</h4>
+<p>I moved all 1.17.5 issues to 1.18.1 and closed the 1.17.5 milestone. Release notes are generating! <a href="https://github.com/backdrop/backdrop-issues/actions">https://github.com/backdrop/backdrop-issues/actions</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/actions" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/actions" title="backdrop/backdrop-issues">backdrop/backdrop-issues</a></div><div class="message_embed_description">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="222946524"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222946524" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222946524">(Jan 16 2021 at 00:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> Could you grab the release notes from the bottom of <a href="https://github.com/backdrop/backdrop-issues/actions/runs/489244381">https://github.com/backdrop/backdrop-issues/actions/runs/489244381</a> (under "Artifacts") and edit as needed?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/actions/runs/489244381" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/actions/runs/489244381" title="backdrop/backdrop-issues">backdrop/backdrop-issues</a></div><div class="message_embed_description">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="222946541"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222946541" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222946541">(Jan 16 2021 at 00:49)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release/near/222945770">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="263951">jenlampton</span> No idea. Guess I'm just a better developer than I am a marketer <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+</blockquote>
+<p>Touché</p>
+
+
+
+<a name="222946560"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222946560" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222946560">(Jan 16 2021 at 00:49)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="258586">quicksketch</span> <a href="#narrow/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release/near/222946524">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="263951">jenlampton</span> Could you grab the release notes from the bottom of [link] (under "Artifacts") and edit as needed?</p>
+</blockquote>
+<p>yep!</p>
+
+
+
+<a name="222946896"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222946896" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222946896">(Jan 16 2021 at 00:54)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop/releases/tag/1.17.5">https://github.com/backdrop/backdrop/releases/tag/1.17.5</a> is cut <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span> Now for the main event!</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/releases/tag/1.17.5" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/releases/tag/1.17.5" title="Release 1.17.5 · backdrop/backdrop">Release 1.17.5 · backdrop/backdrop</a></div><div class="message_embed_description">Backdrop 1.17.5</div></div></div>
+
+
+
+<a name="222947712"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222947712" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222947712">(Jan 16 2021 at 01:05)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop/releases/tag/1.18.0">https://github.com/backdrop/backdrop/releases/tag/1.18.0</a> is now cut as well!</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/releases/tag/1.18.0" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/releases/tag/1.18.0" title="Release 1.18.0 · backdrop/backdrop">Release 1.18.0 · backdrop/backdrop</a></div><div class="message_embed_description">Backdrop 1.18.0</div></div></div>
+
+
+
+<a name="222948703"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222948703" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222948703">(Jan 16 2021 at 01:19)</a>:</h4>
+<p>Can I get a sanity-check on these release notes?</p>
+
+
+
+<a name="222948706"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222948706" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222948706">(Jan 16 2021 at 01:19)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop-issues/issues/4877">https://github.com/backdrop/backdrop-issues/issues/4877</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4877" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4877" title="Backdrop 1.17.5 Release checklist · Issue #4877 · backdrop/backdrop-issues">Backdrop 1.17.5 Release checklist · Issue #4877 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Release scheduled for January 15th, 2021 10am - 4pm PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix releas...</div></div></div>
+
+
+
+<a name="222948873"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222948873" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222948873">(Jan 16 2021 at 01:22)</a>:</h4>
+<p>Looks good to me, but then I don't really know what I'm looking for... <span aria-label="smiling face" class="emoji emoji-263a" role="img" title="smiling face">:smiling_face:</span></p>
+
+
+
+<a name="222949191"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949191" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949191">(Jan 16 2021 at 01:27)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop/releases/tag/1.17.5">https://github.com/backdrop/backdrop/releases/tag/1.17.5</a> is out</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/releases/tag/1.17.5" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/releases/tag/1.17.5" title="Release 1.17.5 · backdrop/backdrop">Release 1.17.5 · backdrop/backdrop</a></div><div class="message_embed_description">Backdrop 1.17.5</div></div></div>
+
+
+
+<a name="222949200"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949200" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949200">(Jan 16 2021 at 01:27)</a>:</h4>
+<p>Looking for anything obviously wrong is really all I need. Like forgetting to mention .htacces was changed would have been bad...</p>
+
+
+
+<a name="222949294"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949294" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949294">(Jan 16 2021 at 01:29)</a>:</h4>
+<p>Hmmm, wonder if there's a way we can set a label or something in an issue when we know it changes <code>.htaccess</code>, which then marks the milestone as such... So then you don't have to know what each issue does in order to determine what major changes were made for that release.</p>
+
+
+
+<a name="222949394"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949394" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949394">(Jan 16 2021 at 01:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> this release notes thing is amazing...</p>
+
+
+
+<a name="222949422"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949422" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949422">(Jan 16 2021 at 01:31)</a>:</h4>
+<p>that would be great! there are only 3 files we need to track for those changes, so sounds reasonable.</p>
+
+
+
+<a name="222949439"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949439" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949439">(Jan 16 2021 at 01:31)</a>:</h4>
+<p>suggestions for label name?</p>
+
+
+
+<a name="222949449"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949449" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949449">(Jan 16 2021 at 01:31)</a>:</h4>
+<p>Thanks. I didn't really fully appreciate how helpful it was until now. I thought it only worked for minor releases (e.g. 1.18.0) but now I see it works for bug-fix releases too (e.g. 1.17.5).</p>
+
+
+
+<a name="222949451"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949451" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949451">(Jan 16 2021 at 01:31)</a>:</h4>
+<p>or, I wonder if we even need a label. Could we automate that chegk?</p>
+
+
+
+<a name="222949661"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949661" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949661">(Jan 16 2021 at 01:35)</a>:</h4>
+<p>It seems you can't add labels to milestones themselves (which is what I was thinking), but I guess adding a label to individual issues will still make it easier to scan a milestone for those changes... I'll look into options for automating adding a label to an issue if its PR changes any of those 3 files...</p>
+
+
+
+<a name="222949785"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949785" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949785">(Jan 16 2021 at 01:36)</a>:</h4>
+<p>I wish we had a tool other than labels. We have so many labels...</p>
+
+
+
+<a name="222949835"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949835" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949835">(Jan 16 2021 at 01:37)</a>:</h4>
+<p>The release notes generator uses the issues list exclusively. It doesn't check the Git code, tags, or branches at all.</p>
+
+
+
+<a name="222949893"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949893" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949893">(Jan 16 2021 at 01:38)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop/releases/tag/1.18.0">https://github.com/backdrop/backdrop/releases/tag/1.18.0</a> is out!</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/releases/tag/1.18.0" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/releases/tag/1.18.0" title="Release 1.18.0 · backdrop/backdrop">Release 1.18.0 · backdrop/backdrop</a></div><div class="message_embed_description">Backdrop 1.18.0</div></div></div>
+
+
+
+<a name="222949943"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222949943" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222949943">(Jan 16 2021 at 01:39)</a>:</h4>
+<p>I meant I wish github gave us more tools for the issues list. Even 4 different sets of tags would be great.</p>
+
+
+
+<a name="222950299"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222950299" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222950299">(Jan 16 2021 at 01:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span>  are you available to do the tweeting?</p>
+
+
+
+<a name="222950573"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222950573" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222950573">(Jan 16 2021 at 01:49)</a>:</h4>
+<p>sounds like no...  should I tweet?</p>
+
+
+
+<a name="222950892"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222950892" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222950892">(Jan 16 2021 at 01:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span>  any luck with the blog post?</p>
+
+
+
+<a name="222951075"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222951075" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222951075">(Jan 16 2021 at 01:57)</a>:</h4>
+<p>They're all off partying already <span aria-label="smiley" class="emoji emoji-1f603" role="img" title="smiley">:smiley:</span></p>
+
+
+
+<a name="222951093"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222951093" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222951093">(Jan 16 2021 at 01:57)</a>:</h4>
+<p>fair :)</p>
+
+
+
+<a name="222952200"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952200" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952200">(Jan 16 2021 at 02:15)</a>:</h4>
+<p>I've updated the API site, but got sidetracked...  <span class="user-mention" data-user-id="256607">@BWPanda</span> do you remember why we used node_reference instead of reference? <a href="https://github.com/backdrop-ops/api.backdropcms.org/issues/112">https://github.com/backdrop-ops/api.backdropcms.org/issues/112</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/api.backdropcms.org/issues/112" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/api.backdropcms.org/issues/112" title="Replace node reference module with reference module · Issue #112 · backdrop-ops/api.backdropcms.org">Replace node reference module with reference module · Issue #112 · backdrop-ops/api.backdropcms.org</a></div><div class="message_embed_description">Since reference will eventually be in core, we should be using that on our own sites. If there is a limitation in reference that makes references preferable, we should fix that. :) This is a placeh...</div></div></div>
+
+
+
+<a name="222952598"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952598" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952598">(Jan 16 2021 at 02:25)</a>:</h4>
+<p>API site updated to 1.18.0</p>
+
+
+
+<a name="222952879"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952879" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952879">(Jan 16 2021 at 02:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> Not 100% sure, but I suspect I didn't think Reference was stable enough to be used on a production site. Either that or maybe I initially tried it but encounted bugs...</p>
+
+
+
+<a name="222952886"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952886" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952886">(Jan 16 2021 at 02:30)</a>:</h4>
+<p>I know I have tried Reference before (and had issues with it), but can't remember whether that was on the API site or one of my own...</p>
+
+
+
+<a name="222952889"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952889" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952889">(Jan 16 2021 at 02:30)</a>:</h4>
+<p>I was thinking it might have been missing a feature we needed.</p>
+
+
+
+<a name="222952915"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952915" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952915">(Jan 16 2021 at 02:31)</a>:</h4>
+<p>I'm using reference on a handful of production sites, but wth a ton of patches.</p>
+
+
+
+<a name="222952928"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952928" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952928">(Jan 16 2021 at 02:31)</a>:</h4>
+<p>I just got maintainer access for that project though, so the more we can find/fix the better :)</p>
+
+
+
+<a name="222952943"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952943" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952943">(Jan 16 2021 at 02:31)</a>:</h4>
+<p>API site only has one field that references a node: <a href="https://api.backdropcms.org/admin/reports/fields">https://api.backdropcms.org/admin/reports/fields</a> So I'm guessing that's pretty basic functionality</p>
+
+
+
+<a name="222952994"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222952994" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222952994">(Jan 16 2021 at 02:32)</a>:</h4>
+<p>That's what I was thinking, but wasn't brave enough to swap it out since I don't really understand how all the fapi relationships work</p>
+
+
+
+<a name="222953117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222953117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222953117">(Jan 16 2021 at 02:34)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> Out of curiosity, why does the API site get updated with the Preview release, but other sites get updated with official release (two weeks later)?</p>
+
+
+
+<a name="222954202"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222954202" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222954202">(Jan 16 2021 at 02:54)</a>:</h4>
+<blockquote>
+<p>That's what I was thinking, but wasn't brave enough to swap it out since I don't really understand how all the fapi relationships work</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> You're welcome to make a PR that just swaps it out, then we can see if it breaks anything in the Tugboat sandbox.</p>
+
+
+
+<a name="222954409"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222954409" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222954409">(Jan 16 2021 at 02:58)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release/near/222953117">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="263951">jenlampton</span> Out of curiosity, why does the API site get updated with the Preview release, but other sites get updated with official release (two weeks later)?</p>
+</blockquote>
+<p>because the API site is the least risk. It's mostly anonymous traffic</p>
+
+
+
+<a name="222954422"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222954422" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222954422">(Jan 16 2021 at 02:59)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release/near/222954202">said</a>:</p>
+<blockquote>
+<blockquote>
+<p>That's what I was thinking, but wasn't brave enough to swap it out since I don't really understand how all the fapi relationships work</p>
+</blockquote>
+<p><span class="user-mention silent" data-user-id="263951">jenlampton</span> You're welcome to make a PR that just swaps it out, then we can see if it breaks anything in the Tugboat sandbox.</p>
+</blockquote>
+<p>yes! tugboat <span aria-label="heart" class="emoji emoji-2764" role="img" title="heart">:heart:</span></p>
+
+
+
+<a name="222954988"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222954988" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222954988">(Jan 16 2021 at 03:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> I tweeted, but feel free to retweet (everyone, actually!) <a href="https://twitter.com/backdropcms/status/1350278957250199554">https://twitter.com/backdropcms/status/1350278957250199554</a></p>
+<div class="inline-preview-twitter"><div class="twitter-tweet"><a href="https://twitter.com/backdropcms/status/1350278957250199554"><img class="twitter-avatar" src="https://pbs.twimg.com/profile_images/472494216887549952/vHOWTMqs_normal.png"></a><p>We're thrilled to announce Backdrop version 1.18.0. This is the 19th new feature release of #BackdropCMS. <a href="https://t.co/AvDw3LRGmd">https://backdropcms.org</a>
+
+Thanks, as always, to the fabulous Backdrop community for all the fantastic new features!</p><span>- Backdrop CMS (@backdropcms)</span></div></div>
+
+
+
+<a name="222955600"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222955600" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222955600">(Jan 16 2021 at 03:21)</a>:</h4>
+<p>Sorry, I wasn't able to help more because I was busy making my Backdrop cookies.</p>
+
+
+
+<a name="222955736"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222955736" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222955736">(Jan 16 2021 at 03:24)</a>:</h4>
+<p><a href="/user_uploads/18319/67KNOpOiugYQVAdcxPifAt4E/IMG_20210115_211510361.jpg">IMG_20210115_211510361.jpg</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/67KNOpOiugYQVAdcxPifAt4E/IMG_20210115_211510361.jpg" title="IMG_20210115_211510361.jpg"><img src="/user_uploads/18319/67KNOpOiugYQVAdcxPifAt4E/IMG_20210115_211510361.jpg"></a></div>
+
+
+
+<a name="222955793"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222955793" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222955793">(Jan 16 2021 at 03:25)</a>:</h4>
+<p>The snowdev was hungry.</p>
+
+
+
+<a name="222960439"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222960439" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222960439">(Jan 16 2021 at 05:00)</a>:</h4>
+<p>Umm, well..I'm working on it?</p>
+<p><a href="https://backdropcms.org/news/backdrop-118-released">https://backdropcms.org/news/backdrop-118-released</a></p>
+<p>Was my deadline today?</p>
+
+
+
+<a name="222960476"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222960476" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222960476">(Jan 16 2021 at 05:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span> - As the author of a couple of previous release blog posts, I can assure you that they don't always go out on release day.</p>
+
+
+
+<a name="222960520"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222960520" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222960520">(Jan 16 2021 at 05:01)</a>:</h4>
+<p>I think that the sooner the better, but anytime in the next couple of days would be acceptable (in my opinion).</p>
+
+
+
+<a name="222962232"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222962232" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222962232">(Jan 16 2021 at 05:43)</a>:</h4>
+<p>I added a few screenshots and a little verbage to help move this forward.</p>
+
+
+
+<a name="222966816"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222966816" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222966816">(Jan 16 2021 at 07:28)</a>:</h4>
+<p>Thanks, they’re very helpful.</p>
+
+
+
+<a name="222981420"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222981420" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222981420">(Jan 16 2021 at 13:32)</a>:</h4>
+<p>Is 1.18.0 a security release? <br>
+<a href="https://github.com/backdrop/backdrop-issues/issues/4880">https://github.com/backdrop/backdrop-issues/issues/4880</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4880" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4880" title="Backdrop 1.18 shows as &quot;security update&quot; · Issue #4880 · backdrop/backdrop-issues">Backdrop 1.18 shows as "security update" · Issue #4880 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Not sure if this is a bug, so I start it as a question. On sites that had 1.18.0-preview installed (for testing), 1.18.0 shows as &quot;security update&quot;. The &quot;Available update&quot; page ...</div></div></div>
+
+
+
+<a name="222981600"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222981600" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222981600">(Jan 16 2021 at 13:37)</a>:</h4>
+<p>Whoops just realized I saw that on a testing site that was on 1.17.3 (hadn't been upgraded to 1.17.4 as I thought)... <span aria-label="flushed" class="emoji emoji-1f633" role="img" title="flushed">:flushed:</span></p>
+
+
+
+<a name="222991292"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/222991292" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#222991292">(Jan 16 2021 at 16:40)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="263951">jenlampton</span> <a href="#narrow/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release/near/222952915">said</a>:</p>
+<blockquote>
+<p>I'm using reference on a handful of production sites, but wth a ton of patches.</p>
+</blockquote>
+<p>That's a selling point.</p>
+
+
+
+<a name="223036191"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223036191" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223036191">(Jan 17 2021 at 10:28)</a>:</h4>
+<p>Thank you all contributors for the 1.18 release:-) I did not follow the Zulip channel that much lately, because I was busy creating Backdrop sites, plus writing a longer article for a german web magazine about Backdrop CMS (February issue). Looking forward to try 1.18:-)</p>
+
+
+
+<a name="223040843"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223040843" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223040843">(Jan 17 2021 at 12:39)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> ++</p>
+
+
+
+<a name="223040844"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223040844" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223040844">(Jan 17 2021 at 12:39)</a>:</h4>
+<p><strong>mazze.ch</strong> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> <img alt=":drop_lounging:" class="emoji" src="https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png" title="drop lounging"> (Karma: 12)</p>
+
+
+
+<a name="223080232"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223080232" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223080232">(Jan 18 2021 at 04:33)</a>:</h4>
+<p>I’ve finished the blog post announcing the release of 1.18.  Can I ask people to take a look and let me know where I’ve gone horribly wrong?  I had to do some spelunking around the issue queues to understand what a lot of things were, and I’m not at all sure I understood the significance of everything. </p>
+<p><a href="https://backdropcms.org/news/backdrop-1-18-released">https://backdropcms.org/news/backdrop-1-18-released</a></p>
+
+
+
+<a name="223081714"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223081714" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223081714">(Jan 18 2021 at 05:12)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256664">@cellear (Luke McCormick)</span> ...I'm having a <span aria-label="eyes" class="emoji emoji-1f440" role="img" title="eyes">:eyes:</span></p>
+
+
+
+<a name="223081726"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223081726" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223081726">(Jan 18 2021 at 05:13)</a>:</h4>
+<p>...seems that we can lose the "Today ..." which the article begins with, since it's already the 18th.</p>
+
+
+
+<a name="223082782"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223082782" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223082782">(Jan 18 2021 at 05:39)</a>:</h4>
+<p>It was when I wrote that!</p>
+
+
+
+<a name="223099088"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223099088" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223099088">(Jan 18 2021 at 09:50)</a>:</h4>
+<p>I like the blog post, thank you <span class="user-mention" data-user-id="256664">@cellear (Luke McCormick)</span></p>
+
+
+
+<a name="223117415"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223117415" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223117415">(Jan 18 2021 at 13:09)</a>:</h4>
+<p>Yeah <span class="user-mention" data-user-id="256664">@cellear (Luke McCormick)</span> ++</p>
+
+
+
+<a name="223117416"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223117416" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223117416">(Jan 18 2021 at 13:09)</a>:</h4>
+<p>mccormick)** Props to you for all your hard work. (Karma: 1)</p>
+
+
+
+<a name="223166737"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223166737" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223166737">(Jan 18 2021 at 21:55)</a>:</h4>
+<p>Excellent blog post, <span class="user-mention" data-user-id="256664">@cellear (Luke McCormick)</span>!</p>
+
+
+
+<a name="223192911"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223192911" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223192911">(Jan 19 2021 at 07:03)</a>:</h4>
+<p>Thank you very much, <span class="user-mention" data-user-id="256664">@cellear (Luke McCormick)</span> ! Wonderful and welcoming introduction to the release!</p>
+
+
+
+<a name="223192992"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223192992" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223192992">(Jan 19 2021 at 07:04)</a>:</h4>
+<p>I thought I just wish it was published on 15th. Wonderful anyway!</p>
+
+
+
+<a name="223850554"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223850554" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223850554">(Jan 25 2021 at 02:49)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> <span class="user-mention" data-user-id="256570">@StPaulTim</span> The newsletter's ready-to-go. Friday is officially two weeks since the release, so do you want me to send it then, or is another day better?</p>
+
+
+
+<a name="223932912"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223932912" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223932912">(Jan 25 2021 at 17:37)</a>:</h4>
+<p>As long as we get 1.8.1 out to Pantheon etc on Weds, It can go immediately<br>
+after that. Friday should be fine as I wouldn't expect another release<br>
+until the next Wednesday.</p>
+
+
+
+<a name="223933095"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/223933095" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#223933095">(Jan 25 2021 at 17:38)</a>:</h4>
+<p>I created  a PR for the Pantheon repo last week but can wait until we've got 1.18.1 <span class="user-mention" data-user-id="263951">@jenlampton</span></p>
+
+
+
+<a name="224012029"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/224012029" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#224012029">(Jan 26 2021 at 09:04)</a>:</h4>
+<p>This release might seem a bit "slim", since many of the features we've been planning needed more work and had to be moved to 1.19.0, but I must say, I'm really impressed by the rate our community has been fixing bugs and addressing many other issues over the past few months <span aria-label="heart" class="emoji emoji-2764" role="img" title="heart">:heart:</span></p>
+
+
+
+<a name="224074390"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/224074390" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#224074390">(Jan 26 2021 at 17:36)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release/near/223850554">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="263951">jenlampton</span> <span class="user-mention silent" data-user-id="256570">StPaulTim</span> The newsletter's ready-to-go. Friday is officially two weeks since the release, so do you want me to send it then, or is another day better?</p>
+</blockquote>
+<p>I've got another blog post scheduled to publish on Friday that should probably take the place of the current one in the newsletter. It's the one about contrib permissions increases.</p>
+
+
+
+<a name="224092981"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/1.18.0%20-%20Release/near/224092981" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/1.2E18.2E0.20-.20Release.html#224092981">(Jan 26 2021 at 19:51)</a>:</h4>
+<p>I wasn't necessarily adding the latest content to the newsletter, but the recent ones I thought best to bring attention to. So I think the blog article can stay, then we can see what articles we have to pick from for the next newsletter. I think monthly is a good timeframe for newsletters, if possible.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

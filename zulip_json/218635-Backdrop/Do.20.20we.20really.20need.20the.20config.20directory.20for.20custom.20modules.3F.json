@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p>Every time I create a new module, I always catch myself thinking  that we use the json file in the config directory just once during enabling the module. Could you please enlighten me if Backdrop re-uses it elsewhere.</p>\n<p>As I know, after we enable a module its configuration settings go into the corresponding json file in <code>/files/config_*/active/</code> and we never use the config directory again. And this one-time use and the fact that directory just lies there without any use bothers me. How do you think of simplifying the structure of Backdrop modules by providing values for all the initial configuration variables in <code>.install</code> file. It would be less confusing for Drupal 7 users too.</p>",
+        "id": 223326740,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611111865
+    },
+    {
+        "content": "<p>I know the read-write response from disk is faster and like the fact Backdrop followed suit of Drupal 8 by placing the configuration variables in the file structure. However, while that performance gain is really good for the configuration files in the <code>files</code> directory, the .json file in module's structure is not necessary if used just once.</p>",
+        "id": 223326872,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611112042
+    },
+    {
+        "content": "<p>Seems to me the cost of changing this far outweighs any benefit. Some modules have multiple JSON files, such as webform. It would make for a long, hard to read install file. If I saw it the first thing I would do is split that huge list of configuration into separate files.</p>",
+        "id": 223327072,
+        "sender_full_name": "Herb",
+        "timestamp": 1611112251
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> , thanks for elaboration. Can you confirm the JSON files in config directory are used just once during enabling the module and never after? If so, then does the logic - that while for some modules like Webform the config directory is useful, for most of other simpler modules is not that much useful - still holds? If it does, then maybe we could make the setup config directory optional, so larger modules like Webforms could have them and smaller modules with just a few configuration variables could set them in .install file?</p>",
+        "id": 223329351,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611114687
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> Don't tell anyone I told you this, but you can just run <code>config_set('no_exist.settings', 'key', 'value');</code> and a <code>no_exist.settings.json</code> file will be created with that key/value pair. You could technically do this in your module's install file currently, as long as it's a custom module and doesn't get uploaded to Backdrop contrib (then we'd require proper practices).</p>",
+        "id": 223329536,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611114943
+    },
+    {
+        "content": "<p>I guess you could still implement <code>hook_config_info()</code> in your module so the new config file is 'attached' to your module, but I haven't tested this so not sure if it'll complain that there's no config file in your module...</p>",
+        "id": 223329616,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611115070
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>  I thought we could do something like that, however my aim is not necessarily to ditch the config directory and JSON file. I am just trying to probe the community's feedback on this. If most users would like the idea, then we could get this change done officially and documented properly. </p>\n<p>If JSON file is used just once during setting up a contrib module, then the requirement for it for all the modules, even those which have a single configuration variable to set seems to be overkill. Making it preferable for large modules with lot's of variables to set and letting simpler modules just use the .install file makes more sense to me.</p>",
+        "id": 223329718,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611115152
+    },
+    {
+        "content": "<p>I see your point, but I also see the benefit of consistency. If some modules provide default config values in a config file, and others in the install file, that could get confusing...</p>",
+        "id": 223332134,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611118104
+    },
+    {
+        "content": "<p>There are some functions that rely on there being config files in the config folder. I came across one the other day but don't have time to look it up right now</p>",
+        "id": 223336204,
+        "sender_full_name": "Herb",
+        "timestamp": 1611123468
+    },
+    {
+        "content": "<p>I do maintain several modules that need and use config, so these ship with the config subdirectory with json file(s) (and implement hook_config_info). I also maintain modules that do <em>not</em> use config at all, these do not ship with a config subdirectory.</p>\n<p>Another example: a module with submodules. The main modules ships with a config dir, submodules write to the main module's config, if necessary, but do not ship with own config dirs.</p>\n<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> I probably don't get your point. In how far is a tiny json file an \"overkill\"?</p>",
+        "id": 223338968,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611126964
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> thanks for explanation and never bother about this, 'cause the general opinion seems to be happy about status quo. I was not sure about this idea (of getting rid of just one-time used config directory) myself, that's why I didn't create a feature request right away, but instead decided to probe it here on chat.  Thanks all for your inputs and please disregard this one.</p>",
+        "id": 223339185,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611127268
+    },
+    {
+        "content": "<p>Thanks for asking <span aria-label=\"blush\" class=\"emoji emoji-1f60a\" role=\"img\" title=\"blush\">:blush:</span></p>",
+        "id": 223339291,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611127363
+    },
+    {
+        "content": "<blockquote>\n<p>... and please disregard this one.</p>\n</blockquote>\n<p>Why should I disregard your input? <span aria-label=\"smirk\" class=\"emoji emoji-1f60f\" role=\"img\" title=\"smirk\">:smirk:</span> You're always welcome to ask anything.</p>\n<p>IMO the benefit of config available in json files is that you can easily export/import/sync it.</p>",
+        "id": 223339433,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1611127538
+    },
+    {
+        "content": "<p>The config files need to be there for when you disable + then completely uninstall a module. In that case, when you re-enable the module (after some time, or because you are testing things), the initial/default .json files in the <code>/config</code> directory have a purpose.</p>",
+        "id": 223341043,
+        "sender_full_name": "klonos",
+        "timestamp": 1611129341
+    },
+    {
+        "content": "<p>There's an analogous situation with respect to Views, specifically default Views. In D7, default Views are provided by hook_views_default_views(). With multiple default views to set up, it's a gargantuan call, so I'd taken to putting the exported Views code into individual .inc files and reading them in via hook_views_default_views(). When I saw that Backdrop had an official way of putting default Views into files, I hoorayed.</p>\n<p>Even though the default Views are normally only used once, there's the possible use case of reverting an existing View to the default. It seems like having config data in the module config directory also allows for that use case (though the \"revert to default\" would require manual copying from module config into the staging config directory). Still, seems like a nice ability to have, just as it was with Views.</p>",
+        "id": 223398382,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1611160375
+    },
+    {
+        "content": "<p>After reading all the comments, now I'm convinced more the config directory with JSON files in it is more virtue than anything else, especially when it comes to reverting back to initial settings.</p>",
+        "id": 223408120,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611164634
+    }
+]

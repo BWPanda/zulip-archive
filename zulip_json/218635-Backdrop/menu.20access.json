@@ -1,0 +1,188 @@
+[
+    {
+        "content": "<p>I have a menu item added manually to the main menu. It holds some views block, which I can hide by user permission. The layout itself can be hidden with visibility conditions. However, the menu is still there, even with nothing to show. I believe there is no module to control menu items access. Is it? Are there any talks on porting a module or writing a new one to do this?</p>",
+        "id": 202892686,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593899136
+    },
+    {
+        "content": "<p>There's <a href=\"https://www.drupal.org/project/menu_item_role_access\">https://www.drupal.org/project/menu_item_role_access</a> but it's only D8 <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span> ...in D6, there was <a href=\"https://www.drupal.org/project/menu_access\">https://www.drupal.org/project/menu_access</a> but it never got ported to D7 <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span> ...it was discussed here: <a href=\"http://drupal.org/node/1067692\">http://drupal.org/node/1067692</a> and last comments point people to using <a href=\"https://www.drupal.org/project/advanced_menu\">https://www.drupal.org/project/advanced_menu</a> instead ...not sure if it provides per-menu-item access control though.</p>",
+        "id": 202901011,
+        "sender_full_name": "klonos",
+        "timestamp": 1593915798
+    },
+    {
+        "content": "<p>...aha! There you go: <a href=\"https://www.drupal.org/project/menu_per_role\">https://www.drupal.org/project/menu_per_role</a></p>\n<blockquote>\n<p>This module allows you to restrict access to menu items based on user roles. Just activate the module and edit a menu item as usual. There will be a new fieldset that allows you to restrict access by role.</p>\n</blockquote>",
+        "id": 202901143,
+        "sender_full_name": "klonos",
+        "timestamp": 1593916033
+    },
+    {
+        "content": "<p><a href=\"https://www.drupal.org/project/menu_item_visibility\">https://www.drupal.org/project/menu_item_visibility</a></p>\n<blockquote>\n<p>This module exposes configurable and extendable visibility settings for menu links. For example, if you want to create a 'My account' link that points to /user, both anonymous and registered users have access to the /user path, so both will see the link, even if anonymous users do not technically have an account. Using this module will allow you to only have your 'My account' link visible to registered users, and hide it from anonymous users.</p>\n</blockquote>",
+        "id": 202901197,
+        "sender_full_name": "klonos",
+        "timestamp": 1593916124
+    },
+    {
+        "content": "<p><a href=\"https://www.drupal.org/project/roles_for_menu\">https://www.drupal.org/project/roles_for_menu</a></p>\n<blockquote>\n<p>The module will add a fieldset with options for restricting access or gaining access to menu link for a specific role/roles.</p>\n</blockquote>",
+        "id": 202901203,
+        "sender_full_name": "klonos",
+        "timestamp": 1593916185
+    },
+    {
+        "content": "<p>...so there's plenty to choose and port after all <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 202901359,
+        "sender_full_name": "klonos",
+        "timestamp": 1593916468
+    },
+    {
+        "content": "<p>thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  it sounds like Sunday porting... :-)</p>",
+        "id": 202908981,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593932615
+    },
+    {
+        "content": "<p>Yup it does <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...all these modules seem to implement their settings as a set of checkboxes with roles in the menu item edit form.</p>",
+        "id": 202909026,
+        "sender_full_name": "klonos",
+        "timestamp": 1593932684
+    },
+    {
+        "content": "<p>...if the access implementation is only a few lines of code, I wouldn't mind having that feature in core. That would mean that all these contributed modules would not need to be ported to Backdrop.</p>",
+        "id": 202909074,
+        "sender_full_name": "klonos",
+        "timestamp": 1593932776
+    },
+    {
+        "content": "<p>looks like <a href=\"https://www.drupal.org/project/menu_item_visibility\">https://www.drupal.org/project/menu_item_visibility</a>, with 24k sites, is the most used and portable. I'll give it a try later on.</p>",
+        "id": 202909075,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593932779
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/menu.20access/near/202909074\">said</a>:</p>\n<blockquote>\n<p>...if the access implementation is only a few lines of code, I wouldn't mind having that feature in core. That would mean that all these contributed modules would not need to be ported to Backdrop.</p>\n</blockquote>\n<p>that would be great</p>",
+        "id": 202909078,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593932822
+    },
+    {
+        "content": "<p><a href=\"https://www.drupal.org/project/menu_per_role\">https://www.drupal.org/project/menu_per_role</a> has a decent usage (13k sites), and seems to be more maintained though <span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span></p>",
+        "id": 202909124,
+        "sender_full_name": "klonos",
+        "timestamp": 1593932912
+    },
+    {
+        "content": "<p>...also has a D8 version if that matters.</p>",
+        "id": 202909126,
+        "sender_full_name": "klonos",
+        "timestamp": 1593932926
+    },
+    {
+        "content": "<p>yep. indeed</p>",
+        "id": 202909135,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593932964
+    },
+    {
+        "content": "<p>When it comes to the UI implementation, I'd prefer a collapsed-by-default fieldset instead of vertical tabs. It is a very useful feature, but if not used very often (only one of you menu items as you also mentioned), then it'd be best to be out of the way in the menu item edit form <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 202909189,
+        "sender_full_name": "klonos",
+        "timestamp": 1593933092
+    },
+    {
+        "content": "<p>Got it</p>",
+        "id": 202909856,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593934543
+    },
+    {
+        "content": "<p>I like the menu item visibility module more. The UI is simpler and the maintainer makes quite a few modules that make things easier</p>",
+        "id": 202916691,
+        "sender_full_name": "Herb",
+        "timestamp": 1593946605
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> definitely! ...having 2 sets of role checkboxes is superfluous; it could be an additional checkbox that negates the selected roles...</p>",
+        "id": 202917773,
+        "sender_full_name": "klonos",
+        "timestamp": 1593948476
+    },
+    {
+        "content": "<p>...for example, similar to what we do for the block visibility conditions: <a href=\"/user_uploads/18319/n2sNFmbepS823FWyu5lR2SBw/Screen-Shot-2020-07-05-at-2.26.59-pm.png\">Screen-Shot-2020-07-05-at-2.26.59-pm.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/n2sNFmbepS823FWyu5lR2SBw/Screen-Shot-2020-07-05-at-2.26.59-pm.png\" title=\"Screen-Shot-2020-07-05-at-2.26.59-pm.png\"><img src=\"/user_uploads/18319/n2sNFmbepS823FWyu5lR2SBw/Screen-Shot-2020-07-05-at-2.26.59-pm.png\"></a></div>",
+        "id": 202917821,
+        "sender_full_name": "klonos",
+        "timestamp": 1593948520
+    },
+    {
+        "content": "<p>...but the vtab takes a lot of vertical space, for an option that will not be used frequently (and on sites with many roles, it could be a bigger issue); so that should be a collapsed fieldset.</p>",
+        "id": 202917845,
+        "sender_full_name": "klonos",
+        "timestamp": 1593948573
+    },
+    {
+        "content": "<p>...I've created <a href=\"https://github.com/backdrop/backdrop-issues/issues/4465\">https://github.com/backdrop/backdrop-issues/issues/4465</a> to see if it's simple to get this in core.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4465\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4465\" title=\"Allow limiting access to menu items per-role · Issue #4465 · backdrop/backdrop-issues\">Allow limiting access to menu items per-role · Issue #4465 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;m making this request as part of the #1839 meta... As a site builder, one can use the visibility conditions for the menu blocks they place on their layouts. If there is need to control access...</div></div></div>",
+        "id": 202918671,
+        "sender_full_name": "klonos",
+        "timestamp": 1593950004
+    },
+    {
+        "content": "<p>Updated the issue.</p>",
+        "id": 203022825,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594059277
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> if I get it right, you're using views blocks on that layout... What if you create a views page and let that ship with a menu item? Could that be the solution for you?</p>",
+        "id": 203071696,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594104951
+    },
+    {
+        "content": "<p>It might be a solution, yes. Thanks.</p>",
+        "id": 203080629,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594112481
+    },
+    {
+        "content": "<p>Finally, I decided to port <a href=\"https://www.drupal.org/project/menu_item_visibility\">https://www.drupal.org/project/menu_item_visibility</a>, changing the vertical tabs to a collapsible fieldset, collapsed by default. It works as expected.</p>\n<p>But working on the upgrade path from drupal 7, I have a doubt on updating the role ids to role names. It won't be much problem to update the default roles, but what happens with custom roles? Once backdrop will try to update the new module's table, the old drupal roles table will be already gone and won't be able to get ids nor name for those roles. Is that it?</p>\n<p>Of course, there will be some new config files for each new custom roles, but the relation to their original rids would have been lost. Any way to solve this?</p>",
+        "id": 203118845,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594136083
+    },
+    {
+        "content": "<p>I have always wondered that, but my involvement in Backdrop in a more develop-y capacity did not start till sometime in 2005 (after the change from role IDs to role names had happened), otherwise I would have complained about this <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...seems to me that instead of ditching the RIDs completely, we could be adding them in the .json config file for each role (and we could then drop them in Backdrop 2.0). Care to open an issue to discuss about that <span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> ?</p>",
+        "id": 203139158,
+        "sender_full_name": "klonos",
+        "timestamp": 1594145597
+    },
+    {
+        "content": "<p>done: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4469\">https://github.com/backdrop/backdrop-issues/issues/4469</a>. Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4469\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4469\" title=\"Save old role ids when upgrading from drupal 7 · Issue #4469 · backdrop/backdrop-issues\">Save old role ids when upgrading from drupal 7 · Issue #4469 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need I just ported a module which uses role ids (menu_item_visibility). The upgrade path from drupal 7 is right now impossible as rids (role ids) from drupal are missing after us...</div></div></div>",
+        "id": 203195403,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594151968
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> ++ <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 203210526,
+        "sender_full_name": "klonos",
+        "timestamp": 1594160410
+    },
+    {
+        "content": "<p>garrigos** go team. (Karma: 1)</p>",
+        "id": 203210527,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1594160410
+    },
+    {
+        "content": "<p>...I'll make sure that <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>'s and <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span>'s findings from <a href=\"https://github.com/backdrop/backdrop-issues/issues/2842\">https://github.com/backdrop/backdrop-issues/issues/2842</a> are documented in <a href=\"https://api.backdropcms.org/change-records/converted-user-roles-cmi\">https://api.backdropcms.org/change-records/converted-user-roles-cmi</a> for future reference <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2842\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2842\" title=\"How to manage D7 to Backdrop upgrades which store role RID in tables? · Issue #2842 · backdrop/backdrop-issues\">How to manage D7 to Backdrop upgrades which store role RID in tables? · Issue #2842 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea This came up in backdrop-contrib/ubercart#121 so I thought I&#39;d post here for reference, and in case anyone can suggest an alternative solution: When we upgrade to Ba...</div></div></div>",
+        "id": 203210932,
+        "sender_full_name": "klonos",
+        "timestamp": 1594160691
+    },
+    {
+        "content": "<p>...done! <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 203321207,
+        "sender_full_name": "klonos",
+        "timestamp": 1594241398
+    }
+]

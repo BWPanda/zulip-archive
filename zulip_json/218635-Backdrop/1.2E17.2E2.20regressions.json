@@ -1,0 +1,200 @@
+[
+    {
+        "content": "<p>I've updated my PR for <a href=\"https://github.com/backdrop/backdrop-issues/issues/4758\">https://github.com/backdrop/backdrop-issues/issues/4758</a> so please review/test if you have some time...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4758\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4758\" title=\"Regression: Fieldset style broken · Issue #4758 · backdrop/backdrop-issues\">Regression: Fieldset style broken · Issue #4758 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">(Still looking into this, but wanted to quickly create an issue for it) I&#39;ve noticed certain styles broken with fieldsets: &quot;Formatter options&quot; fieldsets under CKEditor-enabled fields ...</div></div></div>",
+        "id": 217141524,
+        "sender_full_name": "klonos",
+        "timestamp": 1605710009
+    },
+    {
+        "content": "<p>...there's only one small thing that needs fixing (a gap between the CKEditor and the \"Formatting options\" fieldset), but I need to take a break now. ...if anyone has capacity, please feel free to take my PR and improve the CSS and/or try to fix that annoying gap.</p>",
+        "id": 217144183,
+        "sender_full_name": "klonos",
+        "timestamp": 1605711137
+    },
+    {
+        "content": "<p>float (left|right depending on language direction) on the legend element does the trick for me, but I'm not sure if this breaks something else.</p>",
+        "id": 217146612,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605712132
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code>.js fieldset.collapsible legend {\n  float: left;\n}\n.js[dir=&quot;rtl&quot;] fieldset.collapsible legend {\n  float: right;\n}\n</code></pre></div>\n<p>...but it seems a little \"jumpy\" when collapsing/expanding...</p>",
+        "id": 217147910,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605712680
+    },
+    {
+        "content": "<p>The jumpy thing is pre-existing <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> : <a href=\"https://github.com/backdrop/backdrop-issues/issues/3596\">https://github.com/backdrop/backdrop-issues/issues/3596</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3596\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3596\" title=\"Formatting options: flickering fieldset expand/collapse animation · Issue #3596 · backdrop/backdrop-issues\">Formatting options: flickering fieldset expand/collapse animation · Issue #3596 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is a follow-up to #3516... When expanding/collapsing the fieldset, there is this subtle &quot;jump&quot; in the animation, which doesn&#39;t happen when expanding/collapsing other, &quot;regul...</div></div></div>",
+        "id": 217148269,
+        "sender_full_name": "klonos",
+        "timestamp": 1605712808
+    },
+    {
+        "content": "<p>Ah, OK.<br>\nThe \"float\" trick doesn't seem to break the overflow thing again. Wanna give it a try?</p>",
+        "id": 217149036,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605713106
+    },
+    {
+        "content": "<p>Already am <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 217149070,
+        "sender_full_name": "klonos",
+        "timestamp": 1605713122
+    },
+    {
+        "content": "<p>...it works <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 217149096,
+        "sender_full_name": "klonos",
+        "timestamp": 1605713135
+    },
+    {
+        "content": "<p>...just trying to see if I can make things a little less \"jumpy\"</p>",
+        "id": 217149133,
+        "sender_full_name": "klonos",
+        "timestamp": 1605713149
+    },
+    {
+        "content": "<p>PR updated <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> ++</p>",
+        "id": 217150220,
+        "sender_full_name": "klonos",
+        "timestamp": 1605713549
+    },
+    {
+        "content": "<p><strong>indigoxela</strong> Cheers (Karma: 9)</p>",
+        "id": 217150222,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1605713550
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> your CSS skills are way better than mine, so can you please have a look when you can?</p>",
+        "id": 217150636,
+        "sender_full_name": "klonos",
+        "timestamp": 1605713695
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"276592\">@wesruv</span> you are being missed <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> <span aria-label=\"heart\" class=\"emoji emoji-2764\" role=\"img\" title=\"heart\">:heart:</span></p>",
+        "id": 217150675,
+        "sender_full_name": "klonos",
+        "timestamp": 1605713713
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I could close my PR, I think a full revert isn't necessary anymore. Do you agree?</p>",
+        "id": 217152677,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605714514
+    },
+    {
+        "content": "<p>Yup <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...althoughit might be possible to improve the CSS introduced in the PR, we could have a follow-up to clean that up. In the meantime, things seem to be fixed with my PR.</p>",
+        "id": 217202564,
+        "sender_full_name": "klonos",
+        "timestamp": 1605736922
+    },
+    {
+        "content": "<p>Opened a follow-up issue. Seems we're still having fieldset problems...</p>",
+        "id": 217204603,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605737985
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4766\">https://github.com/backdrop/backdrop-issues/issues/4766</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4766\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4766\" title=\"Fix fieldset styling · Issue #4766 · backdrop/backdrop-issues\">Fix fieldset styling · Issue #4766 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug This started in #3930 and was &#39;fixed&#39; in #4758. But there are still issues with the styling of fieldsets. Specifically non-collapsible ones: Steps To Reproduce To rep...</div></div></div>",
+        "id": 217204626,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605737998
+    },
+    {
+        "content": "<p>Sorry I missed your ping <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> ty for opening the follow up <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span></p>",
+        "id": 217216640,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1605746626
+    },
+    {
+        "content": "<p>Maybe we need automated visual regression tests. No idea how easy that is to set up for a project.</p>",
+        "id": 217217265,
+        "sender_full_name": "Herb",
+        "timestamp": 1605747163
+    },
+    {
+        "content": "<p>Hmm... Backdrop/Drupal uses Simpletest for PHP unit tests (for making sure functions work as expected, etc.). And I've personally written/used Behat tests in D8 for testing a website's interactivity (e.g. click this button, make sure you see this message). But I've not heard of visual regression tests... Sounds like you're wanting to test CSS code. Is that even a thing?</p>",
+        "id": 217221011,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605750852
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> for a while there was lots of talk at Drupal Camps about Backstop JS a visual regression tool that takes screenshots of your website and then compares the screenshots to baseline images taken in the past and flags any unexpected changes. </p>\n<p><a href=\"https://garris.github.io/BackstopJS/\">https://garris.github.io/BackstopJS/</a></p>\n<p>Pretty cool idea, but I've never used in practice.</p>",
+        "id": 217221315,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605751170
+    },
+    {
+        "content": "<p>Ha! Cool.</p>",
+        "id": 217221388,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605751211
+    },
+    {
+        "content": "<p>Very cool idea. I always wanted to put it into practice, but never found the time and project get it working.</p>",
+        "id": 217221420,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605751253
+    },
+    {
+        "content": "<p>I've used a bit for individual sites but not for projects. It's actually an easy way to find out if some things break instead of writing functional tests. Though obviously isn't as thorough</p>",
+        "id": 217225953,
+        "sender_full_name": "Herb",
+        "timestamp": 1605756575
+    },
+    {
+        "content": "<p>We have been using <a href=\"https://diffy.website\">https://diffy.website</a> in the agency I work for. ...there's another one, but keep forgetting the name.</p>",
+        "id": 217229213,
+        "sender_full_name": "klonos",
+        "timestamp": 1605760812
+    },
+    {
+        "content": "<p>Pantheon bought a tool that was made for WordPress and they're going to roll it out for Drupal too. I can't recall the name either</p>",
+        "id": 217260566,
+        "sender_full_name": "Herb",
+        "timestamp": 1605787789
+    },
+    {
+        "content": "<p>Is someone talking about Wordpress again?</p>",
+        "id": 217260567,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1605787790
+    },
+    {
+        "content": "<p>Not sure if it's possible, but what about using pure CSS animation for the fieldset instead of JS?</p>",
+        "id": 217320649,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605815086
+    },
+    {
+        "content": "<p>Yeah, I think that the blocker for doing that is that we've inherited things from D7, and that there isn't (wasn't?) wide browser support for CSS transitions back then.</p>",
+        "id": 217346237,
+        "sender_full_name": "klonos",
+        "timestamp": 1605829569
+    },
+    {
+        "content": "<p>No longer bound by the \"Drupal Way\" right? <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 217358310,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605843532
+    },
+    {
+        "content": "<p>I guess not, but we still need to consider browser support and make sure that if we replace JS with CSS we're not breaking things for 80% of the people using the software...</p>",
+        "id": 217363751,
+        "sender_full_name": "klonos",
+        "timestamp": 1605849656
+    },
+    {
+        "content": "<p>...we need to keep one eye on everything outlined in <a href=\"https://backdropcms.org/philosophy\">https://backdropcms.org/philosophy</a></p>",
+        "id": 217363779,
+        "sender_full_name": "klonos",
+        "timestamp": 1605849704
+    },
+    {
+        "content": "<blockquote>\n<p>Not sure if it's possible, but what about using pure CSS animation for the fieldset instead of JS</p>\n</blockquote>\n<p>Or the html5 details element instead of fieldsets, we already have an issue for that: <a href=\"https://github.com/backdrop/backdrop-issues/issues/324\">https://github.com/backdrop/backdrop-issues/issues/324</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/324\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/324\" title=\"Add the HTML details element to core form API · Issue #324 · backdrop/backdrop-issues\">Add the HTML details element to core form API · Issue #324 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Drupal 8 decided to replace fieldsets with details, see Freedom For Fieldsets! Long Live The DETAILS. This has caused some significant issues. So instead of replacing fieldsets, we probably should ...</div></div></div>",
+        "id": 217368947,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605856829
+    }
+]

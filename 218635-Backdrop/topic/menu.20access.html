@@ -1,0 +1,225 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/menu.20access.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html">menu access</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="202892686"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202892686" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202892686">(Jul 04 2020 at 21:45)</a>:</h4>
+<p>I have a menu item added manually to the main menu. It holds some views block, which I can hide by user permission. The layout itself can be hidden with visibility conditions. However, the menu is still there, even with nothing to show. I believe there is no module to control menu items access. Is it? Are there any talks on porting a module or writing a new one to do this?</p>
+
+
+
+<a name="202901011"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202901011" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202901011">(Jul 05 2020 at 02:23)</a>:</h4>
+<p>There's <a href="https://www.drupal.org/project/menu_item_role_access">https://www.drupal.org/project/menu_item_role_access</a> but it's only D8 <span aria-label="disappointed" class="emoji emoji-1f61e" role="img" title="disappointed">:disappointed:</span> ...in D6, there was <a href="https://www.drupal.org/project/menu_access">https://www.drupal.org/project/menu_access</a> but it never got ported to D7 <span aria-label="disappointed" class="emoji emoji-1f61e" role="img" title="disappointed">:disappointed:</span> ...it was discussed here: <a href="http://drupal.org/node/1067692">http://drupal.org/node/1067692</a> and last comments point people to using <a href="https://www.drupal.org/project/advanced_menu">https://www.drupal.org/project/advanced_menu</a> instead ...not sure if it provides per-menu-item access control though.</p>
+
+
+
+<a name="202901143"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202901143" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202901143">(Jul 05 2020 at 02:27)</a>:</h4>
+<p>...aha! There you go: <a href="https://www.drupal.org/project/menu_per_role">https://www.drupal.org/project/menu_per_role</a></p>
+<blockquote>
+<p>This module allows you to restrict access to menu items based on user roles. Just activate the module and edit a menu item as usual. There will be a new fieldset that allows you to restrict access by role.</p>
+</blockquote>
+
+
+
+<a name="202901197"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202901197" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202901197">(Jul 05 2020 at 02:28)</a>:</h4>
+<p><a href="https://www.drupal.org/project/menu_item_visibility">https://www.drupal.org/project/menu_item_visibility</a></p>
+<blockquote>
+<p>This module exposes configurable and extendable visibility settings for menu links. For example, if you want to create a 'My account' link that points to /user, both anonymous and registered users have access to the /user path, so both will see the link, even if anonymous users do not technically have an account. Using this module will allow you to only have your 'My account' link visible to registered users, and hide it from anonymous users.</p>
+</blockquote>
+
+
+
+<a name="202901203"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202901203" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202901203">(Jul 05 2020 at 02:29)</a>:</h4>
+<p><a href="https://www.drupal.org/project/roles_for_menu">https://www.drupal.org/project/roles_for_menu</a></p>
+<blockquote>
+<p>The module will add a fieldset with options for restricting access or gaining access to menu link for a specific role/roles.</p>
+</blockquote>
+
+
+
+<a name="202901359"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202901359" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202901359">(Jul 05 2020 at 02:34)</a>:</h4>
+<p>...so there's plenty to choose and port after all <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="202908981"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202908981" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202908981">(Jul 05 2020 at 07:03)</a>:</h4>
+<p>thanks <span class="user-mention" data-user-id="256729">@klonos</span>  it sounds like Sunday porting... :-)</p>
+
+
+
+<a name="202909026"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909026" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909026">(Jul 05 2020 at 07:04)</a>:</h4>
+<p>Yup it does <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...all these modules seem to implement their settings as a set of checkboxes with roles in the menu item edit form.</p>
+
+
+
+<a name="202909074"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909074" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909074">(Jul 05 2020 at 07:06)</a>:</h4>
+<p>...if the access implementation is only a few lines of code, I wouldn't mind having that feature in core. That would mean that all these contributed modules would not need to be ported to Backdrop.</p>
+
+
+
+<a name="202909075"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909075" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909075">(Jul 05 2020 at 07:06)</a>:</h4>
+<p>looks like <a href="https://www.drupal.org/project/menu_item_visibility">https://www.drupal.org/project/menu_item_visibility</a>, with 24k sites, is the most used and portable. I'll give it a try later on.</p>
+
+
+
+<a name="202909078"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909078" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909078">(Jul 05 2020 at 07:07)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256729">klonos</span> <a href="#narrow/stream/218635-Backdrop/topic/menu.20access/near/202909074">said</a>:</p>
+<blockquote>
+<p>...if the access implementation is only a few lines of code, I wouldn't mind having that feature in core. That would mean that all these contributed modules would not need to be ported to Backdrop.</p>
+</blockquote>
+<p>that would be great</p>
+
+
+
+<a name="202909124"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909124" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909124">(Jul 05 2020 at 07:08)</a>:</h4>
+<p><a href="https://www.drupal.org/project/menu_per_role">https://www.drupal.org/project/menu_per_role</a> has a decent usage (13k sites), and seems to be more maintained though <span class="user-mention" data-user-id="300022">@Robert Garrigos</span></p>
+
+
+
+<a name="202909126"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909126" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909126">(Jul 05 2020 at 07:08)</a>:</h4>
+<p>...also has a D8 version if that matters.</p>
+
+
+
+<a name="202909135"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909135" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909135">(Jul 05 2020 at 07:09)</a>:</h4>
+<p>yep. indeed</p>
+
+
+
+<a name="202909189"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909189" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909189">(Jul 05 2020 at 07:11)</a>:</h4>
+<p>When it comes to the UI implementation, I'd prefer a collapsed-by-default fieldset instead of vertical tabs. It is a very useful feature, but if not used very often (only one of you menu items as you also mentioned), then it'd be best to be out of the way in the menu item edit form <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="202909856"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202909856" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202909856">(Jul 05 2020 at 07:35)</a>:</h4>
+<p>Got it</p>
+
+
+
+<a name="202916691"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202916691" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202916691">(Jul 05 2020 at 10:56)</a>:</h4>
+<p>I like the menu item visibility module more. The UI is simpler and the maintainer makes quite a few modules that make things easier</p>
+
+
+
+<a name="202917773"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202917773" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202917773">(Jul 05 2020 at 11:27)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> definitely! ...having 2 sets of role checkboxes is superfluous; it could be an additional checkbox that negates the selected roles...</p>
+
+
+
+<a name="202917821"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202917821" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202917821">(Jul 05 2020 at 11:28)</a>:</h4>
+<p>...for example, similar to what we do for the block visibility conditions: <a href="/user_uploads/18319/n2sNFmbepS823FWyu5lR2SBw/Screen-Shot-2020-07-05-at-2.26.59-pm.png">Screen-Shot-2020-07-05-at-2.26.59-pm.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/n2sNFmbepS823FWyu5lR2SBw/Screen-Shot-2020-07-05-at-2.26.59-pm.png" title="Screen-Shot-2020-07-05-at-2.26.59-pm.png"><img src="/user_uploads/18319/n2sNFmbepS823FWyu5lR2SBw/Screen-Shot-2020-07-05-at-2.26.59-pm.png"></a></div>
+
+
+
+<a name="202917845"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202917845" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202917845">(Jul 05 2020 at 11:29)</a>:</h4>
+<p>...but the vtab takes a lot of vertical space, for an option that will not be used frequently (and on sites with many roles, it could be a bigger issue); so that should be a collapsed fieldset.</p>
+
+
+
+<a name="202918671"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/202918671" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#202918671">(Jul 05 2020 at 11:53)</a>:</h4>
+<p>...I've created <a href="https://github.com/backdrop/backdrop-issues/issues/4465">https://github.com/backdrop/backdrop-issues/issues/4465</a> to see if it's simple to get this in core.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4465" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4465" title="Allow limiting access to menu items per-role · Issue #4465 · backdrop/backdrop-issues">Allow limiting access to menu items per-role · Issue #4465 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I&#39;m making this request as part of the #1839 meta... As a site builder, one can use the visibility conditions for the menu blocks they place on their layouts. If there is need to control access...</div></div></div>
+
+
+
+<a name="203022825"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203022825" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203022825">(Jul 06 2020 at 18:14)</a>:</h4>
+<p>Updated the issue.</p>
+
+
+
+<a name="203071696"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203071696" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203071696">(Jul 07 2020 at 06:55)</a>:</h4>
+<p><span class="user-mention" data-user-id="300022">@Robert Garrigos</span> if I get it right, you're using views blocks on that layout... What if you create a views page and let that ship with a menu item? Could that be the solution for you?</p>
+
+
+
+<a name="203080629"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203080629" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203080629">(Jul 07 2020 at 09:01)</a>:</h4>
+<p>It might be a solution, yes. Thanks.</p>
+
+
+
+<a name="203118845"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203118845" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203118845">(Jul 07 2020 at 15:34)</a>:</h4>
+<p>Finally, I decided to port <a href="https://www.drupal.org/project/menu_item_visibility">https://www.drupal.org/project/menu_item_visibility</a>, changing the vertical tabs to a collapsible fieldset, collapsed by default. It works as expected.</p>
+<p>But working on the upgrade path from drupal 7, I have a doubt on updating the role ids to role names. It won't be much problem to update the default roles, but what happens with custom roles? Once backdrop will try to update the new module's table, the old drupal roles table will be already gone and won't be able to get ids nor name for those roles. Is that it?</p>
+<p>Of course, there will be some new config files for each new custom roles, but the relation to their original rids would have been lost. Any way to solve this?</p>
+
+
+
+<a name="203139158"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203139158" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203139158">(Jul 07 2020 at 18:13)</a>:</h4>
+<p>I have always wondered that, but my involvement in Backdrop in a more develop-y capacity did not start till sometime in 2005 (after the change from role IDs to role names had happened), otherwise I would have complained about this <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...seems to me that instead of ditching the RIDs completely, we could be adding them in the .json config file for each role (and we could then drop them in Backdrop 2.0). Care to open an issue to discuss about that <span class="user-mention" data-user-id="300022">@Robert Garrigos</span> ?</p>
+
+
+
+<a name="203195403"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203195403" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Robert Garrigos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203195403">(Jul 07 2020 at 19:59)</a>:</h4>
+<p>done: <a href="https://github.com/backdrop/backdrop-issues/issues/4469">https://github.com/backdrop/backdrop-issues/issues/4469</a>. Thanks <span class="user-mention" data-user-id="256729">@klonos</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4469" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4469" title="Save old role ids when upgrading from drupal 7 · Issue #4469 · backdrop/backdrop-issues">Save old role ids when upgrading from drupal 7 · Issue #4469 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need I just ported a module which uses role ids (menu_item_visibility). The upgrade path from drupal 7 is right now impossible as rids (role ids) from drupal are missing after us...</div></div></div>
+
+
+
+<a name="203210526"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203210526" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203210526">(Jul 07 2020 at 22:20)</a>:</h4>
+<p><span class="user-mention" data-user-id="300022">@Robert Garrigos</span> ++ <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="203210527"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203210527" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203210527">(Jul 07 2020 at 22:20)</a>:</h4>
+<p>garrigos** go team. (Karma: 1)</p>
+
+
+
+<a name="203210932"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203210932" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203210932">(Jul 07 2020 at 22:24)</a>:</h4>
+<p>...I'll make sure that <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span>'s and <span class="user-mention" data-user-id="256757">@docwilmot</span>'s findings from <a href="https://github.com/backdrop/backdrop-issues/issues/2842">https://github.com/backdrop/backdrop-issues/issues/2842</a> are documented in <a href="https://api.backdropcms.org/change-records/converted-user-roles-cmi">https://api.backdropcms.org/change-records/converted-user-roles-cmi</a> for future reference <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2842" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2842" title="How to manage D7 to Backdrop upgrades which store role RID in tables? · Issue #2842 · backdrop/backdrop-issues">How to manage D7 to Backdrop upgrades which store role RID in tables? · Issue #2842 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Describe your issue or idea This came up in backdrop-contrib/ubercart#121 so I thought I&#39;d post here for reference, and in case anyone can suggest an alternative solution: When we upgrade to Ba...</div></div></div>
+
+
+
+<a name="203321207"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/menu%20access/near/203321207" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/menu.20access.html#203321207">(Jul 08 2020 at 20:49)</a>:</h4>
+<p>...done! <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

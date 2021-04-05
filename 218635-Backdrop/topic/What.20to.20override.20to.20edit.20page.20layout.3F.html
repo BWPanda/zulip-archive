@@ -1,0 +1,56 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/What.20to.20override.20to.20edit.20page.20layout.3F.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What.20to.20override.20to.20edit.20page.20layout.3F.html">What to override to edit page layout?</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="194628856"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%20to%20override%20to%20edit%20page%20layout%3F/near/194628856" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Jeff Porten <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What.20to.20override.20to.20edit.20page.20layout.3F.html#194628856">(Apr 20 2020 at 02:38)</a>:</h4>
+<p>Using a subtheme from Basis, there's no page.tpl.php as expected that would allow me to move around some elements on the page. (Specifically, to move the timestamp and author to the bottom of the page.) I can see node.tpl.php in core, but don't know how to safely hack at that?</p>
+
+
+
+<a name="194633569"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%20to%20override%20to%20edit%20page%20layout%3F/near/194633569" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What.20to.20override.20to.20edit.20page.20layout.3F.html#194633569">(Apr 20 2020 at 05:04)</a>:</h4>
+<p>You can duplicate node.tpl.php in your subtheme templates folder and edit it there.</p>
+
+
+
+<a name="194716474"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%20to%20override%20to%20edit%20page%20layout%3F/near/194716474" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Jeff Porten <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What.20to.20override.20to.20edit.20page.20layout.3F.html#194716474">(Apr 20 2020 at 18:42)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Do I need to add a line to the .info file or does it automatically override?</p>
+
+
+
+<a name="194718251"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%20to%20override%20to%20edit%20page%20layout%3F/near/194718251" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What.20to.20override.20to.20edit.20page.20layout.3F.html#194718251">(Apr 20 2020 at 18:57)</a>:</h4>
+<p>it will override automatically once it is in your theme and named correctly (in you case just keep the same name)</p>
+
+
+
+<a name="194721276"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%20to%20override%20to%20edit%20page%20layout%3F/near/194721276" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What.20to.20override.20to.20edit.20page.20layout.3F.html#194721276">(Apr 20 2020 at 19:24)</a>:</h4>
+<p>You may need to clear caches.</p>
+
+
+
+<a name="194721922"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/What%20to%20override%20to%20edit%20page%20layout%3F/near/194721922" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/What.20to.20override.20to.20edit.20page.20layout.3F.html#194721922">(Apr 20 2020 at 19:30)</a>:</h4>
+<p>definitely need to clear caches after adding a new file ... good point</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

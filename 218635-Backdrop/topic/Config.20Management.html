@@ -1,0 +1,535 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Config.20Management.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html">Config Management</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="219763967"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219763967" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219763967">(Dec 13 2020 at 14:30)</a>:</h4>
+<p>I hate to start a new Zulip topic, but I couldn't find an existing topic that seems relevant to something I'm getting increasing concerned about: Config Management.  In a nutshell, I think it's too hard to use, and a huge barrier to entry for new users.  I think it needs to be friendlier for Backdrop to succeed.</p>
+
+
+
+<a name="219763998"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219763998" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219763998">(Dec 13 2020 at 14:31)</a>:</h4>
+<p>I'm happy to add to this later, but I'm in the midst of heavy work on my current main commitment, so I just want to add this as a bookmark to come back to later (though I'm happy to join in on any conversations it sparks.)</p>
+
+
+
+<a name="219764043"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219764043" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219764043">(Dec 13 2020 at 14:32)</a>:</h4>
+<p>I was reminded about it when I hit this dialog while mucking around with one of my backdrop installs:</p>
+
+
+
+<a name="219764070"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219764070" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219764070">(Dec 13 2020 at 14:33)</a>:</h4>
+<p><a href="/user_uploads/18319/riJi1FlJaspYiU9hDfFI0vq9/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/riJi1FlJaspYiU9hDfFI0vq9/image.png" title="image.png"><img src="/user_uploads/18319/riJi1FlJaspYiU9hDfFI0vq9/image.png"></a></div>
+
+
+
+<a name="219764127"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219764127" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219764127">(Dec 13 2020 at 14:34)</a>:</h4>
+<p>If I was a new user who didn't yet feel committed to a system, a message like that would make me want to find a different platform.</p>
+
+
+
+<a name="219764201"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219764201" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219764201">(Dec 13 2020 at 14:37)</a>:</h4>
+<p>One possibility: perhaps we can guide them better on how to fix it?  Can't we look around and try to find existing config files? (which in my case are there somewhere.)  I realize there are big security concerns -- we don't want to make it too easy for an attacker to switch around config settings! -- but within the bounds of safety I feel like we can get closer than this.</p>
+
+
+
+<a name="219764345"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219764345" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219764345">(Dec 13 2020 at 14:41)</a>:</h4>
+<p>(How did I get this message?  I discovered that doing "git reset --hard" on a live site is not a good idea!  Fortunately the site I FUBARed was a test installation with no meaningful content, and I was able to bring it back by renaming my existing config folder to the name Backdrop was looking for in the above message.)</p>
+
+
+
+<a name="219764412"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219764412" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219764412">(Dec 13 2020 at 14:42)</a>:</h4>
+<p>Whoops...maybe I spoke too soon about having successfully brought it back: <a href="/user_uploads/18319/aXU7s6erC2EodTM1IlmC22YT/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/aXU7s6erC2EodTM1IlmC22YT/image.png" title="image.png"><img src="/user_uploads/18319/aXU7s6erC2EodTM1IlmC22YT/image.png"></a></div>
+
+
+
+<a name="219764559"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219764559" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219764559">(Dec 13 2020 at 14:46)</a>:</h4>
+<p>(Fixed it -- it was a permissions issue.  But...for a new user, a "permissions issue" is likely unsolvable.)</p>
+
+
+
+<a name="219769208"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219769208" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219769208">(Dec 13 2020 at 16:47)</a>:</h4>
+<p>One of my pet peeves (maybe the only one, but certainly the biggest) is the lack of adequate error checking and reporting done in Drupal (and by extension, Backdrop).</p>
+<p>I suspect you are correct with the first error, but for the second one, more error checking and reporting could certainly be done there.</p>
+<p>The code doesn't do any basic file checks at all, and the call to file_put_contents() actually hides the actual error (with the "@" in the 6th line below) that would be recorded in watchdog, making that code not only insufficient, but also less than helpful by removing any information that could be used to fix the problem.</p>
+<div class="codehilite"><pre><span></span><code>  public function write($name, array $data) {
+    // Ensure that the config name is included in the written file.
+    $data = array_merge(array(&#39;_config_name&#39; =&gt; $name), $data);
+    $data = $this-&gt;encode($data) . &quot;\n&quot;;
+    $file_path = $this-&gt;getFilePath($name);
+    $status = @file_put_contents($file_path, $data);
+    if ($status === FALSE) {
+      throw new ConfigStorageException(&#39;Failed to write configuration file: &#39; . $this-&gt;getFilePath($name));
+    }
+    clearstatcache(FALSE, $file_path);
+    return TRUE;
+  }
+</code></pre></div>
+<p>I don't know if adding that would help a new user, but I suspect if someone is getting a file permission error, it is because they put the files there, and didn't use a one-click type of install process, so they should know how to fix it with an adequete error message.</p>
+
+
+
+<a name="219769452"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219769452" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219769452">(Dec 13 2020 at 16:52)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick</span> that error you got is being discussed over at <a href="https://github.com/backdrop/backdrop-issues/issues/4747">https://github.com/backdrop/backdrop-issues/issues/4747</a> and was brought up recently.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4747" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4747" title="empty configuration directory when attempting docker install · Issue #4747 · backdrop/backdrop-issues">empty configuration directory when attempting docker install · Issue #4747 · backdrop/backdrop-issues</a></div><div class="message_embed_description">When I attempt to start a docker instance of backdrop, I get an error similar to the following: Exception: The configuration directory in settings.php is specified as &#39;./files/config_a1614e8130...</div></div></div>
+
+
+
+<a name="219769521"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219769521" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219769521">(Dec 13 2020 at 16:54)</a>:</h4>
+<p>...there's also <a href="https://github.com/backdrop/backdrop-issues/issues/2263">https://github.com/backdrop/backdrop-issues/issues/2263</a> which is related.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2263" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2263" title="Ignore README.md when checking if active config directory is empty on install · Issue #2263 · backdrop/backdrop-issues">Ignore README.md when checking if active config directory is empty on install · Issue #2263 · backdrop/backdrop-issues</a></div><div class="message_embed_description">When reinstalling my site, I&#39;m getting an error that the active config directory must be empty: The directory ./config/active must be completely empty to proceed with installation. However, the...</div></div></div>
+
+
+
+<a name="219769733"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219769733" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219769733">(Dec 13 2020 at 16:59)</a>:</h4>
+<p>I believe that there are various use cases that could cause this error, and we could do a better job at catching those. This error seems to be coming up when people try to destroy their local and start from scratch ...we could be catching these cases and throwing more user-friendly errors there ...possibly with links to documentation.</p>
+
+
+
+<a name="219769892"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219769892" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219769892">(Dec 13 2020 at 17:02)</a>:</h4>
+<p>I believe <a href="https://github.com/backdrop/backdrop-issues/issues/4747">#4747</a> is about something different.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4747" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4747" title="empty configuration directory when attempting docker install · Issue #4747 · backdrop/backdrop-issues">empty configuration directory when attempting docker install · Issue #4747 · backdrop/backdrop-issues</a></div><div class="message_embed_description">When I attempt to start a docker instance of backdrop, I get an error similar to the following: Exception: The configuration directory in settings.php is specified as &#39;./files/config_a1614e8130...</div></div></div>
+
+
+
+<a name="219770160"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219770160" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219770160">(Dec 13 2020 at 17:09)</a>:</h4>
+<p>I believe that it's the same problem manifesting itself under different conditions (when spinning up docer-based instances) ...still has to do with Backdrop not being able to properly detect the config directory ...or not properly detect if it's empty or not ...or there is a config directory, but it doesn't match what's in settings.php.</p>
+
+
+
+<a name="219906089"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/219906089" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#219906089">(Dec 14 2020 at 21:42)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> I believe PHP 7.? or 8 will fix the problem with hiding errors with "@" by removing it.</p>
+
+
+
+<a name="221115269"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221115269" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221115269">(Dec 29 2020 at 06:36)</a>:</h4>
+<p>Just got off a call with a long time Drupal friend who is in the process of moving a number of simple D6 and D7 sites to Backdrop. He frequently tells me how much he likes Backdrop, but tonight had some pretty harsh things to say about his frustration with config management.</p>
+
+
+
+<a name="221115288"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221115288" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221115288">(Dec 29 2020 at 06:36)</a>:</h4>
+<p>I think he said something about "taking us back to the stone age" at one point. ;-)</p>
+
+
+
+<a name="221115292"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221115292" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221115292">(Dec 29 2020 at 06:37)</a>:</h4>
+<p>Knowing you <span class="user-mention" data-user-id="256570">@StPaulTim</span> I assume you've taken notes re their pain points.</p>
+
+
+
+<a name="221115309"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221115309" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221115309">(Dec 29 2020 at 06:37)</a>:</h4>
+<p>Well, mostly he was referring to problems that are well known to me already.</p>
+
+
+
+<a name="221121226"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221121226" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221121226">(Dec 29 2020 at 09:09)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span>  like what...? I currently write a longer article about Backdrop and my intention is to mention Config pretty often;-)</p>
+
+
+
+<a name="221123185"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221123185" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221123185">(Dec 29 2020 at 09:53)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> I'm curious: what's so "stone-agy" about config management with exportable json files? I find it pretty lean and handy. What were the core issues for your friend re config?</p>
+
+
+
+<a name="221140204"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221140204" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221140204">(Dec 29 2020 at 15:04)</a>:</h4>
+<p>I share his pain.  Either we need to find a way to make it easier to use, or we need to create documentation that explains how it already is easier.  (Or I have to find and read that documentation, if it already exists)</p>
+
+
+
+<a name="221159494"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221159494" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221159494">(Dec 29 2020 at 19:22)</a>:</h4>
+<blockquote>
+<p>I'm curious: what's so "stone-agy" about config management with exportable json files?</p>
+</blockquote>
+<p>I think the point that he was making was in terms of workflows. He is big on dev-opsy stuff and likes to automate his workflow and uses drush pretty extenstively. </p>
+<p>I think his frustrations were very much around the lack of tools and/or documentation about how to use tools to effectively manage config files.</p>
+
+
+
+<a name="221159844"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221159844" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221159844">(Dec 29 2020 at 19:27)</a>:</h4>
+<p>Are there any drush/brush commands that help with config?</p>
+
+
+
+<a name="221160016"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221160016" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221160016">(Dec 29 2020 at 19:29)</a>:</h4>
+<p>We discussed the fact unless you commit your config files everytime to you make a change, they are vulnerable. One can use backup and migrate to take daily snapshots of the database and files, but any changes in conifg are not backed up anywhere if something happens to your active config directory and its not clear to me that we have any good tools right now to help secure config files.</p>
+
+
+
+<a name="221167621"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221167621" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221167621">(Dec 29 2020 at 21:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> he sounds competent enough to help write some drush tools. I think there's a drush command for exporting</p>
+
+
+
+<a name="221167627"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221167627" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221167627">(Dec 29 2020 at 21:14)</a>:</h4>
+<p>And importing</p>
+
+
+
+<a name="221177081"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221177081" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221177081">(Dec 29 2020 at 23:40)</a>:</h4>
+<p>Yup <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...there's config-related commands for (the Backdrop flavor of) drush: <a href="https://github.com/backdrop-contrib/backdrop-drush-extension/tree/1.x-1.x/commands/config">https://github.com/backdrop-contrib/backdrop-drush-extension/tree/1.x-1.x/commands/config</a> ...the same as the respective drush commands in D8 AFAICT.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/backdrop-drush-extension/tree/1.x-1.x/commands/config" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/backdrop-drush-extension/tree/1.x-1.x/commands/config" title="backdrop-contrib/backdrop-drush-extension">backdrop-contrib/backdrop-drush-extension</a></div><div class="message_embed_description">A set of commands and boot class for Drush and Backdrop CMS. - backdrop-contrib/backdrop-drush-extension</div></div></div>
+
+
+
+<a name="221365675"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221365675" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221365675">(Jan 01 2021 at 19:44)</a>:</h4>
+<p>Happy New Year, Config thread.  I'm starting the new year wrestling with config.</p>
+
+
+
+<a name="221365746"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221365746" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221365746">(Jan 01 2021 at 19:46)</a>:</h4>
+<p>So...I'm trying to make a local copy of a site (my home page) using what I <em>think</em> is almost the most vanilla possible approach: I'm using GUI interface, no drush/git/command line involved in the config management.  Does anybody actually do this?</p>
+
+
+
+<a name="221365771"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221365771" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221365771">(Jan 01 2021 at 19:47)</a>:</h4>
+<p>I haven't, but I believe its possible by exporting and importing config via the UI... What's the issue?</p>
+
+
+
+<a name="221365846"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221365846" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221365846">(Jan 01 2021 at 19:48)</a>:</h4>
+<p>I've cloned a new backdrop site, copied my themes, modules, and files folders into place,  and used backup_and_migrate to restore the DB.  That all worked, and I see my content, but the stuff that's in config (notably views) isn't there; I need config.</p>
+
+
+
+<a name="221365990"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221365990" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221365990">(Jan 01 2021 at 19:52)</a>:</h4>
+<p>On my source site, I do a full export, then on the destination site I do a full import. I get "Your configuration files were successfully uploaded" and I see 31 configurations changed and 28 new configurations  ready to import, 2 removed.  When I say "import all" I get "Configuration sync failed. The following errors were reported:<br>
+The field "field_pos" could not be created because a database table with the name "field_data_field_pos" already exists."</p>
+
+
+
+<a name="221366179"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221366179" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221366179">(Jan 01 2021 at 19:57)</a>:</h4>
+<p>Probably relevant: I hadn't updated the DB.  When I tried to, I got some errors.  Ultimately, 9 updates failed, with messages like this:</p>
+<div class="codehilite"><pre><span></span><code>Update #1016
+Failed: DatabaseSchemaObjectExistsException: Table cache_entity_user already exists. in DatabaseSchema-&gt;createTable() (line 661 of /var/www/html/core/includes/database/schema.inc).
+</code></pre></div>
+
+
+
+<a name="221367071"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221367071" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221367071">(Jan 01 2021 at 20:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span> - I won't say that what you are doing is impossible. But, I run into problems like what you are experiencing and get around it by placing the config directly into the active directory. </p>
+<p>Using the GUI to move config into a new site is problematic. I need to better understand when using the GUI works and when it doesn't.</p>
+
+
+
+<a name="221367080"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221367080" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221367080">(Jan 01 2021 at 20:19)</a>:</h4>
+<p>But, I know that it sometimes doesn't work in situations where I really expect it will.</p>
+
+
+
+<a name="221374276"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221374276" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221374276">(Jan 01 2021 at 23:25)</a>:</h4>
+<p>Hmm, we should probably be checking if the database tables already exist and just moving on if they do. Importing a config file for a field that already exists should not cause problems like that for users.</p>
+
+
+
+<a name="221376347"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221376347" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221376347">(Jan 02 2021 at 00:27)</a>:</h4>
+<p>I agree with <span class="user-mention" data-user-id="256663">@Joseph Flatt</span> ... <span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span> if you have the time/energy, and you can reproduce this consistently on a vanilla Backdrop setup, with minimal steps, then I'd file an issue for it.</p>
+
+
+
+<a name="221376391"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221376391" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221376391">(Jan 02 2021 at 00:29)</a>:</h4>
+<p>...having said that, some of the errors you are getting seem to be related to (or the same as) <a href="https://www.drupal.org/node/1551132">https://www.drupal.org/node/1551132</a> ...which is set to be backported to D7, and for which we already have an issue in our queue: <a href="https://github.com/backdrop/backdrop-issues/issues/2585">https://github.com/backdrop/backdrop-issues/issues/2585</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2585" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2585" title="DatabaseSchemaObjectExistsException: Table already exists in DatabaseSchema · Issue #2585 · backdrop/backdrop-issues">DatabaseSchemaObjectExistsException: Table already exists in DatabaseSchema · Issue #2585 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I was hit by this in a D7 site. I think we should fix it in Backdrop so that people don&#39;t scratch their heads over things like this. This also falls under the &quot;make contrib devs&#39; life ...</div></div></div>
+
+
+
+<a name="221376470"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221376470" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221376470">(Jan 02 2021 at 00:31)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span> wondering if you could try the patch from <a href="https://www.drupal.org/files/issues/2020-07-02/1551132-113.patch">https://www.drupal.org/files/issues/2020-07-02/1551132-113.patch</a> and see if that solves the last problem you mention re updates not being able to run.</p>
+
+
+
+<a name="221376529"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221376529" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221376529">(Jan 02 2021 at 00:33)</a>:</h4>
+<p>...or if you can share the db and config files with me, then I can do the testing <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="221406602"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221406602" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221406602">(Jan 02 2021 at 16:36)</a>:</h4>
+<p>If you're just cloning a site you don't need to import via the UI. Can just copy files from active to active folders.</p>
+
+
+
+<a name="221411973"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221411973" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221411973">(Jan 02 2021 at 18:49)</a>:</h4>
+<p>How would I (or more importantly, a new user) know to do that?  I was following the instructions in the interface.</p>
+
+
+
+<a name="221412019"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221412019" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221412019">(Jan 02 2021 at 18:50)</a>:</h4>
+<p>This <em>really</em> sounded like what I wanted to do: <a href="/user_uploads/18319/-8ovNWA0SdaLNMt_X7Z5pA9M/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/-8ovNWA0SdaLNMt_X7Z5pA9M/image.png" title="image.png"><img src="/user_uploads/18319/-8ovNWA0SdaLNMt_X7Z5pA9M/image.png"></a></div>
+
+
+
+<a name="221412148"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221412148" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221412148">(Jan 02 2021 at 18:53)</a>:</h4>
+<p>We are sprinting today. It's a great day to get some help text suggestions into Github and maybe we can create a PR.</p>
+
+
+
+<a name="221543879"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221543879" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> SteveP <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221543879">(Jan 04 2021 at 16:16)</a>:</h4>
+<p>Can I suggest that some of you who are more technically gifted, not be so? By that I mean, do as might many D7 web admins do, and work off the GUI/front end, without using drush, or other tools.<br>
+I suggest as much to highlight the issues that arise, for example, when trying to import a config from a local server instance.<br>
+E.g. I had repeated errors of one module breaking the import synchronization -- it was the footnotes module. I had it enabled. Still failing. I eventually enabled all sections -- footnotes in views, Footnotes Wysiwyg, and footnotes blocks. Even though my local instances on my local server did not have those enabled. <br>
+There were other examples. Eventually I gave up, and just copied the local server active json files into the production active directory. But I'm not sufficiently technical to know what errors that might induce down the track.<br>
+I'm concerned that many D7 admins who aren't all that technical  - when encountering such difficulties -- will reconsider BD, and instead move to WP. <br>
+In business circles, there is a saying - the number one rule is "make it easy for the customer".  If you make it hard, many will not complain, they'll just move away (to WP).<br>
+I understand that a major focus of the BD team, is to make it easy to use Backdrop, like WP. Hence my suggestion , to make like a non-technical D7 admin, to 'flesh out' the road-blocks.</p>
+
+
+
+<a name="221543880"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221543880" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221543880">(Jan 04 2021 at 16:16)</a>:</h4>
+<p>Hi, SteveP. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>
+<p>Here is a short (3 min) video to help you navigate Zulip. <a href="https://youtu.be/DN8YL2MrsSU">https://youtu.be/DN8YL2MrsSU</a></p>
+<div class="youtube-video message_inline_image"><a data-id="DN8YL2MrsSU" href="https://youtu.be/DN8YL2MrsSU"><img src="https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg"></a></div>
+
+
+
+<a name="221565709"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221565709" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221565709">(Jan 04 2021 at 19:03)</a>:</h4>
+<p>Hello <span class="user-mention" data-user-id="356829">@SteveP</span> and welcome to the Backdrop community <span aria-label="wave" class="emoji emoji-1f44b" role="img" title="wave">:wave:</span> ...I personally never use drush unless I have to; I always prefer doing things via the admin UI, and I mainly do that for the reasons you mentioned: to discover any issues that others may face...</p>
+
+
+
+<a name="221565788"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221565788" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221565788">(Jan 04 2021 at 19:03)</a>:</h4>
+<p>...having said that though, I would never have come across the issue you are describing unless I had used that specific module I guess.</p>
+
+
+
+<a name="221567727"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221567727" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221567727">(Jan 04 2021 at 19:19)</a>:</h4>
+<p>Hi Steve, I do not use Drush either unless I have to, I used to be a Drupal sitebuilder, I've done some 20+ projects in Backdrop so far... and I really love the config management a lot, I invested <em>weeks</em> to create kind of base website which I re-use over and over again. But you are right, some modules are simply not compatible with config. There are 10+ JSON files which I usally remove from the staging folder, including Shield, Rules, Devel, Metatag... but IMHO the error messages are quite clear, and usually after some errors (and removing JSON files, or deactivating modules on the target site), it works. Maybe this helps a bit, Config is really awesome.</p>
+
+
+
+<a name="221578794"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221578794" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221578794">(Jan 04 2021 at 20:51)</a>:</h4>
+<blockquote>
+<p>including Shield...</p>
+</blockquote>
+<p>Care to file an issue?</p>
+
+
+
+<a name="221592324"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221592324" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> SteveP <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221592324">(Jan 04 2021 at 22:53)</a>:</h4>
+<p>That's really reassuring to hear, <span class="user-mention" data-user-id="256729">@klonos</span> <br>
+As to my giving up that I referred to, and in reference to messages being quite clear, there was a (from memory) a ?_settings.setting.json file that I, for the life of me, could not find any module that owned it. I don't think any module owned it. It seemed to be generated by the export (independent of all modules). I can dig around and find it, if that's of interest, but that was the reason, in the end, I had to side-step the synch. import.</p>
+
+
+
+<a name="221594476"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221594476" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> SteveP <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221594476">(Jan 04 2021 at 23:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> <br>
+re " There are 10+ JSON files which I usally remove from the staging folder, including Shield, Rules, Devel, Metatag"<br>
+Well, I imagine the average D7 non-developer admin will after 1, then 2, then 3, then 4 attempts, will think, "this is hopeless" or "too hard". I doubt many would get to 10 before seeing some progress. In any event, is that good practice<br>
+ for db integrity, to be removing so much from the staging config?</p>
+
+
+
+<a name="221595012"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221595012" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221595012">(Jan 04 2021 at 23:27)</a>:</h4>
+<p><span class="user-mention" data-user-id="356829">@SteveP</span> what I think should happen is that if you notice this being a pattern (that is similar message, for multiple config files, for various contrib modules), then please take notes/screenshots, and raise a ticket with core. If after investigation it turns out that:</p>
+<ul>
+<li>it is because of something on the contrib end (modules not properly ported, or their uninstall hooks not cleaning up config files), then we can individually fix that on each contrib module</li>
+<li>if it is something that can be done on the Backdrop core end, then we should action that as part of the UX/DX improvement efforts. (for example, some better messaging, with instructions, and listing all "offending" config files at once, instead of throwing messages one-by-one).<br>
+...does that makes sense?</li>
+</ul>
+
+
+
+<a name="221595212"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221595212" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221595212">(Jan 04 2021 at 23:29)</a>:</h4>
+<p>Yes <span class="user-mention" data-user-id="356829">@SteveP</span> you are right... but again, the error messages were pretty helpful regarding affected modules... and I used Features in D7 a lot, this teaches you how to be patient;-) However, this really has to be improved, I will report to the issue queue soon.</p>
+
+
+
+<a name="221595213"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221595213" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221595213">(Jan 04 2021 at 23:29)</a>:</h4>
+<p><span class="user-mention" data-user-id="356829">@SteveP</span>  from what you are describing, it seems that we may need some "dry run" test mode for config import, which does a "pre-flight" check and shows any potential issue. But I would need to see some screenshots, and possibly be able to reproduce the issue in order to be able to tell more.</p>
+
+
+
+<a name="221595291"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221595291" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> SteveP <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221595291">(Jan 04 2021 at 23:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> <br>
+agree, that is what I should have done. But here's the rub .. I'm not a coder, and relatively new to BD, so I thought my issues were due to my ignorance, and would prefer not to "pollute" a forum with my inexperience. But, that said, yes, will be more diligent in the future.</p>
+
+
+
+<a name="221595488"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221595488" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221595488">(Jan 04 2021 at 23:33)</a>:</h4>
+<p>Thanks for taking the time and spending your energy to report things like those <span class="user-mention" data-user-id="356829">@SteveP</span> <span aria-label="pray" class="emoji emoji-1f64f" role="img" title="pray">:pray:</span> ...over time, I believe that you will find yourself that the Backdrop community is more "tolerant" to what may have been otherwise considered "pollution" on our forums. Please feel free to "pollute" away <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...many of us in Backdrop are in the habit of "filtering" that sort of "pollution" into helpful tasks that eventually improve the product for others, so that we reduce frustration and time-wasting.</p>
+
+
+
+<a name="221596686"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221596686" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> SteveP <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221596686">(Jan 04 2021 at 23:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> - I work (and write) intuitively, and feel that BD is indeed "the sweet-spot between Wordpress and Drupal 8/9", which is why I persisted with the many stumbling blocks I encountered.  I was reluctant to post, because I've coasted for ... well, 6+ years on D7 systems, and hadn't taken sufficient time to upskill on BD. There's no shortcut around that.  </p>
+<p>btw, I upgraded/migrated a D7 site to BD, and with statistics module enabled had all sorts of PDO faults... in the end I did a D7 -&gt; BD without statistics (but PDOs with statistics enabled), then a views data export, then a feeds import on a fresh build with statistics. All good.  </p>
+<p>That said, the statistics module is not integrated with Views, so I'm currently wondering if I can set up Rules (fire on node viewed) to increment a counter (field on node), so that I can use Views (block) and sort on counter, to replicate D7 blocks that sort according to popularity (for my personal use on local server, not public -- I keep a 800+ node database of research that I like to order according to what I find most relevant, aka popular with moi).</p>
+
+
+
+<a name="221601340"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221601340" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> SteveP <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221601340">(Jan 05 2021 at 00:51)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> <br>
+you wrote "I personally never use drush unless I have to"<br>
+Mind if I ask, when that is, because for those on a shared server, without SSH, I would imagine that'd be a showstopper -&gt; WP candidate. I have SSH/terminal on cpanel access, but even then I have had irregularities with drush with backdrop. I can detail if you want.</p>
+
+
+
+<a name="221603025"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/221603025" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#221603025">(Jan 05 2021 at 01:16)</a>:</h4>
+<p><span class="user-mention" data-user-id="356829">@SteveP</span> I work as a Support Engineer for D7/8 (and soon D9) sites, so I use drush daily. I also use it on my custom scripts that spin up local environments for Backdrop, so that I can work on issues, or test other people's work. ...but I don't build actual sites on Backdrop (other than a couple of low- to no-traffic personal sites that is). My main concern with Backdrop as a project is to improve the UX of the admin UI to a point where documentation and help text required is very minimal.</p>
+
+
+
+<a name="222005227"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222005227" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222005227">(Jan 07 2021 at 21:42)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="269428">mazze.ch</span> <a href="#narrow/stream/218635-Backdrop/topic/Config.20Management/near/221567727">said</a>:</p>
+<blockquote>
+<p>There are 10+ JSON files which I usally remove from the staging folder, including Shield, Rules, Devel, Metatag... but IMHO the error messages are quite clear, and usually after some errors (and removing JSON files, or deactivating modules on the target site), it works. Maybe this helps a bit, Config is really awesome.</p>
+</blockquote>
+<p>Is there any way these could be made to be warnings instead of errors, with a "proceed at your own risk" option?</p>
+
+
+
+<a name="222661184"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222661184" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222661184">(Jan 13 2021 at 23:18)</a>:</h4>
+<p>I have a crazy thought about config management. </p>
+<p>CMI was intended to make some things easier.  Because configuration is stored in the file system instead the database,  it's easier to do things that were difficult to do when configuration was stored in the database --- notably,  track configuration changes in a VCS.</p>
+<p>The downside is, it makes some things <em>harder</em>.  If you're doing something that involves moving the database then CMI just means that there is an additional piece to worry about.  And that piece is somewhat brittle and finicky, as discussed above.</p>
+<p>So...what if we did both?  Let configuration be stored not just in files, but also (perhaps optionally) in the database?  It could be <em>super</em> simple, just a table with two fields, for the title and the contents of each config file.  One row for each file.</p>
+<p>That way, if you move the database, you don't have to move the config files.  You could use Backup&amp;Migrate unmodified, for example.  It could be just a third config source -- Active, Staging, and DB.</p>
+<p>Would anybody besides me find this appealing?</p>
+
+
+
+<a name="222662076"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222662076" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222662076">(Jan 13 2021 at 23:29)</a>:</h4>
+<p>I believe <a href="https://github.com/silkscreencms/silkscreen">https://github.com/silkscreencms/silkscreen</a> already has something like that. Though I'm having a hard time finding references to it. Maybe <span class="user-mention" data-user-id="344103">@John Franklin</span> can confirm.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/silkscreencms/silkscreen" style="background-image: url(https://avatars3.githubusercontent.com/u/24636385?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/silkscreencms/silkscreen" title="silkscreencms/silkscreen">silkscreencms/silkscreen</a></div><div class="message_embed_description">A fork of Backdrop CMS with advanced backend features. - silkscreencms/silkscreen</div></div></div>
+
+
+
+<a name="222678682"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222678682" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222678682">(Jan 14 2021 at 04:19)</a>:</h4>
+<p>Side note: If you go to the <a href="https://www.silkscreencms.org/">Silkscreen website</a> (rather than the GitHub repo), there's no link or info about where/how to download it... <span class="user-mention" data-user-id="344103">@John Franklin</span></p>
+
+
+
+<a name="222681389"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222681389" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222681389">(Jan 14 2021 at 05:27)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> you're correct. I recall the issue where the CMI was abstracted a bit so this was possible</p>
+
+
+
+<a name="222722144"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222722144" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> John Franklin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222722144">(Jan 14 2021 at 14:17)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span> , yes Silkscreen does support configuration stored in the database, and what you said is one of the primary reasons why.</p>
+
+
+
+<a name="222722417"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222722417" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> John Franklin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222722417">(Jan 14 2021 at 14:19)</a>:</h4>
+<p>In addition, there is a memory-backed storage configuration driver (<a href="https://github.com/silkscreencms-contrib/config_memory">https://github.com/silkscreencms-contrib/config_memory</a>) that is useful for storing overrides from settings.local.php.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/silkscreencms-contrib/config_memory" style="background-image: url(https://avatars2.githubusercontent.com/u/24680995?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/silkscreencms-contrib/config_memory" title="silkscreencms-contrib/config_memory">silkscreencms-contrib/config_memory</a></div><div class="message_embed_description">Memory-based configuration storage driver. Contribute to silkscreencms-contrib/config_memory development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="222722498"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222722498" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> John Franklin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222722498">(Jan 14 2021 at 14:20)</a>:</h4>
+<p>The README.md in the Layered Configuration driver explains how to set up the memory + database to provide overrides. <a href="https://github.com/silkscreencms-contrib/config_layered">https://github.com/silkscreencms-contrib/config_layered</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/silkscreencms-contrib/config_layered" style="background-image: url(https://avatars2.githubusercontent.com/u/24680995?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/silkscreencms-contrib/config_layered" title="silkscreencms-contrib/config_layered">silkscreencms-contrib/config_layered</a></div><div class="message_embed_description">Layered configuration storage driver. Contribute to silkscreencms-contrib/config_layered development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="222722702"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222722702" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> John Franklin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222722702">(Jan 14 2021 at 14:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> , the Silkscreen site needs a lot of attention, indeed.</p>
+
+
+
+<a name="222722807"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/222722807" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> John Franklin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#222722807">(Jan 14 2021 at 14:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@Luke McCormick (cellear)</span> , the database-backed configuration is the default for Silkscreen.</p>
+
+
+
+<a name="223005979"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/223005979" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#223005979">(Jan 16 2021 at 21:00)</a>:</h4>
+<p>How far has Silkscreen diverged from core Backdrop?  Would it be feasible to un-fork at some point, and make its features options for standard Backdrop?</p>
+
+
+
+<a name="223008303"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20Management/near/223008303" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20Management.html#223008303">(Jan 16 2021 at 21:49)</a>:</h4>
+<p>John tries to keep Silkscreen pretty close to Backdrop, other than the things he felt should stay. His presentation from Backdrop LIVE gives more details on what is different: <a href="https://www.youtube.com/watch?v=Uk3e5fpmzBM">YouTube - YouTube</a></p>
+<div class="youtube-video message_inline_image"><a data-id="Uk3e5fpmzBM" href="https://www.youtube.com/watch?v=Uk3e5fpmzBM"><img src="https://i.ytimg.com/vi/Uk3e5fpmzBM/default.jpg"></a></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

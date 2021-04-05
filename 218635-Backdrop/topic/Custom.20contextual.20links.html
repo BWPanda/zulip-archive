@@ -1,0 +1,69 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Custom.20contextual.20links.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html">Custom contextual links</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="189028810"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20contextual%20links/near/189028810" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html#189028810">(Feb 25 2020 at 15:24)</a>:</h4>
+<p>In a custom module that is building a custom block, how can I add contextual links beyond the basic "Configure block" link that is added by default? I <a href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/contextual/contextual.api.php" target="_blank" title="https://github.com/backdrop/backdrop/blob/1.x/core/modules/contextual/contextual.api.php">looked in the api file</a> for the Contextual links module but it's not clear to me from that.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/contextual/contextual.api.php" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/contextual/contextual.api.php" target="_blank" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="189031423"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20contextual%20links/near/189031423" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html#189031423">(Feb 25 2020 at 15:49)</a>:</h4>
+<p>Try <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_menu_contextual_links_alter/1" target="_blank" title="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_menu_contextual_links_alter/1">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_menu_contextual_links_alter/1</a></p>
+
+
+
+<a name="189031833"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20contextual%20links/near/189031833" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html#189031833">(Feb 25 2020 at 15:53)</a>:</h4>
+<p>Thanks -- taking a look now.</p>
+
+
+
+<a name="189033072"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20contextual%20links/near/189033072" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html#189033072">(Feb 25 2020 at 16:07)</a>:</h4>
+<p>When I add that hook to a custom module, it fires for all contextual links on the page I'm currently viewing. I'm having trouble seeing how to target only the block I've created.</p>
+
+
+
+<a name="189033252"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20contextual%20links/near/189033252" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html#189033252">(Feb 25 2020 at 16:09)</a>:</h4>
+<p><span aria-label="looking" class="emoji emoji-1f440" role="img" title="looking">:looking:</span> <a href="https://www.drupal.org/docs/7/administering-drupal-7-site/working-with-contextual-links#s-adding-new-contextual-links" target="_blank" title="https://www.drupal.org/docs/7/administering-drupal-7-site/working-with-contextual-links#s-adding-new-contextual-links">https://www.drupal.org/docs/7/administering-drupal-7-site/working-with-contextual-links#s-adding-new-contextual-links</a></p>
+
+
+
+<a name="189036508"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20contextual%20links/near/189036508" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html#189036508">(Feb 25 2020 at 16:45)</a>:</h4>
+<p>hook_menu_contextual_links_alter() will only work to modify existing contextual links, not create new ones.</p>
+
+
+
+<a name="189036634"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20contextual%20links/near/189036634" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html#189036634">(Feb 25 2020 at 16:46)</a>:</h4>
+<p>I think that Drupal doc should be a good place to start, with the caveat that some things might be different in Backdrop.</p>
+
+
+
+<a name="189135811"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20contextual%20links/near/189135811" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20contextual.20links.html#189135811">(Feb 26 2020 at 17:22)</a>:</h4>
+<p>I got it working by following the Drupal docs linked above, using both <code>hook_block_view_alter()</code> and <code>hook_menu()</code>.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

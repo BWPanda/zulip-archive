@@ -1,0 +1,69 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html">$db_prefix in Backdrop?</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="233040037"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24db_prefix%20in%20Backdrop%3F/near/233040037" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html#233040037">(Apr 03 2021 at 23:14)</a>:</h4>
+<p>In Drupal, one could make queries to tables in external databases by setting <code>$db_prefix[$table_name] = 'databasename.'</code> (typically in settings.php). Is there an equivalent functionality in Backdrop? An example application being to do a JOIN between the Backdrop {user} table in the Backdrop db and the CiviCRM {civicrm_uf_match} table in the separate CiviCRM db (which worked in Drupal).</p>
+
+
+
+<a name="233040652"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24db_prefix%20in%20Backdrop%3F/near/233040652" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html#233040652">(Apr 03 2021 at 23:28)</a>:</h4>
+<p><code>$db_prefix</code> is still in Backdrop: <a href="https://github.com/backdrop/backdrop/blob/a259d2d276e5f43db925a408a2f06944eee25324/settings.php#L16">https://github.com/backdrop/backdrop/blob/a259d2d276e5f43db925a408a2f06944eee25324/settings.php#L16</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/a259d2d276e5f43db925a408a2f06944eee25324/settings.php#L16" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/a259d2d276e5f43db925a408a2f06944eee25324/settings.php#L16" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="233041253"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24db_prefix%20in%20Backdrop%3F/near/233041253" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html#233041253">(Apr 03 2021 at 23:39)</a>:</h4>
+<p>My understanding is that $database_prefix in Backdrop is different from $db_prefix in Drupal. $database_prefix is a prefix to be used per-site when you have multiple sites in the same database; it gets added to each table name to distinguish multiple tables within the same database. $db_prefix was something that allowed you to use different databases within the same site. Is that not right?</p>
+
+
+
+<a name="233041339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24db_prefix%20in%20Backdrop%3F/near/233041339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html#233041339">(Apr 03 2021 at 23:40)</a>:</h4>
+<p>Also, isn't $database_prefix a string, whereas $db_prefix was an array?</p>
+
+
+
+<a name="233045062"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24db_prefix%20in%20Backdrop%3F/near/233045062" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html#233045062">(Apr 04 2021 at 00:56)</a>:</h4>
+<p>Mmm, looks like it. I've personally never user either of them... Sorry.</p>
+
+
+
+<a name="233078952"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24db_prefix%20in%20Backdrop%3F/near/233078952" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html#233078952">(Apr 04 2021 at 12:43)</a>:</h4>
+<p><span class="user-mention" data-user-id="335929">@bugfolder</span> you can still specify multiple databases. The syntax is still there. It's just simplified in settings.php to make it easier for most people. I think you can just use Drupal 7's format</p>
+
+
+
+<a name="233078979"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24db_prefix%20in%20Backdrop%3F/near/233078979" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html#233078979">(Apr 04 2021 at 12:43)</a>:</h4>
+<p>OK, thx!</p>
+
+
+
+<a name="233090463"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24db_prefix%20in%20Backdrop%3F/near/233090463" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24db_prefix.20in.20Backdrop.3F.html#233090463">(Apr 04 2021 at 15:29)</a>:</h4>
+<p>Yes, thanks, just needed to use the "long-form" databases declaration.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,171 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Update.20hooks.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html">Update hooks</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="189939383"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189939383" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189939383">(Mar 06 2020 at 22:07)</a>:</h4>
+<p>I'm trying to merge in some upstream changes on a module. There is an update hook in the upstream changes (let's say <code>modulename_update_7103</code>). My understanding is I should update <code>modulename_update_last_removed</code> to <code>7103</code> and then rename the function to <code>modulename_update_1000</code> so Backdrop picks it up. Is that right? </p>
+<p>(And if so, any ideas why <code>modulename_update_1000</code> does not seem to get triggered in my local dev testing?)</p>
+
+
+
+<a name="189939716"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189939716" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189939716">(Mar 06 2020 at 22:11)</a>:</h4>
+<p>is there already an update hook in the backdrop verstion that is <code>&gt; 1000</code>?</p>
+
+
+
+<a name="189939757"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189939757" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189939757">(Mar 06 2020 at 22:12)</a>:</h4>
+<p>if so then the hook will not trigger;</p>
+
+
+
+<a name="189939772"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189939772" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189939772">(Mar 06 2020 at 22:12)</a>:</h4>
+<p>There are no other Backdrop update hooks.</p>
+
+
+
+<a name="189939823"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189939823" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189939823">(Mar 06 2020 at 22:13)</a>:</h4>
+<p>Check the schema_version for the module in the system database table.</p>
+
+
+
+<a name="189941066"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189941066" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189941066">(Mar 06 2020 at 22:28)</a>:</h4>
+<p>Hmm.. Schema version in the system table says <code>7102</code></p>
+
+
+
+<a name="189941271"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189941271" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189941271">(Mar 06 2020 at 22:31)</a>:</h4>
+<p>What happens if you manually set it to 7103?</p>
+
+
+
+<a name="189941580"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189941580" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189941580">(Mar 06 2020 at 22:36)</a>:</h4>
+<p>Nothing, unfortunately.</p>
+
+
+
+<a name="189941673"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189941673" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189941673">(Mar 06 2020 at 22:37)</a>:</h4>
+<p>Does this mean something was wrong in the <code>.install</code> file in the initial porting? (ie. it should have reset the schema version to 1000)</p>
+
+
+
+<a name="189942113"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189942113" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189942113">(Mar 06 2020 at 22:44)</a>:</h4>
+<p>Maybe. The fact that the schema_version was only 7102 might be an indicator of that. Maybe check the spelling of the function names. Other than that, I'm not sure what else to look for.</p>
+
+
+
+<a name="189942681"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189942681" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189942681">(Mar 06 2020 at 22:53)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256573">Laryn</span> <a href="#narrow/stream/218635-General/topic/Update.20hooks/near/189941066" title="#narrow/stream/218635-General/topic/Update.20hooks/near/189941066">said</a>:</p>
+<blockquote>
+<p>Hmm.. Schema version in the system table says <code>7102</code></p>
+</blockquote>
+<p>in backdrop DB?</p>
+
+
+
+<a name="189943182"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189943182" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189943182">(Mar 06 2020 at 23:00)</a>:</h4>
+<p>Yes, in the Backdrop database.</p>
+
+
+
+<a name="189943923"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189943923" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189943923">(Mar 06 2020 at 23:11)</a>:</h4>
+<p>did you have a <code>hook_update_7102()</code> when it first installed?</p>
+
+
+
+<a name="189944031"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189944031" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189944031">(Mar 06 2020 at 23:13)</a>:</h4>
+<p>That may have been left in there when the port was first done.</p>
+
+
+
+<a name="189944042"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189944042" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189944042">(Mar 06 2020 at 23:13)</a>:</h4>
+<p>Any way to reset that schema version?</p>
+
+
+
+<a name="189944339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189944339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189944339">(Mar 06 2020 at 23:18)</a>:</h4>
+<p>You can change it in the database. You do need to clear caches after you make the change.</p>
+
+
+
+<a name="189946855"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189946855" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189946855">(Mar 07 2020 at 00:04)</a>:</h4>
+<p>How about more generally, since this module is in the wild?</p>
+
+
+
+<a name="189948169"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189948169" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189948169">(Mar 07 2020 at 00:24)</a>:</h4>
+<p>theres a <code>backdrop_set_installed_schema_version()</code></p>
+
+
+
+<a name="189948231"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189948231" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189948231">(Mar 07 2020 at 00:24)</a>:</h4>
+<p>i suspect might do?</p>
+
+
+
+<a name="189948251"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189948251" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189948251">(Mar 07 2020 at 00:24)</a>:</h4>
+<p>ymmv</p>
+
+
+
+<a name="189957719"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189957719" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189957719">(Mar 07 2020 at 05:21)</a>:</h4>
+<p>Thanks, I'll give that a shot.</p>
+
+
+
+<a name="189958460"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189958460" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189958460">(Mar 07 2020 at 05:47)</a>:</h4>
+<p>Yes!</p>
+
+
+
+<a name="189959485"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189959485" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189959485">(Mar 07 2020 at 06:27)</a>:</h4>
+<p>"Yes!" ...as in "it worked!"?</p>
+
+
+
+<a name="189969505"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Update%20hooks/near/189969505" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Update.20hooks.html#189969505">(Mar 07 2020 at 12:45)</a>:</h4>
+<p>Correct.<br>
+<a href="https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce" target="_blank" title="https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce">https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce" style="background-image: url(https://avatars0.githubusercontent.com/u/871421?s=200&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce" target="_blank" title="#50: schema version fix · backdrop-contrib/paragraphs@03ba37b">#50: schema version fix · backdrop-contrib/paragraphs@03ba37b</a></div><div class="message_embed_description">Paragraphs module to control your content flow. Contribute to backdrop-contrib/paragraphs development by creating an account on GitHub.</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

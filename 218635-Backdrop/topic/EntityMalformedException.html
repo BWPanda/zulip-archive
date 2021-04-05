@@ -1,0 +1,81 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/EntityMalformedException.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html">EntityMalformedException</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="190395365"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190395365" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190395365">(Mar 12 2020 at 14:28)</a>:</h4>
+<p>I'm getting messages like this on my content type that includes Paragraphs on load.  Everything worked fine last week.  Don't know if it's actually Paragraphs related or not.  <a href="/user_uploads/18319/EBqK9BX8EcK9-5HJR6NTmOtY/entity-error.JPG" target="_blank" title="entity-error.JPG">entity-error.JPG</a> <a href="user_uploads/18319/3Rc42oH8289ywJ3C3rKCkK8a/entity-error-log.JPG" target="_blank" title="user_uploads/18319/3Rc42oH8289ywJ3C3rKCkK8a/entity-error-log.JPG">entity-error-log.JPG</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/EBqK9BX8EcK9-5HJR6NTmOtY/entity-error.JPG" target="_blank" title="entity-error.JPG"><img src="/user_uploads/18319/EBqK9BX8EcK9-5HJR6NTmOtY/entity-error.JPG"></a></div><div class="message_inline_image"><a href="user_uploads/18319/3Rc42oH8289ywJ3C3rKCkK8a/entity-error-log.JPG" target="_blank" title="entity-error-log.JPG"><img src="user_uploads/18319/3Rc42oH8289ywJ3C3rKCkK8a/entity-error-log.JPG"></a></div>
+
+
+
+<a name="190396974"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190396974" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190396974">(Mar 12 2020 at 14:41)</a>:</h4>
+<p>It says "entity of type node," so it's probably not Paragraphs, but nodes usually aren't missing their bundles. My guess is it's probably something else (custom or contrib) that's not doing something right. Those errors are so generic, it's hard to figure out the real culprit without xdebug or loads of dpms.</p>
+
+
+
+<a name="190397453"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190397453" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190397453">(Mar 12 2020 at 14:45)</a>:</h4>
+<p>I'm trying to look at a version of the site that works and see what's different.  Something updated in the last week that began causing this.  It just rears it's head when connected to the paragraphs.</p>
+
+
+
+<a name="190398289"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190398289" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190398289">(Mar 12 2020 at 14:52)</a>:</h4>
+<p>What version do you have installed?</p>
+
+
+
+<a name="190398486"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190398486" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190398486">(Mar 12 2020 at 14:53)</a>:</h4>
+<p>Well, maybe Paragraphs is the contrib project that is not doing something right.</p>
+
+
+
+<a name="190399964"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190399964" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190399964">(Mar 12 2020 at 15:04)</a>:</h4>
+<p>I believe I've tried both the last released version of paragraphs and your fix here.  Still researching.  The site version that works definitely has an older version of the Entity Plus module.</p>
+
+
+
+<a name="190401963"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190401963" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190401963">(Mar 12 2020 at 15:20)</a>:</h4>
+<p>Anything else in the logs that might be potentially useful? Could you try the official Paragraphs release and Entity Plus 1.0.3? If that works, that would isolate it as recent changes in one of those two modules.</p>
+
+
+
+<a name="190405864"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190405864" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190405864">(Mar 12 2020 at 15:50)</a>:</h4>
+<p>I rolled back to a version from last week when things worked.  You may be off the hook with the paragraphs.  The only two modules that are different are Address Field and Login Whitelist.</p>
+
+
+
+<a name="190414984"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190414984" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Justin Keiser <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190414984">(Mar 12 2020 at 16:58)</a>:</h4>
+<p>Okay so I reapplied the module updates and everything works.  Don't know what was going on.</p>
+
+
+
+<a name="190442955"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/EntityMalformedException/near/190442955" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/EntityMalformedException.html#190442955">(Mar 12 2020 at 20:46)</a>:</h4>
+<p>Caching issue maybe?</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

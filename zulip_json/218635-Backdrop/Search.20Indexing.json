@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  et al Would love feedback on a possible improvement to search's UI for building the index: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4182\" title=\"https://github.com/backdrop/backdrop-issues/issues/4182\">https://github.com/backdrop/backdrop-issues/issues/4182</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4182\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4182\" title=\"[UX] Remove the description above the Invalidate Search Index button. · Issue #4182 · backdrop/backdrop-issues\">[UX] Remove the description above the Invalidate Search Index button. · Issue #4182 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I like the neatness of the first screenshot that @jenlampton proposed on #1321 (comment). Placing the same warning message twice on the search settings form: and then again on the confirm page: loo...</div></div></div>",
+        "id": 195366892,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1587955982
+    },
+    {
+        "content": "<p>With the PR that got merged for <a href=\"https://github.com/backdrop/backdrop-issues/issues/4197\" title=\"https://github.com/backdrop/backdrop-issues/issues/4197\">https://github.com/backdrop/backdrop-issues/issues/4197</a> the form element that allows selecting content types to limit the search indexing has been split out into node.module. I totally get that, but I was trying to achieve something like this:</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4197\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4197\" title=\"[UX] Add configuration to exclude node types from search indexing · Issue #4197 · backdrop/backdrop-issues\">[UX] Add configuration to exclude node types from search indexing · Issue #4197 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Here is the excerpt from https://github.com/backdrop-contrib/search_index_options: The core search module scans all the available content, regardless of whether some content...</div></div></div>",
+        "id": 196698099,
+        "sender_full_name": "klonos",
+        "timestamp": 1588799526
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/InSeWbeRF9ljQwRPTgyPXVXI/Screen-Shot-2020-05-07-at-12.08.00-am.png\" title=\"Screen-Shot-2020-05-07-at-12.08.00-am.png\">Screen-Shot-2020-05-07-at-12.08.00-am.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/InSeWbeRF9ljQwRPTgyPXVXI/Screen-Shot-2020-05-07-at-12.08.00-am.png\" title=\"Screen-Shot-2020-05-07-at-12.08.00-am.png\"><img src=\"/user_uploads/18319/InSeWbeRF9ljQwRPTgyPXVXI/Screen-Shot-2020-05-07-at-12.08.00-am.png\"></a></div>",
+        "id": 196698120,
+        "sender_full_name": "klonos",
+        "timestamp": 1588799540
+    },
+    {
+        "content": "<p>...and this change makes it harder now.</p>",
+        "id": 196698143,
+        "sender_full_name": "klonos",
+        "timestamp": 1588799551
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> would you adamantly object in putting the code that renders the content type checkboxes back in search.admin.inc?</p>",
+        "id": 196698244,
+        "sender_full_name": "klonos",
+        "timestamp": 1588799616
+    },
+    {
+        "content": "<p>(perhaps I should put that in a follow-up issue in GitHab)</p>",
+        "id": 196698778,
+        "sender_full_name": "klonos",
+        "timestamp": 1588799847
+    }
+]

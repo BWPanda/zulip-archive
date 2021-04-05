@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>This does not seem to be implemented in Backdrop... or did I do someting wrong? Has anyone used it sucessfully or has a workaround? <a href=\"https://www.webomelette.com/drupal-views-grouping-field-content-display-modes\" title=\"https://www.webomelette.com/drupal-views-grouping-field-content-display-modes\">https://www.webomelette.com/drupal-views-grouping-field-content-display-modes</a></p>\n<p>The goal is to have a teaser list from an Event content ype, with multiple date values &gt; one teaser per date.</p>",
+        "id": 194405936,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1587110279
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> Interesting! Maybe a bug in Entity Reference?</p>",
+        "id": 194409758,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1587112491
+    },
+    {
+        "content": "<p>Apart of that, your use case seems a bit different to the one in the linked article. There, a view is grouped by a <em>single</em> value date field, resulting in <em>multiple</em> teasers per date.</p>",
+        "id": 194410137,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1587112765
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>  Yes I know, but will need the function in several different scenarios, including the grouping feature for the team page (grouping by department).</p>",
+        "id": 194410519,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1587112983
+    },
+    {
+        "content": "<p>A workaround would be to use fields in your views. (I guess that's not what you're looking for, right?)</p>",
+        "id": 194411363,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1587113520
+    },
+    {
+        "content": "<p>Oh, I just saw that <a href=\"https://github.com/backdrop-contrib/viewsnodefield\" title=\"https://github.com/backdrop-contrib/viewsnodefield\">https://github.com/backdrop-contrib/viewsnodefield</a> is ported. That should do the trick!</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/viewsnodefield\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/viewsnodefield\" title=\"backdrop-contrib/viewsnodefield\">backdrop-contrib/viewsnodefield</a></div><div class=\"message_embed_description\">For that cool views plugin that just doesn't support node row display. - backdrop-contrib/viewsnodefield</div></div></div>",
+        "id": 194411632,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1587113660
+    },
+    {
+        "content": "<p>From the description: \"This module was created because some display plugins only work with fields (like grouping, for example).\"</p>",
+        "id": 194411730,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1587113724
+    },
+    {
+        "content": "<p>Yes, I already did solve it by using fields, it also works... this view basically shows two nodes with multi-date field <a href=\"https://lag.mazzemedia.ch/show\" title=\"https://lag.mazzemedia.ch/show\">https://lag.mazzemedia.ch/show</a></p>",
+        "id": 194412149,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1587113980
+    },
+    {
+        "content": "<p>I already used the Views Nodefield module decades ago;-) but to be honest I do not remember what I used it for... I will check it, thank you <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span></p>",
+        "id": 194412441,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1587114142
+    },
+    {
+        "content": "<p>Great teamwork <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ++ <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ++</p>",
+        "id": 194420912,
+        "sender_full_name": "klonos",
+        "timestamp": 1587119281
+    },
+    {
+        "content": "<p>grabienski** thanks for all you do (Karma: 1)</p>",
+        "id": 194420913,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1587119281
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ++ too dragonbot</p>",
+        "id": 194420967,
+        "sender_full_name": "klonos",
+        "timestamp": 1587119296
+    },
+    {
+        "content": "<p><strong>mazze.ch</strong> kudos (Karma: 1)</p>",
+        "id": 194420968,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1587119296
+    }
+]

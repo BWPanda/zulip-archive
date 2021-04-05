@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>Does anyone know if there's an existing issue for increasing the PHP version for testing? Seems like we need to move to 7.3 or so.</p>",
+        "id": 210746851,
+        "sender_full_name": "Herb",
+        "timestamp": 1600697603
+    },
+    {
+        "content": "<p>I don't know if there's a separate issue for it, but it has been discussed in at least a couple of issues.</p>",
+        "id": 210747980,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600698029
+    },
+    {
+        "content": "<p>I remember someone mentioning that there's no test box version that provides php 5.3 together with something newer than php 7.0.<br>\nAdditionally there's a small bug with the command line installer and php versions above 7.1 (<a href=\"https://github.com/backdrop/backdrop-issues/issues/4111\">https://github.com/backdrop/backdrop-issues/issues/4111</a>)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4111\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4111\" title=\"PHP warning: Headers already sent · Issue #4111 · backdrop/backdrop-issues\">PHP warning: Headers already sent · Issue #4111 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">When installing Backdrop using ./core/scripts/install.sh I see lots of the following warnings: PHP Warning: ini_set(): Headers already sent. You cannot change the session module&#39;s ini settings ...</div></div></div>",
+        "id": 210750344,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1600699111
+    },
+    {
+        "content": "<p>I'm guessing the issue should go into backdrop-ops</p>",
+        "id": 210753483,
+        "sender_full_name": "Herb",
+        "timestamp": 1600700347
+    },
+    {
+        "content": "<p>I have no idea where to put it. Is there a project for the testing infrastructure?</p>",
+        "id": 210764267,
+        "sender_full_name": "Herb",
+        "timestamp": 1600704948
+    },
+    {
+        "content": "<p>there are two issues - increase the PHP 7.x version for testing; and possibly increase from 5.3 to 5.6 (match WP's minimum?)</p>",
+        "id": 210764426,
+        "sender_full_name": "Herb",
+        "timestamp": 1600704998
+    }
+]

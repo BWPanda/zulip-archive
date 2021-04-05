@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>Running across this issue: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4942\">https://github.com/backdrop/backdrop-issues/issues/4942</a> made me decide to go ahead and ask something that has been on my mind for a while. I mainly ask because I haven't dove into theming too heavily yet to make an assessment on my own, so I figure I would ask the experts.</p>\n<p>Question is: what is Backdrop core doing about loading css and JS at the bottom of the page?</p>\n<p>This topic is basically an absolute requirement these days and if it isn't already a thing, I would like to see Core split the loading into two areas: top and bottom so that contrib can make use of where their own files load logically.</p>\n<p>Advagg has this ability but I refuse to use advagg for breaking more things than it's worth. Advagg also does not make it easy for contribs to move files around and expects the architect to be a master at knowing what will break and what won't if js or css is loaded at the bottom.</p>\n<p>To move into the times, I feel like it would be worth it if Core made it a point to declare non-rendering and non-breaking files at the end, and extend this to allow and recommend that contribs do the same.</p>\n<p>With the newest Google SEO changes coming late spring, top loading files will create low speed scores and ultimately drive SEO down for sites for not being \"compliant\".</p>\n<p>What's the general consensus on this topic?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4942\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4942\" title=\"Theme CSS loading in wrong order due to 'every_page_weight' and backdrop_css_alter() · Issue #4942 · backdrop/backdrop-issues\">Theme CSS loading in wrong order due to 'every_page_weight' and backdrop_css_alter() · Issue #4942 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug This is in response to this issue. The problem results in theme CSS and JS being loaded out of order. The issue revolves around the key &#39;every_page_weight&#39;, which is ...</div></div></div>",
+        "id": 225962623,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613033781
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> We have the option to specify 'header' or 'footer' in <a href=\"https://docs.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_add_js/1\"><code>backdrop_add_js</code></a>. We don't seem to have the same for CSS though...</p>",
+        "id": 225973979,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1613040828
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>  CSS loaded after content can make sense?</p>",
+        "id": 225975566,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1613041713
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268468\">@findlabnet(Vladimir)</span> so long as it is non-rendering related.</p>\n<p>CSS can honestly be loaded anywhere, but if it is loaded last, it can make for an unpleasant viewing experience as the browser loads the page.</p>\n<p>Usually your critical theme css needs to be at the top but it should only be a minimal subset of css to deal with that initial paint.</p>",
+        "id": 226036159,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613068145
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> thanks! And nice...</p>\n<p>Yeah CSS should probably be included to offer this ability... Fonts are another great example of moving the CSS to the bottom.</p>",
+        "id": 226036713,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613068377
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Thank you! Sorry for new question: what is \"non-rendering related\" CSS? So nice to learn new things!</p>",
+        "id": 226038192,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1613069025
+    },
+    {
+        "content": "<p><a href=\"https://docs.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_add_css/1\">https://docs.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_add_css/1</a><br>\n<a href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/common.inc#L3315\">https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/common.inc#L3315</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/common.inc#L3315\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/ac819913fdb7aadcec9c7579fd33920327526792/core/includes/common.inc#L3315\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 226038342,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613069092
+    },
+    {
+        "content": "<p>Mainly stuff that would load to keep the page from jumping all around when it's first loading. Areas \"below the fold\". In other words, areas that are hidden when the page first loads. If all your tables are hidden when the page is first loading, then the CSS that makes them pretty could be added to the bottom of the page because it isn't ever shown on initial page load. That's just one example.</p>",
+        "id": 226038800,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613069303
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> looks like that deals with the weighting but not the position? Am I looking at it right?</p>",
+        "id": 226039161,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613069484
+    },
+    {
+        "content": "<p>I didn't actually read it, so I don't know.</p>",
+        "id": 226040012,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613069803
+    },
+    {
+        "content": "<p>Does the inline option mean it gets all printed in header of the doc?</p>",
+        "id": 226043692,
+        "sender_full_name": "Herb",
+        "timestamp": 1613071205
+    },
+    {
+        "content": "<p>When <code>$options['type'] = 'inline';</code> then Backdrop assumes the value of <code>$data</code> is the content of a CSS document and prints it directly to the page</p>",
+        "id": 226045065,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1613071747
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span>, maintainer responded <a href=\"https://github.com/backdrop-contrib/token_filter/issues/3\">here</a>, which was the module issue I linked to in the PR and transfer issue.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/token_filter/issues/3\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/token_filter/issues/3\" title=\"Call to nonexistent function token_get_entity_mapping() · Issue #3 · backdrop-contrib/token_filter\">Call to nonexistent function token_get_entity_mapping() · Issue #3 · backdrop-contrib/token_filter</a></div><div class=\"message_embed_description\">On line 39 of token_filter.module, there is a call to token_get_entity(). If this point is reached in the code, the module crashes because that function doesn&#39;t exist in the Backdrop version of...</div></div></div>",
+        "id": 226046520,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613072321
+    },
+    {
+        "content": "<p>TiA for doing the transfer!</p>",
+        "id": 226046561,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613072341
+    },
+    {
+        "content": "<p>Can you remove the bug-fix commit from the PR: <a href=\"https://github.com/backdrop-ops/contrib/issues/492\">https://github.com/backdrop-ops/contrib/issues/492</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/492\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/492\" title=\"Take over as maintainer of Token Filter module · Issue #492 · backdrop-ops/contrib\">Take over as maintainer of Token Filter module · Issue #492 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Per this issue, I would like to take over as maintainer of the Token Filter module. Here's the associated PR.</div></div></div>",
+        "id": 226046704,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613072407
+    },
+    {
+        "content": "<p>I'd like to update the readme and grant you permission to merge the bug-fix commit :)</p>",
+        "id": 226046744,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613072425
+    },
+    {
+        "content": "<p>One thing to keep in mind when changing the CSS loading location is that any module that puts CSS inline will probably be broken by this because it changes the override order.</p>",
+        "id": 226046847,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1613072477
+    },
+    {
+        "content": "<p>Yeah... I get why it's \"best practice\" to move all of this stuff to the bottom, but man does it create a lot of headaches...</p>\n<p>There needs to be some sort of library where JS and CSS can be put through a rendering process and it recreates JS and CSS files on the fly based on whether it needs to load at the top or can be relegated to the bottom. Completely out of scope for Backdrop, it's just a fun thought.</p>",
+        "id": 226053399,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613075536
+    }
+]

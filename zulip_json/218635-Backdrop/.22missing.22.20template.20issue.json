@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I figured out a combo to avoid the missing template <code>MODULE.views.inc</code> that happens with a views plugin. I can't recall what module it was. I ported <a href=\"https://github.com/backdrop-contrib/eva\">https://github.com/backdrop-contrib/eva</a>. Not sure if it needs to be exactly like this but I think having <code>templates/MODULE.theme.inc</code> and also adding <code>theme file</code> and/or <code>theme path</code> in <code>hook_views_plugins</code>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/eva\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/eva\" title=\"backdrop-contrib/eva\">backdrop-contrib/eva</a></div><div class=\"message_embed_description\">Provides a Views display plugin that allows the output of a View to be attached to the content of any Backdrop entity. - backdrop-contrib/eva</div></div></div>",
+        "id": 215635923,
+        "sender_full_name": "Herb",
+        "timestamp": 1604521160
+    },
+    {
+        "content": "<p>This one? <a href=\"https://github.com/backdrop-contrib/views_accordion/issues/6\">https://github.com/backdrop-contrib/views_accordion/issues/6</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/views_accordion/issues/6\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/views_accordion/issues/6\" title=\"Warning: include_once(): Failed opening... · Issue #6 · backdrop-contrib/views_accordion\">Warning: include_once(): Failed opening... · Issue #6 · backdrop-contrib/views_accordion</a></div><div class=\"message_embed_description\">It doesn&#39;t seem to affect functionality but I am seeing this in the log: Warning: include_once(): Failed opening &#39;/app/modules/views_accordion/templates/views_accordion.views.inc&#39; for i...</div></div></div>",
+        "id": 215636063,
+        "sender_full_name": "Laryn",
+        "timestamp": 1604521235
+    },
+    {
+        "content": "<p>I think so</p>",
+        "id": 215644852,
+        "sender_full_name": "Herb",
+        "timestamp": 1604525973
+    }
+]

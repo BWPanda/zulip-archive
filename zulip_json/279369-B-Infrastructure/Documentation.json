@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> The Docs site already has the content type Handbook Page setup as the Book child type. Since you can only have one content type set as Book child types, then we can't use Books for the migrated Documentation... Unless we re-do the migration to importthe nodes into the Handbook Page content type instead...?</p>",
+        "id": 232350417,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617059958
+    },
+    {
+        "content": "<p>I was thinking though... Books are really only useful because of the pager-type links at the bottom that let you navigate between pages. Otherwise, adding nodes to a menu provides the same functionality of being able to sort and re-arrange them, and display them in a hierarchy. What if we just used the menu for organisation of documentation, and possibly wrote a new contrib module that provided pager-type links for navigating between nodes in a menu hierarchy?</p>",
+        "id": 232351444,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617060608
+    },
+    {
+        "content": "<p>I'd be fine with that too. Is there value to maintaining the two separate types?</p>",
+        "id": 232351510,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1617060667
+    },
+    {
+        "content": "<p>I don't think there's a point having a separate content type, especially since the Handbook Page content type has existing documentation on the Docs site that'll be merged with the migrated nodes anyway.</p>",
+        "id": 232351800,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617060850
+    },
+    {
+        "content": "<p>I'll re-do the migration for now to use the existing content type, and open an issue for my idea re. books/menus.</p>",
+        "id": 232351828,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617060879
+    },
+    {
+        "content": "<p>Migration feed has been updated, and I also fixed this issue of missing formatting in the migrated Body field.</p>",
+        "id": 232354941,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617063216
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Inline images are now working, however they're referencing the images on <a href=\"http://B.org\">B.org</a> (which means they can't be edited via CKEditor). Do you have a recommended way to move images over and update the inline URLs to them?</p>",
+        "id": 232355047,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617063291
+    },
+    {
+        "content": "<p>Hm, I could do that in an update handler. I bet most of those images pre-date inline image handling on <a href=\"http://b.org\">b.org</a> too.</p>",
+        "id": 232360373,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1617067798
+    },
+    {
+        "content": "<p>I've just copied the <code>inline-images</code> folder from B.org's <code>files</code> directory to Docs' one.</p>",
+        "id": 232360522,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617067920
+    },
+    {
+        "content": "<p>I was about to look into Feeds Tamper...</p>",
+        "id": 232360564,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617067932
+    },
+    {
+        "content": "<p>I also setup a cron job to re-copy that folder every 12 hours (in case there are changes)</p>",
+        "id": 232361047,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617068342
+    },
+    {
+        "content": "<p>Ok, think I got it working with Feeds Tamper</p>",
+        "id": 232361389,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617068705
+    },
+    {
+        "content": "<p>E.g. <a href=\"https://docs.backdropcms.org/documentation/backdrop-cms-user-guide\">https://docs.backdropcms.org/documentation/backdrop-cms-user-guide</a></p>",
+        "id": 232361411,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617068721
+    },
+    {
+        "content": "<p>Hmm, those images still can't be edited via CKEditor... Not sure how to fix that.</p>",
+        "id": 232361651,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617068921
+    },
+    {
+        "content": "<p>Probably not a major issue though.</p>",
+        "id": 232361667,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617068936
+    },
+    {
+        "content": "<p>Ok, so I've made a start on this, see <a href=\"https://docs.backdropcms.org/documentation/getting-started\">https://docs.backdropcms.org/documentation/getting-started</a> (bottom of the right sidebar menu). I created blank (for now) book pages for the sections, and am then going through the migrated content and editing it up update the book settings and menu settings.</p>",
+        "id": 232363170,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617070214
+    },
+    {
+        "content": "<p>The problem is I need to do both - add it to the appropriate book/parent, and add it to the appropriate menu/parent. These two things seem very similar, and it feels like I'm duplicating work. So I'm going to stop here for now, and file an issue about making menus act more like books, then we'll only need to edit each node to update the menu settings, and won't have to worry about books anymore.</p>",
+        "id": 232363283,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617070325
+    },
+    {
+        "content": "<p>Moving this conversation back to the issue queue: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/747#issuecomment-809865025\">https://github.com/backdrop-ops/backdropcms.org/issues/747#issuecomment-809865025</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/747#issuecomment-809865025\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/747#issuecomment-809865025\" title=\"Setup new docs.backdropcms.org website for *all* documentation · Issue #747 · backdrop-ops/backdropcms.org\">Setup new docs.backdropcms.org website for *all* documentation · Issue #747 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">The Idea I made a comment about Backdrop&#39;s documentation a while ago. Now I&#39;d like to expand upon it and make an official request for my suggestions... Let&#39;s setup a new (Backdrop-power...</div></div></div>",
+        "id": 232365816,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1617072764
+    }
+]

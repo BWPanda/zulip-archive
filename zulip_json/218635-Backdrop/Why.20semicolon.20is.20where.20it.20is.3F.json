@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Quote from <a href=\"https://docs.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.api.php/function/hook_block_info/1\">https://docs.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.api.php/function/hook_block_info/1</a>:</p>\n<blockquote>\n<p><strong>An associative array whose keys define the delta for each block and whose</strong>: values contain the block descriptions. </p>\n</blockquote>\n<p>Is it a mistake or it's my imperfect knowledge of English? I wouldn't divide the sentence like that.</p>",
+        "id": 224568145,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611986214
+    },
+    {
+        "content": "<p>The colon should be removed, and then, I guess, the rest of the sentence bolded.</p>",
+        "id": 224569688,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1611989222
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> Its because the @return statement doesn't have a data type after it. See this issue for details: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3954\">https://github.com/backdrop/backdrop-issues/issues/3954</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3954\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3954\" title=\"Add missing data type indicators to @return tags throughout core · Issue #3954 · backdrop/backdrop-issues\">Add missing data type indicators to @return tags throughout core · Issue #3954 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">According to the documentation standards: The @return tag is followed by a data type indicator, and then a newline. The following paragraph is considered by the API module to be documentation. and:...</div></div></div>",
+        "id": 224569804,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611989433
+    },
+    {
+        "content": "<p>The bold part should be the return keyword and then the following datatype. Then a colon is added, and the rest of the text follows. However if there is no datatype, then the whole first line is bolded and the colon added after that.</p>",
+        "id": 224569818,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611989520
+    },
+    {
+        "content": "<p>Since the documentation standards mandate a datatype, then the fix is to add data types where they're missing, as per the issue I linked to.</p>",
+        "id": 224569865,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611989564
+    },
+    {
+        "content": "<p>So no need to report this particular case if the issue is known?</p>",
+        "id": 224569869,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611989588
+    },
+    {
+        "content": "<p>No need, but you're welcome to help fix it via that issue if you like <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 224569872,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611989617
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F/near/224569872\">said</a>:</p>\n<blockquote>\n<p>No need, but you're welcome to help fix it via that issue if you like <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n</blockquote>\n<p>Oh, so many other more important things to do, I just pass this time to the issue you referenced.</p>",
+        "id": 224570039,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1611989991
+    },
+    {
+        "content": "<p>I understand. That's why I haven't gotten back to it either.</p>",
+        "id": 224570099,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611990068
+    }
+]

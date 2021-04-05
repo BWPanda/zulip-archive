@@ -1,0 +1,87 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Spam.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html">Spam</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="217054804"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/217054804" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#217054804">(Nov 17 2020 at 20:03)</a>:</h4>
+<p>I haven't had a chance to dig into spam prevention, but wanted to throw my two cents out there.</p>
+<p>On Drupal 7, I run two spam prevention modules in tandom and get virtually zero spam.</p>
+<p>Botcha<br>
+Honeypot</p>
+<p>I've been testing both recaptcha v2 and v3 and have found it to be an utter joke for spam prevention.</p>
+<p>Botcha does experience a bug with pages that require JavaScript to run on them (not exactly sure what the problem is) but outside of that, I have had 20 or so sites over the years running this combination and get very little spam. Maybe several per month.</p>
+<p>I've never had anyone complain about their messages not getting received, or problems with submissions.</p>
+<p>If someone ever wants to tackle spam prevention, I would recommend looking at those two modules to see if you can reverse engineer why the combination of them is so effective.</p>
+<p>Oh, one complaint from users: they can't register because they autofill and blow through it too quickly. I simply tell them to not use autofill.</p>
+
+
+
+<a name="217059203"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/217059203" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#217059203">(Nov 17 2020 at 20:38)</a>:</h4>
+<p>Autofill is becoming more and more popular I think (what with passwords needing to be stronger, the rise of online password managers, more browsers offering this feature, etc.). That's why I don't like Honeypot. I prefer Antibot.</p>
+
+
+
+<a name="217091923"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/217091923" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#217091923">(Nov 18 2020 at 03:14)</a>:</h4>
+<p>Antibot... I even started using it on old D7 projects, replacing captcha and honeypot.</p>
+
+
+
+<a name="217132617"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/217132617" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#217132617">(Nov 18 2020 at 13:17)</a>:</h4>
+<p>I'll check it out.</p>
+<p>Keep in mind that registration/login pages are the main ones that suffer from timegate types of prevention.</p>
+<p>Webforms and comments usually do not.</p>
+<p>If antibot is a solid alternative, then that's a good route but if it doesn't work all that well either, I'm suggesting to look into the botcha and Honeypot combo because I have 20+ sites under my belt that says it does work to a ~95% degree of effectiveness.</p>
+
+
+
+<a name="217144510"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/217144510" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#217144510">(Nov 18 2020 at 14:54)</a>:</h4>
+<p>What's "botcha"? Is it on Backdrop too?</p>
+
+
+
+<a name="217173341"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/217173341" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#217173341">(Nov 18 2020 at 18:02)</a>:</h4>
+<p>"BOTCHA is a highly configurable non-CAPTCHA spam protection framework." <a href="https://www.drupal.org/project/botcha">https://www.drupal.org/project/botcha</a> It's been mostly unmaintained for many years.</p>
+
+
+
+<a name="217173610"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/217173610" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#217173610">(Nov 18 2020 at 18:04)</a>:</h4>
+<p>I have a large, busy site I have maintained for several years that used Botcha for a while. Then we ran into a problem that was causing non-spam form submissions to be rejected. After many hours of pouring through the code and the issue queue, I was not able to come up with a reasonable solution to the problem (though I found and fixed many other smaller bugs in the process). Part of the problem is that the module is coded to work around the D7 hook system to use OOP in such a way that the code is convoluted and hard to follow. We ended up limiting its use in favor of Honeypot.</p>
+
+
+
+<a name="217320182"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/217320182" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#217320182">(Nov 19 2020 at 19:41)</a>:</h4>
+<p>I had all sorts of problems with Botcha too in the beginning. I found that only using one recipe was needed in combination with Honeypot to stop the spam. I don't remember off the top of my head which one, but I think it was the Honeypot recipe on Botcha. So I was basically running two Honeypot methods from two modules.</p>
+
+
+
+<a name="219700317"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Spam/near/219700317" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Spam.html#219700317">(Dec 12 2020 at 09:44)</a>:</h4>
+<p>Update: been running antibot (in addition to honeypot and recaptchav3 and haven't had any spam.</p>
+<p>I need to disable captch... Things to do.</p>
+<p>Thanks for the heads up <span class="user-mention" data-user-id="269428">@mazze.ch</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

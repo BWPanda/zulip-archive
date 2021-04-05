@@ -1,0 +1,1131 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Hosting.20options.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html">Hosting options</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="195366690"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195366690" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195366690">(Apr 27 2020 at 02:46)</a>:</h4>
+<p>The agency I work for has open-sourced/soft-lunched <a href="https://github.com/salsadigitalauorg/merlin-framework" title="https://github.com/salsadigitalauorg/merlin-framework">https://github.com/salsadigitalauorg/merlin-framework</a> which is a CMS-agnostic, any-to-any migration framework ...we've used it to migrate many projects to GovCMS (but unfortunately I wasn't involved in these migration projects, so don't know how to use it <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ) ...I thought that it might be of use to others.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/salsadigitalauorg/merlin-framework" style="background-image: url(https://repository-images.githubusercontent.com/191843023/cdaec280-8641-11ea-80a8-72fe7b1db394)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/salsadigitalauorg/merlin-framework" title="salsadigitalauorg/merlin-framework">salsadigitalauorg/merlin-framework</a></div><div class="message_embed_description">Merlin - The Migration Wizard. Contribute to salsadigitalauorg/merlin-framework development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="195366698"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195366698" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195366698">(Apr 27 2020 at 02:47)</a>:</h4>
+<blockquote>
+<p>Merlin Framework provides a standardised method for migrating content from a website (markup) to more structured data.</p>
+<p>This allows for simplified migration of web content to a new CMS or other systems.</p>
+</blockquote>
+
+
+
+<a name="195366749"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195366749" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195366749">(Apr 27 2020 at 02:48)</a>:</h4>
+<p>...I think that it roughly works by parsing a website and then creating db records based on a .yml configuration.</p>
+
+
+
+<a name="195389249"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195389249" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195389249">(Apr 27 2020 at 08:57)</a>:</h4>
+<p>Interesting tool. It seems to grab publicly available content and re-structures it based on configuration (mappings based on Xpath). And it seems to ship with a crawler to automatically collect urls.</p>
+
+
+
+<a name="195400238"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195400238" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195400238">(Apr 27 2020 at 10:49)</a>:</h4>
+<p>Yup, that's how it works. The framework/API is what we've open-sourced; there's also a GUI in the works, but I think that one will be kept proprietary.</p>
+
+
+
+<a name="195410127"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195410127" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195410127">(Apr 27 2020 at 12:36)</a>:</h4>
+<p>What was the use case <span class="user-mention" data-user-id="256729">@klonos</span> ? Were there gov websites where they didn't have access to db?</p>
+
+
+
+<a name="195438083"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195438083" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195438083">(Apr 27 2020 at 16:01)</a>:</h4>
+<p>Old/legacy gov sites built in things that do not have a migration path to Drupal (even plain HTML sites).</p>
+
+
+
+<a name="195438372"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195438372" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195438372">(Apr 27 2020 at 16:03)</a>:</h4>
+<p>...there was also a requirement for close-to-zero downtime. They'd run the script multiple times until they were happy with the result, then they'd place a small content freeze and port to Drupal (GovCMS) ...as opposed to placing the content freeze for the entirety of the migration.</p>
+
+
+
+<a name="195482964"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195482964" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195482964">(Apr 27 2020 at 22:29)</a>:</h4>
+<p>...a bit of more info on Merlin from the main developer involved in its development:</p>
+<blockquote>
+<p>It’s a soft launch as there are still a few things we’re hoping to clean up (namely around docs/onboarding) and a couple bugs to squash. ...Merlin was built first and foremost to help make migrations from legacy CMS (or any website) to Drupal easier. It crawls and scrapes content and creates structured json ready for import via migrate api.</p>
+<p>It’s got support for menus, taxonomy, content, paragraphs (incl. reusable paragraphs via library), media, linkit url rewriting, media, and plenty more. It’s also generic by nature, so can be used for migrations to Wordpress, or to create structured data for any other purpose (e.g ecommerce competitive pricing analysis, static site exporter, 404 link checker across sites)..</p>
+<p>We’ll aim to launch a blog series of how-to guides that help explain all the use cases, it’s still early days and an evolving tool but hopefully it’ll become a go-to when people think about content migration.</p>
+</blockquote>
+
+
+
+<a name="195482986"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195482986" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195482986">(Apr 27 2020 at 22:29)</a>:</h4>
+<p>docs: <a href="https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started" title="https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started">https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started" style="background-image: url(https://salsadigitalauorg.github.io/merlin-framework/img/undraw_online.svg)"></a><div class="data-container"><div class="message_embed_title"><a href="https://salsadigitalauorg.github.io/merlin-framework/docs/getting-started" title="Getting Started · Merlin">Getting Started · Merlin</a></div><div class="message_embed_description">&lt;p&gt;Merlin Framework provides a standardised method for migrating content from a website (markup) to more structured data.&lt;/p&gt;
+</div></div></div>
+
+
+
+<a name="195633587"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195633587" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195633587">(Apr 28 2020 at 22:03)</a>:</h4>
+<p>just realised Gor isnt on Zulip. how do we ping him when Zen is acting up? go back to gitter?</p>
+
+
+
+<a name="195895845"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195895845" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195895845">(Apr 30 2020 at 20:19)</a>:</h4>
+<p>Is @gor on Zulip? does anyone know?</p>
+
+
+
+<a name="195899490"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195899490" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195899490">(Apr 30 2020 at 20:50)</a>:</h4>
+<blockquote>
+<p>The difference is that some people want to go back and see what they missed in the real-time discussion and to read several days of the real time discussion</p>
+</blockquote>
+<p>This is the opposite of real-time :)</p>
+
+
+
+<a name="195899559"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195899559" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195899559">(Apr 30 2020 at 20:50)</a>:</h4>
+<blockquote>
+<p>I think that some of our users like Zulip, because if you choose to do that, it's much easier to catch up.</p>
+</blockquote>
+<p>I got the feeling from the Zulip issue queue that this was the intention of Zulip: to make it easier to read past convo's. And that the real-time discussion experience was not as important to the creators as the ease-of-reading what happened in the past</p>
+
+
+
+<a name="195900007"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195900007" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195900007">(Apr 30 2020 at 20:54)</a>:</h4>
+<p>Since I'm a firm believer of "anything important should exist somewhere other than chat" I don't care what was said in chat yesterday. If it was important then it will also be summarized someplace where it is intended to be read (like an issue, or blog post). I use threads (when I remember) to move my side-conversations (...like "mmmm sandwich") out of the way of people who are here for a real conversation :)</p>
+
+
+
+<a name="195900113"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/195900113" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#195900113">(Apr 30 2020 at 20:55)</a>:</h4>
+<p>And since I don't think anyone here tomorrow reading about weekly meetings today cares how good my sandwich was, i wanted to move that that out of the way for them, too. :D</p>
+
+
+
+<a name="196841995"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196841995" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196841995">(May 07 2020 at 23:15)</a>:</h4>
+<p>ping <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span></p>
+
+
+
+<a name="196842035"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842035" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842035">(May 07 2020 at 23:15)</a>:</h4>
+<p>pong;</p>
+
+
+
+<a name="196842449"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842449" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842449">(May 07 2020 at 23:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> Did you fix the sanitize files and database exports recently?</p>
+
+
+
+<a name="196842465"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842465" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842465">(May 07 2020 at 23:21)</a>:</h4>
+<p>no</p>
+
+
+
+<a name="196842484"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842484" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842484">(May 07 2020 at 23:21)</a>:</h4>
+<p>It looks like it is working to me.</p>
+
+
+
+<a name="196842541"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842541" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842541">(May 07 2020 at 23:22)</a>:</h4>
+<p>I cleaned off some of the old file from the previous release of the sanitizer.</p>
+
+
+
+<a name="196842547"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842547" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842547">(May 07 2020 at 23:22)</a>:</h4>
+<p><em>sanitizer</em> ;)</p>
+
+
+
+<a name="196842563"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842563" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842563">(May 07 2020 at 23:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> Am I missing something?</p>
+
+
+
+<a name="196842791"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842791" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842791">(May 07 2020 at 23:24)</a>:</h4>
+<p>maybe when i checked it was too soon and the new file/db runs hadn't happened yet; not sure</p>
+
+
+
+<a name="196842814"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842814" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842814">(May 07 2020 at 23:25)</a>:</h4>
+<p>what was i complaining about i forgot; maybe forum and api sites?</p>
+
+
+
+<a name="196842951"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842951" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842951">(May 07 2020 at 23:27)</a>:</h4>
+<p>Those look okay to me.</p>
+
+
+
+<a name="196842983"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196842983" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196842983">(May 07 2020 at 23:27)</a>:</h4>
+<p>I It seems like something funny is going on with the file names.</p>
+
+
+
+<a name="196843077"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843077" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843077">(May 07 2020 at 23:28)</a>:</h4>
+<p>the files links are not downloading anything for me</p>
+
+
+
+<a name="196843087"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843087" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843087">(May 07 2020 at 23:28)</a>:</h4>
+<p>even for <a href="http://b.org" title="http://b.org">b.org</a></p>
+
+
+
+<a name="196843117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843117">(May 07 2020 at 23:29)</a>:</h4>
+<p>Checking</p>
+
+
+
+<a name="196843127"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843127" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843127">(May 07 2020 at 23:29)</a>:</h4>
+<p>I am regenerating the files for <a href="http://b.org" title="http://b.org">b.org</a></p>
+
+
+
+<a name="196843205"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843205" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843205">(May 07 2020 at 23:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> Why is a symlink being created for each new file in addition to the file itself?</p>
+
+
+
+<a name="196843214"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843214" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843214">(May 07 2020 at 23:30)</a>:</h4>
+<p>also i don't see a <code>latest</code> for files for any of the sites</p>
+
+
+
+<a name="196843247"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843247" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843247">(May 07 2020 at 23:31)</a>:</h4>
+<p>the latest backup symlinks to <code>balbalbalbabla-LATEST.tar.gz</code> so i know how to get the latest on the client side</p>
+
+
+
+<a name="196843383"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843383" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843383">(May 07 2020 at 23:32)</a>:</h4>
+<p>I seem the symlink but it is not downloadable when the html link is created.</p>
+
+
+
+<a name="196843413"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843413" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843413">(May 07 2020 at 23:33)</a>:</h4>
+<p>maybe we need to tell nginx it is ok to follow symlinks?</p>
+
+
+
+<a name="196843430"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843430" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843430">(May 07 2020 at 23:33)</a>:</h4>
+<p>but the symlink for DB works though</p>
+
+
+
+<a name="196843446"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843446" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843446">(May 07 2020 at 23:33)</a>:</h4>
+<p>The symlink is broken.</p>
+
+
+
+<a name="196843449"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843449" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843449">(May 07 2020 at 23:33)</a>:</h4>
+<p>and i don't see any of the <code>latest</code> (symlinks) for the files on any of the sites</p>
+
+
+
+<a name="196843463"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843463" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843463">(May 07 2020 at 23:33)</a>:</h4>
+<p>I see it for <a href="http://b.org" title="http://b.org">b.org</a></p>
+
+
+
+<a name="196843464"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843464" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843464">(May 07 2020 at 23:33)</a>:</h4>
+<p>just for DBs</p>
+
+
+
+<a name="196843535"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843535" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843535">(May 07 2020 at 23:34)</a>:</h4>
+<p>second link down</p>
+
+
+
+<a name="196843541"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843541" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843541">(May 07 2020 at 23:34)</a>:</h4>
+<p>backdropcms.org-files-latest.tar.gz</p>
+
+
+
+<a name="196843558"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843558" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843558">(May 07 2020 at 23:34)</a>:</h4>
+<p>ahh; yeah; i see it now</p>
+
+
+
+<a name="196843581"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843581" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843581">(May 07 2020 at 23:35)</a>:</h4>
+<p>But in the filesystem, the file is not being generated by the cron job</p>
+
+
+
+<a name="196843592"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843592" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843592">(May 07 2020 at 23:35)</a>:</h4>
+<p>But there is a broken symlink.</p>
+
+
+
+<a name="196843674"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843674" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843674">(May 07 2020 at 23:36)</a>:</h4>
+<p>The symlink points to the directory where the files are anyway, perhaps we can just not use symlinks?</p>
+
+
+
+<a name="196843688"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843688" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843688">(May 07 2020 at 23:36)</a>:</h4>
+<p>I am going to run the cron job again</p>
+
+
+
+<a name="196843703"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196843703" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196843703">(May 07 2020 at 23:36)</a>:</h4>
+<p>unlink the broken symlink first</p>
+
+
+
+<a name="196844084"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196844084" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196844084">(May 07 2020 at 23:42)</a>:</h4>
+<div class="codehilite"><pre><span></span><code>backdrop@www2 ~/s/files_backups&gt; ls -la
+total 768320
+drwxrwxr-x 2 backdrop backdrop      4096 May  7 23:36 ./
+drwxrwxr-x 5 backdrop backdrop      4096 Mar 26 01:50 ../
+-rw-r--r-- 1 backdrop backdrop 393364883 May  7 23:29 backdropcmsorg-files-May-7-2020-182910.tar.gz
+-rw-r--r-- 1 backdrop backdrop 393364883 May  7 23:36 backdropcmsorg-files-May-7-2020-183630.tar.gz
+lrwxrwxrwx 1 backdrop backdrop        79 May  7 23:29 files-latest.tar.gz -&gt; /home/backdrop/sanitized_databases/files_backups/files-May-7-2020-182910.tar.gz
+lrwxrwxrwx 1 backdrop backdrop        79 May  7 23:36 files-May-7-2020-182910.tar.gz -&gt; /home/backdrop/sanitized_databases/files_backups/files-May-7-2020-183630.tar.gz
+backdrop@www2 ~/s/files_backups&gt; ls
+backdropcmsorg-files-May-7-2020-182910.tar.gz  files-latest.tar.gz@
+backdropcmsorg-files-May-7-2020-183630.tar.gz  files-May-7-2020-182910.tar.gz@
+backdrop@www2 ~/s/files_backups&gt;
+[0] 0:fish* 1:bash-                                                              &quot;fish  /home/backdrop/&quot; 23:41 07-May-20
+</code></pre></div>
+
+
+
+<a name="196844110"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196844110" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196844110">(May 07 2020 at 23:42)</a>:</h4>
+<p><a href="/user_uploads/18319/noVj3vCGNWWzyoJ2wn5igcFq/Screen-Shot-2020-05-07-at-5.41.51-PM.png" title="Screen-Shot-2020-05-07-at-5.41.51-PM.png">Screen-Shot-2020-05-07-at-5.41.51-PM.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/noVj3vCGNWWzyoJ2wn5igcFq/Screen-Shot-2020-05-07-at-5.41.51-PM.png" title="Screen-Shot-2020-05-07-at-5.41.51-PM.png"><img src="/user_uploads/18319/noVj3vCGNWWzyoJ2wn5igcFq/Screen-Shot-2020-05-07-at-5.41.51-PM.png"></a></div>
+
+
+
+<a name="196844136"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196844136" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196844136">(May 07 2020 at 23:42)</a>:</h4>
+<p>It looks like the symlink for the latest is linking to a symlink and not the file.</p>
+
+
+
+<a name="196844162"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196844162" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196844162">(May 07 2020 at 23:43)</a>:</h4>
+<p>looks like all the files are symlinking to DB files?</p>
+
+
+
+<a name="196844200"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196844200" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196844200">(May 07 2020 at 23:43)</a>:</h4>
+<p>Those tarball of the files directory.</p>
+
+
+
+<a name="196844203"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196844203" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196844203">(May 07 2020 at 23:43)</a>:</h4>
+<p>I am focused on that at the moment.</p>
+
+
+
+<a name="196844277"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196844277" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196844277">(May 07 2020 at 23:44)</a>:</h4>
+<p>seems like prolly a bug in the <code>sql-dump-sanitize</code> script ... I don't have time to look now though; can you dump this into an issue so i can get to it later?</p>
+
+
+
+<a name="196844566"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/196844566" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> larsdesigns <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#196844566">(May 07 2020 at 23:48)</a>:</h4>
+<p>yeah, I will. I have to run now for dinner. But I am will be online after 9pm MT.</p>
+
+
+
+<a name="197444476"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197444476" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197444476">(May 13 2020 at 17:07)</a>:</h4>
+<p>I want to add a form_alter hook in core. Is the .module file of a module the recommended place for such hooks to live in, or the .admin.inc file?</p>
+
+
+
+<a name="197444885"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197444885" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197444885">(May 13 2020 at 17:10)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> I think it depends on the change you're wanting to add... If you're adding one or more new form fields/elements, then maybe <code>.admin.inc</code>. If it's just a simple change like adding a JS file for processing or changing a value, then maybe <code>.module</code>.</p>
+
+
+
+<a name="197445136"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197445136" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197445136">(May 13 2020 at 17:11)</a>:</h4>
+<p>It's the later. ...is there any documentation on that? ...I am also wondering things like where the new hook function should go within the file? ...do we try to list functions alphabetically? ...do we add them based on co-relation?</p>
+
+
+
+<a name="197445263"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197445263" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197445263">(May 13 2020 at 17:12)</a>:</h4>
+<p>Hmm, not sure any of that's really documented...</p>
+
+
+
+<a name="197445364"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197445364" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197445364">(May 13 2020 at 17:12)</a>:</h4>
+<p>thought so <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...just looking for some sanity ...my OCDs start kicking in, and I start to twitch <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="197447830"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197447830" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197447830">(May 13 2020 at 17:28)</a>:</h4>
+<p>I try to keep all hook_* and *_alter functions in .module files and put other code that can be grouped together functionality-wise in *.inc files. Then I'm not confused when something is happening, and I can't find the code for it.</p>
+
+
+
+<a name="197450411"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197450411" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197450411">(May 13 2020 at 17:48)</a>:</h4>
+<p>We generally put hooks in the module file, since you cant be sure if other files are loaded at all times, in which case the hook wouldnt fire. If you put it in an inc file, youd need a <code>include_once</code> or such in the module file.</p>
+
+
+
+<a name="197457984"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197457984" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197457984">(May 13 2020 at 18:43)</a>:</h4>
+<p>I made the assumption that that would be done, but I should have been explicit, and you're right, without including the file, the hook won't get triggered.</p>
+
+
+
+<a name="197462477"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197462477" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197462477">(May 13 2020 at 19:16)</a>:</h4>
+<p>That's great info. Can we capture all that in our documentation somewhere?</p>
+
+
+
+<a name="197463688"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197463688" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197463688">(May 13 2020 at 19:25)</a>:</h4>
+<p>This seems like the best place: <a href="https://api.backdropcms.org/documentation/understanding-the-hook-system">https://api.backdropcms.org/documentation/understanding-the-hook-system</a></p>
+
+
+
+<a name="197493500"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197493500" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197493500">(May 14 2020 at 00:11)</a>:</h4>
+<p>That's gonna be nice: <a href="https://github.com/features/codespaces">https://github.com/features/codespaces</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/features/codespaces" style="background-image: url(https://github.githubassets.com/images/modules/site/social-cards/codespaces.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/features/codespaces" title="Codespaces">Codespaces</a></div><div class="message_embed_description">Your instant dev environment</div></div></div>
+
+
+
+<a name="197550819"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197550819" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197550819">(May 14 2020 at 13:12)</a>:</h4>
+<p>i signed up ... see what the feelz are about;</p>
+
+
+
+<a name="197827694"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/197827694" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#197827694">(May 17 2020 at 03:18)</a>:</h4>
+<p>Some nice reviews about us here: <a href="https://www.g2.com/products/backdrop-cms/reviews">https://www.g2.com/products/backdrop-cms/reviews</a></p>
+
+
+
+<a name="198375092"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/198375092" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#198375092">(May 21 2020 at 20:46)</a>:</h4>
+<p>Nate had a good idea! <a href="https://github.com/backdrop/backdrop-issues/issues/4410">https://github.com/backdrop/backdrop-issues/issues/4410</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4410" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4410" title="Use admin-theme for Log In form · Issue #4410 · backdrop/backdrop-issues">Use admin-theme for Log In form · Issue #4410 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need There should be a setting to use the admin theme for the log-in page, similar to how we have a checkbox to use the admin theme for the content edit form. This would prevent ...</div></div></div>
+
+
+
+<a name="198376884"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/198376884" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#198376884">(May 21 2020 at 21:00)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@Nate Lampton</span>  could use your feedback on <a href="https://github.com/backdrop/backdrop-issues/issues/4408">https://github.com/backdrop/backdrop-issues/issues/4408</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4408" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4408" title="Show 'enabled' text filters above 'disabled' ones · Issue #4408 · backdrop/backdrop-issues">Show 'enabled' text filters above 'disabled' ones · Issue #4408 · backdrop/backdrop-issues</a></div><div class="message_embed_description">On /admin/config/content/formats/[FORMAT] the filters are shown in a seemingly random order, with enabled and disabled ones mixed together. It&#39;d be nice to have all enabled ones shown first, th...</div></div></div>
+
+
+
+<a name="198535401"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/198535401" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#198535401">(May 23 2020 at 13:18)</a>:</h4>
+<p>Again, I need to filter a View by month... just in case that the PM has no idea what to include in 1.17;-), here's my personal hot candiate <a href="https://github.com/backdrop/backdrop-issues/issues/2766">https://github.com/backdrop/backdrop-issues/issues/2766</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2766" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2766" title="Restore missing &quot;Page by date&quot; Views pager plugin · Issue #2766 · backdrop/backdrop-issues">Restore missing "Page by date" Views pager plugin · Issue #2766 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Date module was merged to Backdrop core in version 1.2.0 For some reason one views pager plugin wasn&#39;t ported (date_views\includes\date_views_plugin_pager.inc). I wonder was it intentional or w...</div></div></div>
+
+
+
+<a name="198705756"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/198705756" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#198705756">(May 25 2020 at 22:21)</a>:</h4>
+<p>Nice in-built feature for all the tab-maniacs out there using Chrome: <a href="https://blog.google/products/chrome/manage-tabs-with-google-chrome">https://blog.google/products/chrome/manage-tabs-with-google-chrome</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://blog.google/products/chrome/manage-tabs-with-google-chrome" style="background-image: url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Chrome_BlogHeader_TabGroups_May.max-1300x1300.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://blog.google/products/chrome/manage-tabs-with-google-chrome" title="Keep tabs on your tabs in Google Chrome">Keep tabs on your tabs in Google Chrome</a></div><div class="message_embed_description">Tab grouping feature coming to Google Chrome</div></div></div>
+
+
+
+<a name="198705835"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/198705835" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#198705835">(May 25 2020 at 22:22)</a>:</h4>
+<p>...can be enabled by visiting chrome://flags/#tab-groups</p>
+
+
+
+<a name="199250951"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199250951" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199250951">(May 30 2020 at 10:57)</a>:</h4>
+<p>Huh! ...another (small) book on Backdrop: <a href="https://books.google.com/books/about/Exploring_Computing_Series_by_Arslan.html?id=1LZUuQEACAAJ">https://books.google.com/books/about/Exploring_Computing_Series_by_Arslan.html?id=1LZUuQEACAAJ</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://books.google.com/books/about/Exploring_Computing_Series_by_Arslan.html?id=1LZUuQEACAAJ" style="background-image: url(https://books.google.com/books/content?id=1LZUuQEACAAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;imgtk=AFLRE73VkSLfwyGHGZF-ATLZkQJQNmsS0Q5K9OelAkpL-ysXUyjVBiz8MKsGpoBq7PHVpR_UvjwGRAVgosCA5utuHC67vbml-DjQ0tFTaAdj7WEEgVmWd08FcWCRDUnaGP_2WahXw_qZ)"></a><div class="data-container"><div class="message_embed_title"><a href="https://books.google.com/books/about/Exploring_Computing_Series_by_Arslan.html?id=1LZUuQEACAAJ" title="How to do installation of Backdrop CMS in FreeBSD Linux">How to do installation of Backdrop CMS in FreeBSD Linux</a></div><div class="message_embed_description">Learn and explore computing by implementing &quot;Explore Computing&quot; series by Arslan. Backdrop CMS is one of the most popular CMS used worldwide. Learn how to do the installation of Backdrop CMS on your server and make your website live.</div></div></div>
+
+
+
+<a name="199250998"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199250998" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199250998">(May 30 2020 at 10:58)</a>:</h4>
+<p>....do you guys think it's worth adding to the list of books in the home page on <a href="http://b.org">b.org</a>?</p>
+
+
+
+<a name="199251935"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199251935" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199251935">(May 30 2020 at 11:20)</a>:</h4>
+<p>idk; $10 sounds like a lot to learn how to install Backdrop ... there are free videos to tell you how to do it ... i don't think i'd personally recommend it</p>
+
+
+
+<a name="199252053"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199252053" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199252053">(May 30 2020 at 11:23)</a>:</h4>
+<p>FreeBSD != Linux</p>
+
+
+
+<a name="199268216"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199268216" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199268216">(May 30 2020 at 17:52)</a>:</h4>
+<p>That's an odd sounding book. "one of the most popular CMS used worldwide"? Maybe they just did a search and replace from Drupal &gt; Backdrop</p>
+
+
+
+<a name="199514582"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199514582" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199514582">(Jun 02 2020 at 16:03)</a>:</h4>
+<p>Interesting: <a href="https://weitzman.github.io/blog/drupalspoons-announcement">https://weitzman.github.io/blog/drupalspoons-announcement</a></p>
+
+
+
+<a name="199564052"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199564052" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199564052">(Jun 02 2020 at 23:05)</a>:</h4>
+<p>That's interesting! I just noticed the devel module logo. Is wearing a toque with a backwards Montreal Canadiens logo. Weird</p>
+
+
+
+<a name="199564105"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199564105" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199564105">(Jun 02 2020 at 23:06)</a>:</h4>
+<p>Oh wait, it's a D.</p>
+
+
+
+<a name="199564119"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199564119" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199564119">(Jun 02 2020 at 23:06)</a>:</h4>
+<p>Looks a lot like the Canadiens</p>
+
+
+
+<a name="199564137"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199564137" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199564137">(Jun 02 2020 at 23:07)</a>:</h4>
+<p><a href="https://gitlab.com/drupalspoons/devel">https://gitlab.com/drupalspoons/devel</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://gitlab.com/drupalspoons/devel" style="background-image: url(https://gitlab.com/uploads/-/system/project/avatar/18040690/dhat.jpeg)"></a><div class="data-container"><div class="message_embed_title"><a href="https://gitlab.com/drupalspoons/devel" title="DrupalSpoons / Devel">DrupalSpoons / Devel</a></div><div class="message_embed_description">A suite of modules containing helpful tools for module developers and themers.</div></div></div>
+
+
+
+<a name="199564169"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199564169" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199564169">(Jun 02 2020 at 23:07)</a>:</h4>
+<p>Compare with <a href="https://en.m.wikipedia.org/wiki/Montreal_Canadiens">https://en.m.wikipedia.org/wiki/Montreal_Canadiens</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://en.m.wikipedia.org/wiki/Montreal_Canadiens" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Montreal_Canadiens.svg/1200px-Montreal_Canadiens.svg.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://en.m.wikipedia.org/wiki/Montreal_Canadiens" title="Montreal Canadiens - Wikipedia">Montreal Canadiens - Wikipedia</a></div><div class="message_embed_description">
+</div></div></div>
+
+
+
+<a name="199582494"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199582494" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199582494">(Jun 03 2020 at 06:05)</a>:</h4>
+<p>New Backdrop website for a Swiss music band, they are playing just fur fun. Including a switchable "postponed" or "canceled" badge on the concert schedule, due to the virus...  I developed the design around the existing logo, inspired by some existing southern music websites. And no, I have no idea where this band name comes from;-) <a href="https://meandtheoperators.ch/">https://meandtheoperators.ch/</a></p>
+
+
+
+<a name="199587426"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199587426" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199587426">(Jun 03 2020 at 07:33)</a>:</h4>
+<p><a href="/user_uploads/18319/aIDlb5TDz2WIgmK8WLzsmGlh/image.png">image.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/aIDlb5TDz2WIgmK8WLzsmGlh/image.png" title="image.png"><img src="/user_uploads/18319/aIDlb5TDz2WIgmK8WLzsmGlh/image.png"></a></div>
+
+
+
+<a name="199603582"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199603582" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199603582">(Jun 03 2020 at 10:41)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> Nice menu slide in. How did you do it?</p>
+
+
+
+<a name="199604534"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199604534" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199604534">(Jun 03 2020 at 10:51)</a>:</h4>
+<p>It's a basic snippet in UIKIT CSS framework, a competitor to Bootstrap. I was not happy with Bootstrap 3 years ago and made the switch, and now I have plenty of D7 sites who use it.</p>
+
+
+
+<a name="199961494"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199961494" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199961494">(Jun 06 2020 at 07:47)</a>:</h4>
+<p>Good insight <span class="user-mention" data-user-id="256666">@Justin Keiser</span> . The question "will Backdrop still be here in five years" seems to be very important when evaluating a possible switch. The persona "knows Drupal well, creates more than one or two sites a year, but looking for alternatives" is an important target group.</p>
+
+
+
+<a name="199961599"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199961599" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199961599">(Jun 06 2020 at 07:50)</a>:</h4>
+<p>There's plenty of room left from a branding perspective...e.g. this company offers Drupal and Wordpress development, did they ever consider to offer Backdrop too? I don't know....</p>
+
+
+
+<a name="199961604"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199961604" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199961604">(Jun 06 2020 at 07:50)</a>:</h4>
+<p><a href="/user_uploads/18319/bTFk_5GbKpgaMnAO2EtiqBZY/Screenshot-2020-06-06-at-09.44.36.png">Screenshot-2020-06-06-at-09.44.36.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/bTFk_5GbKpgaMnAO2EtiqBZY/Screenshot-2020-06-06-at-09.44.36.png" title="Screenshot-2020-06-06-at-09.44.36.png"><img src="/user_uploads/18319/bTFk_5GbKpgaMnAO2EtiqBZY/Screenshot-2020-06-06-at-09.44.36.png"></a></div>
+
+
+
+<a name="199975939"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/199975939" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#199975939">(Jun 06 2020 at 13:52)</a>:</h4>
+<p>From what I've seen of many local Las Vegas shops, they may only mention WordPress and/or Drupal because they are buzz words that people are looking for, not because they necessarily really push or support one or the other. Their mindset was more like they just build websites, and those are two ways of doing it. When Backdrop becomes a bigger buzz word, it'll get added to the list.</p>
+
+
+
+<a name="200417336"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200417336" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200417336">(Jun 10 2020 at 13:43)</a>:</h4>
+<p>The new autocomplete feature is soooo much of an improvement... how could I ever live without it?;-) Kudos to the core team!</p>
+
+
+
+<a name="200500553"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200500553" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200500553">(Jun 11 2020 at 02:33)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> ++</p>
+
+
+
+<a name="200500554"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200500554" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200500554">(Jun 11 2020 at 02:33)</a>:</h4>
+<p>(peter)** - Dragon Fire (Karma: 29)</p>
+
+
+
+<a name="200580292"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200580292" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200580292">(Jun 11 2020 at 17:46)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="269428">mazze.ch</span> <a href="#narrow/stream/218635-Backdrop/topic/(no.20topic)/near/199582494">said</a>:</p>
+<blockquote>
+<p>New Backdrop website for a Swiss music band, they are playing just fur fun. Including a switchable "postponed" or "canceled" badge on the concert schedule, due to the virus...  I developed the design around the existing logo, inspired by some existing southern music websites. And no, I have no idea where this band name comes from;-) <a href="https://meandtheoperators.ch/">https://meandtheoperators.ch/</a></p>
+</blockquote>
+<p>This looks great!  Are you going to submit it to the showcase on <a href="http://b.org">b.org</a>?</p>
+
+
+
+<a name="200584333"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200584333" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200584333">(Jun 11 2020 at 18:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> I just realized that the example photo for the autocomplete in your blog post shows the old "autocomplete editor links" feature, not the new "autocomplete everything" feature from 1.16. I'm going to replace that photo but if you want to put in a better one, please do :)</p>
+
+
+
+<a name="200585441"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200585441" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200585441">(Jun 11 2020 at 18:23)</a>:</h4>
+<p>kk; thanks</p>
+
+
+
+<a name="200586237"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200586237" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200586237">(Jun 11 2020 at 18:28)</a>:</h4>
+<p>I don't know if it's me not being able to make time for contributions lately, or if the community activity in the issue queue has increased (or both), but I'm happy to see thing progress <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="200618269"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200618269" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200618269">(Jun 11 2020 at 23:03)</a>:</h4>
+<p>I see a lot of overlap in the output of <code>system_rebuild_theme_data()</code> and <code>list_themes()</code></p>
+
+
+
+<a name="200618444"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200618444" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200618444">(Jun 11 2020 at 23:05)</a>:</h4>
+<p>...I would like to return info on whether a theme is set as the default, and whether it is set as the admin theme. I would like these to be available as <code>is_default</code> and <code>is_admin</code> properties in the objects returned by <code>system_rebuild_theme_data()</code> and <code>list_themes()</code>. Thoughts?</p>
+
+
+
+<a name="200618562"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200618562" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200618562">(Jun 11 2020 at 23:07)</a>:</h4>
+<p>...actually both of these functions seem to be calling <code>_system_rebuild_theme_data()</code>, so perhaps the best place to do that would be there.</p>
+
+
+
+<a name="200640284"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200640284" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200640284">(Jun 12 2020 at 07:14)</a>:</h4>
+<p>(deleted)</p>
+
+
+
+<a name="200640339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200640339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200640339">(Jun 12 2020 at 07:15)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> sure, I will put it to the references section</p>
+
+
+
+<a name="200643061"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200643061" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200643061">(Jun 12 2020 at 07:59)</a>:</h4>
+<p>Hi everyone. I seem to be running into a permissions issue (I think). Ive created a tmp folder and private folder. But I believe Backdrop cannot reach them. I set them to 755, but when I try and save the string 'private' into the private settings field in backdrop UI, it doesn't save.</p>
+
+
+
+<a name="200643062"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200643062" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200643062">(Jun 12 2020 at 07:59)</a>:</h4>
+<p>Hi, Eric Vander Wal. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>
+<p>Here is a short (3 min) video to help you navigate Zulip. <a href="https://youtu.be/DN8YL2MrsSU">https://youtu.be/DN8YL2MrsSU</a></p>
+<div class="youtube-video message_inline_image"><a data-id="DN8YL2MrsSU" href="https://youtu.be/DN8YL2MrsSU"><img src="https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg"></a></div>
+
+
+
+<a name="200643163"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200643163" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200643163">(Jun 12 2020 at 08:00)</a>:</h4>
+<p>When I try and use the built in module browser (to install new modules), it also has issues. I believe its because BD cannot access the tmp folder.</p>
+
+
+
+<a name="200643202"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200643202" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200643202">(Jun 12 2020 at 08:01)</a>:</h4>
+<p>Trying to add private directory gives me the following in logs: <br>
+Warning: mkdir(): Permission denied in backdrop_mkdir() (line 2558 of /storage/v707/vrhealthinstitute/public_html/core/includes/file.inc).</p>
+
+
+
+<a name="200643342"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200643342" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200643342">(Jun 12 2020 at 08:02)</a>:</h4>
+<p>I check through the forums, but didnt find any info on this topic. This is my third time installing backdrop (and my zillionth time installing D7). First time hitting up this specific issue.</p>
+
+
+
+<a name="200643357"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200643357" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200643357">(Jun 12 2020 at 08:02)</a>:</h4>
+<p>Any advice would be welcome :)</p>
+
+
+
+<a name="200643799"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200643799" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200643799">(Jun 12 2020 at 08:09)</a>:</h4>
+<p>I see the hosting is on nginx, not apache. I am not sure if this is an issue. I have the feeling it is a hosting issue (its managed hosting), but not sure what to direct them towards</p>
+
+
+
+<a name="200649028"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200649028" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200649028">(Jun 12 2020 at 09:13)</a>:</h4>
+<p><span class="user-mention" data-user-id="311204">@Eric Vander Wal</span> I'm running Backdrop sites on shared hosting with nginx , so that shouldn't be a problem per se.</p>
+
+
+
+<a name="200649109"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200649109" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200649109">(Jun 12 2020 at 09:14)</a>:</h4>
+<p>Thanks. I appreciate the reply <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> . I am bugging the host again, maybe they have an idea.</p>
+
+
+
+<a name="200649132"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200649132" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200649132">(Jun 12 2020 at 09:14)</a>:</h4>
+<p>I'm not an expert regarding file system permissions at all, but sounds as if Backdrop isn't allowed to create directories <em>within</em> the <code>tmp</code> and the <code>private</code>  folder.</p>
+
+
+
+<a name="200649427"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200649427" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200649427">(Jun 12 2020 at 09:19)</a>:</h4>
+<p>I feel its something server side, but searched around to see if it could be fixed in the settings.php or htaccess files. So far didn't see anything.</p>
+
+
+
+<a name="200665973"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200665973" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200665973">(Jun 12 2020 at 12:54)</a>:</h4>
+<p>Can you upload images into the editor or an image field?</p>
+
+
+
+<a name="200666760"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200666760" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200666760">(Jun 12 2020 at 13:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="311204">@Eric Vander Wal</span> Do you have ssh access on that host? If so, check the directory <em>owner</em> of your tmp and private folder. Backdrop needs to have write access, so compare that to the user your http processes run as. As a quick check (not permanently!) you could change the perms to 777 - if it works then, it's a mismatch regarding http-user/directory-owner.</p>
+
+
+
+<a name="200669481"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200669481" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200669481">(Jun 12 2020 at 13:27)</a>:</h4>
+<p>I'll bet the user is the account, and the group is httpd, and the group is what needs write access to those directories.</p>
+
+
+
+<a name="200669680"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200669680" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200669680">(Jun 12 2020 at 13:29)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> , thanks. I did not try. I just did now. Image link comes back as 404.</p>
+
+
+
+<a name="200669833"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200669833" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200669833">(Jun 12 2020 at 13:30)</a>:</h4>
+<p>I am trying this at <a href="http://Nestify.io">Nestify.io</a> , which is a new host for me. They are pretty hands on, so I let them access the site now from the admin side to see if they can work it out. Its a new install.</p>
+<div class="message_embed"><a class="message_embed_image" href="http://Nestify.io" style="background-image: url(https://nestify.io/wp-content/uploads/2020/05/logo-og.pn)"></a><div class="data-container"><div class="message_embed_title"><a href="http://Nestify.io" title="Home">Home</a></div><div class="message_embed_description">High performance Managed Wordpress and WooCommerce Hosting services from Nestify. Make your website lightning fast. 24x7 Support Included.</div></div></div>
+
+
+
+<a name="200669889"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200669889" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200669889">(Jun 12 2020 at 13:31)</a>:</h4>
+<p><a href="/user_uploads/18319/jD2Ti1Qh3H50eTduAnfNeVHo/2020-06-12-21_30_43-Window.png">2020-06-12-21_30_43-Window.png</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/jD2Ti1Qh3H50eTduAnfNeVHo/2020-06-12-21_30_43-Window.png" title="2020-06-12-21_30_43-Window.png"><img src="/user_uploads/18319/jD2Ti1Qh3H50eTduAnfNeVHo/2020-06-12-21_30_43-Window.png"></a></div>
+
+
+
+<a name="200669945"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200669945" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200669945">(Jun 12 2020 at 13:31)</a>:</h4>
+<p>Owner/group looks the same to me on filezillia. I am a bit of a Luddite when it comes to deploying things. Old habits die hard.</p>
+
+
+
+<a name="200672290"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200672290" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200672290">(Jun 12 2020 at 13:51)</a>:</h4>
+<p>Well, it looks like the directories exist and the permissions of the directories seem to be okay. What about the permissions of files added inside of them?</p>
+
+
+
+<a name="200673402"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200673402" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200673402">(Jun 12 2020 at 13:59)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> done... (I guess you got notified) <a href="https://backdropcms.org/showcase/me-and-the-operators">https://backdropcms.org/showcase/me-and-the-operators</a></p>
+
+
+
+<a name="200677195"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200677195" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200677195">(Jun 12 2020 at 14:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="311204">@Eric Vander Wal</span> Did you put <code>/tmp</code> and <code>/private</code> in the filesystem settings (<strong>admin/config/media/file-system</strong>), or <code>tmp</code> and <code>private</code>?</p>
+
+
+
+<a name="200698111"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200698111" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200698111">(Jun 12 2020 at 17:17)</a>:</h4>
+<p>Success. According to the host, there was server side caching enabled, which was causing a conflict. Whatever they did, it seems to have fixed the issues. I am using tmp and private without the /</p>
+
+
+
+<a name="200698267"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200698267" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200698267">(Jun 12 2020 at 17:19)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256573">@Laryn</span> , <span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> , <span class="user-mention" data-user-id="256738">@indigoxela</span>  , <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span></p>
+
+
+
+<a name="200705847"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200705847" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200705847">(Jun 12 2020 at 18:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> ...did you mean "Backdrop" instead of "Drupal 7" here?:</p>
+<blockquote>
+<p>... the more I saw the benefits of Drupal 7 config management ...</p>
+</blockquote>
+
+
+
+<a name="200705947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200705947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200705947">(Jun 12 2020 at 18:20)</a>:</h4>
+<p>...as far as I know, there is no config management in D7</p>
+
+
+
+<a name="200716798"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200716798" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200716798">(Jun 12 2020 at 19:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> i meant the D7 Feature module, which makes it possible to export e.g. a gallery setup to an installable module</p>
+
+
+
+<a name="200717239"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200717239" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200717239">(Jun 12 2020 at 19:54)</a>:</h4>
+<p>i will rewrite this part tomorrow, it’s not clear enough</p>
+
+
+
+<a name="200717284"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200717284" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200717284">(Jun 12 2020 at 19:54)</a>:</h4>
+<p>thx for checking <span class="user-mention" data-user-id="256729">@klonos</span></p>
+
+
+
+<a name="200727945"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200727945" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200727945">(Jun 12 2020 at 21:44)</a>:</h4>
+<p>Thank YOU for taking the time to write the showcase post</p>
+
+
+
+<a name="200727948"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200727948" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200727948">(Jun 12 2020 at 21:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> ++</p>
+
+
+
+<a name="200727950"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200727950" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200727950">(Jun 12 2020 at 21:45)</a>:</h4>
+<p><strong>mazze.ch</strong> go team. (Karma: 2)</p>
+
+
+
+<a name="200752715"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200752715" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200752715">(Jun 13 2020 at 06:52)</a>:</h4>
+<p>@klonos Done:-)</p>
+
+
+
+<a name="200753592"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200753592" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200753592">(Jun 13 2020 at 07:24)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> I think that it's ready to be published. If you don't have permission to publish, then either I or anyone else with access can do it for you; let us know <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="200753603"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200753603" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200753603">(Jun 13 2020 at 07:25)</a>:</h4>
+<p>@klonos I don't have the permission.</p>
+
+
+
+<a name="200753784"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200753784" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200753784">(Jun 13 2020 at 07:30)</a>:</h4>
+<p>No worries ...I've published it for you <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="200754922"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200754922" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200754922">(Jun 13 2020 at 08:06)</a>:</h4>
+<p>Found a typo in the showcase post: „especially the ability to export configuration as reusable Features, .“ (the colon at the end)</p>
+
+
+
+<a name="200761456"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200761456" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200761456">(Jun 13 2020 at 11:14)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...fixed.</p>
+
+
+
+<a name="200761875"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200761875" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200761875">(Jun 13 2020 at 11:26)</a>:</h4>
+<p><span aria-label="thank you" class="emoji emoji-1f64f" role="img" title="thank you">:thank_you:</span></p>
+
+
+
+<a name="200851071"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200851071" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200851071">(Jun 15 2020 at 05:34)</a>:</h4>
+<p>Is javascript in HEAD broken for anyone else? <span class="user-mention" data-user-id="258586">@Nate Lampton</span> <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> <span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> <span class="user-mention" data-user-id="256705">@Herb</span> I can't get admin bar, the search box on the modules page, or drop-buttons so I'm guessing it's all JS that's broken? Rolling back to 1.16.1 fixes it (I'm on the modules page)</p>
+
+
+
+<a name="200852825"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200852825" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200852825">(Jun 15 2020 at 06:16)</a>:</h4>
+<p>Looks like it was the recent change to show jQuery library versions that broke some pages (like /admin/modules). I've reverted the commit, see <a href="https://github.com/backdrop/backdrop-issues/issues/3879#issuecomment-643918861">https://github.com/backdrop/backdrop-issues/issues/3879#issuecomment-643918861</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3879#issuecomment-643918861" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3879#issuecomment-643918861" title="[UX] Status report page: show jQuery and jQuery UI as info instead of status. · Issue #3879 · backdrop/backdrop-issues">[UX] Status report page: show jQuery and jQuery UI as info instead of status. · Issue #3879 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Current behavior: Proposed change: Reasoning: this belongs with the rest of the components that we simply need to communicate their version to the site admin. In D7, this was managed by contrib (ht...</div></div></div>
+
+
+
+<a name="200876555"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200876555" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200876555">(Jun 15 2020 at 11:29)</a>:</h4>
+<p>looks like <span class="user-mention" data-user-id="258586">@quicksketch</span> sorted it out and reverted the commit</p>
+
+
+
+<a name="200936933"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/200936933" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#200936933">(Jun 15 2020 at 19:52)</a>:</h4>
+<p>ty!</p>
+
+
+
+<a name="201030316"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201030316" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201030316">(Jun 16 2020 at 15:15)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span>  ++ That probably was the fastest bugfix ever! (rrssb)</p>
+
+
+
+<a name="201030318"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201030318" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201030318">(Jun 16 2020 at 15:15)</a>:</h4>
+<p><strong>laryn</strong> :-) (Karma: 9)</p>
+
+
+
+<a name="201038356"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201038356" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201038356">(Jun 16 2020 at 16:10)</a>:</h4>
+<p>Ha, it was an easy one. Although the project page is not picking up the most recent version as the default version (it is listed in the "all releases" list): <a href="https://backdropcms.org/project/rrssb">https://backdropcms.org/project/rrssb</a></p>
+
+
+
+<a name="201038485"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201038485" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201038485">(Jun 16 2020 at 16:10)</a>:</h4>
+<p>Maybe because I forgot to include an extra <code>.0</code> on the other release so the <code>.1</code> isn't understood as a later release?</p>
+
+
+
+<a name="201038891"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201038891" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201038891">(Jun 16 2020 at 16:14)</a>:</h4>
+<p>Or maybe it was just a cache delay, seems okay now...</p>
+
+
+
+<a name="201117865"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201117865" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201117865">(Jun 17 2020 at 09:20)</a>:</h4>
+<p>Favorite moderately priced (30 dollar range) but scalable backdrop hosting solution. Something that is mostly managed? I tried <a href="http://nestify.io">nestify.io</a> , which in theory sounds great (they do Wordpress mostly). But after my 1 week trial is about to end, I am still having a bunch of hosting issues.</p>
+<div class="message_embed"><a class="message_embed_image" href="http://nestify.io" style="background-image: url(https://nestify.io/wp-content/uploads/2020/05/logo-og.pn)"></a><div class="data-container"><div class="message_embed_title"><a href="http://nestify.io" title="Home">Home</a></div><div class="message_embed_description">High performance Managed Wordpress and WooCommerce Hosting services from Nestify. Make your website lightning fast. 24x7 Support Included.</div></div></div>
+
+
+
+<a name="201118061"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201118061" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201118061">(Jun 17 2020 at 09:22)</a>:</h4>
+<p>Ive got 1.5 days left on my trial. Time to export my DB :)</p>
+
+
+
+<a name="201118394"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201118394" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201118394">(Jun 17 2020 at 09:27)</a>:</h4>
+<p>Looks like they're specialized on Wordpress - you probably can't benefit from their main services with a different CMS.</p>
+<p>What are the crucial features you need from a hoster?</p>
+
+
+
+<a name="201118717"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201118717" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201118717">(Jun 17 2020 at 09:31)</a>:</h4>
+<p>We will be getting lots of rest API calls to the site. Using the services module.</p>
+
+
+
+<a name="201118774"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201118774" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201118774">(Jun 17 2020 at 09:31)</a>:</h4>
+<p>Its for a smaller start up, so they would like to see some growth. But want to avoid self hosting on azure or aws</p>
+
+
+
+<a name="201140518"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201140518" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201140518">(Jun 17 2020 at 13:30)</a>:</h4>
+<p><span class="user-mention" data-user-id="311204">@Eric Vander Wal</span> perhaps Pantheon or <a href="http://Platform.sh">Platform.sh</a> would fit better. People are using both for hosting Backdrop. And they do lots of managing of the hosting for you</p>
+<div class="message_embed"><a class="message_embed_image" href="http://Platform.sh" style="background-image: url(https://platform.sh/images/meta/Facebook_v2.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="http://Platform.sh" title="PaaS for Multi-Cloud Hosting, Development, and Deployment with PHP, Java, Node.js, Ruby, Python, Golang">PaaS for Multi-Cloud Hosting, Development, and Deployment with PHP, Java, Node.js, Ruby, Python, Golang</a></div><div class="message_embed_description">The end-to-end web platform for agile teams. Build, evolve, and scale your website fleetâwith zero infrastructure management investment. Get hosting, CI/CD, automated updates, global 24x7 support. We support PHP, Node.js, Drupal, WordPress, Ruby, Golang, Python, MySQL, ElasticSearch, and more.</div></div></div>
+
+
+
+<a name="201141201"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201141201" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201141201">(Jun 17 2020 at 13:35)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> Aren’t those quite expensive? I don’t know US hosters but in Germany there are 10 € shared hosting services with SSH access which are perfect for Backdrop.</p>
+
+
+
+<a name="201141281"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201141281" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201141281">(Jun 17 2020 at 13:35)</a>:</h4>
+<p>Yeah, a bit too pricy for my needs.</p>
+
+
+
+<a name="201141433"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201141433" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201141433">(Jun 17 2020 at 13:37)</a>:</h4>
+<p>Nestify seems good in theory and has good reviews. Good specs on paper for the price point. Alas, just seems they cannot get the Nginx quite right for me.</p>
+
+
+
+<a name="201141929"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201141929" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201141929">(Jun 17 2020 at 13:41)</a>:</h4>
+<p><span class="user-mention" data-user-id="311204">@Eric Vander Wal</span> How much "managed" do you need? We all know that Backdrop runs fine even on shared webhosting. If you want ssh + git + $featureXY, try to search for a medium priced webspace. In general they should provide what you need. Which country / currency is preferred?</p>
+
+
+
+<a name="201142327"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201142327" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201142327">(Jun 17 2020 at 13:43)</a>:</h4>
+<p>I guess I have used most of the common hosts before, from goddady to Contegix (worst hosting experience). Was thinking maybe I overlooked a popular one maybe.</p>
+
+
+
+<a name="201142522"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201142522" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201142522">(Jun 17 2020 at 13:45)</a>:</h4>
+<p>US for most of the customers, USD.</p>
+
+
+
+<a name="201142841"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201142841" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201142841">(Jun 17 2020 at 13:47)</a>:</h4>
+<p>I don't know about "expensive". We've found for our clients that we used to offer cheaper hosting but maintenance starts getting expensive and so we had to increase our prices. For what you get I find Pantheon reasonable. I haven't used Platform much. But of course if you don't need it, not worth it</p>
+
+
+
+<a name="201143023"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201143023" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201143023">(Jun 17 2020 at 13:49)</a>:</h4>
+<p>I enjoy those really specific hosting solutions, but I feel they are a bit of an overkill for many sites. Alas, its not my money, but the clients :)</p>
+
+
+
+<a name="201143140"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201143140" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201143140">(Jun 17 2020 at 13:50)</a>:</h4>
+<p>I have to be honest though, I have had 10+ sites hosted on GoDaddy without any problems over the years. Except when they get really hard hit with traffic, but that's rare</p>
+
+
+
+<a name="201147905"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201147905" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201147905">(Jun 17 2020 at 14:23)</a>:</h4>
+<p>you can get a linode or a digitalocean droplet for $5/mo ... but as far as I know they are not managed</p>
+
+
+
+<a name="201152935"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201152935" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201152935">(Jun 17 2020 at 14:56)</a>:</h4>
+<p>No, they are not managed. Though you can pay for some level of management from Linode, but I don't know what that includes.</p>
+
+
+
+<a name="201172708"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201172708" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201172708">(Jun 17 2020 at 17:20)</a>:</h4>
+<p>Thanks everyone. After all that, I went with ScalaHosting VPN. They have not too bad reviews and can adjust your hosting per need. Such as Ram, space, etc.</p>
+
+
+
+<a name="201174295"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/201174295" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#201174295">(Jun 17 2020 at 17:31)</a>:</h4>
+<p>For shared hosting, I really like NameCheap. The only downside is that they don't give you letsencrypt SSL certificates for free (yet). Instead, they give you one year of something else, with a discount on renewals. I'm hoping in the next year they'll figure out how to get letsencrypt for everyone</p>
+
+
+
+<a name="223954595"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/223954595" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cellear (Luke McCormick) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#223954595">(Jan 25 2021 at 20:22)</a>:</h4>
+<p>Hi everybody.  I have a not-necessarily Backdrop issue about which I could use some advice.  I have a client who is returning to me after trying something different for the last year, and they've asked me to recommend a host.  Before they left me, I had their thousand-node D7 site hosted on Pantheon, but the developers they gave it to created a parallax Gatsby/React thing with a Wordpress back end.  I need to park the current site somewhere in the US (it's currently hosted in the UK) for now, but then I'll pitch them on letting me maintain it again -- possibly on Backdrop if I can talk them into it, or Drupal if I can't.</p>
+<p>So I'm wondering if there are any hosting providers that offer dev-flow facilities like Pantheon and Acquia Cloud, but that can also host a simple static site.  I've only used Pantheon and ACH.  I'm thinking my answer might be <a href="http://Platform.sh">Platform.sh</a>?  (They specifically support Gatsby w/Wordpress.)</p>
+<div class="message_embed"><a class="message_embed_image" href="http://Platform.sh" style="background-image: url(https://platform.sh/images/meta/Facebook_new.png)"></a><div class="data-container"><div class="message_embed_title"><a href="http://Platform.sh" title="Platform.sh the end-to-end cloud PaaS for hosting, development, and deployment">Platform.sh the end-to-end cloud PaaS for hosting, development, and deployment</a></div><div class="message_embed_description">Get hosting, CI/CD, automated updates, global 24x7 support. We support PHP, Node.js, Drupal, WordPress, Java, Ruby, Python, MySQL, ElasticSearch, and more.</div></div></div>
+
+
+
+<a name="223971108"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Hosting%20options/near/223971108" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Hosting.20options.html#223971108">(Jan 25 2021 at 22:20)</a>:</h4>
+<p><span class="user-mention" data-user-id="256664">@cellear (Luke McCormick)</span>  We do support both Backdrop and Drupal, and have a simpler dev workflow that our customer switching from Pantheon do like: <a href="https://www.altagrade.com/help/tutorials/develop/git">https://www.altagrade.com/help/tutorials/develop/git</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://www.altagrade.com/help/tutorials/develop/git" style="background-image: url(https://www.altagrade.com/sites/default/files/altagrade.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="https://www.altagrade.com/help/tutorials/develop/git" title="Setup automatic deployment with Git • AltaGrade">Setup automatic deployment with Git • AltaGrade</a></div><div class="message_embed_description">Learn how to use Git to deploy a Drupal, Backdrop or WordPress website from your local repository, where you work and develop, to your AltaGrade server as a remote destination, where you can keep everything in sync and can work with your team and different machines.</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,98 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html">Getting the configuration file updated</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="200755134"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200755134" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200755134">(Jun 13 2020 at 08:13)</a>:</h4>
+<p>Hello Backdroppers! I am trying to figure out how to push changes to the configuration file of an already enabled contributed module with the release of next version. I usually use hook_update_N() function in .install for database updates, however this time there is no database changes, but the configuration file needs to get updates. Any hints would be appreciated!</p>
+
+
+
+<a name="200755939"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200755939" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200755939">(Jun 13 2020 at 08:34)</a>:</h4>
+<p>Hi <span class="user-mention" data-user-id="258960">@Alan Mels</span> hook_update_N() is the right place for that. You load the configuration, apply the changes, save the file - done.</p>
+
+
+
+<a name="200756131"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200756131" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200756131">(Jun 13 2020 at 08:42)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated/near/200755939">said</a>:</p>
+<blockquote>
+<p>Hi <span class="user-mention silent" data-user-id="258960">Alan Mels</span> hook_update_N() is the right place for that. You load the configuration, apply the changes, save the file - done.</p>
+</blockquote>
+<p>Thanks for confirmation. I thought so, but then seeing the code section of the API page (<a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_N/1">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_N/1</a>) mentions only DB updates , I wanted to make sure.</p>
+
+
+
+<a name="200756716"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200756716" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200756716">(Jun 13 2020 at 09:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> here an example how I did it - <a href="https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install">https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install" title="backdrop-contrib/ip_blocking">backdrop-contrib/ip_blocking</a></div><div class="message_embed_description">Enables blocking of IP addresses. Contribute to backdrop-contrib/ip_blocking development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="200756968"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200756968" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200756968">(Jun 13 2020 at 09:08)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> Regarding the API documentation - you're right, CMI isn't mentioned there at all. It should be. Mind to file an Issue for that?</p>
+
+
+
+<a name="200757231"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200757231" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200757231">(Jun 13 2020 at 09:16)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated/near/200756716">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="258960">Alan Mels</span> here an example how I did it - <a href="https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install">https://github.com/backdrop-contrib/ip_blocking/blob/master/ip_blocking.install</a></p>
+</blockquote>
+<p>Thanks. I have no DB updates, but lot's of updates for config files.</p>
+
+
+
+<a name="200757235"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200757235" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200757235">(Jun 13 2020 at 09:17)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated/near/200756968">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="258960">Alan Mels</span> Regarding the API documentation - you're right, CMI isn't mentioned there at all. It should be. Mind to file an Issue for that?</p>
+</blockquote>
+<p>Sure, I will.</p>
+
+
+
+<a name="200757822"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200757822" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> findlabnet(Vladimir) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200757822">(Jun 13 2020 at 09:34)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> in my example update hook used for config file, not for DB.</p>
+
+
+
+<a name="200758181"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200758181" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200758181">(Jun 13 2020 at 09:44)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268468">Vladimir</span> <a href="#narrow/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated/near/200757822">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="258960">Alan Mels</span> in my example update hook used for config file, not for DB.</p>
+</blockquote>
+<p>I know Vladimir. The problem is my new config file is huge, and I am afriad I will have to convert json to PHP array to get this done. I hoped there's an easier way</p>
+
+
+
+<a name="200806620"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Getting%20the%20configuration%20file%20updated/near/200806620" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Attila Vasas <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Getting.20the.20configuration.20file.20updated.html#200806620">(Jun 14 2020 at 08:32)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span>  Maybe <code>config_sync_file()</code> function: <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21config%21config.sync.inc/function/config_sync_file/1">https://api.backdropcms.org/api/backdrop/core%21modules%21config%21config.sync.inc/function/config_sync_file/1</a><br>
+You must to call <code>backdrop_flush_all_caches()</code> after <code>config_sync_file()</code>: <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21config%21config.admin.inc/function/config_import_single_form_submit/1">https://api.backdropcms.org/api/backdrop/core%21modules%21config%21config.admin.inc/function/config_import_single_form_submit/1</a></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

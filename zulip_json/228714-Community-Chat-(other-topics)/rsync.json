@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Any <code>rsync</code> gurus here? I have an <code>rsync</code> command I'm using to backup my laptop to an external HD, but it takes forever to run, even on subsequent runs. I thought it should only backup changes on subsequent runs and therefore would be much quicker... Anyone able to help me debug?</p>",
+        "id": 208155998,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598480109
+    },
+    {
+        "content": "<p>For example, I've run this command multiple times over the last few days, and just started it today before I posted above (2 hrs ago). It's still running now...</p>",
+        "id": 208166288,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598488055
+    },
+    {
+        "content": "<p>I'm no guru. Perhaps it's worth running a test that your command is is actually only doing a diff</p>",
+        "id": 208168214,
+        "sender_full_name": "Herb",
+        "timestamp": 1598489988
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> How do I do that?</p>",
+        "id": 208168531,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598490293
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> here are some ideas. <a href=\"https://superuser.com/questions/576687/how-to-print-files-that-would-have-been-changed-using-rsync\">https://superuser.com/questions/576687/how-to-print-files-that-would-have-been-changed-using-rsync</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://superuser.com/questions/576687/how-to-print-files-that-would-have-been-changed-using-rsync\" style=\"background-image: url(https://cdn.sstatic.net/Sites/superuser/Img/apple-touch-icon@2.png?v=e869e4459439)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://superuser.com/questions/576687/how-to-print-files-that-would-have-been-changed-using-rsync\" title=\"How to print files that would have been changed using rsync?\">How to print files that would have been changed using rsync?</a></div><div class=\"message_embed_description\">Is there a way to get rsync to print the full filepaths to all files that are different without actually transferring any files?\n\nAlternatively, I need a way to diff the files across two trees (ove...</div></div></div>",
+        "id": 208170842,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598492783
+    },
+    {
+        "content": "<p>Hmmm, doing a dry-run and piping the output results in a 22MB file!</p>",
+        "id": 208172598,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598495133
+    },
+    {
+        "content": "<p>Something's going on here I think...</p>",
+        "id": 208172602,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598495141
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> thanks. I didn't actually know how but figured there might be some resource out there</p>",
+        "id": 208172749,
+        "sender_full_name": "Herb",
+        "timestamp": 1598495346
+    },
+    {
+        "content": "<p>I use rsync quite a bit and I've found the dry run option useful at times.</p>",
+        "id": 208172761,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598495386
+    },
+    {
+        "content": "<p>Ok, so I think I worked out the problem. Files on my source are writeable by the group, whereas on the destination they're not (I wonder if this has something to do with the external HD...) So because the file permissions are different, it's copying everything again.</p>",
+        "id": 208174230,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598497587
+    },
+    {
+        "content": "<p>I reformatted my external HD from FAT to EXT4 and now <code>rsync</code> works as expected. The initial backup (I obviously had to redo it) took much less time than the previous ones, and now subsequent backups are really quick.</p>",
+        "id": 208182643,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598510640
+    },
+    {
+        "content": "<p>Thanks for the help <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> and <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>!</p>",
+        "id": 208182698,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598510652
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p>Adding an exposed filter to the image library (e.g. to allow sorting on filename) works in the modal from an image field, but not from the modal in the image editor. Does anyone have any guidance on what might be the problem?<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/3293\" title=\"https://github.com/backdrop/backdrop-issues/issues/3293\">https://github.com/backdrop/backdrop-issues/issues/3293</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3293\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3293\" title=\"[UX] Exposed filename filter for media library dialogue · Issue #3293 · backdrop/backdrop-issues\">[UX] Exposed filename filter for media library dialogue · Issue #3293 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea With the new media library for the editor we have a great improvement in finding previous images. However on sites with hundreds of images it can be overwhelming. Adding...</div></div></div>",
+        "id": 194335773,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587056446
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> in the issue above you suggested changing the <code>#name</code> properties on the button. How would one do that for the image library in particular?</p>",
+        "id": 194335936,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587056508
+    },
+    {
+        "content": "<p>Hmm.. the <code>Apply</code> button on the exposed filter has an empty <code>name</code> property, and the <code>Insert</code>button in the WYSIWYG modal doesn't seem to have one at all.</p>",
+        "id": 194336279,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587056639
+    },
+    {
+        "content": "<p>Actually, it looks like the views exposed form is not declared in the WYSIWYG version so submitting the filter actually submits the \"Insert\" form. I'll try to type that up in the issue in case it helps clarify and anyone gets a bright idea.</p>",
+        "id": 194337072,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587056993
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/3293#issuecomment-614783086\" title=\"https://github.com/backdrop/backdrop-issues/issues/3293#issuecomment-614783086\">https://github.com/backdrop/backdrop-issues/issues/3293#issuecomment-614783086</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3293#issuecomment-614783086\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3293#issuecomment-614783086\" title=\"[UX] Exposed filename filter for media library dialogue · Issue #3293 · backdrop/backdrop-issues\">[UX] Exposed filename filter for media library dialogue · Issue #3293 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea With the new media library for the editor we have a great improvement in finding previous images. However on sites with hundreds of images it can be overwhelming. Adding...</div></div></div>",
+        "id": 194337913,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587057400
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> My assumption that it could have something to do with the <code>#name</code> property turned out to be wrong anyway (as posted in my followup comment). You're probably closer to the solution than I have ever been.</p>",
+        "id": 194397398,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1587102715
+    },
+    {
+        "content": "<p>Okay, thanks. Maybe it has to do with nested HTML forms (the exposed form is within the \"Insert image\" form), which isn't technically allowed.</p>",
+        "id": 194432319,
+        "sender_full_name": "Laryn",
+        "timestamp": 1587126803
+    },
+    {
+        "content": "<p>On the image library filter issue, I've pulled @elmuche's suggestions into a functional PR. I'm sure code review will have some commentary but it does work and is a big improvement on sites that have a lot of images...<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/3293\">https://github.com/backdrop/backdrop-issues/issues/3293</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3293\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3293\" title=\"[UX] Exposed filename filter for media library dialogue · Issue #3293 · backdrop/backdrop-issues\">[UX] Exposed filename filter for media library dialogue · Issue #3293 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea With the new media library for the editor we have a great improvement in finding previous images. However on sites with hundreds of images it can be overwhelming. Adding...</div></div></div>",
+        "id": 220000599,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608048457
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++</p>",
+        "id": 220000865,
+        "sender_full_name": "klonos",
+        "timestamp": 1608048551
+    },
+    {
+        "content": "<p><strong>laryn</strong> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> (Karma: 15)</p>",
+        "id": 220000866,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608048551
+    },
+    {
+        "content": "<p>...and @elmuche++</p>",
+        "id": 220000907,
+        "sender_full_name": "klonos",
+        "timestamp": 1608048570
+    },
+    {
+        "content": "<p>elmuche - Dragon Fire (Karma: 1)</p>",
+        "id": 220000908,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608048571
+    },
+    {
+        "content": "<p>I've been watching that issue, and saw comments re code could have been better. I think that we should focus some resources to get it in 1.18.0 ...we have till Jan 1st to get it to an acceptable shape, and then till the 15th to tweak/improve/optimize. ...there's an offical sprint scheduled for Jan 2, but there's a good chance that some people (including myself) will be sprinting over the next weekends anyway.</p>",
+        "id": 220002585,
+        "sender_full_name": "klonos",
+        "timestamp": 1608049100
+    },
+    {
+        "content": "<p>...also, very minimal and seemingly straingt-forward code changes may I add <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 220006255,
+        "sender_full_name": "klonos",
+        "timestamp": 1608050424
+    }
+]

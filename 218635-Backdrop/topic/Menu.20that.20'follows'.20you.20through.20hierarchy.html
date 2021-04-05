@@ -1,0 +1,141 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html">Menu that 'follows' you through hierarchy</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="231591689"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231591689" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231591689">(Mar 24 2021 at 07:08)</a>:</h4>
+<p>Is there a module (or way of configuring core's functionality) that let's you display a menu that 'follows' you through the hierarchy? As an example, consider the following menu:</p>
+<div class="codehilite"><pre><span></span><code>Level 1-A
+- Level 2-A
+- Level 2-B
+  - Level 3-A
+  - Level 3-B
+- Level 2-C
+Level 1-B
+Level 1-C
+</code></pre></div>
+<p>Initially only <code>Level 1-*</code> links are displayed. When you click <code>Level 1-A</code> then you see only the <code>Level 2-*</code> links. When you click <code>Level 2-B</code> then you see only <code>Level 3-A</code> and <code>Level 3-B</code>.</p>
+
+
+
+<a name="231591720"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231591720" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231591720">(Mar 24 2021 at 07:09)</a>:</h4>
+<p>In other words, all links at or above the current one are hidden.</p>
+
+
+
+<a name="231605467"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231605467" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231605467">(Mar 24 2021 at 09:40)</a>:</h4>
+<p>I don't know the answer, but for curiosity: How do you go back to a higher level when these links aren't displayed?</p>
+
+
+
+<a name="231605713"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231605713" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231605713">(Mar 24 2021 at 09:42)</a>:</h4>
+<p>Breadcrumbs, back button, etc. Same as any other link on a website.</p>
+
+
+
+<a name="231606626"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231606626" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231606626">(Mar 24 2021 at 09:49)</a>:</h4>
+<p>I see! On <a href="https://drupal.stackexchange.com/questions/100937/three-level-menu-how-to-show-only-the-children-of-the-current-page">Drupal Answers</a> someone says, the Menu Block module provides some options to achieve it. I guess that part of Menu Block didn't make it in Backdrop, might give an idea for a separate module, though.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://drupal.stackexchange.com/questions/100937/three-level-menu-how-to-show-only-the-children-of-the-current-page" style="background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)"></a><div class="data-container"><div class="message_embed_title"><a href="https://drupal.stackexchange.com/questions/100937/three-level-menu-how-to-show-only-the-children-of-the-current-page" title="Three level menu: How to show only the children of the current page?">Three level menu: How to show only the children of the current page?</a></div><div class="message_embed_description">A three level menu:
+
+  Item 1
+    Item A
+        Item X
+        Item Y
+        Item Z
+    Item B
+        Item Xx
+        Item Yx
+        Item Zx
+    Item C
+        Item Xy
+When viewing the "Item 1...</div></div></div>
+
+
+
+<a name="231607339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231607339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231607339">(Mar 24 2021 at 09:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> if I get your question right, you're searching for something that the D7 menu_block module provided: "Make the starting level follow the active menu item." I'm not aware of a module, that provides this for Backdrop yet.</p>
+
+
+
+<a name="231607374"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231607374" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231607374">(Mar 24 2021 at 09:56)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span>! I knew I had seen a "Make the starting level follow the active menu item" option somewhere before. Seems it was in that D7 module.</p>
+
+
+
+<a name="231614794"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231614794" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231614794">(Mar 24 2021 at 10:56)</a>:</h4>
+<p>The module you are looking for <span class="user-mention" data-user-id="256607">@BWPanda</span> is most likely <a href="https://www.drupal.org/project/hierarchical_select">https://www.drupal.org/project/hierarchical_select</a></p>
+
+
+
+<a name="231614873"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231614873" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231614873">(Mar 24 2021 at 10:57)</a>:</h4>
+<p>...not sure if there was an equivalent for menus.</p>
+
+
+
+<a name="231615062"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231615062" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231615062">(Mar 24 2021 at 10:59)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> Thanks, but <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> and <span class="user-mention" data-user-id="256738">@indigoxela</span> were right that it was Menu Block, of which Backdrop has a (hidden) port: <a href="https://github.com/docwilmot/menu_block">https://github.com/docwilmot/menu_block</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/docwilmot/menu_block" style="background-image: url(https://avatars.githubusercontent.com/u/1042283?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/docwilmot/menu_block" title="docwilmot/menu_block">docwilmot/menu_block</a></div><div class="message_embed_description">Contribute to docwilmot/menu_block development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="231615093"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231615093" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231615093">(Mar 24 2021 at 10:59)</a>:</h4>
+<p>Right <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="231615114"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231615114" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231615114">(Mar 24 2021 at 10:59)</a>:</h4>
+<p>...wasn't that functionality included in core though?</p>
+
+
+
+<a name="231615118"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231615118" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231615118">(Mar 24 2021 at 10:59)</a>:</h4>
+<p>...I thought so.</p>
+
+
+
+<a name="231615450"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231615450" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231615450">(Mar 24 2021 at 11:02)</a>:</h4>
+<p>...OK, only the "Maximum depth" feature seems to have been merged into core ...what you are after is the "Make the starting level follow the active menu item" feature I guess.</p>
+
+
+
+<a name="231616146"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231616146" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231616146">(Mar 24 2021 at 11:07)</a>:</h4>
+<p>Yep</p>
+
+
+
+<a name="231887454"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Menu%20that%20%27follows%27%20you%20through%20hierarchy/near/231887454" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Menu.20that.20'follows'.20you.20through.20hierarchy.html#231887454">(Mar 25 2021 at 22:40)</a>:</h4>
+<p>Yes, that part wasn't included. At some point I thought I needed to port it but then realized I didn't need it</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

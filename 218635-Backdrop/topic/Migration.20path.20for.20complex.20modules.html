@@ -1,0 +1,121 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html">Migration path for complex modules</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="222983164"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222983164" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222983164">(Jan 16 2021 at 14:11)</a>:</h4>
+<p>I wonder if anyone here has done a migration path for complex contrib modules. Things get difficult when dependencies change or submodules get removed.</p>
+<p>How to deal with that?</p>
+<p>Example: i18n_variable in D7 has a dependency on variable_store. Variable store ships with (and has a dependency on) variable - this module does not exist for Backdrop and the dependency has been removed. But we need the data from the variable_store database table (to convert to config). Any hint is welcome.</p>
+
+
+
+<a name="222983408"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222983408" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222983408">(Jan 16 2021 at 14:15)</a>:</h4>
+<p>Another question: I found no example, how to disable a module within upgrade process. I'm aware of the opposite - function update_module_enable(), but there's no _disable counterpart. How can modules get disabled in a clean way?</p>
+<p>Note: it's not possible to disable the module in D7 because of the dependency chain.</p>
+
+
+
+<a name="222983732"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222983732" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222983732">(Jan 16 2021 at 14:21)</a>:</h4>
+<blockquote>
+<p>I found no example, how to disable a module within upgrade process.</p>
+</blockquote>
+<p>Oh, I found one in core. The (former contrib) token module gets "disabled" via db_query() to the system table.</p>
+
+
+
+<a name="222985492"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222985492" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222985492">(Jan 16 2021 at 14:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> the internet says that this should work:</p>
+<div class="codehilite"><pre><span></span><code>/**
+ * Disable and uninstall the module.
+ */
+function MODULE_update_1234() {
+  if (module_exists(&#39;module_name&#39;)) {
+    module_disable(array(&#39;module_name&#39;));
+    backdrop_uninstall_modules(array(&#39;module_name&#39;));
+  }
+}
+</code></pre></div>
+
+
+
+<a name="222985642"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222985642" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222985642">(Jan 16 2021 at 14:57)</a>:</h4>
+<p>...I could be wrong about it, but I'm assuming that disabling via a db query may not call any other required routines/hooks - it might have been simply a clean-up if the module files have been removed from the codebase.</p>
+
+
+
+<a name="222985816"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222985816" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222985816">(Jan 16 2021 at 15:00)</a>:</h4>
+<p>Interesting. Where did you find that example?</p>
+<p>The thing is: "disabling" shouldn't call any routine. We actually just need the data from database, the code might be possibly broken because of the unmet dependencies... not sure.</p>
+
+
+
+<a name="222985868"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222985868" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222985868">(Jan 16 2021 at 15:00)</a>:</h4>
+<p>Adapted from <a href="https://stackoverflow.com/questions/13708873/how-to-disable-and-uninstall-a-drupal-module-programmatically">https://stackoverflow.com/questions/13708873/how-to-disable-and-uninstall-a-drupal-module-programmatically</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://stackoverflow.com/questions/13708873/how-to-disable-and-uninstall-a-drupal-module-programmatically" style="background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)"></a><div class="data-container"><div class="message_embed_title"><a href="https://stackoverflow.com/questions/13708873/how-to-disable-and-uninstall-a-drupal-module-programmatically" title="How to disable and uninstall a Drupal module programmatically?">How to disable and uninstall a Drupal module programmatically?</a></div><div class="message_embed_description">I want to be able to disable and then uninstall a module programmatically on my local environment and then easily push that code to prod so everything gets updated.
+
+I'm guessing it's something wit...</div></div></div>
+
+
+
+<a name="222986034"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222986034" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222986034">(Jan 16 2021 at 15:02)</a>:</h4>
+<p>Check in the ubercart main module install file. I enable and disable some submodules in there.</p>
+
+
+
+<a name="222986243"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222986243" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222986243">(Jan 16 2021 at 15:06)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> yeah, Ubercart is even more complex, good example. <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span>  But... you do it in hook_disable(), not in hook_update_N() - is that comparable?</p>
+
+
+
+<a name="222986387"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/222986387" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#222986387">(Jan 16 2021 at 15:09)</a>:</h4>
+<p>I did it in hook disable because I wanted them disabled when the main module got disabled, I assume it would work in an update hook as well but can't say for sure.</p>
+
+
+
+<a name="223023671"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/223023671" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#223023671">(Jan 17 2021 at 04:29)</a>:</h4>
+<p>You don't like how I did it <span class="user-mention" data-user-id="256738">@indigoxela</span> ? I figure we don't want to run any of that submodule code and can have more control over what gets removed and when</p>
+
+
+
+<a name="223023934"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/223023934" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#223023934">(Jan 17 2021 at 04:36)</a>:</h4>
+<p>And in regards to converting data from variable_store I figure my PR works pretty well. It takes all config files, selects those which are marked translatable and then looks for a translation in variable_store. Is there an issue with that approach?</p>
+
+
+
+<a name="223031400"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Migration%20path%20for%20complex%20modules/near/223031400" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Migration.20path.20for.20complex.20modules.html#223031400">(Jan 17 2021 at 08:19)</a>:</h4>
+<blockquote>
+<p>You don't like how I did it?</p>
+</blockquote>
+<p>My first impression was, that it's a bit "dirty", but thinking it over ... we do not want any module code to run anyway, so your approach seems right. I just wanted some get some additional opinions, as maybe someone else has been there before. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

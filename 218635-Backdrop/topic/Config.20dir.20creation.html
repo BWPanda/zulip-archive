@@ -1,0 +1,38 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Config.20dir.20creation.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20dir.20creation.html">Config dir creation</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="206566566"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20dir%20creation/near/206566566" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20dir.20creation.html#206566566">(Aug 11 2020 at 12:05)</a>:</h4>
+<p>When installing a brand new Backdrop site, if the config directories specified in settings.php don't exist, Backdrop will create them. Does anyone know where in Backdrop's code this dir creation happens? I can't seem to find it...</p>
+
+
+
+<a name="206567970"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20dir%20creation/near/206567970" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20dir.20creation.html#206567970">(Aug 11 2020 at 12:25)</a>:</h4>
+<p>Are you searching for <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21install.inc/function/backdrop_install_config_directories/1">backdrop_install_config_directories</a> or possibly <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/ConfigFileStorage%3A%3AinitializeStorage/1">initializeStorage</a> ?</p>
+
+
+
+<a name="206572616"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Config%20dir%20creation/near/206572616" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Config.20dir.20creation.html#206572616">(Aug 11 2020 at 13:14)</a>:</h4>
+<p>initializeStorage is what I was looking for, thanks <span class="user-mention" data-user-id="256738">@indigoxela</span>!</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

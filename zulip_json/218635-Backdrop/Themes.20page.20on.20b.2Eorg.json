@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Huh, the <em>Themes</em> page on b...org doesn't show themes but modules for me! What do others see there? <a href=\"https://backdropcms.org/themes\">https://backdropcms.org/themes</a></p>",
+        "id": 202680354,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593692776
+    },
+    {
+        "content": "<p>Oops, right, that's all modules! Someone messed the view <code>view-id-modules view-display-id-themes</code>, probably a filter should be \"overridden\" but isn't (anymore). Who can fix this?</p>",
+        "id": 202681291,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593693336
+    },
+    {
+        "content": "<blockquote>\n<p>Who can fix this?</p>\n</blockquote>\n<p>Maybe <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> or <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> ?</p>",
+        "id": 202685234,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593695402
+    },
+    {
+        "content": "<p>I've fixed it on the live site, but I believe that it will need proper in-code config export and push to <a href=\"https://github.com/backdrop-ops/backdropcms.org\">https://github.com/backdrop-ops/backdropcms.org</a> ... <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> or <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> can help with that.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 202708539,
+        "sender_full_name": "klonos",
+        "timestamp": 1593705778
+    },
+    {
+        "content": "<p>...I've checked the layouts view display, and that one was OK.</p>",
+        "id": 202708573,
+        "sender_full_name": "klonos",
+        "timestamp": 1593705801
+    },
+    {
+        "content": "<p>While at it, should I delete the <a href=\"https://backdropcms.org/project/elevation\">https://backdropcms.org/project/elevation</a> node? ...I'm reluctant, since <a href=\"https://backdropcms.org/project/usage/elevation\">https://backdropcms.org/project/usage/elevation</a> shows more than a dozen sites using it <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 202708788,
+        "sender_full_name": "klonos",
+        "timestamp": 1593705904
+    },
+    {
+        "content": "<p>...when trying to install this theme via the Project Browser, you get an error that the .zip file cannot be downloaded.</p>",
+        "id": 202708857,
+        "sender_full_name": "klonos",
+        "timestamp": 1593705945
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> for fixing the <em>Themes</em> page! Regarding the <em>Elevation</em> theme, ask <span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span>?</p>",
+        "id": 202711807,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593707425
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>  and <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> for finding and fixing the themes page!</p>",
+        "id": 202713226,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1593708112
+    },
+    {
+        "content": "<p>I noticed yesterday that the exposed search was missing, so \"fixed it\" but apparently did more harm than good!  I've committed the config on live and sync;d down to stage, so we should be all set now with the change @klonos made.</p>",
+        "id": 202713344,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1593708163
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 202714130,
+        "sender_full_name": "klonos",
+        "timestamp": 1593708583
+    },
+    {
+        "content": "<p>I made the Elevation theme but got to delete the files as there were license rectrictions I missunderstood. It can be deleted.</p>",
+        "id": 202769740,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1593753805
+    }
+]

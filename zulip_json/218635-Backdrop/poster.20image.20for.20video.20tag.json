@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>I'm looking for ways to add a poster image to a video tag. Anyone found in this same situation? Best approaches? Any contrib module? Will ever be added to core?</p>",
+        "id": 203284244,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594223171
+    },
+    {
+        "content": "<p>What sort of video? Remote (third party service) or local upload? In a file field or a tag via ckeditor in content? File entities are fieldable - that could be helpful if it's about local (uploaded) files and there's a module for that (at least one).</p>",
+        "id": 203353741,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594275360
+    },
+    {
+        "content": "<p>Local upload. Backdrop supports the html5 video tag by default, but there is no way to add a poster to that tag (other than hacking the theme_file_video() function). It would be great to be able to have an image field which could be used as poster and set that on a field formatter. I couldn't see any module for that. is it?</p>",
+        "id": 203446051,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594331627
+    },
+    {
+        "content": "<p>I suggest to use file entities. Here's a module that uses placeholders - <a href=\"https://backdropcms.org/project/feef\">File Entity Embed Filter</a>. The way how these entities get rendered is fully configurable via the view mode. Go to /admin/structure/file-types/manage/video/fields and add your image field first.</p>",
+        "id": 203494451,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594379437
+    },
+    {
+        "content": "<p>thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> I tried to work with adding a poster field to the file entity, but I don't find it very useful. First, you need to go to manage the file to add the poster, which is not very nice as UX. then, I have not figured out how to add that image as poster to the video tag. Is not so straightforward. :-(</p>",
+        "id": 203542582,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594406137
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"300022\">@Robert Garrigos</span> I see. So you don't have a custom theme to provide customized template files, you're trying to achieve it with core or custom modules alone...<br>\nHm, do you know any D7 module that provides what you need? I'm not aware of one, but that doesn't mean there isn't any. If so, we could port that or relevant parts of it to Backdrop core or contrib.</p>",
+        "id": 203589063,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594460053
+    },
+    {
+        "content": "<p>I do have a custom theme but:</p>\n<ol>\n<li>I don't see the way to get the file entity extra field info from within the theme_file_video() function, where I could add the poster attribute to the video tag.</li>\n<li>In any case, having to go to manage the file in order to add a poster, and not from within the node edition form, is not very useful.</li>\n</ol>\n<p>I did look for a drupal module and was unsuccessful.</p>",
+        "id": 203589734,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594461581
+    },
+    {
+        "content": "<p>Hm. If you do have a custom theme, then it's simple to override any theme function in your template.php. Or am I missing something?</p>\n<p>An example:</p>\n<div class=\"codehilite\"><pre><span></span><code>/**\n * Overrides theme_file_video() to add poster attributte.\n */\nfunction YOURTHEME_file_video($variables) {\n  $files = $variables[&#39;files&#39;];\n  $output = &#39;&#39;;\n\n  $video_attributes = array();\n  if ($variables[&#39;controls&#39;]) {\n    $video_attributes[&#39;controls&#39;] = &#39;controls&#39;;\n  }\n  if ($variables[&#39;autoplay&#39;]) {\n    $video_attributes[&#39;autoplay&#39;] = &#39;autoplay&#39;;\n  }\n  if ($variables[&#39;loop&#39;]) {\n    $video_attributes[&#39;loop&#39;] = &#39;loop&#39;;\n  }\n  if ($variables[&#39;muted&#39;]) {\n    $video_attributes[&#39;muted&#39;] = &#39;muted&#39;;\n  }\n  if ($variables[&#39;width&#39;]) {\n    $video_attributes[&#39;width&#39;] = $variables[&#39;width&#39;];\n  }\n  if ($variables[&#39;height&#39;]) {\n    $video_attributes[&#39;height&#39;] = $variables[&#39;height&#39;];\n  }\n  if (!empty($variables[&#39;preload&#39;])) {\n    $video_attributes[&#39;preload&#39;] = $variables[&#39;preload&#39;];\n  }\n\n  foreach ($files as $delta =&gt; $file) {\n    $source_attributes = array(\n      &#39;src&#39; =&gt; file_create_url($file[&#39;uri&#39;]),\n      &#39;type&#39; =&gt; $file[&#39;filemime&#39;],\n    );\n    $source = &#39;&lt;source&#39; . backdrop_attributes($source_attributes) . &#39; /&gt;&#39;;\n    // Add poster image.\n    if (!empty($file[&#39;field_poster&#39;][LANGUAGE_NONE][0])) {\n      $poster_uri = $file[&#39;field_poster&#39;][LANGUAGE_NONE][0][&#39;uri&#39;];\n      $video_attributes[&#39;poster&#39;] = file_create_url($poster_uri);\n    }\n  }\n  $output = &#39;&lt;video&#39; . backdrop_attributes($video_attributes) . &#39;&gt;&#39;;\n  $output .= $source;\n  $output .= &#39;&lt;/video&gt;&#39;;\n  return $output;\n}\n</code></pre></div>\n\n\n<p>This adds a poster attribute taken from an image field (image \"field_poster\" is attached to the video file entity).</p>\n<p>If unsure, compare it with the <a href=\"https://github.com/backdrop/backdrop/blob/c98bf5148875a4e829754d30afd940d79c8ee87f/core/modules/file/file.theme.inc#L485\">original theme function</a>. The difference isn't that big.</p>\n<p>Note: this was just a quick proof of concept and probably could be tweaked.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/c98bf5148875a4e829754d30afd940d79c8ee87f/core/modules/file/file.theme.inc#L485\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/c98bf5148875a4e829754d30afd940d79c8ee87f/core/modules/file/file.theme.inc#L485\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 203596497,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1594473743
+    },
+    {
+        "content": "<p>right, that's the theme function. I wasn't aware of the file variable. Yep, that would do it. Thanks :-)</p>",
+        "id": 203732381,
+        "sender_full_name": "Robert Garrigos",
+        "timestamp": 1594655411
+    }
+]

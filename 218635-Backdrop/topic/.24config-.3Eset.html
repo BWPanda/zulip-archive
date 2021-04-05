@@ -1,0 +1,102 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/.24config-.3Eset.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html">$config->set</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="212184369"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212184369" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212184369">(Oct 03 2020 at 18:36)</a>:</h4>
+<p>Hi...,</p>
+<p>I'm trying to convert a D7 module... and in the admin_settings form there is a System_settings_form() which according to <a href="http://b.org">b.org</a> is to be deprecated</p>
+<p>I'm not that good with array...  so...</p>
+<p>With the $config-&gt;set()  does it only save one setting or will it save multiple settings stored in an array...  </p>
+<p>The example on <a href="https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated">https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated</a> isn't very good for a noob <span aria-label="frown" class="emoji emoji-1f641" role="img" title="frown">:frown:</span></p>
+<p>Do I have to issue a $config-&gt;set for each setting or, how do I save multiple settings...  </p>
+<p>Thanks again.</p>
+
+
+
+<a name="212184394"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212184394" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212184394">(Oct 03 2020 at 18:37)</a>:</h4>
+<p>Yes, you need a  $config-&gt;set() for each setting.</p>
+
+
+
+<a name="212185226"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212185226" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212185226">(Oct 03 2020 at 18:59)</a>:</h4>
+<p><span class="user-mention" data-user-id="302871">@Steve Moorhouse</span> The function itself is not deprecated, however there is new behavior and the old behavior is deprecated but will still work the way it did before as long as the compatibility layer is enabled.</p>
+
+
+
+<a name="212185321"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212185321" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212185321">(Oct 03 2020 at 19:01)</a>:</h4>
+<p>To use the new behavior you just need to add a line like <code>$form['#config'] = 'mymodule.settings'</code> to tell Backdrop which config file to save settings into.</p>
+
+
+
+<a name="212185682"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212185682" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212185682">(Oct 03 2020 at 19:11)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256663">Joseph Flatt</span> <a href="#narrow/stream/218635-Backdrop/topic/.24config-.3Eset/near/212185321">said</a>:</p>
+<blockquote>
+<p>To use the new behavior you just need to add a line like <code>$form['#config'] = 'mymodule.settings'</code> to tell Backdrop which config file to save settings into.</p>
+</blockquote>
+<p>Thanks Joseph.  It does say it is to <em>be</em> deprecated so I thought there was no point in leaving it in, I may as well try (TRY being the operative word) to do it the BD way <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+<p>Already have the $form['#config'] in...  I thought this was to add the settings to the form, how would I then save the settings?  I'm using the $config-&gt;set()...  but while it saves a text field ok, it's not saving an array value...  checkbox option... it puts the array item key and not it's value <span aria-label="frown" class="emoji emoji-1f641" role="img" title="frown">:frown:</span></p>
+
+
+
+<a name="212186642"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212186642" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212186642">(Oct 03 2020 at 19:37)</a>:</h4>
+<p><span class="user-mention" data-user-id="302871">@Steve Moorhouse</span> See <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1</a> which says:</p>
+<blockquote>
+<p>@since 1.6.0 Restored and made compatible with configuration management.</p>
+</blockquote>
+<p>So it's no longer deprecated, it won't be deprecated in future, and it's safe and fine to use with config.</p>
+
+
+
+<a name="212186787"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212186787" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212186787">(Oct 03 2020 at 19:41)</a>:</h4>
+<p>An example might help. See <a href="https://github.com/backdrop-contrib/compact_forms/blob/d0be21a8de78c706b3577dd62c2bf6fb07595872/compact_forms.module#L48">https://github.com/backdrop-contrib/compact_forms/blob/d0be21a8de78c706b3577dd62c2bf6fb07595872/compact_forms.module#L48</a> which uses this function and therefore doesn't need its own submit function. It all happens automatically.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/compact_forms/blob/d0be21a8de78c706b3577dd62c2bf6fb07595872/compact_forms.module#L48" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/compact_forms/blob/d0be21a8de78c706b3577dd62c2bf6fb07595872/compact_forms.module#L48" title="backdrop-contrib/compact_forms">backdrop-contrib/compact_forms</a></div><div class="message_embed_description">Presents text fields for selected forms in a more compact fashion using jQuery. - backdrop-contrib/compact_forms</div></div></div>
+
+
+
+<a name="212186915"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212186915" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212186915">(Oct 03 2020 at 19:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> Many thanks...  </p>
+<p>I searched the changelog and found <a href="https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated">https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated</a>... What a lovely rabbit hole that was... 4 hours later <span aria-label="frown" class="emoji emoji-1f641" role="img" title="frown">:frown:</span></p>
+<p>It's all a big learning curve <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+<p>Thanks again.</p>
+
+
+
+<a name="212189729"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212189729" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212189729">(Oct 03 2020 at 21:00)</a>:</h4>
+<p>Sorry about that. FTR I've just filed this issue to fix that documentation: <a href="https://github.com/backdrop-ops/api.backdropcms.org/issues/101">https://github.com/backdrop-ops/api.backdropcms.org/issues/101</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/api.backdropcms.org/issues/101" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/api.backdropcms.org/issues/101" title="system_settings_form() is *not* deprecated · Issue #101 · backdrop-ops/api.backdropcms.org">system_settings_form() is *not* deprecated · Issue #101 · backdrop-ops/api.backdropcms.org</a></div><div class="message_embed_description">This change record says that system_settings_form() has been deprecated: https://api.backdropcms.org/change-records/systemsettingsform-be-deprecated This was before CMI and now system_settings_form...</div></div></div>
+
+
+
+<a name="212222245"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/%24config-%3Eset/near/212222245" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/.24config-.3Eset.html#212222245">(Oct 04 2020 at 12:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="302871">@Steve Moorhouse</span> Another little trick you might not yet be aware of: set <code>#config</code> on your form. That's a shortcut, so you don't have to do config_set over and over again.</p>
+<p>Here's an <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1">example in combination with system_settings_form()</a></p>
+<p>...and now the right link.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

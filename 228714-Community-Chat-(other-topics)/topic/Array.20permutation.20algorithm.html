@@ -1,0 +1,429 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html">Array permutation algorithm</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="196224712"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196224712" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196224712">(May 04 2020 at 18:56)</a>:</h4>
+<p>Hi all, I want to create an algorithm to replace items in a path with a placeholder. If I have a path <code>one/two/three</code> I want the algorithm to return:</p>
+<ul>
+<li><code>one/%/three</code> </li>
+<li><code>one/%/%</code> </li>
+<li><code>one/two/%</code> </li>
+<li><code>%/two/three</code> </li>
+<li><code>%/%/three</code><br>
+etc, with all possible combinations of each path part replaced by <code>%</code>. For any path.<br>
+I've actually accomplished this, but its not very elegant looking, and wondered if I could pick your brains. The size of the return would be I think 2^(number-of-parts), which could cause issues quickly if the algorithm isn't efficient I suspect.<br>
+What do you think?<br>
+(I left my solution home on my laptop, and I'm at work, but happy to share later).</li>
+</ul>
+
+
+
+<a name="196242040"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196242040" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196242040">(May 04 2020 at 21:26)</a>:</h4>
+<p>How many items are you expecting to have to process like that? Also, what is the maximum number of parts that you expect will be needed?</p>
+
+
+
+<a name="196244187"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196244187" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196244187">(May 04 2020 at 21:48)</a>:</h4>
+<p>Do you want it to only return 1 copy of the path if a part is already a <code>%</code>?</p>
+
+
+
+<a name="196247314"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196247314" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196247314">(May 04 2020 at 22:24)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> I came up with something that seems to work well. It runs decently fast for an operation that doubles in length with every operation, but the big problem I hit was the memory usage. With 20 parts in the url, it ran in .12 seconds, but just used over 50MB of memory. Every  extra component causes 2x the execution time, but  3x the memory usage.</p>
+
+
+
+<a name="196247350"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196247350" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196247350">(May 04 2020 at 22:25)</a>:</h4>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">function</span> <span class="nf">joseph_test_path_replace</span><span class="p">(</span><span class="nv">$path</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nb">is_string</span><span class="p">(</span><span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$path</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nv">$path</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nv">$part</span> <span class="o">=</span> <span class="nb">array_shift</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// We have reached the last item.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$part</span> <span class="o">!==</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="nv">$part</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// There are more parts to go.</span>
+  <span class="nv">$paths</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+  <span class="nv">$sub_paths</span> <span class="o">=</span> <span class="nx">joseph_test_path_replace</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+  <span class="nv">$count</span> <span class="o">=</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$sub_paths</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nv">$index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$index</span> <span class="o">&lt;</span> <span class="nv">$count</span><span class="p">;</span> <span class="nv">$index</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$part</span> <span class="o">!==</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$paths</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$part</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span> <span class="o">.</span> <span class="nv">$sub_paths</span><span class="p">[</span><span class="nv">$index</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="nv">$paths</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">&#39;%/&#39;</span> <span class="o">.</span> <span class="nv">$sub_paths</span><span class="p">[</span><span class="nv">$index</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nv">$paths</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+<a name="196252877"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196252877" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196252877">(May 04 2020 at 23:39)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> wow, excellent, much better than what I did. I cant figure how it works, so I'll ask you one more favor: is it possible to ensure that the first part of the path is always preserved? So <code>one/two/three</code> results in </p>
+<ul>
+<li>one/two/three</li>
+<li>one/%/three</li>
+<li>one/%/%</li>
+<li>one/two/%</li>
+<li>one/%/three<br>
+etc</li>
+</ul>
+
+
+
+<a name="196256254"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196256254" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196256254">(May 05 2020 at 00:26)</a>:</h4>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">function</span> <span class="nf">joseph_test_path_replace</span><span class="p">(</span><span class="nv">$path</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nb">is_string</span><span class="p">(</span><span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$path</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nv">$path</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nv">$part</span> <span class="o">=</span> <span class="nb">array_pop</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// We have reached the last item, so just return it.</span>
+    <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="nv">$part</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// There are more parts to process.</span>
+  <span class="nv">$paths</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+  <span class="c1">// Call this function again with the remaining path parts.</span>
+  <span class="nv">$sub_paths</span> <span class="o">=</span> <span class="nx">joseph_test_path_replace</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+
+  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$sub_paths</span> <span class="k">as</span> <span class="nv">$sub_path</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// If the part is already a %, just return one item to avoid duplicates.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$part</span> <span class="o">!==</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$paths</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$sub_path</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span> <span class="o">.</span> <span class="nv">$part</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nv">$paths</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$sub_path</span> <span class="o">.</span> <span class="s1">&#39;/%&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nv">$paths</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+<a name="196256277"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196256277" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196256277">(May 05 2020 at 00:27)</a>:</h4>
+<p>That should do the trick.</p>
+
+
+
+<a name="196258414"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196258414" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196258414">(May 05 2020 at 01:04)</a>:</h4>
+<p>Perfect! Thanks!</p>
+
+
+
+<a name="196272997"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196272997" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196272997">(May 05 2020 at 06:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> Ooh, nice problem! I love these sort of maths/coding challenges! It took me a while, but I finally worked out a solution to this:</p>
+<div class="codehilite"><pre><span></span><code><span class="x">function permutations($string) {</span>
+<span class="x">  $result = array();</span>
+<span class="x">  $array = explode(&#39;/&#39;, $string);</span>
+<span class="x">  $max_binary = str_pad(&#39;&#39;, count($array), &#39;1&#39;);</span>
+
+<span class="x">  for ($i = 0; $i &lt;= bindec($max_binary); $i++) {</span>
+<span class="x">    $components = array();</span>
+<span class="x">    $binary = str_pad(decbin($i), count($array), &#39;0&#39;, STR_PAD_LEFT);</span>
+
+<span class="x">    foreach (str_split($binary) as $j =&gt; $num) {</span>
+<span class="x">      if ($num == &#39;1&#39;) {</span>
+<span class="x">        $components[] = &#39;%&#39;;</span>
+<span class="x">      }</span>
+<span class="x">      else {</span>
+<span class="x">        $components[] = $array[$j];</span>
+<span class="x">      }</span>
+<span class="x">    }</span>
+
+<span class="x">    $result[] = implode(&#39;/&#39;, $components);</span>
+<span class="x">  }</span>
+
+<span class="x">  return $result;</span>
+<span class="x">}</span>
+</code></pre></div>
+
+
+<p>So <code>permutations('one/two/three')</code> gives:</p>
+<div class="codehilite"><pre><span></span><code><span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [0] =&gt; one/two/three</span>
+<span class="x">    [1] =&gt; one/two/%</span>
+<span class="x">    [2] =&gt; one/%/three</span>
+<span class="x">    [3] =&gt; one/%/%</span>
+<span class="x">    [4] =&gt; %/two/three</span>
+<span class="x">    [5] =&gt; %/two/%</span>
+<span class="x">    [6] =&gt; %/%/three</span>
+<span class="x">    [7] =&gt; %/%/%</span>
+<span class="x">)</span>
+</code></pre></div>
+
+
+<p>I based this on binary numbers (e.g. <code>101</code>). Each <code>0</code> represents the original part of the string, while each <code>1</code> represents where to insert the <code>%</code> character. So the code simply generates a list of all appropriate length binary numbers, then replaces the <code>0</code>'s and <code>1</code>'s with their respective values.</p>
+<p>Hope that helps! It sure was fun <span aria-label="smile" class="emoji emoji-263a" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="196324651"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196324651" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196324651">(May 05 2020 at 15:33)</a>:</h4>
+<p><span aria-label="smiley" class="emoji emoji-1f603" role="img" title="smiley">:smiley:</span></p>
+
+
+
+<a name="196324666"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196324666" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196324666">(May 05 2020 at 15:33)</a>:</h4>
+<p>Good Lord thats genius!</p>
+
+
+
+<a name="196324782"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196324782" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196324782">(May 05 2020 at 15:34)</a>:</h4>
+<p>Any need to check speed and memory? THis is probably the best I imagine</p>
+
+
+
+<a name="196330567"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196330567" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196330567">(May 05 2020 at 16:19)</a>:</h4>
+<p>Hmm, actually no... I checked it against <span class="user-mention" data-user-id="256663">@Joseph Flatt</span>'s first one above and his runs faster (0.5s to my 4.5s), though mine used slightly less memory (180Mb to his 220Mb). I might have numbers wrong, that was from memory. And that was all with 20 path components.</p>
+
+
+
+<a name="196335130"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196335130" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196335130">(May 05 2020 at 16:56)</a>:</h4>
+<p>shocking</p>
+
+
+
+<a name="196335246"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196335246" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196335246">(May 05 2020 at 16:57)</a>:</h4>
+<p>this is for use in Backdrop so since <code>MENU_MAX_PARTS</code> is 9, that would be the maximum.</p>
+
+
+
+<a name="196349778"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196349778" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196349778">(May 05 2020 at 18:54)</a>:</h4>
+<p>Ok, here's official numbers for 9 parts:</p>
+<p>My code:<br>
+0.0014 ms<br>
+14Kb peak memory usage difference</p>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span>'s code:<br>
+0.0002 ms<br>
+38Kb peak memory usage difference</p>
+<p>These were obtained with this code:</p>
+<div class="codehilite"><pre><span></span><code><span class="x">function print_mem() {</span>
+<span class="x">  $mem_usage = memory_get_usage();</span>
+<span class="x">  $mem_peak = memory_get_peak_usage();</span>
+
+<span class="x">  echo round($mem_usage / 1024) . &quot;KB\n&quot;;</span>
+<span class="x">  echo round($mem_peak / 1024) . &quot;KB peak\n&quot;;</span>
+<span class="x">}</span>
+
+<span class="x">print_mem();</span>
+<span class="x">$start = microtime(true);</span>
+<span class="x">permutations/joseph_test_path_replace(&#39;one/two/three/one/two/three/one/two/three&#39;);</span>
+<span class="x">$end = microtime(true);</span>
+<span class="x">print_mem();</span>
+<span class="x">print ($end - $start) . &quot;ms\n\n&quot;;</span>
+</code></pre></div>
+
+
+<p>The <code>memory_get_usage()</code> value didn't change for either code before or after running it. The Kb value listed above was the peak usage after running the code minus the peak value before running it.<br>
+Not sure if this is the best way to test the performance...</p>
+
+
+
+<a name="196349916"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196349916" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196349916">(May 05 2020 at 18:55)</a>:</h4>
+<p>Raw results:</p>
+<p>Mine:</p>
+<div class="codehilite"><pre><span></span><code>385KB
+423KB peak
+385KB
+437KB peak
+0.0014050006866455ms
+</code></pre></div>
+
+
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span>'s:</p>
+<div class="codehilite"><pre><span></span><code>385KB
+422KB peak
+385KB
+460KB peak
+0.00022220611572266ms
+</code></pre></div>
+
+
+
+<a name="196371660"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196371660" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196371660">(May 05 2020 at 21:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> I made some modifications to both of the functions. Could you try timing them again?</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">function</span> <span class="nf">permutations</span><span class="p">(</span><span class="nv">$string</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$results</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+  <span class="nv">$array</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nv">$string</span><span class="p">);</span>
+  <span class="nv">$count</span> <span class="o">=</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span>
+  <span class="nv">$max</span> <span class="o">=</span> <span class="nb">bindec</span><span class="p">(</span><span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nv">$count</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">));</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="nv">$max</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$binary</span> <span class="o">=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nb">decbin</span><span class="p">(</span><span class="nv">$i</span><span class="p">),</span> <span class="nv">$count</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="nx">STR_PAD_LEFT</span><span class="p">);</span>
+    <span class="nv">$string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="nv">$j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$j</span> <span class="o">&lt;</span> <span class="nv">$count</span><span class="p">;</span> <span class="nv">$j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nv">$j</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$string</span> <span class="o">.=</span> <span class="s1">&#39;/&#39;</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nv">$binary</span><span class="p">[</span><span class="nv">$j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$string</span> <span class="o">.=</span> <span class="s1">&#39;%&#39;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+        <span class="nv">$string</span> <span class="o">.=</span> <span class="nv">$array</span><span class="p">[</span><span class="nv">$j</span><span class="p">];</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nv">$results</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$string</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nv">$results</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">joseph_test_path_replace</span><span class="p">(</span><span class="nv">$path</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nb">is_string</span><span class="p">(</span><span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$path</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nv">$path</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nv">$part</span> <span class="o">=</span> <span class="nb">array_shift</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// We have reached the last item.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$part</span> <span class="o">!==</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="nv">$part</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// There are more parts to go.</span>
+  <span class="nv">$sub_paths</span> <span class="o">=</span> <span class="nx">joseph_test_path_replace</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+  <span class="nv">$count</span> <span class="o">=</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$sub_paths</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$count</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$part</span> <span class="o">!==</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$sub_paths</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$part</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span> <span class="o">.</span> <span class="nv">$sub_paths</span><span class="p">[</span><span class="nv">$i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="nv">$sub_paths</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;%/&#39;</span> <span class="o">.</span> <span class="nv">$sub_paths</span><span class="p">[</span><span class="nv">$i</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nv">$sub_paths</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+<a name="196371792"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196371792" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196371792">(May 05 2020 at 21:39)</a>:</h4>
+<p>I think most of the time in your original version was the count, str_split, and implode functions inside the loop, so I moved some things so that it doesn't have those.</p>
+
+
+
+<a name="196591516"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196591516" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196591516">(May 06 2020 at 06:16)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256663">@Joseph Flatt</span>! Here're the results:</p>
+<div class="codehilite"><pre><span></span><code>My OLD code:               My NEW code:
+385KB                      385KB
+423KB peak                 422KB peak
+385KB                      385KB
+437KB peak                 435KB peak
+0.0025179386138916ms       0.001121997833252ms
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>Your OLD code:             Your NEW code:
+385KB                      385KB
+422KB peak                 422KB peak
+385KB                      385KB
+460KB peak                 435KB peak
+0.00020313262939453ms      0.00023198127746582ms
+</code></pre></div>
+
+
+
+<a name="196591609"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196591609" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196591609">(May 06 2020 at 06:18)</a>:</h4>
+<p>Your changes halved the time my code takes ( <span aria-label="thumbs up" class="emoji emoji-1f44d" role="img" title="thumbs up">:thumbs_up:</span> ), but memory wasn't really affected.<br>
+Your changes made your code perform better regarding memory usage, but the time increased ever so slightly (still much faster than mine though).</p>
+
+
+
+<a name="196608795"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196608795" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196608795">(May 06 2020 at 09:32)</a>:</h4>
+<p>Oh the joy of being in the company of intelligent people <span aria-label="pray" class="emoji emoji-1f64f" role="img" title="pray">:pray:</span></p>
+
+
+
+<a name="196641927"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196641927" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196641927">(May 06 2020 at 14:26)</a>:</h4>
+<p>I hope you're not implying you aren't intelligent, because you most certainly are.</p>
+
+
+
+<a name="196653846"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196653846" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196653846">(May 06 2020 at 15:45)</a>:</h4>
+<p>I was referring to the fact that we're all a bunch of amazing people with beautiful minds - I was impressed by the results of the teamwork in this thread.</p>
+
+
+
+<a name="196654390"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196654390" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196654390">(May 06 2020 at 15:49)</a>:</h4>
+<p>well I have a medical degree, a Masters in Business, and all kinds of other pieces of paper, and I understand Backdrop code quite well, yet I struggled for two days with this and only came up with a piece of crappy code, and you guys popped up two lovely solutions in a few minutes. I concur with <span class="user-mention" data-user-id="256729">@klonos</span> completely. Impressive minds indeed!! <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="196655865"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196655865" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196655865">(May 06 2020 at 15:58)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> I wasn't sure how you meant it, so I just wanted to speak up. You could have also meant that you weren't in the company of intelligent people elsewhere. <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="196658874"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196658874" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196658874">(May 06 2020 at 16:17)</a>:</h4>
+<p><span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+<a name="196659111"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Array%20permutation%20algorithm/near/196659111" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Array.20permutation.20algorithm.html#196659111">(May 06 2020 at 16:18)</a>:</h4>
+<p>...I am lucky to also be surrounded by beautiful minds at work + blessed with such childhood friends too. I intended to stress the benefits of this when it happens. <span class="user-mention" data-user-id="256757">@docwilmot</span> summed it up beautifully.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

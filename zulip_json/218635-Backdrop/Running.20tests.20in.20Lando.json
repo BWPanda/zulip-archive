@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>I've done this before but forget: how to run tests via the CLI in Lando?</p>",
+        "id": 224392083,
+        "sender_full_name": "Herb",
+        "timestamp": 1611867698
+    },
+    {
+        "content": "<p>Not sure if it helps, but <code>lando ssh</code> brings you in the container, and you can run things there, or you can use <code>lando drush [command]</code>.</p>",
+        "id": 224396753,
+        "sender_full_name": "klonos",
+        "timestamp": 1611870242
+    },
+    {
+        "content": "<p>I figured it out. I used <code>lando php ./core/scripts/run-tests.sh --list</code></p>",
+        "id": 224397679,
+        "sender_full_name": "Herb",
+        "timestamp": 1611870795
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "content": "<p>What's the solution when you need to sync config to populate the <code>live</code> directory (as it's currently empty), but you can't do it via the UI due to an error (<code>Exception: The configuration directory in settings.php is specified as '../config/dev-active', but this directory is either empty or missing crucial files.</code>) and you don't have Drush installed?</p>",
+        "id": 207752839,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598151481
+    },
+    {
+        "content": "<p>It seems Drush just deletes everything in the <code>active</code> directory, and then copies everything over from the <code>staging</code> directory: <a href=\"https://github.com/backdrop-contrib/backdrop-drush-extension/blob/1.x-1.x/commands/config/backdrop_config_import.drush.inc#L65\">https://github.com/backdrop-contrib/backdrop-drush-extension/blob/1.x-1.x/commands/config/backdrop_config_import.drush.inc#L65</a> So I'll just do that I guess...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/backdrop-drush-extension/blob/1.x-1.x/commands/config/backdrop_config_import.drush.inc#L65\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/backdrop-drush-extension/blob/1.x-1.x/commands/config/backdrop_config_import.drush.inc#L65\" title=\"backdrop-contrib/backdrop-drush-extension\">backdrop-contrib/backdrop-drush-extension</a></div><div class=\"message_embed_description\">A set of commands and boot class for Drush and Backdrop CMS. - backdrop-contrib/backdrop-drush-extension</div></div></div>",
+        "id": 207753508,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1598152716
+    }
+]

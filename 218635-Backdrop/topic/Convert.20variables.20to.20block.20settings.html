@@ -1,0 +1,65 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html">Convert variables to block settings</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="232536018"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Convert%20variables%20to%20block%20settings/near/232536018" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html#232536018">(Mar 31 2021 at 04:46)</a>:</h4>
+<p>I'm porting the Menu Pager module which used to save block-specific settings to variables that had the block's <code>$delta</code> appended to the end. E.g. <code>variable_get('menu_pager_restrict_to_parent_' . $delta)</code>. The documentation for <code>hook_block_save()</code> says "Most settings will automatically be saved if using the Layout module to position blocks...", so that's good, but how do I convert the variables to block settings?</p>
+
+
+
+<a name="232536052"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Convert%20variables%20to%20block%20settings/near/232536052" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html#232536052">(Mar 31 2021 at 04:47)</a>:</h4>
+<p>I'm used to converting variables to config, but this is different...</p>
+
+
+
+<a name="232543366"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Convert%20variables%20to%20block%20settings/near/232543366" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html#232543366">(Mar 31 2021 at 06:40)</a>:</h4>
+<p>Hm. Can you construct something from (block-)machine_name + region_name? In theory that should be unique. Sure, that's longer than the delta, but in your module's config you don't need the module name prefix anymore. Create something with the bock's uuid might also work (and is also longer).<br>
+Do you have a custom block class (php)?</p>
+
+
+
+<a name="232545973"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Convert%20variables%20to%20block%20settings/near/232545973" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html#232545973">(Mar 31 2021 at 07:13)</a>:</h4>
+<p>Sorry, I don't think I explained properly... I don't need/want to save settings to my module's config. Block settings are already saved to the block/layout config automatically. So everything works fine for new sites, but it's D7 upgrades that I'm trying to address - taking a block-specific variable and saving it to the appropriate block/layout config.</p>
+
+
+
+<a name="232546661"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Convert%20variables%20to%20block%20settings/near/232546661" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html#232546661">(Mar 31 2021 at 07:20)</a>:</h4>
+<p>I think, now I get it.<br>
+When running the update... do the blocks get placed in a layout? The information is handled by the layout the blocks are in - did I understand that correctly? So if the blocks aren't placed, no info gets saved. Or do they get placed, but you don't know which setting to apply?</p>
+
+
+
+<a name="232547018"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Convert%20variables%20to%20block%20settings/near/232547018" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html#232547018">(Mar 31 2021 at 07:24)</a>:</h4>
+<p>I haven't tried an upgrade, I'm just porting the code.</p>
+
+
+
+<a name="232696642"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Convert%20variables%20to%20block%20settings/near/232696642" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Convert.20variables.20to.20block.20settings.html#232696642">(Apr 01 2021 at 02:58)</a>:</h4>
+<p>I opened an issue for this: <a href="https://github.com/backdrop-contrib/menu_pager/issues/1">https://github.com/backdrop-contrib/menu_pager/issues/1</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/menu_pager/issues/1" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/menu_pager/issues/1" title="Add D7 upgrade path · Issue #1 · backdrop-contrib/menu_pager">Add D7 upgrade path · Issue #1 · backdrop-contrib/menu_pager</a></div><div class="message_embed_description">The D7 version used block-specific variables (e.g. variable_get(&#39;menu_pager_restrict_to_parent_&#39; . $delta, FALSE)). In Backdrop, block settings are saved automatically to each block&#39;s l...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

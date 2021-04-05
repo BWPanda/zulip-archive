@@ -1,0 +1,38 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Private.20data.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Private.20data.html">Private data</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="222635832"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Private%20data/near/222635832" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Private.20data.html#222635832">(Jan 13 2021 at 19:50)</a>:</h4>
+<p>I want to create a site where users can register and store personal data. But for privacy reasons and GDPR compliance, etc., I don't want anyone to be able to access anyone else's data, <em>including User 1</em>. Is this possible?</p>
+
+
+
+<a name="222636158"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Private%20data/near/222636158" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Private.20data.html#222636158">(Jan 13 2021 at 19:53)</a>:</h4>
+<p>I guess encryption would have to be involved, since as the webmaster I have full access to the database and can therefore bypass any access controls Backdrop might setup...?</p>
+
+
+
+<a name="222638732"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Private%20data/near/222638732" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Private.20data.html#222638732">(Jan 13 2021 at 20:12)</a>:</h4>
+<p>It should be possible, but only by using custom access callbacks set with hook_menu_alter().</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

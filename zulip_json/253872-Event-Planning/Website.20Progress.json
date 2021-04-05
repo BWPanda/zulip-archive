@@ -1,0 +1,212 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - How can I help get the website going?</p>\n<p>Do you have any local work or could I start my own database and somehow get that pushed to a new live site?</p>",
+        "id": 226209170,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613171595
+    },
+    {
+        "content": "<p>I'm available later tonight or tomorrow to help get this started and can commit some time this weekend to help out.</p>",
+        "id": 226209250,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613171643
+    },
+    {
+        "content": "<p>Maybe we should have this discussion in the issue queue for this project?<br>\n<a href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues\">https://github.com/backdrop-ops/events.backdropcms.org/issues</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues\" title=\"backdrop-ops/events.backdropcms.org\">backdrop-ops/events.backdropcms.org</a></div><div class=\"message_embed_description\">Backdrop LIVE events. Contribute to backdrop-ops/events.backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 226209329,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613171694
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/1\">https://github.com/backdrop-ops/events.backdropcms.org/issues/1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/1\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/1\" title=\"Getting started · Issue #1 · backdrop-ops/events.backdropcms.org\">Getting started · Issue #1 · backdrop-ops/events.backdropcms.org</a></div><div class=\"message_embed_description\">What needs to happen to get the site to a state that more of us can help contribute? @jenlampton, Do you have a site started locally with some existing config or could I start a new site locally an...</div></div></div>",
+        "id": 226209896,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613172007
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/2\">https://github.com/backdrop-ops/events.backdropcms.org/issues/2</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/2\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/events.backdropcms.org/issues/2\" title=\"Registration · Issue #2 · backdrop-ops/events.backdropcms.org\">Registration · Issue #2 · backdrop-ops/events.backdropcms.org</a></div><div class=\"message_embed_description\">How do we want to handle registration? If you are not able to get this part done quickly, feel free to outline quickly how you think it should be set up and I can get something working either local...</div></div></div>",
+        "id": 226210089,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613172134
+    },
+    {
+        "content": "<p>I've got most of it done. Just pushed up config. Checking on code status to see if it's committable...</p>",
+        "id": 226212262,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613173851
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> deploying now</p>",
+        "id": 226213879,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613175029
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I think registration is working (but it could use testing) and I have node types for discussuions (sessions) and presentations, but I haven't built any views or put anything on the home page yet.</p>",
+        "id": 226214152,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613175257
+    },
+    {
+        "content": "<p>OK, but we're ok building views and config on the live site, right?</p>",
+        "id": 226214179,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613175297
+    },
+    {
+        "content": "<p>Also we need to set up the confirmation emails and messages stuff</p>",
+        "id": 226214186,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613175302
+    },
+    {
+        "content": "<p>if you want!</p>",
+        "id": 226214196,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613175311
+    },
+    {
+        "content": "<p>There's no content yet, so I was thinking at the very least we should load in some test things there so we have a common db to work with locally.</p>",
+        "id": 226214220,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613175334
+    },
+    {
+        "content": "<p>I'm willing to work either way. I can do my work locally and push config, but I don't want to do that if it's going to be hard to get the config deployed.</p>",
+        "id": 226214300,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613175373
+    },
+    {
+        "content": "<p>It would be good for me to get used to working that way, if it's realilstic.</p>",
+        "id": 226214322,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613175397
+    },
+    {
+        "content": "<p>I assume you know that there is currently a problem with the site.</p>",
+        "id": 226214359,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613175438
+    },
+    {
+        "content": "<p>You are probably still in deployment process.</p>",
+        "id": 226214381,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613175475
+    },
+    {
+        "content": "<p>Who all is on the deployment team.</p>",
+        "id": 226214433,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613175500
+    },
+    {
+        "content": "<p>yah, Justin is helping me get the db imported :)</p>",
+        "id": 226214554,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613175636
+    },
+    {
+        "content": "<p>OK, I'm am going to eat dinner. I'll be back later to work on Backdrop cms stuff.</p>",
+        "id": 226214725,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613175806
+    },
+    {
+        "content": "<p>Don't you know how to import a DB?</p>",
+        "id": 226215096,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613176146
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> YES, but there wasn't a db and I didn't have root creds on mysql</p>",
+        "id": 226215434,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613176450
+    },
+    {
+        "content": "<p>also copy isn't working in vi, so he's helping me with that :)</p>",
+        "id": 226215459,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613176471
+    },
+    {
+        "content": "<p>Okay. You had me worried. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 226215460,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613176473
+    },
+    {
+        "content": "<p>okay, we've got a starting point: <a href=\"https://events.backdropcms.org/home\">https://events.backdropcms.org/home</a></p>",
+        "id": 226219300,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613180849
+    },
+    {
+        "content": "<p>Hmm, how do I know my registration went through? Is there a place where that information can be seen?</p>",
+        "id": 226219667,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613181259
+    },
+    {
+        "content": "<p>I am wondering about:</p>\n<blockquote>\n<p>What would you like to present?</p>\n</blockquote>\n<p>We're looking for facilitators more than presenters, I think. </p>\n<p>I guess, we have talked about presenting, but recorded presentations in advance of event. We might want some help text to indicate what we mean.</p>",
+        "id": 226220292,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613181957
+    },
+    {
+        "content": "<p>Yeah, it's a little weird. No confirmation. I don't know if my registration was successful.</p>",
+        "id": 226220455,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613182108
+    },
+    {
+        "content": "<p>Going to try and create an account now.</p>",
+        "id": 226220457,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613182115
+    },
+    {
+        "content": "<p>Well, that is not possible.</p>",
+        "id": 226220482,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613182155
+    },
+    {
+        "content": "<p>I didn't mention that, because I assumed it was intentional until the site was more ready.</p>",
+        "id": 226220782,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613182500
+    },
+    {
+        "content": "<p>Well, I think that this was the point where we're supposed to be able to help with it. But, we can't really help much without an account on the site. ;-)</p>",
+        "id": 226220834,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613182564
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Regarding the website for Backdrop Live I'd like to recommend a module: <a href=\"https://github.com/backdrop-contrib/views_autorefresh\">https://github.com/backdrop-contrib/views_autorefresh</a></p>\n<p>I used it for a small (Drupal) block for \"current and upcoming talks\" for an online event - and it worked fine, no problems at all and people appreciated it. The event wasn't big, the size should be comparable to Backdrop Live. Just ask for details re the view settings, if you're interested.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/views_autorefresh\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/views_autorefresh\" title=\"backdrop-contrib/views_autorefresh\">backdrop-contrib/views_autorefresh</a></div><div class=\"message_embed_description\">A module to refresh a view after a specified time interval or when triggered by an event. - backdrop-contrib/views_autorefresh</div></div></div>",
+        "id": 226233477,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1613203663
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> - I'll give it a look. I haven't used that module yet. Will be fun to try it out.</p>",
+        "id": 226472846,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613452362
+    },
+    {
+        "content": "<p>For those who are interested, let's have a short meeting about Backdrop CMS Live after the VUG tomorrow.</p>",
+        "id": 226472968,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613452483
+    },
+    {
+        "content": "<p>We'll keep it informal, but use this as a chance to catch up with anyone interested in helping, but who has been unable to attend our other meetings.</p>",
+        "id": 226472990,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613452523
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> and <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> seems like I have a crazy week. <span aria-label=\"at work\" class=\"emoji emoji-2692\" role=\"img\" title=\"at work\">:at_work:</span> I'm hoping to take a closer look at our options following weekend.</p>\n<p>(meh, that's the wrong stream...)</p>",
+        "id": 231835527,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616690729
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I think, my hint was misleading, as you'd need a boolean in i18nviews_localization_plugin_enabled... config_get('views.settings', 'views_localization_plugin') returns a string - usually \"core\" or \"none\".</p>",
+        "id": 231991663,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616775231
+    },
+    {
+        "content": "<p>I'm curious if i18nviews still works, if you rip out all the views_localization_plugin stuff... I'm not sure if it's needed, as it's usually not set to i18n_string. Core does the same.</p>",
+        "id": 231992097,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616775389
+    },
+    {
+        "content": "<p>I'll try stripping that stuff out completely next week and test it out.</p>",
+        "id": 232087126,
+        "sender_full_name": "Laryn",
+        "timestamp": 1616848329
+    }
+]

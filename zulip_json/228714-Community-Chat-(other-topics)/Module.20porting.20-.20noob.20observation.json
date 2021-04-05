@@ -1,0 +1,206 @@
+[
+    {
+        "content": "<p>Hi...,</p>\n<p>I'm in the process of converting (or trying to) a module to BD...  It's my first attempt.</p>\n<p>In the docs @ <a href=\"https://api.backdropcms.org/converting-modules-from-drupal\">https://api.backdropcms.org/converting-modules-from-drupal</a>  the paragraph  \"Let Backdrop know about your module's config\"  </p>\n<p>It doesn't explicitly say where to put the function \"Implements hook_config_info().\"  I've spent 30 minutes searching but can't find it <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>\n<p>Then I had an epiphany, look at another module <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> ok, more of a DOH! moment <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>\n<p>So, would it be worth putting the file it needs to be saved in, in the help text?</p>\n<p>Regards</p>\n<p>Steve</p>",
+        "id": 207040274,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1597527062
+    },
+    {
+        "content": "<p>I think the general idea is that all functions go in a module's <code>.module</code> file, unless otherwise specified...</p>",
+        "id": 207040453,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597527374
+    },
+    {
+        "content": "<p>How does this look:</p>\n<p><strong>Let Backdrop know about your module's config</strong><br>\nModules need to declare config files in hook_config_info() in the .module file. This is how Backdrop knows that you have a config file that needs to copied when the module is enabled. It's also how Backdrop compares changes in config during deployment, and how it knows which config files need to be automatically removed when uninstalling a module.</p>",
+        "id": 207040633,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597527677
+    },
+    {
+        "content": "<p>Yeah, I 'm beginning to realise, but I did waste a bit of time trying to figure it out... and for noobs general ideas aren't always obvious <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> lol</p>",
+        "id": 207040644,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1597527713
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"280045\">@Steve Moorhouse</span> - I added \"in the .module\" file to the first line. Would that have helped and is that accurate?</p>",
+        "id": 207040704,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597527788
+    },
+    {
+        "content": "<p>Please, keep giving suggestions on how to improve this documentation. It's great to have fresh eyes.</p>",
+        "id": 207040731,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597527838
+    },
+    {
+        "content": "<p>FYI, nitpicking, it doesnt have to be in the module file, if there is an <code>include_once()</code> or such which includes whatever file where it is.</p>",
+        "id": 207040968,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597528157
+    },
+    {
+        "content": "<p>(that was an uncomfortable sentence, hope its not too cryptic)</p>",
+        "id": 207040974,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597528175
+    },
+    {
+        "content": "<p><span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 207040975,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597528181
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> - No, thanks. How can I phrase this better for a future <span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span>?</p>",
+        "id": 207041029,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597528225
+    },
+    {
+        "content": "<p>TBH I think its fine as it is. If youre using includes, you probably arent a noob, and you'd know this.</p>",
+        "id": 207041047,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597528279
+    },
+    {
+        "content": "<p>OK, good.</p>",
+        "id": 207041050,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597528290
+    },
+    {
+        "content": "<p>Yeah, was nitpicking as noted.</p>",
+        "id": 207041053,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1597528307
+    },
+    {
+        "content": "<p>Well, sometimes nitpicking is good. I don't want to confuse folks.</p>",
+        "id": 207041100,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597528337
+    },
+    {
+        "content": "<p>Agreed...  I'm not a noob at programming and design, but I've a lot to learn about PHP and how Drupal and BD work <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 207041106,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1597528356
+    },
+    {
+        "content": "<p>But, I also want to take advantage of the fresh eyes of <span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> and help future newcomers avoid the same frustrations.</p>",
+        "id": 207041111,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597528379
+    },
+    {
+        "content": "<p>While <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> is correct I can't imagine why someone would not want to put it in .module</p>",
+        "id": 207048501,
+        "sender_full_name": "Herb",
+        "timestamp": 1597541378
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> </p>\n<blockquote>\n<p>Please, keep giving suggestions on how to improve this documentation. It's great to have fresh eyes.</p>\n</blockquote>\n<p>It is my improved version: <a href=\"https://github.com/VasasA/converting/blob/master/converting.md\">https://github.com/VasasA/converting/blob/master/converting.md</a> <br>\nYou can use this commit for the editing work: <a href=\"https://github.com/VasasA/converting/commit/482fd4e28430ae181db65507b4e8944cd6098db0\">https://github.com/VasasA/converting/commit/482fd4e28430ae181db65507b4e8944cd6098db0</a><br>\nFeel free to modify the sentences. Thank You!</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/VasasA/converting/blob/master/converting.md\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/8567234?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/VasasA/converting/blob/master/converting.md\" title=\"VasasA/converting\">VasasA/converting</a></div><div class=\"message_embed_description\">Converting modules to Backdrop from Drupal 7. Contribute to VasasA/converting development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/VasasA/converting/commit/482fd4e28430ae181db65507b4e8944cd6098db0\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/8567234?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/VasasA/converting/commit/482fd4e28430ae181db65507b4e8944cd6098db0\" title=\"Improved draft. · VasasA/converting@482fd4e\">Improved draft. · VasasA/converting@482fd4e</a></div><div class=\"message_embed_description\">Converting modules to Backdrop from Drupal 7. Contribute to VasasA/converting development by creating an account on GitHub.</div></div></div>",
+        "id": 207084489,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1597604569
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> ++</p>",
+        "id": 207086152,
+        "sender_full_name": "klonos",
+        "timestamp": 1597606726
+    },
+    {
+        "content": "<p>vasas** <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> (Karma: 5)</p>",
+        "id": 207086153,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1597606726
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> - How do we best review these changes and update the actual page?</p>",
+        "id": 207086412,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597607174
+    },
+    {
+        "content": "<p>Well, I haven't actually reviewed that commit that <span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> has linked to, but from a quick look, I saw comments there from <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span></p>",
+        "id": 207086437,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607237
+    },
+    {
+        "content": "<p>...it's a shame that we don't have some sort of collaborative edit feature in Drupal/Backdrop.</p>",
+        "id": 207086443,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607263
+    },
+    {
+        "content": "<p>Yes, I'm thinking about that now</p>",
+        "id": 207086447,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597607276
+    },
+    {
+        "content": "<p>I know that the project nodes in <a href=\"http://b.org\">b.org</a> are pulling information from the respective README.md files in the project repos in GitHub. Perhaps there's a way to do that with certain pages, and then have the same workflow of raising issues and opening PRs in GitHub.</p>",
+        "id": 207086504,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607366
+    },
+    {
+        "content": "<p>...but that assumes that people contributing to documentation are familiar/comfortable with GitHub, which is not the case <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 207086550,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607409
+    },
+    {
+        "content": "<p>...we need a \"hybrid\" solution.</p>",
+        "id": 207086554,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607425
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/256\">https://github.com/backdrop-ops/backdropcms.org/issues/256</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/256\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/256\" title=\"Consider using GitHub-based documentation with something like GitBook or ReadTheDocs for the front-end. · Issue #256 · backdrop-ops/backdropcms.org\">Consider using GitHub-based documentation with something like GitBook or ReadTheDocs for the front-end. · Issue #256 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">https://www.gitbook.com/blog/features I particularly like: Simple to update, publish and update your books easily using Git or the web book editor. Version Control, GitBook is based on GIT scm. A s...</div></div></div>",
+        "id": 207086567,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597607503
+    },
+    {
+        "content": "<p>An issue I'd like to think about after next release.</p>",
+        "id": 207086616,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1597607553
+    },
+    {
+        "content": "<p>The agency I work for has put together and open-sourced the material we use for the GovCMS trainings:<br>\n<a href=\"https://github.com/govcms-training\">https://github.com/govcms-training</a> there's a \"Content Admin\" course, which has basic Drupal/GovCMS concepts, and a Site Builder one, which explores more advanced topics ...there's also a dev course, but that manual has not been converted yet.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/govcms-training\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/58193849?s=280&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/govcms-training\" title=\"GovCMS Training\">GovCMS Training</a></div><div class=\"message_embed_description\">GovCMS Training Materials - a collaboration between GovCMS and our official service provider Salsa Digital - GovCMS Training</div></div></div>",
+        "id": 207086684,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607631
+    },
+    {
+        "content": "<p>...these can be adapted for Backdrop <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 207086730,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607658
+    },
+    {
+        "content": "<p>...they are based on GitBook</p>",
+        "id": 207086757,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607681
+    },
+    {
+        "content": "<p>See here for the content editor: <a href=\"https://salsa-digital.gitbook.io/govcms-content-administration\">https://salsa-digital.gitbook.io/govcms-content-administration</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://salsa-digital.gitbook.io/govcms-content-administration\" style=\"background-image: url(https://app.gitbook.com/share/space/thumbnail/-Lyh9JMywljz0CN8oT8o.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://salsa-digital.gitbook.io/govcms-content-administration\" title=\"GovCMS Content Administration Training Manual\">GovCMS Content Administration Training Manual</a></div><div class=\"message_embed_description\">​​​​</div></div></div>",
+        "id": 207086791,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607703
+    },
+    {
+        "content": "<p>...the predecessor of these manuals were proprietary (authored by Salsa Digital - owned by Acquia)</p>",
+        "id": 207086877,
+        "sender_full_name": "klonos",
+        "timestamp": 1597607811
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "content": "<p>One thing that always seems to trip me up when theming a site is when I want to position something absolutely. The Contextual Links module adds <code>position: relative;</code> in lots of places, so I'm able to position sub-items absolutely without any fuss. But then I hand a site over to the client and everything looks weird. Because they don't have the Contextual Links showing for their account (also Anonymous users), then there's no <code>position: relative;</code>. Obviously I just need to remember to specifically add <code>position: relative;</code> where I need it, but it's so hard to remember to do that when things just work as an admin with the Contextual Links module in use... There's probably no easy solution for this other than trying to remember this, but just wondering if others struggle with the same problem...?</p>",
+        "id": 221032762,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609119426
+    },
+    {
+        "content": "<p>Ah contextual links... Great for admins, horrible UX for everyone else.</p>\n<p>A few days ago, I ended up adding some of the same links that are in the contextual links, to the header of a  view. The client is in his 60's and I could tell him 20 times how to mouse over to find the sprocket and he'll forget between today and next week. Never did like how those worked for general use. They're very inconsistent with layout when there are multiple \"objects\" that can show respective contextual links.</p>",
+        "id": 221044431,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609141154
+    }
+]

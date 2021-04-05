@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Does anyone of you have the most recent Chrome Browser (83)? Maybe it's a stupid question, but does anyone of you know if this affects Backdrop? - <a href=\"https://github.com/jquery-form/form/issues/571\">https://github.com/jquery-form/form/issues/571</a> I'm asking because of a Drupal Issue: <a href=\"https://www.drupal.org/project/drupal/issues/3138421\">https://www.drupal.org/project/drupal/issues/3138421</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/jquery-form/form/issues/571\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/25109881?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/jquery-form/form/issues/571\" title=\"Latest Chrome update breaks plugin response handling · Issue #571 · jquery-form/form\">Latest Chrome update breaks plugin response handling · Issue #571 · jquery-form/form</a></div><div class=\"message_embed_description\">Description: After the latest Chrome update (mine is 83.0.4103.61) the success callback is not called anymore if using iframe:true although the request gets to the server. Chrome dev tools shows re...</div></div></div>",
+        "id": 198647101,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1590396368
+    },
+    {
+        "content": "<p>I've replied in <a href=\"https://github.com/jquery-form/form/issues/571#issuecomment-633538585\">https://github.com/jquery-form/form/issues/571#issuecomment-633538585</a> ...I cannot reproduce this in Chrome 83 on my Mac. I'll try to reproduce on Backdrop as per the steps in that <a href=\"http://d.org\">d.org</a> issue next.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/jquery-form/form/issues/571#issuecomment-633538585\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/25109881?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/jquery-form/form/issues/571#issuecomment-633538585\" title=\"Latest Chrome update breaks plugin response handling · Issue #571 · jquery-form/form\">Latest Chrome update breaks plugin response handling · Issue #571 · jquery-form/form</a></div><div class=\"message_embed_description\">Description: After the latest Chrome update (mine is 83.0.4103.61) the success callback is not called anymore if using iframe:true although the request gets to the server. Chrome dev tools shows re...</div></div></div>",
+        "id": 198660710,
+        "sender_full_name": "klonos",
+        "timestamp": 1590408276
+    },
+    {
+        "content": "<blockquote>\n<p>D7 example: try to upload an image at /node/add/article over https.<br>\nThe POST request to upload the image shows as (cancelled) in red in dev tools, and the upload fails.</p>\n</blockquote>\n<p>I couldn't reproduce that ^^ ...the image gets uploaded w/o any error/failure</p>",
+        "id": 198661126,
+        "sender_full_name": "klonos",
+        "timestamp": 1590408631
+    },
+    {
+        "content": "<p>Could only reproduce the issue in D7 so far. An editor of the D7 site wasn't able anymore to upload images in Chrome (but was OK in Firefox).</p>",
+        "id": 198684526,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590423755
+    },
+    {
+        "content": "<p>Haven't yet actively tested in Backdrop, though.</p>",
+        "id": 198684591,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1590423819
+    },
+    {
+        "content": "<p>Our jQuery/jQueryUI libraries have been updated compared to D7; perhaps that's why we don't have the issue <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 198704496,
+        "sender_full_name": "klonos",
+        "timestamp": 1590443457
+    },
+    {
+        "content": "<p>jQuery Form is 2.52 in D7 (released Dec 2010): <a href=\"https://git.drupalcode.org/project/drupal/-/blob/7.x/modules/system/system.module#L1210\">https://git.drupalcode.org/project/drupal/-/blob/7.x/modules/system/system.module#L1210</a> ...whereas we are at 4.2.1 (released Aug 2017): <a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/system/system.module#L1316\">https://github.com/backdrop/backdrop/blob/1.x/core/modules/system/system.module#L1316</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/drupal/-/blob/7.x/modules/system/system.module#L1210\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/drupal/-/blob/7.x/modules/system/system.module#L1210\" title=\"modules/system/system.module · 7.x · project / drupal\">modules/system/system.module · 7.x · project / drupal</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/drupal</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/system/system.module#L1316\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/system/system.module#L1316\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 198704924,
+        "sender_full_name": "klonos",
+        "timestamp": 1590444032
+    },
+    {
+        "content": "<p>...D8 is in 4.2.2: <a href=\"https://git.drupalcode.org/project/drupal/-/blob/8.8.x/core/core.libraries.yml#L405\">https://git.drupalcode.org/project/drupal/-/blob/8.8.x/core/core.libraries.yml#L405</a> ...but the <a href=\"http://d.org\">d.org</a> issue reports that the issue is present there as well.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/drupal/-/blob/8.8.x/core/core.libraries.yml#L405\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/drupal/-/blob/8.8.x/core/core.libraries.yml#L405\" title=\"core/core.libraries.yml · 8.8.x · project / drupal\">core/core.libraries.yml · 8.8.x · project / drupal</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/drupal</div></div></div>",
+        "id": 198705149,
+        "sender_full_name": "klonos",
+        "timestamp": 1590444320
+    }
+]

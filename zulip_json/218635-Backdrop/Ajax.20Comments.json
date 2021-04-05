@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>I started this port for a potential future need but am running a bit stuck. Anyone who might be interested and able to get me unstuck? The AJAX form does not seem to be getting inserted so it can't be loaded when you click \"Add comment\" or \"Reply\", etc. (I'm planning to squash merge the <code>port-cleanup</code> branch once I get things functional)<br>\n<a href=\"https://github.com/laryn/ajax_comments/tree/port-cleanup\">https://github.com/laryn/ajax_comments/tree/port-cleanup</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/laryn/ajax_comments/tree/port-cleanup\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/871421?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/laryn/ajax_comments/tree/port-cleanup\" title=\"laryn/ajax_comments\">laryn/ajax_comments</a></div><div class=\"message_embed_description\">Provides AJAX comments to Backdrop sites. Contribute to laryn/ajax_comments development by creating an account on GitHub.</div></div></div>",
+        "id": 198930282,
+        "sender_full_name": "Laryn",
+        "timestamp": 1590603127
+    },
+    {
+        "content": "<p>I'm working on the Ajax Comments module (testing and help welcome). I'm looking for a tip here -- it's supposed to give focus to the textarea when clicking \"Reply\" but it isn't working with Backdrop's CKEditor (if I turn the comment field to plaintext, it works). Anybody have a pointer as to why? e.g. <a href=\"https://github.com/backdrop-contrib/ajax_comments/blob/1.x-1.x/ajax_comments.module#L726\">https://github.com/backdrop-contrib/ajax_comments/blob/1.x-1.x/ajax_comments.module#L726</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ajax_comments/blob/1.x-1.x/ajax_comments.module#L726\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ajax_comments/blob/1.x-1.x/ajax_comments.module#L726\" title=\"backdrop-contrib/ajax_comments\">backdrop-contrib/ajax_comments</a></div><div class=\"message_embed_description\">Convert comment forms to Ajax. Contribute to backdrop-contrib/ajax_comments development by creating an account on GitHub.</div></div></div>",
+        "id": 207076221,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597592262
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> it seems that when CKEditor is enabled, the textarea is \"replaced\" by a <code>.cke_wysiwyg_frame</code> iframe, so <code>ajax_command_invoke()</code>will need to be updated to account for that.</p>",
+        "id": 207083160,
+        "sender_full_name": "klonos",
+        "timestamp": 1597602709
+    }
+]

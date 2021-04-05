@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Someone posted a (possible) security issue publicly in the queue. Not sure, if it's a B issue anyway, looks rather like a D8 issue, actually. The variable he refers to does not exist in Backdrop. I think this needs clarification <a href=\"https://github.com/backdrop/backdrop-issues/issues/4761\">https://github.com/backdrop/backdrop-issues/issues/4761</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4761\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4761\" title=\"SQL layer: $match_operator is vulnerable to injection attack · Issue #4761 · backdrop/backdrop-issues\">SQL layer: $match_operator is vulnerable to injection attack · Issue #4761 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">is making core vulnerable to a SQL injection attack. It is well known that a) one should escape user input (a check_plain() would not be enough though) b) not trust user input (yes, need a white li...</div></div></div>",
+        "id": 217102513,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1605683709
+    },
+    {
+        "content": "<p><a href=\"https://www.helpnetsecurity.com/2020/11/23/cve-2020-13671/\">https://www.helpnetsecurity.com/2020/11/23/cve-2020-13671/</a></p>\n<p>This issue reminds me of one I brought up with Drupal around the time the \"public -&gt; private\" security hole was announced. I'd have to dig it up, but essentially, the temp directory can be a place for malicious or even benign code to be uploaded and then used as a file sharing service. The issue never went anywhere because Cron \"usually\" clears out the temp directory after a decent amount of time (usually 8hrs or less), but as a test, I was able to witness a file living in the <a href=\"http://d.org\">d.org</a> temp file area for somewhere around 4 weeks.</p>\n<p>All somebody has to do is write a bot to reupload the file and it becomes a place to house files that shouldn't be there.</p>\n<p>To reproduce, upload a file on a node, copy the url to the file then exit the node without saving it. Most file fields on most sites aren't a big deal for malicious code, but <a href=\"http://d.org\">d.org</a> allows quite a few file types. Image fields for example could be used to serve porn or illegal images.</p>\n<p>So, not sure if this was ever mitigated in BD. I haven't thought about it until this extension exploit came out.</p>\n<hr>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.helpnetsecurity.com/2020/11/23/cve-2020-13671/\" style=\"background-image: url(https://img.helpnetsecurity.com/wp-content/uploads/2019/02/09095150/drupal.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.helpnetsecurity.com/2020/11/23/cve-2020-13671/\" title=\"Drupal-based sites open to attack via double extension files (CVE-2020-13671) - Help Net Security\">Drupal-based sites open to attack via double extension files (CVE-2020-13671) - Help Net Security</a></div><div class=\"message_embed_description\">Admins of Drupal-based sites should plug a critical security hole (CVE-2020-13671) that may be exploited to take over vulnerable sites.</div></div></div>",
+        "id": 217718089,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606198790
+    },
+    {
+        "content": "<p>Hm, there's still an outdated note on the page <a href=\"https://backdropcms.org/security/advisories\">https://backdropcms.org/security/advisories</a>, as recently described in the issue <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/731\">https://github.com/backdrop-ops/backdropcms.org/issues/731</a>. <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> or <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Is one of you up to remove the mentioned note?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/731\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/731\" title=\"Remove outdated Note from https://backdropcms.org/security/advisories · Issue #731 · backdrop-ops/backdropcms.org\">Remove outdated Note from https://backdropcms.org/security/advisories · Issue #731 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">The note on the top of https://backdropcms.org/security/advisories page says: Note: No new Backdrop core security updates have been released since April 18, 2019. The Backdrop core security advisor...</div></div></div>",
+        "id": 218407299,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1606821009
+    },
+    {
+        "content": "<p>Hmm, that notice is part of a view header, so not something I'm comfortable just removing directly. Not sure if we need a PR for that or what... Maybe <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> knows...?</p>",
+        "id": 218407496,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606821137
+    },
+    {
+        "content": "<p>I've manually removed it for now. We can follow up with a PR if required <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 218425868,
+        "sender_full_name": "klonos",
+        "timestamp": 1606831631
+    },
+    {
+        "content": "<p>Thanks for bringing it up here <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 218426006,
+        "sender_full_name": "klonos",
+        "timestamp": 1606831693
+    },
+    {
+        "content": "<p>Thank <em>you</em>, <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> !</p>",
+        "id": 218430279,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1606833760
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> thank you for noticing that issue, and for your reply.</p>",
+        "id": 218479559,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1606855856
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> if we need to make a change like the security veiw header update directly on live, that's fine. The important bit is to commit the changed config file, and ideally, also copy it to staging and commit it there too. That way we reduce the risk of reverting the change in the future.</p>",
+        "id": 218480165,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1606856145
+    }
+]

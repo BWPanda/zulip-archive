@@ -1,0 +1,92 @@
+[
+    {
+        "content": "<p><a href=\"#narrow/stream/218770-Contrib/topic/Geocoding.20form.20address.20field/near/192697633\" title=\"#narrow/stream/218770-Contrib/topic/Geocoding.20form.20address.20field/near/192697633\">https://backdrop.zulipchat.com/#narrow/stream/218770-Contrib/topic/Geocoding.20form.20address.20field/near/192697633</a></p>",
+        "id": 192746376,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1585874451
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> - we closed the contrib channel and just want to keep most Backdrop traffic in the main channel. People can still view the posts in the contrib, but can only post here in Backdrop.</p>",
+        "id": 193387525,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1586385636
+    },
+    {
+        "content": "<p>This is a Backdrop site and this is a map. <a href=\"https://www.riverton.org/community/map-of-all-communities\" title=\"https://www.riverton.org/community/map-of-all-communities\">https://www.riverton.org/community/map-of-all-communities</a></p>",
+        "id": 193387579,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1586385691
+    },
+    {
+        "content": "<p>I'll try to look at which modules I used and how I configured it.</p>",
+        "id": 193387599,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1586385707
+    },
+    {
+        "content": "<p>I have one too: <a href=\"http://arf.berkeley.edu\" title=\"http://arf.berkeley.edu\">http://arf.berkeley.edu</a> geofield + geocoder + adddressfield and the built-in views handling provided google maps</p>",
+        "id": 193401348,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1586399748
+    },
+    {
+        "content": "<p>I've got a related question.  My implementation of geofield, geocoder, and address field is working great.  However, now I'd like to sort my locations by proximity to the user's location.  Is there a way to make it location aware?  I found this and it works but I'd really like to be able to do it without the exposed filter.  <a href=\"https://www.drupal.org/node/1944648\">https://www.drupal.org/node/1944648</a></p>",
+        "id": 201665181,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1592862501
+    },
+    {
+        "content": "<p>Hello <span class=\"user-mention\" data-user-id=\"256666\">@Justin Keiser</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...I have never used these modules in practice, but am aware of what they do and how they are meant to work in theory. Having said that, the <a href=\"http://d.org\">d.org</a> article you've linked to seems to purposely provide instructions that allow visitors to manually set their location. My assumption is that in order to have the automatic location detection work, you'd need to make sure that the browser and also the operating system setting that permits tracking people's location is enabled. If those are disabled, then you'd need to have a way to allow people to manually set their location.</p>",
+        "id": 201679581,
+        "sender_full_name": "klonos",
+        "timestamp": 1592875038
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I’ll look more into that article but after fiddling with it all afternoon I just decided to ask.</p>",
+        "id": 201679662,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1592875153
+    },
+    {
+        "content": "<p>Sure ...asking never hurt anyone <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span> ...I'll let others that are actually using these modules on their sites chime in to help you further.</p>",
+        "id": 201679769,
+        "sender_full_name": "klonos",
+        "timestamp": 1592875272
+    },
+    {
+        "content": "<p>It’s really a feature I don’t need but we have an app that sorts locations by proximity. It would be nice if the website did too. But there are bigger problems to deal with.</p>",
+        "id": 201680051,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1592875660
+    },
+    {
+        "content": "<p>I might be mis-remembering, but I think <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> has done something like this in the past.</p>",
+        "id": 201683739,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1592881221
+    },
+    {
+        "content": "<p>I think it requires https in order to use the browser's location</p>",
+        "id": 201684261,
+        "sender_full_name": "Herb",
+        "timestamp": 1592882250
+    },
+    {
+        "content": "<p>ModuleMonday® at backdrop-cms.de:-) Today we take a deep dive in to Geocoding and Geolocation. If you are convinced that a good blog post is a short blog post, this might be the worst article you've ever read about Backdrop CMS;-)) In fact, the modules work well, but Google's geocoding interface is pretty challenging. The blog post is written in German, but the Google screenshots are in English, so you might get a basic idea: <a href=\"https://backdrop-cms.de/blog/geocoding-gelocation\">https://backdrop-cms.de/blog/geocoding-gelocation</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://backdrop-cms.de/blog/geocoding-gelocation\" style=\"background-image: url(https://backdrop-cms.de/files/field/image/geocoding-geodaten-backdropcms-keyvisiual.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://backdrop-cms.de/blog/geocoding-gelocation\" title=\"Geocoding, Gelocation, Adressen. Und ein paar Stolpersteine.\">Geocoding, Gelocation, Adressen. Und ein paar Stolpersteine.</a></div><div class=\"message_embed_description\">Am heutigen Modul-Montag befassen wir uns gleich mit drei Modulen. Denn wir möchten etwas tiefer in die Verwaltung von geografischen Daten eintauchen. Diese setzt ein paar Vorkenntnisse voraus, die wir uns etwas genauer anschauen möchten. Der Artikel ist darum auch ziemlich viel länger.</div></div></div>",
+        "id": 212266852,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1601883373
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ++</p>",
+        "id": 212268549,
+        "sender_full_name": "klonos",
+        "timestamp": 1601884632
+    },
+    {
+        "content": "<p><strong>mazze.ch</strong> great work (Karma: 7)</p>",
+        "id": 212268550,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601884632
+    }
+]

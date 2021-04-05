@@ -1,0 +1,160 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html">D7 to Backdrop test run</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="219659778"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219659778" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219659778">(Dec 11 2020 at 20:45)</a>:</h4>
+<p>I'm trying to test a D7 to Backdrop upgrade using a very simplistic process:</p>
+<ol>
+<li>install a fresh D7 + admin_menu site</li>
+<li>without adding any content/files, take a backup of the D7 database</li>
+<li>install a fresh Backdrop site</li>
+<li>import the D7 database to the Backdrop site installation</li>
+<li>run <code>/update.php</code><br>
+...the result is that I am redirected to <code>/core/update.php</code>, but get a "404 page not found" error. Am I missing any steps?</li>
+</ol>
+
+
+
+<a name="219659931"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219659931" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219659931">(Dec 11 2020 at 20:46)</a>:</h4>
+<p>Did you confirm the Backdrop site works properly first before any migration stuff? That'll tell you if your environment is correctly setup (<code>.htaccess</code>, etc.)</p>
+
+
+
+<a name="219660068"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219660068" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219660068">(Dec 11 2020 at 20:47)</a>:</h4>
+<p>Destroying and rebuilding to answer that <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...</p>
+
+
+
+<a name="219660219"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219660219" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219660219">(Dec 11 2020 at 20:48)</a>:</h4>
+<p>(btw, all this so that I can test <a href="https://github.com/backdrop/backdrop-issues/issues/4799">https://github.com/backdrop/backdrop-issues/issues/4799</a> <span class="user-mention" data-user-id="256607">@BWPanda</span> )</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4799" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4799" title="&quot;Undefined index: distribution_name&quot; for Drupal migrations · Issue #4799 · backdrop/backdrop-issues">"Undefined index: distribution_name" for Drupal migrations · Issue #4799 · backdrop/backdrop-issues</a></div><div class="message_embed_description">If a Drupal site is upgraded to Backdrop then the installation doesn&#39;t run and &#39;distribution_name&#39; doesn&#39;t get set. However when we get that information from the profile info file, ...</div></div></div>
+
+
+
+<a name="219660615"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219660615" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219660615">(Dec 11 2020 at 20:53)</a>:</h4>
+<p>Confirmed <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...I can access the Backdrop site and log in as user1 (admin) after installation <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span></p>
+
+
+
+<a name="219660682"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219660682" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219660682">(Dec 11 2020 at 20:53)</a>:</h4>
+<p>...after importing the D7 db though, and trying to access update.php, I still get "404 page not found"</p>
+
+
+
+<a name="219660794"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219660794" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219660794">(Dec 11 2020 at 20:54)</a>:</h4>
+<p>Interesting... <span aria-label="thinking" class="emoji emoji-1f914" role="img" title="thinking">:thinking:</span></p>
+
+
+
+<a name="219661073"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219661073" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219661073">(Dec 11 2020 at 20:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> see my comment in <a href="https://github.com/backdrop/backdrop-issues/issues/4799">https://github.com/backdrop/backdrop-issues/issues/4799</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4799" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4799" title="&quot;Undefined index: distribution_name&quot; for Drupal migrations · Issue #4799 · backdrop/backdrop-issues">"Undefined index: distribution_name" for Drupal migrations · Issue #4799 · backdrop/backdrop-issues</a></div><div class="message_embed_description">If a Drupal site is upgraded to Backdrop then the installation doesn&#39;t run and &#39;distribution_name&#39; doesn&#39;t get set. However when we get that information from the profile info file, ...</div></div></div>
+
+
+
+<a name="219661145"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219661145" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219661145">(Dec 11 2020 at 20:57)</a>:</h4>
+<p>...I'm trying to replicate the issues that were reported in <a href="https://forum.backdropcms.org/forum/post-drupal-7-migration-issue-notice-undefined-index-name">https://forum.backdropcms.org/forum/post-drupal-7-migration-issue-notice-undefined-index-name</a></p>
+
+
+
+<a name="219661161"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219661161" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219661161">(Dec 11 2020 at 20:57)</a>:</h4>
+<p>...then test if your PR fixes things.</p>
+
+
+
+<a name="219661219"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219661219" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219661219">(Dec 11 2020 at 20:57)</a>:</h4>
+<p>Thanks <span aria-label="thumbs up" class="emoji emoji-1f44d" role="img" title="thumbs up">:thumbs_up:</span></p>
+
+
+
+<a name="219661351"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219661351" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219661351">(Dec 11 2020 at 20:58)</a>:</h4>
+<p>On a side note, I think my PR is worth merging just because of the code (without knowing what the code does, just reading over it, I think my changes make sense). But that's just me... <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="219662146"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219662146" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219662146">(Dec 11 2020 at 21:05)</a>:</h4>
+<p>...well, not sure about that <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...the code change seems simple and straight-forward, and I do notice that the function description says <code>Defaults to "Backdrop CMS" if none is explicitly provided by the installation profile</code> ...it is not clear that this happens before the changes, but it should do with your PR. ...I'm just not sure what side-effects that will have ...I mean, we'd be fixing a function to meet its intended use, but possibly breaking things that this far have been working with the current (although most likely wrong) behavior.</p>
+
+
+
+<a name="219662234"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219662234" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219662234">(Dec 11 2020 at 21:06)</a>:</h4>
+<p>...hence my efforts to test <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="219662274"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219662274" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219662274">(Dec 11 2020 at 21:06)</a>:</h4>
+<p>Sure</p>
+
+
+
+<a name="219662381"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219662381" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219662381">(Dec 11 2020 at 21:07)</a>:</h4>
+<p>...anyway, I could use a sanity check with the steps I've outlined in the comment on that issue, and since I know that you use lando too <span class="user-mention" data-user-id="256607">@BWPanda</span> perhaps you could test and see what I might be missing.</p>
+
+
+
+<a name="219662467"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219662467" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219662467">(Dec 11 2020 at 21:08)</a>:</h4>
+<p>... <span class="user-mention" data-user-id="256738">@indigoxela</span> not sure if you are using lando as well, and if you have time/energy to test too please.</p>
+
+
+
+<a name="219662555"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219662555" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219662555">(Dec 11 2020 at 21:09)</a>:</h4>
+<p>Idea!!!: ...this could actually be a pre-release test we run, to make sure that we have not broken basic/vanilla D7 to Backdrop upgrades</p>
+
+
+
+<a name="219666554"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219666554" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219666554">(Dec 11 2020 at 21:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> I've moved the testing steps over to <a href="https://github.com/backdrop/backdrop-issues/issues/4801">https://github.com/backdrop/backdrop-issues/issues/4801</a> <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4801" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4801" title="Automatic testing of D7 to Backdrop upgrades as part of releases · Issue #4801 · backdrop/backdrop-issues">Automatic testing of D7 to Backdrop upgrades as part of releases · Issue #4801 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This idea came to me while trying to test #4799 and while discussing this on Zulip: https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run Idea!!!: ...t...</div></div></div>
+
+
+
+<a name="219681855"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219681855" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219681855">(Dec 12 2020 at 01:31)</a>:</h4>
+<p>Cool, taking a look</p>
+
+
+
+<a name="219701641"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/D7%20to%20Backdrop%20test%20run/near/219701641" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/D7.20to.20Backdrop.20test.20run.html#219701641">(Dec 12 2020 at 10:22)</a>:</h4>
+<blockquote>
+<p>@indigoxela not sure if you are using lando as well, and if you have time/energy to test too please.</p>
+</blockquote>
+<p>No, I never used lando. I have a virtual machine, set up like I'd set up any webserver (Apache, MariaDB, php-fpm), with real (sub-)domains pointing to my dev webs. Sure, I'll try to reproduce the problem another time.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

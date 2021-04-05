@@ -1,0 +1,158 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html">Accelerate local Simpletest runs</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="194534254"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194534254" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194534254">(Apr 18 2020 at 08:58)</a>:</h4>
+<p>I wonder what would be the trick to accelerate Simpletest runs on my local dev.</p>
+<p>Currently I have to run the same tests again and again (i18n test fixes) and as every run lasts for more than a minute, this is all soooo boring.<br>
+How to get them running faster? More CPU cores? More memory? Any other tricks? (Disks are ssd.)</p>
+
+
+
+<a name="194545890"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194545890" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194545890">(Apr 18 2020 at 13:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> has been doing a lot of test runs in his work with improving the test suites. Maybe he can share what he has been doing.</p>
+
+
+
+<a name="194547230"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194547230" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194547230">(Apr 18 2020 at 14:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> are you running through UI or command line; cli you can specify individual files, directories, or a specific test class to speed it up</p>
+
+
+
+<a name="194552893"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194552893" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194552893">(Apr 18 2020 at 16:33)</a>:</h4>
+<p>If you are running them through the UI, try going to the simpletest settings and enabling the setting <code>cache installation profiles</code>.</p>
+
+
+
+<a name="194552952"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194552952" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194552952">(Apr 18 2020 at 16:35)</a>:</h4>
+<p>If that is still slow, I could take a look at the test to see how to speed it up.</p>
+
+
+
+<a name="194584264"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194584264" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194584264">(Apr 19 2020 at 07:36)</a>:</h4>
+<p>I'm running tests one by one through UI. I tried "cache installation profiles" but that didn't speed test runs up. Probably because I run only one at a time anyway. Hm. Any other tricks?</p>
+
+
+
+<a name="194597104"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194597104" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194597104">(Apr 19 2020 at 13:13)</a>:</h4>
+<p>I'd run them via cli <a href="https://howtobackdrop.com/vid/enabling-and-running-tests-simpletest-module" title="https://howtobackdrop.com/vid/enabling-and-running-tests-simpletest-module">https://howtobackdrop.com/vid/enabling-and-running-tests-simpletest-module</a></p>
+
+
+
+<a name="194597617"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194597617" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194597617">(Apr 19 2020 at 13:26)</a>:</h4>
+<p>Could be worth a try, but I neither use lando nor drush (could make it working with "b", I guess).</p>
+
+
+
+<a name="194597710"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194597710" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194597710">(Apr 19 2020 at 13:28)</a>:</h4>
+<p>you don't need lando or drush;</p>
+
+
+
+<a name="194597723"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194597723" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194597723">(Apr 19 2020 at 13:29)</a>:</h4>
+<p>just run the commands on cli omitting the <code>lando</code> preface</p>
+
+
+
+<a name="194612581"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194612581" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194612581">(Apr 19 2020 at 18:56)</a>:</h4>
+<p>What version of Backdrop are you using? I just remembered that there was a bug that I fixed in <a href="https://github.com/backdrop/backdrop-issues/issues/4360" title="https://github.com/backdrop/backdrop-issues/issues/4360">https://github.com/backdrop/backdrop-issues/issues/4360</a> where the cache settings doesn't get saved.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4360" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4360" title="Can't save the setting to use the installation profile cache · Issue #4360 · backdrop/backdrop-issues">Can't save the setting to use the installation profile cache · Issue #4360 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Actual behavior When you change the value of the &#39;Cache installation profiles&#39; setting on /admin/config/development/testing/settings and click save, it is not saved. Expected behavior When ...</div></div></div>
+
+
+
+<a name="194612652"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194612652" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194612652">(Apr 19 2020 at 18:58)</a>:</h4>
+<p>If you want to try adding the setting manually, it's in simpletest.settings.json and the setting should be <code>"simpletest_cache": 1</code></p>
+
+
+
+<a name="194643276"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194643276" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194643276">(Apr 20 2020 at 08:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> using the cli seemed like a good idea, but... Tests don't run any faster that way (eventually some seconds, but not worth it)</p>
+
+
+
+<a name="194662547"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194662547" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194662547">(Apr 20 2020 at 11:35)</a>:</h4>
+<p>the only other things i can think of are to </p>
+<ol>
+<li>
+<p>If these are new tests break them out into their own class(es) and then you can run just those not worrying about existing tests that are not changing</p>
+</li>
+<li>
+<p>Use the <code>--cache</code> flag on the cli (possibly preface the runs with <code>time</code> w/ and w/out <code>--cache</code> flag</p>
+</li>
+</ol>
+
+
+
+<a name="194666737"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194666737" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194666737">(Apr 20 2020 at 12:22)</a>:</h4>
+<p>The problem is: these tests aren't new. I'm currently fixing all i18n (contrib module) tests. And I fix (and run) them one by one (one class at a time), so caching won't help much.</p>
+
+
+
+<a name="194667007"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194667007" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194667007">(Apr 20 2020 at 12:25)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> I had a similar question I think, and asked it here: <a href="https://github.com/backdrop/backdrop-issues/issues/4306" title="https://github.com/backdrop/backdrop-issues/issues/4306">https://github.com/backdrop/backdrop-issues/issues/4306</a> The answer is basically that tests are already very fast (compared to what they could be otherwise), so not much more we can do to improve performance apparently...</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4306" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4306" title="Enhancing testing performance and include timer on all test executions · Issue #4306 · backdrop/backdrop-issues">Enhancing testing performance and include timer on all test executions · Issue #4306 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I haven&#39;t timed it, but running tests (either via the Testing module in Backdrop or on GitHub when submitting a PR) seems to take a long time. I&#39;m wondering if there&#39;s a way of enhancin...</div></div></div>
+
+
+
+<a name="194682303"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194682303" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194682303">(Apr 20 2020 at 14:28)</a>:</h4>
+<p>I wouldn't say, tests are slow (one minute per class isn't all that bad). But this sums up, if trying to fix many in series. I was hoping for some nifty trick to speed them up, but ... OK, maybe there isn't any.</p>
+
+
+
+<a name="194689817"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194689817" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194689817">(Apr 20 2020 at 15:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span>  The caching should help quite a lot. Simpletest performs an installation of Backdrop for each test, which is what most of the time is spent on. If you get the caching working, then it keeps the install around and just copies the tables from the install cache.</p>
+
+
+
+<a name="194690360"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194690360" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194690360">(Apr 20 2020 at 15:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> I tried my luck with caching but it had no effect. As I already stated: I'm fixing one testing class at a time.</p>
+
+
+
+<a name="194691272"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194691272" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194691272">(Apr 20 2020 at 15:27)</a>:</h4>
+<p>The cache is preserved between runs, so it should help even when only running one at a time</p>
+
+
+
+<a name="194782547"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Accelerate%20local%20Simpletest%20runs/near/194782547" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Accelerate.20local.20Simpletest.20runs.html#194782547">(Apr 21 2020 at 10:11)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> as I already stated: the cache had no effect, I already tried that.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

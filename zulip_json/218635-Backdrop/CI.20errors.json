@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>Has anyone else noticed an increased amount of false-positives lately in the CI tests, pointing to <code>bootstrap.test</code> ...or is it just me?</p>",
+        "id": 198562176,
+        "sender_full_name": "klonos",
+        "timestamp": 1590287634
+    },
+    {
+        "content": "<p>...I think that it has to do with these changes in the time specified in <code>sleep()</code> <span aria-label=\"sweat\" class=\"emoji emoji-1f613\" role=\"img\" title=\"sweat\">:sweat:</span></p>",
+        "id": 198562219,
+        "sender_full_name": "klonos",
+        "timestamp": 1590287675
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop/commit/7572f3d41e157a04b262ee262884b6d463ef0ae2#diff-9e1e21917c77e9c6f8acfbb6bc4cd859R306\">https://github.com/backdrop/backdrop/commit/7572f3d41e157a04b262ee262884b6d463ef0ae2#diff-9e1e21917c77e9c6f8acfbb6bc4cd859R306</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/commit/7572f3d41e157a04b262ee262884b6d463ef0ae2#diff-9e1e21917c77e9c6f8acfbb6bc4cd859R306\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/commit/7572f3d41e157a04b262ee262884b6d463ef0ae2#diff-9e1e21917c77e9c6f8acfbb6bc4cd859R306\" title=\"Issue #4306: Adding code to time the test runs and display them in th… · backdrop/backdrop@7572f3d\">Issue #4306: Adding code to time the test runs and display them in th… · backdrop/backdrop@7572f3d</a></div><div class=\"message_embed_description\">…e summary.\n\nAnd additional testing performance improvements.\r\n\r\nBy @hosef, @klonos, @BWPanda, and @quicksketch.</div></div></div>",
+        "id": 198562220,
+        "sender_full_name": "klonos",
+        "timestamp": 1590287681
+    },
+    {
+        "content": "<p>...was done as part of <a href=\"https://github.com/backdrop/backdrop-issues/issues/4306\">https://github.com/backdrop/backdrop-issues/issues/4306</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4306\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4306\" title=\"Enhancing testing performance and include timer on all test executions · Issue #4306 · backdrop/backdrop-issues\">Enhancing testing performance and include timer on all test executions · Issue #4306 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I haven&#39;t timed it, but running tests (either via the Testing module in Backdrop or on GitHub when submitting a PR) seems to take a long time. I&#39;m wondering if there&#39;s a way of enhancin...</div></div></div>",
+        "id": 198562289,
+        "sender_full_name": "klonos",
+        "timestamp": 1590287788
+    },
+    {
+        "content": "<p>...I've opened <a href=\"https://github.com/backdrop/backdrop-issues/issues/4418\">#4418</a> so that we can track these failures.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4418\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4418\" title=\"Tests: CI random failures in bootstrap.test because of reduced time in `sleep()` · Issue #4418 · backdrop/backdrop-issues\">Tests: CI random failures in bootstrap.test because of reduced time in `sleep()` · Issue #4418 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;ve been seeing these random failures in PRs more and more lately: Bootstrap: Page cache test (BootstrapPageCacheTestCase) fail Background fetch copy served after granting access. bootstrap.te...</div></div></div>",
+        "id": 198562532,
+        "sender_full_name": "klonos",
+        "timestamp": 1590288262
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I have seen those a lot, but we actually reverted the changes to those sleep calls, so it wasn't changed there.</p>",
+        "id": 198562569,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1590288344
+    },
+    {
+        "content": "<p>Hmm, <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> ...I just used \"blame\" in GitHub, and the reduced times seem to still be there.</p>",
+        "id": 198562621,
+        "sender_full_name": "klonos",
+        "timestamp": 1590288399
+    },
+    {
+        "content": "<p>...here for example: <a href=\"https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/simpletest/tests/bootstrap.test#L306\">https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/simpletest/tests/bootstrap.test#L306</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/simpletest/tests/bootstrap.test#L306\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/simpletest/tests/bootstrap.test#L306\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 198562632,
+        "sender_full_name": "klonos",
+        "timestamp": 1590288451
+    },
+    {
+        "content": "<p>See: <a href=\"https://github.com/backdrop/backdrop/blame/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/simpletest/tests/bootstrap.test#L306\">https://github.com/backdrop/backdrop/blame/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/simpletest/tests/bootstrap.test#L306</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blame/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/simpletest/tests/bootstrap.test#L306\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blame/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/simpletest/tests/bootstrap.test#L306\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 198562683,
+        "sender_full_name": "klonos",
+        "timestamp": 1590288546
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/IAlKzsRNA40hbIVfnlmMWLCc/Screen-Shot-2020-05-24-at-5.48.16-am.png\">Screen-Shot-2020-05-24-at-5.48.16-am.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/IAlKzsRNA40hbIVfnlmMWLCc/Screen-Shot-2020-05-24-at-5.48.16-am.png\" title=\"Screen-Shot-2020-05-24-at-5.48.16-am.png\"><img src=\"/user_uploads/18319/IAlKzsRNA40hbIVfnlmMWLCc/Screen-Shot-2020-05-24-at-5.48.16-am.png\"></a></div>",
+        "id": 198562685,
+        "sender_full_name": "klonos",
+        "timestamp": 1590288553
+    },
+    {
+        "content": "<p>...it's multiple of them, but not sure if all reductions are causing test failures or not. I'm just pointing out the fact that we tried to shave off a few seconds here and there, and we're now in a situation where we are wasting minutes in rerunning the tests to have them come back green.</p>",
+        "id": 198562774,
+        "sender_full_name": "klonos",
+        "timestamp": 1590288699
+    }
+]

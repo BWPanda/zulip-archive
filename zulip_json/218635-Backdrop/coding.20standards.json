@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>I've seen this:</p>\n<div class=\"codehilite\"><pre><span></span><code>  $config = config(&#39;some_config.settings&#39;);\n  $config-&gt;set(&#39;some_setting&#39;, $form_state[&#39;values&#39;][&#39;some_setting&#39;]);\n  $config-&gt;set(&#39;another_setting&#39;, $form_state[&#39;values&#39;][&#39;another_setting&#39;]);\n  $config-&gt;set(&#39;yet_another_setting&#39;, $form_state[&#39;values&#39;][&#39;yet_another_setting&#39;]);\n  $config-&gt;save();\n</code></pre></div>\n\n\n<p>...but also this:</p>\n<div class=\"codehilite\"><pre><span></span><code>  $config = config(&#39;some_config.settings&#39;);\n  $config\n    -&gt;set(&#39;some_setting&#39;, $form_state[&#39;values&#39;][&#39;some_setting&#39;])\n    -&gt;set(&#39;another_setting&#39;, $form_state[&#39;values&#39;][&#39;another_setting&#39;])\n    -&gt;set(&#39;yet_another_setting&#39;, $form_state[&#39;values&#39;][&#39;yet_another_setting&#39;])\n    -&gt;save();\n</code></pre></div>\n\n\n<p>Are these both acceptable?</p>",
+        "id": 197855685,
+        "sender_full_name": "klonos",
+        "timestamp": 1589731228
+    },
+    {
+        "content": "<p>Yes, if the return value of the method (set()) is an object. The following method needs to be valid for the returned object.</p>",
+        "id": 197857264,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589733304
+    },
+    {
+        "content": "<p>Config::set() returns $this, which is a pointer to itself (a config object), so you can chain calls to the method: <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/Config%3A%3Aset/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/Config%3A%3Aset/1</a></p>",
+        "id": 197857447,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589733576
+    },
+    {
+        "content": "<p>Yes, I'm aware of how it works and why ...just asking about the code formatting (DX for less experienced developers or code tinkerers)</p>",
+        "id": 197857606,
+        "sender_full_name": "klonos",
+        "timestamp": 1589733838
+    },
+    {
+        "content": "<p>...I've found my answer here (did not know that there was a dedicated page for OOP): <a href=\"https://www.drupal.org/docs/develop/standards/object-oriented-code#chaining\">https://www.drupal.org/docs/develop/standards/object-oriented-code#chaining</a> </p>\n<blockquote>\n<p>In the case where you have a fluid interface for a class, and the code spans more than one line, the method calls should be indented with 2 spaces:</p>\n</blockquote>",
+        "id": 197858092,
+        "sender_full_name": "klonos",
+        "timestamp": 1589734541
+    },
+    {
+        "content": "<p>...so the second format is indeed allowed.</p>",
+        "id": 197858135,
+        "sender_full_name": "klonos",
+        "timestamp": 1589734564
+    },
+    {
+        "content": "<p>...there's more discussion about it here: <a href=\"https://www.drupal.org/project/coding_standards/issues/1516460\">https://www.drupal.org/project/coding_standards/issues/1516460</a></p>",
+        "id": 197858234,
+        "sender_full_name": "klonos",
+        "timestamp": 1589734697
+    },
+    {
+        "content": "<p>You question \"Are these both acceptable?\" was not clear what you meant.</p>",
+        "id": 197858331,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589734847
+    },
+    {
+        "content": "<p>Yeah, I see what you mean ...I thought that the thread topic would provide context <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 197858357,
+        "sender_full_name": "klonos",
+        "timestamp": 1589734906
+    },
+    {
+        "content": "<p>Sorry about that. I didn't even read the topic. <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>",
+        "id": 197859552,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1589736329
+    },
+    {
+        "content": "<p>Only ever apologize if you've actually done something wrong ...and even then, it usually is not necessary when in the company of friends <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197859721,
+        "sender_full_name": "klonos",
+        "timestamp": 1589736500
+    }
+]

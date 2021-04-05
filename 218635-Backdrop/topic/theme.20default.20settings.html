@@ -1,0 +1,111 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/theme.20default.20settings.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html">theme default settings</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="225259936"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225259936" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Vincent Stemen <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225259936">(Feb 05 2021 at 04:20)</a>:</h4>
+<p>Hi.  For modules, you can create default settings under config/*.json.  Can you do this with themes?  Or is there any other way to have default configurations?  I have not been able to find mention of it in the documentation.</p>
+
+
+
+<a name="225260510"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225260510" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225260510">(Feb 05 2021 at 04:32)</a>:</h4>
+<p><span class="user-mention" data-user-id="304759">@Vincent Stemen</span> you can put some defaults in the .info but I'm not sure if you can have a default config file. You could test it out</p>
+
+
+
+<a name="225260762"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225260762" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Vincent Stemen <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225260762">(Feb 05 2021 at 04:38)</a>:</h4>
+<p>@Herb What I was hoping to do is include a default hero background image in the files/ directory and have the hero block enabled by default on the front page.</p>
+
+
+
+<a name="225260854"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225260854" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Vincent Stemen <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225260854">(Feb 05 2021 at 04:40)</a>:</h4>
+<p>But I don't know what I would put in the .info file to accomplish that.  I assume it would require .json files if it's possible.</p>
+
+
+
+<a name="225273905"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225273905" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225273905">(Feb 05 2021 at 08:57)</a>:</h4>
+<p><span class="user-mention" data-user-id="304759">@Vincent Stemen</span> this is the issue you're looking for: <a href="https://github.com/backdrop/backdrop-issues/issues/4829">https://github.com/backdrop/backdrop-issues/issues/4829</a> ...feel free to chime in there <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4829" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4829" title="Allow themes to be installed, uninstalled, and updated (treat them like modules) · Issue #4829 · backdrop/backdrop-issues">Allow themes to be installed, uninstalled, and updated (treat them like modules) · Issue #4829 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This issue has come up in several places before, but most recently in #4814 when @BWPanda noticed the strange processes required for properly handling theme settings, or more specifically, how to s...</div></div></div>
+
+
+
+<a name="225274020"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225274020" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225274020">(Feb 05 2021 at 08:58)</a>:</h4>
+<p>...that ^^ would effectively allow for install/uninstall hooks to be fired when enabling/disabling themes (same way as modules) ...which would also allow to ship themes with default config.</p>
+
+
+
+<a name="225293357"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225293357" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225293357">(Feb 05 2021 at 12:41)</a>:</h4>
+<p><span class="user-mention" data-user-id="304759">@Vincent Stemen</span> doesn't sound possible and I'm not sure it's a good idea to allow themes to control other configuration such as layouts. That's what modules are for. You could have a module that overrides the home page</p>
+
+
+
+<a name="225294701"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225294701" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225294701">(Feb 05 2021 at 12:55)</a>:</h4>
+<p>Sounds like you are interested in the "recipe" concept</p>
+
+
+
+<a name="225295585"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225295585" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225295585">(Feb 05 2021 at 13:03)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop-issues/issues/3763">https://github.com/backdrop/backdrop-issues/issues/3763</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3763" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3763" title="Add 'recipe' project type to Backdrop · Issue #3763 · backdrop/backdrop-issues">Add 'recipe' project type to Backdrop · Issue #3763 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This is a spin-off of backdrop-ops/backdropcms.org#46 specifically for proposing a new project type for Backdrop: recipes. With Backdrop supporting modules for functionality, themes for styling, la...</div></div></div>
+
+
+
+<a name="225295641"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225295641" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225295641">(Feb 05 2021 at 13:04)</a>:</h4>
+<p>Or <a href="https://github.com/backdrop/backdrop-issues/wiki/New-%22Recipe%22-Project-Type">https://github.com/backdrop/backdrop-issues/wiki/New-%22Recipe%22-Project-Type</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/wiki/New-%22Recipe%22-Project-Type" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/wiki/New-%22Recipe%22-Project-Type" title="backdrop/backdrop-issues">backdrop/backdrop-issues</a></div><div class="message_embed_description">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="225320024"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225320024" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225320024">(Feb 05 2021 at 16:19)</a>:</h4>
+<p>Were you thinking that for example to have a contrib theme that when enabled, installs a particular layout, with a particular block,  with a particular image?</p>
+
+
+
+<a name="225320811"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225320811" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Vincent Stemen <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225320811">(Feb 05 2021 at 16:24)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span>  yes.  Exactly.</p>
+
+
+
+<a name="225375256"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225375256" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Vincent Stemen <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225375256">(Feb 06 2021 at 00:17)</a>:</h4>
+<p>Thanks for the responses everybody.</p>
+<p><span class="user-mention" data-user-id="256729">@klonos</span>  Yes, issue 4829 sounds like the closest to what I was looking for.  What I envisioned was something like being able to put json configurations in the theme's config/ directory and have it automatically installed in the config_... directory when enabled like with modules.  I am doing some work on the "Corporate KISS" theme that I contributed.  It has no settings, but I was hoping to have a way to enable the hero block, with an included default background, in the "Top" region of the front page upon first activation so that, out of the box, it would look more like the thumbnail preview.</p>
+<p>My goal is to keep the theme clean of any code other than CSS, completely void of any php or template code, so that it relies fully on Backdrop's core layout system.</p>
+
+
+
+<a name="225376705"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/theme%20default%20settings/near/225376705" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Vincent Stemen <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/theme.20default.20settings.html#225376705">(Feb 06 2021 at 00:41)</a>:</h4>
+<p>Now that I think about it, I can see that this might be a problem though.  If a user already has a hero block enabled with different parameters when they enable the theme, you wouldn't want it to change any of their existing settings.</p>
+<p>Perhaps, what we need is a modification to the hero block configuration dialog to allow you to select an existing file, like with the content editing screen, and give it access to the image/ directory of the theme.  That way I can include a background image with a contributed theme and make it easy for the user to enable it.</p>
+<p>Right now it only has the ability to browse the local file system and upload a new image.  I remember similar discussions prior to the "SELECT EXISTING FILE" feature being added to the content editing screen.  Really, anywhere that prompts you to select a file, should have the ability to select from existing files that have already been uploaded or, in this case included with a theme.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

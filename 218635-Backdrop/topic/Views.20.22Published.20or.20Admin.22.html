@@ -1,0 +1,98 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html">Views "Published or Admin"</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="192071339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192071339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192071339">(Mar 27 2020 at 19:52)</a>:</h4>
+<p>This is a weird one. Anyone seen this before?</p>
+<ul>
+<li>Create a View filtering on content based on a taxonomy term and <code>Published = Yes</code></li>
+<li>Test the view, it works fine.</li>
+<li>Add a new filter for <code>Published or Admin</code> and remove <code>Published = Yes</code></li>
+<li>Test the view, no unpublished nodes show.</li>
+<li>Remove the filter based on taxonomy term.</li>
+<li>Test the view, unpublished nodes show (if you are logged in as admin).</li>
+</ul>
+<p>Can we not filter on taxonomy terms for unpublished content?</p>
+
+
+
+<a name="192119183"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192119183" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192119183">(Mar 28 2020 at 11:44)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> yes, there's something wrong with the view / the query, I played with a view based on your description and also found strange behavior. I'd suggest you open an issue for it.</p>
+
+
+
+<a name="192119344"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192119344" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192119344">(Mar 28 2020 at 11:49)</a>:</h4>
+<p>Ooops, I already got what goes wrong: whenever a node gets unpublished, the node entry is removed from database table "taxonomy_index". That's why it's impossible to have unpublished nodes in results filtered by term.</p>
+
+
+
+<a name="192163898"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192163898" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192163898">(Mar 29 2020 at 08:50)</a>:</h4>
+<p>As db table taxonomy_index is supposed to only hold published nodes, a quick workaround is to use the field value for filtering (like Content: Tags). That filter isn't using table taxonomy_index.</p>
+
+
+
+<a name="192175275"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192175275" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192175275">(Mar 29 2020 at 13:49)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256738">@indigoxela</span> so that is actually expected behavior? I will do some more testing when I'm by the computer again...</p>
+
+
+
+<a name="192178023"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192178023" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192178023">(Mar 29 2020 at 14:49)</a>:</h4>
+<p>I would not call it "expected". This seems to be another case where developers knowing what's happening in the background (db tables) finding what's going on in the UI "natural", or at least know what to do in the UI to make things work for them. As an end user, I would expect the UI to "just work" as expected.</p>
+
+
+
+<a name="192178072"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192178072" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192178072">(Mar 29 2020 at 14:50)</a>:</h4>
+<p>^^^ that my way of saying "we should fix this" <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="192217079"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192217079" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192217079">(Mar 30 2020 at 06:58)</a>:</h4>
+<p>It seems to be expected behavior in the db table, see this comment <a href="https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966" title="https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966">https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966</a><br>
+It's a bit unexpected in the view, though. The fact that results are filtered for published nodes isn't obvious. But to "fix" it needs a deeper change in how taxonomy views are implemented (hook_views_data). With a lot of possible side effects on existing views. Personally, I wouldn't dare to touch that.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/7572f3d41e157a04b262ee262884b6d463ef0ae2/core/modules/taxonomy/taxonomy.module#L1966" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="192253951"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192253951" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192253951">(Mar 30 2020 at 13:21)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256738">@indigoxela</span> and <span class="user-mention" data-user-id="256729">@klonos</span> – I've filed <a href="https://github.com/backdrop/backdrop-issues/issues/4356" title="https://github.com/backdrop/backdrop-issues/issues/4356">https://github.com/backdrop/backdrop-issues/issues/4356</a> for further feedback.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4356" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4356" title="Views &quot;Unpublished or admin&quot; doesn't work if filtering on a taxonomy term · Issue #4356 · backdrop/backdrop-issues">Views "Unpublished or admin" doesn't work if filtering on a taxonomy term · Issue #4356 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the bug Displaying unpublished content that is tagged with a term does not work in Views that filter by term. (e.g. &quot;Unpublished or admin&quot; filter only shows published conte...</div></div></div>
+
+
+
+<a name="192941683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192941683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192941683">(Apr 05 2020 at 04:46)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> ++</p>
+
+
+
+<a name="192941684"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20%22Published%20or%20Admin%22/near/192941684" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20.22Published.20or.20Admin.22.html#192941684">(Apr 05 2020 at 04:46)</a>:</h4>
+<p><strong>laryn</strong> Cheers (Karma: 4)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

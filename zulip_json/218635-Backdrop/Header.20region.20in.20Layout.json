@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Just curious how entrenched the header region is in Layouts.  I am the one porting the UIkit theme and was thinking about ditching the header region and making it a little more granular in how you control the menu, logo and site name blocks.</p>",
+        "id": 230806920,
+        "sender_full_name": "tkcent",
+        "timestamp": 1616036277
+    },
+    {
+        "content": "<p>@tkcent - I may not be aware of every possible pitfall here, but if you are already creating a custom layout in the theme, I would expect that you can do anything you want with the header region - as long as the user does not switch layouts to a core layout or a contrib layout that does not contain your overrides.</p>",
+        "id": 230807310,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616036606
+    },
+    {
+        "content": "<p>All of the core layouts include a header region, but I don't think there is any other behind the scenes magic happening in that region. I can't think of anything that will break if that region is gone or replaced.</p>",
+        "id": 230807500,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616036801
+    },
+    {
+        "content": "<p>Keep in mind - that I am often wrong.</p>",
+        "id": 230807599,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616036929
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> - I'm give a try and see how it works.  The header block doesn't have a way to configure the menus like the Primary Navigation block and other menu blocks do.</p>",
+        "id": 230808599,
+        "sender_full_name": "tkcent",
+        "timestamp": 1616037933
+    },
+    {
+        "content": "<p>And thanks to <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> for the pointer to system_menu_block_build().  The only problem with that approach is either I hardcode the config or add menu configuration options to the theme settings.    Seems easier to just use menu blocks since they are configurable already.</p>",
+        "id": 230808847,
+        "sender_full_name": "tkcent",
+        "timestamp": 1616038167
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"273888\">@tkcent</span> I used the UIKit theme a lot, but with a lot of customization (legacy issues with former D7 customers)... I used it with and without a header.tpl.php, really depends on the design complexity. So your goal is to have a 1:1 port of the theme, or pretty close at least?</p>",
+        "id": 230829498,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1616057196
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> - Pretty close to a 1:1 port of the theme.  Sorry you missed the quick demo I gave during Backdrop Live of the progress I've made so far!  I've got a lot on my plate right now but I'm hoping to get something out next week for public consumption.  Looking to put it up on Github.  I'll keep you posted.</p>",
+        "id": 230864642,
+        "sender_full_name": "tkcent",
+        "timestamp": 1616074938
+    }
+]

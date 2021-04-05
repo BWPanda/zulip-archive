@@ -1,0 +1,118 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html">Confused with permissions and updates</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="231819151"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/231819151" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#231819151">(Mar 25 2021 at 15:12)</a>:</h4>
+<p>Hi, I'm very confused with what permissions should the site folders have in order to be able to install and update modules through the web interface.<br>
+<span class="user-mention" data-user-id="256607">@BWPanda</span>  yesterday posted a script for file permissions but these permissions actually don't allow installations/updates through the web interface.</p>
+<p>Attempt to install a theme ends with <br>
+"Error: File Transfer failed, reason: Cannot create directory /var/www/backdrop/themes/bootstrap_lite."</p>
+<p>Attempt to update a module requests FTP access.</p>
+<p>So I'm really confused. I remember installing new modules without FTP, so why update requires FTP and can't do it directly. Also, what file permissions should exist in order to allow installation and updates. Probably we should create a script for fixing permissions and include the correct permissions for installation/updates. Also, we should be careful to not compromise the safety of the system, for which as far as I understand the existing fix-permission scripts for Drupal are strict and we need now to relax a bit in order to make updates work.</p>
+<p>Finally, I would be glad to see all these explained in documentation. The following links didn't help me <br>
+<a href="https://backdropcms.org/upgrade">https://backdropcms.org/upgrade</a><br>
+<a href="https://backdropcms.org/user-guide/modules">https://backdropcms.org/user-guide/modules</a></p>
+
+
+
+<a name="231826808"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/231826808" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#231826808">(Mar 25 2021 at 15:52)</a>:</h4>
+<p>Have you seen:<br>
+<a href="https://forum.backdropcms.org/forum/issue-permissions">https://forum.backdropcms.org/forum/issue-permissions</a></p>
+
+
+
+<a name="231826969"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/231826969" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#231826969">(Mar 25 2021 at 15:53)</a>:</h4>
+<p><a href="https://backdropcms.org/file-permissions-and-ownership">https://backdropcms.org/file-permissions-and-ownership</a></p>
+
+
+
+<a name="231829098"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/231829098" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#231829098">(Mar 25 2021 at 16:05)</a>:</h4>
+<p>This looks promising <a href="https://backdropcms.org/file-permissions-and-ownership">https://backdropcms.org/file-permissions-and-ownership</a> <br>
+After studying it I still have some questions:</p>
+<ol>
+<li>How dangerous is to have looser permissions. I mean in real case examples in a dedicated linux server with nginx for example...</li>
+<li>At the moment in my server and test environment I have the following ownership myron:www-data. The example at the link above says I should have myron:myron in all and in "files" www-data:www-data which to me doesn't make sense as I have a dedicated VPS. I think the documentation should include the configuration scheme for looser settings in dedicated server too, except if you don't consider a good way to manage the updates from the webinterface if you have root access</li>
+<li>Applied the looser settings described in the link and still the update requires FTP, so my question remains why installation doesn't require FTP and update requires???</li>
+</ol>
+
+
+
+<a name="232011316"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/232011316" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#232011316">(Mar 26 2021 at 18:23)</a>:</h4>
+<p>Anybody to shed some light?</p>
+
+
+
+<a name="232014884"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/232014884" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#232014884">(Mar 26 2021 at 18:53)</a>:</h4>
+<p>1) looser permissions are only dangerous if you get hacked when using a dedicated hosting environment. Personally, I don't recommend loosening permissions, but rather figure out why the correct permissions aren't working.</p>
+<p>2) the user:group on your server is usually setup that way on account of how your systems webserver wants to handle permissions. The www-data group is usually for the webserver so it has permission to read/write to the hosting directory. Other server configurations will lock down the group to the user, then add the webserver into each users group. (I believe that's how it works... I'm not a Linux sysadmin)</p>
+<p>3) I can't say why the update isn't working and calling for FTP. I ran into this years ago on a Drupal install using <a href="http://simplytest.me">simplytest.me</a> and a 3rd party hosting environment for a client. After that, I quit using the GUI for updates because if there are too many inconsistencies where some hosting environments will allow it and others won't, it's not worth my time to figure it out, so I went the manual route until I discovered drush for command line.</p>
+<hr>
+<p>Keep in mind, Backdrop is still Drupal under the hood. When running into problems like these, you can always do a search and replace Backdrop with Drupal.</p>
+<p>Might try this: <a href="https://www.drupal.org/forum/support/post-installation/2011-01-22/module-installation-requires-ftp-access#comment-4690116">https://www.drupal.org/forum/support/post-installation/2011-01-22/module-installation-requires-ftp-access#comment-4690116</a></p>
+
+
+
+<a name="232015381"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/232015381" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#232015381">(Mar 26 2021 at 18:57)</a>:</h4>
+<p>As far as I know Drupal doesn't allow web installation and updates, so I think this is something specific to Backdrop. Am I wrong? Also as I see, there is no other option for update except FTP in my system. Is this by design or happened to my system because of problematic file permissions?</p>
+
+
+
+<a name="232020379"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/232020379" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#232020379">(Mar 26 2021 at 19:35)</a>:</h4>
+<p>Is this helpful?<br>
+<a href="https://forum.backdropcms.org/forum/update-core-and-theme-web-interface">https://forum.backdropcms.org/forum/update-core-and-theme-web-interface</a></p>
+
+
+
+<a name="232020391"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/232020391" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#232020391">(Mar 26 2021 at 19:35)</a>:</h4>
+<p>(Sorry, I don't have an answer for you)</p>
+
+
+
+<a name="232020737"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/232020737" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#232020737">(Mar 26 2021 at 19:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="390119">@cptX</span> yes, Drupal allows gui installs of modules/themes and updates.</p>
+
+
+
+<a name="232021786"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/232021786" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#232021786">(Mar 26 2021 at 19:47)</a>:</h4>
+<p>Well you are right. Never did an update in Drupal 9 and in installation ok you can provide the URL to download, not having a list like in Backdrop, so let's say that yes installations and updates are possible through the web interface</p>
+
+
+
+<a name="232022009"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Confused%20with%20permissions%20and%20updates/near/232022009" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> cptX <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Confused.20with.20permissions.20and.20updates.html#232022009">(Mar 26 2021 at 19:48)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span> <a href="#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/Confused.20with.20permissions.20and.20updates/near/232020379">said</a>:</p>
+<blockquote>
+<p>Is this helpful?<br>
+<a href="https://forum.backdropcms.org/forum/update-core-and-theme-web-interface">https://forum.backdropcms.org/forum/update-core-and-theme-web-interface</a></p>
+</blockquote>
+<p>Yes this is exactly the issue I'm having, although that thread doesn't describe the solution. I sent a message and waiting now for a reply</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

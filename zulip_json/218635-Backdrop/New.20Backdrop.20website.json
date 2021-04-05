@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>Got a new website launched, my biggest Backdrop project yet, a website for a Swiss region's farmer association, targeted to end users who are interested in sustainable food production (farmers in Switzerland are increasingly sucessfull to sell directly to the customer). 12 content types, 50+ template files, heavy use of relations. I was hesitant to do this in Backdrop first, but it turned out to be a very good decision. <a href=\"https://landwirtschaft.ag/\">https://landwirtschaft.ag/</a></p>",
+        "id": 202863285,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593850527
+    },
+    {
+        "content": "<p>A lot of background information, e.g. animals health<br>\n<a href=\"https://landwirtschaft.ag/tierhaltung/gesundheit\">https://landwirtschaft.ag/tierhaltung/gesundheit</a></p>\n<p>Portrait of innovative farmers<br>\n<a href=\"https://landwirtschaft.ag/monatshof/von-der-xitomatl-zur-perfekten-tomate\">https://landwirtschaft.ag/monatshof/von-der-xitomatl-zur-perfekten-tomate</a></p>\n<p>Event calendar (including recurring event handling)<br>\n<a href=\"https://landwirtschaft.ag/veranstaltungen\">https://landwirtschaft.ag/veranstaltungen</a></p>",
+        "id": 202863399,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593850731
+    },
+    {
+        "content": "<p>I will write a case study next week with more details...</p>",
+        "id": 202863416,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593850781
+    },
+    {
+        "content": "<p>Oh, and a completely View-based site search <a href=\"https://landwirtschaft.ag/search?combine=milch\">https://landwirtschaft.ag/search?combine=milch</a></p>",
+        "id": 202863533,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593851006
+    },
+    {
+        "content": "<p>Last message on this topic for today, but this is the page speed score after ZERO minutes of optimizing <a href=\"/user_uploads/18319/8iGZpRusGp9X-90m2EGCu9wA/Screenshot-2020-07-04-at-10.30.58.png\">Screenshot-2020-07-04-at-10.30.58.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/8iGZpRusGp9X-90m2EGCu9wA/Screenshot-2020-07-04-at-10.30.58.png\" title=\"Screenshot-2020-07-04-at-10.30.58.png\"><img src=\"/user_uploads/18319/8iGZpRusGp9X-90m2EGCu9wA/Screenshot-2020-07-04-at-10.30.58.png\"></a></div>",
+        "id": 202863801,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593851583
+    },
+    {
+        "content": "<p>Impressive work, case study is very welcome. I think, theme debug can be disabled for now?</p>",
+        "id": 202864937,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1593853756
+    },
+    {
+        "content": "<p>Thank you <span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> ... yes, but there are some small leftovers for today, where the debug mode might be helpful;-)</p>",
+        "id": 202865111,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593854095
+    },
+    {
+        "content": "<p>Kind of paranoia, but for me - it is for local servers only ;-)</p>",
+        "id": 202866807,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1593857271
+    },
+    {
+        "content": "<p>Great job <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ++ <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 202867080,
+        "sender_full_name": "klonos",
+        "timestamp": 1593857729
+    },
+    {
+        "content": "<p><strong>mazze.ch</strong> <span aria-label=\"pancakes\" class=\"emoji emoji-1f95e\" role=\"img\" title=\"pancakes\">:pancakes:</span> (Karma: 3)</p>",
+        "id": 202867081,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1593857729
+    },
+    {
+        "content": "<p>...what solution did you use for the mega menus?</p>",
+        "id": 202867090,
+        "sender_full_name": "klonos",
+        "timestamp": 1593857751
+    },
+    {
+        "content": "<p>...the text in the slider seems pixelated (because it's embedded in the slides), but you're most likely already aware.</p>",
+        "id": 202867150,
+        "sender_full_name": "klonos",
+        "timestamp": 1593857869
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> thank you, and the slider was a last-minute idea from the customer, will be replaced by a vector-based solution soon. I use UIkit as design framework (not Bootstrap, also because menu support was not good enough back then...). A freelancer helped me with coding the template.php code and with menu scripts in particular. I will open source it soon;-)</p>",
+        "id": 202868331,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593859972
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span>:-)</p>",
+        "id": 202868556,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593860309
+    },
+    {
+        "content": "<p>Great work! Looking forward to the case study. How are you doing recurring dates?</p>",
+        "id": 202877855,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593875637
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Recurring dates have a lot of exceptions. But I found a good way with separate nodes for both event page and event date.</p>",
+        "id": 202879068,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1593877332
+    },
+    {
+        "content": "<p>I'm interested in hearing more. Will that be part of the case study? Lack of recurring dates is a hole in Backdrop functionality.</p>",
+        "id": 202881028,
+        "sender_full_name": "Laryn",
+        "timestamp": 1593880157
+    },
+    {
+        "content": "<p>It looks great. What is the mobile page speed score, since that is what Google is caring more about these days?</p>",
+        "id": 202882248,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593881766
+    }
+]

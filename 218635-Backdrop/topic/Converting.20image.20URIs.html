@@ -1,0 +1,62 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Converting.20image.20URIs.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Converting.20image.20URIs.html">Converting image URIs</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="218248329"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Converting%20image%20URIs/near/218248329" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Converting.20image.20URIs.html#218248329">(Nov 30 2020 at 04:41)</a>:</h4>
+<p>I have an image URI (e.g. <code>public://images/.../my-image.jpg</code>) but I need an image URL (e.g. <code>https://mydomain.com/files/images/.../my-image.jpg</code>). How do I convert one to the other?</p>
+
+
+
+<a name="218248349"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Converting%20image%20URIs/near/218248349" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Converting.20image.20URIs.html#218248349">(Nov 30 2020 at 04:41)</a>:</h4>
+<p><code>backdrop_realpath()</code> provides the full path to the image on the server (e.g. <code>/var/www/...</code>)</p>
+
+
+
+<a name="218248405"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Converting%20image%20URIs/near/218248405" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Converting.20image.20URIs.html#218248405">(Nov 30 2020 at 04:42)</a>:</h4>
+<p><code>url()</code> with <code>absolute =&gt; TRUE</code> outputs this weirdness: <code>https://mydomain.com/public%3A//images/...</code></p>
+
+
+
+<a name="218248412"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Converting%20image%20URIs/near/218248412" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Converting.20image.20URIs.html#218248412">(Nov 30 2020 at 04:43)</a>:</h4>
+<p>I'm sure there must be a function for this, I just can't find it...</p>
+
+
+
+<a name="218248465"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Converting%20image%20URIs/near/218248465" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Converting.20image.20URIs.html#218248465">(Nov 30 2020 at 04:44)</a>:</h4>
+<p>Ah, found it: <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21file.inc/function/file_create_url/1">https://api.backdropcms.org/api/backdrop/core%21includes%21file.inc/function/file_create_url/1</a></p>
+
+
+
+<a name="218248635"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Converting%20image%20URIs/near/218248635" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Converting.20image.20URIs.html#218248635">(Nov 30 2020 at 04:48)</a>:</h4>
+<p>And this does the same if you need an image style: <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21image%21image.module/function/image_style_url/1">https://api.backdropcms.org/api/backdrop/core%21modules%21image%21image.module/function/image_style_url/1</a></p>
+
+
+
+<a name="218248647"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Converting%20image%20URIs/near/218248647" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Converting.20image.20URIs.html#218248647">(Nov 30 2020 at 04:48)</a>:</h4>
+<p>#notetoself <span aria-label="point up" class="emoji emoji-1f446" role="img" title="point up">:point_up:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

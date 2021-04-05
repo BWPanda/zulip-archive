@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Is it possible to disable/enable/uninstall a sub-module from a main module's disable/enable/uninstall functions? I'm trying to reduce friction for installing and unistalling Ubercart, which has a lot of submodules that require one-by-one enable/disable/unistall right now.</p>",
+        "id": 205140263,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595868220
+    },
+    {
+        "content": "<p>e.g. could I set the required Ubercart submodules to <code>hidden</code> and then just manage enabling/disabling/uninstalling them directly in the main <code>Ubercart</code> module?</p>",
+        "id": 205140483,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595868356
+    },
+    {
+        "content": "<p>Hmm..  <br>\n<a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21module.inc/function/module_enable/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21module.inc/function/module_enable/1</a></p>",
+        "id": 205140618,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595868420
+    },
+    {
+        "content": "<p>and <br>\n<a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21module.inc/function/module_disable/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21module.inc/function/module_disable/1</a></p>",
+        "id": 205140649,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595868440
+    },
+    {
+        "content": "<p>But no <code>module_uninstall</code> (which I suppose makes sense).</p>",
+        "id": 205140722,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595868476
+    },
+    {
+        "content": "<p>...also some existing related issues <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> </p>\n<ul>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/2648\">https://github.com/backdrop/backdrop-issues/issues/2648</a></li>\n<li><a href=\"https://github.com/backdrop/backdrop-issues/issues/2532\">https://github.com/backdrop/backdrop-issues/issues/2532</a></li>\n</ul>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2648\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2648\" title=\"Allow deleting modules/themes/layouts via the &quot;Uninstall&quot; function of Project Installer.  · Issue #2648 · backdrop/backdrop-issues\">Allow deleting modules/themes/layouts via the \"Uninstall\" function of Project Installer.  · Issue #2648 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">We made such a huge improvement when we added the Project Installer! Users now don&#39;t have to touch their sftp or webhost control panel in order to add modules, themes and/or layouts to their Dr...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2532\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2532\" title=\"[UX] Streamline the process of disabling and uninstalling modules (a.k.a. &quot;Uninstallation queue&quot;). · Issue #2532 · backdrop/backdrop-issues\">[UX] Streamline the process of disabling and uninstalling modules (a.k.a. \"Uninstallation queue\"). · Issue #2532 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Current process after one for example has enabled say devel and devel_generate: Go to /admin/modules Uncheck &quot;Devel Generate&quot; (&quot;Devel&quot; is locked) Hit &quot;Save configuration&amp;qu...</div></div></div>",
+        "id": 205143915,
+        "sender_full_name": "klonos",
+        "timestamp": 1595870079
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span></p>",
+        "id": 205145559,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595871058
+    },
+    {
+        "content": "<p>Just found <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21install.inc/function/backdrop_uninstall_modules/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21install.inc/function/backdrop_uninstall_modules/1</a></p>",
+        "id": 205148596,
+        "sender_full_name": "Laryn",
+        "timestamp": 1595872863
+    }
+]

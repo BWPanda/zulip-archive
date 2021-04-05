@@ -1,0 +1,49 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Wildcards.20in.20layout.20paths.3F.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Wildcards.20in.20layout.20paths.3F.html">Wildcards in layout paths?</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="227467091"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Wildcards%20in%20layout%20paths%3F/near/227467091" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Wildcards.20in.20layout.20paths.3F.html#227467091">(Feb 23 2021 at 17:12)</a>:</h4>
+<p>Has the topic of supporting wildcards in layout paths ever come up? Not % placeholders; true wildcards, so that, for example, a layout with path <code>foo*</code> would be used for both <code>/foospam</code> and <code>/fooeggs</code>. Particularly if implemented along with <a href="https://github.com/backdrop/backdrop-issues/issues/3749">issue 3749, Make layouts aware of path aliases</a>, this seems like it would be really useful. One could create a layout with path <code>*</code>, then  use visibility conditions in "Menu settings" to apply it to all sorts of diverse paths selectively.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3749" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3749" title="[UX] Make layouts aware of path aliases · Issue #3749 · backdrop/backdrop-issues">[UX] Make layouts aware of path aliases · Issue #3749 · backdrop/backdrop-issues</a></div><div class="message_embed_description">If you attempt to create a menu entry for a node at /about, you can enter about into the menu UI, and it knows that&#39;s an alias. The menu entry it saves is actually for the system path, at node/...</div></div></div>
+
+
+
+<a name="227469083"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Wildcards%20in%20layout%20paths%3F/near/227469083" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Wildcards.20in.20layout.20paths.3F.html#227469083">(Feb 23 2021 at 17:25)</a>:</h4>
+<p>This module worked for a time, but I think it's abandoned and needs some TLC to get it working again:<br>
+<a href="https://github.com/backdrop-contrib/layout_wildcard">https://github.com/backdrop-contrib/layout_wildcard</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/layout_wildcard" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/layout_wildcard" title="backdrop-contrib/layout_wildcard">backdrop-contrib/layout_wildcard</a></div><div class="message_embed_description">Contribute to backdrop-contrib/layout_wildcard development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="227471246"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Wildcards%20in%20layout%20paths%3F/near/227471246" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Wildcards.20in.20layout.20paths.3F.html#227471246">(Feb 23 2021 at 17:38)</a>:</h4>
+<p>I worked on that: <a href="https://github.com/backdrop/backdrop/pull/3134/">https://github.com/backdrop/backdrop/pull/3134/</a> but I hit a difficulty that I dont recall and put it down for a while. Something catch-22-ish that I couldnt get around; dont recall what it was. Also didnt really like the approach in that PR.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/pull/3134/" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/pull/3134/" title="Issue #1602: Layout path wildcards by docwilmot · Pull Request #3134 · backdrop/backdrop">Issue #1602: Layout path wildcards by docwilmot · Pull Request #3134 · backdrop/backdrop</a></div><div class="message_embed_description">Fixes backdrop/backdrop-issues#1602</div></div></div>
+
+
+
+<a name="227479149"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Wildcards%20in%20layout%20paths%3F/near/227479149" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Wildcards.20in.20layout.20paths.3F.html#227479149">(Feb 23 2021 at 18:26)</a>:</h4>
+<p>Maybe we should support both % and *? <a href="https://github.com/backdrop/backdrop-issues/issues/1602#issuecomment-784391569">Possible reasons to do so in a comment to Issue 1602.</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1602#issuecomment-784391569" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1602#issuecomment-784391569" title="[UX] Using * or % as a wildcard in layout paths does not have expected behavior · Issue #1602 · backdrop/backdrop-issues">[UX] Using * or % as a wildcard in layout paths does not have expected behavior · Issue #1602 · backdrop/backdrop-issues</a></div><div class="message_embed_description">bug report from email: I have result pages where I need the full page width for content. Created custom layout, one column, picked the url string (results/*) as a page identifier, saved. Cleared al...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

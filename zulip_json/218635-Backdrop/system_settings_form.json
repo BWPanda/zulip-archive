@@ -1,0 +1,146 @@
+[
+    {
+        "content": "<p>I'm in the process of converting a D7 module and need some more help please <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>\n<p>in the settings file, [mymodule].settings there is a setting for the node types available and once selected allows the module to interact with the said node type.  When the module has first been initialised the settings look like this:-</p>\n<div class=\"codehilite\"><pre><span></span><code>&quot;nodeownership_node_types&quot;: {\n    &quot;member_pages&quot;: 0,\n    &quot;page&quot;: 0,\n    &quot;post&quot;: 0,\n    &quot;webform&quot;: 0\n},\n</code></pre></div>\n\n\n<p>On the admin form, when an option is selected and when the form is saved via system_settings_form($form) the update looks like this...</p>\n<div class=\"codehilite\"><pre><span></span><code>&quot;nodeownership_node_types&quot;: {\n    &quot;member_pages&quot;: &quot;member_pages&quot;,\n    &quot;page&quot;: 0,\n    &quot;post&quot;: 0,\n    &quot;webform&quot;: 0\n},\n</code></pre></div>\n\n\n<p>Is should, of course, be a 1 being boolean.</p>\n<p>In system_settings_form_submit() it says </p>\n<p>\"If you want node type configure style handling of your checkboxes, add an array_filter value to your form.\"</p>\n<p>I've looked at array_filter and i'm not sure where to go from here... I've done various searches in the big G and looked at the PHP manual, and also \"how to use array_filter()\" etc... but not sure where to go from here.</p>\n<p>Has anyone else created a solution and if so, can you point me in the right direction, for example... \"Go look at xyz module which solves this problem\" <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>\n<p>Thanks in advance.</p>",
+        "id": 212221348,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601814745
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> Maybe it's easier if you provide a link to your code. You seem to expect a true/false result but get a string value instead, which makes me think that you have something else where you should have a checkbox form element. - Or you override the value somewhere...</p>",
+        "id": 212221960,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601815728
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> </p>\n<p>The code is a simple form....</p>\n<p>/**</p>\n<ul>\n<li>\n<p>Implementation of admin setting page.<br>\n *</p>\n</li>\n<li>\n<p>@return array $form</p>\n</li>\n<li>\n<p>array of form elements<br>\n */<br>\nfunction nodeownership_admin_settings($form, &amp;$form_state) {</p>\n<p>// Load settings<br>\n$config = config('nodeownership.settings');</p>\n<p>$form['#config'] = 'nodeownership.settings';</p>\n<p>$node_types = node_type_get_names();</p>\n<p>$form['nodeownership_node_types'] = array(<br>\n  '#type' =&gt; 'checkboxes',<br>\n  '#title' =&gt; t('Content types which can be claimed for ownership'),<br>\n  '#options' =&gt; $node_types,<br>\n  '#default_value' =&gt; $config-&gt;get('nodeownership_node_types'),<br>\n);</p>\n</li>\n</ul>\n<p>//  Other text fields removed.</p>\n<p>$form = system_settings_form($form);<br>\n  return $form;</p>",
+        "id": 212222191,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601816092
+    },
+    {
+        "content": "<p>Ah, OK, the options (<code>$node_types</code>) are constructed with node_type_get_names() - which returns strings...</p>",
+        "id": 212222336,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601816382
+    },
+    {
+        "content": "<p>You could use backdrop_map_assoc() for that. Here's an <a href=\"https://api.backdropcms.org/form_api#checkboxes\">example</a></p>",
+        "id": 212222397,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601816481
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222336\">said</a>:</p>\n<blockquote>\n<p>Ah, OK, the options (<code>$node_types</code>) are constructed with node_type_get_names() - which returns strings...</p>\n</blockquote>\n<p>Many thanks...  I assumed node_type_get_names() returned an array lol... Note to self, never assume <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span>  p.s.  this isn't my code so I assumed the original author did it right <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 212222571,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601816804
+    },
+    {
+        "content": "<p>Wait, maybe I'm wrong, I just realized, I read the wrong api page...</p>",
+        "id": 212222590,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601816866
+    },
+    {
+        "content": "<p>But still you get a string where you wanted to get a bool.</p>",
+        "id": 212222651,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601816974
+    },
+    {
+        "content": "<p>Try that: <code>$node_types = array_keys(node_type_get_names());</code> (untested)</p>",
+        "id": 212222990,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601817479
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222590\">said</a>:</p>\n<blockquote>\n<p>Wait, maybe I'm wrong, I just realized, I read the wrong api page...</p>\n</blockquote>\n<p>Lol, not to worry... it didn't work... and when printing the $node_type to the screen it is an array <span aria-label=\"frown\" class=\"emoji emoji-1f641\" role=\"img\" title=\"frown\">:frown:</span></p>\n<p>Array<br>\n(<br>\n    [member_pages] =&gt; Member Pages<br>\n    [page] =&gt; Page<br>\n    [post] =&gt; Post<br>\n    [webform] =&gt; Webform<br>\n)</p>\n<p>But, at least now I know why it's putting the text in the settings.</p>",
+        "id": 212223034,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601817508
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212222990\">said</a>:</p>\n<blockquote>\n<p>Try that: <code>$node_types = array_keys(node_type_get_names());</code> (untested)</p>\n</blockquote>\n<p>Nope, didn't work...</p>\n<p>(Talking to myself.....)<br>\nSo, if we just loaded the node_types from the settings, it would ignore any new node types added...  so, we need a way to compare the results from node_type_get_names() which should return an array of current node names... with the settings, then update the $node_types to reflect the settings from $config-&gt;get('nodeownership_node_types')</p>\n<p>So, I've taken the original code... which replaces the value with 0...</p>\n<p>Now how do I compare arrays <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 212223540,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601818374
+    },
+    {
+        "content": "<p>So, the checkboxes can't have a key value of 0, so I guess I'm looking too deep into it lol... and it seems to work so, hey ho. </p>\n<p>Thanks for your help <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span></p>",
+        "id": 212224148,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1601819341
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> I've used <code>array_filter</code> in a form before, just can't find example ATM. I believe you just need to add: <code>$form['array_filter'] = TRUE;</code> (that's from memory and unconfirmed).</p>",
+        "id": 212238653,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601840998
+    },
+    {
+        "content": "<p>This was the only example I found in core: <a href=\"https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/book/book.admin.inc#L69\">https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/book/book.admin.inc#L69</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/book/book.admin.inc#L69\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/book/book.admin.inc#L69\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 212239662,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601842637
+    },
+    {
+        "content": "<p>And here's where it's processed: <a href=\"https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/system/system.module#L4353\">https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/system/system.module#L4353</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/system/system.module#L4353\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/208eacc36d074ed3c3b47432989ef57b7540fd67/core/modules/system/system.module#L4353\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 212239668,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601842651
+    },
+    {
+        "content": "<p>Yep, thanks <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> I just found this too (see the comments): <a href=\"https://api.drupal.org/api/drupal/modules%21system%21system.module/function/system_settings_form/7.x\">https://api.drupal.org/api/drupal/modules%21system%21system.module/function/system_settings_form/7.x</a></p>",
+        "id": 212239851,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601842918
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> perhaps you'd be interested to chime in on this issue I filed a while ago: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2557\">https://github.com/backdrop/backdrop-issues/issues/2557</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2557\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2557\" title=\"[DX] Form API: checkboxes should be saving 1 or 0 instead of the #options key. · Issue #2557 · backdrop/backdrop-issues\">[DX] Form API: checkboxes should be saving 1 or 0 instead of the #options key. · Issue #2557 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">So with this for example: $form[&#39;radios&#39;] = array( &#39;#type&#39; =&gt; &#39;radios&#39;, &#39;#title&#39; =&gt; t(&#39;A set of options&#39;), &#39;#options&#39; =&gt; array( 1 =&gt; t(&amp;#...</div></div></div>",
+        "id": 212671928,
+        "sender_full_name": "klonos",
+        "timestamp": 1602153710
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/system_settings_form/near/212671928\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"302871\">Steve Moorhouse</span> perhaps you'd be interested to chime in on this issue I filed a while ago: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2557\">https://github.com/backdrop/backdrop-issues/issues/2557</a></p>\n</blockquote>\n<p>I did, five days ago :-)</p>",
+        "id": 213166875,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1602600785
+    },
+    {
+        "content": "<p>I've got a form with two submit handlers. It's using <code>system_settings_form</code> and a custom one. There's one form element that should not be saved to config. The issue is that <code>system_settings_form</code> is saving them all. According to <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_settings_form/1</a> you can add additional config files but there doesn't seem to be a way to ignore a form element entirely.</p>",
+        "id": 213823868,
+        "sender_full_name": "Herb",
+        "timestamp": 1603130936
+    },
+    {
+        "content": "<p>Plan B is to just take out <code>system_settings_form</code> entirely and handle it in my other submit handler. But just wondering if there's a more elegant way</p>",
+        "id": 213823947,
+        "sender_full_name": "Herb",
+        "timestamp": 1603130984
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I would try adding my own submit handler to run before the system one, which just removes the unneeded value from <code>$form_state['values']</code>. That should prevent it being saved to config.</p>",
+        "id": 213835509,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603136900
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/system_settings_form/near/213835509\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> I would try adding my own submit handler to run before the system one, which just removes the unneeded value from <code>$form_state['values']</code>. That should prevent it being saved to config.</p>\n</blockquote>\n<p>Ah yes. That would work. I was thinking about it backwards - trying to get the custom submit handler <em>after</em> the system one and then removing it from config after. Your idea is better. The custom submit has to run anyway.</p>",
+        "id": 213875182,
+        "sender_full_name": "Herb",
+        "timestamp": 1603169312
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I'm curious as to the use case of this form element that needs to NOT be saved (sounds similar to the \"special\" <a href=\"https://api.backdropcms.org/form_api#value\">https://api.backdropcms.org/form_api#value</a> form element) ...is it a calculated field or something?</p>",
+        "id": 214001858,
+        "sender_full_name": "klonos",
+        "timestamp": 1603246851
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> the custom_breadcrumbs module has a form element that's basically a table that's used to change the weight of some sub modules. There's probably a better way to structure the whole form but I didn't want to spend too much time on it. In the end I didn't use the module at all</p>",
+        "id": 214004840,
+        "sender_full_name": "Herb",
+        "timestamp": 1603250992
+    }
+]

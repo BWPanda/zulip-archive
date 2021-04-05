@@ -1,0 +1,194 @@
+[
+    {
+        "content": "<p>I have four blocks in a region in the order: 1, 2, 3, 4. I'd like to display them as such: <a href=\"/user_uploads/18319/lr2JdArJBpXoxia8yK3DB3nP/blocks.png\">blocks.png</a> but for the life of me I can't work out how...</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/lr2JdArJBpXoxia8yK3DB3nP/blocks.png\" title=\"blocks.png\"><img src=\"/user_uploads/18319/lr2JdArJBpXoxia8yK3DB3nP/blocks.png\"></a></div><p>CSS Flex doesn't seem to work as blocks 2 &amp; 4 don't display next to block 3, but rather below it. CSS Grid also doesn't seem to work as I have to add each block into its own row/column and it seems hard to calculate. Float might work, but that seems a bit hacky, as does CSS Columns... Any suggestions?</p>",
+        "id": 209500144,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599652047
+    },
+    {
+        "content": "<p>I suspect Flex or Grid will work, I'm just doing something wrong.</p>",
+        "id": 209500327,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599652196
+    },
+    {
+        "content": "<p>The obvious solution (which I'm assuming that you have already thought of, but are not explicitly mentioning) would be to place blocks 1, 2, and 4 in a container div, and then render that div next to that of block 3. ...in other words, why not create a separate region for blocks 1, 2, and 4?</p>",
+        "id": 209500476,
+        "sender_full_name": "klonos",
+        "timestamp": 1599652291
+    },
+    {
+        "content": "<p>Yeah, I don't want to go changing layout templates, etc. in order to add extra markup.</p>",
+        "id": 209500568,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599652337
+    },
+    {
+        "content": "<p>Right <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 209500571,
+        "sender_full_name": "klonos",
+        "timestamp": 1599652340
+    },
+    {
+        "content": "<p>The person I'd usually ask things like these was <span class=\"user-mention\" data-user-id=\"276592\">@wesruv</span> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 209500659,
+        "sender_full_name": "klonos",
+        "timestamp": 1599652413
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I'm assuming that you've also considered <code>float</code>ing those blocks.</p>",
+        "id": 209500754,
+        "sender_full_name": "klonos",
+        "timestamp": 1599652464
+    },
+    {
+        "content": "<p>Yes, I mentioned above that float might work but I think it's hacky. I'd have to float block 3 to the right, the add a right-margin to the other blocks to stop them overflowing into the second column.</p>",
+        "id": 209500849,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599652553
+    },
+    {
+        "content": "<p>Right. Sorry, I missed that.</p>",
+        "id": 209500898,
+        "sender_full_name": "klonos",
+        "timestamp": 1599652568
+    },
+    {
+        "content": "<p>Just tried using a float, but then I'd have to change the source order...</p>",
+        "id": 209501856,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599653225
+    },
+    {
+        "content": "<p>And if I use <code>position: absolute;</code> for block 3 it overflows the container.</p>",
+        "id": 209501993,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599653307
+    },
+    {
+        "content": "<p>We have our own frontend guru at Salsa. I'll ask him for ideas, but it'll have to wait till tomorrow.</p>",
+        "id": 209502263,
+        "sender_full_name": "klonos",
+        "timestamp": 1599653520
+    },
+    {
+        "content": "<p>No worries, I'm off to bed now anyway :-) Thanks!</p>",
+        "id": 209502324,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599653543
+    },
+    {
+        "content": "<p>Sure <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ...sleep tight <span aria-label=\"zzz\" class=\"emoji emoji-1f4a4\" role=\"img\" title=\"zzz\">:zzz:</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span></p>",
+        "id": 209502345,
+        "sender_full_name": "klonos",
+        "timestamp": 1599653565
+    },
+    {
+        "content": "<p>... and later on (tomorrow): good morning <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> !</p>\n<p>Definitely grid. (The css selectors are just placeholders)</p>\n<div class=\"codehilite\"><pre><span></span><code>.parentdiv {\ndisplay: grid;\ngrid-template-columns: [left] 50% [right] 50%;\n}\n\n.parentdiv &gt; div {\ngrid-column: left;\n}\n\n.parentdiv .thirdblock {\ngrid-column: right;\ngrid-row-start: 1;\ngrid-row-end: 4;\n}\n</code></pre></div>\n\n\n<p>Yes, it's possible to name areas using brackets like <code>[left]</code>, I'm not sure how good the browser support is, though.</p>",
+        "id": 209506617,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599656375
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span>, that does what I need! Unfortunately I have a bug (which I think is what made me think CSS Grid wasn't working in the first place) wherein Block 1 is a views slideshow, and that row is really tall, as in, you need to scroll down a long way to see Block 2 below it. I suspect this has something to do with the slideshow (maybe the height of the row is based on all the stacked images before they're collapsed into a slideshow...)</p>",
+        "id": 209580316,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599693502
+    },
+    {
+        "content": "<p>Yep, if I hide or replace that particular slideshow block, all the others display as expected.</p>",
+        "id": 209580437,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599693593
+    },
+    {
+        "content": "<p>Ok, fixed. Adding <code>align-items: start;</code> did the trick.</p>",
+        "id": 209582078,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599694914
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> ++</p>",
+        "id": 210576439,
+        "sender_full_name": "wesruv",
+        "timestamp": 1600463858
+    },
+    {
+        "content": "<p><strong>indigoxela</strong> leveled up! (Karma: 8)</p>",
+        "id": 210576441,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1600463858
+    },
+    {
+        "content": "<p>I wasn't aware of that <code>grid-template-columns</code> syntax with the brackets! That's interesting, I would have done essentially the same thing, but I didn't know about brackets <span aria-label=\"joy\" class=\"emoji emoji-1f602\" role=\"img\" title=\"joy\">:joy:</span></p>",
+        "id": 210576617,
+        "sender_full_name": "wesruv",
+        "timestamp": 1600463922
+    },
+    {
+        "content": "<p>Ok, now I'm back to this again because I just added another block (call it '2.5') which sits above block 3 in the right column. And using my current grid layout means that block 3 doesn't sit right below it, but rather sits in line with block 2 further down the page (since block 1 is quite tall compared to block 2.5...</p>",
+        "id": 211705867,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601429470
+    },
+    {
+        "content": "<p>Maybe better if I share an actual screenshot: <a href=\"/user_uploads/18319/xlbE1RMjB0rFE7wBVJH23__5/image.png\">image.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/xlbE1RMjB0rFE7wBVJH23__5/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/xlbE1RMjB0rFE7wBVJH23__5/image.png\"></a></div><p>These blocks are all in one region (main) on the page, in the following order (which I'd prefer to keep for when they're displayed on mobile):</p>\n<ol>\n<li>Slideshow</li>\n<li>About</li>\n<li>News</li>\n<li>Search</li>\n<li>Facebook</li>\n</ol>",
+        "id": 211705950,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601429600
+    },
+    {
+        "content": "<p>This is pretty much how I want it already, I'd just like the News block to sit right up under the Search block...</p>",
+        "id": 211706008,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601429652
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Block.20layout/near/211705867\">said</a>:</p>\n<blockquote>\n<p>Ok, now I'm back to this again because I just added another block (call it '2.5') which sits above block 3 in the right column. And using my current grid layout means that block 3 doesn't sit right below it, but rather sits in line with block 2 further down the page (since block 1 is quite tall compared to block 2.5...</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> , did you check the z-index?  You could use that to overlay blocks or regions and make sure search stays on top.</p>",
+        "id": 211707565,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601431446
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> When I say 'on top' or 'above' I'm thinking in 2D and therefore referring to the y-axis, not the z-axis.</p>",
+        "id": 211707775,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601431700
+    },
+    {
+        "content": "<p>This could have been easily solved with a 2-column layout <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...but I understand that blocks need to wrap differently on mobile, so understand why you have them in one single region. ...would be great if we had layout variations based on breakpoints.</p>",
+        "id": 211708663,
+        "sender_full_name": "klonos",
+        "timestamp": 1601433004
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> doesn't adapting <code>grid-row-start</code> and <code>grid-row-end</code> fix it for you?</p>",
+        "id": 211724262,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601450994
+    },
+    {
+        "content": "<p>The first row is as tall as the slideshow block, so you can't have two blocks in the same grid cell (search block is already there). What I might try is playing around with making the slideshow block span multiple rows...</p>",
+        "id": 211728926,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601454453
+    },
+    {
+        "content": "<p>Ah, now I get it. You might need a more complex grid. Spanning the slideshow over two rows might work, too.</p>",
+        "id": 211729639,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601454947
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Block.20layout/near/211708663\">said</a>:</p>\n<blockquote>\n<p>This could have been easily solved with a 2-column layout <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...but I understand that blocks need to wrap differently on mobile, so understand why you have them in one single region. ...would be great if we had layout variations based on breakpoints.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , That's actually pretty easy to do in CSS using viewport and @media.   I think I have 2 or 4 depending on how complex the site is.   If you wanted to create a custom theme that did so, you could, if you were concerned about how other people would use it.  I think there are a couple of Drupal themes that do that already, like Mix and Match, which is a sub theme of Adaptive.  Or you could port Adaptive?  Lots of ways to do it, and people will still have to customize :-).</p>",
+        "id": 211780413,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601480857
+    },
+    {
+        "content": "<p>Got it working by telling certain blocks to span multiple rows: <a href=\"/user_uploads/18319/bMP8WuCIXad61Un8f-qvZBj-/image.png\">image.png</a> <br>\nThanks all!</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/bMP8WuCIXad61Un8f-qvZBj-/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/bMP8WuCIXad61Un8f-qvZBj-/image.png\"></a></div>",
+        "id": 212002051,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601610695
+    }
+]

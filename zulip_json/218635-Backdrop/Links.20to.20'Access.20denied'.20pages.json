@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Does anyone know how Backdrop typically handles links to pages that might result in an 'Access denied' error if the current user doesn't have the right permission? Should the link be hidden? Should the text remain, but no be linked? Or should the link remain and the error just informs people that they need more permissions?</p>\n<p>See <a href=\"https://github.com/backdrop/backdrop-issues/issues/4663#issuecomment-709845093\">https://github.com/backdrop/backdrop-issues/issues/4663#issuecomment-709845093</a> for specific details.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4663#issuecomment-709845093\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4663#issuecomment-709845093\" title=\"Add setting to menu block for changing breakpoint · Issue #4663 · backdrop/backdrop-issues\">Add setting to menu block for changing breakpoint · Issue #4663 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need When you tick &#39;Display menu toggle button on small screens&#39; in a menu block, it changes the menu to a menu toggle button on small screens. What seems to determine th...</div></div></div>",
+        "id": 213537859,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602840729
+    },
+    {
+        "content": "<p>Check the \"update core via the UI\" functionality. I don't recall but know that what displays is different depending on permissions. I can try to find it when I'm back by my computer if you haven't find it yet.</p>",
+        "id": 213548701,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602848655
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Not completely the same, but something similar seems to have been discussed when adding the dashboard welcome block. Apparently the conclusion has been to <a href=\"https://github.com/backdrop/backdrop/blob/14dfd0edd4482184abc68a60ee7dfa87b95e8002/core/modules/dashboard/includes/block.welcome.inc#L156\">filter inaccessible links out</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/14dfd0edd4482184abc68a60ee7dfa87b95e8002/core/modules/dashboard/includes/block.welcome.inc#L156\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/14dfd0edd4482184abc68a60ee7dfa87b95e8002/core/modules/dashboard/includes/block.welcome.inc#L156\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 213566349,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602858147
+    },
+    {
+        "content": "<p>Following up on my earlier comment... I must have been mis-remembering. I thought we had different text displaying here when core updates were disabled and a user did or did not have permission to change that setting, but I don't see it right now:<br>\n<a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/installer/installer.manager.inc#L273-L283\">https://github.com/backdrop/backdrop/blob/1.x/core/modules/installer/installer.manager.inc#L273-L283</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/installer/installer.manager.inc#L273-L283\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/installer/installer.manager.inc#L273-L283\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 213602335,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602875641
+    },
+    {
+        "content": "<p>Ah. This is what I was thinking of -- it's in PR form only. <a href=\"https://github.com/backdrop/backdrop-issues/issues/3549\">https://github.com/backdrop/backdrop-issues/issues/3549</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3549\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3549\" title=\"[UX] Core updates: link to configuration page when disabled · Issue #3549 · backdrop/backdrop-issues\">[UX] Core updates: link to configuration page when disabled · Issue #3549 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Turning on the ability to update core via the UI is a bit buried. If you make it to the Updates page (and manual updates are turned off) you see this: Proposed solution I th...</div></div></div>",
+        "id": 213602523,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602875736
+    }
+]

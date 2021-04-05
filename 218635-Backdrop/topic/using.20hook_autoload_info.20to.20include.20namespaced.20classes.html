@@ -1,0 +1,46 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/using.20hook_autoload_info.20to.20include.20namespaced.20classes.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/using.20hook_autoload_info.20to.20include.20namespaced.20classes.html">using hook_autoload_info to include namespaced classes</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="206308709"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/using%20hook_autoload_info%20to%20include%20namespaced%20classes/near/206308709" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/using.20hook_autoload_info.20to.20include.20namespaced.20classes.html#206308709">(Aug 07 2020 at 20:59)</a>:</h4>
+<p>I'm having trouble including classes that are namespaced when using hook_autoload_info(). If I try to use the namespaced version <code>/namespace/class</code> then it doesn't work. If I try the un-namespaced class <code>classname</code> it'll only work if I comment out the namespace in the class file (which I don't want to do). Anyone else know how to do this properly?</p>
+
+
+
+<a name="206314001"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/using%20hook_autoload_info%20to%20include%20namespaced%20classes/near/206314001" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/using.20hook_autoload_info.20to.20include.20namespaced.20classes.html#206314001">(Aug 07 2020 at 21:57)</a>:</h4>
+<p>do you need to escape the slashes in the namespaced class? did you try that already?</p>
+
+
+
+<a name="206319350"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/using%20hook_autoload_info%20to%20include%20namespaced%20classes/near/206319350" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/using.20hook_autoload_info.20to.20include.20namespaced.20classes.html#206319350">(Aug 07 2020 at 23:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="263951">@jenlampton</span> good idea I haven't tried that yet</p>
+
+
+
+<a name="206364445"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/using%20hook_autoload_info%20to%20include%20namespaced%20classes/near/206364445" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/using.20hook_autoload_info.20to.20include.20namespaced.20classes.html#206364445">(Aug 08 2020 at 21:19)</a>:</h4>
+<p>I found a combo that works.</p>
+<p>So in <code>hook_autoload_info()</code> the namespace should be there like: <code>'MyNamespace\Myclass' =&gt; 'libraries/mylibrary/src/myclass.php',</code> and then refer to the class like <code>$myinstance = new \MyNamespace\Myclass();</code></p>
+<p>I tried a few different combos including just referencing the class without namespace. I think in the end it was a mistake with the case of the namespace.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

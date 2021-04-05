@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>I realized, that I don't get any forum notification mails anymore... The sending server is currently on 5 blacklists. Commonly used ones, BTW, so probably hardly anyone gets these mails.</p>\n<p>Blacklisted in:</p>\n<ul>\n<li>BLOCKLIST.DE</li>\n<li>IBM DNS Blacklist</li>\n<li>RATS Spam (!)</li>\n<li>SORBS SPAM</li>\n<li>Spamhaus ZEN (!)</li>\n</ul>\n<p>Servers that are on the Spamhaus dnsbl are extremely unlikely to get anywhere - that a widely used blacklist. Is there any chance to get rid of sendgrid? They're on dnsbl regularly.</p>",
+        "id": 225126919,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1612423771
+    },
+    {
+        "content": "<p>I get Forum emails fine. I use FastMail...</p>",
+        "id": 225209548,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1612466849
+    },
+    {
+        "content": "<p>The subdomains ideally need to be converted to cnames to encompass the DMARC policy unless forums truly is on a different IP, of which a dedicated dmarc policy will be needed, which might help.</p>",
+        "id": 225213583,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1612468590
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> can you look at the headers and see if spf, DKIM and DMARC are pass or fail on the forum emails?</p>",
+        "id": 225213752,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1612468665
+    },
+    {
+        "content": "<p>Finally registered for <a href=\"http://forum.backdropcms.org\">forum.backdropcms.org</a>. SPF, DKIM and DMARC all look good, so no worries there. Definitely an issue with blacklisted IPs :-(</p>",
+        "id": 225216206,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1612469712
+    },
+    {
+        "content": "<p>The IP it was sent from is: 149.72.91.245 and checking that IP on <a href=\"http://blocklist.de\">blocklist.de</a> passed. RATS spam passes everything except the \"Spam\" category.</p>\n<p>Sendgrid \"should\" be sending out email on a variety of IP's, so are all of them really getting blocked?</p>\n<p>Update: Some interesting info: <a href=\"https://sendgrid.com/docs/ui/sending-email/deny-lists/\">https://sendgrid.com/docs/ui/sending-email/deny-lists/</a></p>\n<p>Looks like a dedicated IP or moving to a different email service would be some options. I've mentioned using Googles Workspace for Non-Profit for the internal backdrop email which would also allow it to be used as an SMTP relay. It's not my decision, so all I can do is recommend. I don't know what costs are involved with sendgrid, but the free Google Workspace for Non-Profit might reduce some costs in the short term until more advanced features are needed.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://sendgrid.com/docs/ui/sending-email/deny-lists/\" style=\"background-image: url(https://sendgrid.com/brand/sg-twilio/SG_Twilio_Lockup_Social.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://sendgrid.com/docs/ui/sending-email/deny-lists/\" title=\"What do I do if I'm added to a deny list?\">What do I do if I'm added to a deny list?</a></div><div class=\"message_embed_description\">What do I do if I'm added to a deny list?</div></div></div>",
+        "id": 225217518,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1612470332
+    }
+]

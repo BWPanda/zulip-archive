@@ -1,0 +1,50 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/hook_update_N.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_update_N.html">hook_update_N</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="218593105"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_update_N/near/218593105" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_update_N.html#218593105">(Dec 02 2020 at 17:46)</a>:</h4>
+<p>I'm having trouble getting a <code>hook_update_N</code> to fire for upgrades in a module and I am not sure why. The module's schema version is <code>7002</code> so that should trigger it. I tried <code>hook_update_1000</code> and then when that didn't fire I tried <code>hook_update_1100</code>.</p>
+
+
+
+<a name="218593250"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_update_N/near/218593250" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_update_N.html#218593250">(Dec 02 2020 at 17:47)</a>:</h4>
+<p>One thing to note is that the upgrade process was completed before this module was ported and I'm trying to do this after the fact -- is that a bad idea? It seems the database update should still be flagged in this case, but maybe I'm wrong.</p>
+
+
+
+<a name="218594806"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_update_N/near/218594806" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_update_N.html#218594806">(Dec 02 2020 at 17:58)</a>:</h4>
+<p>If I manually set the schema to a lower number it does trigger the update. I think this is coming back to me now... Ideally needs to happen during the upgrade process, otherwise requires some special sauce.</p>
+
+
+
+<a name="218636677"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_update_N/near/218636677" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_update_N.html#218636677">(Dec 02 2020 at 23:47)</a>:</h4>
+<p>Do you have the last update hook defined?</p>
+
+
+
+<a name="218636799"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_update_N/near/218636799" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_update_N.html#218636799">(Dec 02 2020 at 23:48)</a>:</h4>
+<p><a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_last_removed/1">https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.api.php/function/hook_update_last_removed/1</a></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

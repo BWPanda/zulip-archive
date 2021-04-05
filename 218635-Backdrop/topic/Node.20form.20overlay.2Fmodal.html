@@ -1,0 +1,130 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html">Node form overlay/modal</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="215215371"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215215371" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215215371">(Oct 31 2020 at 22:45)</a>:</h4>
+<p>Anyone know a quick and easy way to display a node form (or any page really) in an overlay/modal?</p>
+
+
+
+<a name="215215574"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215215574" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215215574">(Oct 31 2020 at 22:51)</a>:</h4>
+<p>If you find out, I'd like to know. <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="215248003"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215248003" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215248003">(Nov 01 2020 at 15:06)</a>:</h4>
+<p>I'm interested as well, to link to an edit form from a contextual link in my case. Planning to deconstruct how the block system does it at some point.</p>
+
+
+
+<a name="215256717"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215256717" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215256717">(Nov 01 2020 at 18:50)</a>:</h4>
+<p>Or (God forbid) port the Overlay module to Backdrop?</p>
+
+
+
+<a name="215258246"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215258246" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215258246">(Nov 01 2020 at 19:29)</a>:</h4>
+<p>Don't think we need Overlay. I noticed that Views does it, and as <span class="user-mention" data-user-id="256573">@Laryn</span> said, Layouts/blocks does it... Just need to work out how and see if we can replicate at will.</p>
+
+
+
+<a name="215258801"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215258801" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215258801">(Nov 01 2020 at 19:42)</a>:</h4>
+<p>I'm thinking about using Featherlight, since one of my requirements is that users can close the modal by just clicking off it. But I'll play around and report back when I get a chance.</p>
+
+
+
+<a name="215267564"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215267564" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215267564">(Nov 01 2020 at 23:15)</a>:</h4>
+<p>Ok, so <a href="https://github.com/backdrop-contrib/featherlight">Featherlight</a> works:</p>
+<div class="codehilite" data-code-language="HTML"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">data-featherlight</span><span class="o">=</span><span class="s">"node/add/page #page-node-form"</span><span class="p">&gt;</span>Add page<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>The <code>#page-node-form</code> part after the URL is a selector that tells Featherlight which part of the page to display; in this case just the form (rather than the whole page (header, menu, footer, etc.)). While that looks much better, it unfortunately has the apparent effect of not loading the JS needed for certain form items (such as the vertical tabs). Looking into a fix for that now...</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/featherlight" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/featherlight" title="backdrop-contrib/featherlight">backdrop-contrib/featherlight</a></div><div class="message_embed_description">A very lightweight jQuery lightbox plugin. Contribute to backdrop-contrib/featherlight development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="215269453"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215269453" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215269453">(Nov 02 2020 at 00:07)</a>:</h4>
+<p>Core dialog wouldnt work here?</p>
+
+
+
+<a name="215269624"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215269624" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215269624">(Nov 02 2020 at 00:12)</a>:</h4>
+<p>Twas a joke re Overlay module <span class="user-mention" data-user-id="256607">@BWPanda</span> <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span> ...I was about to mention <a href="https://api.backdropcms.org/change-records/dialog-api">https://api.backdropcms.org/change-records/dialog-api</a> too.</p>
+
+
+
+<a name="215269776"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215269776" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215269776">(Nov 02 2020 at 00:17)</a>:</h4>
+<p>Well that seems simpler! Didn't know about that. Thanks guys <span aria-label="smiling face" class="emoji emoji-263a" role="img" title="smiling face">:smiling_face:</span></p>
+
+
+
+<a name="215272506"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215272506" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215272506">(Nov 02 2020 at 01:33)</a>:</h4>
+<p>It seems that certain options are hard-coded and I can't change them using <code>data-dialog-options=""</code> (e.g. <code>modal</code>)</p>
+
+
+
+<a name="215272713"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215272713" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215272713">(Nov 02 2020 at 01:38)</a>:</h4>
+<p>Giving up for now. I had trouble getting the width and height to be percentages - it seems you can only specify 'auto' or a pixel value... And if I try to style it with CSS, then it stuffs up the automatic styling.</p>
+
+
+
+<a name="215367760"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215367760" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215367760">(Nov 02 2020 at 19:36)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> Thank you! I have spent so much time trying to figure out how the modals worked and I never found that. That was one of the last things that I needed to fix for a full port of the Display Suite module.</p>
+
+
+
+<a name="215421673"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/215421673" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#215421673">(Nov 03 2020 at 08:00)</a>:</h4>
+<blockquote>
+<p>I have spent so much time trying to figure out how the modals worked and I never found that...</p>
+</blockquote>
+<p>Same here. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> Bookmarked.</p>
+
+
+
+<a name="217749567"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/217749567" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#217749567">(Nov 24 2020 at 12:59)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> Is <a href="https://github.com/backdrop-contrib/ds">https://github.com/backdrop-contrib/ds</a> the current state of the Display Suite port, or do you have another version somewhere else?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/ds" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/ds" title="backdrop-contrib/ds">backdrop-contrib/ds</a></div><div class="message_embed_description">Contribute to backdrop-contrib/ds development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="217789204"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/217789204" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#217789204">(Nov 24 2020 at 17:47)</a>:</h4>
+<p>That is the most recent copy of my work. Most of the features, such as applying layouts to display modes and entity forms, should be working. I think that there were only a couple things, like the custom fields, that I had not finished testing, but I believe the conversion to config is done for those.</p>
+
+
+
+<a name="217790375"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Node%20form%20overlay/modal/near/217790375" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Node.20form.20overlay.2Fmodal.html#217790375">(Nov 24 2020 at 17:56)</a>:</h4>
+<p>I have not made a release for it yet because I have not made the upgrade path for it.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

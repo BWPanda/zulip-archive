@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Hi, I'm very confused with what permissions should the site folders have in order to be able to install and update modules through the web interface.<br>\n<span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>  yesterday posted a script for file permissions but these permissions actually don't allow installations/updates through the web interface.</p>\n<p>Attempt to install a theme ends with <br>\n\"Error: File Transfer failed, reason: Cannot create directory /var/www/backdrop/themes/bootstrap_lite.\"</p>\n<p>Attempt to update a module requests FTP access.</p>\n<p>So I'm really confused. I remember installing new modules without FTP, so why update requires FTP and can't do it directly. Also, what file permissions should exist in order to allow installation and updates. Probably we should create a script for fixing permissions and include the correct permissions for installation/updates. Also, we should be careful to not compromise the safety of the system, for which as far as I understand the existing fix-permission scripts for Drupal are strict and we need now to relax a bit in order to make updates work.</p>\n<p>Finally, I would be glad to see all these explained in documentation. The following links didn't help me <br>\n<a href=\"https://backdropcms.org/upgrade\">https://backdropcms.org/upgrade</a><br>\n<a href=\"https://backdropcms.org/user-guide/modules\">https://backdropcms.org/user-guide/modules</a></p>",
+        "id": 231819151,
+        "sender_full_name": "cptX",
+        "timestamp": 1616685154
+    },
+    {
+        "content": "<p>Have you seen:<br>\n<a href=\"https://forum.backdropcms.org/forum/issue-permissions\">https://forum.backdropcms.org/forum/issue-permissions</a></p>",
+        "id": 231826808,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616687561
+    },
+    {
+        "content": "<p><a href=\"https://backdropcms.org/file-permissions-and-ownership\">https://backdropcms.org/file-permissions-and-ownership</a></p>",
+        "id": 231826969,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616687625
+    },
+    {
+        "content": "<p>This looks promising <a href=\"https://backdropcms.org/file-permissions-and-ownership\">https://backdropcms.org/file-permissions-and-ownership</a> <br>\nAfter studying it I still have some questions:</p>\n<ol>\n<li>How dangerous is to have looser permissions. I mean in real case examples in a dedicated linux server with nginx for example...</li>\n<li>At the moment in my server and test environment I have the following ownership myron:www-data. The example at the link above says I should have myron:myron in all and in \"files\" www-data:www-data which to me doesn't make sense as I have a dedicated VPS. I think the documentation should include the configuration scheme for looser settings in dedicated server too, except if you don't consider a good way to manage the updates from the webinterface if you have root access</li>\n<li>Applied the looser settings described in the link and still the update requires FTP, so my question remains why installation doesn't require FTP and update requires???</li>\n</ol>",
+        "id": 231829098,
+        "sender_full_name": "cptX",
+        "timestamp": 1616688330
+    },
+    {
+        "content": "<p>Anybody to shed some light?</p>",
+        "id": 232011316,
+        "sender_full_name": "cptX",
+        "timestamp": 1616783039
+    },
+    {
+        "content": "<p>1) looser permissions are only dangerous if you get hacked when using a dedicated hosting environment. Personally, I don't recommend loosening permissions, but rather figure out why the correct permissions aren't working.</p>\n<p>2) the user:group on your server is usually setup that way on account of how your systems webserver wants to handle permissions. The www-data group is usually for the webserver so it has permission to read/write to the hosting directory. Other server configurations will lock down the group to the user, then add the webserver into each users group. (I believe that's how it works... I'm not a Linux sysadmin)</p>\n<p>3) I can't say why the update isn't working and calling for FTP. I ran into this years ago on a Drupal install using <a href=\"http://simplytest.me\">simplytest.me</a> and a 3rd party hosting environment for a client. After that, I quit using the GUI for updates because if there are too many inconsistencies where some hosting environments will allow it and others won't, it's not worth my time to figure it out, so I went the manual route until I discovered drush for command line.</p>\n<hr>\n<p>Keep in mind, Backdrop is still Drupal under the hood. When running into problems like these, you can always do a search and replace Backdrop with Drupal.</p>\n<p>Might try this: <a href=\"https://www.drupal.org/forum/support/post-installation/2011-01-22/module-installation-requires-ftp-access#comment-4690116\">https://www.drupal.org/forum/support/post-installation/2011-01-22/module-installation-requires-ftp-access#comment-4690116</a></p>",
+        "id": 232014884,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1616784781
+    },
+    {
+        "content": "<p>As far as I know Drupal doesn't allow web installation and updates, so I think this is something specific to Backdrop. Am I wrong? Also as I see, there is no other option for update except FTP in my system. Is this by design or happened to my system because of problematic file permissions?</p>",
+        "id": 232015381,
+        "sender_full_name": "cptX",
+        "timestamp": 1616785041
+    },
+    {
+        "content": "<p>Is this helpful?<br>\n<a href=\"https://forum.backdropcms.org/forum/update-core-and-theme-web-interface\">https://forum.backdropcms.org/forum/update-core-and-theme-web-interface</a></p>",
+        "id": 232020379,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616787308
+    },
+    {
+        "content": "<p>(Sorry, I don't have an answer for you)</p>",
+        "id": 232020391,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1616787319
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> yes, Drupal allows gui installs of modules/themes and updates.</p>",
+        "id": 232020737,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1616787504
+    },
+    {
+        "content": "<p>Well you are right. Never did an update in Drupal 9 and in installation ok you can provide the URL to download, not having a list like in Backdrop, so let's say that yes installations and updates are possible through the web interface</p>",
+        "id": 232021786,
+        "sender_full_name": "cptX",
+        "timestamp": 1616788020
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/Confused.20with.20permissions.20and.20updates/near/232020379\">said</a>:</p>\n<blockquote>\n<p>Is this helpful?<br>\n<a href=\"https://forum.backdropcms.org/forum/update-core-and-theme-web-interface\">https://forum.backdropcms.org/forum/update-core-and-theme-web-interface</a></p>\n</blockquote>\n<p>Yes this is exactly the issue I'm having, although that thread doesn't describe the solution. I sent a message and waiting now for a reply</p>",
+        "id": 232022009,
+        "sender_full_name": "cptX",
+        "timestamp": 1616788086
+    }
+]

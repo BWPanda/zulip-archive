@@ -1,0 +1,55 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Bug.20in.20Search.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Bug.20in.20Search.html">Bug in Search</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="189651317"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Bug%20in%20Search/near/189651317" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Bug.20in.20Search.html#189651317">(Mar 04 2020 at 01:00)</a>:</h4>
+<p>Could someone please try this: <a href="https://www.drupal4u.org/howtos/how-display-search-results-views" target="_blank" title="https://www.drupal4u.org/howtos/how-display-search-results-views">https://www.drupal4u.org/howtos/how-display-search-results-views</a></p>
+
+
+
+<a name="189651344"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Bug%20in%20Search/near/189651344" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Bug.20in.20Search.html#189651344">(Mar 04 2020 at 01:01)</a>:</h4>
+<p>I get an error after the search runs with <code>Fatal error: Class 'viewsSearchQuery' not found in C:\wamp64\www\cpr\core\includes\database\select.inc on line 1254</code></p>
+
+
+
+<a name="189651496"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Bug%20in%20Search/near/189651496" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Bug.20in.20Search.html#189651496">(Mar 04 2020 at 01:04)</a>:</h4>
+<p><code>viewsSearchQuery</code> is a valid class name in Search module, declared in <code>hook_autoload_info()</code>, no reason it should be not found. Cant figure it.</p>
+
+
+
+<a name="189652713"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Bug%20in%20Search/near/189652713" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Bug.20in.20Search.html#189652713">(Mar 04 2020 at 01:30)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256757">docwilmot</span> <a href="#narrow/stream/218635-General/topic/Bug.20in.20Search/near/189651496" title="#narrow/stream/218635-General/topic/Bug.20in.20Search/near/189651496">said</a>:</p>
+<blockquote>
+<p><code>viewsSearchQuery</code> is ... declared in <code>hook_autoload_info()</code></p>
+</blockquote>
+<p>No it is not. Its a bug.</p>
+
+
+
+<a name="189653410"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Bug%20in%20Search/near/189653410" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Bug.20in.20Search.html#189653410">(Mar 04 2020 at 01:46)</a>:</h4>
+<p>PR up, quick one for an enterprising core committer. <a href="https://github.com/backdrop/backdrop/pull/3089" target="_blank" title="https://github.com/backdrop/backdrop/pull/3089">https://github.com/backdrop/backdrop/pull/3089</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/pull/3089" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/pull/3089" target="_blank" title="Issue #4328: viewsSearchQuery class missing by docwilmot · Pull Request #3089 · backdrop/backdrop">Issue #4328: viewsSearchQuery class missing by docwilmot · Pull Request #3089 · backdrop/backdrop</a></div><div class="message_embed_description">Fixes backdrop/backdrop-issues#4328</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

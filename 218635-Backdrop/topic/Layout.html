@@ -1,0 +1,98 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Layout.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html">Layout</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="230019013"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230019013" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230019013">(Mar 12 2021 at 12:14)</a>:</h4>
+<p>I am having a little trouble getting a layout to apply to a view.<br>
+What should the layout path be for a view?</p>
+
+
+
+<a name="230019038"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230019038" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230019038">(Mar 12 2021 at 12:14)</a>:</h4>
+<p><a href="http://websitename.com/view/%">websitename.com/view/%</a> ?</p>
+
+
+
+<a name="230019049"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230019049" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230019049">(Mar 12 2021 at 12:14)</a>:</h4>
+<p>I cannot use <a href="http://websitename.com/node/%">websitename.com/node/%</a></p>
+
+
+
+<a name="230019149"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230019149" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Eric Vander Wal <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230019149">(Mar 12 2021 at 12:15)</a>:</h4>
+<p>The visibility condition should be the views path.<br>
+Eg /about-views</p>
+
+
+
+<a name="230038135"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230038135" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230038135">(Mar 12 2021 at 14:33)</a>:</h4>
+<p>The layout path should be the same path that you created for the particular display(s) for the View.</p>
+
+
+
+<a name="230038257"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230038257" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230038257">(Mar 12 2021 at 14:34)</a>:</h4>
+<p>BTW, there's a session at Backdrop LIVE devoted to Layouts that will be starting in about 25 minutes. That would be a great place to ask this question!</p>
+
+
+
+<a name="230038318"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230038318" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230038318">(Mar 12 2021 at 14:34)</a>:</h4>
+<p><a href="https://events.backdropcms.org/sessions/working-with-layouts">https://events.backdropcms.org/sessions/working-with-layouts</a></p>
+
+
+
+<a name="230065792"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230065792" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230065792">(Mar 12 2021 at 17:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="311204">@Eric Vander Wal</span> I'm not one to give a definite answer, but I would think you would add the view to a layout path as opposed to adding a layout to a view path.</p>
+<p>If it were me, I would create a new layout with the custom path, (not a wildcard path) then create a view with a block and add that block to the layout.</p>
+
+
+
+<a name="230066123"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230066123" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230066123">(Mar 12 2021 at 17:16)</a>:</h4>
+<p>If you want to apply an existing layout to a View page, you can also test out the "Layout Wildcard" module. It adds a new field to layout configuration for additional paths to apply the layout to (besides the main context) and you can add the View path there.<br>
+<a href="https://github.com/backdrop-contrib/layout_wildcard">https://github.com/backdrop-contrib/layout_wildcard</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/layout_wildcard" style="background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/layout_wildcard" title="backdrop-contrib/layout_wildcard">backdrop-contrib/layout_wildcard</a></div><div class="message_embed_description">Contribute to backdrop-contrib/layout_wildcard development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="230066291"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230066291" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Phil Ward <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230066291">(Mar 12 2021 at 17:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> I have to wonder if this should be in core... I'm guessing a lot of people are looking for the functionality and don't realize it's addressed in contrib.</p>
+
+
+
+<a name="230066464"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230066464" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230066464">(Mar 12 2021 at 17:19)</a>:</h4>
+<p><a href="https://github.com/backdrop/backdrop-issues/issues/1528">https://github.com/backdrop/backdrop-issues/issues/1528</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1528" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1528" title="Allow a layout to be selected on multiple paths. · Issue #1528 · backdrop/backdrop-issues">Allow a layout to be selected on multiple paths. · Issue #1528 · backdrop/backdrop-issues</a></div><div class="message_embed_description">It would be great to set more than one path for which a layout is used instead of the default. For example, while most of the pages on a site may have a sidebar, there could be five or so pages tha...</div></div></div>
+
+
+
+<a name="230067965"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Layout/near/230067965" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Layout.html#230067965">(Mar 12 2021 at 17:31)</a>:</h4>
+<p>I am waiting to be approved as co-maintainer of Layout Wildcard, so that I (or someone) can approve some of the bugfix PRs that I've put in. I also have some ideas for improving this, but I really want to get feedback before trying anything, so I'll launch them in an issue on this module.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

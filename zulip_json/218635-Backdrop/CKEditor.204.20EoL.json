@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>It seems that in Drupal land they've decided to stick with CKEditor and switch to v5: <a href=\"https://www.drupal.org/project/drupal/issues/3091226\">https://www.drupal.org/project/drupal/issues/3091226</a></p>",
+        "id": 212766056,
+        "sender_full_name": "klonos",
+        "timestamp": 1602203627
+    },
+    {
+        "content": "<p>This seems to be the most important point:</p>\n<blockquote>\n<p><strong>Lack of upgrade path and arbitrary HTML support for content</strong>. This is a problem CKSource also shares and is a concern for their customers. They are in the process of hiring people to implement this. The timing is tricky as they plan to complete this later next year, so the timing will be tight for our October 2021 target of inclusion. On the other hand, in this case CKSource is hiring people to implement this, while for the other editors, we would need to figure this out on our own.</p>\n</blockquote>",
+        "id": 212766145,
+        "sender_full_name": "klonos",
+        "timestamp": 1602203732
+    },
+    {
+        "content": "<p>...also good points:</p>\n<ul>\n<li>We already have a good working relationship with the CKSource team, our CKEditor 4 integration was implemented with their collaboration and previously agreed on an extension of security support for CKEditor 4 until the end of life of Drupal 8 for the benefit of our users.</li>\n<li>While a CKEditor 4 to 5 migration does not exist, the same is true for the other editors suggested. While CKEditor 5's stricter document model does come with some challenges for arbitrary HTML, this is also true of other editors suggested with a stricter document model.</li>\n</ul>",
+        "id": 212766230,
+        "sender_full_name": "klonos",
+        "timestamp": 1602203826
+    },
+    {
+        "content": "<p>...and this is an interesting implementation approach: <a href=\"https://www.drupal.org/project/drupal/issues/2966864\">Add optional support for CKEditor 5 in D9 so we can remove CKE 4 from Drupal 10</a></p>",
+        "id": 212766274,
+        "sender_full_name": "klonos",
+        "timestamp": 1602203878
+    },
+    {
+        "content": "<p>The <em>Run-time loading of plugins</em> is also a big concern. It just won't work with Backdrop if they don't implement it</p>",
+        "id": 212768938,
+        "sender_full_name": "Herb",
+        "timestamp": 1602206786
+    }
+]

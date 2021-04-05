@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>Hey, Drupal 7 users out there,<br>\nare you using i18n in D7 projects?</p>\n<p>This is sort of a poll to figure out the most used i18n submodules.<br>\nWhich ones do you always turn on, which ones do you hardly ever or never use?</p>\n<p>And as this is a Backdrop chat - what i18n functionality are you missing the most in Backdrop core?</p>",
+        "id": 189909377,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1583512044
+    },
+    {
+        "content": "<p>Looking on the biggest <code>i18n</code> D7 site I manage, we've got:</p>\n<ul>\n<li>Blocks (there is some block translation in core now, which could be improved)</li>\n<li>Fields</li>\n<li>Menu (there is some menu translation in core now)</li>\n<li>Content</li>\n<li>Path</li>\n<li>Sync</li>\n<li>Taxonomy (I'd flag this one as the biggest weak spot, maybe...)</li>\n<li>Redirect</li>\n<li>Variable</li>\n<li>Views</li>\n</ul>",
+        "id": 189915019,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583515666
+    },
+    {
+        "content": "<p>from a complex multilingual site we maintain:</p>\n<ul>\n<li>Administration language (admin_language)</li>\n<li>Block languages (i18n_block)</li>\n<li>Contact translation (i18n_contact)</li>\n<li>Field translation (i18n_field)</li>\n<li>Menu translation (i18n_menu) </li>\n<li>Multilingual content (i18n_node) </li>\n<li>Multilingual forum (i18n_forum)</li>\n<li>Multilingual select (i18n_select)</li>\n<li>Path translation (i18n_path)</li>\n<li>Rules translation (rules_i18n)</li>\n<li>String translation (i18n_string)</li>\n<li>Synchronize translations (i18n_sync)</li>\n<li>Taxonomy translation (i18n_taxonomy)</li>\n<li>Translation redirect (i18n_redirect)</li>\n<li>Translation sets (i18n_translation) </li>\n<li>User mail translation (i18n_user)</li>\n<li>Variable translation (i18n_variable)</li>\n<li>Views translation (i18nviews)</li>\n</ul>\n<p>I have not tried to move this site to backdrop yet so I can't speak to the needs, but want to note that the client that this site is for has been unhappy with i18n in general in Drupal7; they have been told that D8 sorts this out better and I am hoping that by the time they are ready to do something new, Backdrop will also do this better. <br>\nSo, my question; has much/anything changed between D7 and Backdrop in how i18n works?</p>",
+        "id": 189916784,
+        "sender_full_name": "ericfg",
+        "timestamp": 1583516830
+    },
+    {
+        "content": "<p>Do you have more detail about the pain points they are dealing with?</p>",
+        "id": 189927066,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583523712
+    },
+    {
+        "content": "<p>I've asked them to write it up and I'll pass it along</p>",
+        "id": 189942003,
+        "sender_full_name": "ericfg",
+        "timestamp": 1583534576
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> great that you tackle this issues... I did a lot of multilingual projects in D7 and also one in Backdrop (<a href=\"https://herzpraxis-schuetzenmattpark.ch/en/welcome\" target=\"_blank\" title=\"https://herzpraxis-schuetzenmattpark.ch/en/welcome\">https://herzpraxis-schuetzenmattpark.ch/en/welcome</a>). The most urgent one could be the i18n Variable module. The current core taxonomy works pretty well, IMO.</p>",
+        "id": 190006785,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1583658759
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span>  Just to verify I understand it right - currently in core you can have multilingual taxonomy but not translated taxonomy, right?</p>",
+        "id": 190013676,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583673684
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> I'm afraid, for i18n Variables we will need a complete new concept.</p>",
+        "id": 190014677,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1583675733
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I think you're correct. There is no \"translation set\" in core. Only for content</p>",
+        "id": 190022652,
+        "sender_full_name": "Herb",
+        "timestamp": 1583691296
+    },
+    {
+        "content": "<p>i18n variable is not an end in itself though. What exactly is it needed for still?</p>",
+        "id": 190022670,
+        "sender_full_name": "Herb",
+        "timestamp": 1583691341
+    },
+    {
+        "content": "<p>@Laryn you are right with the taxonomy issue, it's not a translated entity.</p>",
+        "id": 190045029,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1583737010
+    }
+]

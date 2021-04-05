@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>I spent a bunch of time trying to get the exposed filename filter on the image library working but I am stuck. I was trying to hack apart the image field form and the image library so we didn't have nested HTML forms. Here's the issue:<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/3293\">https://github.com/backdrop/backdrop-issues/issues/3293</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3293\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3293\" title=\"[UX] Exposed filename filter for media library dialogue · Issue #3293 · backdrop/backdrop-issues\">[UX] Exposed filename filter for media library dialogue · Issue #3293 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea With the new media library for the editor we have a great improvement in finding previous images. However on sites with hundreds of images it can be overwhelming. Adding...</div></div></div>",
+        "id": 227348393,
+        "sender_full_name": "Laryn",
+        "timestamp": 1614032104
+    },
+    {
+        "content": "<p>And here's the \"work in progress\" PR:<br>\n<a href=\"https://github.com/backdrop/backdrop/pull/3536/files\">https://github.com/backdrop/backdrop/pull/3536/files</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3536/files\" style=\"background-image: url(https://avatars.githubusercontent.com/u/871421?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3536/files\" title=\"WIP #3293: Break image library out of image field form by laryn · Pull Request #3536 · backdrop/backdrop\">WIP #3293: Break image library out of image field form by laryn · Pull Request #3536 · backdrop/backdrop</a></div><div class=\"message_embed_description\">\nHave a question about this project? Sign up for a free GitHub account to open an issue and contact its maintainers and the community.\n  </div></div></div>",
+        "id": 227348410,
+        "sender_full_name": "Laryn",
+        "timestamp": 1614032110
+    },
+    {
+        "content": "<p>Anyone have time to look at what I'm trying to do and get me unstuck?</p>",
+        "id": 227348425,
+        "sender_full_name": "Laryn",
+        "timestamp": 1614032113
+    },
+    {
+        "content": "<p>Had a quick look at the code, and it LGTM <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span>  ...I'll test soon as I get a chance.</p>",
+        "id": 227360194,
+        "sender_full_name": "klonos",
+        "timestamp": 1614038186
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I've tested and left feedback in the issue. ...basically, things are broken <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 227383106,
+        "sender_full_name": "klonos",
+        "timestamp": 1614056612
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> thanks for looking. Yes, sorry if I wasn't clear that things are still in a broken state. I ran stuck and am hoping for a little boost to get me going again. The current pr includes testing code (including the strange submit button) because the code that is commented out wasn't working as I expected.</p>",
+        "id": 227386075,
+        "sender_full_name": "Laryn",
+        "timestamp": 1614059716
+    }
+]

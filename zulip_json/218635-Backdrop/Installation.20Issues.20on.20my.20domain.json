@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>Hi all,</p>\n<p>I am new to Backdrop CMS and like what I see so far.</p>\n<p>My setup is ...<br>\nMac Retina, OS Yosemite<br>\nMamp 5.7<br>\nBackdrop CMS<br>\nFileZilla</p>\n<p>I have no problem installing Backdrop CMS locally.</p>\n<p>The problem starts when I try to install it on my internet provider's shared server.<br>\nI use the same Backdrop zip file used for the local set-up.</p>\n<p>Process ...</p>\n<p>I first create a database and a user with full read/write access.</p>\n<p>Then FTP across the backdrop zip file using FileZilla.<br>\nThrough my cPanel, I unzip Backdrop to my root folder designated for Backdrop.</p>\n<p>I then go to my browser and type in my domain name \"<a href=\"http://xxxx.com\">xxxx.com</a>\" where the backdrop files are.<br>\nBut get the following error.</p>\n<p>\"Internal Server Error<br>\nThe server encountered an internal error or misconfiguration and was unable to complete your request.\"</p>\n<p>So I type in the full installation address for Backdrop</p>\n<p>\"<a href=\"http://xxxx.com/core/install.php\">xxxx.com/core/install.php</a>\"</p>\n<p>Again getting the same error as above.</p>\n<p>I am assuming it is a folder/file permission access issue<br>\nbut don't know for sure.</p>\n<p>Can you please tell me where my installation process is going wrong?</p>\n<p>Thanks<br>\nRegards</p>",
+        "id": 217937404,
+        "sender_full_name": "esn",
+        "timestamp": 1606337277
+    },
+    {
+        "content": "<p>Hi, esn. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 217937405,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1606337277
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"367392\">@esn</span> , what you see if you place to same directory instead unpacked zip just a file \"index.html\" with some string into?</p>",
+        "id": 217938832,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1606338081
+    },
+    {
+        "content": "<p>Or file \"index.php\"  contained <code>&lt;?php phpinfo();</code> ?</p>",
+        "id": 217939676,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1606338520
+    },
+    {
+        "content": "<p>Also, see if you can see what is in the Apache error and/or access log.</p>",
+        "id": 217940454,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1606339034
+    },
+    {
+        "content": "<p>I too would start where <span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> suggested by testing if a .HTML file works, then a .PHP</p>\n<p>Sometimes when adding an addon domain, Apache doesn't rebuild properly to recognize the domain. The other thing I to check is where the add-on domains folder is looking.</p>\n<p>Question: do you plan to have or already have more than one site/domain? The primary domain on the account can cause problems if the files are in a folder inside /public_html.</p>",
+        "id": 217942841,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1606340490
+    },
+    {
+        "content": "<p>Just to let you know, <br>\nI have installed drupal 9 in the same root directory and it works fine, also I've installed dolphin there too and that worked ok. Both worked on the first installation attempt.</p>\n<p>I have just now hosed that root folder on my domain and reinstalled Drupal 9 by uploading the zip and <br>\nextracting it via cPanel.</p>\n<p>Opened my browser and typed in the domain name and the installation screen came up straight away.<br>\nIt went straight to the URL <a href=\"http://xxxx.com/core/install.php\">http://xxxx.com/core/install.php</a>.</p>\n<p>So the issue has to be with the files in Backdrop.</p>\n<p>Regards</p>",
+        "id": 217943006,
+        "sender_full_name": "esn",
+        "timestamp": 1606340618
+    },
+    {
+        "content": "<p>I'm not familiar with shared hosting/cPanel, but sounds like maybe an <code>.htaccess</code> issue...?</p>",
+        "id": 217945116,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606342200
+    },
+    {
+        "content": "<p>As far as I understand it, the major difference between the two types of hosting is one share's resources <br>\nwith a number of users where the other has only one user.<br>\nI have deleted the .htaccess file to see if that made a difference but it didn't.</p>",
+        "id": 217957116,
+        "sender_full_name": "esn",
+        "timestamp": 1606353567
+    },
+    {
+        "content": "<p>Did you check your Apache logs to see if there were any error notices there?</p>",
+        "id": 217961032,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1606359240
+    },
+    {
+        "content": "<p>@oadaeh (Jason Flatt)<br>\nThank you for your suggestion. <br>\nI was able to resolve the issue by reading that webserver log. <br>\nThe solution is as follows ...</p>\n<p>Error log stated<br>\n\"SoftException in Application.cpp:267: File \"/home2/xxxx/public_html/xxxx/index.php\" is writeable by group\"</p>\n<p>But when I looked at the permissions of index.php the group write option was not selected. <br>\nThe permission level was 644</p>\n<p>So I selected all the permission options (The permission level was now 777) then saved the file. <br>\nRe-ran the install again (Was just checking), it still had the same error, as expected. <br>\nI then set the permission back to 644 but this time when I ran the install, it worked perfectly.</p>\n<p>So clearly there was a problem with the webserver, for some reason <br>\nit kept reading install.php was writable by group, even though it wasn't.<br>\nSo changing the permission to something else seemed to unlock its stuck state.<br>\nI probably would have only needed to set the group write option save it then un-set it to release the web-server's stuck read state.</p>\n<p>Thank you for all contributing, it's greatly appreciated.</p>\n<p>Regards</p>",
+        "id": 217970193,
+        "sender_full_name": "esn",
+        "timestamp": 1606373195
+    },
+    {
+        "content": "<p>Glad you have worked things out in the end <span class=\"user-mention\" data-user-id=\"367392\">@esn</span> ...please keep providing feedback and reporting any issues you may find while using Backdrop.</p>",
+        "id": 217970761,
+        "sender_full_name": "klonos",
+        "timestamp": 1606374126
+    }
+]

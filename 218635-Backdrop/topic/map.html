@@ -1,0 +1,123 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/map.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html">map</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="226245774"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226245774" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226245774">(Feb 13 2021 at 13:48)</a>:</h4>
+<p>Did someone implement multiple addresses on ONE map yet...?<br>
+<a href="https://forum.backdropcms.org/forum/adding-multiple-addressesnodes-map-using-views?page=0%2C0#comment-2640">https://forum.backdropcms.org/forum/adding-multiple-addressesnodes-map-using-views?page=0%2C0#comment-2640</a></p>
+
+
+
+<a name="226247813"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226247813" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226247813">(Feb 13 2021 at 14:39)</a>:</h4>
+<p>It's possible, but no fun - the necessary modules aren't stable yet:</p>
+<p>Install:</p>
+<ul>
+<li>geofield</li>
+<li>leaflet (no stable release)</li>
+<li>libraries (not needed, but a useless dependency)</li>
+<li>geophp (no dependency, but actually required to prevent fatal errors)</li>
+</ul>
+<p>Then:</p>
+<ul>
+<li>Create a content type with a geofield that stores lat/lon</li>
+<li>Enable leaflet_views submodule</li>
+<li>Create a view  of type "leaflet map"</li>
+<li>Filtered for your content type, don't forget to add a geofield to the view</li>
+</ul>
+<p>Works, but... <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> the Leaflet module really needs some loving care.</p>
+
+
+
+<a name="226248273"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226248273" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226248273">(Feb 13 2021 at 14:49)</a>:</h4>
+<p>Thank you <span class="user-mention" data-user-id="256738">@indigoxela</span>... so maybe fixing the geomap module (which apparently has Views support) might be also an option? Or is there an easy way to hardcode this from scratch for demo purposes?</p>
+
+
+
+<a name="226248779"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226248779" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226248779">(Feb 13 2021 at 15:01)</a>:</h4>
+<blockquote>
+<p>so maybe fixing the geomap module (which apparently has Views support) might be also an option?</p>
+</blockquote>
+<p>Which one is that? Do you mean "Geofield Map"? I'm not sure if Geofield Map is supposed to display more than one markers. I never used it before and don't get it to display any map. Leaflet views at least produces maps with multiple markers on it. But I'm more familiar with that as I use it with Drupal regularly.</p>
+
+
+
+<a name="226265997"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226265997" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226265997">(Feb 13 2021 at 20:43)</a>:</h4>
+<p><span class="user-mention" data-user-id="269428">@mazze.ch</span> - I have been away from computer, but will try to write up instructions today. I have done this a couple of times and it works pretty smoothly. I am pretty sure that <span class="user-mention" data-user-id="263951">@jenlampton</span> also has sites doing this.</p>
+
+
+
+<a name="226266030"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226266030" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226266030">(Feb 13 2021 at 20:43)</a>:</h4>
+<p>This is my only public example of it - <a href="https://www.riverton.org/community/map-of-all-communities">https://www.riverton.org/community/map-of-all-communities</a></p>
+<p>But, I've done it on test sites additional times.</p>
+
+
+
+<a name="226275995"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226275995" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226275995">(Feb 13 2021 at 23:57)</a>:</h4>
+<p>Yeah, I have one at <a href="http://arf.berkeley.edu/">http://arf.berkeley.edu/</a> that's been working pretty well. Also on this site <a href="https://www.bootfitters.com/shops/boot-pro-ludlow">https://www.bootfitters.com/shops/boot-pro-ludlow</a></p>
+
+
+
+<a name="226287268"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226287268" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226287268">(Feb 14 2021 at 05:38)</a>:</h4>
+<p>I've been meaning to write a tutorial for a while. Here is my first draft. Would love feedback,corrections, or better ideas.<br>
+<a href="https://simplo.site/posts/putting-multiple-locations-map-backdrop-cms">https://simplo.site/posts/putting-multiple-locations-map-backdrop-cms</a></p>
+
+
+
+<a name="226301063"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226301063" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226301063">(Feb 14 2021 at 12:00)</a>:</h4>
+<p>thank you <span class="user-mention" data-user-id="256570">@StPaulTim</span> for investigating... the Google API does not seem to be the problem, for me it works on a one-location-per-map basis.</p>
+
+
+
+<a name="226313312"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226313312" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226313312">(Feb 14 2021 at 16:34)</a>:</h4>
+<p>Beautiful and simple <span class="user-mention" data-user-id="256570">@StPaulTim</span> ++</p>
+
+
+
+<a name="226313313"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226313313" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Dragonbot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226313313">(Feb 14 2021 at 16:34)</a>:</h4>
+<p><strong>stpaultim</strong> GG (Karma: 34)</p>
+
+
+
+<a name="226320215"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226320215" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226320215">(Feb 14 2021 at 19:20)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="269428">mazze.ch</span> <a href="#narrow/stream/218635-Backdrop/topic/map/near/226301063">said</a>:</p>
+<blockquote>
+<p>thank you <span class="user-mention silent" data-user-id="256570">StPaulTim</span> for investigating... the Google API does not seem to be the problem, for me it works on a one-location-per-map basis.</p>
+</blockquote>
+<p>Yeah, I'm not blaming the Google API. But, I am wondering if their is a problem with the GeoCoder Module and the Google API OR if I'm just doing something wrong. However, I am able to display Google Maps, which also requires the Google API - so it's something specific to Geocoding that is blocking me.</p>
+
+
+
+<a name="226322501"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/map/near/226322501" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/map.html#226322501">(Feb 14 2021 at 20:11)</a>:</h4>
+<p>I've updated my blog post slightly to take into account some feedback. I added another screenshot of settings for the geofield.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

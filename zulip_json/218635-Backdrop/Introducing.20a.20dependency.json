@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>I think I've asked this before but it likely got lost in Gitter's back scroll: I'm planning to add a dependency to Paragraphs but I'm unsure the recommended way to do this. Will the upgrade process handle this? (ie. if Paragraphs is installed without the new dependency and someone tries to upgrade through the Project Installer, will it force download/enable the new dependency first, before upgrading the Paragraphs module? Otherwise we'll crash sites upon upgrade).</p>",
+        "id": 187829460,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581350745
+    },
+    {
+        "content": "<p>I can do some testing with manual upgrades but can't really test the Project Installer until I've made a new release.</p>",
+        "id": 187829517,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581350765
+    },
+    {
+        "content": "<p>So I'm hoping someone has some insight on that. <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 187829548,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581350791
+    },
+    {
+        "content": "<p>I'd be interested to know too. I suspect that the updater checks the dependencies when it checks the info file of the module</p>",
+        "id": 187840510,
+        "sender_full_name": "Herb",
+        "timestamp": 1581357798
+    },
+    {
+        "content": "<p>If the module is already in place, it should enable it for you. I don't think it will download it if it's not there, but I have tried that.</p>",
+        "id": 187878981,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1581389083
+    },
+    {
+        "content": "<p>Haven't tested through the UI yet (since I haven't released an update with a dependency) but did a quick test updating through the filesystem directly: <a href=\"https://github.com/backdrop-contrib/paragraphs/issues/48#issuecomment-592512816\" target=\"_blank\" title=\"https://github.com/backdrop-contrib/paragraphs/issues/48#issuecomment-592512816\">https://github.com/backdrop-contrib/paragraphs/issues/48#issuecomment-592512816</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/issues/48#issuecomment-592512816\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/issues/48#issuecomment-592512816\" target=\"_blank\" title=\"Add dependency on Entity Plus · Issue #48 · backdrop-contrib/paragraphs\">Add dependency on Entity Plus · Issue #48 · backdrop-contrib/paragraphs</a></div><div class=\"message_embed_description\">Removing the EMW dependency ended up causing a bunch of loose ends that nobody seems to have time to comb through. I&#39;m planning to add a dependency on Entity Plus at this point which seems to s...</div></div></div>",
+        "id": 189310779,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582897747
+    }
+]

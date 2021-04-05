@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>What is going on with the text at the end of this line? <a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/field/modules/text/text.module#L415\">https://github.com/backdrop/backdrop/blob/1.x/core/modules/field/modules/text/text.module#L415</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/field/modules/text/text.module#L415\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/blob/1.x/core/modules/field/modules/text/text.module#L415\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 207067234,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597577094
+    },
+    {
+        "content": "<p>Good catch <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ...seems like the result of a search/replace or something like that. ...it's about line breaks. ...the equivalent line in D7 is exactly the same: <a href=\"https://git.drupalcode.org/project/drupal/-/blob/7.x/modules/field/modules/text/text.module#L420\">https://git.drupalcode.org/project/drupal/-/blob/7.x/modules/field/modules/text/text.module#L420</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/drupal/-/blob/7.x/modules/field/modules/text/text.module#L420\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/drupal/-/blob/7.x/modules/field/modules/text/text.module#L420\" title=\"modules/field/modules/text/text.module · 7.x · project / drupal\">modules/field/modules/text/text.module · 7.x · project / drupal</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/drupal</div></div></div>",
+        "id": 207068242,
+        "sender_full_name": "klonos",
+        "timestamp": 1597578720
+    },
+    {
+        "content": "<p>...same thing in D8: <a href=\"https://git.drupalcode.org/project/drupal/-/blob/8.9.x/core/modules/text/text.module#L134\">https://git.drupalcode.org/project/drupal/-/blob/8.9.x/core/modules/text/text.module#L134</a> (and assuming in D9)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://git.drupalcode.org/project/drupal/-/blob/8.9.x/core/modules/text/text.module#L134\" style=\"background-image: url(https://git.drupalcode.org/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://git.drupalcode.org/project/drupal/-/blob/8.9.x/core/modules/text/text.module#L134\" title=\"core/modules/text/text.module · 8.9.x · project / drupal\">core/modules/text/text.module · 8.9.x · project / drupal</a></div><div class=\"message_embed_description\">For more information about this repository, visit the project page at https://www.drupal.org/project/drupal</div></div></div>",
+        "id": 207068371,
+        "sender_full_name": "klonos",
+        "timestamp": 1597578882
+    },
+    {
+        "content": "<p>It's weird though, because if I move my cursor through the line left-to-right, it jumps around towards the end...</p>",
+        "id": 207068389,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597578931
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/wpHSyiB6GzrJdfZ0DExMBxLE/Peek-2020-08-16-21-56.gif\">Peek-2020-08-16-21-56.gif</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/wpHSyiB6GzrJdfZ0DExMBxLE/Peek-2020-08-16-21-56.gif\" title=\"Peek-2020-08-16-21-56.gif\"><img src=\"/user_uploads/18319/wpHSyiB6GzrJdfZ0DExMBxLE/Peek-2020-08-16-21-56.gif\"></a></div>",
+        "id": 207068455,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597579002
+    },
+    {
+        "content": "<p>Yeah, I noticed that too ...seems like some odd tab character or something.</p>",
+        "id": 207068482,
+        "sender_full_name": "klonos",
+        "timestamp": 1597579043
+    },
+    {
+        "content": "<p>...reminds me of the same odd thing that's happening when you try to select text split in <code>&lt;span&gt;</code>s in RTL languages.</p>",
+        "id": 207068545,
+        "sender_full_name": "klonos",
+        "timestamp": 1597579147
+    },
+    {
+        "content": "<p>...there you go, that character is the Arabic question mark: <a href=\"https://en.wiktionary.org/wiki/%D8%9F\">https://en.wiktionary.org/wiki/%D8%9F</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://en.wiktionary.org/wiki/%D8%9F\" style=\"background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Arabic_Question_mark_%28RTL%29.svg/1200px-Arabic_Question_mark_%28RTL%29.svg.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://en.wiktionary.org/wiki/%D8%9F\" title=\"؟ - Wiktionary\">؟ - Wiktionary</a></div><div class=\"message_embed_description\">؟\n</div></div></div>",
+        "id": 207068693,
+        "sender_full_name": "klonos",
+        "timestamp": 1597579404
+    },
+    {
+        "content": "<p>Ok, so that character is making that section of text be displayed RTL...</p>",
+        "id": 207068746,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597579497
+    },
+    {
+        "content": "<p>...not sure how it works TBH ...that array element declaration seems wrong to me.</p>",
+        "id": 207068758,
+        "sender_full_name": "klonos",
+        "timestamp": 1597579533
+    },
+    {
+        "content": "<p>Let's take this to <a href=\"https://github.com/backdrop/backdrop-issues/issues/4546\">https://github.com/backdrop/backdrop-issues/issues/4546</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4546\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4546\" title=\"Odd text in the $break_points array in text_summary() · Issue #4546 · backdrop/backdrop-issues\">Odd text in the $break_points array in text_summary() · Issue #4546 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">@BWPanda brought this up in Zulip: What is going on with the text at the end of this line?https://github.com/backdrop/backdrop/blob/1.x/core/modules/field/modules/text/text.module#L415 // If the fi...</div></div></div>",
+        "id": 207069895,
+        "sender_full_name": "klonos",
+        "timestamp": 1597581276
+    }
+]

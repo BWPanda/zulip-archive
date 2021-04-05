@@ -1,0 +1,122 @@
+[
+    {
+        "content": "<p>I'd like to mark a version of a module as unsupported and remove its listing on <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a> -- how can I do that? e.g. I've just released a <code>1.x-2.x</code> version and want to remove the <code>1.x-1.x</code> version. I also need to remove the 1.x page from borg because the module name changed and I want the old one out of sight.</p>",
+        "id": 205929987,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596559240
+    },
+    {
+        "content": "<p>I could do this. I assume you don't have permission? What module?</p>",
+        "id": 206039609,
+        "sender_full_name": "Herb",
+        "timestamp": 1596642691
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> -- I don't think I have access. This one should be removed completely: <a href=\"https://backdropcms.org/project/stripe_api\">https://backdropcms.org/project/stripe_api</a></p>",
+        "id": 206045545,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596645362
+    },
+    {
+        "content": "<p>(This is the replacement: <a href=\"https://backdropcms.org/project/stripe\">https://backdropcms.org/project/stripe</a> and it looks okay on borg)</p>",
+        "id": 206045626,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596645403
+    },
+    {
+        "content": "<p>Can I just delete the <code>1.x-1.x</code> release on github? Or is there a way to mark it as unsupported?</p>",
+        "id": 206045680,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596645432
+    },
+    {
+        "content": "<p>Actually this one should be removed as well: <a href=\"https://backdropcms.org/project/stripe_checkout\">https://backdropcms.org/project/stripe_checkout</a></p>",
+        "id": 206046108,
+        "sender_full_name": "Laryn",
+        "timestamp": 1596645619
+    },
+    {
+        "content": "<p>I asked about this once before and I think that we do have preferred process for marking a module \"unsupported,\" but I don't remember what it is.</p>",
+        "id": 206047183,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596646108
+    },
+    {
+        "content": "<p>This should be documented somewhere.</p>",
+        "id": 206047739,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596646391
+    },
+    {
+        "content": "<p>I hope that we always leave some information about what happened to a module that is no longer supported. It shouldn't just disappear, should it?</p>",
+        "id": 206047808,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596646432
+    },
+    {
+        "content": "<p>I've deleted the release and marked the project as unsupported. <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> you can delete the release and tag in github.</p>",
+        "id": 206079472,
+        "sender_full_name": "Herb",
+        "timestamp": 1596662172
+    },
+    {
+        "content": "<p>I have a site that was using the Beta release of the Group module . I recently noticed that it's no longer supported and I got a big red message on the status page.(Drupal 7 - they still support Drupal 8)</p>",
+        "id": 206079924,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596662487
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/alrL5KBY36oo_mM20LGNVJX7/Available_updates___Silicon_Prairie_Portal_and_Exchange.png\">Available_updates___Silicon_Prairie_Portal_and_Exchange.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/alrL5KBY36oo_mM20LGNVJX7/Available_updates___Silicon_Prairie_Portal_and_Exchange.png\" title=\"Available_updates___Silicon_Prairie_Portal_and_Exchange.png\"><img src=\"/user_uploads/18319/alrL5KBY36oo_mM20LGNVJX7/Available_updates___Silicon_Prairie_Portal_and_Exchange.png\"></a></div>",
+        "id": 206079936,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596662500
+    },
+    {
+        "content": "<p>It's probably related to the security release that came out today.</p>",
+        "id": 206081798,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1596663700
+    },
+    {
+        "content": "<p>I suspect that will happen more and more as contrib maintainers decide they no longer want to maintain the 7.x branches of their projects.</p>",
+        "id": 206081948,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1596663778
+    },
+    {
+        "content": "<p>This is going to be a problem for me. This site is making significant use of Group module.</p>",
+        "id": 206082571,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596664197
+    },
+    {
+        "content": "<p>Over 700 sites are using this module (Group for D7) and I can't find any statement or information about why they discontinued support or if there are known security issues.</p>",
+        "id": 206083316,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596664704
+    },
+    {
+        "content": "<p>Maybe it would be worth it to submit an issue asking about it.</p>",
+        "id": 206083844,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1596665086
+    },
+    {
+        "content": "<p>It doesn't look like the D7 branch has been actively maintained in quite a while.</p>",
+        "id": 206084388,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1596665563
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Have a look at the 8.x-1.0 release notes: <a href=\"https://www.drupal.org/project/group/releases/8.x-1.0\">https://www.drupal.org/project/group/releases/8.x-1.0</a></p>",
+        "id": 206113013,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1596700319
+    },
+    {
+        "content": "<p>Thanks. That's all I was looking for. Not easy to find, if you are not using Drupal 8 version of the module.   :-)</p>",
+        "id": 206160479,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1596729282
+    }
+]

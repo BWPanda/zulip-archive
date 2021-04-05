@@ -1,0 +1,145 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Reference.20scheduling.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html">Reference scheduling</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="192792941"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/192792941" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#192792941">(Apr 03 2020 at 12:00)</a>:</h4>
+<p>I have a (rendered) node reference to a webform on an event content type. (Different events reference the same webform.) What I'm trying to achieve now: The option to disable a node reference automatically at a date which can be specified by editors. Has somebody ever done something similar?</p>
+
+
+
+<a name="192885767"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/192885767" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#192885767">(Apr 04 2020 at 02:50)</a>:</h4>
+<p>Nope, sounds like a custom module or rule is needed</p>
+
+
+
+<a name="192904172"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/192904172" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#192904172">(Apr 04 2020 at 11:53)</a>:</h4>
+<p>Hi Olaf, did you try to create a reference list in Views (e.g. show only the dates which are in the future minus 1 day)? You then can reference it in the field. Does this answer your question...?</p>
+
+
+
+<a name="193093483"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193093483" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193093483">(Apr 06 2020 at 20:01)</a>:</h4>
+<blockquote>
+<p>sounds like a custom module or rule is needed</p>
+</blockquote>
+<p>Speaking of "rule", I saw there is a "Rules Scheduler" submodule, I might give it a try. <span class="user-mention" data-user-id="256648">@Graham Oliver</span> Do you know something about the current status of Rules Scheduler? (Haven't used Rules in Backdrop at all so far.)</p>
+
+
+
+<a name="193094590"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193094590" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193094590">(Apr 06 2020 at 20:10)</a>:</h4>
+<blockquote>
+<p>did you try to create a reference list in Views (...)?</p>
+</blockquote>
+<p>No, didn't try. I <em>think</em> that's not what I need but I should verify my assumption.</p>
+
+
+
+<a name="193094639"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193094639" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193094639">(Apr 06 2020 at 20:10)</a>:</h4>
+<p>Thanks for your feedback, <span class="user-mention" data-user-id="256705">@Herb</span> and <span class="user-mention" data-user-id="269428">@mazze.ch</span> !</p>
+
+
+
+<a name="193122082"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193122082" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193122082">(Apr 07 2020 at 01:13)</a>:</h4>
+<p>I was thinking that @mazze.ch idea made sense to me but perhaps I don't fully understand your case</p>
+
+
+
+<a name="193145939"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193145939" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> mazze.ch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193145939">(Apr 07 2020 at 06:43)</a>:</h4>
+<p>@OIaf, the problem with my solution might be that you need the function in the frontend, not backend, right?</p>
+
+
+
+<a name="193209401"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193209401" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193209401">(Apr 07 2020 at 15:57)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256705">Herb</span> <a href="#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193122082" title="#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193122082">said</a>:</p>
+<blockquote>
+<p>I was thinking that @mazze.ch idea made sense to me but perhaps I don't fully understand your case</p>
+</blockquote>
+<p>Yes, I should explain it better, also because I'm not sure if I understand the suggestion.</p>
+
+
+
+<a name="193213267"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193213267" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193213267">(Apr 07 2020 at 16:23)</a>:</h4>
+<p>So, here's a (simplified) description:</p>
+<ul>
+<li>I have an Event content type with Title, Body text, Location, the Event date, and a Registration deadline date. There are several events on the website.</li>
+<li>On the Event content type there is another field: a node reference autocomplete to webforms. If I select the webform in question (always the same, see below), it will be displayed / embedded on the Event page.</li>
+<li>The webform is built to allow registering for different Events. The form is always the same, and it doesn't hold a date. It contains only a Name field, contact details, and a checkbox "I want to attend". (There is also a token-based read-only field which holds the Event title so that I can filter the submissions by event.)</li>
+</ul>
+<p>Now, when I reference the webform as an editor, it will be embedded on the Event page. Then, at the Registration deadline date, I have to disable the form manually. My goal is to build something which disables the form automatically at the deadline date.</p>
+
+
+
+<a name="193219062"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193219062" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193219062">(Apr 07 2020 at 17:08)</a>:</h4>
+<p>Maybe a Views block that takes the current page nid to get the event info, then links to webform via a relationship (on the reference field), and filters on event dates in the future?</p>
+
+
+
+<a name="193245804"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193245804" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193245804">(Apr 07 2020 at 20:48)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256573">Laryn</span> <a href="#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193219062" title="#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193219062">said</a>:</p>
+<blockquote>
+<p>Maybe a Views block that takes the current page nid to get the event info, then links to webform via a relationship (on the reference field), and filters on event dates in the future?</p>
+</blockquote>
+<p>Sounds interesting, will give it a try!</p>
+
+
+
+<a name="193276810"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193276810" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Graham Oliver <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193276810">(Apr 08 2020 at 05:20)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> I have had a quick look at Rules Scheduler and found a small bug. I have made a PR. The UI is a bit obscure initially because you have to start by setting up a 'Component' which you then schedule.</p>
+
+
+
+<a name="193282885"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193282885" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193282885">(Apr 08 2020 at 07:23)</a>:</h4>
+<p>Great to hear, <span class="user-mention" data-user-id="256648">@Graham Oliver</span>, thank you! Will test it as soon as possible.</p>
+
+
+
+<a name="193386708"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/193386708" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#193386708">(Apr 08 2020 at 22:33)</a>:</h4>
+<blockquote>
+<p>Will test it as soon as possible.</p>
+</blockquote>
+<p>Hm, while trying to test Rules Scheduler, I found an issue with Rules itself (or Backdrop core). Have filed an issue in the Rules queue.</p>
+
+
+
+<a name="195895886"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/195895886" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#195895886">(Apr 30 2020 at 20:19)</a>:</h4>
+<p>Re <a href="#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193213267" title="#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193213267">https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Reference.20scheduling/near/193213267</a>: A friend helped me with this use-case writing a custom module. On my event node, it sets the node reference to a webform back to an empty value when the deadline date for Event registration is arrived (or, at the next cron run).</p>
+
+
+
+<a name="195896180"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Reference%20scheduling/near/195896180" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Reference.20scheduling.html#195896180">(Apr 30 2020 at 20:22)</a>:</h4>
+<p>In case someone needs a similar functionality, I'll be happy to share the code. (Maybe also of interest for your event registration use-case, <span class="user-mention" data-user-id="269428">@mazze.ch</span> ?)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

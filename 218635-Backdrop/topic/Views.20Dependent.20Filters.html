@@ -1,0 +1,69 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Views.20Dependent.20Filters.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20Dependent.20Filters.html">Views Dependent Filters</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="192465255"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20Dependent%20Filters/near/192465255" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20Dependent.20Filters.html#192465255">(Mar 31 2020 at 23:15)</a>:</h4>
+<p>Anyone up for some testing on a port?<br>
+<a href="https://github.com/backdrop-contrib/views_dependent_filters" title="https://github.com/backdrop-contrib/views_dependent_filters">https://github.com/backdrop-contrib/views_dependent_filters</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/views_dependent_filters" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/views_dependent_filters" title="backdrop-contrib/views_dependent_filters">backdrop-contrib/views_dependent_filters</a></div><div class="message_embed_description">Contribute to backdrop-contrib/views_dependent_filters development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="192488589"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20Dependent%20Filters/near/192488589" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20Dependent.20Filters.html#192488589">(Apr 01 2020 at 06:44)</a>:</h4>
+<p>Sure, but I need instructions as I never used that module with D7. I played with a view with a dependent filter but - unless I totally misunderstand what it should do - it doesn't seem to work. Plus I get some php warnings/notices. <a href="user_uploads/18319/H81uBGf_ECd_A912xFdKKrjb/screenshot-exposed.png" title="user_uploads/18319/H81uBGf_ECd_A912xFdKKrjb/screenshot-exposed.png">screenshot-exposed.png</a></p>
+<div class="message_inline_image"><a href="user_uploads/18319/H81uBGf_ECd_A912xFdKKrjb/screenshot-exposed.png" title="screenshot-exposed.png"><img src="user_uploads/18319/H81uBGf_ECd_A912xFdKKrjb/screenshot-exposed.png"></a></div>
+
+
+
+<a name="192489442"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20Dependent%20Filters/near/192489442" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20Dependent.20Filters.html#192489442">(Apr 01 2020 at 06:59)</a>:</h4>
+<p>Ah, some more info: I figured out that a taxonomy term field exposed filter won't appear there, but, for instance, a node title does.</p>
+<p>Update 2: no, not even the title appears reliably.</p>
+
+
+
+<a name="192510056"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20Dependent%20Filters/near/192510056" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20Dependent.20Filters.html#192510056">(Apr 01 2020 at 10:46)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256738">@indigoxela</span> -- will respond later today!</p>
+
+
+
+<a name="192563605"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20Dependent%20Filters/near/192563605" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20Dependent.20Filters.html#192563605">(Apr 01 2020 at 17:28)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> Basically you need:</p>
+<ol>
+<li>An exposed filter above the Dependent Filter and an exposed filter underneath it.</li>
+<li>Then you can configure the Dependent Filter to use the one that is above as a "Controller" and the one that is beneath as a "Dependent".</li>
+<li>When the value of the Controller field matches what you've specified, the Dependent field should show, otherwise it should be hidden.</li>
+</ol>
+
+
+
+<a name="192624882"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Views%20Dependent%20Filters/near/192624882" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Views.20Dependent.20Filters.html#192624882">(Apr 02 2020 at 06:29)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Ah, got it, the order matters. But... the exposed filters still don't hide when they should.<br>
+Additionally I get:<br>
+<code>Warning: implode(): Invalid arguments passed in form_error() (line 1744 of .../core/includes/form.inc).
+Notice: Undefined index: expose in views_handler_filter-&gt;expose_validate() (line 596 of .../core/modules/views/handlers/views_handler_filter.inc).</code></p>
+<p>Will experiment more with that module when I find the time.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

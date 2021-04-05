@@ -1,0 +1,146 @@
+[
+    {
+        "content": "<p>I'm trying to merge in some upstream changes on a module. There is an update hook in the upstream changes (let's say <code>modulename_update_7103</code>). My understanding is I should update <code>modulename_update_last_removed</code> to <code>7103</code> and then rename the function to <code>modulename_update_1000</code> so Backdrop picks it up. Is that right? </p>\n<p>(And if so, any ideas why <code>modulename_update_1000</code> does not seem to get triggered in my local dev testing?)</p>",
+        "id": 189939383,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583532434
+    },
+    {
+        "content": "<p>is there already an update hook in the backdrop verstion that is <code>&gt; 1000</code>?</p>",
+        "id": 189939716,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1583532709
+    },
+    {
+        "content": "<p>if so then the hook will not trigger;</p>",
+        "id": 189939757,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1583532723
+    },
+    {
+        "content": "<p>There are no other Backdrop update hooks.</p>",
+        "id": 189939772,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583532741
+    },
+    {
+        "content": "<p>Check the schema_version for the module in the system database table.</p>",
+        "id": 189939823,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583532804
+    },
+    {
+        "content": "<p>Hmm.. Schema version in the system table says <code>7102</code></p>",
+        "id": 189941066,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583533697
+    },
+    {
+        "content": "<p>What happens if you manually set it to 7103?</p>",
+        "id": 189941271,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583533872
+    },
+    {
+        "content": "<p>Nothing, unfortunately.</p>",
+        "id": 189941580,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583534160
+    },
+    {
+        "content": "<p>Does this mean something was wrong in the <code>.install</code> file in the initial porting? (ie. it should have reset the schema version to 1000)</p>",
+        "id": 189941673,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583534236
+    },
+    {
+        "content": "<p>Maybe. The fact that the schema_version was only 7102 might be an indicator of that. Maybe check the spelling of the function names. Other than that, I'm not sure what else to look for.</p>",
+        "id": 189942113,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583534678
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-General/topic/Update.20hooks/near/189941066\" title=\"#narrow/stream/218635-General/topic/Update.20hooks/near/189941066\">said</a>:</p>\n<blockquote>\n<p>Hmm.. Schema version in the system table says <code>7102</code></p>\n</blockquote>\n<p>in backdrop DB?</p>",
+        "id": 189942681,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583535199
+    },
+    {
+        "content": "<p>Yes, in the Backdrop database.</p>",
+        "id": 189943182,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583535605
+    },
+    {
+        "content": "<p>did you have a <code>hook_update_7102()</code> when it first installed?</p>",
+        "id": 189943923,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583536266
+    },
+    {
+        "content": "<p>That may have been left in there when the port was first done.</p>",
+        "id": 189944031,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583536406
+    },
+    {
+        "content": "<p>Any way to reset that schema version?</p>",
+        "id": 189944042,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583536426
+    },
+    {
+        "content": "<p>You can change it in the database. You do need to clear caches after you make the change.</p>",
+        "id": 189944339,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583536721
+    },
+    {
+        "content": "<p>How about more generally, since this module is in the wild?</p>",
+        "id": 189946855,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583539481
+    },
+    {
+        "content": "<p>theres a <code>backdrop_set_installed_schema_version()</code></p>",
+        "id": 189948169,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583540651
+    },
+    {
+        "content": "<p>i suspect might do?</p>",
+        "id": 189948231,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583540667
+    },
+    {
+        "content": "<p>ymmv</p>",
+        "id": 189948251,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583540672
+    },
+    {
+        "content": "<p>Thanks, I'll give that a shot.</p>",
+        "id": 189957719,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583558474
+    },
+    {
+        "content": "<p>Yes!</p>",
+        "id": 189958460,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583560031
+    },
+    {
+        "content": "<p>\"Yes!\" ...as in \"it worked!\"?</p>",
+        "id": 189959485,
+        "sender_full_name": "klonos",
+        "timestamp": 1583562471
+    },
+    {
+        "content": "<p>Correct.<br>\n<a href=\"https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce\" target=\"_blank\" title=\"https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce\">https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce\" style=\"background-image: url(https://avatars0.githubusercontent.com/u/871421?s=200&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/paragraphs/commit/03ba37be4da8118effbf34c3ada60dfb90a080ce\" target=\"_blank\" title=\"#50: schema version fix · backdrop-contrib/paragraphs@03ba37b\">#50: schema version fix · backdrop-contrib/paragraphs@03ba37b</a></div><div class=\"message_embed_description\">Paragraphs module to control your content flow. Contribute to backdrop-contrib/paragraphs development by creating an account on GitHub.</div></div></div>",
+        "id": 189969505,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583585150
+    }
+]

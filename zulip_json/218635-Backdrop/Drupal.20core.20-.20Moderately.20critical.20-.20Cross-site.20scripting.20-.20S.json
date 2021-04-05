@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>Drupal core - Moderately critical - Cross-site scripting - SA-CORE-2020-007<br>\n<a href=\"https://www.drupal.org/sa-core-2020-007\">https://www.drupal.org/sa-core-2020-007</a><br>\n1.17.1 today?</p>",
+        "id": 210304874,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1600282694
+    },
+    {
+        "content": "<p>In the meantime, there are a few more announcements: <a href=\"https://www.drupal.org/security\">https://www.drupal.org/security</a></p>",
+        "id": 210310340,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600285293
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"268468\">@Vladimir</span> and <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> this is being discussed internally, and there will be a PSA soon.</p>",
+        "id": 210329253,
+        "sender_full_name": "klonos",
+        "timestamp": 1600296359
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/6XPAOibR2gh_GC2EfQc0FjmR/image.png\">image.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/6XPAOibR2gh_GC2EfQc0FjmR/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/6XPAOibR2gh_GC2EfQc0FjmR/image.png\"></a></div><p>We don't display messages about security releases as 'errors' too do we? If so, I think that's wrong...</p>",
+        "id": 210345493,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600314590
+    },
+    {
+        "content": "<p>We do, but they don't have the \"error message\" title. ...given that messages about pending regular updates are warnings, these are one step up. If we were to \"downgrade\" errors about security updates to warnings, then pending updates should also be downgraded to <code>info</code>.</p>",
+        "id": 210346161,
+        "sender_full_name": "klonos",
+        "timestamp": 1600315476
+    },
+    {
+        "content": "<p>Ah OK, maybe it's fine then if it's not displayed as an 'Error message'.</p>",
+        "id": 210346244,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600315570
+    },
+    {
+        "content": "<p>If we want to be adhering to \"industry standards\" then these should be called \"danger\" instead of \"error\"</p>",
+        "id": 210346509,
+        "sender_full_name": "klonos",
+        "timestamp": 1600315920
+    },
+    {
+        "content": "<p>...and \"status\" should be \"success\"</p>",
+        "id": 210346555,
+        "sender_full_name": "klonos",
+        "timestamp": 1600315942
+    },
+    {
+        "content": "<p>...see <a href=\"https://getbootstrap.com/docs/4.0/components/alerts/\">https://getbootstrap.com/docs/4.0/components/alerts/</a> for example</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://getbootstrap.com/docs/4.0/components/alerts/\" style=\"background-image: url(http://getbootstrap.com/docs/4.0/assets/brand/bootstrap-social.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://getbootstrap.com/docs/4.0/components/alerts/\" title=\"Alerts\">Alerts</a></div><div class=\"message_embed_description\">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</div></div></div>",
+        "id": 210346564,
+        "sender_full_name": "klonos",
+        "timestamp": 1600315957
+    },
+    {
+        "content": "<p>I think that we have an issue for it somewhere</p>",
+        "id": 210346574,
+        "sender_full_name": "klonos",
+        "timestamp": 1600315977
+    },
+    {
+        "content": "<p>...yup, here it is: <a href=\"https://github.com/backdrop/backdrop-issues/issues/3179\">#3179</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3179\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3179\" title=\"[DX] Use proper 'success' message type and deprecate the ambiguous 'status' type. · Issue #3179 · backdrop/backdrop-issues\">[DX] Use proper 'success' message type and deprecate the ambiguous 'status' type. · Issue #3179 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is kind of a follow up of #3155 (comment) which implements a 4th &#39;info&#39; message type. As &#39;status&#39; messages are displayed with a green light, there are definitly more &#39;succe...</div></div></div>",
+        "id": 210346598,
+        "sender_full_name": "klonos",
+        "timestamp": 1600316017
+    }
+]

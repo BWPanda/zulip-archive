@@ -1,0 +1,92 @@
+[
+    {
+        "content": "<p>Oooh, I love the new path autocomplete feature! Was able to create a link to <code>/user/login</code> just by typing <code>log</code> and selecting it from the autocomplete dropdown <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 197237461,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589264576
+    },
+    {
+        "content": "<p>And thank you for that <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ++</p>",
+        "id": 197245942,
+        "sender_full_name": "klonos",
+        "timestamp": 1589272036
+    },
+    {
+        "content": "<p>(peter)** kudos (Karma: 24)</p>",
+        "id": 197245943,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1589272036
+    },
+    {
+        "content": "<p>I'm not sure if this is a related thing or a bug in CKEditor, but I figure someone here will know what to do about this. All of this relates to the title of a page, not the path—am I right that I need to upgrade to get the path autocomplete feature? (I'm on 1.15.1.)</p>\n<p>After clicking the link button and typing a few characters, a dropdown menu appears suggesting existing links to include here. But the behavior is <em>very</em> different depending on UI.</p>\n<ul>\n<li>If I mouse over a selection and click it, the correct path appears. I click Save and all is well.</li>\n<li>If I down-arrow to select instead and hit return, the expected behavior is the same, but what actually happens is that the dialog disappears and the saved link is only the initial characters typed.</li>\n<li>In some situations (I haven't isolated which, but maybe when a space is in characters typed), the dropmenu becomes sticky and floats over the page:</li>\n</ul>\n<p><a href=\"/user_uploads/18319/kVPjazICjUavXVuyLuQH7GhC/Screen-Shot-2020-05-15-at-4.39.28-PM.png\">Screen-Shot-2020-05-15-at-4.39.28-PM.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/kVPjazICjUavXVuyLuQH7GhC/Screen-Shot-2020-05-15-at-4.39.28-PM.png\" title=\"Screen-Shot-2020-05-15-at-4.39.28-PM.png\"><img src=\"/user_uploads/18319/kVPjazICjUavXVuyLuQH7GhC/Screen-Shot-2020-05-15-at-4.39.28-PM.png\"></a></div><p>The result is that I'm reviewing a bunch of pages I wrote last month, and maybe half of them have bad links from using the arrow keys instead of the mouse. </p>\n<p>While I'm at it, a feature request: if a page is named \"The Correct Approach,\" I'd like to see it when I type \"corr\". As it stands, \"The,\" \"An,\" etc. are considered significant characters and don't autocomplete.</p>",
+        "id": 197752485,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1589576887
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"294810\">@Jeff Porten</span> can you please take the time to raise separate issues in <a href=\"https://github.com/backdrop/backdrop-issues/issues\">https://github.com/backdrop/backdrop-issues/issues</a> for each of these problems?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 197755277,
+        "sender_full_name": "klonos",
+        "timestamp": 1589578520
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> will do, but might not be quickly</p>",
+        "id": 197757519,
+        "sender_full_name": "Jeff Porten",
+        "timestamp": 1589580156
+    },
+    {
+        "content": "<p>Sure ...I just don't want these reports of existing issues to vanish in the Zulip history warp.</p>",
+        "id": 197757890,
+        "sender_full_name": "klonos",
+        "timestamp": 1589580420
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> I am doing a little more thorough testing with <code>Select2</code> and it is trying to add <code>Select2</code> functionality to all the new path autocomplete fields. Do you know of an easy way to loop through all of the link autocomplete fields? Maybe I can find a way to alter them all to not use Select2.</p>",
+        "id": 200137602,
+        "sender_full_name": "Laryn",
+        "timestamp": 1591641006
+    },
+    {
+        "content": "<p>I'm not sure, I'd have to look over the PR I wrote to remember how I did it...</p>",
+        "id": 200157248,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591651097
+    },
+    {
+        "content": "<p>In a menu, I'm trying to add a path alias that I created manually which points to a Views page with some exposed filters \"pre-filled\". For example <code>views-page?term_1=34&amp;term_2=2</code> but it's not allowing me to add that to the menu.</p>",
+        "id": 206985293,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597441265
+    },
+    {
+        "content": "<blockquote>\n<p>The path 'valid-alias' is either invalid or you don't have access to it.</p>\n</blockquote>",
+        "id": 206985396,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597441329
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> you might be able to do it with a full URL</p>",
+        "id": 207021313,
+        "sender_full_name": "Herb",
+        "timestamp": 1597496902
+    },
+    {
+        "content": "<p>Thanks, I may have to do that but was hoping to avoid since it's a dev URL.</p>",
+        "id": 207023798,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597501074
+    },
+    {
+        "content": "<p>Would it make sense to expand the path autocomplete to include aliases, or is that a bigger deal than I realize?</p>",
+        "id": 207023850,
+        "sender_full_name": "Laryn",
+        "timestamp": 1597501122
+    },
+    {
+        "content": "<p>I'm not sure if that's a path autocomplete thing. I would first look in menu functions and how it recognizes existing routes</p>",
+        "id": 207048623,
+        "sender_full_name": "Herb",
+        "timestamp": 1597541523
+    }
+]

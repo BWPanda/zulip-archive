@@ -1,0 +1,92 @@
+[
+    {
+        "content": "<p>Hello!  I really screwed up an update with Backdrop and after a restore, I'm going to move cautiously!  Would appreciate some help here!<br>\nSo, the proper procedure for an UPDATE is to replace ONLY the Core Directory?  Is that right? <a href=\"/user_uploads/18319/VnBqQvDA7UPHft_B09KtOYG0/Annotation-2020-09-09-142319.png\">Annotation-2020-09-09-142319.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/VnBqQvDA7UPHft_B09KtOYG0/Annotation-2020-09-09-142319.png\" title=\"Annotation-2020-09-09-142319.png\"><img src=\"/user_uploads/18319/VnBqQvDA7UPHft_B09KtOYG0/Annotation-2020-09-09-142319.png\"></a></div>",
+        "id": 209549136,
+        "sender_full_name": "Frederick Wright",
+        "timestamp": 1599675951
+    },
+    {
+        "content": "<p>Hi, Frederick Wright. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 209549137,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1599675951
+    },
+    {
+        "content": "<p>That is correct, but first read the release notes to make sure some files not in <code>core</code> (like <code>.htaccess</code>, <code>settings.php</code>, etc.) were not modified.<br>\nAnd, if you want to really play it safe, first rename <code>core</code> to something else like <code>core-backup</code>, so you have it handy to revert back to, if necessary.</p>",
+        "id": 209549927,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599676381
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"340513\">@Frederick Wright</span>  ^^</p>",
+        "id": 209549942,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599676394
+    },
+    {
+        "content": "<p>Will Do!  Thank you!</p>",
+        "id": 209552761,
+        "sender_full_name": "Frederick Wright",
+        "timestamp": 1599677796
+    },
+    {
+        "content": "<p>BTW Backdrop can update core via UI. That's the by far easiest way, no need to fiddle with directories on the server.</p>",
+        "id": 209604388,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599723311
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Backdrop.20Update/near/209604388\">said</a>:</p>\n<blockquote>\n<p>BTW Backdrop can update core via UI. That's the by far easiest way, no need to fiddle with directories on the server.</p>\n</blockquote>\n<p>That was one of the things I really love about backdrop and hated about D7.</p>",
+        "id": 209810730,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1599845384
+    },
+    {
+        "content": "<p>I've heard a lot of talk today about people being busy updating websites. Is that because of the security releases yesterday?</p>",
+        "id": 217341590,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605826157
+    },
+    {
+        "content": "<p>I have ~10 Drupal sites and ~10 Backdrop sites, and I updated all mine 24 hours ago. Mine are easy because they all use Drupal's/Backdrop's multisite feature (so I only have one instance of Drupal and Backdrop to update).</p>",
+        "id": 217341692,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605826227
+    },
+    {
+        "content": "<p>But everytime this happens I get worried I'm doing it wrong...</p>",
+        "id": 217341715,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605826249
+    },
+    {
+        "content": "<p>I mean, if others are still updating their sites 24 hours later, am I not testing thoroughly, should I not be using multisites, am I missing something important...?</p>",
+        "id": 217341761,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605826293
+    },
+    {
+        "content": "<p>It's like doing an exam and handing yours in in half the time others take, then wondering what questions you missed <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 217341929,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605826390
+    },
+    {
+        "content": "<p>It might not have anything to do with the upgrade itself, but more the infrastructure around it. With multisite, it can be quicker and easier, but with single site, and a dev/test/live and peer review/QA workflow, it can get a lot more time consuming just to get the same update through to production.</p>",
+        "id": 217342728,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1605826926
+    },
+    {
+        "content": "<p>Mmm, good point</p>",
+        "id": 217342798,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605826986
+    },
+    {
+        "content": "<p>I do all my work on live sites <span aria-label=\"big smile\" class=\"emoji emoji-1f604\" role=\"img\" title=\"big smile\">:big_smile:</span> (clients are small enough that it's not an issue, and I have daily backups if needbe).</p>",
+        "id": 217342844,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605827033
+    }
+]

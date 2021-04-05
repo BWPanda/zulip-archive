@@ -1,0 +1,20 @@
+[
+    {
+        "content": "<p>I'm trying to render the search block from within a custom module. This seems to work, except the values I'm trying to pass as parameters aren't taking (e.g. the button shows up and no placeholder text in the search field). Anyone have an idea what I need to change here?</p>\n<div class=\"codehilite\"><pre><span></span>$searchblock = module_invoke(&#39;search&#39;, &#39;block_view&#39;, array( &#39;placeholder&#39; =&gt; &#39;Search&#39;, &#39;button_text&#39; =&gt; &#39;&#39;));\n  $output = render($searchblock[&#39;content&#39;]);\n</pre></div>",
+        "id": 188662016,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582221996
+    },
+    {
+        "content": "<p>Update: First line seems to work like this:<br>\n<code>$searchblock = module_invoke('search', 'block_view', 'search_block', array( 'search' =&gt; array('placeholder' =&gt; 'Search', 'button_text' =&gt; '')));</code></p>",
+        "id": 188663297,
+        "sender_full_name": "Laryn",
+        "timestamp": 1582222865
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Yep, you got it. Note however that the 3rd parameter to <code>module_invoke()</code> is the <code>$delta</code> of the block, and that <code>search_block_view()</code> doesn't seem to use that parameter at all, so you could make that an empty string, or anything else, and it wouldn't matter.</p>",
+        "id": 188666958,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1582225200
+    }
+]

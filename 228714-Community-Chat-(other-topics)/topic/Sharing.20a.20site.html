@@ -1,0 +1,90 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/index.html">Community Chat (other topics)</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html">Sharing a site</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="210991586"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/210991586" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#210991586">(Sep 23 2020 at 12:03)</a>:</h4>
+<p>I've built a site that I would like to share, that is to provide other people with the means to install the site on a host of their choice. Whats the best way to package it up to pass it on? Having used Backup and Migrate this morning to migrate the said site from a staging server to a production server it seems to be quite involved (I followed <a href="https://api.backdropcms.org/documentation/deploying-backup-migrate">https://api.backdropcms.org/documentation/deploying-backup-migrate</a>).</p>
+
+
+
+<a name="211000755"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211000755" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211000755">(Sep 23 2020 at 13:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="307683">@Kevin Golding</span> what you need for any Backdrop site is:</p>
+<ul>
+<li>its codebase</li>
+<li>its database<br>
+Once you have provided people these two things, it's as simple as copying the codebase + importing the database.<br>
+Beyond that, you can make this as complicated/involved as required. For example, if no custom or contrib modules have been used, you basically only need the <code>/files</code> directory (which includes the configuration and media assets) instead of the entire codebase. You can then instruct users to download and install the same version of Backdrop from scratch (instead of copying the entire codebase).</li>
+</ul>
+
+
+
+<a name="211000946"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211000946" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211000946">(Sep 23 2020 at 13:21)</a>:</h4>
+<p><a href="https://api.backdropcms.org/documentation/deploying-backdrop-site">https://api.backdropcms.org/documentation/deploying-backdrop-site</a> could possibly be simplified, as the files directory is usually included in the codebase, and then also the configuration directory is included in the files directory. So unless you've deviated from the defaults, you only need the codebase and the database.</p>
+
+
+
+<a name="211003434"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211003434" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211003434">(Sep 23 2020 at 13:37)</a>:</h4>
+<p>I've updated the documentation in <a href="https://api.backdropcms.org/documentation/deploying-a-backdrop-site">https://api.backdropcms.org/documentation/deploying-a-backdrop-site</a> to include a simple/default scenario, and an advanced scenario. I hope it makes sense.</p>
+
+
+
+<a name="211018854"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211018854" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211018854">(Sep 23 2020 at 15:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> Thank you for the explanation and updated instructions. I think copying the entire codebase is easier then copying some of it over the top of a new install (ie the "Deploying with FTP &amp; PHPmyAdmin" I think is easier to understand than the "Deploying with Backup &amp; Migrate" method).</p>
+<p>Is the import/export of the <code>configuration .gz</code> due to the directory name changing when the database connection string changes?</p>
+
+
+
+<a name="211019760"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211019760" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211019760">(Sep 23 2020 at 15:29)</a>:</h4>
+<p>No worries <span class="user-mention" data-user-id="307683">@Kevin Golding</span> <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span> ...if you have any other comments or suggestions for documentation improvements, then please share them ...I don't understand your last question though. Can you please elaborate?</p>
+
+
+
+<a name="211029403"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211029403" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211029403">(Sep 23 2020 at 16:39)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> Again thank you! I was trying to work out why you have to export the configuration files and import them rather than just copy them as part of the file system. Looking in the <code>settings.php</code> it appears the configuration folder name is derived from a hash of the database connection string, and thus will change when moving to a new server.</p>
+
+
+
+<a name="211033672"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211033672" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211033672">(Sep 23 2020 at 17:13)</a>:</h4>
+<p><span class="user-mention" data-user-id="307683">@Kevin Golding</span> if you're copying over config files you'll need to put them in the staging folder so it can be properly synced</p>
+
+
+
+<a name="211095442"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211095442" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211095442">(Sep 24 2020 at 07:01)</a>:</h4>
+<blockquote>
+<p>it appears the configuration folder name is derived from a hash of the database connection string, and thus will change when moving to a new server.</p>
+</blockquote>
+<p>Not necessarily. The config directory names are defined in settings.php. Whatever you set there will work. You can change that, but it won't get overridden if it's already set. Make sure that the config directory ships with your export.</p>
+
+
+
+<a name="211106117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/228714-Community%20Chat%20%28other%20topics%29/topic/Sharing%20a%20site/near/211106117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Kevin Golding <a href="https://bwpanda.github.io/zulip-archive/stream/228714-Community-Chat-(other-topics)/topic/Sharing.20a.20site.html#211106117">(Sep 24 2020 at 09:14)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> Thanks - I'm starting to get my head around it now :)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

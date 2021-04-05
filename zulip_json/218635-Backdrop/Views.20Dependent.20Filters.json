@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>Anyone up for some testing on a port?<br>\n<a href=\"https://github.com/backdrop-contrib/views_dependent_filters\" title=\"https://github.com/backdrop-contrib/views_dependent_filters\">https://github.com/backdrop-contrib/views_dependent_filters</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/views_dependent_filters\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/views_dependent_filters\" title=\"backdrop-contrib/views_dependent_filters\">backdrop-contrib/views_dependent_filters</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/views_dependent_filters development by creating an account on GitHub.</div></div></div>",
+        "id": 192465255,
+        "sender_full_name": "Laryn",
+        "timestamp": 1585696537
+    },
+    {
+        "content": "<p>Sure, but I need instructions as I never used that module with D7. I played with a view with a dependent filter but - unless I totally misunderstand what it should do - it doesn't seem to work. Plus I get some php warnings/notices. <a href=\"user_uploads/18319/H81uBGf_ECd_A912xFdKKrjb/screenshot-exposed.png\" title=\"user_uploads/18319/H81uBGf_ECd_A912xFdKKrjb/screenshot-exposed.png\">screenshot-exposed.png</a></p>\n<div class=\"message_inline_image\"><a href=\"user_uploads/18319/H81uBGf_ECd_A912xFdKKrjb/screenshot-exposed.png\" title=\"screenshot-exposed.png\"><img src=\"user_uploads/18319/H81uBGf_ECd_A912xFdKKrjb/screenshot-exposed.png\"></a></div>",
+        "id": 192488589,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585723495
+    },
+    {
+        "content": "<p>Ah, some more info: I figured out that a taxonomy term field exposed filter won't appear there, but, for instance, a node title does.</p>\n<p>Update 2: no, not even the title appears reliably.</p>",
+        "id": 192489442,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585724359
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> -- will respond later today!</p>",
+        "id": 192510056,
+        "sender_full_name": "Laryn",
+        "timestamp": 1585737986
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> Basically you need:</p>\n<ol>\n<li>An exposed filter above the Dependent Filter and an exposed filter underneath it.</li>\n<li>Then you can configure the Dependent Filter to use the one that is above as a \"Controller\" and the one that is beneath as a \"Dependent\".</li>\n<li>When the value of the Controller field matches what you've specified, the Dependent field should show, otherwise it should be hidden.</li>\n</ol>",
+        "id": 192563605,
+        "sender_full_name": "Laryn",
+        "timestamp": 1585762094
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Ah, got it, the order matters. But... the exposed filters still don't hide when they should.<br>\nAdditionally I get:<br>\n<code>Warning: implode(): Invalid arguments passed in form_error() (line 1744 of .../core/includes/form.inc).\nNotice: Undefined index: expose in views_handler_filter-&gt;expose_validate() (line 596 of .../core/modules/views/handlers/views_handler_filter.inc).</code></p>\n<p>Will experiment more with that module when I find the time.</p>",
+        "id": 192624882,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1585808969
+    }
+]

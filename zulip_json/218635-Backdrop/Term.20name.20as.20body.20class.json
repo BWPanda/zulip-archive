@@ -1,0 +1,128 @@
+[
+    {
+        "content": "<p>How can I add a taxonomy term name (or the term ID) to the <code>body</code> tag of a node? I guess put something in <code>template.php</code>, but what?</p>",
+        "id": 211058567,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600893211
+    },
+    {
+        "content": "<p>Since you want to change the body tag, and since it's set in <code>page.tpl.php</code>, then you'll want to implement <code>hook_preprocess_page()</code> in a custom module or your theme. You should be able to get the current NID from the URL, load the node, then get the term from there. Then just add it as a class to the <code>$classes</code> array.</p>",
+        "id": 211060174,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600893997
+    },
+    {
+        "content": "<p>Thanks for your hints, <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ! Unfortunately, I still don't know which code to write when I read something like \"get the term from there\".</p>",
+        "id": 211061319,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600894646
+    },
+    {
+        "content": "<p>I've had also a look in Drupal land and found e.g. this snippet which looks similar to what you suggest (adapted to my theme and partly to Backdrop):</p>\n<div class=\"codehilite\"><pre><span></span><code>function salon_preprocess_page(&amp;$variables) {\n  if(arg(0)==&#39;node&#39; &amp;&amp; is_numeric(arg(1))) {\n    $node = node_load(arg(1));\n    $results = _salon_taxonomy_node_get_terms($node);\n    if(is_array($results)) {\n      foreach ($results as $item) {\n        $variables[&#39;classes_array&#39;][] = &quot;taxonomy-&quot;.strtolower(backdrop_clean_css_identifier($item-&gt;name));\n      }\n    }\n  }\n}\n\nfunction _salon_taxonomy_node_get_terms($node, $key = &#39;tid&#39;) {\n  static $terms;\n  if (!isset($terms[$node-&gt;vid][$key])) {\n    $query = db_select(&#39;taxonomy_index&#39;, &#39;r&#39;);\n    $t_alias = $query-&gt;join(&#39;taxonomy_term_data&#39;, &#39;t&#39;, &#39;r.tid = t.tid&#39;);\n    $v_alias = $query-&gt;join(&#39;taxonomy_vocabulary&#39;, &#39;v&#39;, &#39;t.vid = v.vid&#39;);\n    $query-&gt;fields( $t_alias );\n    $query-&gt;condition(&quot;r.nid&quot;, $node-&gt;nid);\n    $result = $query-&gt;execute();\n    $terms[$node-&gt;vid][$key] = array();\n    foreach ($result as $term) {\n      $terms[$node-&gt;vid][$key][$term-&gt;$key] = $term;\n    }\n  }\n  return $terms[$node-&gt;vid][$key];\n}\n</code></pre></div>\n\n\n<p>Result is an error: Base table or view not found: 1146 Table 'taxonomy_vocabulary' doesn't exist. Maybe because it's not a table anymore but in configuration?</p>",
+        "id": 211061416,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600894684
+    },
+    {
+        "content": "<p>Hm, maybe I should try to port <a href=\"https://www.drupal.org/project/term_body_class\">https://www.drupal.org/project/term_body_class</a> instead.</p>",
+        "id": 211061879,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600894945
+    },
+    {
+        "content": "<p>I can help more later if you haven't solved it by then.</p>",
+        "id": 211062367,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600895238
+    },
+    {
+        "content": "<p>Thanks, very kind! In the meantime, I'll give Term Body Class a try (<a href=\"https://github.com/backdrop-contrib/term_body_class\">https://github.com/backdrop-contrib/term_body_class</a>, for now not touched).</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/term_body_class\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/term_body_class\" title=\"backdrop-contrib/term_body_class\">backdrop-contrib/term_body_class</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/term_body_class development by creating an account on GitHub.</div></div></div>",
+        "id": 211062882,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600895471
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I've started to port <a href=\"https://github.com/backdrop-contrib/term_body_class\">Term Body Class</a>, but it's not working yet. Interested to have a look? Code is really small. The module provides an <code>Add as body class</code> checkbox on the field settings of a taxonomy field, e.g. on the Tags field of content type Post. Problem: When I check the box, the value doesn't get saved: After Save, I return to the setting page, and the box is unchecked. Ideas?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/term_body_class\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/term_body_class\" title=\"backdrop-contrib/term_body_class\">backdrop-contrib/term_body_class</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/term_body_class development by creating an account on GitHub.</div></div></div>",
+        "id": 211071086,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600900799
+    },
+    {
+        "content": "<p>I'll see if I can take a look later. In the meantime, here's some working code that I was talking about earlier (adjust as necessary):</p>\n<div class=\"codehilite\" data-code-language=\"PHP\"><pre><span></span><code><span class=\"x\">/**</span>\n<span class=\"x\"> * Implements template_preprocess_page().</span>\n<span class=\"x\"> */</span>\n<span class=\"x\">function [THEME_NAME]_preprocess_page(&amp;$variables) {</span>\n<span class=\"x\">  // Check if this page is a node.</span>\n<span class=\"x\">  if (arg(0) == 'node' &amp;&amp; is_numeric(arg(1))) {</span>\n<span class=\"x\">    // Load the full node object.</span>\n<span class=\"x\">    $node = node_load(arg(1));</span>\n<span class=\"x\">    // Only apply this to certain content types (e.g. post).</span>\n<span class=\"x\">    if ($node-&gt;type == 'post') {</span>\n<span class=\"x\">      // Only apply this certain fields (e.g. field_tags, i.e. the tags vocab).</span>\n<span class=\"x\">      if (isset($node-&gt;field_tags[$node-&gt;langcode])) {</span>\n<span class=\"x\">        // Adds all tags as classes. You could alternatively just use the first</span>\n<span class=\"x\">        // tag with $node-&gt;field_tags[$node-&gt;langcode][0].</span>\n<span class=\"x\">        foreach ($node-&gt;field_tags[$node-&gt;langcode] as $value) {</span>\n<span class=\"x\">          // $value['taxonomy-term'] might not be available straight away (after</span>\n<span class=\"x\">          // adding a new term for example), so you could alternatively load the</span>\n<span class=\"x\">          // term yourself using taxonomy_term_load($value['tid']).</span>\n<span class=\"x\">          $variables['classes'][] = 'tag-' . $value['taxonomy_term']-&gt;name;</span>\n<span class=\"x\">        }</span>\n<span class=\"x\">      }</span>\n<span class=\"x\">    }</span>\n<span class=\"x\">  }</span>\n<span class=\"x\">}</span>\n</code></pre></div>",
+        "id": 211072960,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600902399
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> <a href=\"https://github.com/backdrop-contrib/term_body_class/issues/3\">https://github.com/backdrop-contrib/term_body_class/issues/3</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/term_body_class/issues/3\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/term_body_class/issues/3\" title=\"Get module working · Issue #3 · backdrop-contrib/term_body_class\">Get module working · Issue #3 · backdrop-contrib/term_body_class</a></div><div class=\"message_embed_description\">Helping to fix some bugs and get this module working.</div></div></div>",
+        "id": 211077288,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600906688
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> So nice to wake up and see your posts here and in the issue queue. Looking forward to have a closer look in a few hours. Thank you!</p>",
+        "id": 211097601,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600932788
+    },
+    {
+        "content": "<p>Tested the PR, and it works! (Will clean up the module a bit and make a release next week or so.)</p>",
+        "id": 211130467,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1600954017
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ++</p>",
+        "id": 211291871,
+        "sender_full_name": "klonos",
+        "timestamp": 1601056634
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> <span aria-label=\"pancakes\" class=\"emoji emoji-1f95e\" role=\"img\" title=\"pancakes\">:pancakes:</span> (Karma: 7)</p>",
+        "id": 211291872,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601056634
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> ++</p>",
+        "id": 211291884,
+        "sender_full_name": "klonos",
+        "timestamp": 1601056639
+    },
+    {
+        "content": "<p><strong>bwpanda</strong> Cheers (Karma: 8)</p>",
+        "id": 211291885,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601056639
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ++</p>",
+        "id": 211291904,
+        "sender_full_name": "klonos",
+        "timestamp": 1601056648
+    },
+    {
+        "content": "<p>grabienski** great work (Karma: 11)</p>",
+        "id": 211291905,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601056648
+    },
+    {
+        "content": "<p>Just released, <a href=\"https://backdropcms.org/project/term_body_class\">https://backdropcms.org/project/term_body_class</a></p>",
+        "id": 211558256,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1601331899
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> ++</p>",
+        "id": 211558377,
+        "sender_full_name": "klonos",
+        "timestamp": 1601331974
+    },
+    {
+        "content": "<p>grabienski** Props to you for all your hard work. (Karma: 12)</p>",
+        "id": 211558378,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1601331974
+    }
+]

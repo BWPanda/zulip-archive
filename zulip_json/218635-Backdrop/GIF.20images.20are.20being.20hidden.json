@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>I think CKEditor is doing this, not sure. GIF images are hidden when I try to display them in a textarea. It could be because it's an animated GIF, though even if I first upload it as a file, it does this. E.g.</p>\n<div class=\"codehilite\"><pre><span></span>&lt;img src=&quot;/files/inline-files/sample-animation.gif&quot; hidden=&quot;&quot; style=&quot;display: none !important;&quot;&gt;\n</pre></div>",
+        "id": 187025580,
+        "sender_full_name": "Herb",
+        "timestamp": 1580414890
+    },
+    {
+        "content": "<p>ah wait... ad blocker!</p>",
+        "id": 187025688,
+        "sender_full_name": "Herb",
+        "timestamp": 1580414995
+    },
+    {
+        "content": "<p>Ha! <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span> Was just about to say that it's working for me.</p>",
+        "id": 187025794,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580415066
+    },
+    {
+        "content": "<p>Yeah. This happens when I have to throw up an ad for work but always have an ad blocker</p>",
+        "id": 187025903,
+        "sender_full_name": "Herb",
+        "timestamp": 1580415136
+    },
+    {
+        "content": "<p>Drupal/Backdrop do not have good support for animated GIFs. Once the uploaded .gif is processed (image styles), it loses its animation. See <a href=\"https://github.com/backdrop/backdrop-issues/issues/4301\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/4301\">https://github.com/backdrop/backdrop-issues/issues/4301</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4301\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4301\" target=\"_blank\" title=\"Better support/handling of animated gifs · Issue #4301 · backdrop/backdrop-issues\">Better support/handling of animated gifs · Issue #4301 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Drupal/Backdrop does not handle animated gifs well. This is mainly to the fact that when any image style is applied to animated gifs, they are turned into static gifs. This issue here is in order t...</div></div></div>",
+        "id": 187467307,
+        "sender_full_name": "klonos",
+        "timestamp": 1580918989
+    }
+]

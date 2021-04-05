@@ -1,0 +1,452 @@
+[
+    {
+        "content": "<p>I have no personal blog ...no need really; if there is something important that I have to say for the world to read, then it will most likely be about Backdrop <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...so I can do it on our blog. Today I wanted to rant about the upcoming Drupal 9 release, but I felt that it wasn't gonna look good if published in <a href=\"http://b.org\" title=\"http://b.org\">b.org</a> ...I had nothing nice to say <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 196968258,
+        "sender_full_name": "klonos",
+        "timestamp": 1588990034
+    },
+    {
+        "content": "<p>...I am rehashing here what I posted in the \"Random\" Slack channel of the agency I work for:</p>",
+        "id": 196968264,
+        "sender_full_name": "klonos",
+        "timestamp": 1588990067
+    },
+    {
+        "content": "<p>For the past couple of weeks I've been reading articles about the upcoming release of Drupal 9 (anything that comes up after googling \"Drupal 9 what's new\") and everyone seems to try to get people excited about the new release (organizing release parties globally etc.) ...well, I can't help but think that it is just a hoax or a marketing gimmick ...unless you are a developer, this release simply does not add anything of substantial value.</p>\n<p>Many of these articles try to \"invent\" advantages/features <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...they all seem to basically say:</p>\n<blockquote>\n<p>...there are a few advantages of upgrading to Drupal 9:<br>\n1. Easier upgrade from Drupal 8<br>\n2. Contributed modules compatibility<br>\n3. You don’t have much time!</p>\n</blockquote>\n<p>Point 1 and 2 are the same (IMO one is basically just a side-effect of the other), because nothing has really changed. They both could be summed up in \"We just did code clean-up, so nothing major to break backwards compatibility\". ...and point 3, no matter how these articles choose to phrase it, it's just a joke; it just ain't a feature/advantage.</p>\n<p>I have seen the performance tests of Symfony 3.x vs 4.x and there is indeed performance gain; same as moving from php5 to php7 - no doubt. But has anyone done performance benchmark of Drupal 8.x vs 9.x? I haven't seen any article about that. ...I am really curious to see what the savings will be in the GovCMS platform after all those ~400 sites have been upgraded to GovCMS9 <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> ...if there is substantial difference there, then I will be impressed.</p>\n<p>If you are a site owner, the gist of it is that you have to pay $$$ for the mere fact that D8 will become EoL; and the irony of it is that the end product itself does not have any need for that; you'll get no \"tangible\" benefit in the admin UI, so nothing there for content editors and site builders (and don't anyone dare mention the new Claro theme as an argument here - it is indeed a big improvement in many aspects, such as consistency and accessibility; but it is a Drupal 8 theme; it has been developed as such throughout its dev cycle. ...it just becomes the default theme in D9 - people do not have to upgrade to D9 to get it; they can have it now with D8 if they want) ...anyway, it feels that with D9 it's just that the underlying technologies that were added as dependencies are becoming EoL (symphony basically) so the end product has no option but to follow the release cycle of these technologies <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span> </p>\n<p>...site builders (people that use their CMS as a lego-style site building tool and only touch code if they absolutely must) also get no benefit out of D9 the way I see it; same features as Drupal 8.9.0 really.</p>\n<p>Bottom line is that I see Drupal 9 as a developer-focused release, with code/framework improvements. Which makes me wonder why the hell Dries is calling for a community survey? The results in 2016 clearly showed what the community wanted to focus on, and the people that drive the product did the complete opposite:</p>",
+        "id": 196968307,
+        "sender_full_name": "klonos",
+        "timestamp": 1588990088
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/rU07Da4ekDezhUauMUngpQKq/image.png\" title=\"image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/rU07Da4ekDezhUauMUngpQKq/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/rU07Da4ekDezhUauMUngpQKq/image.png\"></a></div>",
+        "id": 196968324,
+        "sender_full_name": "klonos",
+        "timestamp": 1588990146
+    },
+    {
+        "content": "<p>...the trigger for all that was this: <a href=\"https://dri.es/drupal-2020-product-survey\" title=\"https://dri.es/drupal-2020-product-survey\">https://dri.es/drupal-2020-product-survey</a></p>",
+        "id": 196968346,
+        "sender_full_name": "klonos",
+        "timestamp": 1588990174
+    },
+    {
+        "content": "<p>I feel like WordPress is MacOS, Drupal is Windows (D7 is WinXP), and Backdrop is [insert your Linux distro of choice].</p>",
+        "id": 196972367,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1588997205
+    },
+    {
+        "content": "<p>I haven't looked for any marketing material on Drupal 9 but I do appreciate their change of approach from previous releases. It's a relief that it will be much easier to upgrade. That's most important to our clients as well.</p>",
+        "id": 196986575,
+        "sender_full_name": "Herb",
+        "timestamp": 1589023018
+    },
+    {
+        "content": "<p>From the <a href=\"http://d.org\" title=\"http://d.org\">d.org</a> docs: \"Drupal 9 will be a cleaned-up version of Drupal 8. It will be the same as the last Drupal 8 minor version with our own deprecated code removed and third-party dependencies updated.\"</p>",
+        "id": 196986590,
+        "sender_full_name": "Herb",
+        "timestamp": 1589023041
+    },
+    {
+        "content": "<p><a href=\"https://www.drupal.org/docs/9\" title=\"https://www.drupal.org/docs/9\">https://www.drupal.org/docs/9</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.drupal.org/docs/9\" style=\"background-image: url(https://www.drupal.org/files/Drupal9API.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.drupal.org/docs/9\" title=\"Drupal 9\">Drupal 9</a></div><div class=\"message_embed_description\">Drupal 9 will be a cleaned-up version of Drupal 8. It will be the same as the last Drupal 8 minor version with our own deprecated code removed and third-party dependencies updated. Most extensions will only need a few changes. Read more about how this is done and what it means.</div></div></div>",
+        "id": 196986596,
+        "sender_full_name": "Herb",
+        "timestamp": 1589023062
+    },
+    {
+        "content": "<p>I think they shouldn't pretend it's anything more than something for developers. That's a good thing</p>",
+        "id": 196988117,
+        "sender_full_name": "Herb",
+        "timestamp": 1589025204
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda (Peter)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Drupal.209/near/196972367\" title=\"#narrow/stream/218635-Backdrop/topic/Drupal.209/near/196972367\">said</a>:</p>\n<blockquote>\n<p>I feel like WordPress is MacOS, Drupal is Windows (D7 is WinXP), and Backdrop is [insert your Linux distro of choice].</p>\n</blockquote>\n<p>I think the opposite based on popularity and cost: WP is Windows, Drupal is Mac ...but I see the correlation you are making with D7/Win7, D8/Win8 D9/Win10</p>",
+        "id": 196988126,
+        "sender_full_name": "klonos",
+        "timestamp": 1589025230
+    },
+    {
+        "content": "<p>I agree <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> ...there was a somewhat intense discussion on Slack between one of the TLs in our agency and myself ...we concluded to the same: Drupal 9 is not being marketed towards something that site owners and enterprise will benefit from in a direct way.</p>",
+        "id": 196988277,
+        "sender_full_name": "klonos",
+        "timestamp": 1589025396
+    },
+    {
+        "content": "<p>Rehashing another thing that I mentioned during that discussion:</p>\n<blockquote>\n<p>...the trigger for my rant was Drie's blog post calling for a community survey. I find it hypocritical to do the survey, have the results say that we should focus product decissions on what content editors and site builder want, and then prioritize developer needs.</p>\n</blockquote>",
+        "id": 196988323,
+        "sender_full_name": "klonos",
+        "timestamp": 1589025467
+    },
+    {
+        "content": "<p>I just realised something very interesting... If anything were to happen to Backdrop CMS, I'd start to learn and use Wordpress over Dupal 8+</p>",
+        "id": 197002095,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589044818
+    },
+    {
+        "content": "<p>I've had no choice but to learn Drupal 8 plus some WordPress. It's not all bad, there are definitely some powerful and useful things such as Migrate and Webform. The old block system is annoying.</p>",
+        "id": 197008575,
+        "sender_full_name": "Herb",
+        "timestamp": 1589052856
+    },
+    {
+        "content": "<p>I can troubleshoot issues with Drupal 8 sites, but if it comes down to php/twig, 99% of the times I have to hand over to other developers <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 197012642,
+        "sender_full_name": "klonos",
+        "timestamp": 1589058095
+    },
+    {
+        "content": "<p>I gave up on D8... not even looking at D9.</p>\n<p>I was going to move to WP but found you guys and really appreciate your efforts on BD... Been using it for new project and plan to migrate my 150+ D7 sites across...  when time permits.</p>\n<p>I'd love to help out but time is my problem... being a busy fool an all lol.</p>\n<p>I have built a few WP sites and using it for a 40k product webshop...  but it's a nightmare, hey ho, needs must.</p>",
+        "id": 197789043,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1589624971
+    },
+    {
+        "content": "<p>Hi, Steve Moorhouse. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 197789044,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1589624971
+    },
+    {
+        "content": "<p>Glad you're here <span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> !</p>",
+        "id": 197796470,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589636804
+    },
+    {
+        "content": "<p>Hope did you find out about Backdrop Steve?</p>",
+        "id": 197797621,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589638558
+    },
+    {
+        "content": "<p>I did a search for Drupal alternatives.... Been using it 8 months ish...  We have spoken before on the other platform <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span> Not sure how I logged in, could have been through but probably as AlbanyComputers</p>",
+        "id": 197815191,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1589663155
+    },
+    {
+        "content": "<p>Recognised the name, just curious. I've always wondered if we really are truly reaching our potential audience.</p>",
+        "id": 197821697,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589674129
+    },
+    {
+        "content": "<p>150+ Drupal 7 sites!? That's a few. <span class=\"user-mention\" data-user-id=\"280045\">@Steve Moorhouse</span></p>",
+        "id": 197823313,
+        "sender_full_name": "Herb",
+        "timestamp": 1589677491
+    },
+    {
+        "content": "<p>I've been doing websites since 1999 <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197837940,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1589704764
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> would you be willing to provide me with access to a simple D7 site you have and more complex D7 site so I can try upgrade paths on a simple and complex D7 --&gt; Backdrop for HowToBackdrop [dot] com?</p>",
+        "id": 197986865,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589831402
+    },
+    {
+        "content": "<p>Yeah, no problem... I will copy a couple of sites onto a test server if that's any use?</p>",
+        "id": 197998339,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1589837621
+    },
+    {
+        "content": "<p>are they in verision control/git?</p>",
+        "id": 197998489,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589837726
+    },
+    {
+        "content": "<p>no, all individual installs</p>",
+        "id": 197999410,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1589838314
+    },
+    {
+        "content": "<p>ok; if you can give me access to a test server I that I can get the DB .files, and D7 code from I can take it from there ... thanks!</p>",
+        "id": 197999462,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589838361
+    },
+    {
+        "content": "<p>if the <code>complicated</code> site uses either <code>field_collection</code> or <code>paragraphs</code> that would be swell;</p>",
+        "id": 197999618,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589838470
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> ++</p>",
+        "id": 198001727,
+        "sender_full_name": "klonos",
+        "timestamp": 1589839834
+    },
+    {
+        "content": "<p>(serundeputy)** <span aria-label=\"pancakes\" class=\"emoji emoji-1f95e\" role=\"img\" title=\"pancakes\">:pancakes:</span> (Karma: 13)</p>",
+        "id": 198001728,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1589839834
+    },
+    {
+        "content": "<p>I’d be super interested in something to do with field collection and paragraphs as I’ve been trying to solve that puzzle for a while.</p>",
+        "id": 198066757,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1589895653
+    },
+    {
+        "content": "<p>Justin if you have a codebase, db, and files that I can have access to I can explore the situation.</p>",
+        "id": 198067999,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589896188
+    },
+    {
+        "content": "<p>Well, retrieving the Drupal version might be challenging but I think I can scrounge up something from before I started with Backdrop. The field collection involved custom modules though.</p>",
+        "id": 198070145,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1589897052
+    },
+    {
+        "content": "<p>kk</p>",
+        "id": 198072080,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589897833
+    },
+    {
+        "content": "<p>Sorry for the delay...<br>\nIf it's just the DB and code I'll do a backup and send you the link... Let me know your email address and I'll add you as an admin user before backing up the site... should save a bit of hassel.</p>",
+        "id": 198358677,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1590086069
+    },
+    {
+        "content": "<p>I've only used paragraphs once...  it was ok, but most of my clients are not technical so I tend to do most of the updates for them.</p>",
+        "id": 198358799,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1590086142
+    },
+    {
+        "content": "<p><code>sites/default/files</code> would be useful too; <a href=\"mailto:serundeputy@gmail.com\">serundeputy@gmail.com</a>, but i should be able to get in w/ <code>drush uli</code></p>",
+        "id": 198359169,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590086317
+    },
+    {
+        "content": "<p>Just sent a link to your email address for onedrive... it's a full backup from backup and migrate.</p>\n<p>Also sent a link from google drive</p>\n<p>It's an old site, nothing fancy.</p>",
+        "id": 198362836,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1590088132
+    },
+    {
+        "content": "<p>kk; thanks</p>",
+        "id": 198363924,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1590088662
+    },
+    {
+        "content": "<p>I tested Drupal 9 &amp; I find its same as like Drupal 8 But Drupal 9 Speed impressed me.Its faster then WordPress, Drupal 7/8 &amp; backdrop.</p>",
+        "id": 199664147,
+        "sender_full_name": "Tuhin",
+        "timestamp": 1591212042
+    },
+    {
+        "content": "<p>Hi, Tuhin. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 199664150,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1591212043
+    },
+    {
+        "content": "<p>Because of all the removed deprecated code?</p>",
+        "id": 199664541,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1591212269
+    },
+    {
+        "content": "<p>Yeah, that could be the reason <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> ...plus symfony v4 and twig v2 I guess.</p>",
+        "id": 199668318,
+        "sender_full_name": "klonos",
+        "timestamp": 1591213948
+    },
+    {
+        "content": "<p>Ah, that makes more sense.</p>",
+        "id": 199669543,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1591214522
+    },
+    {
+        "content": "<p>From Dries' D9 release blog post:</p>\n<p>\"We made so much progress on such important things:</p>\n<ul>\n<li>Drupal 9 is dramatically easier to use for marketers</li>\n<li>Drupal 9 is easier to maintain and upgrade for developers</li>\n<li>Drupal is innovating with its headless or decoupled capabilities\"</li>\n</ul>\n<p>Interesting that none of that has to do with, or really benefits, end-users...</p>",
+        "id": 199687942,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591225443
+    },
+    {
+        "content": "<p><a href=\"https://dri.es/drupal-9-0-0-released\">https://dri.es/drupal-9-0-0-released</a></p>",
+        "id": 199687979,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591225452
+    },
+    {
+        "content": "<p>Yes! we have to take advantage to review Drupal 9 and Make Backdrop CMS more Faster because Backdrop CMS used for low footprint and Better performance &amp; speed then Drupal 7/8 &amp; WordPress.</p>",
+        "id": 199706000,
+        "sender_full_name": "Tuhin",
+        "timestamp": 1591247539
+    },
+    {
+        "content": "<p>The first thing we would need is benchmarks <a href=\"https://backdropcms.org/news/backdrop-vs-drupal-7-benchmarks-php-55-56-and-70\">https://backdropcms.org/news/backdrop-vs-drupal-7-benchmarks-php-55-56-and-70</a> and page speed tests so we know where/what to improve ... maybe file an issue</p>",
+        "id": 199739007,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1591273801
+    },
+    {
+        "content": "<p>\"The upgrade from Drupal 8 to Drupal 9 is the easiest major upgrade in the last 10-plus years.\" ...well, it's also the first ever;-)))</p>",
+        "id": 199741443,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1591275145
+    },
+    {
+        "content": "<p>Yes! Geoff We need to review Benchmarks check.Also As I know SYmfony  shower PHP Framework. I think BigPipe module doing something spacial.</p>",
+        "id": 199779926,
+        "sender_full_name": "Tuhin",
+        "timestamp": 1591291062
+    },
+    {
+        "content": "<p>symfony != slow if that is what you are getting at;</p>",
+        "id": 199782098,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1591291904
+    },
+    {
+        "content": "<p>phalcon is aastest framework and symphony slowest Php Framework. <a href=\"https://github.com/kenjis/php-framework-benchmark\">https://github.com/kenjis/php-framework-benchmark</a><br>\n<a href=\"http://apetrail.com/php-framework/benchmarkphp/\">http://apetrail.com/php-framework/benchmarkphp/</a></p>\n<p><span class=\"user-mention silent\" data-user-id=\"256583\">Geoff St. Pierre (serundeputy)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Drupal.209/near/199782098\">said</a>:</p>\n<blockquote>\n<p>symfony != slow if that is what you are getting at;</p>\n</blockquote>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/kenjis/php-framework-benchmark\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/87955?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/kenjis/php-framework-benchmark\" title=\"kenjis/php-framework-benchmark\">kenjis/php-framework-benchmark</a></div><div class=\"message_embed_description\">PHP Framework Benchmark. Contribute to kenjis/php-framework-benchmark development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://apetrail.com/php-framework/benchmarkphp/\" style=\"background-image: url(http://apetrail.com/wp-content/uploads/2016/09/benchmarkPHP.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://apetrail.com/php-framework/benchmarkphp/\" title=\"benchmarkphp - Apetrail Software Pvt. Ltd.\">benchmarkphp - Apetrail Software Pvt. Ltd.</a></div><div class=\"message_embed_description\">Your email address will not be published.</div></div></div>",
+        "id": 199816115,
+        "sender_full_name": "Tuhin",
+        "timestamp": 1591309405
+    },
+    {
+        "content": "<blockquote>\n<p>CentOS 6.8 64bit (VM; VirtualBox)</p>\n</blockquote>\n<div class=\"codehilite\"><pre><span></span><code>PHP 5.6.30 (Remi RPM)\n    Zend OPcache v7.0.6-dev\nApache 2.2\n</code></pre></div>",
+        "id": 199873068,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1591362527
+    },
+    {
+        "content": "<p>i'd hardly take this as an exhaustive canonical benmark, but we should open an issue so our comments are not ephemeral in chat, and we can work towards speed improvements in Backdrop.</p>",
+        "id": 199873170,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1591362581
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"274685\">@Tuhin</span> we have this issue <a href=\"https://github.com/backdrop/backdrop-issues/issues/3302\">https://github.com/backdrop/backdrop-issues/issues/3302</a> if you want to drop some of your comments into it</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3302\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3302\" title=\"[META] Make Backdrop sites perform better OOTB in Google PageSpeed · Issue #3302 · backdrop/backdrop-issues\">[META] Make Backdrop sites perform better OOTB in Google PageSpeed · Issue #3302 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea When you run a new Backdrop site through the google PageSpeed Developer tool, it should get a better score without developers needing to &quot;fix&quot; a lot of things....</div></div></div>",
+        "id": 199874288,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1591363108
+    },
+    {
+        "content": "<p>I'd Like to see those are in Backdrop Core from Drupal 8<br>\nInternal Dynamic Page Cache<br>\nInternal Page Cache<br>\nBigPipe</p>\n<p><span class=\"user-mention silent\" data-user-id=\"256583\">Geoff St. Pierre (serundeputy)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Drupal.209/near/199874288\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"274685\">Tuhin</span> we have this issue <a href=\"https://github.com/backdrop/backdrop-issues/issues/3302\">https://github.com/backdrop/backdrop-issues/issues/3302</a> if you want to drop some of your comments into it</p>\n</blockquote>",
+        "id": 199898049,
+        "sender_full_name": "Tuhin",
+        "timestamp": 1591372994
+    },
+    {
+        "content": "<p>I believe that the Internal Page Cache module is what Backdrop currently uses for it's cache strategy. The other ones would probably need the cache tags to be implemented first.</p>",
+        "id": 199904230,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1591375650
+    },
+    {
+        "content": "<p>Big Pipe has an entry in the D8 parity meta-issue: <a href=\"https://github.com/backdrop/backdrop-issues/issues/378\">https://github.com/backdrop/backdrop-issues/issues/378</a> ...but we have decided against it. There's more discussion around it in <a href=\"https://github.com/backdrop/backdrop-issues/issues/1413\">https://github.com/backdrop/backdrop-issues/issues/1413</a> and mostly in the dedicated <a href=\"https://github.com/backdrop/backdrop-issues/issues/1716\">https://github.com/backdrop/backdrop-issues/issues/1716</a> ...at some point I recall reading some article claiming that the technique is not as good as promised ...or causing more problems down the line. I cannot find it now though.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/378\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/378\" title=\"[D8][META] Consider adding modules/features to core for parity with Drupal 8 · Issue #378 · backdrop/backdrop-issues\">[D8][META] Consider adding modules/features to core for parity with Drupal 8 · Issue #378 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Based on the presentation by Dave Reid at Drupalcon Amsterdam 2014, the &quot;Core modules&quot; list in d.org and other sources (like the d.org issue queue and the D8 change records). Modules to b...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1413\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1413\" title=\"Performance improvement:  render cache. · Issue #1413 · backdrop/backdrop-issues\">Performance improvement:  render cache. · Issue #1413 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I promised to improve BD performance by introducing render cache around 1 month ago. Finally first stable release is ready. Sometimes it boost BD twice. You can see code changes here You can test i...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1716\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1716\" title=\"Port and merge BigPipe in core (feature parity with D8). · Issue #1716 · backdrop/backdrop-issues\">Port and merge BigPipe in core (feature parity with D8). · Issue #1716 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Included in D8 currently as experimental module: https://www.drupal.org/project/big_pipe https://www.youtube.com/watch?v=JwzX0Qv6u3A This issue is part of #378</div></div></div>",
+        "id": 199905945,
+        "sender_full_name": "klonos",
+        "timestamp": 1591376489
+    },
+    {
+        "content": "<p>They seem to have added lazy loading for images by default in D9.1: <a href=\"https://www.drupal.org/node/3173719\">https://www.drupal.org/node/3173719</a></p>",
+        "id": 212763601,
+        "sender_full_name": "klonos",
+        "timestamp": 1602201215
+    },
+    {
+        "content": "<p><a href=\"https://twitter.com/TimLehnen/status/1312128970742095873\">https://twitter.com/TimLehnen/status/1312128970742095873</a></p>\n<div class=\"inline-preview-twitter\"><div class=\"twitter-tweet\"><a href=\"https://twitter.com/TimLehnen/status/1312128970742095873\"><img class=\"twitter-avatar\" src=\"https://pbs.twimg.com/profile_images/735127066526384134/HSusuMom_normal.jpg\"></a><p>Lazy-loading of all images by default just got committed to #Drupal 9.1. All Drupal sites on 9.1 and beyond just got faster! Our thanks to <a href=\"https://twitter.com/Google\">@Google</a> for sponsoring this initiative, and to our friends at <a href=\"https://twitter.com/tag1consulting\">@tag1consulting</a> for getting it over the line. <a href=\"https://t.co/IygvPxc8iL\">https://www.drupal.org/project/drupal/issues/3167034</a></p><span>- hestenet (@TimLehnen)</span></div></div>",
+        "id": 212766974,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1602204609
+    },
+    {
+        "content": "<p>...except they've implemented it on the image theme layer instead of image field settings as we did in Backdrop.</p>",
+        "id": 212769457,
+        "sender_full_name": "klonos",
+        "timestamp": 1602207413
+    },
+    {
+        "content": "<p>This is an old thread and I'm woefully behind on keeping up with the goings on in Backdrop because I've been stuck in Drupal.  I'm wondering about the upgrade from Drupal 8 to 9 and I'm asking in here because it seems safer.  I thought the upgrade path was easier now that Drupal learned from their mess up.  Is it common for agencies to try and charge a huge cost like they did from 7 to 8?  I'm looking at a site after running Upgrade Status.  The report seems to say that the custom code is fine.  The only thing that needs to change is updating the info.yml files to show compatibility with D9.  The problems appear to be with the contrib modules that were not kept up to date.  There are D9 versions available but when they haven't been upgraded it years getting to the D9 version is a problem.  All of this feels fishy to me when the agency is saying that there's a lot of custom code to update.  That doesn't seem like the hard part.</p>",
+        "id": 228666702,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1614805027
+    },
+    {
+        "content": "<p>Theoretically, if the site/module/theme/whatever has been kept current with the latest version of Drupal, going from 8.9 to 9.0 should be no big deal. However, as you have noticed, not everyone does that, and that would be where the costs might come in.<br>\nIt might also be that you could take a D9 version of a module or theme, modify the info.yml file to be inline with D8.9 and upgrade from there, though I haven't tried that, and I wouldn't take that bet. It really depends on what the module is doing and how the various Drupal version bumps affected it. YMMV.</p>",
+        "id": 228669125,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1614805890
+    },
+    {
+        "content": "<p>I guess what I'm getting at is the lack of urgency to keep the contrib space updated.  For example, there was a new version of Webform that is D9 compatible released yesterday but that doesn't do any good if the site is stuck on the version from a year ago.   There are lots like that.</p>",
+        "id": 228672511,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1614807242
+    },
+    {
+        "content": "<p>Yes, and it looks like Webform is about to lose its primary contributor, so I think that module will suffer more because of it.</p>",
+        "id": 228673820,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1614807775
+    },
+    {
+        "content": "<p>The way I see it, the easy D8 to D9 and D9 to D10 upgrades seem to be a marketing trick for continuous work on sites (because that's basically a requirement in order for them to be \"easy\"), instead of doing it in \"burst mode\" when the new version of core comes out. So if you do the math, at the end of the day it's more or less the same amount of work (hence also $$) required ...just spread throughout the course of time between releases.</p>",
+        "id": 229163374,
+        "sender_full_name": "klonos",
+        "timestamp": 1615099946
+    },
+    {
+        "content": "<p>The one thing I think would catapult Drupal forward in this regard, is if they created an automated bot that would look at RTBC issues, look at the timestamp of when they were RTCB and then automatically commit those issues if a certain amount of time has passed say 2 months.</p>\n<p>The biggest problem with Drupal is the fact that the community can contribute, but can't commit without jumping through a bunch of hoops to be added as a maintainer. It's great there are fixes being supplied but if they aren't being committed and released, the fixes aren't really helping anyone.</p>\n<p>I think the biggest hurdle is figuring out how to scan the code for malicious code so it doesn't end up being automatically added by the bot. Maybe it's a matter of the bot simply flagging the RTCB for inclusion and a human reviews the code, but this has its drawbacks as well.</p>\n<p>I guess the point is, for being a system geared towards big business and enterprise, Drupal is still a long way away from doing things that are expected by big business customers.</p>",
+        "id": 229203495,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615138017
+    },
+    {
+        "content": "<blockquote>\n<p>The way I see it, the easy D8 to D9 and D9 to D10 upgrades seem to be a marketing trick for continuous work on sites </p>\n</blockquote>\n<p>This is much too cynical for me to agree with. I believe that the new way that Drupal manages releases is a step forward for the Drupal community and Drupal users. My gripes with Drupal 8/9 are many, but the new release cycle is not one of them. </p>\n<p>In the Drupal world, the new path for upgrades is NOT as easy as it was marketed to be, but I do think it has and will reduce costs for most sites owners. Yes, the claims of 'ease' were overstated by an enthusiastic community with ambitious goals, but I don't think it was a marketing a trick and I think that unless you are maintaining a lot of custom code your overall cost of maintaining/upgrading your site will go down (as compared to the old release cycle). Yes, the costs of maintaining a Drupal 8 site have went up overall, but I don't see cynical marketing tricks or the release cycle as the cause of that.</p>",
+        "id": 229209696,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1615143586
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> automated merging of changes can potentially be very dangerous <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> - code changes simply need human <span aria-label=\"eyes\" class=\"emoji emoji-1f440\" role=\"img\" title=\"eyes\">:eyes:</span> ...what could help would be:</p>\n<ol>\n<li><strong>larger community</strong> ...unfortunately, that in Drupal-land appears to be shrinking, and my personal interpretation of the main reason for that is the drive for a more \"elite\" group of developers. I also think that the idea to \"get off the island\" has basically not worked as they'd expected - it in fact seems to have backfired on Drupal: they were aiming to attract more \"professional\" developers from the larger php community, but what happened is that instead of a dev community loyal to Drupal, they got people that are excited by whatever new technology seems to be coming out every once in a while. If Drupal doesn't adopt these technologies (or adapt in ways to accomodate for them), these developers simply leave Drupal for other platforms/frameworks ...and what you get is community shrinkage over time. What they basically ended up doing is to chase the \"amateur\" developers that loved Drupal away ...they simply did not appreciate how hard it is to build numbers in any community <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span> Drupal should have tried to figure out ways to retain the existing community and keep them happy, while at the same time support technologies/ways to attract new/professional \"manpower\" ...that could have for example been by keeping both D7 and what evolved to be D8/9/10 as two separate products, with parallel support, and allowing people to jump from the \"less professional\" or \"legacy CMS\" to the more advanced/enterprise DXP</li>\n<li><strong>shared responsibility of project maintenance</strong>: I think that ideas like the <a href=\"https://backdropcms.org/leadership/bug-squad\">Bug Squad</a> and easier access to all contrib authors in Backdrop work towards that goal. Not saying that this is perfect - we definitely need more tweaking in process/permissions and how we regulate things, but the bottom line is that these methods of maintaining projects without \"locking\" them to only one or two maintainers, and making these few people feel as if they are \"lifting the weight of the world\" are good steps towards that direction.</li>\n<li><strong>simplification of the code contribution</strong>: Drupal have only recently (this past year I believe) changed to support pull requests - it was 2020 and people still had to work with .patch files in the era of Git <span aria-label=\"rolling eyes\" class=\"emoji emoji-1f644\" role=\"img\" title=\"rolling eyes\">:rolling_eyes:</span> ...and that could have been sorted a decade earlier perhaps (if they focused on that instead of refactoring the codebase to support composer/symfony etc.)</li>\n<li><strong>simplification of code testing</strong>: basically <a href=\"https://www.drupal.org/docs/develop/git/using-git-to-contribute-to-drupal/using-live-previews-on-drupal-core-and-contrib\">https://www.drupal.org/docs/develop/git/using-git-to-contribute-to-drupal/using-live-previews-on-drupal-core-and-contrib</a></li>\n</ol>",
+        "id": 229237577,
+        "sender_full_name": "klonos",
+        "timestamp": 1615169743
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I don't think I'm being cynical ...or maybe I am <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...perhaps a realist? ...if not marketing \"gimmicks\", then what do you make of these:</p>\n<ul>\n<li>\"easier upgrades - but you have to keep your code up to date\" ...I'm reading this as: \"hidden costs over time\" ... and these upgrades did not in fact end up being \"easy\" nor take less time/effort after all ...just work in many smaller bursts spread over time, instead of a big chunk of work (which I admin has its merits)</li>\n<li>\"Drupal 9 is out! ..The great news is that… there’s no breaking news at all\" <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span> <span aria-label=\"rolling eyes\" class=\"emoji emoji-1f644\" role=\"img\" title=\"rolling eyes\">:rolling_eyes:</span> ...I agree that a new release every 6 months is a huge improvement over the old \"it'll be ready when it's ready\" ...I aint arguing that at all - what I am arguing is that D9 was just code cleanup, so still D8 under the hood. I'm patiently waiting for the D9 to D10 upgrade, to see what the community has to say about their real-life experiences with all these promised \"easy\" upgrades.</li>\n</ul>",
+        "id": 229238782,
+        "sender_full_name": "klonos",
+        "timestamp": 1615170917
+    },
+    {
+        "content": "<p>The approach Drupal is taking is the \"standard\" way of doing things now days. Yes, some modules won't work if the code itself hasn't been updated, however many of the modules will work just fine, they just need the info file updated to specify which versions they are compatible with, and this goes back to the problem of the maintainer not being active and no-one else having the permissions to commit the change to say it's compatible..</p>\n<p>Drupal 9 is RC status, D8 was beta. By D10 the code base and community contribs will be stable enough that many of the issues plaguing the project and contrib will be ironed out.</p>\n<p>Personally, I like the approach Drupal has taken. Major versions shouldn't be a big deal but rather a milestone of stability and code cleanup. Enhancements should be introduced over time, not all at once.</p>\n<p>So, I'm in agreement with <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> that it's less of a marketing gimmick and more of the \"professional\" way of coding which at the end of the day, is the target market Drupal is going after.</p>",
+        "id": 229329935,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615220950
+    },
+    {
+        "content": "<p>I kind of wish Backdrop would take this approach. BD v2 scares the daylights out of me... I hated the D5 -&gt; D6 -&gt; D7 days.</p>",
+        "id": 229330306,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615221063
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> there's been talk about whether we would ever go to v2, or change the way we deprecate things / add new things</p>",
+        "id": 229345482,
+        "sender_full_name": "Herb",
+        "timestamp": 1615226544
+    }
+]

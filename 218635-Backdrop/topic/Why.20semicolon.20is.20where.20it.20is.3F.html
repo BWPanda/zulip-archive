@@ -1,0 +1,83 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html">Why semicolon is where it is?</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="224568145"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224568145" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224568145">(Jan 30 2021 at 05:56)</a>:</h4>
+<p>Quote from <a href="https://docs.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.api.php/function/hook_block_info/1">https://docs.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.api.php/function/hook_block_info/1</a>:</p>
+<blockquote>
+<p><strong>An associative array whose keys define the delta for each block and whose</strong>: values contain the block descriptions. </p>
+</blockquote>
+<p>Is it a mistake or it's my imperfect knowledge of English? I wouldn't divide the sentence like that.</p>
+
+
+
+<a name="224569688"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224569688" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224569688">(Jan 30 2021 at 06:47)</a>:</h4>
+<p>The colon should be removed, and then, I guess, the rest of the sentence bolded.</p>
+
+
+
+<a name="224569804"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224569804" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224569804">(Jan 30 2021 at 06:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="258960">@Alan Mels</span> Its because the @return statement doesn't have a data type after it. See this issue for details: <a href="https://github.com/backdrop/backdrop-issues/issues/3954">https://github.com/backdrop/backdrop-issues/issues/3954</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/3954" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/3954" title="Add missing data type indicators to @return tags throughout core · Issue #3954 · backdrop/backdrop-issues">Add missing data type indicators to @return tags throughout core · Issue #3954 · backdrop/backdrop-issues</a></div><div class="message_embed_description">According to the documentation standards: The @return tag is followed by a data type indicator, and then a newline. The following paragraph is considered by the API module to be documentation. and:...</div></div></div>
+
+
+
+<a name="224569818"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224569818" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224569818">(Jan 30 2021 at 06:52)</a>:</h4>
+<p>The bold part should be the return keyword and then the following datatype. Then a colon is added, and the rest of the text follows. However if there is no datatype, then the whole first line is bolded and the colon added after that.</p>
+
+
+
+<a name="224569865"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224569865" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224569865">(Jan 30 2021 at 06:52)</a>:</h4>
+<p>Since the documentation standards mandate a datatype, then the fix is to add data types where they're missing, as per the issue I linked to.</p>
+
+
+
+<a name="224569869"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224569869" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224569869">(Jan 30 2021 at 06:53)</a>:</h4>
+<p>So no need to report this particular case if the issue is known?</p>
+
+
+
+<a name="224569872"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224569872" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224569872">(Jan 30 2021 at 06:53)</a>:</h4>
+<p>No need, but you're welcome to help fix it via that issue if you like <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="224570039"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224570039" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Alan Mels <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224570039">(Jan 30 2021 at 06:59)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F/near/224569872">said</a>:</p>
+<blockquote>
+<p>No need, but you're welcome to help fix it via that issue if you like <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+</blockquote>
+<p>Oh, so many other more important things to do, I just pass this time to the issue you referenced.</p>
+
+
+
+<a name="224570099"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Why%20semicolon%20is%20where%20it%20is%3F/near/224570099" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Why.20semicolon.20is.20where.20it.20is.3F.html#224570099">(Jan 30 2021 at 07:01)</a>:</h4>
+<p>I understand. That's why I haven't gotten back to it either.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

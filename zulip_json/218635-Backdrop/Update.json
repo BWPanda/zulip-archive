@@ -1,0 +1,338 @@
+[
+    {
+        "content": "<p>Is there any issue running update.php with 1.16? Just updated a site and cliicking updates is just dumping me back to the front page</p>",
+        "id": 198088010,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589904080
+    },
+    {
+        "content": "<p>i haven't tried yet</p>",
+        "id": 198089026,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589904491
+    },
+    {
+        "content": "<p>just did <code>1.15.2</code> --&gt; <code>1.16.0</code> and <code>update.php</code> ran fine;</p>",
+        "id": 198089899,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589904902
+    },
+    {
+        "content": "<p>Interesting, I've left this site for a while so its a 1.11 to 1.16 update. maybe that?</p>",
+        "id": 198089966,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589904938
+    },
+    {
+        "content": "<p>could be;</p>",
+        "id": 198089983,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589904950
+    },
+    {
+        "content": "<p>although i actually did <code>1.15.2</code> --&gt; <code>1.x</code> in case that matters</p>",
+        "id": 198090077,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589904970
+    },
+    {
+        "content": "<p>ill have to increment</p>",
+        "id": 198090086,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589904972
+    },
+    {
+        "content": "<p>try to <code>1.15</code></p>",
+        "id": 198090121,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589904986
+    },
+    {
+        "content": "<p><code>lando drush up core --select</code></p>",
+        "id": 198090158,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589905012
+    },
+    {
+        "content": "<p>no lando, sorry. as i mentioned last week, the windows pro requirements made me abandon it.</p>",
+        "id": 198090367,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589905100
+    },
+    {
+        "content": "<p>tis better on windows w/ the new docker desktop wich fixed alot of windoze pain points</p>",
+        "id": 198090423,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589905134
+    },
+    {
+        "content": "<p>but still <code>drush up core --select</code></p>",
+        "id": 198090444,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589905144
+    },
+    {
+        "content": "<p>sans <code>lando</code></p>",
+        "id": 198090454,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589905150
+    },
+    {
+        "content": "<p>still need windows pro tho</p>",
+        "id": 198090471,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589905158
+    },
+    {
+        "content": "<p>i don't understand; i'm not saying change your windoze;</p>",
+        "id": 198090640,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589905227
+    },
+    {
+        "content": "<p>oh; you are saying you don't have wPro; i get it now</p>",
+        "id": 198091980,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589905846
+    },
+    {
+        "content": "<p>interestingly, i've gone back and upgraded incrementally. update.php worked at each stage until 13.1. then trying to upgrade to 13.3, update.php would not launch</p>",
+        "id": 198094721,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589907009
+    },
+    {
+        "content": "<p>actually its 1.13.1 to 1.13.2 is the last doable one</p>",
+        "id": 198095466,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589907308
+    },
+    {
+        "content": "<p>huh;</p>",
+        "id": 198095492,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589907320
+    },
+    {
+        "content": "<p>anything in the logs?</p>",
+        "id": 198095547,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589907337
+    },
+    {
+        "content": "<p>[Tue May 19 19:09:58 2020] [error] SoftException in Application.cpp:256: File \"/home/myacct/public_html/core/update.php\" is writeable by group, referer: <a href=\"http://mysite.com/admin/reports/dblog\">http://mysite.com/admin/reports/dblog</a></p>",
+        "id": 198096398,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589907652
+    },
+    {
+        "content": "<p>but then looking back, got that for every update that did work</p>",
+        "id": 198096499,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589907699
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Update/near/198095466\">said</a>:</p>\n<blockquote>\n<p>actually its 1.13.1 to 1.13.2 is the last doable one</p>\n</blockquote>\n<p>to be clear, once i have the 1.13.2 codebase in place, i cannot access update.php on that version</p>",
+        "id": 198096808,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589907840
+    },
+    {
+        "content": "<p><code>Application.cpp</code> must be a windoze thing;</p>",
+        "id": 198096877,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589907858
+    },
+    {
+        "content": "<p>do you have a linux VM per chance?</p>",
+        "id": 198096916,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589907871
+    },
+    {
+        "content": "<p>wonder if it is windoze/WAMP specific?</p>",
+        "id": 198096949,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589907885
+    },
+    {
+        "content": "<p>actually its a site on a webhost. small personal site, and was trying to just do the upgrade there via CPanel.</p>",
+        "id": 198097241,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589908004
+    },
+    {
+        "content": "<p>and also got to run now so may now respond for a while</p>",
+        "id": 198097309,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589908026
+    },
+    {
+        "content": "<p>and actually realised getting page not found for update.php</p>",
+        "id": 198097885,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589908286
+    },
+    {
+        "content": "<p><a href=\"https://www.drupal.org/forum/support/upgrading-drupal/2012-05-04/solved-updatephp-script-page-not-found#comment-7613387\">https://www.drupal.org/forum/support/upgrading-drupal/2012-05-04/solved-updatephp-script-page-not-found#comment-7613387</a></p>",
+        "id": 198098429,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589908527
+    },
+    {
+        "content": "<p>Update.php must be 644, not 664.</p>",
+        "id": 198098460,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589908544
+    },
+    {
+        "content": "<p>Fixed</p>",
+        "id": 198098471,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1589908550
+    },
+    {
+        "content": "<p>Running into a very weird error:  Warning: ini_set() has been disabled for security reasons in main() (line 519 of /home/[xxxxx]/public_html/core/update.php).  I've already checked and ini_set is not disabled in php.ini.  It's not causing an error on any other account on the same server.  PHP version is 7.1 (Working on upgrading that).  I get that 4 times whenever I run the update script.  Seems the script runs. I've tried changing ini_set to @ini_set and that doesn't do anything.  Anyone have any ideas?</p>",
+        "id": 211029513,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600879227
+    },
+    {
+        "content": "<p>Maybe try checking <code>/admin/reports/status/php</code> on that site, look for the <code>disable_functions</code> directive in the Core section, and make sure <code>ini_set</code> is not there. If it is, then either the site's using a different php.ini or something is somehow overriding it (if that's even possible).</p>",
+        "id": 211033132,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600880949
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Update/near/211033132\">said</a>:</p>\n<blockquote>\n<p>Maybe try checking <code>/admin/reports/status/php</code> on that site, look for the <code>disable_functions</code> directive in the Core section, and make sure <code>ini_set</code> is not there. If it is, then either the site's using a different php.ini or something is somehow overriding it (if that's even possible).</p>\n</blockquote>\n<p>I checked.  There is no custom php.ini for that site, nor is ini_set disabled on that server.  I. have 4 other backdrop sites on that server and none of them have this problem.  ini_set is working just fine in settings.php on the same site as well.</p>",
+        "id": 211034715,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600881696
+    },
+    {
+        "content": "<p>Is it only for line 519, or is it also for line 453?</p>",
+        "id": 211035929,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600882221
+    },
+    {
+        "content": "<p>I actually really have no idea why it's doing that, I'm just trying to piece together clues that might lead to a solution.</p>",
+        "id": 211036010,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600882268
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Update/near/211035929\">said</a>:</p>\n<blockquote>\n<p>Is it only for line 519, or is it also for line 453?</p>\n</blockquote>\n<p>Only for line 519.  It's bizarre.  And only on that site.</p>",
+        "id": 211036235,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600882371
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Update/near/211036235\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Update/near/211035929\">said</a>:</p>\n<blockquote>\n<p>Is it only for line 519, or is it also for line 453?</p>\n</blockquote>\n<p>Only for line 519.  It's bizarre.  And only on that site.</p>\n</blockquote>\n<p>GAH!!!!  For pete's sake.  I went back and edited the update.php file (AGAIN) and the ampersand wasn't there in front of ini_set.  I've put it in there like 3 times.  I re-added in both places, SAVED, AGAIN. and this time I guess it took. All is well now.  The newer versions of PHP (not that 7 is new) require the ampersand.   I have no idea why it didn't save the first 3 times I did that, but that's server specific, not Backdrop.  There's a wasted 45 minutes I can't get back.</p>",
+        "id": 211037076,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600882758
+    },
+    {
+        "content": "<p>ini_set hasn't changed in PHP 7. <a href=\"https://www.php.net/manual/en/function.ini-set.php\">https://www.php.net/manual/en/function.ini-set.php</a></p>",
+        "id": 211046130,
+        "sender_full_name": "Herb",
+        "timestamp": 1600886916
+    },
+    {
+        "content": "<p>Where did you get the info about putting an ampersand in front? I don't see anything in official page</p>",
+        "id": 211046207,
+        "sender_full_name": "Herb",
+        "timestamp": 1600886956
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256705\">Herb</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Update/near/211046130\">said</a>:</p>\n<blockquote>\n<p>ini_set hasn't changed in PHP 7. <a href=\"https://www.php.net/manual/en/function.ini-set.php\">https://www.php.net/manual/en/function.ini-set.php</a></p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> <br>\nFrom stackoverflow:  <a href=\"https://stackoverflow.com/questions/34082632/warning-ini-set-has-been-disabled-for-security-reasons\">https://stackoverflow.com/questions/34082632/warning-ini-set-has-been-disabled-for-security-reasons</a><br>\nIt doesn't just happen on backdrop and seems to be related to PHP 7.  I've been adding the ampersand in update.php as a matter of course with the new backdrop installations.  ini_set is not disabled on my server configuration, so it's not that.  The ampersand seems to work.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/34082632/warning-ini-set-has-been-disabled-for-security-reasons\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/34082632/warning-ini-set-has-been-disabled-for-security-reasons\" title=\"Warning: ini_set() has been disabled for security reasons\">Warning: ini_set() has been disabled for security reasons</a></div><div class=\"message_embed_description\">How to solve like this problem at my server (Live server).\n\nWarning: ini_set() has been disabled for security reasons in /home/blessin1/public_htm</div></div></div>",
+        "id": 211062336,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600895217
+    },
+    {
+        "content": "<p>You mean the at sign <code>@</code>, not the ampersand <code>&amp;</code>, correct?</p>",
+        "id": 211063132,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600895615
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Update/near/211063132\">said</a>:</p>\n<blockquote>\n<p>You mean the at sign <code>@</code>, not the ampersand <code>&amp;</code>, correct?</p>\n</blockquote>\n<p>Yes, I do.  Sorry!!!  Brain is not firing on all cylinders today.</p>",
+        "id": 211063883,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1600896112
+    },
+    {
+        "content": "<p>The only thing that <code>@</code> does is to ignore errors - it doesn't fix anything</p>",
+        "id": 211065983,
+        "sender_full_name": "Herb",
+        "timestamp": 1600897430
+    },
+    {
+        "content": "<p>and it's been an option for quite a while in PHP</p>",
+        "id": 211066044,
+        "sender_full_name": "Herb",
+        "timestamp": 1600897449
+    },
+    {
+        "content": "<p>Yeah. I was thinking there was some new thing in PHP I needed to educate myself on.</p>",
+        "id": 211069999,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600900017
+    },
+    {
+        "content": "<p>I've heard a bit of talk about how Backdrop can update itself... With a new release available, I want to give that a try. How do I do it?</p>",
+        "id": 211873127,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601533660
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> head to <code>/admin/reports/updates/settings</code> and make sure that the \"Manual self-update\" checkbox is ticked (it is by default) ...then head to any of the \"Update xyz\" pages:</p>\n<ul>\n<li>/admin/appearance/update</li>\n<li>/admin/modules/update</li>\n<li>/admin/structure/layouts/update<br>\n...tick the checkbox next to the core update, click \"Download these updates\", and follow the prompts <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></li>\n</ul>",
+        "id": 211873325,
+        "sender_full_name": "klonos",
+        "timestamp": 1601533901
+    },
+    {
+        "content": "<p>...it currently fails in the tugboat sandboxes with this:<br>\n<a href=\"/user_uploads/18319/y8x1Ib91QUZVNPmaojct8RuV/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/y8x1Ib91QUZVNPmaojct8RuV/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/y8x1Ib91QUZVNPmaojct8RuV/image.png\"></a></div>",
+        "id": 211873406,
+        "sender_full_name": "klonos",
+        "timestamp": 1601533984
+    },
+    {
+        "content": "<p>...would be great to be able to demo that too though <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 211873412,
+        "sender_full_name": "klonos",
+        "timestamp": 1601533998
+    },
+    {
+        "content": "<p>Hmm, seems to require FTP access. Guess that's whyI've never done it.</p>",
+        "id": 211873526,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601534141
+    },
+    {
+        "content": "<p>It shouldn't need ftp -- maybe a file permissions issue?</p>",
+        "id": 211901808,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601555502
+    },
+    {
+        "content": "<p>Authorize.php came up asking for an FTP login</p>",
+        "id": 211903344,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601556281
+    },
+    {
+        "content": "<p>But then I have setup strict permissions on my server, so maybe it is that...</p>",
+        "id": 211903445,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601556321
+    },
+    {
+        "content": "<p>I've started playing on my local with <a href=\"https://github.com/backdrop/backdrop-issues/issues/4671\">#4671</a> and I've found a bug where the updater tells you that the update has been performed, but when you head back to the updates page, you see that it in fact hasn't. ...I need some sanity check please <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span> ...has anyone tried doing an update via the admin UI on sites that this used to work before?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4671\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4671\" title=\"[UX] Updater: Inconsistencies in the last step when updates have failed · Issue #4671 · backdrop/backdrop-issues\">[UX] Updater: Inconsistencies in the last step when updates have failed · Issue #4671 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">As part of a question asked by @BWPanda in our chat re core self-updates, I&#39;ve noticed this at the last step of the updater while trying to run an update of core: What&#39;s wrong with that scr...</div></div></div>",
+        "id": 211926082,
+        "sender_full_name": "klonos",
+        "timestamp": 1601565347
+    }
+]

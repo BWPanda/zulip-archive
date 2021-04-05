@@ -1,0 +1,122 @@
+[
+    {
+        "content": "<p>Hey folks, 1.17.1 and 1.16.4 are coming out today per <a href=\"https://backdropcms.org/security/psa-2020-005\">https://backdropcms.org/security/psa-2020-005</a> They will be security updates. We have tracking issues at:</p>\n<p>1.17.1: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4661\">https://github.com/backdrop/backdrop-issues/issues/4661</a><br>\n1.16.4: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4662\">https://github.com/backdrop/backdrop-issues/issues/4662</a></p>\n<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> and I are taking point but I see <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> is assigned some of the post-release tasks. Chat here as needed.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4661\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4661\" title=\"Backdrop 1.17.1 Release checklist · Issue #4661 · backdrop/backdrop-issues\">Backdrop 1.17.1 Release checklist · Issue #4661 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for Sept 30th, 2020 12pm - 2pm PT Pre-release tasks Merge commits @quicksketch Create the next bugfix milestone @jenlampton Move all unfinished issues to the next bugfix release m...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4662\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4662\" title=\"Backdrop 1.16.3 Release checklist · Issue #4662 · backdrop/backdrop-issues\">Backdrop 1.16.3 Release checklist · Issue #4662 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Release scheduled for Sept 30th, 2020 12pm - 2pm PT Pre-release tasks Merge commits @quicksketch Draft Release notes @jenlampton Include a short, descriptive summary of the release, for example: Ma...</div></div></div>",
+        "id": 211814804,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1601497204
+    },
+    {
+        "content": "<p>PR passed with security fixes and tags are cut:</p>\n<p><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.4\">https://github.com/backdrop/backdrop/releases/tag/1.16.4</a><br>\n<a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.1\">https://github.com/backdrop/backdrop/releases/tag/1.17.1</a></p>\n<p>I nearly forgot to do 1.16.4 first, but I fixed it with a follow-up commit and retag, so 1.17.1 is the \"newest\" release. <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span>  those are ready for release notes. And publishing the SAs.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.4\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.16.4\" title=\"Release 1.16.4 · backdrop/backdrop\">Release 1.16.4 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop 1.16.4</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.1\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.1\" title=\"Release 1.17.1 · backdrop/backdrop\">Release 1.17.1 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop 1.17.1</div></div></div>",
+        "id": 211825949,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1601499332
+    },
+    {
+        "content": "<p>releases have been published</p>",
+        "id": 211828003,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1601500427
+    },
+    {
+        "content": "<p>If my name was on some tasks, I think that has been changed. Do you need anything from me right now?</p>",
+        "id": 211829819,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601501438
+    },
+    {
+        "content": "<p>I'm updating our sites, want to do a quick QA pass on the forum? :)</p>",
+        "id": 211830181,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1601501641
+    },
+    {
+        "content": "<p>Sure</p>",
+        "id": 211830600,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601501890
+    },
+    {
+        "content": "<p>I'm currently working, but soon as I can steal some time to help, I will do so.</p>",
+        "id": 211860530,
+        "sender_full_name": "klonos",
+        "timestamp": 1601516446
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> our tugboat sandboxes will need to be updated too ...I expect that we'll have many people using the demo sites to test things for the OSD 2020 even today.</p>",
+        "id": 211860738,
+        "sender_full_name": "klonos",
+        "timestamp": 1601516687
+    },
+    {
+        "content": "<p>...won't look good to see security warnings on the demo sites.</p>",
+        "id": 211860749,
+        "sender_full_name": "klonos",
+        "timestamp": 1601516706
+    },
+    {
+        "content": "<p>Maybe a silly question: why the delay of two weeks compared to Drupal for almost the same security fixes?</p>",
+        "id": 211874592,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601535296
+    },
+    {
+        "content": "<p>It was agreed the security fix wasn't that urgent, and releasing two weeks ago would have messed with the other release I believe...</p>",
+        "id": 211874805,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601535508
+    },
+    {
+        "content": "<p>This would have been the day after the release of 1.17. I was not involved in discussions, but I think there was concern about about releasing 1.17 on Tuesday, security release on Wednesday, and then another bug fix release two weeks later.</p>",
+        "id": 211874932,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601535615
+    },
+    {
+        "content": "<p>I was under the impression that there'd be another Drupal update released this week, and that we (Drupal Security team and Backdrop Security team) have agreed to release today ...I saw no security releases in <a href=\"http://d.org\">d.org</a> today, so I'm assuming that I was wrong. <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> is the best person to answer that.</p>",
+        "id": 211876423,
+        "sender_full_name": "klonos",
+        "timestamp": 1601537018
+    },
+    {
+        "content": "<p>Drupal security releases are the third Wednesday of every month: <a href=\"https://www.drupal.org/core/release-cycle-overview#dates\">https://www.drupal.org/core/release-cycle-overview#dates</a> (except sometimes for Drupalgedden type releases), so the next one will be on Oct 21st.</p>",
+        "id": 211909201,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601558845
+    },
+    {
+        "content": "<p>Yeah, I'm aware of that <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> ...but was under the impression that there'd be an exception this time (something highly critical) ...I guess I've misinterpreted what Nate said <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 211926847,
+        "sender_full_name": "klonos",
+        "timestamp": 1601565615
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> <span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> Hm, sorry that wasn't entirely clear. We postponed the security fixes entirely because we didn't want to have 1.17.0 come out, and then a security release the very next day. There was no planned Drupal core release yesterday, we're just catching back up to the updates we delayed intentionally. <a href=\"https://backdropcms.org/security/psa-2020-005\">https://backdropcms.org/security/psa-2020-005</a></p>",
+        "id": 211958091,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1601578875
+    },
+    {
+        "content": "<p>Why is milestone 1.17.1 still open? <a href=\"https://github.com/backdrop/backdrop-issues/milestone/95\">https://github.com/backdrop/backdrop-issues/milestone/95</a></p>\n<p>It contains several almost done open issues.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/milestone/95\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/milestone/95\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 213004902,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1602487295
+    },
+    {
+        "content": "<p>Hmm, not sure. 1.17.1 is clearly already out: <a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.1\">https://github.com/backdrop/backdrop/releases/tag/1.17.1</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.1\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/tag/1.17.1\" title=\"Release 1.17.1 · backdrop/backdrop\">Release 1.17.1 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Security release for Backdrop CMS. This release fixes 2 security vulnerabilities:\n\nBackdrop core - Moderately critical - Cross-site scripting - BACKDROP-SA-CORE-2020-005\nBackdrop core - Moderately ...</div></div></div>",
+        "id": 213139839,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602587940
+    },
+    {
+        "content": "<p>Decided to be brave and close that milestone. Even worked out how to move all open issues there to 1.17.2 <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 213140194,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602588224
+    },
+    {
+        "content": "<p>I guess some things just get forgotten sometimes (<em>cough</em> <a href=\"https://github.com/backdrop/backdrop-issues/issues/3547#issuecomment-707672944\">https://github.com/backdrop/backdrop-issues/issues/3547#issuecomment-707672944</a>)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3547#issuecomment-707672944\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3547#issuecomment-707672944\" title=\"Backdrop 1.12.3 release · Issue #3547 · backdrop/backdrop-issues\">Backdrop 1.12.3 release · Issue #3547 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Backdrop 1.12.3 Pre-release tasks Merge commits @quicksketch Create a new bugfix release @quicksketch Create the next bugfix milestone @klonos Move all unfinished issues to the next bugfix release ...</div></div></div>",
+        "id": 213140946,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1602588786
+    }
+]

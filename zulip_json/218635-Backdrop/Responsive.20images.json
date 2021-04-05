@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>I was looking into this conversation about Breakpoints and Picture modules: <a href=\"https://github.com/backdrop-ops/contrib/issues/409\">https://github.com/backdrop-ops/contrib/issues/409</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/409\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/409\" title=\"Port request for Breakpoints · Issue #409 · backdrop-ops/contrib\">Port request for Breakpoints · Issue #409 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Name of the module, theme, or layout Breakpoints Link to the drupal.org module, theme, or layout https://www.drupal.org/project/breakpoints Related forum post https://forum.backdropcms.org/forum/al...</div></div></div>",
+        "id": 209695220,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599765247
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Does Srcset Images have that same functionality? I've looked at it and installed it but having a bit of a hard time figuring out the final steps for configuring it and telling it which styles are intended for which widths/breakpoints...</p>",
+        "id": 209695382,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599765308
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I haven't used it in a while, but I think you just setup image styles (e.g. slideshow-desktop, slideshow-mobile, etc.) then configure srcset images to reference those... Maybe I can help more with a more specific question or screenshots...</p>",
+        "id": 209705529,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599770135
+    },
+    {
+        "content": "<p>I think I just can't figure out how you tell srcset which image style is for mobile, which one is for desktop, for example. <a href=\"/user_uploads/18319/l7R7EAPEHpqp0-kaNNWT6ASo/Screen-Shot-2020-09-11-at-7.19.29-AM.jpg\">Screen-Shot-2020-09-11-at-7.19.29-AM.jpg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/l7R7EAPEHpqp0-kaNNWT6ASo/Screen-Shot-2020-09-11-at-7.19.29-AM.jpg\" title=\"Screen-Shot-2020-09-11-at-7.19.29-AM.jpg\"><img src=\"/user_uploads/18319/l7R7EAPEHpqp0-kaNNWT6ASo/Screen-Shot-2020-09-11-at-7.19.29-AM.jpg\"></a></div>",
+        "id": 209772809,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599826799
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Ah. Here's a quote from the module's README:</p>\n<blockquote>\n<p>srcset lets you specify different image variants which <strong>the browser chooses between</strong> based on the screen size. For example, you can specify a large, medium and small variant of a particular image; then, <strong>depending on the user's screen size, the browser will automatically load the appropriately-sized image</strong>.</p>\n</blockquote>\n<p>You don't choose specific sizes for specific devices, the browser does that.</p>",
+        "id": 209773269,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599827067
+    },
+    {
+        "content": "<p>This might help too: <a href=\"https://html.com/attributes/img-srcset/\">https://html.com/attributes/img-srcset/</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://html.com/attributes/img-srcset/\" style=\"background-image: url(https://html.com/wp-content/uploads/Code.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://html.com/attributes/img-srcset/\" title=\"What Img Srcset Does In HTML5: A Quick &amp; Simple Guide\">What Img Srcset Does In HTML5: A Quick &amp; Simple Guide</a></div><div class=\"message_embed_description\">Defines multiple sizes of the same image, allowing the browser to select the appropriate image source.</div></div></div>",
+        "id": 209773585,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599827241
+    },
+    {
+        "content": "<p>Ah, somehow I missed that. Thanks!</p>",
+        "id": 209776448,
+        "sender_full_name": "Laryn",
+        "timestamp": 1599828867
+    }
+]

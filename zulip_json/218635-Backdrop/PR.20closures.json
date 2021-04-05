@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> I see a bunch of PRs closed by you with no explanation why (primarily in the <a href=\"http://b.org\">b.org</a> repo). The linked issues are still open. Was this a mistake?</p>",
+        "id": 201264108,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1592485426
+    },
+    {
+        "content": "<p>Hm... I wonder if that was a result of deleting the master branch?<br>\nDefinitely not intended! I'll have a look.</p>",
+        "id": 201286993,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592495383
+    },
+    {
+        "content": "<p>yes, I didn't realize all the PRs would get closed when the master branch was deleted. I'm going to see if I can reopen them and reassign to main...</p>",
+        "id": 201300558,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592501382
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> you asked about this on a PR too -- not intentional!  Sorry folks :)</p>",
+        "id": 201300648,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592501412
+    },
+    {
+        "content": "<p>ahh; makes sense; thanks for the follow up</p>",
+        "id": 201300895,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1592501527
+    },
+    {
+        "content": "<p>ok - all PRs re-opened and base branch changed to main. Whoopsie, i won't do that again :)</p>",
+        "id": 201304801,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592503412
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ++</p>",
+        "id": 201304946,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1592503488
+    },
+    {
+        "content": "<p><strong>jenlampton</strong> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> <img alt=\":drop_lounging:\" class=\"emoji\" src=\"https://zulip-avatars.s3.amazonaws.com/18319/emoji/images/14471.png\" title=\"drop lounging\"> (Karma: 8)</p>",
+        "id": 201304948,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1592503488
+    },
+    {
+        "content": "<p>we prolly won't need to change the branch name again;</p>",
+        "id": 201304983,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1592503507
+    },
+    {
+        "content": "<blockquote>\n<p>ok - all PRs re-opened and base branch changed to main. Whoopsie, i won't do that again :)</p>\n</blockquote>\n<p>Drat, I thought youd finally merged <a href=\"https://github.com/backdrop-ops/backdropcms.org/pull/488\">https://github.com/backdrop-ops/backdropcms.org/pull/488</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/pull/488\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/pull/488\" title=\"Issue #487: Support more data in .info files by docwilmot · Pull Request #488 · backdrop-ops/backdropcms.org\">Issue #487: Support more data in .info files by docwilmot · Pull Request #488 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Fixes #487\nIncludes fix for API example.</div></div></div>",
+        "id": 201306817,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1592504517
+    },
+    {
+        "content": "<p>I thought about it!!!  But the PR had a label on it indicating it still needed work...  I did merge some of the others. Thank you <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> for all your PRs!</p>",
+        "id": 201312341,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592507194
+    },
+    {
+        "content": "<p>lurking on YT. we should mention layouts on the appearances page</p>",
+        "id": 201316542,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1592509490
+    },
+    {
+        "content": "<p>So out of curiosity, why the branch rename?</p>",
+        "id": 201325158,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1592513849
+    },
+    {
+        "content": "<p>And can you do the same for <a href=\"https://github.com/backdrop-ops/api.backdropcms.org/pull/85\">https://github.com/backdrop-ops/api.backdropcms.org/pull/85</a> please <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/api.backdropcms.org/pull/85\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/api.backdropcms.org/pull/85\" title=\"Issue #84: Update repo for easier development. by BWPanda · Pull Request #85 · backdrop-ops/api.backdropcms.org\">Issue #84: Update repo for easier development. by BWPanda · Pull Request #85 · backdrop-ops/api.backdropcms.org</a></div><div class=\"message_embed_description\">Fixes #84</div></div></div>",
+        "id": 201325287,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1592513899
+    },
+    {
+        "content": "<p>yes, reopening now</p>",
+        "id": 201328267,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592515742
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> more on branch name changes here: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4441#issuecomment-646233364\">https://github.com/backdrop/backdrop-issues/issues/4441#issuecomment-646233364</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4441#issuecomment-646233364\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4441#issuecomment-646233364\" title=\"Remove all instances of &quot;blacklist&quot; and &quot;whitelist&quot; from core · Issue #4441 · backdrop/backdrop-issues\">Remove all instances of \"blacklist\" and \"whitelist\" from core · Issue #4441 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In an effort to systemic racism from our project, I would like to remove all instances of blacklist and whitelist from core. Also necessary: coder#11 configure the coder rule to scan for the terms ...</div></div></div>",
+        "id": 201328672,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1592516026
+    }
+]

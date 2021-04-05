@@ -1,0 +1,74 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Silkscreen.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html">Silkscreen</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="222725241"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222725241" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222725241">(Jan 14 2021 at 14:38)</a>:</h4>
+<p>Wondering if it's worth adding some sort of identifier to Silkscreen, and then having it be reported as a different Backdrop CMS version or entirely separate project in <a href="http://b.org">b.org</a> (to get an idea of usage metrics)</p>
+
+
+
+<a name="222725327"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222725327" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222725327">(Jan 14 2021 at 14:39)</a>:</h4>
+<p>...that would help identify the portion of the community that needs the advanced features Silkscreen provides.</p>
+
+
+
+<a name="222725481"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222725481" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222725481">(Jan 14 2021 at 14:40)</a>:</h4>
+<p><span class="user-mention" data-user-id="344103">@John Franklin</span> also wondering re the drop-in-replacement-ness of Silkscreen, and how easily one can switch between it and vanilla Backdrop CMS</p>
+
+
+
+<a name="222725972"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222725972" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> John Franklin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222725972">(Jan 14 2021 at 14:43)</a>:</h4>
+<p>You'd have to copy the config back to a files directory.  Otherwise, Silkscreen has been tracking Backdrop as close as possible.</p>
+
+
+
+<a name="222726075"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222726075" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> John Franklin <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222726075">(Jan 14 2021 at 14:44)</a>:</h4>
+<p>This assumes you're not using PostgreSQL or SQLite.</p>
+
+
+
+<a name="222728626"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222728626" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222728626">(Jan 14 2021 at 15:04)</a>:</h4>
+<p>Right. Thanks <span class="user-mention" data-user-id="344103">@John Franklin</span></p>
+
+
+
+<a name="222728981"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222728981" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222728981">(Jan 14 2021 at 15:06)</a>:</h4>
+<p>...but you could always easily use<code>drush sql-dump</code> to export db and then import it in MySQL. Right? ...I haven't used it with PostgrsSQL or SQLite, but I'm assuming that the result is always a .sql file. Right?</p>
+
+
+
+<a name="222729263"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222729263" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222729263">(Jan 14 2021 at 15:08)</a>:</h4>
+<p>...hmm <span aria-label="thinking" class="emoji emoji-1f914" role="img" title="thinking">:thinking:</span> ...seems that not. You'd need something like <a href="https://www.drupal.org/project/dbtng_migrator">https://www.drupal.org/project/dbtng_migrator</a> or a way to convert the db from one format to the other.</p>
+
+
+
+<a name="222732163"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Silkscreen/near/222732163" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Silkscreen.html#222732163">(Jan 14 2021 at 15:25)</a>:</h4>
+<p>The sql-dump command uses database driver specific tools that produce dump files that are not compatible with each other. Some conversion would need to be done to make the output from one database driver compatible with a different one.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

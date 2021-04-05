@@ -1,0 +1,104 @@
+[
+    {
+        "content": "<p>need some OOP advice please: in Layouts <code>abstract class LayoutContext</code> does not extend the <code>LayoutHandler</code> class, like other handlers, because contexts are not stored in config. Well, I'm aiming to make contexts store in config. So what are the implications of changing <code>LayoutContext</code> to extend <code>LayoutHandler</code> at this stage? Is that an API change? Could it mess up contrib?</p>",
+        "id": 193565122,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1586522843
+    },
+    {
+        "content": "<p>I decided to revisit <a href=\"https://github.com/backdrop/backdrop-issues/issues/2134\" title=\"https://github.com/backdrop/backdrop-issues/issues/2134\">https://github.com/backdrop/backdrop-issues/issues/2134</a> but thought it best to deal with <a href=\"https://github.com/backdrop/backdrop-issues/issues/3750\" title=\"https://github.com/backdrop/backdrop-issues/issues/3750\">https://github.com/backdrop/backdrop-issues/issues/3750</a> first, as relationships are contexts and will need to be stored somehow.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2134\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2134\" title=\"Add support for &quot;Relationships&quot; to Layout Contexts · Issue #2134 · backdrop/backdrop-issues\">Add support for \"Relationships\" to Layout Contexts · Issue #2134 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In many situations when working with Layouts you want or need information related to the primary thing being displayed. For example if you had created a layout configuration for the path node/%, yo...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3750\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3750\" title=\"Layouts: Add support for custom contexts · Issue #3750 · backdrop/backdrop-issues\">Layouts: Add support for custom contexts · Issue #3750 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">e.g. make a context for node ID 1, completely separate from the path. Part of #345</div></div></div>",
+        "id": 193565270,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1586522948
+    },
+    {
+        "content": "<p>any thoughts?</p>",
+        "id": 193567050,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1586524113
+    },
+    {
+        "content": "<p>Sorry, OOP is outside the area of my expertise...</p>",
+        "id": 193567091,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1586524154
+    },
+    {
+        "content": "<p>shamelessly pinging <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> and @quicksketch then</p>",
+        "id": 193567364,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1586524377
+    },
+    {
+        "content": "<p>off the cuff w/ little to no understanding seems like a big change to me;</p>",
+        "id": 193567425,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586524421
+    },
+    {
+        "content": "<p>hmm just realised Nate has a different handle here <span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span></p>",
+        "id": 193567568,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1586524557
+    },
+    {
+        "content": "<p>Yes, it is an API change, and yes, it could mess up contrib, but I haven't looked at either class to see how different they are.</p>",
+        "id": 193567940,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1586524803
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> do you know if an <code>abstract class</code> can extend another class?</p>",
+        "id": 193567993,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586524860
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/oop/near/193567940\" title=\"#narrow/stream/218635-Backdrop/topic/oop/near/193567940\">said</a>:</p>\n<blockquote>\n<p>Yes, it is an API change, and yes, it could mess up contrib, but I haven't looked at either class to see how different they are.</p>\n</blockquote>\n<p><span aria-label=\"angry\" class=\"emoji emoji-1f620\" role=\"img\" title=\"angry\">:angry:</span>  was hoping no one would say that.</p>",
+        "id": 193568108,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1586524955
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256583\">Geoff St. Pierre (serundeputy)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/oop/near/193567993\" title=\"#narrow/stream/218635-Backdrop/topic/oop/near/193567993\">said</a>:</p>\n<p>I'm not sure, but according to <a href=\"https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class\" title=\"https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class\">https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class</a> it seems possible with at least one caveat, but as mentioned in a comment, traits and/or interfaces might be a better way to go.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/7269641/php-abstract-class-extending-another-abstract-class\" title=\"php abstract class extending another abstract class\">php abstract class extending another abstract class</a></div><div class=\"message_embed_description\">Is it possible in PHP, that an abstract class inherits from an abstract class?\n\nFor example, \n\nabstract class Generic {\n    abstract public function a();\n    abstract public function b();\n}\n\nabstract </div></div></div>",
+        "id": 193568536,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1586525274
+    },
+    {
+        "content": "<p>that is an abstract class extending another abstract class; not extending a regular class</p>",
+        "id": 193568650,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586525354
+    },
+    {
+        "content": "<p>Oh, I missed that distinction in your question. I think that is not possible.</p>",
+        "id": 193568688,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1586525386
+    },
+    {
+        "content": "<p>oh; <code>LayoutHandler</code> is an abstract class so what <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> proposes is possible, but yes API change</p>",
+        "id": 193568837,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1586525485
+    },
+    {
+        "content": "<p>Abstract classes can extend other abstract classes. I'd have to examine further but generally it sounds like having <code>LayoutContext</code> extend <code>LayoutHandler</code> would add additional methods. That's only an API expansion. If it changes any of the parameters of the existing methods, then it's an API break.</p>",
+        "id": 193742590,
+        "sender_full_name": "quicksketch",
+        "timestamp": 1586748339
+    },
+    {
+        "content": "<p>Whoa</p>",
+        "id": 193743883,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1586750971
+    },
+    {
+        "content": "<p>Whoa?</p>",
+        "id": 193744120,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1586751429
+    }
+]

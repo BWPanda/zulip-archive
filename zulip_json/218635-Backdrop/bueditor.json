@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Please read <a href=\"https://github.com/backdrop-contrib/bueditor/issues/12\">https://github.com/backdrop-contrib/bueditor/issues/12</a> I can not push the code even-though am listed as the maintainer of the module.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bueditor/issues/12\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bueditor/issues/12\" title=\"The module is referencing backdrop.org instead of backdropcms.org · Issue #12 · backdrop-contrib/bueditor\">The module is referencing backdrop.org instead of backdropcms.org · Issue #12 · backdrop-contrib/bueditor</a></div><div class=\"message_embed_description\">The modules js library files, in particular: library/bue.min.all.js library/bue.min.default.js library/bue.preview.js are referencing backdrop.org instead of backdropcms.org.</div></div></div>",
+        "id": 213221890,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1602626093
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> I just fixed your permissions to that repo ...can you please try pushing again?</p>",
+        "id": 213222611,
+        "sender_full_name": "klonos",
+        "timestamp": 1602626594
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , it worked this time. Could you also please take a look at <a href=\"https://github.com/backdrop-ops/contrib/issues/445#issuecomment-707894670\">https://github.com/backdrop-ops/contrib/issues/445#issuecomment-707894670</a> I am really frustration with often limitations and soon will start just keep modules we are working under <a href=\"http://github.com/altagrade\">github.com/altagrade</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/445#issuecomment-707894670\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/445#issuecomment-707894670\" title=\"Change the default branch for the Shortcut module to 1.x-1.x and delete the master branch · Issue #445 · backdrop-ops/contrib\">Change the default branch for the Shortcut module to 1.x-1.x and delete the master branch · Issue #445 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">It&#39;s real shame contributors can not manage the branches for their projects. Once I had such an option, but then, for some reason, was deprived of such a right. I would love to get that right b...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://github.com/altagrade\" style=\"background-image: url(https://avatars0.githubusercontent.com/u/56610508?s=280&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://github.com/altagrade\" title=\"AltaGrade LLC\">AltaGrade LLC</a></div><div class=\"message_embed_description\">Professional Drupal, Backdrop and WordPress hosting. - AltaGrade LLC</div></div></div>",
+        "id": 213223025,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1602626879
+    },
+    {
+        "content": "<p>Sorry about that <span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> ...the permissions have been set up by <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> ...I'm just helping out by assigning them to the appropriate people. For any change to be made to the existing GitLab roles/permissions, there would need to be a discussion and we'd need to carefully examine what the change means security-wise...</p>",
+        "id": 213242719,
+        "sender_full_name": "klonos",
+        "timestamp": 1602645921
+    },
+    {
+        "content": "<p>...but if this happens to become an issue for any other project you are maintaining, please do the same as you've done now: post a comment here, and someone will help to assign proper role to you.</p>",
+        "id": 213242778,
+        "sender_full_name": "klonos",
+        "timestamp": 1602645966
+    }
+]

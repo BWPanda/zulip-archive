@@ -1,0 +1,116 @@
+[
+    {
+        "content": "<p>A little code assistance, if someone has time for a noob.</p>\n<div class=\"codehilite\"><pre><span></span><code>    $node = menu_get_object();\n    if (!empty($node)) {\n        $node_title = $node-&gt;title;\n        echo $node_title;\n\n        $field = field_get_items(&#39;node&#39;, $node, &#39;field_cal_per_min_max&#39;);\n        $output = field_view_value(&#39;node&#39;, $node, &#39;field_cal_per_min_max&#39;, $field[0], array(\n            &#39;type&#39; =&gt; &#39;string&#39;,\n        ));\n\n        echo $output;\n\n    }\n</code></pre></div>\n\n\n<p>I am trying to print a field in a block (from the current node). I am able to get the title of the node correctly. However, when I try and get the value of the field, it always returns 'array', in echo, rather than the actual value.</p>",
+        "id": 202407007,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593505407
+    },
+    {
+        "content": "<p>field_view_value() returns a renderable array, so you need to wrap $output in backdrop_render() - <code>echo backdrop_render($output)</code> (didn't test it)</p>",
+        "id": 202407601,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593505818
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> , thanks ill give that a go.</p>",
+        "id": 202407689,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593505918
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> , magic! I would have never figured that out :) Thanks!</p>",
+        "id": 202407837,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593506020
+    },
+    {
+        "content": "<p>You're welcome. A tip: whenever you struggle with a \"mystic\" variable, try <code>debug($your_var)</code> - see <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/debug/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/debug/1</a></p>",
+        "id": 202408115,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593506194
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> , good tip. Coming from c#, that's a new one for me. First non-strongly typed language for me.</p>",
+        "id": 202408274,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593506310
+    },
+    {
+        "content": "<p>Hey <span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...I guess the right question here is why (or if?) you need this custom php code in the first place. Backdrop supports adding fields as blocks via the admin UI:</p>\n<ol>\n<li>create a new layout, select a name, a layout template</li>\n<li>add the <code>node/%</code> context in the layout (this is the important bit that does the \"magic\")</li>\n<li>set any visibility conditions, like for example to be used only for a specific content type</li>\n<li>save the layout<br>\n...when you try to add blocks to this layout, you will notice all the node fields become available as blocks <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></li>\n</ol>",
+        "id": 202418726,
+        "sender_full_name": "klonos",
+        "timestamp": 1593513608
+    },
+    {
+        "content": "<p>...see these existing issues for ways we're looking into making this feature more obvious out of the box: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2306\">https://github.com/backdrop/backdrop-issues/issues/2306</a> and <a href=\"https://github.com/backdrop/backdrop-issues/issues/3530\">https://github.com/backdrop/backdrop-issues/issues/3530</a> (also <a href=\"https://github.com/backdrop/backdrop-issues/issues/3531\">https://github.com/backdrop/backdrop-issues/issues/3531</a> for users)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2306\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2306\" title=\"[UX] Display all available blocks (with instructions on how to get them) · Issue #2306 · backdrop/backdrop-issues\">[UX] Display all available blocks (with instructions on how to get them) · Issue #2306 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">None of the layouts that we ship with core has node/% as path, thus people trying to add a field as a block won&#39;t be able to figure it out unless they have good knowledge of the internals of la...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3530\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3530\" title=\"Ship core with a layout that uses node/% as context · Issue #3530 · backdrop/backdrop-issues\">Ship core with a layout that uses node/% as context · Issue #3530 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">#2306 started out with this as one of the proposed solutions, but has changed direction over time... None of the layouts that we ship with core has node/% as path, thus people trying to add a field...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3531\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3531\" title=\"Ship core with a layout that uses user/% as context · Issue #3531 · backdrop/backdrop-issues\">Ship core with a layout that uses user/% as context · Issue #3531 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This was brought up in #2306, and is a sibling feature request to #3530 and #3648. We should ship core with a layout that uses user/% as context, since it is easier for beginners to tweak layouts r...</div></div></div>",
+        "id": 202418934,
+        "sender_full_name": "klonos",
+        "timestamp": 1593513799
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , thanks! In this case, I think I do. I am building graphs by PHP. Ive chosen not to use views for it in this case, because I am storing them in CSV plan text fields. This makes it easier to manage them, since I am setting them via rest API. With PHP I can make some tweaks to the data.</p>",
+        "id": 202421077,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593515422
+    },
+    {
+        "content": "<p>Fair enough <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...just making sure that you are aware of the field blocks feature then <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 202421124,
+        "sender_full_name": "klonos",
+        "timestamp": 1593515479
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> , no worries. Advice is always welcome. Ive been using Drupal since 4.7. I cannot believe that was 2006 already! But haven't really been building modules <span aria-label=\"grinning\" class=\"emoji emoji-1f600\" role=\"img\" title=\"grinning\">:grinning:</span>  Happy to switch to backdrop, as D8 really lost the thread for me.</p>",
+        "id": 202421335,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593515629
+    },
+    {
+        "content": "<p>Glad to have you in the Backdrop community <span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 202421411,
+        "sender_full_name": "klonos",
+        "timestamp": 1593515699
+    },
+    {
+        "content": "<p>Thanks, happy to be here and looking forward to it continue growing.</p>",
+        "id": 202421438,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593515729
+    },
+    {
+        "content": "<p>Best way to get the $data from views into a block? (I will aggregate some of the data displayed in views into a custom Graph). But not sure where to start when getting the data out.</p>",
+        "id": 202536328,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593586642
+    },
+    {
+        "content": "<p>Would it be this? <a href=\"https://api.drupal.org/api/views/views.api.php/function/hook_views_data/7.x-3.x\">https://api.drupal.org/api/views/views.api.php/function/hook_views_data/7.x-3.x</a></p>",
+        "id": 202536345,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593586667
+    },
+    {
+        "content": "<p><a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/function/hook_views_data/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/function/hook_views_data/1</a></p>",
+        "id": 202536492,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593586819
+    },
+    {
+        "content": "<p>hook_views_data does something totally different. With it you can describe your module's db schema to views.</p>\n<p>You want to get the data OUT of an existing view - if I get it right... Just like you did a db query? Then you might need something like views_get_view() and grab the things you need from it. Or maybe one of the views hooks... There's a bunch of them: <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/1\">https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/1</a></p>\n<p>Maybe someone else has better advice?</p>",
+        "id": 202545132,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593593700
+    },
+    {
+        "content": "<p>Hm... possibly <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.module/function/views_get_view_result/1\">views_get_view_result()</a> - not sure.</p>",
+        "id": 202545656,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1593594081
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> , thanks. Ill dig deeper into that and see what I can find.</p>",
+        "id": 202564892,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593608232
+    }
+]

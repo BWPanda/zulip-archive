@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>I'm trying to solve an issue with HUGE menus which result in timeouts when trying to edit their menu items (not looking to implement mega-menus here - just menus with 100s or 1000s of items in them). I know that there's <a href=\"https://www.drupal.org/project/bigmenu\" title=\"https://www.drupal.org/project/bigmenu\">https://www.drupal.org/project/bigmenu</a> but at some point, I think that there was a contrib module that would allow you to insert entire menus as menu items into a \"master menu\"; the result was that each \"submenu\" was managed separately, and the \"master\" menu had less items to deal with. Unfortunately, I cannot recall the name of that contrib, and I am not able to locate it. Perhaps others have either better memory or better google-fu than myself.</p>",
+        "id": 197081678,
+        "sender_full_name": "klonos",
+        "timestamp": 1589148695
+    },
+    {
+        "content": "<p>...that contrib I'm talking about had a similar UI to <a href=\"https://www.drupal.org/project/menu_attach_block\" title=\"https://www.drupal.org/project/menu_attach_block\">https://www.drupal.org/project/menu_attach_block</a> and/or <a href=\"https://www.drupal.org/project/menu_views\" title=\"https://www.drupal.org/project/menu_views\">https://www.drupal.org/project/menu_views</a> (but it's neither of these 2 contrib).</p>",
+        "id": 197082242,
+        "sender_full_name": "klonos",
+        "timestamp": 1589149337
+    },
+    {
+        "content": "<p>Ultimenu might be your thing</p>",
+        "id": 197083780,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1589151427
+    },
+    {
+        "content": "<p>Unfortunately not <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> ...I am looking for a way to split menu item <em>management</em> into smaller chunks - not looking for a mega menu implementation.</p>",
+        "id": 197166591,
+        "sender_full_name": "klonos",
+        "timestamp": 1589212739
+    },
+    {
+        "content": "<p>@klonos it's been years since I used the module for a D7 site... but I guess I could place several menus in several blocks and fit them together into one.</p>",
+        "id": 197245974,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1589272072
+    },
+    {
+        "content": "<p>NOT mega menu necessarly.</p>",
+        "id": 197246034,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1589272095
+    },
+    {
+        "content": "<p>@klonos If I get you right, you're searching for something like menu_block - <a href=\"https://www.drupal.org/project/menu_block\">https://www.drupal.org/project/menu_block</a> I just realized, it's not yet ported to Backdrop. (I bet we'll need it) With that module it's easy to cut large menus in smaller chunks.</p>",
+        "id": 197281842,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1589292770
+    },
+    {
+        "content": "<p>Ah, wait, that's in core! <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> you should be able to do that with the \"Starting level\" and the \"Maximum depth\" setting of menu blocks.</p>",
+        "id": 197282521,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1589293069
+    },
+    {
+        "content": "<p>Thanks for chiming in <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> but also not exactly. The goal is not to split the menus during render time - it is to split the menu management UI. The original issue being that when there are too many items, there are errors about php <code>max_input_vars</code> (because there are too many checkboxes in the form).</p>",
+        "id": 197289096,
+        "sender_full_name": "klonos",
+        "timestamp": 1589295821
+    },
+    {
+        "content": "<p>...also, FTR, I am not trying to solve an issue with Backdrop or a Backdrop site; this issue is coming up at work with various customers in the GovCMS Platform ...I am just trying to remember a contrib module that I vaguely recall being available for Drupal.</p>",
+        "id": 197289451,
+        "sender_full_name": "klonos",
+        "timestamp": 1589295942
+    },
+    {
+        "content": "<p>...I remember coming across this module many many years ago, but I just cannot find it in <a href=\"http://d.org\">d.org</a> any more.</p>",
+        "id": 197289600,
+        "sender_full_name": "klonos",
+        "timestamp": 1589295984
+    },
+    {
+        "content": "<p>I know there was one for Taxonomy; Taxonomy Manager or something like that...</p>",
+        "id": 197293293,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589297289
+    },
+    {
+        "content": "<p>Yeah: <a href=\"https://www.drupal.org/project/taxonomy_manager\">https://www.drupal.org/project/taxonomy_manager</a></p>",
+        "id": 197293437,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589297360
+    },
+    {
+        "content": "<p><code>hook_form_alter</code> is your friend.</p>",
+        "id": 197296055,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589298335
+    },
+    {
+        "content": "<p>Yes <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ...and the equivalent for menus is <a href=\"https://www.drupal.org/project/bigmenu\">https://www.drupal.org/project/bigmenu</a> I guess.</p>",
+        "id": 197297306,
+        "sender_full_name": "klonos",
+        "timestamp": 1589298790
+    },
+    {
+        "content": "<p>I know <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...trying to avoid that if there's a contrib that does that already. ...ideally, there'd be one with an interface like <a href=\"https://www.drupal.org/project/menu_views\">https://www.drupal.org/project/menu_views</a> where you can select other menus to be \"injected\" as menu items into a \"master\" menu. That way, huge menus would be able to be \"split\" into smaller ones, which content editors would then be able to manage w/o getting fatals and timeouts.</p>",
+        "id": 197297784,
+        "sender_full_name": "klonos",
+        "timestamp": 1589299009
+    },
+    {
+        "content": "<p>...perhaps this could be my first contrib module <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 197297927,
+        "sender_full_name": "klonos",
+        "timestamp": 1589299076
+    },
+    {
+        "content": "<p>there you go ... <code>see a need, fill a need.</code></p>",
+        "id": 197298076,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1589299121
+    }
+]

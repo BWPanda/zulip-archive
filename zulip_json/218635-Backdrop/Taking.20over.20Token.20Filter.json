@@ -1,0 +1,116 @@
+[
+    {
+        "content": "<p>I posted <a href=\"https://github.com/backdrop-ops/contrib/issues/492\">an issue</a> and <a href=\"https://github.com/backdrop-contrib/token_filter/pull/4\">a PR</a> last week asking to take over as maintainer of the Token Filter module. Could one of the Powers please wave the magic wand (or if I missed an important step, let me know what I missed)? TiA!</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/492\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/492\" title=\"Take over as maintainer of Token Filter module · Issue #492 · backdrop-ops/contrib\">Take over as maintainer of Token Filter module · Issue #492 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Per this issue, I would like to take over as maintainer of the Token Filter module. Here's the associated PR.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/token_filter/pull/4\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/token_filter/pull/4\" title=\"Fix bugs, take over as maintainer by bugfolder · Pull Request #4 · backdrop-contrib/token_filter\">Fix bugs, take over as maintainer by bugfolder · Pull Request #4 · backdrop-contrib/token_filter</a></div><div class=\"message_embed_description\">This PR addresses this issue. I'm also requesting to be made a maintainer (with the approval of the original maintainer) and have listed myself as maintainer in the README.</div></div></div>",
+        "id": 226039361,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613069572
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> I think the wait time is 2 weeks?</p>",
+        "id": 226043911,
+        "sender_full_name": "Herb",
+        "timestamp": 1613071297
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> would know this better</p>",
+        "id": 226043957,
+        "sender_full_name": "Herb",
+        "timestamp": 1613071316
+    },
+    {
+        "content": "<p>According to <a href=\"https://backdropcms.org/user-guide/adopt-a-project\">the docs</a> there's a wait time of 2 weeks if the maintainer doesn't respond, but in this case, the maintainer has already responded with agreement.</p>",
+        "id": 226044456,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613071535
+    },
+    {
+        "content": "<p>Oh, that's good then.</p>",
+        "id": 226044925,
+        "sender_full_name": "Herb",
+        "timestamp": 1613071692
+    },
+    {
+        "content": "<p>Looks like I don't have permission to the project otherwise I'd add <span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> (in my role as Bug Squad member). <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> or <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> can you fix the permissions?</p>",
+        "id": 226045507,
+        "sender_full_name": "Herb",
+        "timestamp": 1613071929
+    },
+    {
+        "content": "<p>I can fix the permissions. Where has the maintainer responded? I don't see any comments on <a href=\"https://github.com/backdrop-ops/contrib/issues/492\">https://github.com/backdrop-ops/contrib/issues/492</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib/issues/492\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib/issues/492\" title=\"Take over as maintainer of Token Filter module · Issue #492 · backdrop-ops/contrib\">Take over as maintainer of Token Filter module · Issue #492 · backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Per this issue, I would like to take over as maintainer of the Token Filter module. Here's the associated PR.</div></div></div>",
+        "id": 226046166,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613072183
+    },
+    {
+        "content": "<p>Aha, found it <a href=\"https://github.com/backdrop-contrib/token_filter/issues/3#issuecomment-771783612\">https://github.com/backdrop-contrib/token_filter/issues/3#issuecomment-771783612</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/token_filter/issues/3#issuecomment-771783612\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/token_filter/issues/3#issuecomment-771783612\" title=\"Call to nonexistent function token_get_entity_mapping() · Issue #3 · backdrop-contrib/token_filter\">Call to nonexistent function token_get_entity_mapping() · Issue #3 · backdrop-contrib/token_filter</a></div><div class=\"message_embed_description\">On line 39 of token_filter.module, there is a call to token_get_entity(). If this point is reached in the code, the module crashes because that function doesn&#39;t exist in the Backdrop version of...</div></div></div>",
+        "id": 226046472,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613072303
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> okay, you're the new maintainer!  Thank you :)</p>",
+        "id": 226051990,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1613074877
+    },
+    {
+        "content": "<p>Thx!</p>",
+        "id": 226052247,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613075021
+    },
+    {
+        "content": "<p>Does backdrop have any support for custom tokens right now?</p>",
+        "id": 230019808,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615551637
+    },
+    {
+        "content": "<p>Yes. All tokens that don't need context currently work in Token Filter module, and Backdrop has the same support for creating custom tokens that Drupal did; you just implement <code>hook_token_info()</code> and <code>hook_tokens()</code>, both of which are documented in the <a href=\"https://docs.backdropcms.org\">api</a>. See <a href=\"https://backdropcms.org/project/utz_tokens\">User Time Zone Tokens</a>  for a recent example of creating custom tokens in a module.</p>",
+        "id": 230037021,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615559215
+    },
+    {
+        "content": "<p>If you install <a href=\"https://backdropcms.org/project/token_help\">Token Help</a>, you can easily see all the tokens that are currently available. (Token help doesn't add any tokens; it just makes it easier to see the existing ones.)</p>",
+        "id": 230037216,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615559285
+    },
+    {
+        "content": "<p>Thank you. There is no custom token model that gives UI access to creating custom tokens at the moment. Correct?</p>",
+        "id": 230037258,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615559296
+    },
+    {
+        "content": "<p>If not, Ill look into having someone make one on my team.</p>",
+        "id": 230037289,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615559311
+    },
+    {
+        "content": "<p>Or porting the drupal 7 one?</p>",
+        "id": 230037309,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615559324
+    },
+    {
+        "content": "<p>If there's a D7 module that creates the custom tokens, porting the D7 module would be something to look into. I've ported a bunch of D7 modules to Backdrop, and it's often been quick and easy. <a href=\"https://backdropcms.org/project/coder_upgrade\">Coder Upgrade</a> module even does most of the porting work for you.</p>",
+        "id": 230037705,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615559456
+    },
+    {
+        "content": "<blockquote>\n<p>There is no custom token model that gives UI access to creating custom tokens at the moment. Correct?</p>\n</blockquote>\n<p>Correct.</p>",
+        "id": 230037820,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615559501
+    },
+    {
+        "content": "<p>Sounds good. Ill look into this.</p>",
+        "id": 230056878,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615565906
+    }
+]

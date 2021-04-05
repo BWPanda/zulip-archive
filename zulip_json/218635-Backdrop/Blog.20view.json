@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Hey, I'm trying to replicate the default blog view from Drupal 7 in Backdrop - i think I'm missing something in the contextual filter setup - HALP!<br>\nFor example  {site}/blogs/basketball would give you a view of all blog posts by user name basketball.  This is how it works in the Drupal 7 site out of the box.<br>\n<a href=\"/user_uploads/18319/xCGRwBgJwoQaZwiaZZM8HKKn/blog-contextual-filter.jpeg\">blog-contextual-filter.jpeg</a><br>\n<a href=\"/user_uploads/18319/a2zon1TvG8-I2eSDD38qcLwr/blog-path.jpeg\">blog-path.jpeg</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/xCGRwBgJwoQaZwiaZZM8HKKn/blog-contextual-filter.jpeg\" title=\"blog-contextual-filter.jpeg\"><img src=\"/user_uploads/18319/xCGRwBgJwoQaZwiaZZM8HKKn/blog-contextual-filter.jpeg\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/a2zon1TvG8-I2eSDD38qcLwr/blog-path.jpeg\" title=\"blog-path.jpeg\"><img src=\"/user_uploads/18319/a2zon1TvG8-I2eSDD38qcLwr/blog-path.jpeg\"></a></div>",
+        "id": 212480385,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602015647
+    },
+    {
+        "content": "<p>Did you add a relationship to the author?</p>",
+        "id": 212496896,
+        "sender_full_name": "Laryn",
+        "timestamp": 1602025680
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Blog.20view/near/212496896\">said</a>:</p>\n<blockquote>\n<p>Did you add a relationship to the author?</p>\n</blockquote>\n<p>Yes.  That was there.  I got it working through a lot of trial and error.  part of the problem was the path.  I'm now struggling with where the No Results text can go.   I'll post everything when I'm done in here and when I get time, where should I write a post on how to do this. I'm sure I'm not the only one who will want to and the instructions really don't cover this.  Taxonomy views were a piece of cake comparatively.  I've done other URL path stuff before, but I always used Better Exposed Filters.</p>",
+        "id": 212504341,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602032303
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Blog.20view/near/212504341\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Blog.20view/near/212496896\">said</a>:</p>\n<blockquote>\n<p>Did you add a relationship to the author?</p>\n</blockquote>\n<p>Yes.  That was there.  I got it working through a lot of trial and error.  part of the problem was the path.  I'm now struggling with where the No Results text can go.   I'll post everything when I'm done in here and when I get time, where should I write a post on how to do this. I'm sure I'm not the only one who will want to and the instructions really don't cover this.  Taxonomy views were a piece of cake comparatively.  I've done other URL path stuff before, but I always used Better Exposed Filters.</p>\n</blockquote>\n<p>GOT IT!!!  All done.  I'll write up a nice post on how to do this if one doesn't exist, if someone tells me where to put it.</p>",
+        "id": 212505707,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602033767
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span>++ I just made you an editor in <a href=\"http://backdropcms.org\">backdropcms.org</a> so you should be able to create blog posts. They should be saved as draft only, but once you're done, please post a comment with a link to the content here in Zulip, and ask for a review. One of your friendly site admins will then publish the post <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 212656568,
+        "sender_full_name": "klonos",
+        "timestamp": 1602143412
+    },
+    {
+        "content": "<p>garbeil** Props to you for all your hard work. (Karma: 4)</p>",
+        "id": 212656569,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1602143412
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Blog.20view/near/212656568\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span>++ I just made you an editor in <a href=\"http://backdropcms.org\">backdropcms.org</a> so you should be able to create blog posts. They should be saved as draft only, but once you're done, please post a comment with a link to the content here in Zulip, and ask for a review. One of your friendly site admins will then publish the post <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n</blockquote>\n<p>Will do.  I will try to get to it next week, while it's still fresh in my memory.  It also might be useful to add to documentation, but that should be decided when I'm done with the post.  I may have to modify it for documentation.</p>",
+        "id": 212693542,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602165669
+    },
+    {
+        "content": "<p>garbeil** leveled up! (Karma: 5)</p>",
+        "id": 212693543,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1602165670
+    }
+]

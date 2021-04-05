@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>Does anyone know or have an informed guess about how much h<br>\narder it would be to migrate to D8/D9 in future from Backdrop than from D7, if I move our D7 site to Backdrop now?</p>",
+        "id": 191398884,
+        "sender_full_name": "John_B",
+        "timestamp": 1584887211
+    },
+    {
+        "content": "<p>Hi, John_B. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\" target=\"_blank\" title=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\" target=\"_blank\" title=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 191398885,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1584887211
+    },
+    {
+        "content": "<p>I don't think that anyone has tried that <span class=\"user-mention\" data-user-id=\"275378\">@John_B</span> ...content-wise the same migration should work with minor(?) adjustments, but I imagine that it would require converting the Backdrop config (.json files) into D8/9 config (.yml files). Then you'd also have to rewrite your theme in twig. ...all in all, I'd assume that the same amount of work (when it comes to time required) + some modifications.</p>",
+        "id": 191400388,
+        "sender_full_name": "klonos",
+        "timestamp": 1584889417
+    },
+    {
+        "content": "<p>thanks!</p>",
+        "id": 191402108,
+        "sender_full_name": "John_B",
+        "timestamp": 1584891701
+    },
+    {
+        "content": "<p>I would hazard a guess that D7 to D8 is easier than D7 to Backdrop to D8, since the former is designed to work that way, whereas no one has designed D8 to be upgradable from Backdrop...</p>",
+        "id": 191402252,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1584891889
+    },
+    {
+        "content": "<p>@BWPanda: except me :)</p>",
+        "id": 191639191,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1585068266
+    }
+]

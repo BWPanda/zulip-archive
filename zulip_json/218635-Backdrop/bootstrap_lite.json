@@ -1,0 +1,290 @@
+[
+    {
+        "content": "<p>Hi.  I'm wondering about getting involved in this module.  I'm a big fan of bootstrap, both from basic HTML sites and from experimenting with Drupal8 (before finally giving up due to the complexities of Composer).  I note there is a fix to <a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/19\">https://github.com/backdrop-contrib/bootstrap_lite/issues/19</a> and I have added a suggested fix to <a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/6\">https://github.com/backdrop-contrib/bootstrap_lite/issues/6</a> but I don't seem to be able to do a pull request.  While I don't know how to necessarily fix all the issues, it would be good to get the fixes we have into a release, but I wouldn't have the first clue how to do that.  I'm a novice at git, but used it a bit, and completely brand new to Backdrop but have built Drupal 7 sites for many years.  Hopefully with a bit of guidance I can help to get this project moving forward.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/19\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/19\" title=\"Update API URL · Issue #19 · backdrop-contrib/bootstrap_lite\">Update API URL · Issue #19 · backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">The Bootswatch page is basically empty, because the API URL it's trying to call is old and doesn't work anymore. The current API URL is: https://bootswatch.com/api/4.json</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/6\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/6\" title=\"Logo not showing if Site name is not checked in Configure block &quot;Header block&quot; · Issue #6 · backdrop-contrib/bootstrap_lite\">Logo not showing if Site name is not checked in Configure block \"Header block\" · Issue #6 · backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">If only the Logo option is checked in Configure block \"Header block\", the logo (default backdrop in my case) is not showing. This issue disappears if I use Bartik.</div></div></div>",
+        "id": 225354732,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612558258
+    },
+    {
+        "content": "<p>Hi, yorkshirepudding. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 225354733,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1612558258
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"387384\">@yorkshirepudding</span> - Thanks for your interest in this Bootstrap Lite module. I would be willing to co-maintain it with you and maybe together we can figure some of the things out.</p>",
+        "id": 225361337,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561125
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/18\">https://github.com/backdrop-contrib/bootstrap_lite/issues/18</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/18\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/18\" title=\"Needs an official maintainer · Issue #18 · backdrop-contrib/bootstrap_lite\">Needs an official maintainer · Issue #18 · backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">There&#39;s nothing in the README about who is maintaining this theme. Originally it was @Gormartsen but I believe he&#39;s moved on to other things. He can confirm if he&#39;d like anyone to take ...</div></div></div>",
+        "id": 225361396,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561169
+    },
+    {
+        "content": "<p>To get started, let's express our interest here and see if @gormartsen has any concerns. He is no longer listed as the maintainer.</p>",
+        "id": 225361508,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561212
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> sounds like a plan</p>",
+        "id": 225361518,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612561219
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"387384\">@yorkshirepudding</span> - To officially become a maintainer, it's helpful to share some code or a module that you have ported. I take it that you have not done that in the past, is that correct?</p>\n<p>Do you have any Pull Requests on other projects?</p>",
+        "id": 225362144,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561630
+    },
+    {
+        "content": "<p>I'll check with the rest of the team, but one option would be for you to submit a couple of Pull Requests before become an official co-maintainer.</p>",
+        "id": 225362191,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561668
+    },
+    {
+        "content": "<p>In the meantime, I'll try to figure out why you having trouble. Anyone should be able to submit a PR.</p>",
+        "id": 225362265,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561697
+    },
+    {
+        "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> . correct. I'm a novice here. I haven't really contributed before other than testing on Drupal; there's always a first time though.</p>",
+        "id": 225362390,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612561787
+    },
+    {
+        "content": "<p>Absolutely, we'd love to have you help and I'll do what I can to facilitate the process.</p>",
+        "id": 225362501,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561829
+    },
+    {
+        "content": "<p>Thanks</p>",
+        "id": 225362530,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612561845
+    },
+    {
+        "content": "<p>Here is more information about becoming an official member of the contrib group.<br>\n<a href=\"https://github.com/backdrop-ops/contrib\">https://github.com/backdrop-ops/contrib</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/contrib\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/contrib\" title=\"backdrop-ops/contrib\">backdrop-ops/contrib</a></div><div class=\"message_embed_description\">Apply to join the contributed code developer team. - backdrop-ops/contrib</div></div></div>",
+        "id": 225362554,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561866
+    },
+    {
+        "content": "<p>Take a look at that. It's easiest if you have a module ported or written from scratch, but there are other options.</p>",
+        "id": 225362573,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561886
+    },
+    {
+        "content": "<p>Officially, we are supposed to wait two weeks to take over maintainership of a module if the maintainer is no longer active. But, since there is no maintainer listed on this project, we may be able to speed up the process.</p>",
+        "id": 225362710,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612561976
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"387384\">@yorkshirepudding</span> Welcome! Helping out in the issue queue is always a good first step to demonstrate your intent, and the more you can do in advance, the better your chances of being accepted. I have had numerous requests to help or take over maintainership of a module by people who never so much as answered a question in the issue queue. They get denied.<br>\n<span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> he did say \"but I don't seem to be able to do a pull request.\" I don't know if that's because he's not a contributor or what, but that seems to be a thing that should be addressed as can be.</p>",
+        "id": 225364493,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1612562921
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> - Isn't is usually possible to see a list of all the folks who have forked a repo. I'm not finding that option right now.</p>",
+        "id": 225364877,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563124
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/network/members\">https://github.com/backdrop-contrib/bootstrap_lite/network/members</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/network/members\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/network/members\" title=\"backdrop-contrib/bootstrap_lite\">backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">Bootstrap Lite - a Backdrop Bootstrap-based theme: - backdrop-contrib/bootstrap_lite</div></div></div>",
+        "id": 225365058,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1612563183
+    },
+    {
+        "content": "<p>That's one of those GitHubisms you have to know or search on.</p>",
+        "id": 225365264,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1612563259
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Thanks for that. But, I'm not finding any way to find that page, if you don't know it's there. Maybe, it's visible to maintainers all the time.</p>",
+        "id": 225365277,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563268
+    },
+    {
+        "content": "<p>I knew I had seen that list before. I think that <span class=\"user-mention\" data-user-id=\"387384\">@yorkshirepudding</span> didn't realize that it's necessary to first fork the project before you can submit a PR. I don't think it's possible without a fork, is it?</p>",
+        "id": 225365385,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563329
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> if you go to the project's home page, do you see the Insights tab under the title?</p>",
+        "id": 225365386,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1612563329
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/d6JCxTsTZmiqQ-CfSubKF75d/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/d6JCxTsTZmiqQ-CfSubKF75d/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/d6JCxTsTZmiqQ-CfSubKF75d/image.png\"></a></div>",
+        "id": 225365396,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1612563340
+    },
+    {
+        "content": "<p>NOpe. I apparently don't have same permissions you do.</p>",
+        "id": 225365468,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563368
+    },
+    {
+        "content": "<p>Either click the number next to Fork, or go to Insights &gt; Forks</p>",
+        "id": 225365472,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1612563371
+    },
+    {
+        "content": "<p>That was a private tab, logged out</p>",
+        "id": 225365490,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1612563381
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code> don&#39;t think it&#39;s possible without a fork, is it?\n</code></pre></div>\n<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I think <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> does that all the time.</p>",
+        "id": 225365509,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1612563392
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/a7ggb-CkaHhQnmP6LhuHkh05/github.png\">github.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/a7ggb-CkaHhQnmP6LhuHkh05/github.png\" title=\"github.png\"><img src=\"/user_uploads/18319/a7ggb-CkaHhQnmP6LhuHkh05/github.png\"></a></div>",
+        "id": 225365545,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563422
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Hmmm, what happens if you logout?</p>",
+        "id": 225365598,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1612563455
+    },
+    {
+        "content": "<p>Why would I log out? :-)</p>",
+        "id": 225365618,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563468
+    },
+    {
+        "content": "<p>If I logout I see even less.</p>",
+        "id": 225365704,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563497
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/sq3w103WsI4uP-6YJzQKmjN4/github22.png\">github22.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/sq3w103WsI4uP-6YJzQKmjN4/github22.png\" title=\"github22.png\"><img src=\"/user_uploads/18319/sq3w103WsI4uP-6YJzQKmjN4/github22.png\"></a></div>",
+        "id": 225365783,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563556
+    },
+    {
+        "content": "<p>I am able to see the list of forks if I have the link. But, I have no options to find that page unless I have it memorized.</p>",
+        "id": 225365973,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612563668
+    },
+    {
+        "content": "<p>That's odd.</p>",
+        "id": 225365996,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1612563684
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span>  <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>  happy to fork if that's what's is needed to do a pull request. It didn't seem right as I thought forking is what you do when you take a project in a different direction (e.g. backdrop being a fork of Drupal).</p>",
+        "id": 225366386,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612563929
+    },
+    {
+        "content": "<p>Well, that is the extreme version of forking. <span class=\"user-mention\" data-user-id=\"387384\">@yorkshirepudding</span> - But, forking also just means creating your own copy of an existing repo where you can make changes. Then you can keep the changes yourself or create a PR and submit them back to original projects.</p>",
+        "id": 225366493,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612564001
+    },
+    {
+        "content": "<p>Related: <a href=\"https://backdropcms.org/news/creating-pull-requests-against-core-easy-noob-way\">https://backdropcms.org/news/creating-pull-requests-against-core-easy-noob-way</a></p>",
+        "id": 225366527,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1612564025
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> . I'll do this</p>",
+        "id": 225367030,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612564337
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> <span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span>  my first pull request</p>",
+        "id": 225368075,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612565065
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"387384\">@yorkshirepudding</span> - Looking forward to your next PR. </p>\n<p>NOTE: I cut a new release with your change along with a few other fixes. Including a fix to make Bootswatch themes work. </p>\n<p><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/25\">https://github.com/backdrop-contrib/bootstrap_lite/issues/25</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/25\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/bootstrap_lite/issues/25\" title=\"Future Plans for Bootstrap Lite · Issue #25 · backdrop-contrib/bootstrap_lite\">Future Plans for Bootstrap Lite · Issue #25 · backdrop-contrib/bootstrap_lite</a></div><div class=\"message_embed_description\">I&#39;ve just taken over maintaining this theme, because I think it could be a very strong(er) contribution to the theme space for Backdrop CMS and it hasn&#39;t gotten any attention for a long tim...</div></div></div>",
+        "id": 225485978,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612734785
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I had a look through the current list of bugs but they are a bit beyond my skillset currently (partly as I'm still new to the backdrop layout model and partly as my coding skills in PHP are still quite basic). I'll keep an eye out for potential ones I could pick up, and happy to test and work on documenting issues or improvements (my day job is currently in business analysis)</p>",
+        "id": 225520724,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612777327
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"387384\">@yorkshirepudding</span> that would be great.</p>",
+        "id": 225526152,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1612780839
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"387384\">@yorkshirepudding</span> Weerz tha at ?</p>",
+        "id": 225618446,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1612823136
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> I'm a Yorkshire ex-pat living in Tyneside</p>",
+        "id": 225624607,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612826663
+    },
+    {
+        "content": "<p>Ah bless... must be reet weird. </p>\n<p>(for those that may be curious...  it's how we speak in Yorkshire lol)</p>",
+        "id": 225674170,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1612869603
+    },
+    {
+        "content": "<p>Aye, they don't talk proper like what we does</p>",
+        "id": 225695943,
+        "sender_full_name": "yorkshirepudding",
+        "timestamp": 1612880464
+    },
+    {
+        "content": "<p>Sounds like pirate talk to outsiders <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ... <span class=\"user-mention\" data-user-id=\"302871\">@Steve Moorhouse</span> would be even more if you'd omitted that \"may\" and said \"for those that be curious\" <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 226282382,
+        "sender_full_name": "klonos",
+        "timestamp": 1613271701
+    },
+    {
+        "content": "<p>OMG!!! No!!! lol... pirates are from down south...  people from Yorkshire pronounced Yorksha... are far more sophisticated than \"Southerners\" &lt;shudder&gt;</p>\n<p>Lol... :-)</p>",
+        "id": 227190079,
+        "sender_full_name": "Steve Moorhouse",
+        "timestamp": 1613937347
+    }
+]

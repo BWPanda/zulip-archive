@@ -1,0 +1,164 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> I can't seem to get the 1.x-2.x branch to work, had to downgrade to 1.x-1.x. What's the trick? I tried using the form ID with dashes and then with underscores but it doesn't seem to take.</p>",
+        "id": 197796490,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589636860
+    },
+    {
+        "content": "<p>Make sure its the actual hidden form id value, not the CSS id.</p>",
+        "id": 197796606,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589637015
+    },
+    {
+        "content": "<p>Maybe I'm not understanding what that is. The form HTML comes out like this (default comment form):</p>\n<div class=\"codehilite\"><pre><span></span><code>&lt;form id=&quot;comment-form&quot; class=&quot;comment-node-post-form comment-form user-info-from-cookie antibot&quot; action=&quot;/antibot&quot; method=&quot;post&quot; accept-charset=&quot;UTF-8&quot;&gt;\n</code></pre></div>\n\n\n<p>I've tried both <code>comment-form</code> and <code>comment_form</code> but neither seemed to work.</p>",
+        "id": 197803210,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589646290
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Here's an example of a Backdrop form:<br>\n<a href=\"/user_uploads/18319/SLTE-L5rEBXZiOpE_6igVuOk/image.png\">image.png</a> <br>\nThe form ID is: <code>comment_node_post_form</code> as per the highlighted line. Note how the hidden <code>form_id</code> element value is different from the CSS ID.</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/SLTE-L5rEBXZiOpE_6igVuOk/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/SLTE-L5rEBXZiOpE_6igVuOk/image.png\"></a></div>",
+        "id": 197805660,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589649809
+    },
+    {
+        "content": "<p>I've learned something new. And now that you've explained it the help text seems pretty clear when I re-read it. I was going to put some of the details in the wiki but it's turned off for that module -- is that intentional?</p>",
+        "id": 197815970,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589664448
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ++</p>",
+        "id": 197815973,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589664454
+    },
+    {
+        "content": "<p>(peter)** :-) (Karma: 25)</p>",
+        "id": 197815974,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1589664454
+    },
+    {
+        "content": "<p>I think the wiki has to be turned on per project.</p>",
+        "id": 197816683,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1589665544
+    },
+    {
+        "content": "<p>I turn off the wiki on my projects as I've never seen a need for it. Issues or the README usually suffices.</p>",
+        "id": 197827714,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589685580
+    },
+    {
+        "content": "<p>Ok. BTW, I'm really liking the 2.x version!</p>",
+        "id": 197849148,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589721991
+    },
+    {
+        "content": "<p><span aria-label=\"thumbs up\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"thumbs up\">:thumbs_up:</span> Glad to hear it <span aria-label=\"blush\" class=\"emoji emoji-1f60a\" role=\"img\" title=\"blush\">:blush:</span></p>",
+        "id": 197850017,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589723186
+    },
+    {
+        "content": "<p>I see by the message of the last commit that support for webforms has been added. What else is different in 2.x <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ?</p>",
+        "id": 197854477,
+        "sender_full_name": "klonos",
+        "timestamp": 1589729504
+    },
+    {
+        "content": "<p>...btw, I've never seen cases being repeated in <code>switch</code> like in <a href=\"https://github.com/backdrop-contrib/compact_forms/blob/1.x-2.x/compact_forms.module#L123\">https://github.com/backdrop-contrib/compact_forms/blob/1.x-2.x/compact_forms.module#L123</a> ...what sort of witchcraft is that?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/compact_forms/blob/1.x-2.x/compact_forms.module#L123\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/compact_forms/blob/1.x-2.x/compact_forms.module#L123\" title=\"backdrop-contrib/compact_forms\">backdrop-contrib/compact_forms</a></div><div class=\"message_embed_description\">Presents text fields for selected forms in a more compact fashion using jQuery. - backdrop-contrib/compact_forms</div></div></div>",
+        "id": 197855018,
+        "sender_full_name": "klonos",
+        "timestamp": 1589730274
+    },
+    {
+        "content": "<blockquote>\n<p>Compact Forms has been re-written to be simpler and to use form #placeholder properties instead of overlaying the label on the field.</p>\n</blockquote>",
+        "id": 197858966,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589735580
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> see the description on the 2.0.0 release for more detail <span aria-label=\"wait one second\" class=\"emoji emoji-261d\" role=\"img\" title=\"wait one second\">:wait_one_second:</span>️</p>",
+        "id": 197859032,
+        "sender_full_name": "Laryn",
+        "timestamp": 1589735662
+    },
+    {
+        "content": "<p>Thanks. Just did <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 197859036,
+        "sender_full_name": "klonos",
+        "timestamp": 1589735678
+    },
+    {
+        "content": "<p>Yeah, 1.x basically moved the field label on top of the field and then used JS to show/hide it. I found I always had to add styling to make it look half decent. 2.x uses placeholder text instead, so no JS needed and forms look nice OOTB.</p>",
+        "id": 197859203,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589735883
+    },
+    {
+        "content": "<p>As for <code>switch</code> statements, that is how they work, and is why you normally need to add a <code>break;</code> at the end of each (to prevent them following-through to each other). It's also why it works when you do this:</p>\n<div class=\"codehilite\"><pre><span></span><code><span class=\"x\">switch (condition) {</span>\n<span class=\"x\">  case 1:</span>\n<span class=\"x\">  case 2:</span>\n<span class=\"x\">  case 3:</span>\n<span class=\"x\">    // Do something for cases 1, 2 &amp; 3.</span>\n<span class=\"x\">  break;</span>\n<span class=\"x\">}</span>\n</code></pre></div>",
+        "id": 197859340,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589736044
+    },
+    {
+        "content": "<p>This looks like a good explanation if you're interested: <a href=\"http://phpswitch.com/\">http://phpswitch.com/</a></p>",
+        "id": 197859362,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589736091
+    },
+    {
+        "content": "<p>Thanks ...reading <span aria-label=\"eyes\" class=\"emoji emoji-1f440\" role=\"img\" title=\"eyes\">:eyes:</span></p>",
+        "id": 197859424,
+        "sender_full_name": "klonos",
+        "timestamp": 1589736140
+    },
+    {
+        "content": "<p>Yeah, it seems that I have been using the simplest way of switch/case ...good to know that it can be used to achieve more. <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>++</p>",
+        "id": 197859622,
+        "sender_full_name": "klonos",
+        "timestamp": 1589736390
+    },
+    {
+        "content": "<p>(peter)** kudos (Karma: 26)</p>",
+        "id": 197859623,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1589736390
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Can you tell me what forms you've activated in <a href=\"https://github.com/backdrop-contrib/compact_forms/issues/8\">https://github.com/backdrop-contrib/compact_forms/issues/8</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/compact_forms/issues/8\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/compact_forms/issues/8\" title=\"Notice: Undefined index: #type in _compact_forms_process_fields() · Issue #8 · backdrop-contrib/compact_forms\">Notice: Undefined index: #type in _compact_forms_process_fields() · Issue #8 · backdrop-contrib/compact_forms</a></div><div class=\"message_embed_description\">I&#39;m seeing this in the logs after upgrading to the latest version and clearing caches: Notice: Undefined index: #type in _compact_forms_process_fields() (line 123 of /path/modules/contrib/compa...</div></div></div>",
+        "id": 199690995,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591227897
+    },
+    {
+        "content": "<p>I'm trying to reproduce...</p>",
+        "id": 199691009,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591227910
+    },
+    {
+        "content": "<p>(Hmm, just realised that statement could be taken out of context...)</p>",
+        "id": 199691032,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1591227947
+    },
+    {
+        "content": "<p>On the site in question the only form activated is <code>webform_client_form_xx</code></p>",
+        "id": 199691117,
+        "sender_full_name": "Laryn",
+        "timestamp": 1591228000
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda (Peter)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Compact.20Forms/near/199691009\">said</a>:</p>\n<blockquote>\n<p>I'm trying to reproduce...</p>\n</blockquote>\n<p>Stop bothering the man <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>, cant you see he is busy?</p>",
+        "id": 199691231,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1591228097
+    }
+]

@@ -1,0 +1,182 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Custom.20date.20token.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html">Custom date token</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="208821572"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208821572" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208821572">(Sep 02 2020 at 13:17)</a>:</h4>
+<p>I could need a hint regarding my custom date token module. It allows me to use a date token like <code>Y-m-d</code> for URL alias patterns. Use case so far was to use the token for one content type, based on one respective date field, and that works fine. Now I want to extend the module for the use with two content types and two respective date fields, and I'm not sure what and how to change the code. Here's the current version for one field:</p>
+<div class="codehilite"><pre><span></span><code> /**
+ * Implements hook_token_info().
+ */
+function custom_date_tokens_token_info() {
+  $info[&#39;tokens&#39;][&#39;node&#39;][&#39;field-termin-date-custom&#39;] = array(
+    &#39;name&#39; =&gt; t(&#39;Event Custom Date Format&#39;),
+    &#39;description&#39; =&gt; t(&#39;Custom date field value for events, format: Y-m-d.&#39;),
+  );
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function custom_date_tokens_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  $replacements = array();
+
+  if ($type == &#39;node&#39; &amp;&amp; !empty($data[&#39;node&#39;])) {
+    $node = $data[&#39;node&#39;];
+
+    foreach ($tokens as $name =&gt; $original) {
+      switch ($name) {
+        case &#39;field-termin-date-custom&#39;:
+          $time = strtotime($node-&gt;field_termin_datum[&#39;und&#39;][0][&#39;value&#39;]);
+          $newformat = date(&#39;Y-m-d&#39;,$time);
+          $replacements[$original] = $newformat;
+
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
+</code></pre></div>
+
+
+
+<a name="208821769"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208821769" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208821769">(Sep 02 2020 at 13:18)</a>:</h4>
+<p>This the line with the field name:</p>
+<p><code>$time = strtotime($node-&gt;field_termin_datum['und'][0]['value']);</code></p>
+
+
+
+<a name="208842971"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208842971" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208842971">(Sep 02 2020 at 15:32)</a>:</h4>
+<p>I'm not sure what "field-termin-date-custom" is for. Did you name that yourself, or use something that already existed somewhere?<br>
+My best guess would be that you would need to duplicate this snippet in <code>custom_date_tokens_token_info()</code>:</p>
+<div class="codehilite"><pre><span></span><code>  $info[&#39;tokens&#39;][&#39;node&#39;][&#39;field-termin-date-custom&#39;] = array(
+    &#39;name&#39; =&gt; t(&#39;Event Custom Date Format&#39;),
+    &#39;description&#39; =&gt; t(&#39;Custom date field value for events, format: Y-m-d.&#39;),
+  );
+</code></pre></div>
+
+
+<p>renaming <code>field-termin-date-custom</code> to whatever it is for the second field.<br>
+And then also duplicate this snippet in <code>custom_date_tokens_tokens()</code>:</p>
+<div class="codehilite"><pre><span></span><code>        case &#39;field-termin-date-custom&#39;:
+          $time = strtotime($node-&gt;field_termin_datum[&#39;und&#39;][0][&#39;value&#39;]);
+          $newformat = date(&#39;Y-m-d&#39;,$time);
+          $replacements[$original] = $newformat;
+
+          break;
+</code></pre></div>
+
+
+<p>renaming both <code>field-termin-date-custom</code> (to the name chosen for the previous snippet) and <code>field_termin_datum</code> to the name of the second field.<br>
+But that's untested, and you have some unknowns in what you have provided.<br>
+You could also create a custom function in that file for the time conversion that takes the field value as a parameter, and then that code would not be duplicated, but that's not a big deal.</p>
+
+
+
+<a name="208844239"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208844239" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208844239">(Sep 02 2020 at 15:40)</a>:</h4>
+<p><span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span> Thanks for helping! Re "field-termin-date-custom", IIRC I named it myself but I guess the intention was to match the semantics of the field name.</p>
+
+
+
+<a name="208844877"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208844877" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208844877">(Sep 02 2020 at 15:44)</a>:</h4>
+<p>However, I just remembered that in the meantime we've added a Token display to content types: <a href="https://github.com/backdrop/backdrop-issues/issues/1425">https://github.com/backdrop/backdrop-issues/issues/1425</a>. Which means it's possible to choose a token for the date field which is then used for URL aliases.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1425" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1425" title="Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div>
+
+
+
+<a name="208844947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208844947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208844947">(Sep 02 2020 at 15:45)</a>:</h4>
+<p>^^ Also tested on the site in question: works good!</p>
+
+
+
+<a name="208845199"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208845199" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208845199">(Sep 02 2020 at 15:46)</a>:</h4>
+<p>Really a hidden treasure ... If someone needs better date formats in URL aliases, here's how it works: <a href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-463131316">https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-463131316</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-463131316" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-463131316" title="Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div>
+
+
+
+<a name="208862855"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208862855" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208862855">(Sep 02 2020 at 17:57)</a>:</h4>
+<p>Editing a display mode to tweak tokens seems really counter-intuitive. Why aren't we including those tokens in a way that makes them available in the token browser?</p>
+
+
+
+<a name="208917082"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208917082" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208917082">(Sep 03 2020 at 03:37)</a>:</h4>
+<p><span class="user-mention" data-user-id="256729">@klonos</span> they are in the browser. This lets you configure their output (not define them initially). It's for if you wanted the same token to output differently on different content types. It gives you per-type control</p>
+
+
+
+<a name="208917155"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208917155" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208917155">(Sep 03 2020 at 03:38)</a>:</h4>
+<p>if, for example, you had a field_date on 4 types, and each one needed a different date format :)</p>
+
+
+
+<a name="208917177"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208917177" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208917177">(Sep 03 2020 at 03:39)</a>:</h4>
+<p>in the browser that would be something like [node:field_date]</p>
+
+
+
+<a name="208917235"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208917235" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208917235">(Sep 03 2020 at 03:40)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span>  there is also an issue to add the custom date format to those tokens, so you could do something like  [node:field_date:custom:Y-M-d]</p>
+
+
+
+<a name="208917339"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208917339" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208917339">(Sep 03 2020 at 03:43)</a>:</h4>
+<p>hm, it looks like those got in? <a href="https://github.com/backdrop/backdrop-issues/issues/1425">https://github.com/backdrop/backdrop-issues/issues/1425</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1425" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1425" title="Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div>
+
+
+
+<a name="208940970"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/208940970" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#208940970">(Sep 03 2020 at 09:22)</a>:</h4>
+<blockquote>
+<p>Editing a display mode to tweak tokens seems really counter-intuitive. Why aren't we including those tokens in a way that makes them available in the token browser?</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="256729">@klonos</span>  <span class="user-mention" data-user-id="263951">@jenlampton</span> Issue 1425 is fixed, that's why we have at least the Token display. There was also the idea to add custom date tokens directly, but it got lost between <a href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-461951877">https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-461951877</a> and <a href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-468348810">https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-468348810</a>.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-461951877" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-461951877" title="Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-468348810" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-468348810" title="Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div>
+
+
+
+<a name="209003968"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/209003968" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#209003968">(Sep 03 2020 at 17:38)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> I have re-opened <a href="https://github.com/backdrop/backdrop-issues/issues/2069">https://github.com/backdrop/backdrop-issues/issues/2069</a> to get back to the token problem :)</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/2069" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/2069" title="[UX] Date format tokens for date field missing  · Issue #2069 · backdrop/backdrop-issues">[UX] Date format tokens for date field missing  · Issue #2069 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Description of the need We can customize the format of the [node:created] and [node:updated] tokens, by adding custom followed by the date format, like so: [node:created:custom:Y-m-d]. But adding c...</div></div></div>
+
+
+
+<a name="209008720"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Custom%20date%20token/near/209008720" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Custom.20date.20token.html#209008720">(Sep 03 2020 at 18:16)</a>:</h4>
+<p>Great, thanks <span class="user-mention" data-user-id="263951">@jenlampton</span> !</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

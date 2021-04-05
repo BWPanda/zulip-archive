@@ -1,0 +1,192 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Login.20methods.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html">Login methods</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="220370847"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220370847" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220370847">(Dec 18 2020 at 13:21)</a>:</h4>
+<p>I can't login to a test site anymore, getting a blank page with a "Call to undefined method AnonymousUser::bundle()" error. I suspect that's because of a (Organic Groups) block on the default layout.</p>
+<p>Question: How can I log in (to remove the block) without using the default layout? Drush isn't available for the site in question. Or, how can I remove the block without logging in? Any ideas?</p>
+
+
+
+<a name="220377568"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220377568" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220377568">(Dec 18 2020 at 14:27)</a>:</h4>
+<p>Outch... Do you have ssh access? The layout is a json file in the config directory, so you might be able to remove the block with a text editor. This is not for the faint-hearted, though...</p>
+
+
+
+<a name="220378327"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220378327" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220378327">(Dec 18 2020 at 14:34)</a>:</h4>
+<p>could just copy the OOTB default layout to allow you to login then paste back the offending code once youve logged in.</p>
+
+
+
+<a name="220381861"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220381861" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220381861">(Dec 18 2020 at 15:02)</a>:</h4>
+<p>Thanks for the hints! I've removed the suspected block from the layout config file but that didn't help. Thought there might also be something in the database (no idea if Organic Groups saves some block related things there).</p>
+
+
+
+<a name="220382270"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220382270" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220382270">(Dec 18 2020 at 15:06)</a>:</h4>
+<p>Hm... tricky. Do you have direct access to the database? Like phpmyadmin? The enabled/disabled state of modules gets written to the "system" table...</p>
+
+
+
+<a name="220382442"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220382442" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220382442">(Dec 18 2020 at 15:07)</a>:</h4>
+<p><code>SELECT * FROM `system` WHERE `name` LIKE 'og%' </code> should show the enabled (sub-)modules.</p>
+
+
+
+<a name="220383366"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220383366" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220383366">(Dec 18 2020 at 15:14)</a>:</h4>
+<p>Yes, I have database access. Do you recommend to disable OG (submodules) and then try to log in and just remove the block?</p>
+
+
+
+<a name="220383644"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220383644" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220383644">(Dec 18 2020 at 15:17)</a>:</h4>
+<p>I thought, the block is already gone? Before that you could also try to have a look at dblog entries, maybe that helps a bit to identify the root cause.</p>
+
+
+
+<a name="220383782"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220383782" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220383782">(Dec 18 2020 at 15:18)</a>:</h4>
+<p>Well, I'm not sure if it was gone, couldn't verify because of the blank page.</p>
+
+
+
+<a name="220383954"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220383954" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220383954">(Dec 18 2020 at 15:19)</a>:</h4>
+<p><code>SELECT * FROM `watchdog` WHERE `severity` &lt;  5</code><br>
+Does that shed a light on it?</p>
+
+
+
+<a name="220384052"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220384052" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220384052">(Dec 18 2020 at 15:20)</a>:</h4>
+<p>Ah, you might have removed the block, but maybe it's still in the cache.</p>
+
+
+
+<a name="220384319"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220384319" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220384319">(Dec 18 2020 at 15:22)</a>:</h4>
+<p>Ehm... do you have backup? I know, that question comes a little late <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> </p>
+<p>Another <em>possible</em> solution: <code>TRUNCATE TABLE `cache_page`;</code></p>
+
+
+
+<a name="220384508"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220384508" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220384508">(Dec 18 2020 at 15:24)</a>:</h4>
+<p>Re watchdog, interesting, that's the message in the database: <code>%type: !message in %function (line %line of %file)</code> <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="220384570"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220384570" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220384570">(Dec 18 2020 at 15:25)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> I guess this means there is still work to be done on OG <span aria-label="stuck out tongue closed eyes" class="emoji emoji-1f61d" role="img" title="stuck out tongue closed eyes">:stuck_out_tongue_closed_eyes:</span></p>
+
+
+
+<a name="220384636"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220384636" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220384636">(Dec 18 2020 at 15:26)</a>:</h4>
+<p>Garbage, right, the values are serialized in column variables. A bit complicated...</p>
+
+
+
+<a name="220384746"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220384746" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220384746">(Dec 18 2020 at 15:26)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span>  Yes, I guess ;-) (Btw, are you still interested to work on it?)</p>
+
+
+
+<a name="220384867"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220384867" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220384867">(Dec 18 2020 at 15:27)</a>:</h4>
+<p>I'd suggest to run truncate table cache_page (like above), to flush the page cache.</p>
+
+
+
+<a name="220384963"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220384963" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220384963">(Dec 18 2020 at 15:28)</a>:</h4>
+<p>the watchdog message is in a blob field. dont recall the name</p>
+
+
+
+<a name="220385648"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220385648" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220385648">(Dec 18 2020 at 15:33)</a>:</h4>
+<p>Thanks <span class="user-mention" data-user-id="256757">@docwilmot</span>, it's right there but I couldn't see the content. Have downloaded the file, here's the (sanitized) content:</p>
+<p><code>a:6:{s:5:"%type";s:5:"Error";s:8:"!message";s:48:"Call to undefined method AnonymousUser::bundle()";s:9:"%function";s:24:"FieldBlock-&gt;getContent()";s:5:"%file";s:83:"PATH-TO/core/modules/field/field.block.inc";s:5:"%line";i:89;s:14:"severity_level";i:3;}</code></p>
+
+
+
+<a name="220385947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220385947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220385947">(Dec 18 2020 at 15:35)</a>:</h4>
+<p>might be a field block acting up then? recommend just paste in the OOTB code for default layout. backup your current code then paste it back in if you can log in.</p>
+
+
+
+<a name="220386539"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220386539" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220386539">(Dec 18 2020 at 15:39)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> Already tried that, didn't work. I've just also disabled Organic Groups, cleared page cache via phpMyAdmin and cleared browser cache. Still getting the same error, strange!</p>
+
+
+
+<a name="220386722"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220386722" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220386722">(Dec 18 2020 at 15:40)</a>:</h4>
+<p>hmm, might have to resort to black magic. you got some blood and some feathers and an old bible?</p>
+
+
+
+<a name="220386772"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220386772" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220386772">(Dec 18 2020 at 15:41)</a>:</h4>
+<p>Hehe, sure!</p>
+
+
+
+<a name="220386864"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220386864" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220386864">(Dec 18 2020 at 15:41)</a>:</h4>
+<p>Here it is: Will reinstall the site later from scratch, which is no problem in this case, just a test site.</p>
+
+
+
+<a name="220386937"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220386937" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220386937">(Dec 18 2020 at 15:42)</a>:</h4>
+<p>seriously i've run out of ideas, sorry.</p>
+
+
+
+<a name="220387019"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220387019" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220387019">(Dec 18 2020 at 15:42)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> yes, still planning to work on OG further but in January most likely.</p>
+
+
+
+<a name="220387258"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220387258" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220387258">(Dec 18 2020 at 15:44)</a>:</h4>
+<p>NP <span class="user-mention" data-user-id="256757">@docwilmot</span>  Luckily it's not a production site.</p>
+
+
+
+<a name="220387309"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Login%20methods/near/220387309" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Login.20methods.html#220387309">(Dec 18 2020 at 15:44)</a>:</h4>
+<p>Great <span class="user-mention" data-user-id="256573">@Laryn</span>, good to hear!</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,92 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Backdrop.202.2Ex.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html">Backdrop 2.x</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="223693281"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223693281" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223693281">(Jan 22 2021 at 20:14)</a>:</h4>
+<p>I was wondering about something to do with Backdrop v2.0.0... It's a release where we can finally make breaking changes and 'fix' lots of stuff. But what happens if we forget to make a certain, breaking change for v2.0.0? If we release 2.0.0 without that change, then realise what we forgot to do, can we add it to 2.0.1, or is it still considered a breaking change and therefore has to wait until the next major version (3.0.0)?</p>
+
+
+
+<a name="223726286"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223726286" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223726286">(Jan 23 2021 at 02:18)</a>:</h4>
+<p>The way I interpret it is:</p>
+<ul>
+<li>if the change breaks things when moving from 1.x to 2.x then OK</li>
+<li>if the change breaks things when moving from 2.x.y to 2.x.z then not OK and needs to wait till 3.x</li>
+</ul>
+
+
+
+<a name="223727241"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223727241" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223727241">(Jan 23 2021 at 02:45)</a>:</h4>
+<p>What if both? <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="223740231"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223740231" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223740231">(Jan 23 2021 at 09:21)</a>:</h4>
+<p>I also wonder when a <code>2.x</code> branch will be created so we can start work on the plethora of new changes that need to be made...?</p>
+
+
+
+<a name="223744737"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223744737" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223744737">(Jan 23 2021 at 11:22)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda</span> I don't think that we have any technical blockers on opening a 2.x branch. It will mean adding to the overhead of merging 1.x changes to more branches though.</p>
+
+
+
+<a name="223766626"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223766626" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223766626">(Jan 23 2021 at 19:07)</a>:</h4>
+<p>I'm happy enough with 1.x</p>
+
+
+
+<a name="223766790"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223766790" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223766790">(Jan 23 2021 at 19:08)</a>:</h4>
+<p>I say we don't even attempt to work on 2.x until after Drupal 7 EOL. Simply because it gives us more focus as a community on ensuring that there's a smooth upgrade from d7</p>
+
+
+
+<a name="223768057"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223768057" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223768057">(Jan 23 2021 at 19:20)</a>:</h4>
+<p>There's not much on the current list that excites me for 2.x <a href="https://github.com/backdrop/backdrop-issues/milestone/2">https://github.com/backdrop/backdrop-issues/milestone/2</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/milestone/2" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/milestone/2" title="backdrop/backdrop-issues">backdrop/backdrop-issues</a></div><div class="message_embed_description">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="223768137"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223768137" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223768137">(Jan 23 2021 at 19:21)</a>:</h4>
+<p>Maybe some of them don't even need to wait for then. We've already made lots of progress on multilingual for instance</p>
+
+
+
+<a name="223775830"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223775830" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223775830">(Jan 23 2021 at 21:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> It's also all of the <code>@deprecated</code> stuff that needs to be removed for <code>2.x</code>: <a href="https://github.com/backdrop/backdrop/search?q=deprecated&amp;type=code">https://github.com/backdrop/backdrop/search?q=deprecated&amp;type=code</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/search?q=deprecated&amp;type=code" style="background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/search?q=deprecated&amp;type=code" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="223790716"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Backdrop%202.x/near/223790716" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Backdrop.202.2Ex.html#223790716">(Jan 24 2021 at 02:20)</a>:</h4>
+<p>Yeah, that's the boring stuff. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

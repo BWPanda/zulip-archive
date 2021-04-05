@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>The methods on the Layout class are called pretty often. <code>Layout::hasContexts()</code> for example is called for every block, for every page view, by the layout renderer. And this in turn calls <code>Layout::getContexts()</code>, etc. On any of these calls it is highly unlikely the <code>Layout</code> object will change at all. So should we try to introduce static or other caching to these methods? I'm asking here first before raising an issue in case there is some OOP concept that I may not understand. Any thoughts?</p>",
+        "id": 220810501,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608745396
+    },
+    {
+        "content": "<p>This question arose yesterday when I noticed that for relationships to work, we'd need to check every layout context against every relationship within <code>Layout::hasContexts()</code> to create contexts from relationships (trust me for now for the purpose of this argument, though I may turn out to be wrong in this approach). Which means with 4 contexts, 2 relationships, 20 blocks, then = 80 calls to the function that builds relationships from contexts, each page view. Seems unsustainable.</p>",
+        "id": 220810903,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1608745647
+    },
+    {
+        "content": "<p>At the end of <code>Layout::getContexts()</code> you could set a property on the class, and then at the top of the function you could  check if the processing has already been done and then just return <code>$this-&gt;contexts</code>.</p>",
+        "id": 220845816,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1608780029
+    },
+    {
+        "content": "<p>That way the contexts would be unique per layout if you needed to process multiple layouts, but would be consistent for all the blocks using the same layout</p>",
+        "id": 220845831,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1608780109
+    }
+]

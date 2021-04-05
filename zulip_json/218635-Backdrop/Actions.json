@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p>I'm working on a module port that tries to create an action in the content menu using <code>actions_save</code>, but I'm getting an error that the function doesn't exist. I can find it in Drupal 7's API but not Backdrop's. <br>\n<a href=\"https://api.drupal.org/api/drupal/includes%21actions.inc/function/actions_save/7.x\">https://api.drupal.org/api/drupal/includes%21actions.inc/function/actions_save/7.x</a></p>",
+        "id": 220052904,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608071652
+    },
+    {
+        "content": "<p>Anybody have any ideas here? I can't find any issues about it either.</p>",
+        "id": 220053206,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608071813
+    },
+    {
+        "content": "<p>Well, I found a commit that chopped it out. I'll start looking here I guess!<br>\n<a href=\"https://github.com/backdrop/backdrop/commit/d37434bc13f17ada633cb34d4a151502f41b873f#diff-2e06e249f70cba359900ed557eda5481ea94c302525a5b3698652e3ed7c13952\">https://github.com/backdrop/backdrop/commit/d37434bc13f17ada633cb34d4a151502f41b873f#diff-2e06e249f70cba359900ed557eda5481ea94c302525a5b3698652e3ed7c13952</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/commit/d37434bc13f17ada633cb34d4a151502f41b873f#diff-2e06e249f70cba359900ed557eda5481ea94c302525a5b3698652e3ed7c13952\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/commit/d37434bc13f17ada633cb34d4a151502f41b873f#diff-2e06e249f70cba359900ed557eda5481ea94c302525a5b3698652e3ed7c13952\" title=\"Issue #168: Remove configurable actions and the actions UI. · backdrop/backdrop@d37434b\">Issue #168: Remove configurable actions and the actions UI. · backdrop/backdrop@d37434b</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 220053695,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608072040
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Are you speaking about the functionality which later was built as a contrib module? <a href=\"https://github.com/backdrop-contrib/trigger_actions\">https://github.com/backdrop-contrib/trigger_actions</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/trigger_actions\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/trigger_actions\" title=\"backdrop-contrib/trigger_actions\">backdrop-contrib/trigger_actions</a></div><div class=\"message_embed_description\">The Trigger Actions module provides the ability to cause actions to run when certain triggers take place on your site. - backdrop-contrib/trigger_actions</div></div></div>",
+        "id": 220113249,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608124434
+    },
+    {
+        "content": "<p>It must be that <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> ...I recall removing this early on, during the early versions of Backdrop (I think maybe even before 1.0.0 was released)</p>",
+        "id": 220117234,
+        "sender_full_name": "klonos",
+        "timestamp": 1608126792
+    },
+    {
+        "content": "<p>At a glance I don't think that's it, though I could be wrong...</p>",
+        "id": 220129031,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608132292
+    },
+    {
+        "content": "<p>Ah, maybe so. In the include file I see <code>trigger_actions_save</code>...</p>",
+        "id": 220132253,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608133715
+    },
+    {
+        "content": "<p>The issue I'm running into (even with trying to use <code>trigger_actions)</code> is the ability to create customized actions. I'm porting <code>node_convert</code>, which allows setting actions that can be used in the content \"VBO\" menu. Each action should save some contextual information (e.g. the conversion template to be used with that action) but I don't see a way to pass parameters into the action.</p>",
+        "id": 220147178,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608140272
+    },
+    {
+        "content": "<p>At this point core doesn't seem to allow specifying callbacks for actions beyond using the action name as the callback automatically. This could potentially work for the module if I could insert some kind of parameter into the function, and add multiple copies of that action to the VBO menu (for example) with different parameters specified...</p>",
+        "id": 220147333,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608140339
+    },
+    {
+        "content": "<p>Unless there's a kosher way to generate variable function names on the fly but that seems sketchy at best.</p>",
+        "id": 220147391,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608140367
+    },
+    {
+        "content": "<p>I was hoping to get that module fully functional as part of an upgrade site I'm doing but will have to just write some custom module functions with the expected function names and use the partial port for now. Maybe I'll have a brainstorm (or someone else will) in the meantime...</p>",
+        "id": 220150621,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608141825
+    },
+    {
+        "content": "<p><a href=\"https://github.com/laryn/node_convert\">https://github.com/laryn/node_convert</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/laryn/node_convert\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/871421?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/laryn/node_convert\" title=\"laryn/node_convert\">laryn/node_convert</a></div><div class=\"message_embed_description\">Contribute to laryn/node_convert development by creating an account on GitHub.</div></div></div>",
+        "id": 220150692,
+        "sender_full_name": "Laryn",
+        "timestamp": 1608141847
+    },
+    {
+        "content": "<p>Thanks for working on that <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> ++</p>",
+        "id": 220172396,
+        "sender_full_name": "klonos",
+        "timestamp": 1608152434
+    },
+    {
+        "content": "<p><strong>laryn</strong> go team. (Karma: 16)</p>",
+        "id": 220172397,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1608152434
+    }
+]

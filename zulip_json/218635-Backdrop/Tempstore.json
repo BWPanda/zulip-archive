@@ -1,0 +1,152 @@
+[
+    {
+        "content": "<p>Is tempstore automatically private per session, or if it was stored for one user could another user theoretically read/overwrite it?</p>",
+        "id": 211136365,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600956608
+    },
+    {
+        "content": "<p>Trying to figure out how obscure key names need to be.</p>",
+        "id": 211137657,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600957191
+    },
+    {
+        "content": "<p>For <code>$form_state</code>? Webform does them like this (example): <code>form-2M4aji0w-0Zam5YVo_NP_unlwUkZk8shQvUhsRCt0b8</code>. Maybe just copy how they do it? What's the use-case?</p>",
+        "id": 211138801,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1600957696
+    },
+    {
+        "content": "<p>I need to access data from the first page of a multi-page webform after the submission is completed.</p>",
+        "id": 211139498,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600957951
+    },
+    {
+        "content": "<p>I see this in <code>$form_state</code>, maybe that will work: <code>'form_build_id' =&gt; 'form-Cbgefd2KpEC1GIytgkBAQboavoDVxPJArDaZasVmpq3'</code></p>",
+        "id": 211139695,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600958041
+    },
+    {
+        "content": "<p>That's what you're suggesting, right <span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> ?</p>",
+        "id": 211139817,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600958075
+    },
+    {
+        "content": "<p>Oh, did I recommend something? I didn't even get yet, what you're trying to accomplish <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span><br>\nYou're trying to fish something out of the database - don't you have any other access to it? What sort of data and what to do with it?</p>",
+        "id": 211140587,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1600958361
+    },
+    {
+        "content": "<p><span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 211141325,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600958651
+    },
+    {
+        "content": "<p>It's a webform that contains page breaks. I'm working with the <code>webform_registration</code> module and I'd like to wait to create the user until the final submission of the webform (not the first page submission, for example). But webform doesn't seem to retain submission data from earlier pages so I need to store the fields from earlier pages in <code>tempstore</code> (at least that's my plan) until the final submission is complete, then use them.</p>",
+        "id": 211141595,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600958754
+    },
+    {
+        "content": "<p>I'm just trying to figure out what kind of key I should use in tempstore to save this data.</p>",
+        "id": 211141679,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600958778
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/webform_registration/issues/4\">https://github.com/backdrop-contrib/webform_registration/issues/4</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/webform_registration/issues/4\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/webform_registration/issues/4\" title=\"Does not work with multi-page webforms · Issue #4 · backdrop-contrib/webform_registration\">Does not work with multi-page webforms · Issue #4 · backdrop-contrib/webform_registration</a></div><div class=\"message_embed_description\">This issue has also been reported over the years in the D7 issue queue: https://www.drupal.org/project/webform_registration/issues/2705253 Using this module on a webform with several pages does not...</div></div></div>",
+        "id": 211141702,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600958788
+    },
+    {
+        "content": "<p>Oh dear... webform_registration... now I see.</p>",
+        "id": 211141785,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1600958822
+    },
+    {
+        "content": "<p>I'll do some testing with your suggestion. Thanks -- even if you didn't know you were suggesting it. <span aria-label=\"rolling on the floor laughing\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rolling on the floor laughing\">:rolling_on_the_floor_laughing:</span></p>",
+        "id": 211141851,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600958860
+    },
+    {
+        "content": "<p>That looks like a tricky chicken-and-egg problem. No clue how to solve it, or what to recommend. <span aria-label=\"innocent\" class=\"emoji emoji-1f607\" role=\"img\" title=\"innocent\">:innocent:</span></p>",
+        "id": 211142581,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1600959153
+    },
+    {
+        "content": "<p>The <code>form_build_id</code> appears to change when submitting additional pages. Back to the drawing board.</p>",
+        "id": 211160786,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600967098
+    },
+    {
+        "content": "<p>Re-upping my original question: <br>\n<span aria-label=\"question\" class=\"emoji emoji-2753\" role=\"img\" title=\"question\">:question:</span> \"Is tempstore automatically private per session, or if it was stored for one user could another user theoretically read/overwrite it? Trying to figure out how obscure key names need to be.\"</p>",
+        "id": 211161570,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600967508
+    },
+    {
+        "content": "<p>I assume you have searched &amp; reviewed Drupal 7 specific solutions and they do not help.</p>",
+        "id": 211161918,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600967684
+    },
+    {
+        "content": "<p>Like <a href=\"https://drupal.stackexchange.com/questions/37526/get-the-submitted-values-of-a-multistep-webform\">https://drupal.stackexchange.com/questions/37526/get-the-submitted-values-of-a-multistep-webform</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://drupal.stackexchange.com/questions/37526/get-the-submitted-values-of-a-multistep-webform\" style=\"background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://drupal.stackexchange.com/questions/37526/get-the-submitted-values-of-a-multistep-webform\" title=\"Get the submitted values of a multistep webform\">Get the submitted values of a multistep webform</a></div><div class=\"message_embed_description\">I need to get the submitted values of a multistep webform. It looks like webform doesn't save values from earlier steps in the usual place: $form_state['values']['submitted'] or $form_state['input']['</div></div></div>",
+        "id": 211162022,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1600967744
+    },
+    {
+        "content": "<p>I did not find a solution, but I did not find that specific page, either. Will look it over! I am still curious about the answer to my question, though. And also, how does tempstore relate to session variables? When should each be used?</p>",
+        "id": 211162372,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600967886
+    },
+    {
+        "content": "<p>Tempstore has be specifically set up. As far as I understand it's only being used for Views admin, Layout admin and node previews. Is it being used with webforms?</p>",
+        "id": 211168411,
+        "sender_full_name": "Herb",
+        "timestamp": 1600970567
+    },
+    {
+        "content": "<p>No but I was considering using it in a contrib module  if appropriate. Trying to learn what it is and what it's meant for.</p>",
+        "id": 211168694,
+        "sender_full_name": "Laryn",
+        "timestamp": 1600970687
+    },
+    {
+        "content": "<p>Tempstore is actually used in <a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/calls/tempstore_set/1.\">a few more things</a><br>\n<span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> layouts sets a \"locked\" property based on UID on each layout while its being manipulated and before its saved, see <a href=\"https://api.backdropcms.org/api/backdrop/core%21modules%21layout%21layout.module/function/layout_set_layout_tempstore/1\">layout_set_layout_tempstore</a>. Maybe you could do the same for your use case.</p>",
+        "id": 211176965,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600974835
+    },
+    {
+        "content": "<p>The first link gives page not found. But easy enough to look for <code>tempstore_set</code></p>",
+        "id": 211182488,
+        "sender_full_name": "Herb",
+        "timestamp": 1600977629
+    },
+    {
+        "content": "<p><a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/calls/tempstore_set/1\">https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/calls/tempstore_set/1</a></p>",
+        "id": 211184581,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600978731
+    },
+    {
+        "content": "<p>sorry. stray punctuation in that first link</p>",
+        "id": 211184620,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1600978754
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> - Can you share how you generated those Gitter stats?</p>",
+        "id": 187399863,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1580850198
+    },
+    {
+        "content": "<p>Certainly! First I downloaded an archive of all Gitter messages for the main Backdrop channel using this <a href=\"https://github.com/minrk/archive-gitter\" target=\"_blank\" title=\"https://github.com/minrk/archive-gitter\">archive-gitter</a> Python script. That gave me a 55MB JSON file (which crashed my computer twice; once when I tried to open it in a text editor, and again when I tried using an online JSON -&gt; CSV converter <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span>) I then researched how to parse a JSON file using PHP without loading the whole thing into memory. I found a bunch of PHP libraries to that effect, but they required Composer to install and I wanted something quick-and-easy. So I wrote my own PHP code that went through the file line-by-line and wrote the necessary data to a new CSV file. See my code here: <a href=\"https://gist.github.com/BWPanda/81c0571d78764b73ad036bdfafb38904\" target=\"_blank\" title=\"https://gist.github.com/BWPanda/81c0571d78764b73ad036bdfafb38904\">https://gist.github.com/BWPanda/81c0571d78764b73ad036bdfafb38904</a> Then it was just a matter of playing around with the data in a spreadsheet to count and sort it all <span aria-label=\"smiley\" class=\"emoji emoji-1f603\" role=\"img\" title=\"smiley\">:smiley:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/minrk/archive-gitter\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/151929?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/minrk/archive-gitter\" target=\"_blank\" title=\"minrk/archive-gitter\">minrk/archive-gitter</a></div><div class=\"message_embed_description\">Contribute to minrk/archive-gitter development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://gist.github.com/BWPanda/81c0571d78764b73ad036bdfafb38904\" style=\"background-image: url(https://github.githubassets.com/images/modules/gists/gist-og-image.png)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://gist.github.com/BWPanda/81c0571d78764b73ad036bdfafb38904\" target=\"_blank\" title=\"Get specific data from Gitter archive JSON file\">Get specific data from Gitter archive JSON file</a></div><div class=\"message_embed_description\">Get specific data from Gitter archive JSON file. GitHub Gist: instantly share code, notes, and snippets.</div></div></div>",
+        "id": 187401261,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580851035
+    },
+    {
+        "content": "<p>Thanks for sharing that <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> - I was hoping the process was easier than that. But, maybe it's good that it's not. ;-)</p>",
+        "id": 187404819,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1580853327
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>++</p>",
+        "id": 187461099,
+        "sender_full_name": "klonos",
+        "timestamp": 1580915175
+    },
+    {
+        "content": "<p>(peter)** Cheers (Karma: 8)</p>",
+        "id": 187461100,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1580915176
+    }
+]

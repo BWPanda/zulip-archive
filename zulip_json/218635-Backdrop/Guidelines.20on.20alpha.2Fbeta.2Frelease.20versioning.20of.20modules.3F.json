@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>I was wondering if there were any Backdrop guidelines for when to call a release alpha or beta or rc versus a full release number?</p>\n<p>For the modules I've ported, I gave them all alpha versions to begin with, e.g., 1.x-1.0.alpha1, etc., and marked the releases as \"prerelease\". I'm starting to wonder when it's time to promote some of them to the next level.</p>\n<p>I suspect that for people considering Backdrop and looking for whether their pet contrib modules have been ported, a sea of yellow in the Backdrop Upgrade Status module list might be a bit off-putting. So modules probably shouldn't stay prerelease any longer than appropriate; I'm just wondering what's appropriate?</p>\n<p>Any pointers where such guidance is documented would be great. I know that \"Tagging for release\" on <a href=\"https://docs.backdropcms.org/converting-modules-from-drupal\">Converting Modules from Drupal</a> discusses the semantic versioning of modules; perhaps a few words about alpha/beta/rc/etc. there might be helpful?</p>",
+        "id": 227044285,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613776290
+    },
+    {
+        "content": "<p>Good question</p>",
+        "id": 227046870,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1613777943
+    },
+    {
+        "content": "<p>I'd suggest that it's up to the individual maintainer based on what they think is appropriate for that project. I don't think there is/should be any overall requirements for this (I.e. what works for one project might not work for another).</p>",
+        "id": 227048581,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1613779194
+    },
+    {
+        "content": "<p>I wasn't so much looking for _requirements_ as for guidelines/best practices/advice. I'd like to strive for as common an approach as possible.</p>",
+        "id": 227048847,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1613779378
+    },
+    {
+        "content": "<p>I don't think there are any guidelines or best practices on that. As <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> said, it's really up to the maintainer. If you're still in full dev mode, I wouldn't promote up, but once you get it to a point where you're not making a bunch of changes, tag it and wait a few weeks to see if anyone comes up with anything. If nothing major is found, move it up to the next level. There will always be bugs, so waiting for a release with no bugs means the module will never reach 1.0 status.</p>",
+        "id": 227050242,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1613780518
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> do you know if marking them prerelease in GitHub will still trigger making the release node on <a href=\"http://backdropcms.org\">backdropcms.org</a>? I've never tried it. I suggest though just making it an actual release even if it's an alpha</p>",
+        "id": 227061306,
+        "sender_full_name": "Herb",
+        "timestamp": 1613791327
+    },
+    {
+        "content": "<p>I tend to rarely make alpha or beta. Mostly because of the versioning works now. 1.x-1.0.0 suggests to me that it might have bugs. Once it's something like 1.x-1.0.2 it means some bugs have been fixed</p>",
+        "id": 227061435,
+        "sender_full_name": "Herb",
+        "timestamp": 1613791518
+    },
+    {
+        "content": "<p>If it's really not working well I may just not create any release in GitHub.</p>",
+        "id": 227061493,
+        "sender_full_name": "Herb",
+        "timestamp": 1613791569
+    },
+    {
+        "content": "<p>Though I'm not against ever making alpha releases</p>",
+        "id": 227061536,
+        "sender_full_name": "Herb",
+        "timestamp": 1613791629
+    },
+    {
+        "content": "<p>I think I'm just a bit allergic to alpha and beta because there are so many projects on <a href=\"http://drupal.org\">drupal.org</a> that never seem to leave beta even though they've been stable for years and years</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"http://drupal.org\" style=\"background-image: url(https://www.drupal.org/sites/all/themes/bluecheese/images/og.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"http://drupal.org\" title=\"Drupal - Open Source CMS\">Drupal - Open Source CMS</a></div><div class=\"message_embed_description\">Drupal - the leading open-source CMS for ambitious digital experiences that reach your audience across multiple channels. Because we all have different needs, Drupal allows you to create a unique space in a world of cookie-cutter solutions.</div></div></div>",
+        "id": 227061762,
+        "sender_full_name": "Herb",
+        "timestamp": 1613791877
+    },
+    {
+        "content": "<p>For me 1.x-1.0.1 is good for first public release. Bugfix? 1.x-1.0.2 etc., but not perpetual alpha/beta/RC as <span class=\"user-mention\" data-user-id=\"256705\">@Herb</span>  mentioned.</p>",
+        "id": 227069712,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1613800741
+    },
+    {
+        "content": "<p>And 1.x-1.0.0 - for internal/dev testing.</p>",
+        "id": 227075206,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1613807884
+    }
+]

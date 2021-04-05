@@ -1,0 +1,104 @@
+[
+    {
+        "content": "<p>Looking at the Forum because of a spam comment. In <code>admin/content/comment/spam</code> I saw two comments which are <em>not</em> spam. They are published, so everything is fine for the moment, but I guess it's not ideal for future posts of the comment authors. How can the comments be removed from the mentioned listing, or how can they be tagged as 'no spam'?</p>",
+        "id": 220775005,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608717441
+    },
+    {
+        "content": "<p>My other question is about the policy regarding spam comments: Delete comment, I guess, but block or delete user account?</p>",
+        "id": 220775275,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608717687
+    },
+    {
+        "content": "<p>Oh, I don't seem to have user related permissions anyway. <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Can you add these for me as well, or have a look at the spam author's account <code>peterjane</code>?</p>",
+        "id": 220775520,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608717925
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> I've made you a Developer.</p>",
+        "id": 220775808,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608718198
+    },
+    {
+        "content": "<p>Should have permission now</p>",
+        "id": 220775855,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608718208
+    },
+    {
+        "content": "<p>I think for spam comments, I'll check what other comments/posts the user has made (typically there's only one, or they're all spam), in which case I'll delete the user and their content.</p>",
+        "id": 220775892,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608718250
+    },
+    {
+        "content": "<p>Thanks, <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>! Where can I check if there are comments of the author? On <code>accounts/SOME-NAME</code> there seem to be only \"Conversations started by\". On <code>admin/content/comment</code> there are no filters.</p>",
+        "id": 220776216,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608718537
+    },
+    {
+        "content": "<p>Ah ok, that's all I do, sorry - just check their other conversations, not comments.</p>",
+        "id": 220776277,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608718568
+    },
+    {
+        "content": "<p>Ok, seems fine in this case! (Filter authors on <code>admin/content/comment</code> would however be helpful.)</p>",
+        "id": 220777754,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608720081
+    },
+    {
+        "content": "<p>Deleted user account.</p>",
+        "id": 220777887,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1608720222
+    },
+    {
+        "content": "<p>This post here seems legit: <a href=\"https://forum.backdropcms.org/forum/headless-backdrop-setup\">https://forum.backdropcms.org/forum/headless-backdrop-setup</a> ...but the link that the author provides points to what seems to be a test or abandoned Backdrop site, with many spam comments. The user has provided another legit comment on a forum post by Jen re feedback fro Backdrop 1.10.0:</p>\n<blockquote>\n<p>Hi, i just installed Backdrop yesterday.</p>\n<p>It' s is a piece of cake, for someone who is familiar with the Drupal Hooks and API.</p>\n<p>Thanks a lot...</p>\n<p>Robert</p>\n</blockquote>",
+        "id": 221836391,
+        "sender_full_name": "klonos",
+        "timestamp": 1609974675
+    },
+    {
+        "content": "<p>...my point is that the user seems to be legit, but the link they've provided may be harmful (not intentional on their end though) ...should I unpublish that post? ...should I edit to remove the link? ...or should we contact the user to let them know?</p>",
+        "id": 221836522,
+        "sender_full_name": "klonos",
+        "timestamp": 1609974756
+    },
+    {
+        "content": "<p>If you just comment that the site is broken the author may respond if he's subscribed. Its a discussion forum, let him/her discuss. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 221837073,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609975113
+    },
+    {
+        "content": "<p>Good thinking <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ...done <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 221838931,
+        "sender_full_name": "klonos",
+        "timestamp": 1609976428
+    },
+    {
+        "content": "<p>Do we need better/different spam protection for the Forum...? Seems a lot has been getting through lately.</p>",
+        "id": 221862990,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610003229
+    },
+    {
+        "content": "<p>Do we know how much is getting blocked?</p>",
+        "id": 221862996,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1610003240
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> perhaps the spam block success rate is the same, but the activity (number of people/posts/comments) has increased? <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 221922304,
+        "sender_full_name": "klonos",
+        "timestamp": 1610012592
+    }
+]

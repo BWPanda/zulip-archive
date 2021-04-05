@@ -1,0 +1,230 @@
+[
+    {
+        "content": "<p>I get so confused by these three API functions:</p>\n<ul>\n<li><a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21cache.inc/function/cache_clear_all/1\">cache_clear_all</a></li>\n<li><a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21cache.inc/function/cache_flush/1\">cache_flush</a></li>\n<li><a href=\"https://api.backdropcms.org/api/backdrop/core%21includes%21common.inc/function/backdrop_flush_all_caches/1\">backdrop_flush_all_caches</a></li>\n</ul>\n<p>Any others I missed...?</p>\n<p>I wish there was just one cache clearing/flushing function that either cleared a specific cache, or all of them.</p>",
+        "id": 215999939,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604830503
+    },
+    {
+        "content": "<p>At least for cache_clear_all() there's a discussion to deprecate it: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2158\">https://github.com/backdrop/backdrop-issues/issues/2158</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2158\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2158\" title=\"[DX] Mark cache_clear_all() as deprecated · Issue #2158 · backdrop/backdrop-issues\">[DX] Mark cache_clear_all() as deprecated · Issue #2158 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">We should use the new backdrop_flush_all_caches() wherever possible to utilize our shiny new cache system. Let&#39;s replace all core usage of cache_clear_all and mark the function deprecated, to b...</div></div></div>",
+        "id": 216000660,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1604831657
+    },
+    {
+        "content": "<p>I can see the use for all three. Sometimes you don't know the specific cache item to clear but you don't want to rebuild everything either (like menus, JS, etc)</p>",
+        "id": 216071495,
+        "sender_full_name": "Herb",
+        "timestamp": 1604921310
+    },
+    {
+        "content": "<p>Side topic... This is IMO, one of the most under-rated modules for Drupal 7: <a href=\"https://www.drupal.org/project/ui_cache_clear\">https://www.drupal.org/project/ui_cache_clear</a></p>\n<p>I know the cache system has changed a bit on Backdrop so I don't know if ui_cache_clear would still be relevant, but it has been a life-saver for me when it comes to clearing container caches on D7.</p>",
+        "id": 227976416,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614366523
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/uR-v-5VhoxCgVBUZmYBLJjVy/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/uR-v-5VhoxCgVBUZmYBLJjVy/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/uR-v-5VhoxCgVBUZmYBLJjVy/image.png\"></a></div>",
+        "id": 227985018,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1614370041
+    },
+    {
+        "content": "<p>I don't know if it has all the same options, but there is this menu in core already</p>",
+        "id": 227985067,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1614370062
+    },
+    {
+        "content": "<p>I personally never clear individual caches, only ever the Flush all caches option...</p>",
+        "id": 227985187,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614370098
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> individual cache clearing is a game-changer. Clearing all caches is absolutely horrible on larger sites. It has to rebuild everything from scratch as well as rebuild ALL of the caches. In my experience, it takes on average 3 page loads for all caches to be rebuilt (on drupal at least... I haven't benchmarked on BD). That means that 3 people will suffer from slower page views because of a cache clear and when Google says \"Your SEO depends on page speed!!!\" It becomes a bit more difficult to want to hit that button willy-nilly.</p>\n<p>Using ui_cache_clear, if you have a block (with caching) or an embedded view (with caching) you can clear the cache of just that block or that specific view without having to clear the cache for the site or even the page.</p>\n<p>I would be fine if there was a way to clear the specific page cache and everything that touches it (views, blocks etc) but D7 caches were never really designed to be granular like this.</p>\n<p>On one of my e-commerce sites, I have probably 8 views on average embedded into the product pages using panels. If I make a change on the product page that impacts the view on that page and the changes don't show up, I can clear the cache of that specific view, refresh the page and be done. All of my other caches stay intact.</p>\n<p>Ideally, a piece of software that uses caches should be smart enough to understand which caches need to be flushed automatically when something changes. Drupal 7 was horrible about this... D8+ I think got a little better? I always had cache clearing issues on D8+ as well and seem to just resort to flushing all caches anyway... </p>\n<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> What backdrop has for clearing caches is similar to what D7 has through the admin menu. Unfortunately it clears the caches for everything on those particular areas, not just the specific caches of the page or container you're working on.</p>\n<p>Ideally, BD needs a way to clear the caches of just the viewed page without touching the caches of the rest of the site. If I'm working on 1 or 2 pages and the updates aren't showing due to caching, only those pages need to be cleared to inspect the changes. It's not ideal to flush the entire sites caches just to view updated changes to 1 or 2 pages.</p>\n<p>Sorry for going on a side-tangent... I had no intention of saying \"we need to fix anything\", I just wanted to point out ui_cache_clear as a tool that works really well for my needs.</p>",
+        "id": 227989312,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614371747
+    },
+    {
+        "content": "<blockquote>\n<p>Clearing all caches is absolutely horrible on larger sites.</p>\n</blockquote>\n<p>I guess that's where the difference is - I only have small sites <span aria-label=\"smiling face\" class=\"emoji emoji-263a\" role=\"img\" title=\"smiling face\">:smiling_face:</span></p>",
+        "id": 227989686,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1614371892
+    },
+    {
+        "content": "<p>I've recently hit this problem working on Poll module. See <a href=\"https://github.com/backdrop-contrib/poll/issues/1\">https://github.com/backdrop-contrib/poll/issues/1</a> for details. In short, just replacing Drupal's <code>cache_clear_all();</code> with <code>backdrop_flush_all_caches()</code> was devastating performance-wise. Luckily, turns out Backdrop allows clearing cache for individual node pages with <code>cache('cache_entity_node')-&gt;flush();</code>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/poll/issues/1\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/poll/issues/1\" title=\"Does not register a vote · Issue #1 · backdrop-contrib/poll\">Does not register a vote · Issue #1 · backdrop-contrib/poll</a></div><div class=\"message_embed_description\">so you can vote twice to get: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry &#39;3-1-172.21.0.8&#39; for key &#39;PRIMARY&#39;: INSERT INTO {poll_vote} (`nid`, `chid`, `uid`...</div></div></div>",
+        "id": 227990094,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1614372050
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> That might be a nice little contrib idea to add for the short term?</p>",
+        "id": 227990689,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614372275
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Clear.2Fflush.20caches/near/227990689\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"258960\">Alan Mels</span> That might be a nice little contrib idea to add for the short term?</p>\n</blockquote>\n<p>would be really easy to implement in a contrib module. do you need it soon?</p>",
+        "id": 227990890,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1614372336
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> Not right away, but that doesn't mean other folks wouldn't benefit from it.</p>",
+        "id": 227992033,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614372730
+    },
+    {
+        "content": "<p>Have you checked this menu item? <a href=\"/user_uploads/18319/ZUzM1T7RleaeIgQb1F2KVRy_/page_cachepng\">page_cachepng</a> Does it clear all pages instead of individual page?</p>",
+        "id": 227992871,
+        "sender_full_name": "Alan Mels",
+        "timestamp": 1614373082
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258960\">@Alan Mels</span> that should technically flush all pages instead of an individual page. I've had mixed results with that on Drupal and little experience with it on Backdrop.</p>\n<p>The page and else is still a bad mechanism if only 1 or 2 pages need flushed though.</p>\n<p>I could be wrong, but I think <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> is working on cache tags that are similar to how D8+ does it. I don't know the details though.</p>",
+        "id": 227995568,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614374276
+    },
+    {
+        "content": "<blockquote>\n<p>individual cache clearing is a game-changer. Clearing all caches is absolutely horrible on larger sites.  </p>\n</blockquote>\n<p>This is interesting to hear and make sense. I never think twice about clearing all caches, because I work on a lot of sites where it just doesn't matter that much. But, I can see this is not always true. </p>\n<p>I have one site, where maybe I should be a bit more conscious of this given it's page load and traffic.</p>",
+        "id": 227997030,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1614374931
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> It is pretty similar to D8's cache handling, although it is not exactly the same. In theory though you should be able to get very granular cache handling by just adding cache tags when you load your data.</p>",
+        "id": 227999682,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1614375988
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> sounds good. Curious how well it will be able to understand \"this page changed and there are other pieces that are directly tied to this change so we need to update the cache for not only x, but y, z and a,b,c\"?</p>\n<p>I know that adds a lot more into the mix though.</p>\n<p>I honestly would be fine if there was a \"current page\" cash clear option as long as it took into account all of the different pieces that touch that page. (Embedded entities like paragraphs, views, general blocks etc).</p>\n<p>ui_cache_clear adds this option in the admin menu but I've had mixed results with it.</p>",
+        "id": 228000626,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614376393
+    },
+    {
+        "content": "<p>\"Curious how well it will be able to understand \"this page changed and there are other pieces that are directly tied to this change so we need to update the cache for not only x, but y, z and a,b,c\"?\"</p>\n<p>It's supposed to handle those situations as well.</p>",
+        "id": 228100145,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1614481197
+    },
+    {
+        "content": "<p>Yeah, cache tags are meant to solve this very problem you are having <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> ...but do it \"automagically\". If cache tags are configured properly, your site will be smart enough to selectively refresh caches for only the things/components that have been updated on the page.</p>",
+        "id": 228102613,
+        "sender_full_name": "klonos",
+        "timestamp": 1614484493
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> this will be nice. I know it's a lot of overhead on the DB, but I feel like it's a good approach. Hopefully we can get the forced clearing to work better than D8+. I always have to resort to clearing everything just to see a small update.</p>",
+        "id": 228102824,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614484774
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> at some point said that we don't really need cache tags in Backdrop, because we are not as \"heavy\" as D8/9, and we all agreed that this feature would mostly be a \"marketing\" thing (for all the people that say \"but Drupal has this and that\" etc.) ...well it seems that larger sites built on Backdrop may actually benefit greatly by this feature after all.</p>",
+        "id": 228103106,
+        "sender_full_name": "klonos",
+        "timestamp": 1614485062
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> I just discovered ui_cache_clear last week. I think it would be useful to port. I didn't because the client is moving to d8.</p>",
+        "id": 228168116,
+        "sender_full_name": "Herb",
+        "timestamp": 1614558347
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> I think it could be useful on D8, but it hasn't been maintained in a while. Definitely been nice on D7.</p>\n<p>Cache tags might be the end all solution for Backdrop (provided there's a way to clear specific pages)</p>",
+        "id": 228175163,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614566867
+    },
+    {
+        "content": "<p>There's no UI for cache tags so I don't think they're the same thing.</p>",
+        "id": 228177512,
+        "sender_full_name": "Herb",
+        "timestamp": 1614569275
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> my understanding is that cache tags do automatic \"magic\" or \"smart\" cache refresh of page components that have been updated. What ui_cache_clear does is manual, selective cache clearing ...but yeah, in theory (properly configured) cache tags would make the need for modules like ui_cache_clear moot.</p>",
+        "id": 228178224,
+        "sender_full_name": "klonos",
+        "timestamp": 1614570170
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> I think it should be able to handle most circumstances when editing nested content. However, if you need to manually clear cache entries for some reason, then it might be a great solution for that.</p>",
+        "id": 228257977,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1614615346
+    },
+    {
+        "content": "<p>It might be easier to understand if I wrote up some documentation for how to implement it with a custom module.</p>",
+        "id": 228258210,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1614615423
+    },
+    {
+        "content": "<p>Personally, I would love to see Core have the ability to flush an individual page along with anything that touches that page. I know in theory the cache tags will do this, but I know if a contrib doesn't properly tie into that cache system, it runs the risk of everything getting flushed automatically \"except\" that one contrib piece (until someone brings it up and it gains attention).</p>\n<p>It's too early to know how well this will work in long term practicality. I suggest this as a last-resort option in case caches don't automatically get flushed for whatever reason.</p>\n<p>I don't know if it would be possible to make the core cache system work regardless of contrib where contribs are just automatically encompassed whether they want to be it not as opposed to having to explicitly tie into the cache, but this might be the end-all solution. \"Included with the option to manually opt-out\" is how I would probably approach it.</p>\n<p>Just spit balling ideas, experience and thoughts.</p>",
+        "id": 228290292,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614626483
+    },
+    {
+        "content": "<blockquote>\n<p>Personally, I would love to see Core have the ability to flush an individual page along with anything that touches that page. I know in theory the cache tags will do this...</p>\n</blockquote>\n<p>Cache tags work the other way around, i.e., it's inside out, not outside in. For example, if you have a view in a block on a page, editing the page will not necessarily invalidate the cache for the block and view, but editing the view should invalidate the cache for the block and the page.</p>\n<blockquote>\n<p>...but I know if a contrib doesn't properly tie into that cache system, it runs the risk of everything getting flushed automatically \"except\" that one contrib piece (until someone brings it up and it gains attention).</p>\n</blockquote>\n<p>I'm not sure that's necessarily true, but Joseph would know better.</p>",
+        "id": 228336319,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1614647114
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> yeah, in my workflow, editing a node that has fields that are in-turn displayed on that nodes layout using a view (think a product comparison view as an example) I would need the node save to trigger a cache flush on the view \"if\" the current nodes field that is in that view changes.</p>\n<p>Many of the views I have embedded on a page include the currently viewed node information along with similar info from other nodes.</p>\n<p>If one node gets updated, the view needs refreshed so all of the other nodes using the same view receive the same updated info.</p>\n<p>Just throwing out a seemingly rare but real-world scenario I've encountered.</p>",
+        "id": 228356603,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1614663433
+    },
+    {
+        "content": "<p>Cache tags do work as you describe: updating a node that appears in a View will refresh the View cache. Pantheon had backported cache tags to Drupal 7, which is where I've tried it out. Is that what <span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> is using to port to Backdrop?</p>",
+        "id": 229708324,
+        "sender_full_name": "Herb",
+        "timestamp": 1615397607
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> by the way I've got an initial port of UI Cache Clear here <a href=\"https://github.com/backdrop-contrib/ui_cache_clear\">https://github.com/backdrop-contrib/ui_cache_clear</a>. It works for Views and nodes right now. I removed the block functionality since there is no block level cache anymore. And I haven't really tried to convert the panels cache clearing to layout. There is a cache_layout_path table but I'm not sure how that compares to Panels. I suspect it's not helpful to have cache clear button on Layouts since the cache_layout_path does not save the full page content, just the config.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ui_cache_clear\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ui_cache_clear\" title=\"backdrop-contrib/ui_cache_clear\">backdrop-contrib/ui_cache_clear</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/ui_cache_clear development by creating an account on GitHub.</div></div></div>",
+        "id": 229708917,
+        "sender_full_name": "Herb",
+        "timestamp": 1615397779
+    },
+    {
+        "content": "<p>Anyway, give it a spin</p>",
+        "id": 229708957,
+        "sender_full_name": "Herb",
+        "timestamp": 1615397793
+    },
+    {
+        "content": "<p>Yes. I started by porting the module, and then after I had the module working I copied the code into it's respective modules in core.</p>",
+        "id": 229709010,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615397814
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> what's the link to your PR?</p>",
+        "id": 229709509,
+        "sender_full_name": "Herb",
+        "timestamp": 1615398000
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop/pull/3475\">https://github.com/backdrop/backdrop/pull/3475</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3475\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3475\" title=\"Issue 4127 add cache tags and cache max age by hosef · Pull Request #3475 · backdrop/backdrop\">Issue 4127 add cache tags and cache max age by hosef · Pull Request #3475 · backdrop/backdrop</a></div><div class=\"message_embed_description\">This PR adds new cache classes and many functions to allow cache tagging to work.\nFixes backdrop/backdrop-issues#4127</div></div></div>",
+        "id": 229710004,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615398177
+    },
+    {
+        "content": "<p>It still needs some more cleanup, but I decided to wait on doing more with it until I can get a technical review about the way it is implemented.</p>",
+        "id": 229710119,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1615398219
+    }
+]

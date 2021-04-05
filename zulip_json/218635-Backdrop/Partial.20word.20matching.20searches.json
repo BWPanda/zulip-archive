@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Does anyone have a search system in Backdrop that implements partial word matching? E.g. searching for 'back' would also display results containing 'backdrop', 'backwards', 'backpedal', etc. I think this is called 'fuzzy' searching...? I believe <code>search_api</code> does this (correct me if I'm wrong), but wondered if there are any other (maybe simpler) solutions?</p>",
+        "id": 198167154,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589962642
+    },
+    {
+        "content": "<p>In combination with views search_api should provide what you need. I didn't need this yet for Backdrop, but achieved something similar in Drupal with search_autocomplete (<a href=\"https://www.drupal.org/project/search_autocomplete\">https://www.drupal.org/project/search_autocomplete</a>). But that module isn't ported (yet). So - no, probably no helpful hint from my side...</p>",
+        "id": 198170305,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1589964812
+    },
+    {
+        "content": "<p>This search here is completly based on Views, also finds partial words, e.g. <a href=\"https://lag.mazzemedia.ch/search?combine=landw\">https://lag.mazzemedia.ch/search?combine=landw</a> (also finds \"Landwirtschaft\"  (agriculture in English)</p>",
+        "id": 198191857,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1589978440
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> Hmm, so that's pure Views then, no Search API, etc.? How many nodes in your DB?</p>",
+        "id": 198192413,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589978753
+    },
+    {
+        "content": "<p>Maybe 300 nodes. Will be around 1000 at the end. No Search API has been used, and with context filters, even the search for taxonomy terms works. Plus, the server is quite powerful.</p>",
+        "id": 198193299,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1589979229
+    },
+    {
+        "content": "<p>The site I'm working on has around 1,200 nodes, so I'd be interested to see how that works... I searched for \"drupal views search\" and found these instructions: <a href=\"https://www.webwash.net/how-to-create-search-pages-using-views-in-drupal-7/\">https://www.webwash.net/how-to-create-search-pages-using-views-in-drupal-7/</a> which seem to imply that you still need the core Search module. Is that what you've done <span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span>?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://www.webwash.net/how-to-create-search-pages-using-views-in-drupal-7/\" style=\"background-image: url(https://www.webwash.net/wp-content/uploads/2013/04/custom-search-views-fig1-1-hi.jpg)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://www.webwash.net/how-to-create-search-pages-using-views-in-drupal-7/\" title=\"How To Create Search Pages Using Views In Drupal 7 - WebWash\">How To Create Search Pages Using Views In Drupal 7 - WebWash</a></div><div class=\"message_embed_description\">A while ago I wrote two tutorials on using the Search API module. In the first tutorial, we created a custom search page using just Views and a Search API index. In the second, we looked at faceted search using the Facet API module.  Search API can be tough to setup especially for new users to Drupal. For example, you need to understand the difference between a Search API Server and Index, and then you need to spend time configuring everything.  In this tutorial, I'll show you how to create a search page using just Views and Drupal's core Search module.</div></div></div>",
+        "id": 198193742,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589979464
+    },
+    {
+        "content": "<p>Your example uses Search API. Here's a screenshot of my View, make sure to use the \"combine fields\" feature. I also used Better Exposed Filter. I can also send you an export if it helps.</p>\n<p><a href=\"/user_uploads/18319/Mts3AHfFcvtO1JRLEvBOy8vM/Screenshot-2020-05-20-at-15.03.21.png\">Screenshot-2020-05-20-at-15.03.21.png</a> <a href=\"/user_uploads/18319/2v3EMwjyyHlyga-zuicNbA_d/Screenshot-2020-05-20-at-15.02.46.png\">Screenshot-2020-05-20-at-15.02.46.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/Mts3AHfFcvtO1JRLEvBOy8vM/Screenshot-2020-05-20-at-15.03.21.png\" title=\"Screenshot-2020-05-20-at-15.03.21.png\"><img src=\"/user_uploads/18319/Mts3AHfFcvtO1JRLEvBOy8vM/Screenshot-2020-05-20-at-15.03.21.png\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/2v3EMwjyyHlyga-zuicNbA_d/Screenshot-2020-05-20-at-15.02.46.png\" title=\"Screenshot-2020-05-20-at-15.02.46.png\"><img src=\"/user_uploads/18319/2v3EMwjyyHlyga-zuicNbA_d/Screenshot-2020-05-20-at-15.02.46.png\"></a></div>",
+        "id": 198194834,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1589979961
+    },
+    {
+        "content": "<p>Interesting, thanks. I'll have a play around <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 198195013,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1589980044
+    },
+    {
+        "content": "<p>ok:-) sorry, use relation instead of context. „website bereiche“ is the name of a taxonomy vocabulary.</p>",
+        "id": 198196186,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1589980555
+    }
+]

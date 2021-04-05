@@ -1,0 +1,116 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Complex.20slideshow.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html">Complex slideshow</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="191712232"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191712232" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191712232">(Mar 25 2020 at 08:30)</a>:</h4>
+<p>A client has asked me to make a slideshow made up of sections: each section will have some text, and some images that transition in the background. Once a section has shown all its images, the next section is displayed. My problem is that I don't know how to do 'section's in a slideshow. As far as I'm aware, slideshows are just a collection of slides, each with a background and optional text. To have the same text stay in place while the background changes is fine if that's the entire slideshow, but this is like having multiple slideshows all together... Anyone done anything like this before?</p>
+
+
+
+<a name="191712284"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191712284" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191712284">(Mar 25 2020 at 08:31)</a>:</h4>
+<p>And I know I can just create multiple slides with the same text and different background, but then the text will transition with the background which'll look weird IMO...</p>
+
+
+
+<a name="191725524"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191725524" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191725524">(Mar 25 2020 at 10:32)</a>:</h4>
+<p>How about 2 overlapping slideshows?: 1 slideshow holds the images, the other one the text. The one with the text has transparent images as background, so the background of the image-only slideshow is shown "under" the text-only slideshow. ...may need some coordination between the two slideshows.</p>
+
+
+
+<a name="191726122"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191726122" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191726122">(Mar 25 2020 at 10:38)</a>:</h4>
+<blockquote>
+<p>may need some coordination between the two slideshows.</p>
+</blockquote>
+<p>Yeah, that'd be the tricky bit...</p>
+
+
+
+<a name="191745547"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191745547" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191745547">(Mar 25 2020 at 13:40)</a>:</h4>
+<p>Maybe you find a way combining a regular slideshow with some css animations? I did freaky stuff with <code>@keyframes</code> and css3 transition/transform. Or maybe you get some inspiration from this D module: <a href="https://www.drupal.org/project/animate_css" title="https://www.drupal.org/project/animate_css">https://www.drupal.org/project/animate_css</a></p>
+
+
+
+<a name="191755355"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191755355" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191755355">(Mar 25 2020 at 14:45)</a>:</h4>
+<p>A slideshow of slideshows? It just seems really wrong. When clients ask me stuff like that I usually say it's not accessible and it's not affordable. But then I often have clients who have tight budgets</p>
+
+
+
+<a name="191763951"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191763951" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191763951">(Mar 25 2020 at 15:32)</a>:</h4>
+<p>does the text in all slideshows animate? if the text is static in place, you could have one slideshow, but groups of slides with the same text.</p>
+
+
+
+<a name="191806618"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191806618" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191806618">(Mar 25 2020 at 20:27)</a>:</h4>
+<p><span class="user-mention" data-user-id="256757">@docwilmot</span> the current implementation of slideshow modules for D7/Backdrop scroll each slide and the respective text as a single item. <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> wants to scroll the background images of the slides independently of the text, because some slides have the same text. So my understanding is that the slideshow looks something like this:</p>
+<ul>
+<li>bg image 1 with text 1</li>
+<li>bg image 2 with text 1</li>
+<li>bg image 3 with text 1</li>
+<li>bg image 4 with text 2</li>
+<li>bg image 5 with text 2</li>
+<li>bg image 6 with text 3</li>
+<li>bg image 7 with text 3<br>
+...animating images 1, 2, and 3 should NOT animate text 1<br>
+...animating from image 3 to image 4 should animate from text 1 to text 2<br>
+...animating images 4 and 5 should NOT animate text 2<br>
+...animating from image 5 to image 6 should animate from text 2 to text 3<br>
+...animating images 6 and 7 should NOT animate text 3<br>
+...animating from image 7 to image 1 should animate from text 3 to text 1</li>
+</ul>
+
+
+
+<a name="191807221"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191807221" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191807221">(Mar 25 2020 at 20:32)</a>:</h4>
+<p>Exactly!</p>
+
+
+
+<a name="191809698"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191809698" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191809698">(Mar 25 2020 at 20:55)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> I've done that using position:absolute on the text before.</p>
+
+
+
+<a name="191809737"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191809737" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191809737">(Mar 25 2020 at 20:55)</a>:</h4>
+<p>Are these slides going to be updated often, or can you code CSS for specific ones?</p>
+
+
+
+<a name="191810054"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191810054" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191810054">(Mar 25 2020 at 20:58)</a>:</h4>
+<p>Wondering if animated png could be a possible solution here ...if you do not care about IE11 support that is: <a href="https://caniuse.com/#feat=apng" title="https://caniuse.com/#feat=apng">https://caniuse.com/#feat=apng</a></p>
+
+
+
+<a name="191810120"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Complex%20slideshow/near/191810120" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Complex.20slideshow.html#191810120">(Mar 25 2020 at 20:58)</a>:</h4>
+<p>(Edge started supporting it since Jan 2020)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

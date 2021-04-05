@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>I am having a little trouble getting a layout to apply to a view.<br>\nWhat should the layout path be for a view?</p>",
+        "id": 230019013,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615551258
+    },
+    {
+        "content": "<p><a href=\"http://websitename.com/view/%\">websitename.com/view/%</a> ?</p>",
+        "id": 230019038,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615551272
+    },
+    {
+        "content": "<p>I cannot use <a href=\"http://websitename.com/node/%\">websitename.com/node/%</a></p>",
+        "id": 230019049,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615551283
+    },
+    {
+        "content": "<p>The visibility condition should be the views path.<br>\nEg /about-views</p>",
+        "id": 230019149,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1615551331
+    },
+    {
+        "content": "<p>The layout path should be the same path that you created for the particular display(s) for the View.</p>",
+        "id": 230038135,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615559608
+    },
+    {
+        "content": "<p>BTW, there's a session at Backdrop LIVE devoted to Layouts that will be starting in about 25 minutes. That would be a great place to ask this question!</p>",
+        "id": 230038257,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615559644
+    },
+    {
+        "content": "<p><a href=\"https://events.backdropcms.org/sessions/working-with-layouts\">https://events.backdropcms.org/sessions/working-with-layouts</a></p>",
+        "id": 230038318,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615559661
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"311204\">@Eric Vander Wal</span> I'm not one to give a definite answer, but I would think you would add the view to a layout path as opposed to adding a layout to a view path.</p>\n<p>If it were me, I would create a new layout with the custom path, (not a wildcard path) then create a view with a block and add that block to the layout.</p>",
+        "id": 230065792,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615569259
+    },
+    {
+        "content": "<p>If you want to apply an existing layout to a View page, you can also test out the \"Layout Wildcard\" module. It adds a new field to layout configuration for additional paths to apply the layout to (besides the main context) and you can add the View path there.<br>\n<a href=\"https://github.com/backdrop-contrib/layout_wildcard\">https://github.com/backdrop-contrib/layout_wildcard</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/layout_wildcard\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/layout_wildcard\" title=\"backdrop-contrib/layout_wildcard\">backdrop-contrib/layout_wildcard</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/layout_wildcard development by creating an account on GitHub.</div></div></div>",
+        "id": 230066123,
+        "sender_full_name": "Laryn",
+        "timestamp": 1615569418
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> I have to wonder if this should be in core... I'm guessing a lot of people are looking for the functionality and don't realize it's addressed in contrib.</p>",
+        "id": 230066291,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1615569500
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/1528\">https://github.com/backdrop/backdrop-issues/issues/1528</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1528\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1528\" title=\"Allow a layout to be selected on multiple paths. · Issue #1528 · backdrop/backdrop-issues\">Allow a layout to be selected on multiple paths. · Issue #1528 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">It would be great to set more than one path for which a layout is used instead of the default. For example, while most of the pages on a site may have a sidebar, there could be five or so pages tha...</div></div></div>",
+        "id": 230066464,
+        "sender_full_name": "Laryn",
+        "timestamp": 1615569587
+    },
+    {
+        "content": "<p>I am waiting to be approved as co-maintainer of Layout Wildcard, so that I (or someone) can approve some of the bugfix PRs that I've put in. I also have some ideas for improving this, but I really want to get feedback before trying anything, so I'll launch them in an issue on this module.</p>",
+        "id": 230067965,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1615570265
+    }
+]

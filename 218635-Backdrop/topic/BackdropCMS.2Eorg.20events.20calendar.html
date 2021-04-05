@@ -1,0 +1,91 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html">BackdropCMS.org events calendar</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="222148826"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222148826" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222148826">(Jan 09 2021 at 02:30)</a>:</h4>
+<p>I've just been looking at Backdrop's iCal calendar, and I see events on there that aren't on <a href="https://backdropcms.org/news/events">https://backdropcms.org/news/events</a>... Is there a way we can automate the addition of iCal events on <a href="http://B.org">B.org</a>, or should we embed the iCal calendar at the bottom of the Events page?</p>
+
+
+
+<a name="222163516"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222163516" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222163516">(Jan 09 2021 at 09:53)</a>:</h4>
+<p>You seem to use Google for the iCal feed (not sure about the details of the <a href="http://B.org">B.org</a> setup). Note, that's there's a "module for that": <a href="https://backdropcms.org/project/viewsicalexport">https://backdropcms.org/project/viewsicalexport</a></p>
+
+
+
+<a name="222163825"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222163825" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222163825">(Jan 09 2021 at 10:02)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> That module seems to create an iCal feed from Backdrop content, however in B.org's case, it seems the iCal calendar is the canonical source for events (I believe <span class="user-mention" data-user-id="263951">@jenlampton</span> and <span class="user-mention" data-user-id="256570">@StPaulTim</span> use/update that), and events are then manually added to <a href="http://B.org">B.org</a> as necessary...</p>
+
+
+
+<a name="222163916"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222163916" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222163916">(Jan 09 2021 at 10:05)</a>:</h4>
+<blockquote>
+<p>it seems the iCal calendar is the canonical source for events ... events are then manually added to <a href="http://B.org">B.org</a></p>
+</blockquote>
+<p>I suspected that, I think it could get simplified.</p>
+<ul>
+<li>add events on <a href="http://B.org">B.org</a> only</li>
+<li>create the feed with the module</li>
+<li>subscribe to it with google calendar</li>
+</ul>
+<p>Then you only have to create event content once. Just a suggestion <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="222163919"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222163919" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222163919">(Jan 09 2021 at 10:05)</a>:</h4>
+<p>That'd be better</p>
+
+
+
+<a name="222163987"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222163987" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222163987">(Jan 09 2021 at 10:07)</a>:</h4>
+<p>The iCal feed has a weekly event for the office hours (I suspect the original reason this calendar was setup was to remind Jen and Tim about this). This likely isn't required on <a href="http://B.org">B.org</a> as a repeating event (there's already a mention of it somewhere), so maybe there can be 'hidden' events on <a href="http://B.org">B.org</a>, but then all events are exported to iCal...?</p>
+
+
+
+<a name="222164209"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222164209" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222164209">(Jan 09 2021 at 10:14)</a>:</h4>
+<blockquote>
+<p>maybe there can be 'hidden' events on <a href="http://B.org">B.org</a></p>
+</blockquote>
+<p>That seems feasible with views. Not sure how big the effort would be and if it's worth it.<br>
+Or combine it, <a href="http://B.org">B.org</a> events added only there and then subscribe to them with google cal, other events (not needed on <a href="http://B.org">B.org</a>) still get added in google manually... Could be worth a try.</p>
+
+
+
+<a name="222246690"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222246690" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> jenlampton <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222246690">(Jan 10 2021 at 22:54)</a>:</h4>
+<p>We could do it the other way around. No ral reason google calendar needs to be the source</p>
+
+
+
+<a name="222247284"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/BackdropCMS.org%20events%20calendar/near/222247284" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/BackdropCMS.2Eorg.20events.20calendar.html#222247284">(Jan 10 2021 at 23:11)</a>:</h4>
+<blockquote>
+<p>it seems the iCal calendar is the canonical source for events </p>
+</blockquote>
+<p>Well, this might be stretching things. I certainly have not consistently updated iCal with public events. For me, BackdropCMS is more canonical for public events, but for internal events like weekly meetings, I rely on iCal. </p>
+<p>I'd be happy to see the management of events improved and for us to be more consistent.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

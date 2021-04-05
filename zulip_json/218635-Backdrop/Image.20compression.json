@@ -1,0 +1,14 @@
+[
+    {
+        "content": "<p>Just saw these messages from a Drupal work colleague in Slack:</p>\n<blockquote>\n<p>I encountered a strange behaviour of Drupal in terms of images upload<br>\nAfter uploading a minified image (which is a background image, but placed as an img element) Drupal increases its size <span aria-label=\"open mouth\" class=\"emoji emoji-1f62e\" role=\"img\" title=\"open mouth\">:open_mouth:</span><br>\nFrom 200KB to 2MB — what the hell?<br>\nThere is no upscaling enabled in the image styles settings<br>\nIt looks like Drupal recompress the images not only reducing their weight and quality, but also works the other way around and tries to restore the form of already compressed images <span aria-label=\"open mouth\" class=\"emoji emoji-1f62e\" role=\"img\" title=\"open mouth\">:open_mouth:</span><br>\nI didn’t expect that</p>\n</blockquote>\n<p>Does Backdrop have this issue too?</p>",
+        "id": 227199032,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1613946114
+    },
+    {
+        "content": "<p>Side discussion, what has come of promoting imagemagick as the default with fallback to GD?</p>",
+        "id": 227200602,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1613947980
+    }
+]

@@ -1,0 +1,108 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/coding.20standards.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html">coding standards</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="197855685"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197855685" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197855685">(May 17 2020 at 16:00)</a>:</h4>
+<p>I've seen this:</p>
+<div class="codehilite"><pre><span></span><code>  $config = config(&#39;some_config.settings&#39;);
+  $config-&gt;set(&#39;some_setting&#39;, $form_state[&#39;values&#39;][&#39;some_setting&#39;]);
+  $config-&gt;set(&#39;another_setting&#39;, $form_state[&#39;values&#39;][&#39;another_setting&#39;]);
+  $config-&gt;set(&#39;yet_another_setting&#39;, $form_state[&#39;values&#39;][&#39;yet_another_setting&#39;]);
+  $config-&gt;save();
+</code></pre></div>
+
+
+<p>...but also this:</p>
+<div class="codehilite"><pre><span></span><code>  $config = config(&#39;some_config.settings&#39;);
+  $config
+    -&gt;set(&#39;some_setting&#39;, $form_state[&#39;values&#39;][&#39;some_setting&#39;])
+    -&gt;set(&#39;another_setting&#39;, $form_state[&#39;values&#39;][&#39;another_setting&#39;])
+    -&gt;set(&#39;yet_another_setting&#39;, $form_state[&#39;values&#39;][&#39;yet_another_setting&#39;])
+    -&gt;save();
+</code></pre></div>
+
+
+<p>Are these both acceptable?</p>
+
+
+
+<a name="197857264"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197857264" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197857264">(May 17 2020 at 16:35)</a>:</h4>
+<p>Yes, if the return value of the method (set()) is an object. The following method needs to be valid for the returned object.</p>
+
+
+
+<a name="197857447"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197857447" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197857447">(May 17 2020 at 16:39)</a>:</h4>
+<p>Config::set() returns $this, which is a pointer to itself (a config object), so you can chain calls to the method: <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/Config%3A%3Aset/1">https://api.backdropcms.org/api/backdrop/core%21includes%21config.inc/function/Config%3A%3Aset/1</a></p>
+
+
+
+<a name="197857606"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197857606" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197857606">(May 17 2020 at 16:43)</a>:</h4>
+<p>Yes, I'm aware of how it works and why ...just asking about the code formatting (DX for less experienced developers or code tinkerers)</p>
+
+
+
+<a name="197858092"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197858092" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197858092">(May 17 2020 at 16:55)</a>:</h4>
+<p>...I've found my answer here (did not know that there was a dedicated page for OOP): <a href="https://www.drupal.org/docs/develop/standards/object-oriented-code#chaining">https://www.drupal.org/docs/develop/standards/object-oriented-code#chaining</a> </p>
+<blockquote>
+<p>In the case where you have a fluid interface for a class, and the code spans more than one line, the method calls should be indented with 2 spaces:</p>
+</blockquote>
+
+
+
+<a name="197858135"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197858135" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197858135">(May 17 2020 at 16:56)</a>:</h4>
+<p>...so the second format is indeed allowed.</p>
+
+
+
+<a name="197858234"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197858234" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197858234">(May 17 2020 at 16:58)</a>:</h4>
+<p>...there's more discussion about it here: <a href="https://www.drupal.org/project/coding_standards/issues/1516460">https://www.drupal.org/project/coding_standards/issues/1516460</a></p>
+
+
+
+<a name="197858331"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197858331" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197858331">(May 17 2020 at 17:00)</a>:</h4>
+<p>You question "Are these both acceptable?" was not clear what you meant.</p>
+
+
+
+<a name="197858357"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197858357" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197858357">(May 17 2020 at 17:01)</a>:</h4>
+<p>Yeah, I see what you mean ...I thought that the thread topic would provide context <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="197859552"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197859552" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197859552">(May 17 2020 at 17:25)</a>:</h4>
+<p>Sorry about that. I didn't even read the topic. <span aria-label="frown" class="emoji emoji-1f641" role="img" title="frown">:frown:</span></p>
+
+
+
+<a name="197859721"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/coding%20standards/near/197859721" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/coding.20standards.html#197859721">(May 17 2020 at 17:28)</a>:</h4>
+<p>Only ever apologize if you've actually done something wrong ...and even then, it usually is not necessary when in the company of friends <span aria-label="slight smile" class="emoji emoji-1f642" role="img" title="slight smile">:slight_smile:</span></p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

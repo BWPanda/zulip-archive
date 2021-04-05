@@ -1,0 +1,956 @@
+[
+    {
+        "content": "<p>At some point we'll need to see if dragonbot can be set up here.</p>",
+        "id": 184841463,
+        "sender_full_name": "Herb",
+        "timestamp": 1578216662
+    },
+    {
+        "content": "<p>Yup ...and also set up the karma and forum notifications as well.</p>",
+        "id": 184841534,
+        "sender_full_name": "klonos",
+        "timestamp": 1578216800
+    },
+    {
+        "content": "<p>I see <span class=\"user-mention\" data-user-id=\"256358\">@Jennifer Lampton</span> has added <span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> (doesn't seem to do anything yet though...)</p>",
+        "id": 184864033,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578257162
+    },
+    {
+        "content": "<p>I'm trying to get a chatbot going. Have installed Hubot on a Heroku app. I'm getting this error in heroku logs:</p>\n<p>Not sure if this is enough for anyone to give me any suggestions.</p>\n<div class=\"codehilite\"><pre><span></span>2020-01-05T22:03:08.000000+00:00 app[api]: Build succeeded\n2020-01-05T22:03:09.332709+00:00 heroku[web.1]: Stopping all processes with SIGTERM\n2020-01-05T22:03:09.396322+00:00 heroku[web.1]: Process exited with status 0\n2020-01-05T22:03:10.957496+00:00 heroku[web.1]: Starting process with command `bin/hubot -a zulip`\n2020-01-05T22:03:15.139887+00:00 app[web.1]: audited 213 packages in 1.641s\n2020-01-05T22:03:15.141877+00:00 app[web.1]: found 11 vulnerabilities (9 moderate, 2 high)\n2020-01-05T22:03:15.141880+00:00 app[web.1]: run `npm audit fix` to fix them, or `npm audit` for details\n2020-01-05T22:03:15.902399+00:00 heroku[web.1]: State changed from starting to up\n2020-01-05T22:03:15.678722+00:00 app[web.1]: Zulip API: Error parsing JSON: &lt;h1&gt;Bad Request (400)&lt;/h1&gt;\n2020-01-05T22:03:15.678986+00:00 app[web.1]: Zulip API Error: Request failed with status 400: &lt;h1&gt;Bad Request (400)&lt;/h1&gt;\n2020-01-05T22:03:15.681443+00:00 app[web.1]: [Sun Jan 05 2020 22:03:15 GMT+0000 (Coordinated Universal Time)] ERROR Error: Request failed with status 400: &lt;h1&gt;Bad Request (400)&lt;/h1&gt;\n2020-01-05T22:03:15.681446+00:00 app[web.1]: at Request._callback (/app/node_modules/zulip/lib/zulip.js:64:19)\n2020-01-05T22:03:15.681448+00:00 app[web.1]: at Request.self.callback (/app/node_modules/request/request.js:129:22)\n2020-01-05T22:03:15.681451+00:00 app[web.1]: at Request.emit (events.js:209:13)\n2020-01-05T22:03:15.681453+00:00 app[web.1]: at Request.&lt;anonymous&gt; (/app/node_modules/request/request.js:873:14)\n2020-01-05T22:03:15.681455+00:00 app[web.1]: at Request.emit (events.js:214:15)\n2020-01-05T22:03:15.681457+00:00 app[web.1]: at IncomingMessage.&lt;anonymous&gt; (/app/node_modules/request/request.js:824:12)\n2020-01-05T22:03:15.681459+00:00 app[web.1]: at IncomingMessage.emit (events.js:214:15)\n2020-01-05T22:03:15.681461+00:00 app[web.1]: at endReadableNT (_stream_readable.js:1178:12)\n2020-01-05T22:03:15.681463+00:00 app[web.1]: at processTicksAndRejections (internal/process/task_queues.js:80:21)\n</pre></div>",
+        "id": 184867060,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578261670
+    },
+    {
+        "content": "<p>Have you set up the outgoing web hook?</p>",
+        "id": 184867708,
+        "sender_full_name": "Herb",
+        "timestamp": 1578262614
+    },
+    {
+        "content": "<p>I've added the bot in the Zulip interface, if that is what you mean?</p>",
+        "id": 184867761,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578262688
+    },
+    {
+        "content": "<p>I guess so. It seems like the bot isn't getting a proper response from Zulip so I thought maybe it's a config issue with the webhook</p>",
+        "id": 184867842,
+        "sender_full_name": "Herb",
+        "timestamp": 1578262844
+    },
+    {
+        "content": "<p>@Dragonbot ping</p>",
+        "id": 184872623,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578271701
+    },
+    {
+        "content": "<p>PONG</p>",
+        "id": 184872624,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578271701
+    },
+    {
+        "content": "<p>@dragonbot pug me</p>",
+        "id": 184872625,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578271722
+    },
+    {
+        "content": "<div class=\"message_inline_image\"><a href=\"http://26.media.tumblr.com/tumblr_lruas6Ru8M1r2brlzo1_500.jpg\" target=\"_blank\" title=\"http://26.media.tumblr.com/tumblr_lruas6Ru8M1r2brlzo1_500.jpg\"><img src=\"https://uploads.zulipusercontent.net/8a310b96f20e5fab682e5090f7ae57edc8f5d258/687474703a2f2f32362e6d656469612e74756d626c722e636f6d2f74756d626c725f6c72756173365275384d31723262726c7a6f315f3530302e6a7067\"></a></div>",
+        "id": 184872626,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578271722
+    },
+    {
+        "content": "<p><span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 184873457,
+        "sender_full_name": "klonos",
+        "timestamp": 1578273471
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> pug me</p>",
+        "id": 184873513,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273556
+    },
+    {
+        "content": "<div class=\"message_inline_image\"><a href=\"http://28.media.tumblr.com/tumblr_ljczkiDmrM1qe3m7qo1_400.jpg\" target=\"_blank\" title=\"http://28.media.tumblr.com/tumblr_ljczkiDmrM1qe3m7qo1_400.jpg\"><img src=\"https://uploads.zulipusercontent.net/38e17de2718e8d5ec4f354ea89af8fbb08c46296/687474703a2f2f32382e6d656469612e74756d626c722e636f6d2f74756d626c725f6c6a637a6b69446d724d317165336d37716f315f3430302e6a7067\"></a></div>",
+        "id": 184873514,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578273556
+    },
+    {
+        "content": "<p>Do we have karmas? <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ++</p>",
+        "id": 184873516,
+        "sender_full_name": "klonos",
+        "timestamp": 1578273568
+    },
+    {
+        "content": "<p>...guess not yet.</p>",
+        "id": 184873518,
+        "sender_full_name": "klonos",
+        "timestamp": 1578273578
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> help</p>",
+        "id": 184873520,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273591
+    },
+    {
+        "content": "<p>dragonbot adapter - Reply with the adapter<br>\ndragonbot animate me &lt;query&gt; - The same thing as <code>image me</code>, except adds a few parameters to try to return an animated GIF instead.<br>\ndragonbot echo &lt;text&gt; - Reply back with &lt;text&gt;<br>\ndragonbot help - Displays all of the help commands that this bot knows about.<br>\ndragonbot help &lt;query&gt; - Displays all help commands that match &lt;query&gt;.<br>\ndragonbot image me &lt;query&gt; - The Original. Queries Google Images for &lt;query&gt; and returns a random top result.<br>\ndragonbot map me &lt;query&gt; - Returns a map view of the area returned by <code>query</code>.<br>\ndragonbot mustache me &lt;url|query&gt; - Adds a mustache to the specified URL or query result.<br>\ndragonbot ping - Reply with pong<br>\ndragonbot pug bomb N - get N pugs<br>\ndragonbot pug me - Receive a pug<br>\ndragonbot the rules - Make sure hubot still knows the rules.<br>\ndragonbot time - Reply with current time<br>\ndragonbot translate me &lt;phrase&gt; - Searches for a translation for the &lt;phrase&gt; and then prints that bad boy out.<br>\ndragonbot translate me from &lt;source&gt; into &lt;target&gt; &lt;phrase&gt; - Translates &lt;phrase&gt; from &lt;source&gt; into &lt;target&gt;. Both &lt;source&gt; and &lt;target&gt; are optional<br>\nship it - Display a motivation squirrel</p>",
+        "id": 184873521,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578273591
+    },
+    {
+        "content": "<p>@klonos++</p>",
+        "id": 184873566,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578273619
+    },
+    {
+        "content": "<p>klonos +1! (Karma: 1)</p>",
+        "id": 184873567,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578273619
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> image me kitten</p>",
+        "id": 184873569,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273638
+    },
+    {
+        "content": "<p>Google Image Search API is no longer available. Please <a href=\"https://github.com/hubot-scripts/hubot-google-images#cse-setup-details\" target=\"_blank\" title=\"https://github.com/hubot-scripts/hubot-google-images#cse-setup-details\">setup up Custom Search Engine API</a>.</p>",
+        "id": 184873570,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578273638
+    },
+    {
+        "content": "<div class=\"message_inline_image\"><a href=\"http://i.imgur.com/CzFTOkI.png\" target=\"_blank\" title=\"http://i.imgur.com/CzFTOkI.png\"><img src=\"https://uploads.zulipusercontent.net/26d1b3e468f3b89538af6a2fee998e8866abffdc/687474703a2f2f692e696d6775722e636f6d2f437a46544f6b492e706e67\"></a></div>",
+        "id": 184873571,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578273638
+    },
+    {
+        "content": "<p>It's very sensitive. I don't think you can have space between user name and ++</p>",
+        "id": 184873572,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578273645
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>++</p>",
+        "id": 184873582,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273683
+    },
+    {
+        "content": "<p><strong>stpaultim</strong> is on the rise! (Karma: 1)</p>",
+        "id": 184873583,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578273684
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>++</p>",
+        "id": 184873584,
+        "sender_full_name": "klonos",
+        "timestamp": 1578273706
+    },
+    {
+        "content": "<p><strong>stpaultim</strong> +1! (Karma: 2)</p>",
+        "id": 184873585,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578273706
+    },
+    {
+        "content": "<p>Yup, space sensitivity it is.</p>",
+        "id": 184873586,
+        "sender_full_name": "klonos",
+        "timestamp": 1578273719
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> snack</p>",
+        "id": 184873625,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273727
+    },
+    {
+        "content": "<p>And clearly, we've made no attempt to port prior scores.</p>",
+        "id": 184873626,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578273728
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> botsnack</p>",
+        "id": 184873627,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273747
+    },
+    {
+        "content": "<p>We don't have any custom commands from prior Dragonbot yet.</p>",
+        "id": 184873628,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578273768
+    },
+    {
+        "content": "<p>Kind of nice to wipe the slate clean every so often</p>",
+        "id": 184873629,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273779
+    },
+    {
+        "content": "<p>This is a fresh install with default settings.</p>",
+        "id": 184873634,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578273788
+    },
+    {
+        "content": "<p>Well I'm impressed regardless</p>",
+        "id": 184873636,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273813
+    },
+    {
+        "content": "<p>Frankly, I'm impressed as well.</p>",
+        "id": 184873641,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578273834
+    },
+    {
+        "content": "<p>I can finally interact with <span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> again</p>",
+        "id": 184873642,
+        "sender_full_name": "Herb",
+        "timestamp": 1578273837
+    },
+    {
+        "content": "<p>FYI - There is a stream for just testing and playing with Dragonbot.</p>",
+        "id": 184873685,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578273895
+    },
+    {
+        "content": "<p>Anyone can play with Dragonbot without cluttering channel.</p>",
+        "id": 184873735,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578273964
+    },
+    {
+        "content": "<p>FYI - The free Heroku plan only allows Dragonbot to be awake 18 hours per day. Full time access requires paid plan. Dragonbot is currently scheduled to sleep for about 8 hours / day. In theory, activity in the chatroom will wake Dragonbot up, but it's not 100% clear to me how that works. If you try to speak to Dragonbot while sleeping, there may be no response on initial call. We'll have to see what happens. </p>\n<p>Anyways, for these reasons, Dragonbot might be a little flakey for the first few days, until we get used to the sleep pattern.</p>",
+        "id": 184877918,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578282505
+    },
+    {
+        "content": "<p>For more info:<br>\n<a href=\"https://hubot.github.com/docs/deploying/heroku/\" target=\"_blank\" title=\"https://hubot.github.com/docs/deploying/heroku/\">https://hubot.github.com/docs/deploying/heroku/</a> (see bottom of page)</p>\n<p>AND:<br>\n<a href=\"https://github.com/hubot-scripts/hubot-heroku-keepalive\" target=\"_blank\" title=\"https://github.com/hubot-scripts/hubot-heroku-keepalive\">https://github.com/hubot-scripts/hubot-heroku-keepalive</a></p>",
+        "id": 184877927,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578282551
+    },
+    {
+        "content": "<p>Dragonbot is built with Hubot and I just had a tiny PR merged into the Hubot plugin for Zulip. :-)</p>\n<p>I added a line to the README file. Not much, but it might be my first commit to an open source project other than Drupal or Backdrop CMS. <a href=\"https://github.com/zulip/hubot-zulip/pull/13\" target=\"_blank\" title=\"https://github.com/zulip/hubot-zulip/pull/13\">https://github.com/zulip/hubot-zulip/pull/13</a></p>",
+        "id": 184886283,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578297366
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>++</p>",
+        "id": 184911367,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578321763
+    },
+    {
+        "content": "<p>Hm, bot is probably sleeping.</p>",
+        "id": 184911425,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578321813
+    },
+    {
+        "content": "<p>Yes, I'm starting to question the point of a bot that sleeps... Especially with some of us being in timezones when the bot sleeps most of our day.</p>",
+        "id": 184911535,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578321878
+    },
+    {
+        "content": "<p>Perhaps it can be hosted where it doesn't have to sleep. Chip in for a paid tier, or on Backdrop's server?</p>",
+        "id": 184912743,
+        "sender_full_name": "Herb",
+        "timestamp": 1578322693
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>++</p>",
+        "id": 184912769,
+        "sender_full_name": "Herb",
+        "timestamp": 1578322712
+    },
+    {
+        "content": "<p>I have no idea how bots work or what's required to host one, but if its not too much effort I'd consider it on my server. But then probably just as easy on Backdrop's server...</p>",
+        "id": 184917528,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578325608
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> - Of course, it does not makes sense to have bot that needs to sleep. Right now, we're just working with the limitations of the particular server option I choose to experiment with. No decision has been made regarding longer term hosting. We tried Heroku, because we thought we could use it for free and reduce the number of Linodes that Backdrop is supporting.</p>\n<p>Right now, I'm trying to figure out the economical way of keeping it awake. It would appear that we either pay $7 / month for paid account or find a new host.</p>",
+        "id": 184951704,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578341594
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Sure <span aria-label=\"smile\" class=\"emoji emoji-263a\" role=\"img\" title=\"smile\">:smile:</span> What is actually hosted? Is it a software package, PHP file/script, etc.?</p>",
+        "id": 184951814,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578341665
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>  <br>\nIt's <a href=\"https://hubot.github.com/\" target=\"_blank\" title=\"https://hubot.github.com/\">https://hubot.github.com/</a><br>\n<a href=\"https://hubot.github.com/docs/\" target=\"_blank\" title=\"https://hubot.github.com/docs/\">https://hubot.github.com/docs/</a></p>\n<p>It's installed with NPM.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://hubot.github.com/\" style=\"background-image: url(https://hubot.github.com/assets/images/screenshots/dangerroom-full.png)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://hubot.github.com/\" target=\"_blank\" title=\"HUBOT\">HUBOT</a></div><div class=\"message_embed_description\">Hubot is your friendly robot sidekick. Install him in your company to dramatically improve employee efficiency.</div></div></div>",
+        "id": 184951998,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578341790
+    },
+    {
+        "content": "<p>Probably won't offer to host it myself then. No experience with Node/NPM, etc. Wonder if it can be easily hosted on Backdrop's existing server...? To try and sandbox it from everything else on the server, wonder if we could set it up in Lando? I know Lando's docs say not to use it in production, the a chat bot isn't exactly mission-critical. Any thoughts on that <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre</span> ?</p>",
+        "id": 184952735,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578342327
+    },
+    {
+        "content": "<p>I would not use lando for that</p>",
+        "id": 184952953,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578342479
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> - Backdrop has been hosting it on our own server (Linode). This is really a policy discussion as much as a technical discussion. We hoped that moving it to Heroku would make it easier to allow access and reduce the infrastructure overhead.</p>",
+        "id": 184952992,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578342483
+    },
+    {
+        "content": "<p>The bot used to live on the linode</p>",
+        "id": 184953017,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578342507
+    },
+    {
+        "content": "<p>Was it always on its own server, or was it just that everything else got migrated to a new server and so the bot was left alone there?</p>",
+        "id": 184953075,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578342569
+    },
+    {
+        "content": "<p>('Cause I don't think a separate Linode just for a chat bot is worth it)</p>",
+        "id": 184953152,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578342609
+    },
+    {
+        "content": "<p>I think we need to get Jen and Nate involved in this discussion. I don't know the details.</p>",
+        "id": 184953185,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578342642
+    },
+    {
+        "content": "<p>No same linode as everything else</p>",
+        "id": 184953187,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578342647
+    },
+    {
+        "content": "<p>Ah, good to know</p>",
+        "id": 184953208,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578342665
+    },
+    {
+        "content": "<p>It was moved to heroku I think mostly just became the people working on it didn't) don't have enough server access to really work on it on the linode</p>",
+        "id": 184953330,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578342736
+    },
+    {
+        "content": "<p>(bottlenecks)</p>",
+        "id": 184953346,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578342759
+    },
+    {
+        "content": "<p>Ok, so seems like if/when we get the bot working nicely (while it's awake), then we know it's ready to be moved back to server? Or something like that. Yes, Nate and Jen would be good to chime in. Need to get them in Zulip first <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 184953441,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578342835
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre</span> - I understood that access was one issue, but I thought there was also an interest in shutting down that Linode. At the same time, I did not sense any urgency to move it, other than the access issue.</p>",
+        "id": 184953550,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578342905
+    },
+    {
+        "content": "<p>I don't think that linode is shut down; one got shut down; but that was a move from eld php to php 7.2ish</p>",
+        "id": 184953686,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1578342984
+    },
+    {
+        "content": "<p>For decluttering, I wonder if the chatbot karma could be tied to the little thumbs up emoji instead of requiring separate <code>++</code> entries</p>",
+        "id": 184953857,
+        "sender_full_name": "Laryn",
+        "timestamp": 1578343142
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Oooh, that's clever!</p>",
+        "id": 184953905,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578343183
+    },
+    {
+        "content": "<p>I see two linodes running in Backdrop's account...</p>",
+        "id": 184953989,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578343226
+    },
+    {
+        "content": "<p>How about a magic wand emoji for giving karma and a lightening bolt for taking away <span aria-label=\"smirk\" class=\"emoji emoji-1f60f\" role=\"img\" title=\"smirk\">:smirk:</span></p>",
+        "id": 184954610,
+        "sender_full_name": "Herb",
+        "timestamp": 1578343669
+    },
+    {
+        "content": "<p><span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 184954681,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578343687
+    },
+    {
+        "content": "<p>Ha, great! Also good point -- we can make our own <code>++</code> and <code>--</code> emojis (if it is possible to tie karma to emojis). Can make little Drop emojis specific for this task perhaps?</p>",
+        "id": 184955186,
+        "sender_full_name": "Laryn",
+        "timestamp": 1578344034
+    },
+    {
+        "content": "<p>I don't think we need <code>--</code> karma do we?</p>",
+        "id": 184955278,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578344077
+    },
+    {
+        "content": "<p>I guess if we detach karma from <code>++</code>/<code>--</code> chances we'll need to add/remove karma from random words is lessened. <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 184955362,
+        "sender_full_name": "Laryn",
+        "timestamp": 1578344131
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> pug me</p>",
+        "id": 185403183,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578772820
+    },
+    {
+        "content": "<div class=\"message_inline_image\"><a href=\"http://26.media.tumblr.com/tumblr_lji145OZao1qaa50yo1_500.jpg\" target=\"_blank\" title=\"http://26.media.tumblr.com/tumblr_lji145OZao1qaa50yo1_500.jpg\"><img src=\"https://uploads.zulipusercontent.net/9d44518cfde2cc8136640b7e3ed2df557612ff67/687474703a2f2f32362e6d656469612e74756d626c722e636f6d2f74756d626c725f6c6a693134354f5a616f317161613530796f315f3530302e6a7067\"></a></div>",
+        "id": 185403184,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578772820
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> help</p>",
+        "id": 185403188,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578772831
+    },
+    {
+        "content": "<p>!&lt;factoid&gt; - play back a factoid<br>\n[item]++ or [user]++ | Adds karma<br>\ndragonbot adapter - Reply with the adapter<br>\ndragonbot alias &lt;factoid&gt; = &lt;factoid&gt;<br>\ndragonbot ambush &lt;user name&gt;: &lt;message&gt;<br>\ndragonbot api - <a href=\"https://api.backdropcms.org/\" target=\"_blank\" title=\"https://api.backdropcms.org/\">https://api.backdropcms.org/</a><br>\ndragonbot blog - <a href=\"https://backdropcms.org/news\" target=\"_blank\" title=\"https://backdropcms.org/news\">https://backdropcms.org/news</a><br>\ndragonbot contrib - <a href=\"https://github.com/backdrop-ops/contrib\" target=\"_blank\" title=\"https://github.com/backdrop-ops/contrib\">https://github.com/backdrop-ops/contrib</a><br>\ndragonbot drop &lt;factoid&gt; - permanently forget a factoid<br>\ndragonbot echo &lt;text&gt; - Reply back with &lt;text&gt;<br>\ndragonbot factoids - get a link to the raw factoid data<br>\ndragonbot forget &lt;factoid&gt; - forget a factoid<br>\ndragonbot help - Displays all of the help commands that this bot knows about.<br>\ndragonbot help &lt;query&gt; - Displays all help commands that match &lt;query&gt;.<br>\ndragonbot karma best [n] - top [n]<br>\ndragonbot karma worst [n] - bottom [n]<br>\ndragonbot learn &lt;factoid&gt; = &lt;details&gt; - learn a new factoid<br>\ndragonbot learn &lt;factoid&gt; =~ s/expression/replace/gi - edit a factoid<br>\ndragonbot list all factoids - list all factoids<br>\ndragonbot map me &lt;query&gt; - Returns a map view of the area returned by <code>query</code>.<br>\ndragonbot ping - Reply with pong<br>\ndragonbot pug bomb N - get N pugs<br>\ndragonbot pug me - Receive a pug<br>\ndragonbot remember &lt;factoid&gt; - remember a factoid<br>\ndragonbot respositories - <a href=\"https://backdropcms.org/resources/backdrop-cms-github\" target=\"_blank\" title=\"https://backdropcms.org/resources/backdrop-cms-github\">https://backdropcms.org/resources/backdrop-cms-github</a><br>\ndragonbot search &lt;substring&gt; - list factoids which match (by factoid key or result)<br>\ndragonbot the rules - Make sure hubot still knows the rules.<br>\ndragonbot time - Reply with current time<br>\ndragonbot translate me &lt;phrase&gt; - Searches for a translation for the &lt;phrase&gt; and then prints that bad boy out.<br>\ndragonbot translate me from &lt;source&gt; into &lt;target&gt; &lt;phrase&gt; - Translates &lt;phrase&gt; from &lt;source&gt; into &lt;target&gt;. Both &lt;source&gt; and &lt;target&gt; are optional<br>\ndragonbot usage - <a href=\"https://backdropcms.org/project/usage\" target=\"_blank\" title=\"https://backdropcms.org/project/usage\">https://backdropcms.org/project/usage</a><br>\nship it - Display a motivation squirrel</p>",
+        "id": 185403189,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578772831
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Dragonbot's help is a bit inconsistent... 1. It mentions <code>dragonbot pug me</code>, but you have to type <code>@dragonbot</code> for it to work. 2. Some help items don't mention <code>dragonbot</code> at all.</p>\n<p>Is it possible to either remove all <code>dragonbot</code> prefixes from help and just list the unique commands, or else consistently use <code>@dragonbot</code> throughout the help items?</p>",
+        "id": 185403397,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578773202
+    },
+    {
+        "content": "<p>Finally, someone triggered the welcome message. :-) <br>\nIn theory, everyone gets this once. However, I added a few more folks to the active user list so that we don't see it too much as everyone logs on the first time, since I added this feature. Some existing users will get it, others won't. </p>\n<p>I welcome input on the content of the \"Welcome\" message.</p>",
+        "id": 185546055,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578955354
+    },
+    {
+        "content": "<p>Maybe it could address the person by name/@tag...?</p>",
+        "id": 185549040,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578957652
+    },
+    {
+        "content": "<p>Hi. Welcome to the Backdrop CMS community on Zulip.<br>\nI'm your friendly neighborhood Dragonbot.<br>\nTry '@Dragonbot help' for some things I can do.<br>\nThere are lots of friendly humans that hang around here,<br>\nso please feel free to ask questions.</p>",
+        "id": 185549041,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1578957652
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> I'll work on that. Maybe later tonight.</p>",
+        "id": 185549409,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578957963
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> remove issue</p>",
+        "id": 185860435,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579208952
+    },
+    {
+        "content": "<p>Your issue is removed. Try '@dragonbot add issue [PathToIssue]' to add another.</p>",
+        "id": 185860437,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579208953
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> add issue <a href=\"https://github.com/backdrop/backdrop-issues/issues/1928\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/1928\">https://github.com/backdrop/backdrop-issues/issues/1928</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1928\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1928\" target=\"_blank\" title=\"Views UI: Fix &quot;Replacement patterns&quot; visibility for Global: Custom Text · Issue #1928 · backdrop/backdrop-issues\">Views UI: Fix \"Replacement patterns\" visibility for Global: Custom Text · Issue #1928 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">In the views UI when adding a global text field I see the following description text: You may enter data from this view as per the &quot;Replacement patterns&quot; below. But there is no &quot;Repl...</div></div></div>",
+        "id": 185860488,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579208964
+    },
+    {
+        "content": "<p>Added issue: <a href=\"https://github.com/backdrop/backdrop-issues/issues/1928\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/1928\">https://github.com/backdrop/backdrop-issues/issues/1928</a></p>",
+        "id": 185860489,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579208964
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> attention</p>",
+        "id": 185860517,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579208981
+    },
+    {
+        "content": "<p>Here are some issues that need attention: </p>\n<p>BWPanda (Peter) : <a href=\"https://github.com/backdrop/backdrop-issues/issues/2655\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/2655\">#2655</a> <br>\nLaryn : <a href=\"https://github.com/backdrop/backdrop-issues/issues/3792\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/3792\">https://github.com/backdrop/backdrop-issues/issues/3792</a> <br>\nOlaf Grabienski : <a href=\"https://github.com/backdrop/backdrop-issues/issues/4158\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/4158\">https://github.com/backdrop/backdrop-issues/issues/4158</a> <br>\nStPaulTim : <a href=\"https://github.com/backdrop/backdrop-issues/issues/1928\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/1928\">https://github.com/backdrop/backdrop-issues/issues/1928</a> </p>\n<p>Add to list: '@Dragonbot add issue [path]'' <br>\nRemove your issue: '@Dragonbot remove issue' <br>\nOnly one issue per user.</p>",
+        "id": 185860518,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579208981
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> remove issue</p>",
+        "id": 185862437,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1579209949
+    },
+    {
+        "content": "<p>Your issue is removed. Try '@dragonbot add issue [PathToIssue]' to add another.</p>",
+        "id": 185862438,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579209949
+    },
+    {
+        "content": "<p>@Dragonbot remove issue</p>",
+        "id": 185906409,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1579259678
+    },
+    {
+        "content": "<p>Your issue is removed. Try '@dragonbot add issue [PathToIssue]' to add another.</p>",
+        "id": 185906410,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579259679
+    },
+    {
+        "content": "<p>Cool feature, adding and removing issues via the bot, <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> ! Can closed issues be removed automatically? And if it's possible, should they?</p>",
+        "id": 185906509,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1579259798
+    },
+    {
+        "content": "<p>@dragonbot add issue <a href=\"https://github.com/backdrop/backdrop-issues/issues/2637\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/2637\">https://github.com/backdrop/backdrop-issues/issues/2637</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2637\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2637\" target=\"_blank\" title=\"Transliteration doesn't respect site default language · Issue #2637 · backdrop/backdrop-issues\">Transliteration doesn't respect site default language · Issue #2637 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">PR by @olafgrabienski: backdrop/backdrop#1849 PR by @quicksketch: backdrop/backdrop#1850 On a Backdrop 1.6.3 site which uses German as default language, transliteration for URL aliases and files ar...</div></div></div>",
+        "id": 185906548,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1579259852
+    },
+    {
+        "content": "<p>Added issue: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2637\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/2637\">https://github.com/backdrop/backdrop-issues/issues/2637</a></p>",
+        "id": 185906549,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579259852
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> attention</p>",
+        "id": 185906563,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1579259877
+    },
+    {
+        "content": "<p>Here are some issues that need attention: </p>\n<p>Laryn : <a href=\"https://github.com/backdrop/backdrop-issues/issues/3792\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/3792\">https://github.com/backdrop/backdrop-issues/issues/3792</a> <br>\nOlaf Grabienski : <a href=\"https://github.com/backdrop/backdrop-issues/issues/2637\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/2637\">https://github.com/backdrop/backdrop-issues/issues/2637</a> <br>\nStPaulTim : <a href=\"https://github.com/backdrop/backdrop-issues/issues/1928\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop-issues/issues/1928\">https://github.com/backdrop/backdrop-issues/issues/1928</a> </p>\n<p>Add to list: '@Dragonbot add issue [path]'' <br>\nRemove your issue: '@Dragonbot remove issue' <br>\nOnly one issue per user.</p>",
+        "id": 185906564,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579259877
+    },
+    {
+        "content": "<blockquote>\n<p>Can closed issues be removed automatically? And if it's possible, should they?</p>\n</blockquote>\n<p>Yes please!</p>",
+        "id": 185906749,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1579260067
+    },
+    {
+        "content": "<blockquote>\n<p>Can closed issues be removed automatically? And if it's possible, should they?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> &amp; <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span>  I agree that this would be useful. I am reasonably confident that it is possible. But, I don't know how to do it yet. </p>\n<p>I'll try to get this version of Dragonbot into a public repo this weekend and maybe someone can help me.</p>",
+        "id": 185941438,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579284380
+    },
+    {
+        "content": "<p>Remember, that this <code>needs attention</code> queue is a simple feature built from scratch by me. And I'm a still a beginner at building chatbots.</p>",
+        "id": 185941670,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579284541
+    },
+    {
+        "content": "<p>In <a href=\"#narrow/stream/218883-Code-Review/topic/Base.2Fsub.20install.20profiles/near/185941012\" title=\"#narrow/stream/218883-Code-Review/topic/Base.2Fsub.20install.20profiles/near/185941012\">https://backdrop.zulipchat.com/#narrow/stream/218883-Code-Review/topic/Base.2Fsub.20install.20profiles/near/185941012</a> <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> said \"I need to look at either removing the -- option or making it less easy to trigger accidentally.\" What about:</p>\n<ol>\n<li>What someone suggested previously: using reactions instead ( <span aria-label=\"thumbs up\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"thumbs up\">:thumbs_up:</span> , <span aria-label=\"thumbs down\" class=\"emoji emoji-1f44e\" role=\"img\" title=\"thumbs down\">:thumbs_down:</span> )?</li>\n<li>Making it so that the <code>--</code> has to be next to the thing being down-karma'd (i.e. no space between)? That'll make it harder to do accidentally, though it will make an inconsistency with how <code>++</code> works (since we like having a space between a username and that)...</li>\n</ol>",
+        "id": 185945704,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1579287385
+    },
+    {
+        "content": "<p>the took a hit! Ouch. (Karma: -1)</p>",
+        "id": 185945705,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579287385
+    },
+    {
+        "content": "<p>the++</p>",
+        "id": 185949263,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1579289956
+    },
+    {
+        "content": "<p>the leveled up! (Karma: 0)</p>",
+        "id": 185949264,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579289956
+    },
+    {
+        "content": "<p>the --</p>",
+        "id": 185949359,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1579290005
+    },
+    {
+        "content": "<p>the - oops! Sorry about that. (Karma: -1)</p>",
+        "id": 185949360,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579290005
+    },
+    {
+        "content": "<p>Hmm, I thought the minus signs needed to be against the letters without any spaces, but that does not seem to be true.</p>",
+        "id": 185949412,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1579290056
+    },
+    {
+        "content": "<p>the ++</p>",
+        "id": 185949421,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1579290062
+    },
+    {
+        "content": "<p>the Props to you for all your hard work. (Karma: 0)</p>",
+        "id": 185949422,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1579290062
+    },
+    {
+        "content": "<p>We are using an existing module for Hubot to mange plus plus. To change this behavior, I think I'd need to fork the project (it's a small simple project). That gives me pause, but very little pause, because I don't see much ongoing change or development happening.</p>",
+        "id": 185949433,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579290069
+    },
+    {
+        "content": "<p>Yes, I fixed the problem with plus plus needed to be right next to an item.</p>",
+        "id": 185949473,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579290104
+    },
+    {
+        "content": "<p>Which reminds me, I already forked the project.</p>",
+        "id": 185949543,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579290127
+    },
+    {
+        "content": "<p>:-)</p>",
+        "id": 185949544,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579290129
+    },
+    {
+        "content": "<p>I might just merge this code with the custom code I've already added.</p>",
+        "id": 185949575,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1579290156
+    },
+    {
+        "content": "<p>Maybe it would have been better to leave it needing to be right next to the item, then people could put in their double minus ems and it wouldn't down vote things.</p>",
+        "id": 185949623,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1579290195
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> Just a friendly reminder that you can chat with <span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> privately for testing, or use the #DragonbotTeam stream to avoid cluttering the main stream <span aria-label=\"smile\" class=\"emoji emoji-263a\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 185949631,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1579290200
+    },
+    {
+        "content": "<p>I see.</p>",
+        "id": 185949655,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1579290232
+    },
+    {
+        "content": "<blockquote>\n<p>What someone suggested previously: using reactions instead</p>\n</blockquote>\n<p>I think this was my idea originally, and I still like it a lot, but realize also that sometimes people want to give karma to someone for something that isn't a direct comment the other person has made. Are we getting too far afield if we allow karma to be added/removed with <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span> <span aria-label=\"-1\" class=\"emoji emoji-1f44e\" role=\"img\" title=\"-1\">:-1:</span>  and also allow it to be added with the <code>++</code> syntax (but not removed with <code>--</code>)?</p>",
+        "id": 185950902,
+        "sender_full_name": "Laryn",
+        "timestamp": 1579291188
+    },
+    {
+        "content": "<p><a href=\"#narrow/stream/218937-Dragonbot-Team/topic/Plus.20Plus\" title=\"#narrow/stream/218937-Dragonbot-Team/topic/Plus.20Plus\">Conversation moved here</a>.</p>",
+        "id": 185952194,
+        "sender_full_name": "Laryn",
+        "timestamp": 1579291963
+    },
+    {
+        "content": "<p>I'll try to get back to this. At a minimum, I think we should remove the -- behavior, it's just not necessary.</p>",
+        "id": 187405852,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1580854169
+    },
+    {
+        "content": "<p>the ???? (Karma: 0)</p>",
+        "id": 187405853,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1580854169
+    },
+    {
+        "content": "<p>That would be fine with me, so I stop cluttering up the chat window. ;)</p>",
+        "id": 187405945,
+        "sender_full_name": "Laryn",
+        "timestamp": 1580854219
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> What do you think about the initial \"Welcome\" message that Dragonbot sends to folks being sent in a private message? <br>\nOr is it actually a benefit for everyone to see those each time as a reminder that a person is new to Zulip (and perhaps the community)?</p>",
+        "id": 188131024,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581615990
+    },
+    {
+        "content": "<p>It could also be a trigger to people already in the here to welcome a first time poster.</p>",
+        "id": 188131469,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1581616311
+    },
+    {
+        "content": "<p>^ Hiding it in a PM seems like a good idea to me!</p>",
+        "id": 188131833,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581616542
+    },
+    {
+        "content": "<p>Oh, but Jason has a good point</p>",
+        "id": 188131920,
+        "sender_full_name": "jackaponte",
+        "timestamp": 1581616581
+    },
+    {
+        "content": "<p>I think I agree with the PM idea. I think most people will be welcomed regardless due to the fact that we don't recognise them as a regular poster here. It may also be frustrating to newcomers who've come to ask a question to be 'singled out' as it were and welcomed by everyone... Maybe, I don't know <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span></p>",
+        "id": 188132039,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581616665
+    },
+    {
+        "content": "<p>I'm just thinking when I join a group temporarily to get help with something (e.g. Lando Slack or Tugboat Slack), I wouldn't probably want a welcome to the community message, or for a bunch of people to be welcoming me...</p>",
+        "id": 188132191,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581616743
+    },
+    {
+        "content": "<p>My other thought was that the invitation to <code>@Dragonbot help</code> would then be in the context of a private message, too. Which is a good thing, I think.</p>",
+        "id": 188132386,
+        "sender_full_name": "Laryn",
+        "timestamp": 1581616897
+    },
+    {
+        "content": "<p>Yes!</p>",
+        "id": 188132401,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581616914
+    },
+    {
+        "content": "<p>Good points, <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span></p>",
+        "id": 188132762,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1581617127
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> and others. I've considered the private message option, but I also like the occasional reminder to the group triggered by a new poster. Another option would be to have the individual welcome message appear in private message, but have a generic message that automatically pops up once a week with a generic message encouraging new people to participate and providing the dragonbot help reminder.</p>",
+        "id": 188138342,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581620416
+    },
+    {
+        "content": "<p>If we had a scenario in which 3 or 4 people all post for the first time in a short period of time, it could be annoying to get that each time.</p>",
+        "id": 188138443,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581620471
+    },
+    {
+        "content": "<p>So far, it's only been happening on occasion and I like the little reminders it provides for everyone and the indirect welcome it provides for new people who have not yet posted.</p>",
+        "id": 188138608,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581620550
+    },
+    {
+        "content": "<blockquote>\n<p>have a generic message that automatically pops up once a week</p>\n</blockquote>\n<p>I don't like the sound of that... I think if people come here it's for a purpose. They're either here to say hi and introduce themselves, ask a question about something they're working on, or just luck and get a feel for things. I don't think they're going to need reminders to participate. If may even be off-putting...</p>",
+        "id": 188138692,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581620589
+    },
+    {
+        "content": "<p>And certainly annoying for the rest of us after a while (\"Ooh, a new message in Zulip! Oh, it's just the weekly reminder...\")</p>",
+        "id": 188138832,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581620644
+    },
+    {
+        "content": "<p>Well, I hear that opinion. But for me it's the opposite. :-)</p>",
+        "id": 188138834,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581620645
+    },
+    {
+        "content": "<p>FWIW, Drupal Slack has a reminder every week (or every 2 weeks?) with a link to the code of conduct. We could have something like that: a message that reminds everyone to treat everyone else with respect + a link to the code of conduct + a reminder about the bot help command.</p>",
+        "id": 188143955,
+        "sender_full_name": "klonos",
+        "timestamp": 1581623724
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-ops/conduct/blob/master/code_of_conduct.md\" target=\"_blank\" title=\"https://github.com/backdrop-ops/conduct/blob/master/code_of_conduct.md\">https://github.com/backdrop-ops/conduct/blob/master/code_of_conduct.md</a></p>",
+        "id": 188143956,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1581623724
+    },
+    {
+        "content": "<p>Amazing!! ^^</p>",
+        "id": 188143999,
+        "sender_full_name": "klonos",
+        "timestamp": 1581623739
+    },
+    {
+        "content": "<p>Good bot!</p>",
+        "id": 188144022,
+        "sender_full_name": "klonos",
+        "timestamp": 1581623754
+    },
+    {
+        "content": "<p>botsnack</p>",
+        "id": 188144042,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1581623761
+    },
+    {
+        "content": "<p><span aria-label=\"apple\" class=\"emoji emoji-1f34e\" role=\"img\" title=\"apple\">:apple:</span></p>",
+        "id": 188144046,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1581623762
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> botsnack</p>",
+        "id": 188144054,
+        "sender_full_name": "klonos",
+        "timestamp": 1581623762
+    },
+    {
+        "content": "<p>Are you volunteering?</p>",
+        "id": 188144059,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1581623762
+    },
+    {
+        "content": "<p><span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 188144092,
+        "sender_full_name": "klonos",
+        "timestamp": 1581623775
+    },
+    {
+        "content": "<p>I imagine those messages will be in a set topic...? If so, then people like me can mute that topic to avoid the unwanted noise <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> If not, I'd request as much for that reason.</p>",
+        "id": 188144302,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1581623927
+    },
+    {
+        "content": "<p>For anyone following the \"Code Review\" stream, I apologize for the experiment run amok. I experimented yesterday afternoon with scheduled messages to a stream. My experiments were going very well and I scheduled a message in the \"Code Review\" stream. </p>\n<p>Then after logging off, my experiment woke up without me around and took over the stream posting hundreds of messages. Apparently, our Dragonbot is conspiring with the robot revolution.</p>",
+        "id": 188878072,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1582481394
+    },
+    {
+        "content": "<p>Dragonbot is just too long, can we shorten that to db?</p>",
+        "id": 190241904,
+        "sender_full_name": "Wilbur Ince",
+        "timestamp": 1583888379
+    },
+    {
+        "content": "<p>Database?</p>",
+        "id": 190241972,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583888442
+    },
+    {
+        "content": "<p>The dragon's name is \"Drop\" - we could use that: <a href=\"https://backdropcms.org/presskit#mascot\" target=\"_blank\" title=\"https://backdropcms.org/presskit#mascot\">https://backdropcms.org/presskit#mascot</a></p>",
+        "id": 190246271,
+        "sender_full_name": "klonos",
+        "timestamp": 1583895178
+    },
+    {
+        "content": "<p><strong>Is someone talking about me?</strong></p>",
+        "id": 190246272,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1583895179
+    },
+    {
+        "content": "<p>Do you know long and patiently I've waited for someone to trigger that response. :-)</p>",
+        "id": 190247460,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1583896892
+    },
+    {
+        "content": "<p>No</p>",
+        "id": 190247720,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1583897251
+    },
+    {
+        "content": "<p>You can just type <code>@dr</code> and then use the autocomplete to select the Dragonbot user without having to type out <code>Dragonbot</code> each time...</p>",
+        "id": 190258876,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1583915102
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> that's not the first time I've seen that response.</p>",
+        "id": 190278690,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1583932206
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> botsnack</p>",
+        "id": 190317487,
+        "sender_full_name": "Herb",
+        "timestamp": 1583952559
+    },
+    {
+        "content": "<p><span aria-label=\"donut\" class=\"emoji emoji-1f369\" role=\"img\" title=\"donut\">:donut:</span> - donuts for everyone!</p>",
+        "id": 190317488,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1583952559
+    }
+]

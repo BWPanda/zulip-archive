@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> so the issue you're stuck on is the apply and insert?</p>",
+        "id": 216518600,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605210710
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Yes, when you try to apply the exposed filename filter in the WYSIWYG editor's implementation of the image library, everything explodes.</p>",
+        "id": 216518772,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605210800
+    },
+    {
+        "content": "<p>(It seems to work fine in a field level implementation, the issue is just with WYSIWYG)</p>",
+        "id": 216518912,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605210858
+    },
+    {
+        "content": "<p>Maybe it's not possible, but what about filtering using ajax and removing the apply button? Personally, I like this type of UX better than typing something and hitting apply.</p>",
+        "id": 216519641,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605211266
+    },
+    {
+        "content": "<p>I would say to show all images (with pager) by default, then reduce the images shown based on the input field using ajax. \"filter out\" what we don't need.</p>",
+        "id": 216519809,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1605211329
+    },
+    {
+        "content": "<p>Yes, I think showing all and filtering based on input would be great. I'm not necessarily opposed to the ajax auto-submit, but it can get a little dicey with a text input field, and I'm not sure about accessibility.</p>",
+        "id": 216525699,
+        "sender_full_name": "Laryn",
+        "timestamp": 1605213873
+    }
+]

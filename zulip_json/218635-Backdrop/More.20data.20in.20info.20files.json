@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>Creating a topic so we dont lose track again of <a href=\"https://github.com/backdrop-ops/backdropcms.org/pull/750\">https://github.com/backdrop-ops/backdropcms.org/pull/750</a> after recent interest in reviewing it. This time, tested with ngrok, so I know the webhook does what it should.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/pull/750\" style=\"background-image: url(https://avatars.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/pull/750\" title=\"Issue #487: Support more data in .info files by docwilmot · Pull Request #750 · backdrop-ops/backdropcms.org\">Issue #487: Support more data in .info files by docwilmot · Pull Request #750 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Fixes #487\nReplaces: #488</div></div></div>",
+        "id": 224232102,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611774441
+    },
+    {
+        "content": "<p>We can either create a new demo site just for this, or, maybe simpler, <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span>or whoever has GitHub access can point the webhook at the Tugboat site.</p>",
+        "id": 224232610,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611774630
+    },
+    {
+        "content": "<p>I can't set anything up from within GitHub, but I can approve requests there as they come in. IIRC the instructions for what to do on the destination site are in the readme for the project_github module. Let me know when you'd like me to check for the request :)</p>",
+        "id": 224235057,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1611775725
+    },
+    {
+        "content": "<p>Well, that wont work. Would need to have set up and application on GH first then put in the Client Secret and Client ID before you can authorise anything. The GitHubAPI module instructions say so.</p>",
+        "id": 224240307,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611778196
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code>  - Create GitHub Application via https://github.com\n\n    There are two ways to do so.\n    - Via your profile: https://github.com/settings/applications/new\n    - Via your organization profile: https://github.com/organizations/ORGNAME/settings/applications/new\n\n    The &quot;Authorization callback URL&quot; will be: http://yoursite.com/githubapi/register\n\n  - Save settings on admin/config/system/githubapi/settings\n</code></pre></div>",
+        "id": 224240395,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611778229
+    },
+    {
+        "content": "<p>TBH the instructions arent crystal clear.</p>",
+        "id": 224240680,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611778368
+    },
+    {
+        "content": "<p>But in either case I dont know if it would be wise to have the Secret and ID accessible to everyone on a Tugboat site</p>",
+        "id": 224240751,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611778416
+    },
+    {
+        "content": "<p>Perhaps then we should ask <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> advice on how to accomplish test webhooks.</p>",
+        "id": 224241447,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1611778725
+    }
+]

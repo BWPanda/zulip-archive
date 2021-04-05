@@ -1,0 +1,194 @@
+[
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256674\">Olaf Grabienski</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Ready-to-Wear.20Initiative/near/200473197\">said</a>:</p>\n<blockquote>\n<p>And this is an example of the About page:</p>\n<p><a href=\"/user_uploads/18319/TX812IT9RABRQ5Yiba0bMu21/screen-editorial-about-page.png\">screen-editorial-about-page.png</a></p>\n</blockquote>\n<p>Nearly ready to publish a conrib theme. The look and feel is heavily inspired by <a href=\"https://html5up.net/editorial\">https://html5up.net/editorial</a>, which is licensed under the Creative Commons Attribution 3.0 License (<a href=\"https://html5up.net/license\">https://html5up.net/license</a>).</p>\n<p>Attribution means: \"You must give appropriate credit, provide a link to the license, and indicate if changes were made.  You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\"</p>\n<p>What would that mean in the context of a Backdrop contrib project?</p>\n<p>And: Is the license actually of interest? Apart of some color hex values, I've not used the HTMLup template code but I've apparently cloned bigger parts of the look and feel.</p>",
+        "id": 201003956,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592308775
+    },
+    {
+        "content": "<p>My non-professional opinion would just be to add a note to the README saying the theme was inspired/based on that template.</p>",
+        "id": 201004312,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1592309006
+    },
+    {
+        "content": "<p>Thanks! And would you recommend to use the same name <code>Editorial</code>, or better look for another one?</p>",
+        "id": 201004768,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592309328
+    },
+    {
+        "content": "<p>Up to you. If it's heavily inspired by, then yeah. If you just used certain elements, etc., then maybe another name.</p>",
+        "id": 201004827,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1592309389
+    },
+    {
+        "content": "<p>Sounds good! Not 100% the same but quite heavily inspired, so <code>Editorial</code> would be a good fit.</p>",
+        "id": 201005122,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592309575
+    },
+    {
+        "content": "<p>If anyone else thinks there could be an issue regarding the license, please ping me! (I'll wait some time before I publish the theme.)</p>",
+        "id": 201005484,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592309802
+    },
+    {
+        "content": "<p>Btw <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> Thanks for your hint regarding the sidebar toggle (Bamboo layout). I've managed to do something similar. In comparison to a layout, the challenge was to get a toggle button in the theme. I ended up to create it this way:</p>\n<div class=\"codehilite\"><pre><span></span><code>#skip-link {\n  position: relative;\n  pointer-events: none;\n}\n#skip-link:after {\n  content: &quot;=&quot;;\n  position: fixed;\n  top: 1rem;\n  left: 1.25rem;\n  color: #f56a6a;\n  cursor: pointer;\n  font-size: 2rem;\n  pointer-events: auto;\n  z-index: 999;\n}\n</code></pre></div>",
+        "id": 201006430,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592310292
+    },
+    {
+        "content": "<p>IIRC, the most knowledgeable person around licensing was <span class=\"user-mention\" data-user-id=\"262197\">@Kevin Reynen</span> ...unless my memory fails me.</p>",
+        "id": 201196041,
+        "sender_full_name": "klonos",
+        "timestamp": 1592425678
+    },
+    {
+        "content": "<p>Let’s talk about this at today’s dev meeting. Lots of possibilities here, and lots of dangers.</p>",
+        "id": 201277881,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1592491718
+    },
+    {
+        "content": "<p>Today, I've reached out to the author of the <a href=\"https://html5up.net/editorial\">HTML5 UP Editorial template</a> which inspired me to build the <a href=\"https://github.com/backdrop-contrib/editorial\">Backdrop Editorial contrib theme</a>, to ask if it's okay to publish it license-wise:</p>\n<blockquote>\n<p>Hi ajlkn,</p>\n<p>Recently I've built a theme for the open source CMS <a href=\"https://backdropcms.org\">https://backdropcms.org</a>. The theme is inspired by your wonderful Editorial template (<a href=\"http://html5up.net/editorial\">html5up.net/editorial</a>). While I haven't used any of Editorial's HTML or JavaScript code, the Backdrop Editorial theme looks quite similar to the Editorial template when you install it in Backdrop.</p>\n<p>I haven't made an official release yet but you can have a look at the theme at <a href=\"https://github.com/backdrop-contrib/editorial\">https://github.com/backdrop-contrib/editorial</a>.</p>\n<p>I've read that the HTML5 UP templates are licensed under the Creative Commons Attribution license which doesn't seem to be compatible with Backdrop's GNU General Public License. I'm not sure if the CC Attribution license applies in my case, as I didn't use the HTML5 UP code. And I've however mentioned Editorial and HMTL5 UP as inspiration at the top of the README.</p>\n<p>Are you fine when I make an official theme release in these circumstances, or are you rather opposed to the idea? If the latter, I'll also remove the theme from the Backdrop contrib Github repository, but I hope there is a way to keep this nice theme somehow available.</p>\n<p>All the best,<br>\nOlaf</p>\n</blockquote>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/editorial\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/editorial\" title=\"backdrop-contrib/editorial\">backdrop-contrib/editorial</a></div><div class=\"message_embed_description\">A magazine-like Backdrop theme. Contribute to backdrop-contrib/editorial development by creating an account on GitHub.</div></div></div>",
+        "id": 201787203,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592948416
+    },
+    {
+        "content": "<p>The answer: \"The underlying template/design has to remain CC licensed, so you could certainly split-license (GPL for your stuff, CC for mine).\"</p>",
+        "id": 201787370,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592948510
+    },
+    {
+        "content": "<p>I'm not sure if split-licensing is a realistic option for Backdrop. (I guess not.)</p>",
+        "id": 201787746,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592948700
+    },
+    {
+        "content": "<p>Now I'm considering to delete the repository. Should I do so, or has anyone other ideas how to handle the situation?</p>",
+        "id": 201789264,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592949570
+    },
+    {
+        "content": "<p>I think wait to hear others feedback about licencing, before deleting all your work.</p>",
+        "id": 201789671,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1592949795
+    },
+    {
+        "content": "<p>Yes, I'll wait a while. <em>If</em> it's better to delete the Backdrop repo, I still have my own copy and can use it or even give it away as a custom theme.</p>",
+        "id": 201793283,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1592952038
+    },
+    {
+        "content": "<p>The question is: how alike / different is your work from theirs. If something is \"inspired\" but not copied, it should be OK. If it's very (too) similar, maybe you could adapt the style so it clearly looks different. Throwing away all you work shouldn't be necessary.</p>",
+        "id": 201820274,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1592985479
+    },
+    {
+        "content": "<p>I guess it’s too similar. adapting the styles to make it look different is a great idea!</p>",
+        "id": 201847775,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593005916
+    },
+    {
+        "content": "<blockquote>\n<p>maybe you could adapt the style so it clearly looks different</p>\n</blockquote>\n<p>Done: <a href=\"https://github.com/backdrop-contrib/shahetsu\">https://github.com/backdrop-contrib/shahetsu</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/shahetsu\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/shahetsu\" title=\"backdrop-contrib/shahetsu\">backdrop-contrib/shahetsu</a></div><div class=\"message_embed_description\">A magazine-like Backdrop theme. Contribute to backdrop-contrib/shahetsu development by creating an account on GitHub.</div></div></div>",
+        "id": 202126812,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593197006
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> or others with super permissions: Can you delete the \"Editorial\" repository for me? <a href=\"https://github.com/backdrop-contrib/editorial/settings\">https://github.com/backdrop-contrib/editorial/settings</a> (I've built the alternative theme \"Shahetsu\" which in contrast to \"Editorial\" shouldn't have license issues.)</p>",
+        "id": 202127891,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593197581
+    },
+    {
+        "content": "<p>How do you pronounce that?</p>",
+        "id": 202140504,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1593204395
+    },
+    {
+        "content": "<p>Well, hard to say. If you look for the Japanese term for „Editorial“ in Google translate you can listen to the translation.</p>",
+        "id": 202143620,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593206216
+    },
+    {
+        "content": "<p>Oh dear, I had a typo in the repository name: it's not <code>shahetsu</code> but <code>shasetsu</code> ... Was able to rename it, nice!</p>",
+        "id": 202144254,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593206612
+    },
+    {
+        "content": "<p>That's what happens when I take names of a foreign language !-)</p>",
+        "id": 202144564,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593206769
+    },
+    {
+        "content": "<p>Why not use German?</p>",
+        "id": 202145403,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593207361
+    },
+    {
+        "content": "<p>Because it's the same term as in English.</p>",
+        "id": 202145461,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593207394
+    },
+    {
+        "content": "<p>Oh. <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span></p>",
+        "id": 202145490,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1593207419
+    },
+    {
+        "content": "<p>Also, there are other Backdrop themes with Japanese names. Could be the next hot thing!</p>",
+        "id": 202145547,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593207469
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>  I deleted the editorial repository</p>",
+        "id": 202155978,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1593214890
+    },
+    {
+        "content": "<p>Thank you!</p>",
+        "id": 202173582,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1593244263
+    },
+    {
+        "content": "<p>Sounds like 'sha' (sounds like sha from share), 'se' (sounds like se from second), and tsu (sounds like tsu from tsunami).</p>",
+        "id": 202348804,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593454683
+    },
+    {
+        "content": "<p>sha(re) se(cond) tsu(nami)</p>",
+        "id": 202348847,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593454705
+    },
+    {
+        "content": "<p>(Spent a few years living in Japan, including highschool).</p>",
+        "id": 202348880,
+        "sender_full_name": "Eric Vander Wal",
+        "timestamp": 1593454734
+    }
+]

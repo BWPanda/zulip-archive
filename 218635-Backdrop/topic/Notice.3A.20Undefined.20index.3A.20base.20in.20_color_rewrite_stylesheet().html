@@ -1,0 +1,252 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html">Notice: Undefined index: base in _color_rewrite_stylesheet()</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="206481533"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206481533" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206481533">(Aug 10 2020 at 16:28)</a>:</h4>
+<p>I keep getting an undefined issue message <br>
+"Notice: Undefined index: base in _color_rewrite_stylesheet() (line 691 of  ****/core/modules/color/color.module)." when I flush all caches.  It's very annoying.  Any idea how to remedy this?</p>
+
+
+
+<a name="206482293"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206482293" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206482293">(Aug 10 2020 at 16:35)</a>:</h4>
+<p>What theme are you using?</p>
+
+
+
+<a name="206482470"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206482470" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206482470">(Aug 10 2020 at 16:37)</a>:</h4>
+<p>If you don't need/want to use the Color module module, then a quick fix could be to turn it off. Otherwise, I suspect that something is missing from the color.inc file in the theme.</p>
+
+
+
+<a name="206482914"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206482914" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206482914">(Aug 10 2020 at 16:41)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> </p>
+<p>I am using a custom sub-theme of corporate KISS and it was working until the last update.  I do need the color module.  Any suggestions? There is no color.inc file in the theme.</p>
+
+
+
+<a name="206483166"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483166" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483166">(Aug 10 2020 at 16:43)</a>:</h4>
+<p>Is there a color.inc in your theme?</p>
+
+
+
+<a name="206483286"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483286" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483286">(Aug 10 2020 at 16:44)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256663">Joseph Flatt</span> <a href="#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483166">said</a>:</p>
+<blockquote>
+<p>Is there a color.inc in your theme?</p>
+</blockquote>
+<p>Nope.  It's not in the base theme and hadn't needed it before.  Do I need to create one and how do I do so?</p>
+
+
+
+<a name="206483373"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483373" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483373">(Aug 10 2020 at 16:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="268008">@Elisabeth Garbeil</span> - I started to debug that same problem yesterday, but got interrupted. I'll try to get back to it today and let you know what I find.</p>
+
+
+
+<a name="206483397"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483397" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483397">(Aug 10 2020 at 16:45)</a>:</h4>
+<p>Were you able to change color settings on the theme  before?</p>
+
+
+
+<a name="206483474"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483474" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483474">(Aug 10 2020 at 16:46)</a>:</h4>
+<p>When you say it worked until the last update, are you talking about core update OR theme update?</p>
+
+
+
+<a name="206483480"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483480" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483480">(Aug 10 2020 at 16:46)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span> <a href="#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483373">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="268008">Elisabeth Garbeil</span> - I started to debug that same problem yesterday, but got interrupted. I'll try to get back to it today and let you know what I find.</p>
+</blockquote>
+<p>Thank you <span class="user-mention" data-user-id="256570">@StPaulTim</span> .  Glad to see I'm not the only one running into this.</p>
+
+
+
+<a name="206483522"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483522" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483522">(Aug 10 2020 at 16:46)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span> <a href="#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483474">said</a>:</p>
+<blockquote>
+<p>When you say it worked until the last update, are you talking about core update OR theme update?</p>
+</blockquote>
+<p>Core update.  There hasn't been a theme update in a long time for this one.</p>
+
+
+
+<a name="206483630"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483630" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483630">(Aug 10 2020 at 16:47)</a>:</h4>
+<p>Ahhh, I was assuming that I had done something to create this problem on my site, but maybe it's also related to core update. I'll look into that theory as well.</p>
+
+
+
+<a name="206483633"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483633" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483633">(Aug 10 2020 at 16:47)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256663">Joseph Flatt</span> <a href="#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483397">said</a>:</p>
+<blockquote>
+<p>Were you able to change color settings on the theme  before?</p>
+</blockquote>
+<p>There are no color settings on theme to change, <span class="user-mention" data-user-id="256663">@Joseph Flatt</span> .   It's all handled via css.   I'm not using the color module with the theme, but with another module.</p>
+
+
+
+<a name="206483846"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483846" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483846">(Aug 10 2020 at 16:49)</a>:</h4>
+<p>You have a module that depends on the Color module?</p>
+
+
+
+<a name="206483978"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206483978" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206483978">(Aug 10 2020 at 16:50)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> Do you know when the issue started?</p>
+
+
+
+<a name="206484097"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206484097" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206484097">(Aug 10 2020 at 16:51)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256663">Joseph Flatt</span> <a href="#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483846">said</a>:</p>
+<blockquote>
+<p>You have a module that depends on the Color module?</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span>,  now that I look at it, I don't think I am anymore. I think that module was something that I experimented with and deleted because I went in another direction.</p>
+
+
+
+<a name="206484210"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206484210" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206484210">(Aug 10 2020 at 16:52)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256663">Joseph Flatt</span> <a href="#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483978">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span> Do you know when the issue started?</p>
+</blockquote>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> - middle to end of last week. It was very recent. I'm going to try and disable the color module and see what happens.</p>
+
+
+
+<a name="206484281"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206484281" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206484281">(Aug 10 2020 at 16:53)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268008">Elisabeth Garbeil</span> <a href="#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206484210">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="256663">Joseph Flatt</span> <a href="#narrow/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet()/near/206483978">said</a>:</p>
+<blockquote>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span> Do you know when the issue started?</p>
+</blockquote>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span>  @Joseph Flatt, - middle to end of last week for me after I ran updates. It was very recent. I'm going to try and disable the color module and see what happens.</p>
+</blockquote>
+
+
+
+<a name="206484474"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206484474" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206484474">(Aug 10 2020 at 16:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> and <span class="user-mention" data-user-id="256570">@StPaulTim</span> , when I disable the color module, the message goes away.  I'll leave it disabled for now.  Thanks!!</p>
+
+
+
+<a name="206484484"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206484484" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206484484">(Aug 10 2020 at 16:54)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> - I noticed the problem yesterday. I just updated core last week.</p>
+
+
+
+<a name="206484537"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206484537" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206484537">(Aug 10 2020 at 16:55)</a>:</h4>
+<p>BUT, I am seeing the problem with my contrib theme Tatsu and I noticed the problem while making other changes, so I assumed it was something I did.</p>
+
+
+
+<a name="206484561"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206484561" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206484561">(Aug 10 2020 at 16:55)</a>:</h4>
+<p>I am using the color module, so I need to figure it out.</p>
+
+
+
+<a name="206484698"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206484698" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206484698">(Aug 10 2020 at 16:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> , I am using that theme on another site as well, but I haven't had to touch it in a while so I don't know if it's happening there.</p>
+
+
+
+<a name="206485313"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206485313" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206485313">(Aug 10 2020 at 17:01)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> I think that the issue is happening more because of the change so that we regenerate color files when clearing caches. The error is coming from the fact that the color module requires that one of the color sets is named 'base', and then it generates it every time the files are regenerated.</p>
+
+
+
+<a name="206486032"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206486032" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206486032">(Aug 10 2020 at 17:07)</a>:</h4>
+<p><span class="user-mention" data-user-id="256570">@StPaulTim</span> You should try commenting out  the 'blend_target' setting from your color.inc. We made color blending optional in a release a while back, and the color blending  is what is looking for fields with a specific name.</p>
+
+
+
+<a name="206487295"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206487295" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206487295">(Aug 10 2020 at 17:19)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span> - I'll try that now</p>
+
+
+
+<a name="206490822"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206490822" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206490822">(Aug 10 2020 at 17:48)</a>:</h4>
+<p>I created this issue in the forum to document the issue and solution: <a href="https://forum.backdropcms.org/forum/undefined-index-base-%C2%A0colorrewritestylesheet">https://forum.backdropcms.org/forum/undefined-index-base-%C2%A0colorrewritestylesheet</a></p>
+
+
+
+<a name="206490897"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206490897" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206490897">(Aug 10 2020 at 17:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="256663">@Joseph Flatt</span>  Is there anything that needs to be done in core to address this issue? More informative error message or anything? Or is this just up to theme maintainers to address on their own?</p>
+
+
+
+<a name="206491138"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206491138" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206491138">(Aug 10 2020 at 17:51)</a>:</h4>
+<p>I think that we should probably have a better way of telling theme developers about potential problems, but I am not sure if we can fix this directly because that would be an API change.</p>
+
+
+
+<a name="206491751"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206491751" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206491751">(Aug 10 2020 at 17:56)</a>:</h4>
+<p>Without actually "fixing the problem" could we add a clearer error message that communicates to theme developers how to address the problem?</p>
+
+
+
+<a name="206491780"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206491780" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206491780">(Aug 10 2020 at 17:56)</a>:</h4>
+<p>Just a thought...</p>
+
+
+
+<a name="206492123"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206492123" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206492123">(Aug 10 2020 at 17:59)</a>:</h4>
+<p>Like adding relevant comments to color.inc at the appropriate location(s)?</p>
+
+
+
+<a name="206545375"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Notice%3A%20Undefined%20index%3A%20base%20in%20_color_rewrite_stylesheet%28%29/near/206545375" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Notice.3A.20Undefined.20index.3A.20base.20in.20_color_rewrite_stylesheet().html#206545375">(Aug 11 2020 at 07:00)</a>:</h4>
+<p>See also: <a href="https://github.com/backdrop/backdrop-issues/issues/4463">https://github.com/backdrop/backdrop-issues/issues/4463</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4463" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4463" title="[DX] Allow sub-themes to disable color support inherited by their parent theme · Issue #4463 · backdrop/backdrop-issues">[DX] Allow sub-themes to disable color support inherited by their parent theme · Issue #4463 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This was brought up in Zulip: https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Sub-theme.2C.20remove.20color.20support @olafgrabienski I was considering to provide color support ...</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

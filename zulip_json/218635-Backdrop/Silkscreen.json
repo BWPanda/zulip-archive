@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Wondering if it's worth adding some sort of identifier to Silkscreen, and then having it be reported as a different Backdrop CMS version or entirely separate project in <a href=\"http://b.org\">b.org</a> (to get an idea of usage metrics)</p>",
+        "id": 222725241,
+        "sender_full_name": "klonos",
+        "timestamp": 1610635104
+    },
+    {
+        "content": "<p>...that would help identify the portion of the community that needs the advanced features Silkscreen provides.</p>",
+        "id": 222725327,
+        "sender_full_name": "klonos",
+        "timestamp": 1610635148
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"344103\">@John Franklin</span> also wondering re the drop-in-replacement-ness of Silkscreen, and how easily one can switch between it and vanilla Backdrop CMS</p>",
+        "id": 222725481,
+        "sender_full_name": "klonos",
+        "timestamp": 1610635203
+    },
+    {
+        "content": "<p>You'd have to copy the config back to a files directory.  Otherwise, Silkscreen has been tracking Backdrop as close as possible.</p>",
+        "id": 222725972,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1610635438
+    },
+    {
+        "content": "<p>This assumes you're not using PostgreSQL or SQLite.</p>",
+        "id": 222726075,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1610635481
+    },
+    {
+        "content": "<p>Right. Thanks <span class=\"user-mention\" data-user-id=\"344103\">@John Franklin</span></p>",
+        "id": 222728626,
+        "sender_full_name": "klonos",
+        "timestamp": 1610636658
+    },
+    {
+        "content": "<p>...but you could always easily use<code>drush sql-dump</code> to export db and then import it in MySQL. Right? ...I haven't used it with PostgrsSQL or SQLite, but I'm assuming that the result is always a .sql file. Right?</p>",
+        "id": 222728981,
+        "sender_full_name": "klonos",
+        "timestamp": 1610636799
+    },
+    {
+        "content": "<p>...hmm <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span> ...seems that not. You'd need something like <a href=\"https://www.drupal.org/project/dbtng_migrator\">https://www.drupal.org/project/dbtng_migrator</a> or a way to convert the db from one format to the other.</p>",
+        "id": 222729263,
+        "sender_full_name": "klonos",
+        "timestamp": 1610636910
+    },
+    {
+        "content": "<p>The sql-dump command uses database driver specific tools that produce dump files that are not compatible with each other. Some conversion would need to be done to make the output from one database driver compatible with a different one.</p>",
+        "id": 222732163,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1610637907
+    }
+]

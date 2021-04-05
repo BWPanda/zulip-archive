@@ -1,0 +1,50 @@
+[
+    {
+        "content": "<p>/poll do you enable the \"Keep bar at top of page\" option for the Admin Bar on the sites you build?<br>\nYes, I prefer the Admin bar to always be sticky at the top of the pages as I scroll<br>\nNo, I prefer the Admin Bar sticky setting to be off, as is the default</p>",
+        "id": 206693075,
+        "sender_full_name": "klonos",
+        "timestamp": 1597238884
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Is this just out of curiosity, or you planning to open an issue re. making the 'sticky' option the default?</p>",
+        "id": 206762741,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1597273076
+    },
+    {
+        "content": "<p>Just trying to get some metrics around it, so to move <a href=\"https://github.com/backdrop/backdrop-issues/issues/788\">#788</a> forward if possible. I keep setting the admin bar to sticky on the sandboxes I work on (which reminds me the same thing I used to do with disabling the Overlay module in D7 <span aria-label=\"rolling eyes\" class=\"emoji emoji-1f644\" role=\"img\" title=\"rolling eyes\">:rolling_eyes:</span>  ), and then also:<br>\na) WordPress has its admin menu on the side, which makes it available at all times; whereas with Backdrop, it is hidden when you scroll down long pages, and then you need to scroll back up to navigate elsewhere. So it is a UX issue that's always at the back of my head, and I keep being reminded of it each time I spin up a WP demo.<br>\nb) <a href=\"https://github.com/backdrop/backdrop-issues/issues/1842\">#1842</a> would be another way to solve this I guess, but yet again we'd have to make it the default OOTB.<br>\nc) I really like <a href=\"https://www.drupal.org/project/gin\">https://www.drupal.org/project/gin</a> which also has the admin bar on the side.</p>",
+        "id": 206763969,
+        "sender_full_name": "klonos",
+        "timestamp": 1597273852
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256663\">@Joseph Flatt</span> prefers the admin bar to be sticky and changes all the sites we work on. I go back and forth. Sometimes I prefer it one way and sometimes the other. I think it mostly depends on the length of the page I'm on at the time. <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 206770919,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1597280115
+    },
+    {
+        "content": "<p>That Gin theme looks similar to the WordPress editing experience. I have been wanting to come up with something like that for the default themes for a while, but I have a long list and it's not very high up it.</p>",
+        "id": 206771003,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1597280218
+    },
+    {
+        "content": "<p>oops, I added a new choice. Can someone delete that one? lol</p>",
+        "id": 206839711,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1597337196
+    },
+    {
+        "content": "<p>No harm in that <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 206840016,
+        "sender_full_name": "klonos",
+        "timestamp": 1597337352
+    },
+    {
+        "content": "<p>...besides: <a href=\"https://zulipchat.com/help/create-a-poll\">https://zulipchat.com/help/create-a-poll</a></p>\n<blockquote>\n<p>Once the poll is created, you'll be able to edit the name of the poll and add options, but you won't be able to edit options once they are created.</p>\n</blockquote>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://zulipchat.com/help/create-a-poll\" style=\"background-image: url(https://zulipchat.com/static/images/logo/zulip-icon-128x128.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://zulipchat.com/help/create-a-poll\" title=\"Create a poll (Zulip Help Center)\">Create a poll (Zulip Help Center)</a></div><div class=\"message_embed_description\">Zulip natively supports creating and editing lightweight polls. | To create a poll, send a message like | or | Once the poll is created, you'll be able to edit the name of the poll and add options, but you won't be able to edit options once they are created. | Note that anyone can add options to any poll, though only the poll creator can edit the name. | /poll must come at the beginning of the message. It is not possible to send a message that both has a poll and has any other content. | We're here to help! Email us at support@zulip.com with questions, feedback, or feature requests.</div></div></div>",
+        "id": 206840048,
+        "sender_full_name": "klonos",
+        "timestamp": 1597337369
+    }
+]

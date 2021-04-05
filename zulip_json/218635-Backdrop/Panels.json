@@ -1,0 +1,152 @@
+[
+    {
+        "content": "<p>So one of the most powerful features of Drupal Panels, are the panel pane rules.  Anyone know of an alternative to these?  I personally loved the work that was put into Drupal panels before responsive became a thing which relinquished all of my panel layouts to single columns but I still use the crap out of mini-panels and custom content-panes.  I know the custom content panes can be replaced with blocks (which I despise to this day because they were horribly designed) but I'm not sure how to go about replacing the mini-panes and more specifically, I'm not sure how to replace the pane rules that accompany panes.  Context might be an alternative but when I used it on D7, I found it to be rather buggy and very lop-sided with functionality.</p>\n<p>So, in order for me to consider moving to Backdrop long term, I would love to see some sort of replacement for the pane rules and hoped someone way smarter than me might be able to come up with a way to replicate that functionality or offer some suggestions on alternatives.</p>",
+        "id": 212105467,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1601660262
+    },
+    {
+        "content": "<p>I didn't use Panels much in Drupal but I'm told that Backdrop's layout system is \"Panels-light\" and done in a much more intuitive way.  What kind of rules are you referring to in particular? Layouts has built in visibility rules of various kinds, is that what you mean <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span>?</p>",
+        "id": 212121094,
+        "sender_full_name": "Laryn",
+        "timestamp": 1601668659
+    },
+    {
+        "content": "<p>Yes Layouts is Panels, our blocks are same as Panes (not same as D7 blocks). Pane rules are visibility conditions. Also have Layout contexts, flexible layouts. Context relationships should be in next minor release.</p>",
+        "id": 212140260,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1601681048
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Panels/near/212140260\">said</a>:</p>\n<blockquote>\n<p>Yes Layouts is Panels, our blocks are same as Panes (not same as D7 blocks). Pane rules are visibility conditions. Also have Layout contexts, flexible layouts. Context relationships should be in next minor release.</p>\n</blockquote>\n<p>Also much easier for an end user to understand and use.  None of my clients could ever get the hang of panels, but had no problem with blocks, so we only used panels when there was no other alternative.  The way Backdrop handles it is far better than Drupal ever did.</p>",
+        "id": 212241631,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1601845313
+    },
+    {
+        "content": "<blockquote>\n<p>None of my clients could ever get the hang of panels, but had no problem with blocks, so we only used panels when there was no other alternative. The way Backdrop handles it is far better than Drupal ever did.</p>\n</blockquote>\n<p>Hehe, so true!</p>",
+        "id": 212266475,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1601883104
+    },
+    {
+        "content": "<p>Thanks all.  I'll dive into the Backdrop \"Blocks\" a bit closer when I get some time.</p>\n<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Yeah, the visibility rules are what I'm talking about.  If this, show that, If not, hide this.  It has been an absolute lifesaver when creating ecommerce websites.  I see Ubercart has been ported to Backdrop (yay!) so I would need a way to utilize the same functionality for example: \"If availability list field is set to Backorder, Hide Add to Cart form\".</p>",
+        "id": 213232175,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1602633520
+    },
+    {
+        "content": "<p>Alright, I quickly looked at it and I see where you can change the visibility of the block, but how do you create a block that is a field?  In the custom blocks, all I see is a simple text field.  How would one expose a field to a block?  (Panel Pane) How would one expose multiple fields inside of a single block?  (Mini-Panels)</p>\n<p>To top it off, the visibility conditions are extremely basic and don't really give the \"power\" that the visibility rules give with D7 panel panes, so kinda disappointing ATM :-(</p>\n<p>Not narking, just trying to understand if there is a way to accomplish what I need where things currently sit.  I have a feeling what I need isn't possible yet.</p>",
+        "id": 213232924,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1602634121
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> - Are you aware that if you create a layout with the path = node/% that you will then have access to all the fields for that content type as blocks?</p>",
+        "id": 213235702,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1602636659
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> I was not... Super new to BD so the ins-and-outs of it still elude me ;-)  I'll note I've used Drupal since 2007, so not new to the overall platform.</p>",
+        "id": 213235754,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1602636715
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> - Give that a try and let me know if answers any of your needs. I know that even after I was aware of these field blocks, there was a time when it was hard for me to find them.</p>",
+        "id": 213235959,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1602636918
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Panels/near/213232924\">said</a>:</p>\n<blockquote>\n<p>Alright, I quickly looked at it and I see where you can change the visibility of the block, but how do you create a block that is a field?  In the custom blocks, all I see is a simple text field.  How would one expose a field to a block?  (Panel Pane) How would one expose multiple fields inside of a single block?  (Mini-Panels)</p>\n<p>To top it off, the visibility conditions are extremely basic and don't really give the \"power\" that the visibility rules give with D7 panel panes, so kinda disappointing ATM :-(</p>\n<p>Not narking, just trying to understand if there is a way to accomplish what I need where things currently sit.  I have a feeling what I need isn't possible yet.</p>\n</blockquote>\n<p>Hard to know how to help you without knowing what you want.  You could use URL path as a visibility condition and populate the paths with the variables (one option), or you could use tokens in the body for fields that vary based on the node (for example page title).  I'm not sure what you're trying to do but I've found it to be pretty powerful, especially combining views and blocks (example pulling a slideshow based on the page  it shows up on), or changing the background based on department, etc.</p>",
+        "id": 213235962,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1602636919
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268008\">@Elisabeth Garbeil</span> What I want...</p>\n<p>Well, what I want is a way to expose pretty much anything that can be exposed within BD, into the layout form. I just tested node/% and I do see that it exposes the individual fields like I would expect. Problem 1 solved.</p>\n<p>Problem 2 is that the visibility conditions are extremely basic.</p>\n<p><a href=\"/user_uploads/18319/M9a5ULmqVTMQDoREFMjENyuu/image.png\">image.png</a> </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/M9a5ULmqVTMQDoREFMjENyuu/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/M9a5ULmqVTMQDoREFMjENyuu/image.png\"></a></div><p>As you can see, there is no \"field\" visibility condition. This is the powerful piece that is missing.</p>\n<p>See, Panels exposes EVERY FIELD on the node as a visibility condition. This allows me to say \"Show this block (panel pane) [if] this field is true. If not, hide it.\" I have fields on one of my websites where some of them contain data, others do not. I tell the visibility rule to \"hide all of these fields that are empty (null)\".</p>\n<p>Let me give you a real-world on one of my e-commerce sites: I have a price field (ubercart) and a custom availability field (list field). I have a visibility set on the price where \"if availability NOT = In-Stock, On-Backorder, Sold-Out -&gt; Hide the price field\".</p>\n<p>Since there is no exposure in the BD visibility to fields, there is currently no way to accomplish this. The Context module for D7 kinda handled this sort of thing, but I never really used it because its focus was more on block visibility where-as Panels focus was literally on EVERYTHING you wanted to expose to the Panel.</p>\n<p>So, as of right now, core does not have a way for me to accomplish what I would need because core isn't exposing the fields as visibility conditions. They're exposed on the layout, just not on the visibility.</p>",
+        "id": 215053197,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604028086
+    },
+    {
+        "content": "<p>Thanks for taking the time to explain <span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> <span aria-label=\"pray\" class=\"emoji emoji-1f64f\" role=\"img\" title=\"pray\">:pray:</span> ...this feature indeed does not exist in Backdrop core. Are you comfortable with opening a new feature request for this in <a href=\"https://github.com/backdrop/backdrop-issues/issues/new/choose\">https://github.com/backdrop/backdrop-issues/issues/new/choose</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/new/choose\" style=\"background-image: url(https://github.githubassets.com/images/modules/open_graph/github-octocat.png)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/new/choose\" title=\"Build software better, together\">Build software better, together</a></div><div class=\"message_embed_description\">GitHub is where people build software. More than 50 million people use GitHub to discover, fork, and contribute to over 100 million projects.</div></div></div>",
+        "id": 215053357,
+        "sender_full_name": "klonos",
+        "timestamp": 1604028307
+    },
+    {
+        "content": "<p>...adding screenshots of how this is implemented in D7 would help.</p>",
+        "id": 215053375,
+        "sender_full_name": "klonos",
+        "timestamp": 1604028355
+    },
+    {
+        "content": "<p>@klonos Am I comfortable with opening a new feature request... Heck yeah! Hope to see it gain some traction. To be honest, the pane visibility rules isn't something I use on every one of my websites. Most of the time I don't need them on the individual fields, but what I have found for an ecommerce site is the difference between a nightmare of a site and pure bliss. I have honestly stayed on D7 Ubercart purely because I can literally do almost anything I want to the output of the page. For not being able to code, I am surprised at some of the stuff I have been able to accomplish just with Panels, Views and Paragraphs on a product page. It's been a fun journey over the years and I know trying to accomplish a fraction of the same tasks on Woo Commerce wouldn't be remotely possible.</p>\n<p>Thanks for sharing the link :-)</p>",
+        "id": 215053617,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604028635
+    },
+    {
+        "content": "<p>THis fields conditions thing could be a contrib project. I posted a query on the issue.</p>",
+        "id": 215101629,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1604068164
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Panels/near/215053197\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"268008\">Elisabeth Garbeil</span> What I want...</p>\n<p>Well, what I want is a way to expose pretty much anything that can be exposed within BD, into the layout form. I just tested node/% and I do see that it exposes the individual fields like I would expect. Problem 1 solved.</p>\n<p>Problem 2 is that the visibility conditions are extremely basic.</p>\n<p><a href=\"/user_uploads/18319/M9a5ULmqVTMQDoREFMjENyuu/image.png\">image.png</a> </p>\n<p>As you can see, there is no \"field\" visibility condition. This is the powerful piece that is missing.</p>\n<p>See, Panels exposes EVERY FIELD on the node as a visibility condition. This allows me to say \"Show this block (panel pane) [if] this field is true. If not, hide it.\" I have fields on one of my websites where some of them contain data, others do not. I tell the visibility rule to \"hide all of these fields that are empty (null)\".</p>\n<p>Let me give you a real-world on one of my e-commerce sites: I have a price field (ubercart) and a custom availability field (list field). I have a visibility set on the price where \"if availability NOT = In-Stock, On-Backorder, Sold-Out -&gt; Hide the price field\".</p>\n<p>Since there is no exposure in the BD visibility to fields, there is currently no way to accomplish this. The Context module for D7 kinda handled this sort of thing, but I never really used it because its focus was more on block visibility where-as Panels focus was literally on EVERYTHING you wanted to expose to the Panel.</p>\n<p>So, as of right now, core does not have a way for me to accomplish what I would need because core isn't exposing the fields as visibility conditions. They're exposed on the layout, just not on the visibility.</p>\n</blockquote>\n<p>Phil,  have you tried using token filter?   Also, maybe look at porting the context module (this may take a lot of work)?  Display suite and context were not in core in D7 either.  For the above, how about using a view with a rewrite results  on the price field?  I've done something similar before.  I like the idea of a feature request to add fields to visibility conditions, but I think that might have to be contrib, rather than core  because it would probably depend on something like token filter.  I use token filter a lot.  I also use the URL path to filter items as well (ex. only show if 'instock' or hide if 'outofstock').  That does require adding the variable you're filtering on to the URL.</p>",
+        "id": 215103362,
+        "sender_full_name": "Elisabeth Garbeil",
+        "timestamp": 1604068961
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> did a rough port of field value conditions. See <a href=\"https://github.com/backdrop-contrib/field_visibility_condition\">https://github.com/backdrop-contrib/field_visibility_condition</a>, and test if you can please.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/field_visibility_condition\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/field_visibility_condition\" title=\"backdrop-contrib/field_visibility_condition\">backdrop-contrib/field_visibility_condition</a></div><div class=\"message_embed_description\">Allows admins to control access by entity field value - backdrop-contrib/field_visibility_condition</div></div></div>",
+        "id": 215206204,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1604170451
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> awesome! I'll take a look</p>",
+        "id": 215207073,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604171518
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> ++ layout ninja!!</p>",
+        "id": 215208086,
+        "sender_full_name": "klonos",
+        "timestamp": 1604172808
+    },
+    {
+        "content": "<p><strong>docwilmot</strong> leveled up! (Karma: 13)</p>",
+        "id": 215208087,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1604172808
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> do you want feedback here or in the git issue queue? Great start BTW. The foundation looks really good. Curious if you've gotten far enough to get it to work or if you're just laying the foundation for now? (It isn't respecting the visibility condition for me, is why I ask)</p>\n<p>Side thought, if you want feedback here on Zulip, then I think we might want to create a new sub-stream for it.</p>",
+        "id": 215213297,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604180597
+    },
+    {
+        "content": "<p>In the issue queue would be best.</p>",
+        "id": 215213514,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1604180994
+    },
+    {
+        "content": "<p>Ok. Looks like there is already a visibility topic: <a href=\"#narrow/stream/218635-Backdrop/topic/Visibility.20conditions\">https://backdrop.zulipchat.com/#narrow/stream/218635-Backdrop/topic/Visibility.20conditions</a></p>",
+        "id": 215213738,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1604181334
+    },
+    {
+        "content": "<blockquote>\n<p>do you want feedback here or in the git issue queue?</p>\n</blockquote>\n<p>If you are comfortable in the issue queue, that is usually the best place to put feedback on issues. Sometimes the discussion of a feature extends for months or years and the best place to track its history is in the issue queue.</p>",
+        "id": 215214105,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604181844
+    }
+]

@@ -1,0 +1,146 @@
+[
+    {
+        "content": "<p>Hi I'm a brand new Backdrop user, and really liking it very much. I'm using Backdrop to set up a site for our <a href=\"https://poppnm.org/\">coalition to end private prisons</a> in our state.</p>\n<ul>\n<li>Right now partners are a bulleted list.</li>\n<li>I'd like to include partner logos and names as nice neat boxes similar to what is shown in the <a href=\"https://www.triplo.co/\">triplo </a> website.</li>\n<li>I'm not sure how to do this.</li>\n</ul>\n<p>Would someone be so kind as to point me in the right direction? Alternatively, if there's a better place to raise the question please point me to the right spot. Being new here, I'm not super clear on community norms. Sorry if I'm approaching this in a clumsy way.</p>",
+        "id": 214780447,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603843374
+    },
+    {
+        "content": "<p>Hi, Nathan Craig. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 214780448,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1603843374
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"358691\">@Nathan Craig</span> - Feel free to ask questions here or anywhere. We're pretty flexible. However, I am going to ask if you would be willing to move your question to the forum. I prefer answer questions like this in the forum, because the answers are easier for other users to find in the future (and this is a good question). </p>\n<p><a href=\"https://forum.backdropcms.org/\">https://forum.backdropcms.org/</a></p>",
+        "id": 214784008,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603846312
+    },
+    {
+        "content": "<p>Here is my short answer. If you have theming skills and are ok writing custom css, you can accomplish what you are attempting with a view and some custom theming. If you are trying to put your site together with modules and site-building, you should look at the Fanciblock module. <a href=\"https://backdropcms.org/project/fanciblock\">https://backdropcms.org/project/fanciblock</a></p>",
+        "id": 214784438,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1603846658
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"358691\">@Nathan Craig</span> Welcome! Just out of curiosity, have to come to Backdrop from Drupal, or are you a new CMS user?</p>",
+        "id": 214785501,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603847550
+    },
+    {
+        "content": "<p>As for your question, it looks like your bullet list is currently in the Body field of your page. If this is your only list of partners (i.e. you don't plan on having a different list on each page), my recommendation would be to setup a new content type (called 'Partner' for example) that has fields for the logo and link/URL. Then create new Partner content for each of your bullet points (and then remove them from the Body field). Once you have your Partners as separate content in a new content type, you can use the power of Views to output them in the method you desire (see <span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span>'s comment above).</p>",
+        "id": 214785780,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1603847816
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"358691\">@Nathan Craig</span> Glad you are here! Thanks for the work you and your coalition are doing. I agree, knowing more about your background and skill set would affect what I recommend in this case.</p>",
+        "id": 214786424,
+        "sender_full_name": "Laryn",
+        "timestamp": 1603848531
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/(no.20topic)/near/214784008\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"358691\">Nathan Craig</span> - Feel free to ask questions here or anywhere. We're pretty flexible. However, I am going to ask if you would be willing to move your question to the forum. I prefer answer questions like this in the forum, because the answers are easier for other users to find in the future (and this is a good question). </p>\n<p><a href=\"https://forum.backdropcms.org/\">https://forum.backdropcms.org/</a></p>\n</blockquote>\n<p>Thank you I will post this question on the forum tomorrow. Much appreciated.</p>",
+        "id": 214792327,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603855102
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/(no.20topic)/near/214785501\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"358691\">Nathan Craig</span> Welcome! Just out of curiosity, have to come to Backdrop from Drupal, or are you a new CMS user?</p>\n</blockquote>\n<p>I'm coming from WordPress. So far I like Backdrop much better and it seems to load faster.</p>",
+        "id": 214792365,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603855171
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256607\">BWPanda</span> <a href=\"#narrow/stream/218635-Backdrop/topic/(no.20topic)/near/214785780\">said</a>:</p>\n<blockquote>\n<p>As for your question, it looks like your bullet list is currently in the Body field of your page. If this is your only list of partners (i.e. you don't plan on having a different list on each page), my recommendation would be to setup a new content type (called 'Partner' for example) that has fields for the logo and link/URL. Then create new Partner content for each of your bullet points (and then remove them from the Body field). Once you have your Partners as separate content in a new content type, you can use the power of Views to output them in the method you desire (see <span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span>'s comment above).</p>\n</blockquote>\n<p>Thanks this is useful food for thought. At present, the partners are a separate node I'm loading into home. I will try tinkering with what you suggest. Much appreciated.</p>",
+        "id": 214792508,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603855329
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256573\">Laryn</span> <a href=\"#narrow/stream/218635-Backdrop/topic/(no.20topic)/near/214786424\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"358691\">Nathan Craig</span> Glad you are here! Thanks for the work you and your coalition are doing. I agree, knowing more about your background and skill set would affect what I recommend in this case.</p>\n</blockquote>\n<p>I'm an anthropologist by training, but know just enough to get myself in trouble. I don't write css much, and have never written php, but am comfortable with html and reasonably handy with python. I'm willing to learn and don't mind digging in.</p>",
+        "id": 214792619,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603855508
+    },
+    {
+        "content": "<p>I believe that these sorts of missions were why Backdrop 4 Good was created:</p>\n<blockquote>\n<p>Backdrop for Good is a volunteer group that brings Backdrop enthusiasts together with nonprofit organizations to make a direct, positive impact by donating services to build websites and web applications.</p>\n</blockquote>",
+        "id": 214875127,
+        "sender_full_name": "klonos",
+        "timestamp": 1603907855
+    },
+    {
+        "content": "<p>...unfortunately, there was not much activity, and the domain seems to have expired(?)</p>",
+        "id": 214875162,
+        "sender_full_name": "klonos",
+        "timestamp": 1603907875
+    },
+    {
+        "content": "<p>...the repo is still there, if we wanted to revive it: <a href=\"https://github.com/Backdrop4Good/backdrop4good.org\">https://github.com/Backdrop4Good/backdrop4good.org</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/Backdrop4Good/backdrop4good.org\" style=\"background-image: url(https://avatars0.githubusercontent.com/u/31367956?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/Backdrop4Good/backdrop4good.org\" title=\"Backdrop4Good/backdrop4good.org\">Backdrop4Good/backdrop4good.org</a></div><div class=\"message_embed_description\">Backdrop for Good site. Contribute to Backdrop4Good/backdrop4good.org development by creating an account on GitHub.</div></div></div>",
+        "id": 214875337,
+        "sender_full_name": "klonos",
+        "timestamp": 1603907931
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"358691\">@Nathan Craig</span> I for one would be happy to set up a remote screen-sharing session, to help you get started with building this <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 214875722,
+        "sender_full_name": "klonos",
+        "timestamp": 1603908068
+    },
+    {
+        "content": "<p>...also, does anyone know if Office Hours is actually happening (now with <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> being inactive and all - I know that he used to lead that)?</p>",
+        "id": 214877109,
+        "sender_full_name": "klonos",
+        "timestamp": 1603908646
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> Very interesting about Backdrop 4 Good, seems like a great idea.</p>",
+        "id": 214888080,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603914346
+    },
+    {
+        "content": "<p>Thanks whoever put a topic on this so its properly organized. Sorry I didn't at the outset.</p>",
+        "id": 214892826,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603916610
+    },
+    {
+        "content": "<p>That'd be me <span class=\"user-mention\" data-user-id=\"358691\">@Nathan Craig</span> <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 214892862,
+        "sender_full_name": "klonos",
+        "timestamp": 1603916636
+    },
+    {
+        "content": "<p>...you don't need to worry about things like that when starting to chat here.</p>",
+        "id": 214892933,
+        "sender_full_name": "klonos",
+        "timestamp": 1603916663
+    },
+    {
+        "content": "<p>...btw, I'm around now and for the next hour and a half, before I need to start work. We can start a session if you are OK to screen-share, so that I can guide you on how to achieve what you are after with your Backdrop site.</p>",
+        "id": 214892986,
+        "sender_full_name": "klonos",
+        "timestamp": 1603916700
+    },
+    {
+        "content": "<p>That would be totally awesome! Yes.</p>",
+        "id": 214893235,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603916834
+    },
+    {
+        "content": "<p>Cool. I'll PM you shorty....</p>",
+        "id": 214893252,
+        "sender_full_name": "klonos",
+        "timestamp": 1603916847
+    },
+    {
+        "content": "<p>Sweet, thanks.</p>",
+        "id": 214893266,
+        "sender_full_name": "Nathan Craig",
+        "timestamp": 1603916857
+    }
+]

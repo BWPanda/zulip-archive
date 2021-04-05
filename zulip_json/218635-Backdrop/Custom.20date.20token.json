@@ -1,0 +1,98 @@
+[
+    {
+        "content": "<p>I could need a hint regarding my custom date token module. It allows me to use a date token like <code>Y-m-d</code> for URL alias patterns. Use case so far was to use the token for one content type, based on one respective date field, and that works fine. Now I want to extend the module for the use with two content types and two respective date fields, and I'm not sure what and how to change the code. Here's the current version for one field:</p>\n<div class=\"codehilite\"><pre><span></span><code> /**\n * Implements hook_token_info().\n */\nfunction custom_date_tokens_token_info() {\n  $info[&#39;tokens&#39;][&#39;node&#39;][&#39;field-termin-date-custom&#39;] = array(\n    &#39;name&#39; =&gt; t(&#39;Event Custom Date Format&#39;),\n    &#39;description&#39; =&gt; t(&#39;Custom date field value for events, format: Y-m-d.&#39;),\n  );\n  return $info;\n}\n\n/**\n * Implements hook_tokens().\n */\nfunction custom_date_tokens_tokens($type, $tokens, array $data = array(), array $options = array()) {\n  $replacements = array();\n\n  if ($type == &#39;node&#39; &amp;&amp; !empty($data[&#39;node&#39;])) {\n    $node = $data[&#39;node&#39;];\n\n    foreach ($tokens as $name =&gt; $original) {\n      switch ($name) {\n        case &#39;field-termin-date-custom&#39;:\n          $time = strtotime($node-&gt;field_termin_datum[&#39;und&#39;][0][&#39;value&#39;]);\n          $newformat = date(&#39;Y-m-d&#39;,$time);\n          $replacements[$original] = $newformat;\n\n          break;\n      }\n    }\n  }\n\n  return $replacements;\n}\n</code></pre></div>",
+        "id": 208821572,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599052630
+    },
+    {
+        "content": "<p>This the line with the field name:</p>\n<p><code>$time = strtotime($node-&gt;field_termin_datum['und'][0]['value']);</code></p>",
+        "id": 208821769,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599052703
+    },
+    {
+        "content": "<p>I'm not sure what \"field-termin-date-custom\" is for. Did you name that yourself, or use something that already existed somewhere?<br>\nMy best guess would be that you would need to duplicate this snippet in <code>custom_date_tokens_token_info()</code>:</p>\n<div class=\"codehilite\"><pre><span></span><code>  $info[&#39;tokens&#39;][&#39;node&#39;][&#39;field-termin-date-custom&#39;] = array(\n    &#39;name&#39; =&gt; t(&#39;Event Custom Date Format&#39;),\n    &#39;description&#39; =&gt; t(&#39;Custom date field value for events, format: Y-m-d.&#39;),\n  );\n</code></pre></div>\n\n\n<p>renaming <code>field-termin-date-custom</code> to whatever it is for the second field.<br>\nAnd then also duplicate this snippet in <code>custom_date_tokens_tokens()</code>:</p>\n<div class=\"codehilite\"><pre><span></span><code>        case &#39;field-termin-date-custom&#39;:\n          $time = strtotime($node-&gt;field_termin_datum[&#39;und&#39;][0][&#39;value&#39;]);\n          $newformat = date(&#39;Y-m-d&#39;,$time);\n          $replacements[$original] = $newformat;\n\n          break;\n</code></pre></div>\n\n\n<p>renaming both <code>field-termin-date-custom</code> (to the name chosen for the previous snippet) and <code>field_termin_datum</code> to the name of the second field.<br>\nBut that's untested, and you have some unknowns in what you have provided.<br>\nYou could also create a custom function in that file for the time conversion that takes the field value as a parameter, and then that code would not be duplicated, but that's not a big deal.</p>",
+        "id": 208842971,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1599060775
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> Thanks for helping! Re \"field-termin-date-custom\", IIRC I named it myself but I guess the intention was to match the semantics of the field name.</p>",
+        "id": 208844239,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599061235
+    },
+    {
+        "content": "<p>However, I just remembered that in the meantime we've added a Token display to content types: <a href=\"https://github.com/backdrop/backdrop-issues/issues/1425\">https://github.com/backdrop/backdrop-issues/issues/1425</a>. Which means it's possible to choose a token for the date field which is then used for URL aliases.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1425\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1425\" title=\"Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues\">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div>",
+        "id": 208844877,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599061486
+    },
+    {
+        "content": "<p>^^ Also tested on the site in question: works good!</p>",
+        "id": 208844947,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599061512
+    },
+    {
+        "content": "<p>Really a hidden treasure ... If someone needs better date formats in URL aliases, here's how it works: <a href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-463131316\">https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-463131316</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-463131316\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-463131316\" title=\"Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues\">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div>",
+        "id": 208845199,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599061603
+    },
+    {
+        "content": "<p>Editing a display mode to tweak tokens seems really counter-intuitive. Why aren't we including those tokens in a way that makes them available in the token browser?</p>",
+        "id": 208862855,
+        "sender_full_name": "klonos",
+        "timestamp": 1599069444
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> they are in the browser. This lets you configure their output (not define them initially). It's for if you wanted the same token to output differently on different content types. It gives you per-type control</p>",
+        "id": 208917082,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599104264
+    },
+    {
+        "content": "<p>if, for example, you had a field_date on 4 types, and each one needed a different date format :)</p>",
+        "id": 208917155,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599104332
+    },
+    {
+        "content": "<p>in the browser that would be something like [node:field_date]</p>",
+        "id": 208917177,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599104372
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>  there is also an issue to add the custom date format to those tokens, so you could do something like  [node:field_date:custom:Y-M-d]</p>",
+        "id": 208917235,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599104414
+    },
+    {
+        "content": "<p>hm, it looks like those got in? <a href=\"https://github.com/backdrop/backdrop-issues/issues/1425\">https://github.com/backdrop/backdrop-issues/issues/1425</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1425\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1425\" title=\"Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues\">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div>",
+        "id": 208917339,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599104609
+    },
+    {
+        "content": "<blockquote>\n<p>Editing a display mode to tweak tokens seems really counter-intuitive. Why aren't we including those tokens in a way that makes them available in the token browser?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> Issue 1425 is fixed, that's why we have at least the Token display. There was also the idea to add custom date tokens directly, but it got lost between <a href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-461951877\">https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-461951877</a> and <a href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-468348810\">https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-468348810</a>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-461951877\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-461951877\" title=\"Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues\">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-468348810\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/1425#issuecomment-468348810\" title=\"Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues\">Token display format is not configurable (and date token creates very long paths) · Issue #1425 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">I&#39;ve created a date field, and want to include the start date of an event in its url alias pattern: events/[node:field_event_date]-[node:title] However, when the path is generated, it uses the ...</div></div></div>",
+        "id": 208940970,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599124975
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> I have re-opened <a href=\"https://github.com/backdrop/backdrop-issues/issues/2069\">https://github.com/backdrop/backdrop-issues/issues/2069</a> to get back to the token problem :)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2069\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2069\" title=\"[UX] Date format tokens for date field missing  · Issue #2069 · backdrop/backdrop-issues\">[UX] Date format tokens for date field missing  · Issue #2069 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need We can customize the format of the [node:created] and [node:updated] tokens, by adding custom followed by the date format, like so: [node:created:custom:Y-m-d]. But adding c...</div></div></div>",
+        "id": 209003968,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599154735
+    },
+    {
+        "content": "<p>Great, thanks <span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> !</p>",
+        "id": 209008720,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1599156979
+    }
+]

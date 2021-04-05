@@ -1,0 +1,106 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/License.20combination.20woes.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html">License combination woes</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="220499511"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220499511" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220499511">(Dec 20 2020 at 02:59)</a>:</h4>
+<p>I'm working on a port of the 7.x-2.x branch of the D7 <a href="http://drupal.org/project/gauth">Google Auth module</a>, which is GPL2. It uses the Google API PHP Client, which is Apache 2. In D7, the Google library is separate and resides in the libraries folder (and depends on the Libraries module, which is deprecated in BD). In Backdrop, we are supposed to include such libraries within the module, which thereby raises the problem.</p>
+<p><a href="https://law.stackexchange.com/questions/15835/can-i-bundle-apache-2-0-licensed-components-in-a-gpl-3-licensed-project">According to here</a>, I can include Apache 2.0 code in a GPL 3 package, but not GPL 2.</p>
+<p>And <a href="https://softwareengineering.stackexchange.com/questions/267744/including-gplv2-code-in-gplv3-code">according to here</a> I can't include GPL2 code (the original module) in a GPL 3 package.</p>
+<p>So, if I'm understanding correctly, the only way forward would be to persuade the original developer to re-release the 7.x-2.x module under GPL3, base the BD port off of that, and then I could include the Google module with the Apache licensed code.</p>
+<p>Is this correct? Or are there other approaches to consider?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://law.stackexchange.com/questions/15835/can-i-bundle-apache-2-0-licensed-components-in-a-gpl-3-licensed-project" style="background-image: url(https://cdn.sstatic.net/Sites/law/Img/apple-touch-icon@2.png?v=b5e7f3e10c16)"></a><div class="data-container"><div class="message_embed_title"><a href="https://law.stackexchange.com/questions/15835/can-i-bundle-apache-2-0-licensed-components-in-a-gpl-3-licensed-project" title="Can I bundle Apache 2.0 licensed components in a GPL 3 licensed project?">Can I bundle Apache 2.0 licensed components in a GPL 3 licensed project?</a></div><div class="message_embed_description">I am creating a project that I would like to open source and license under the GPL 3 License. The project will come with a bundled version of an open source component which is licensed under the Ap...</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://softwareengineering.stackexchange.com/questions/267744/including-gplv2-code-in-gplv3-code" style="background-image: url(https://cdn.sstatic.net/Sites/softwareengineering/Img/apple-touch-icon@2.png?v=1ef7363febba)"></a><div class="data-container"><div class="message_embed_title"><a href="https://softwareengineering.stackexchange.com/questions/267744/including-gplv2-code-in-gplv3-code" title="Including GPLv2 code in GPLv3 code">Including GPLv2 code in GPLv3 code</a></div><div class="message_embed_description">I would like to use some code that was released under GPLv2 in my project.
+
+I released my project with the GPLv3 license. Can I do this, or do I have to downgrade to GPLv2?</div></div></div>
+
+
+
+<a name="220500157"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220500157" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220500157">(Dec 20 2020 at 03:21)</a>:</h4>
+<p>Have you read the README.md file for the Libraries API module? It suggests a possible option by using Backdrop core equivalent functions. I haven't gone down that path myself, so I don't know if that would help or not.</p>
+
+
+
+<a name="220500158"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220500158" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220500158">(Dec 20 2020 at 03:21)</a>:</h4>
+<p>Another option is to specify in the README.md file of the module you're porting that the person using needs to download the library themselves and place it somewhere of your choosing. I realize that is taking a giant step back to the days when there was no consistent way of handling libraries in Drupal.</p>
+
+
+
+<a name="220501039"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220501039" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220501039">(Dec 20 2020 at 03:51)</a>:</h4>
+<p>Anything in Drupal's ecosystem is Gpl-2 or later, if I remember correctly.</p>
+
+
+
+<a name="220501084"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220501084" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220501084">(Dec 20 2020 at 03:52)</a>:</h4>
+<p>So you should be able to release a fork as Gpl-3.</p>
+
+
+
+<a name="220501253"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220501253" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220501253">(Dec 20 2020 at 03:57)</a>:</h4>
+<p><a href="https://www.drupal.org/about/licensing#project-licensing">https://www.drupal.org/about/licensing#project-licensing</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://www.drupal.org/about/licensing#project-licensing" style="background-image: url(https://www.drupal.org/sites/all/themes/bluecheese/images/og.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="https://www.drupal.org/about/licensing#project-licensing" title="Licensing">Licensing</a></div><div class="message_embed_description">These are answers to frequently asked questions about licensing of the Drupal project.</div></div></div>
+
+
+
+<a name="220522959"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220522959" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> bugfolder <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220522959">(Dec 20 2020 at 14:45)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span>, <span class="user-mention" data-user-id="256627">@oadaeh (Jason Flatt)</span>, thanks, both helpful, good to know.</p>
+
+
+
+<a name="220523513"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220523513" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220523513">(Dec 20 2020 at 15:02)</a>:</h4>
+<p>Another possibility would be creating a separate gpl-3 wrapper module that just wraps the library, and make the gpl-2 module depend on it. Two installs but... should work.</p>
+
+
+
+<a name="220583535"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220583535" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220583535">(Dec 21 2020 at 13:32)</a>:</h4>
+<p>Ehmmm, right, licenses... If I include foreign code which is dual-licensed (actually triple), do I have to mention all these licenses?</p>
+
+
+
+<a name="220608764"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220608764" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220608764">(Dec 21 2020 at 17:36)</a>:</h4>
+<p>I don't think there's a hardline no on using the libraries module. It's just that it's not as user friendly. But sounds like the best is to list it as gpl3. Which is fine for contrib.</p>
+
+
+
+<a name="220664212"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220664212" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220664212">(Dec 22 2020 at 07:08)</a>:</h4>
+<blockquote>
+<p>I don't think there's a hardline no on using the libraries module.</p>
+</blockquote>
+<p>That wasn't actually my question... The libraries module is <a href="https://backdropcms.org/project/libraries">deprecated</a>, BTW.<br>
+My question was: what should I list if external code has multiple licenses. Here's the reason for my question: <a href="https://github.com/backdrop-contrib/ckeditor_skins">ckeditor_skins</a></p>
+<p>And which license must the contrib module have? Note that CKEditor itself has the same three licenses and is part of core.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/ckeditor_skins" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/ckeditor_skins" title="backdrop-contrib/ckeditor_skins">backdrop-contrib/ckeditor_skins</a></div><div class="message_embed_description">Additonal CKEditor skins for Backdrop CMS. Contribute to backdrop-contrib/ckeditor_skins development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="220868350"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/License%20combination%20woes/near/220868350" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/License.20combination.20woes.html#220868350">(Dec 24 2020 at 12:56)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> I think I was replying to someone else but can't recall. Your question is good. I don't think I can help</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

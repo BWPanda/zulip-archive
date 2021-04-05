@@ -1,0 +1,44 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Cache.20layout.20class.20methods.3F.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cache.20layout.20class.20methods.3F.html">Cache layout class methods?</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="220810501"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cache%20layout%20class%20methods%3F/near/220810501" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cache.20layout.20class.20methods.3F.html#220810501">(Dec 23 2020 at 17:43)</a>:</h4>
+<p>The methods on the Layout class are called pretty often. <code>Layout::hasContexts()</code> for example is called for every block, for every page view, by the layout renderer. And this in turn calls <code>Layout::getContexts()</code>, etc. On any of these calls it is highly unlikely the <code>Layout</code> object will change at all. So should we try to introduce static or other caching to these methods? I'm asking here first before raising an issue in case there is some OOP concept that I may not understand. Any thoughts?</p>
+
+
+
+<a name="220810903"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cache%20layout%20class%20methods%3F/near/220810903" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cache.20layout.20class.20methods.3F.html#220810903">(Dec 23 2020 at 17:47)</a>:</h4>
+<p>This question arose yesterday when I noticed that for relationships to work, we'd need to check every layout context against every relationship within <code>Layout::hasContexts()</code> to create contexts from relationships (trust me for now for the purpose of this argument, though I may turn out to be wrong in this approach). Which means with 4 contexts, 2 relationships, 20 blocks, then = 80 calls to the function that builds relationships from contexts, each page view. Seems unsustainable.</p>
+
+
+
+<a name="220845816"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cache%20layout%20class%20methods%3F/near/220845816" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cache.20layout.20class.20methods.3F.html#220845816">(Dec 24 2020 at 03:20)</a>:</h4>
+<p>At the end of <code>Layout::getContexts()</code> you could set a property on the class, and then at the top of the function you could  check if the processing has already been done and then just return <code>$this-&gt;contexts</code>.</p>
+
+
+
+<a name="220845831"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Cache%20layout%20class%20methods%3F/near/220845831" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Joseph Flatt <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Cache.20layout.20class.20methods.3F.html#220845831">(Dec 24 2020 at 03:21)</a>:</h4>
+<p>That way the contexts would be unique per layout if you needed to process multiple layouts, but would be consistent for all the blocks using the same layout</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

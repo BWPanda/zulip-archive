@@ -1,0 +1,158 @@
+[
+    {
+        "content": "<p>I don't know if this is related, but there are a few merge commits at the top of 1.x that add a .lando.yml, as well as a composer.json, and a .travis.yml.</p>",
+        "id": 217271191,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1605793864
+    },
+    {
+        "content": "<p>Hi, John Franklin. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 217271192,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1605793864
+    },
+    {
+        "content": "<p>I have the following alias in my <code>~/.gitconfig</code>: </p>\n<div class=\"codehilite\"><pre><span></span><code>[alias]\n    lg = log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit\n</code></pre></div>\n<p>and with that, a <code>git lg origin/1.x</code> will show what I'm talking about.</p>",
+        "id": 217271261,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1605793902
+    },
+    {
+        "content": "<p>Neither the commits nor the merges have issue numbers.  Was this intentional?</p>",
+        "id": 217271397,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1605793972
+    },
+    {
+        "content": "<p>Sorry <span class=\"user-mention\" data-user-id=\"344103\">@John Franklin</span> which commits are you referring to?</p>",
+        "id": 217288404,
+        "sender_full_name": "klonos",
+        "timestamp": 1605801099
+    },
+    {
+        "content": "<div class=\"codehilite\"><pre><span></span><code>*   0b0519200 - (HEAD -&gt; 1.x, origin/1.x) Merge branch &#39;1.x&#39; into 1.x (19 hours ago) &lt;Herb&gt;\n|\\\n| *   194aeb6da - Merge remote-tracking branch &#39;core/1.x&#39; into 1.x (6 months ago) &lt;Geoff St. Pierre&gt;\n| |\\\n| * \\   98fdb084b - Merge remote-tracking branch &#39;core/1.x&#39; into 1.x (6 months ago) &lt;Geoff St. Pierre&gt;\n| |\\ \\\n| * \\ \\   25ff548b2 - Merge remote-tracking branch &#39;core/1.x&#39; into 1.x (1 year, 3 months ago) &lt;Geoff St. Pierre&gt;\n| |\\ \\ \\\n| * | | | 6cbbd446a - Remove composer.lock, min stability, and fix typo. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | | 603b3c64d - Adding composer instruction to README.md. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | | 6454c9c78 - Validate the composer.json file. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | | 27e9c83e9 - Remove version string in favor of git tags. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | | 7fc7f6ef8 - Adding version info to composer.json. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | | 3a6f0daf1 - Update composer.json with installer paths. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | | d7e808809 - Adding .travis.yml config. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | | b6e80f1d0 - Adding composer.json. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | |   e72e34fbf - Merge remote-tracking branch &#39;core/1.x&#39; into 1.x (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| |\\ \\ \\ \\\n| * | | | | 1ecf914ac - Adding .lando.yml config file for dev convenience. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n| * | | | | 514e7bb9d - Ignore the vendor dependencies directory. (1 year, 5 months ago) &lt;Geoff St. Pierre&gt;\n* | | | | | 31b4aab28 - Harden file name munge. (20 hours ago) &lt;quicksketch&gt;\n* | | | | | cf5eefd3f - Issue #4758: 1.17.2 regression: Fieldset style renders incorrectly. (21 hours ago) &lt;Gregory Netsas&gt;\n</code></pre></div>",
+        "id": 217289421,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1605801498
+    },
+    {
+        "content": "<p>The bottom two are expected from the 1.17.3 release.  Everything else looks like a local development environment accidentally committed to the master project.</p>",
+        "id": 217296835,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1605804289
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"344103\">@John Franklin</span> damn, I wonder if it's the backdrop-composer project. That might be my mistake. I double checked my PR before merging but... I'll take a look</p>",
+        "id": 217304813,
+        "sender_full_name": "Herb",
+        "timestamp": 1605807706
+    },
+    {
+        "content": "<p>Okay, looks like I did add a commit. Not sure how that happened because I also updated the composer project and it also has the one from the main.</p>",
+        "id": 217321157,
+        "sender_full_name": "Herb",
+        "timestamp": 1605815311
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> need some advice on best way to fix. I'm guessing deleting the commit is not a good idea</p>",
+        "id": 217321239,
+        "sender_full_name": "Herb",
+        "timestamp": 1605815358
+    },
+    {
+        "content": "<p>What repo are we talking about? I'm confused...</p>",
+        "id": 217321304,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605815391
+    },
+    {
+        "content": "<p>backdrop/backdrop</p>",
+        "id": 217321412,
+        "sender_full_name": "Herb",
+        "timestamp": 1605815432
+    },
+    {
+        "content": "<p>OK, but how is that related to the Lando/Drush issue...?</p>",
+        "id": 217321588,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605815516
+    },
+    {
+        "content": "<p>I don't know but it's something we need to fix</p>",
+        "id": 217321671,
+        "sender_full_name": "Herb",
+        "timestamp": 1605815544
+    },
+    {
+        "content": "<p>Indeed. I'd wait for <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> to reply. He should be around in an hour.</p>",
+        "id": 217322027,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605815729
+    },
+    {
+        "content": "<p>Maybe <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> can bring this to Nate's attention in the meeting...?</p>",
+        "id": 217322437,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605815909
+    },
+    {
+        "content": "<p>I wonder if it happened when I was using GitHub's method of resolving a conflict in a pr? I should have done it from the command line</p>",
+        "id": 217322749,
+        "sender_full_name": "Herb",
+        "timestamp": 1605816058
+    },
+    {
+        "content": "<p>The accidental commit adds a .lando.yml file (among other things).  I couldn't find a general topic here, and didn't want to create a new one.</p>",
+        "id": 217325904,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1605817634
+    },
+    {
+        "content": "<p>Right, must be the lando file. I'm pretty sure it's coming from the backdrop-composer project. And happened when I was trying to resolve a conflict between the two projects using the github UI. Working theory</p>",
+        "id": 217326118,
+        "sender_full_name": "Herb",
+        "timestamp": 1605817759
+    },
+    {
+        "content": "<p>We are talking about a commit to core, right?</p>",
+        "id": 217326258,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1605817816
+    },
+    {
+        "content": "<p>Sounds reasonable.</p>",
+        "id": 217326259,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1605817816
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> , yes.  See the git history above.</p>",
+        "id": 217326287,
+        "sender_full_name": "John Franklin",
+        "timestamp": 1605817834
+    },
+    {
+        "content": "<p>I'm guessing because it's a shared repo that the best we can do is revert the commit.</p>",
+        "id": 217327081,
+        "sender_full_name": "Herb",
+        "timestamp": 1605818238
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> <span class=\"user-mention\" data-user-id=\"258586\">@quicksketch</span> Here's a PR to revert the merge: <a href=\"https://github.com/backdrop/backdrop/pull/3405/files\">https://github.com/backdrop/backdrop/pull/3405/files</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3405/files\" style=\"background-image: url(https://avatars2.githubusercontent.com/u/2385329?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3405/files\" title=\"Revert &quot;Merge branch '1.x' into 1.x&quot; by BWPanda · Pull Request #3405 · backdrop/backdrop\">Revert \"Merge branch '1.x' into 1.x\" by BWPanda · Pull Request #3405 · backdrop/backdrop</a></div><div class=\"message_embed_description\">This reverts commit 0b05192, reversing\nchanges made to 31b4aab.</div></div></div>",
+        "id": 217329714,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605819702
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> thanks. I was just in the middle of doing that too. I think we can merge yours.</p>",
+        "id": 217329887,
+        "sender_full_name": "Herb",
+        "timestamp": 1605819786
+    },
+    {
+        "content": "<p>Merge my unmerge of your merge you mean? <span aria-label=\"big smile\" class=\"emoji emoji-1f604\" role=\"img\" title=\"big smile\">:big_smile:</span></p>",
+        "id": 217330066,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1605819874
+    }
+]

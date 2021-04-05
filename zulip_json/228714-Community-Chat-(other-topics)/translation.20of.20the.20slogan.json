@@ -1,0 +1,482 @@
+[
+    {
+        "content": "<p>Hi guys, is it possible to translate the slogan? I searched in the forum and found nothing...</p>",
+        "id": 231538902,
+        "sender_full_name": "cptX",
+        "timestamp": 1616531496
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> short answer: yes.</p>",
+        "id": 231545310,
+        "sender_full_name": "Herb",
+        "timestamp": 1616534224
+    },
+    {
+        "content": "<p>The slogan gets stored in config files but you can use the interface translation to search for the slogan text and translate it</p>",
+        "id": 231545402,
+        "sender_full_name": "Herb",
+        "timestamp": 1616534268
+    },
+    {
+        "content": "<p>Let me know if it's not working. There's a recent bug fix for something related. I'm not sure if it is in the latest release</p>",
+        "id": 231545589,
+        "sender_full_name": "Herb",
+        "timestamp": 1616534346
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> we have an issue for this problem: <a href=\"https://github.com/backdrop/backdrop-issues/issues/4888\">https://github.com/backdrop/backdrop-issues/issues/4888</a></p>\n<p>The fix has already been merged, but not released yet. I suppose, your site is an upgrade from Drupal7?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4888\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4888\" title=\"Most _config_translatables missing in sites installed before May 2019 and all sites migrated from D7 · Issue #4888 · backdrop/backdrop-issues\">Most _config_translatables missing in sites installed before May 2019 and all sites migrated from D7 · Issue #4888 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When upgrading from Drupal 7, user.mail settings get converted to config in user_update_1005(), but no _config_translatables get added. Later on, in user_update_1017() mail t...</div></div></div>",
+        "id": 231606212,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616579192
+    },
+    {
+        "content": "<p>No I'm building it in Backdrop from the ground up. I'm using Backdrop 1.18.1 <br>\nSo what should I do to have this functionality? I'm planning to release my site the next weeks</p>",
+        "id": 231609864,
+        "sender_full_name": "cptX",
+        "timestamp": 1616580976
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/_w4GW-X3GUZhLrYthEzYW7QY/image.png\">image.png</a> <br>\nMerged 12 days ago, in 1.18? What does this mean? I'm using 1.18 already but installed it 2 months ago (I think)</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/_w4GW-X3GUZhLrYthEzYW7QY/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/_w4GW-X3GUZhLrYthEzYW7QY/image.png\"></a></div>",
+        "id": 231610580,
+        "sender_full_name": "cptX",
+        "timestamp": 1616581272
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> when checking issues in the Backdrop issue queue in GitHub, look in the right-hand sidebar for the issue metadata. If you see that the issue has a pull request, and that the PR has been merged, then there should also be a <code>status - fixed</code> label added. Then also look for which milestone will include that fix.</p>",
+        "id": 231610771,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581351
+    },
+    {
+        "content": "<p>Merged into 1.18.x means the 1.18 branch. So it'll be included in the next bug-fix release.</p>",
+        "id": 231610812,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616581380
+    },
+    {
+        "content": "<p>...for that specific issue, the milestone is 1.18.2, which means that the fix will be included in the next bug fix release of Backdrop.</p>",
+        "id": 231610830,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581388
+    },
+    {
+        "content": "<p>...if you need to have the fix now, then download the latest git code from <a href=\"https://github.com/backdrop/backdrop\">https://github.com/backdrop/backdrop</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 231610896,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581425
+    },
+    {
+        "content": "<p>...which would be <a href=\"https://github.com/backdrop/backdrop/archive/refs/heads/1.x.zip\">https://github.com/backdrop/backdrop/archive/refs/heads/1.x.zip</a></p>",
+        "id": 231610929,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581442
+    },
+    {
+        "content": "<p>...once that .zip is downloaded, you will most likely only need to extract the <code>core</code> folder, and replace that with the version of the <code>core</code> folder on your server.</p>",
+        "id": 231611039,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581495
+    },
+    {
+        "content": "<p>Or click the link in the screenshot you posted, then add <code>.patch</code> to the end of the URL to generate a patch file you can apply to your existing site.</p>",
+        "id": 231611048,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616581497
+    },
+    {
+        "content": "<p>^^ that too <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 231611080,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581512
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I see...</p>",
+        "id": 231611090,
+        "sender_full_name": "cptX",
+        "timestamp": 1616581516
+    },
+    {
+        "content": "<p>And when is the 1.18.2 going to be available?</p>",
+        "id": 231611143,
+        "sender_full_name": "cptX",
+        "timestamp": 1616581548
+    },
+    {
+        "content": "<p>While major releases have a set date (1.19.0 for example will be released on May 15), bug fix releases are being made when there are enough bug fixes included. If there is a critical issue fixed, then that usually expedites the release.</p>",
+        "id": 231611312,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581621
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/dbzN-AyxLsD3MSm-VtZrgaqU/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/dbzN-AyxLsD3MSm-VtZrgaqU/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/dbzN-AyxLsD3MSm-VtZrgaqU/image.png\"></a></div>",
+        "id": 231611394,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581677
+    },
+    {
+        "content": "<p>^^ click on the \"1.18.2\" milestone there (it is a link)</p>",
+        "id": 231611462,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581697
+    },
+    {
+        "content": "<p>...you will get a list of all merged fixes for that milestone + all fixes \"slated\" for the next milestone.</p>",
+        "id": 231611515,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581734
+    },
+    {
+        "content": "<p>So just to understand, the 1.19.0 release will not include this specific fix?</p>",
+        "id": 231611518,
+        "sender_full_name": "cptX",
+        "timestamp": 1616581735
+    },
+    {
+        "content": "<p>It will <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 231611529,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581743
+    },
+    {
+        "content": "<p>Ah ok!!</p>",
+        "id": 231611547,
+        "sender_full_name": "cptX",
+        "timestamp": 1616581751
+    },
+    {
+        "content": "<p>...major releases always include the fixes from bug fix releases <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 231611576,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581772
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/Gw6lnahxZ-X8q-MrYzPUMKBx/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/Gw6lnahxZ-X8q-MrYzPUMKBx/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/Gw6lnahxZ-X8q-MrYzPUMKBx/image.png\"></a></div>",
+        "id": 231611591,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581782
+    },
+    {
+        "content": "<p>But again just to understand, the 1.18.2 is at 21% level of competement. How is it possible 1.19.0 to include all of the 1.18.2 fixes?</p>",
+        "id": 231611605,
+        "sender_full_name": "cptX",
+        "timestamp": 1616581791
+    },
+    {
+        "content": "<p>see that ^^ ...major releases (like 1.19.0) are being \"cut\" from the 1.x branch</p>",
+        "id": 231611677,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581811
+    },
+    {
+        "content": "<p>OK, I see</p>",
+        "id": 231611698,
+        "sender_full_name": "cptX",
+        "timestamp": 1616581824
+    },
+    {
+        "content": "<p>...see how Nate merged the fix to both 1.x and 1.18.x branches?</p>",
+        "id": 231611761,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581847
+    },
+    {
+        "content": "<p>Once a bug fix is merged, it'll be included in all future Backdrop releases. But when a new feature is merged, it'll only be included in the next minor version. There may be bug fix releases that come out that don't include it.</p>",
+        "id": 231611771,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616581852
+    },
+    {
+        "content": "<p>Yes, it's pretty clear now. Glad that this bug is fixed</p>",
+        "id": 231611831,
+        "sender_full_name": "cptX",
+        "timestamp": 1616581886
+    },
+    {
+        "content": "<p>...this happens for all \"bug\" and \"task\" issues - whereas \"feature requests\" are only merged into 1.x (so only included in major releases)</p>",
+        "id": 231611859,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581903
+    },
+    {
+        "content": "<p>^ <em>minor</em></p>",
+        "id": 231611971,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616581939
+    },
+    {
+        "content": "<p>...by the way, I shouldn't be calling them \"major\" releases - they are \"minor\" releases ...the next major</p>",
+        "id": 231611975,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581942
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> I was just typing that <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 231611995,
+        "sender_full_name": "klonos",
+        "timestamp": 1616581955
+    },
+    {
+        "content": "<p>...then next major will be Backdrop 2.0.0, which would be a new 2.x branch ...not until many years from now. <span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> see <a href=\"https://backdropcms.org/roadmap\">https://backdropcms.org/roadmap</a></p>",
+        "id": 231612088,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582005
+    },
+    {
+        "content": "<blockquote>\n<p>Backdrop 2.0 will NOT be released before January 15th, 2024.</p>\n</blockquote>",
+        "id": 231612125,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582022
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>  so this should be the patch? <a href=\"https://patch-diff.githubusercontent.com/raw/backdrop/backdrop/pull/3504.patch\">https://patch-diff.githubusercontent.com/raw/backdrop/backdrop/pull/3504.patch</a></p>",
+        "id": 231612224,
+        "sender_full_name": "cptX",
+        "timestamp": 1616582057
+    },
+    {
+        "content": "<p>Yep</p>",
+        "id": 231612343,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616582109
+    },
+    {
+        "content": "<p>And upgrading to Backdrop 2.0 will be straightforward or we will end with a dead updated site like drupal?</p>",
+        "id": 231612394,
+        "sender_full_name": "cptX",
+        "timestamp": 1616582137
+    },
+    {
+        "content": "<p>Either <code>git apply 3504.patch</code> or <code>patch -p1 &lt; 3504.patch</code></p>",
+        "id": 231612415,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616582150
+    },
+    {
+        "content": "<p>Also <span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> do note that not all open issues that are \"slated\" for the 1.18.2 milestone need to be fixed. ...when we decide that we need to release 1.18.2, we'll include all merged fixes, and then move any open issues to the next bug fix milestone 1.18.3</p>",
+        "id": 231612424,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582156
+    },
+    {
+        "content": "<p>Re Backdrop 2.0, there may be some breaking changes, but see this:</p>\n<blockquote>\n<p>Backdrop version 1 will continue to be supported until Backdrop version 3 is released.</p>\n</blockquote>",
+        "id": 231612645,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582257
+    },
+    {
+        "content": "<p>We don't plan to include \"major\" changes in our architecture, like what happened with D8 (you know, switching to composer/symfony etc.)</p>",
+        "id": 231612802,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582354
+    },
+    {
+        "content": "<p>...see <a href=\"https://backdropcms.org/philosophy\">https://backdropcms.org/philosophy</a> and note our <code>#1</code> principle:</p>\n<blockquote>\n<p>Easier updates: Backwards compatibility is important.</p>\n</blockquote>",
+        "id": 231612916,
+        "sender_full_name": "klonos",
+        "timestamp": 1616582404
+    },
+    {
+        "content": "<p>Yes but in order to switch to BD 3 you need to first convert to BD 2. So I'm not sure if it will possible to upgrade to BD 3 directly. Anyway I thought Backdrop's strategy is to have future compatibility so I hope transition to BD 2 will not be so hard.</p>",
+        "id": 231612968,
+        "sender_full_name": "cptX",
+        "timestamp": 1616582433
+    },
+    {
+        "content": "<p>tried to apply the patch. Received the following warning...<br>\nwarning: core/modules/system/system.install has type 100755, expected 100644<br>\nwarning: core/modules/user/user.install has type 100755, expected 100644<br>\nwarning: core/modules/system/system.install has type 100755, expected 100644<br>\nwarning: core/modules/user/user.install has type 100755, expected 100644<br>\nwarning: core/modules/system/system.install has type 100755, expected 100644<br>\nwarning: core/modules/user/user.install has type 100755, expected 100644</p>\n<p>what do they mean?</p>",
+        "id": 231614202,
+        "sender_full_name": "cptX",
+        "timestamp": 1616583082
+    },
+    {
+        "content": "<p>I believe that these are safe to ignore ...can you please manually check if the patch changes have been applied to a couple of these files? If so, then the must have been applied to the rest.</p>",
+        "id": 231614410,
+        "sender_full_name": "klonos",
+        "timestamp": 1616583212
+    },
+    {
+        "content": "<p>Just warning that the file permissions are different than expected. Should be fine though.</p>",
+        "id": 231614508,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616583245
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/gkRLvqFQXIBNzn1THD1q_ODj/image.png\">image.png</a> <br>\nafter applying the patch got this. Is this normal?</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/gkRLvqFQXIBNzn1THD1q_ODj/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/gkRLvqFQXIBNzn1THD1q_ODj/image.png\"></a></div>",
+        "id": 231615126,
+        "sender_full_name": "cptX",
+        "timestamp": 1616583597
+    },
+    {
+        "content": "<p>I want to have this patch now but when I update to 1.19 I don't want to break something</p>",
+        "id": 231615362,
+        "sender_full_name": "cptX",
+        "timestamp": 1616583701
+    },
+    {
+        "content": "<p>Should I run the DB update or not?</p>",
+        "id": 231615431,
+        "sender_full_name": "cptX",
+        "timestamp": 1616583723
+    },
+    {
+        "content": "<p>Yes, you need to run db updates when updating core <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 231616005,
+        "sender_full_name": "klonos",
+        "timestamp": 1616583966
+    },
+    {
+        "content": "<p>...when you update to 1.19.0, there may be more updates to run then.</p>",
+        "id": 231616083,
+        "sender_full_name": "klonos",
+        "timestamp": 1616584010
+    },
+    {
+        "content": "<p>...db updates you run now will not need to be executed after upgrading to 1.19.0</p>",
+        "id": 231616129,
+        "sender_full_name": "klonos",
+        "timestamp": 1616584036
+    },
+    {
+        "content": "<p>Yes I know that sometimes a DB update is required but I was surprised how the system detected this by only applying a patch</p>",
+        "id": 231616304,
+        "sender_full_name": "cptX",
+        "timestamp": 1616584118
+    },
+    {
+        "content": "<p>If you care to understand a bit more, db updates are required each time that an \"update hook\" is included in the code changes. In your case, it was this one: <a href=\"https://github.com/backdrop/backdrop/pull/3504/files#diff-71ecd72989e99f3bd8c92afc37144a39d6c51af1463df2b5283548dc06467830R3154\">https://github.com/backdrop/backdrop/pull/3504/files#diff-71ecd72989e99f3bd8c92afc37144a39d6c51af1463df2b5283548dc06467830R3154</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3504/files#diff-71ecd72989e99f3bd8c92afc37144a39d6c51af1463df2b5283548dc06467830R3154\" style=\"background-image: url(https://avatars.githubusercontent.com/u/842066?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3504/files#diff-71ecd72989e99f3bd8c92afc37144a39d6c51af1463df2b5283548dc06467830R3154\" title=\"Issue #4888: add _config_translatables if incomplete by indigoxela · Pull Request #3504 · backdrop/backdrop\">Issue #4888: add _config_translatables if incomplete by indigoxela · Pull Request #3504 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4888\nAdd missing translatables in an update hook.</div></div></div>",
+        "id": 231616334,
+        "sender_full_name": "klonos",
+        "timestamp": 1616584131
+    },
+    {
+        "content": "<p>...so the <code>system_update_1074()</code> function <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 231616375,
+        "sender_full_name": "klonos",
+        "timestamp": 1616584158
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> Applying the patch is really no different than updating to the next version of Backdrop, it's just that usually new versions of Backdrop include more than just one fix <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 231616567,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1616584245
+    },
+    {
+        "content": "<p>So all functions that start with \"system_update\" trigger database updates too?</p>",
+        "id": 231617020,
+        "sender_full_name": "cptX",
+        "timestamp": 1616584531
+    },
+    {
+        "content": "<p>Actually any function that is named <code>MODULENAME_update_xxxx</code></p>",
+        "id": 231617056,
+        "sender_full_name": "klonos",
+        "timestamp": 1616584558
+    },
+    {
+        "content": "<p>I see, thank you all for your time and willingness to explain! I'm learning something from you everyday!</p>",
+        "id": 231617160,
+        "sender_full_name": "cptX",
+        "timestamp": 1616584598
+    },
+    {
+        "content": "<p>...these are called \"hooks\" in Drupal nerd lingo <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...so they may be referred to as <code>HOOK_update</code></p>",
+        "id": 231617168,
+        "sender_full_name": "klonos",
+        "timestamp": 1616584604
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"390119\">@cptX</span> it's a trap! ...we are slowly teaching you things, so that you eventually get \"hooked\", and start helping us fix issues <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 231617237,
+        "sender_full_name": "klonos",
+        "timestamp": 1616584652
+    },
+    {
+        "content": "<p>I know and I'm not defending myself <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 231618427,
+        "sender_full_name": "cptX",
+        "timestamp": 1616585281
+    },
+    {
+        "content": "<p>So I can verify that the patch is working for the site slogan!</p>",
+        "id": 231618740,
+        "sender_full_name": "cptX",
+        "timestamp": 1616585483
+    },
+    {
+        "content": "<p>Seems that we just gained another person in our community that is working with multilingual sites and translations <span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span> <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> ...your help in such matters is greatly appreciated <span class=\"user-mention\" data-user-id=\"390119\">@cptX</span></p>",
+        "id": 231619000,
+        "sender_full_name": "klonos",
+        "timestamp": 1616585650
+    },
+    {
+        "content": "<p>This patch should only be necessary when upgrading a Drupal 7 site. Not sure why it fixes your issue</p>",
+        "id": 231633312,
+        "sender_full_name": "Herb",
+        "timestamp": 1616592606
+    },
+    {
+        "content": "<p>Before applying the patch I couldn't find the slogan string in the translation interface. After applying the patch the string was visible and I manage to translate the slogan successfully</p>",
+        "id": 231636096,
+        "sender_full_name": "cptX",
+        "timestamp": 1616593709
+    },
+    {
+        "content": "<p>I learned stuff from this thread, too! It would be great to have all the explanation above in a readily findable place (maybe a forum post?).</p>",
+        "id": 231647123,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1616597540
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"335929\">@bugfolder</span> are you referring to the trick with the .patch suffix in the GitHub pull request + the command to apply the patch, the update hooks, or the GitHub issue metadata and how fixes get into minor/bug releases?</p>",
+        "id": 231676388,
+        "sender_full_name": "klonos",
+        "timestamp": 1616607342
+    },
+    {
+        "content": "<p>...or all of the above? <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 231676404,
+        "sender_full_name": "klonos",
+        "timestamp": 1616607352
+    },
+    {
+        "content": "<p>All of the above!</p>",
+        "id": 231676469,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1616607364
+    },
+    {
+        "content": "<p>It'd be multiple blog posts then <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...the update hooks should already be documented in the api/doco site.</p>",
+        "id": 231676605,
+        "sender_full_name": "klonos",
+        "timestamp": 1616607411
+    },
+    {
+        "content": "<p>\"doco\" = Aussie shortened version of \"documentation\"</p>",
+        "id": 231676662,
+        "sender_full_name": "klonos",
+        "timestamp": 1616607433
+    },
+    {
+        "content": "<p>I guess I knew about the update hooks already, but the .patch tric, and particularly the Github metadata I overlooked the significance of.</p>",
+        "id": 231676733,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1616607458
+    },
+    {
+        "content": "<p>There's still the meta issue of \"how do people find what they need to know but don't realize they need to know it?\"</p>",
+        "id": 231677084,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1616607565
+    },
+    {
+        "content": "<p>Yeah, another helpful GitHub trick is that if you add a comment in a PR with the keyword \"Fixes\" and then followed by the URL to the issue the PR fixes, then the PR and the issue are \"linked\" together:</p>\n<ul>\n<li>a useful link is added to the issue, linking to the PR</li>\n<li>when the PR is merged, the respective issue is automatically closed, with an automated comment</li>\n</ul>",
+        "id": 231677175,
+        "sender_full_name": "klonos",
+        "timestamp": 1616607598
+    },
+    {
+        "content": "<p>+1 for not realizing .patch files were available. (My fault for not looking into it closer). Coming from Drupal and being used to applying a patch file to an existing codebase is a lot easier right now than trying to figure out git (which I still haven't taken the time to do).</p>",
+        "id": 231726645,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1616629143
+    }
+]

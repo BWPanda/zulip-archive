@@ -1,0 +1,94 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html">Pageless nodes vs fieldable blocks</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="214153847"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214153847" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214153847">(Oct 22 2020 at 07:50)</a>:</h4>
+<p>In the blocks meta (<a href="https://github.com/backdrop/backdrop-issues/issues/1427">https://github.com/backdrop/backdrop-issues/issues/1427</a>) we have <a href="https://github.com/backdrop/backdrop-issues/issues/100">https://github.com/backdrop/backdrop-issues/issues/100</a> listed as what seems to have initially been a task/request for fieldable blocks, but that evolved into the "rabbit hole" feature for content types. ...I'm trying to wrap my head around use cases for fieldable blocks in D8/D9, and if the respective feature we have implemented in Backdrop core is enough to cover those use cases.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1427" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1427" title="[META] Blocks Blocks Blocks · Issue #1427 · backdrop/backdrop-issues">[META] Blocks Blocks Blocks · Issue #1427 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Meta issue to help keep track of all the block related issues and initiatives, including converting the existing custom blocks into fieldable entities and creating a new type of custom text block t...</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/100" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/100" title="Add a system of page-less nodes · Issue #100 · backdrop/backdrop-issues">Add a system of page-less nodes · Issue #100 · backdrop/backdrop-issues</a></div><div class="message_embed_description">Since we will soon have relegated blocks to being an admin-only text-only layout element that&#39;s saved into config, we are going to need a content-based alternative that is a fieldable entity! B...</div></div></div>
+
+
+
+<a name="214153867"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214153867" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214153867">(Oct 22 2020 at 07:51)</a>:</h4>
+<p>...in other words, the question is this:</p>
+
+
+
+<a name="214153993"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214153993" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214153993">(Oct 22 2020 at 07:52)</a>:</h4>
+<blockquote>
+<p>D8+ has fieldable blocks, whereas Backdrop doesn't. Which things can people achieve with fieldable blocks that are not possible in Backdrop?</p>
+</blockquote>
+
+
+
+<a name="214154134"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214154134" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214154134">(Oct 22 2020 at 07:53)</a>:</h4>
+<p>...I'm aware that we have the "Existing content" block type, and also able to place individual fields as blocks if the context specified for the layout is set to <code>node/%</code></p>
+
+
+
+<a name="214154227"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214154227" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214154227">(Oct 22 2020 at 07:54)</a>:</h4>
+<p>...what is it that we are missing w/o fieldable blocks in Backdrop?</p>
+
+
+
+<a name="214154300"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214154300" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214154300">(Oct 22 2020 at 07:54)</a>:</h4>
+<p>...you know what? Please hold replies to the above ^^ ...I'll create a forum topic for that.</p>
+
+
+
+<a name="214154640"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214154640" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214154640">(Oct 22 2020 at 07:58)</a>:</h4>
+<p>...here you go: <a href="https://forum.backdropcms.org/forum/what-can-people-do-drupal-89-fieldable-blocks-which-not-possible-backdrop">https://forum.backdropcms.org/forum/what-can-people-do-drupal-89-fieldable-blocks-which-not-possible-backdrop</a></p>
+
+
+
+<a name="214156319"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214156319" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214156319">(Oct 22 2020 at 08:16)</a>:</h4>
+<blockquote>
+<p>Which things can people achieve with fieldable blocks that are not possible in Backdrop?</p>
+</blockquote>
+<p>I'm not missing anything. <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span> </p>
+<p>It's actually easier to use a content type, hide the path for visitors and include the node(s) in a layout. Easier for users and easier for admins. And if only some parts of a node are needed, a custom layout context will help.</p>
+
+
+
+<a name="214156444"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214156444" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214156444">(Oct 22 2020 at 08:18)</a>:</h4>
+<p><span class="user-mention" data-user-id="256738">@indigoxela</span> thanks for the very prompt response <span aria-label="+1" class="emoji emoji-1f44d" role="img" title="+1">:+1:</span> ...if you have a forum account, can you please add the above as a response to the forum topic (it will help people reading that in the future, whereas chat messages are lost in time)</p>
+
+
+
+<a name="214156889"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214156889" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214156889">(Oct 22 2020 at 08:24)</a>:</h4>
+<p>So I've been watching <a href="https://drupalize.me/videos/introduction-context-and-bean?p=1800">https://drupalize.me/videos/introduction-context-and-bean?p=1800</a> and it mentions that with the Context module in D7 you were able to hide entire regions ...we don't have that ability with layout regions in Backdrop, but we have <a href="https://github.com/backdrop/backdrop-issues/issues/1691">https://github.com/backdrop/backdrop-issues/issues/1691</a> which could solve the same use case I think.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://drupalize.me/videos/introduction-context-and-bean?p=1800" style="background-image: url(https://drupalize.me/sites/default/files/videoasset_screenshots/context_bean_-_lesson_1.png)"></a><div class="data-container"><div class="message_embed_title"><a href="https://drupalize.me/videos/introduction-context-and-bean?p=1800" title="Introduction to Context and Bean">Introduction to Context and Bean</a></div><div class="message_embed_description">As Drupal site-builders and developers we are all very aware that Drupal 7 is not the most useful product out of the box. We constantly add modules and custom code to make Drupal do what we need. There is nothing wrong with this, in fact it is what attracts people to using Drupal in the first place.  The block system that comes with core is what we get after installation as our real only means to laying "stuff" out for our website. People have done things like turning nodes into blocks, or making every block on our a site a view.</div></div></div><div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/1691" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/1691" title="[UX] Layout UI: Collapsible block groups. · Issue #1691 · backdrop/backdrop-issues">[UX] Layout UI: Collapsible block groups. · Issue #1691 · backdrop/backdrop-issues</a></div><div class="message_embed_description">I&#39;ve been reading the various issues people have recently opened about problems they are facing while trying to work with translation of various things in order to build multilingual sites and ...</div></div></div>
+
+
+
+<a name="214156958"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Pageless%20nodes%20vs%20fieldable%20blocks/near/214156958" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Pageless.20nodes.20vs.20fieldable.20blocks.html#214156958">(Oct 22 2020 at 08:25)</a>:</h4>
+<p>...the video also mentions that besides visibility conditions, there were "actions" that could for example conditionally "move" (render) the block to a different region. Do people use that or find that a potentially useful thing?</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

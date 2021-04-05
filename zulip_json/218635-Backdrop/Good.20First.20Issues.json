@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> - You removed this \"Good First Issue\" tag from the \"Add most commonly used date formats\" issue. I'm just wondering if that was because it is a technically difficult issue or just because of the ongoing discussion?<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4645\">https://github.com/backdrop/backdrop-issues/issues/4645</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4645\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4645\" title=\"Add most commonly used date formats as default options to core · Issue #4645 · backdrop/backdrop-issues\">Add most commonly used date formats as default options to core · Issue #4645 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need As highlighted in #989, we don&#39;t have any OOTB date formats that start with the day as is frequently used in European countries. Available formats seem to be heavily ori...</div></div></div>",
+        "id": 211454248,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601272447
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256570\">@StPaulTim</span> Because <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> said:</p>\n<blockquote>\n<p>PS: I think that we should remove the \"good first issue\" label from this issue. We shouldn't rush any decision or solution in.</p>\n</blockquote>\n<p>Someone wanting something easy to work on shouldn't take on this issue since we need a consensus first on <em>what</em> we actually want to do.</p>",
+        "id": 211454278,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1601272558
+    },
+    {
+        "content": "<p>OK, thanks for clarification.</p>\n<p>I didn't see that comment. I'm asking, because I've been adding the \"Good First Issue\" tag to some other issues that are similarly undecided, because I think it's helpful to have a PR to talk about.</p>",
+        "id": 211454421,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601272776
+    },
+    {
+        "content": "<p>I'm only raising this question about \"Good First Issues,\" because I'm specifically trying to triage them and find more of them. Having a sense of what others consider a good \"Good First Issue\" is helpful - and what isn't. I've given some issues that tag with a little hesitation, but tried to explain why and prepare the contributor.</p>",
+        "id": 211454948,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601273599
+    },
+    {
+        "content": "<p>We may have 15 or more new folks in the issue queue looking for good first issues (on Thursday). I want to make sure we have a good selection of issues to choose from.</p>\n<p>In some cases, I might add that tag from a misunderstanding of how difficult the issue will be. Be sure to let me know if you see those.</p>",
+        "id": 211455014,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601273688
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> - You are correct. Anything to do with tests is not likely to be a \"Good First Issue.\" Sometimes an issue can be broken into beginner and advanced tasks, but I take your point about the text format issues being problematic. I removed the \"Good First Issue\" tag from the second one. Thanks.</p>",
+        "id": 211464964,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601282196
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256627\">oadaeh (Jason Flatt)</span> <a href=\"#narrow/stream/218635-Backdrop/topic/OSD.20-.20Code.20Reviews/near/211493599\">said</a>:</p>\n<blockquote>\n<p>I'm wondering if the mentors are going to take care of all the Good First Issues before Thursday, and then we'll have nothing for the participants.</p>\n</blockquote>\n<p>That might be considered a good problem to have. I'm not too worried about it as there are more potential \"Good First Issues\" in the queue, we just need to find them.</p>",
+        "id": 211529703,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601317276
+    },
+    {
+        "content": "<blockquote>\n<p>are -ops and -contrib fair game too?</p>\n</blockquote>\n<p>Contrib could be fair game, but I think it would be complicated to manage and point people towards on their first day. If we have some known issues in modules with active maintainers, I think we could point some people towards contrib. But, that is not my first choice.</p>",
+        "id": 211529751,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601317299
+    },
+    {
+        "content": "<blockquote>\n<p>I'm confused... You keep mentioning 'mentors' making PRs, etc., but aren't you, Greg, Jen, etc. the mentors and the people coming to help from the conference are mentorees?</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> answered this. But, further clarification. The actual sprint day is Thursday, but the mentors started early to learn about the projects and get comfortable with the issue queue. Just to repeat, the are estimating about 15 participants on Thursday.</p>",
+        "id": 211530747,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601317775
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - Could cross porting views updates be a good first issue. Maybe if we had a small group of 2-3 people working on this together?</p>\n<p>We could have a zoom room open with a breakout room for this task - so 2-3 participants could collaborate with a mentor (hopefully you, ready to answer questions in the main room)?</p>\n<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/3723\">https://github.com/backdrop/backdrop-issues/issues/3723</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3723\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3723\" title=\"crossport views commits from 7.x-3.16 · Issue #3723 · backdrop/backdrop-issues\">crossport views commits from 7.x-3.16 · Issue #3723 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">| #xx | b5a14eab | Issue #1090432 by fubhy, Sam152, derhasi, rudiedirkx, othermachines, IT-Cru: Allow additional field-to-field conditions with the default views_join handler | #xx | 7c42020b | Iss...</div></div></div>",
+        "id": 211572138,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601343786
+    },
+    {
+        "content": "<p>I think that depends on the port. Views is not for the faint of heart, and there have been some innocent updates that ended up waking the Kraken.</p>",
+        "id": 211574616,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1601346830
+    },
+    {
+        "content": "<p>Agreed. There are a lot of D7 modules we need to port issues for though. Others might be more straightforward to test: <a href=\"https://github.com/backdrop/backdrop-issues/projects/15#card-26327514\">https://github.com/backdrop/backdrop-issues/projects/15#card-26327514</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/projects/15#card-26327514\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/projects/15#card-26327514\" title=\"backdrop/backdrop-issues\">backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Issue tracker for Backdrop core. Contribute to backdrop/backdrop-issues development by creating an account on GitHub.</div></div></div>",
+        "id": 211575071,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1601347386
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"263951\">@jenlampton</span> - If you have time, I recommend that you pick one (set of issues) out. You have a much better sense of this. I'm working on other things.</p>",
+        "id": 211575282,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1601347640
+    }
+]

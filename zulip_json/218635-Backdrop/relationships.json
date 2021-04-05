@@ -1,0 +1,62 @@
+[
+    {
+        "content": "<p>I started this many moons ago: <a href=\"https://github.com/backdrop/backdrop/pull/1733/\" title=\"https://github.com/backdrop/backdrop/pull/1733/\">https://github.com/backdrop/backdrop/pull/1733/</a>. But its completely disappeared from the radar, which leads me to think its not that desired. What you think? Anyone ever thought would be nice to have in the last 5 years?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/1733/\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/1733/\" title=\"Relationships by docwilmot · Pull Request #1733 · backdrop/backdrop\">Relationships by docwilmot · Pull Request #1733 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#2134\nAn initial idea for starters\n\ncreates a Relationship Class which can be extended by Relationship plugins.\nonly a user_from_node plugin is included so far\nall pos...</div></div></div>",
+        "id": 192698442,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1585847887
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> - I know that we live in a time of social distancing, but I'm not yet ready to give up on relationships entirely. </p>\n<p>;-)</p>",
+        "id": 192699578,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1585848458
+    },
+    {
+        "content": "<p>I would love to have this. I have done that with panels on D7 sites in the past, and I was never quite sure how to do it in Backdrop</p>",
+        "id": 192699606,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1585848468
+    },
+    {
+        "content": "<p>Oh, there's an issue....</p>",
+        "id": 192699629,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1585848480
+    },
+    {
+        "content": "<p>If it worked with fields from <a href=\"https://github.com/backdrop-contrib/reference\" title=\"https://github.com/backdrop-contrib/reference\">https://github.com/backdrop-contrib/reference</a> to allow nested relationships, that would be even better.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/reference\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/reference\" title=\"backdrop-contrib/reference\">backdrop-contrib/reference</a></div><div class=\"message_embed_description\">Defines a field to allow Backdrop entities to reference each other. - backdrop-contrib/reference</div></div></div>",
+        "id": 192699810,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1585848562
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256570\">StPaulTim</span> <a href=\"#narrow/stream/218635-Backdrop/topic/relationships/near/192699578\" title=\"#narrow/stream/218635-Backdrop/topic/relationships/near/192699578\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> - I know that we live in a time of social distancing, but I'm not yet ready to give up on relationships entirely. </p>\n<p>;-)</p>\n</blockquote>\n<p>Haha, best Backdrop pun of the year!</p>",
+        "id": 192700039,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1585848660
+    },
+    {
+        "content": "<p>On a more serious note... </p>\n<p>I think that field blocks are one of the most powerful features in Backdrop that most casual users are not aware of. This would make them even more powerful. I don't think that this option has even occurred to me before. I suspect that if I were aware of it as a possibility, I would use it.</p>",
+        "id": 192700477,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1585848900
+    },
+    {
+        "content": "<p>I feel like I should know what field blocks are but I don't.</p>",
+        "id": 192909916,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1586010209
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256666\">@Justin Keiser</span> create a new layout -&gt; set its context to <code>node/%</code> -&gt; head to the block management of that layout -&gt; click \"Add block\" on any region -&gt; search for blocks with field names, like \"body\" or \"image\" ...this means that you can render nodes of type \"Post\" and have the body in the main content region, while rendering the image in the sidebar <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> ...let your creativity run wild!</p>",
+        "id": 192939309,
+        "sender_full_name": "klonos",
+        "timestamp": 1586057331
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/3530\" title=\"https://github.com/backdrop/backdrop-issues/issues/3530\">https://github.com/backdrop/backdrop-issues/issues/3530</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3530\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3530\" title=\"Ship core with a layout that uses node/% as context · Issue #3530 · backdrop/backdrop-issues\">Ship core with a layout that uses node/% as context · Issue #3530 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">#2306 started out with this as one of the proposed solutions, but has changed direction over time... None of the layouts that we ship with core has node/% as path, thus people trying to add a field...</div></div></div>",
+        "id": 192939375,
+        "sender_full_name": "klonos",
+        "timestamp": 1586057457
+    }
+]

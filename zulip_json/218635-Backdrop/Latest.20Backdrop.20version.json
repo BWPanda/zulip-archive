@@ -1,0 +1,68 @@
+[
+    {
+        "content": "<p>Hi there,</p>\n<p>Is there any particular reason why 1.15.3 is still marked as being the latest release on GitHub?<br>\n<a href=\"https://github.com/backdrop/backdrop/releases/latest\">https://github.com/backdrop/backdrop/releases/latest</a></p>\n<p>I was using the above URL for getting the latest version to check all my Backdrop sites up against if they where up-to-date or not.<br>\nBut since 1.16.1 i couldn't use that anymore.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/releases/latest\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/releases/latest\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 199706028,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591247577
+    },
+    {
+        "content": "<p>Hello <span class=\"user-mention\" data-user-id=\"307074\">@Søren Bonde</span> <span aria-label=\"wave\" class=\"emoji emoji-1f44b\" role=\"img\" title=\"wave\">:wave:</span> ...I believe that it is simply a matter of order (time-wise) of when the release tags have happened. Although <a href=\"https://github.com/backdrop/backdrop/tags\">https://github.com/backdrop/backdrop/tags</a> seems to be sorted by tag number, if you hover your mouse over the time of the tag creation, you will see that 1.15.3 was created on May 20, at 22:21 EEST, whereas 1.16.1 has been created at 22:18. ...I guess we need to make this part of our release process, and make sure that we cut the tag for the previous minor version before the next minor. ( cc <span class=\"user-mention\" data-user-id=\"258586\">@Nate Lampton</span> )</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/tags\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/tags\" title=\"backdrop/backdrop\">backdrop/backdrop</a></div><div class=\"message_embed_description\">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>",
+        "id": 199721258,
+        "sender_full_name": "klonos",
+        "timestamp": 1591261639
+    },
+    {
+        "content": "<p>... <a href=\"https://stackoverflow.com/questions/22822586/swap-latest-release-on-github\">https://stackoverflow.com/questions/22822586/swap-latest-release-on-github</a> has a comment that describes a way to \"fix\" this, but it would involve deleting the 1.16.1 tag, and then re-creating it with a fake date (which makes me uneasy).</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://stackoverflow.com/questions/22822586/swap-latest-release-on-github\" style=\"background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://stackoverflow.com/questions/22822586/swap-latest-release-on-github\" title=\"Swap &quot;Latest release&quot; on github\">Swap \"Latest release\" on github</a></div><div class=\"message_embed_description\">I have a repository on a github.\n\nHere is the graph:\r\nHere is my action sequence:\r\nMake 5 commits and push them\nAdd a tag v0.2.0 (git tag -a v0.2.0 -m \"release 0.2.0\")\nPush the tag (git push --tags </div></div></div>",
+        "id": 199721506,
+        "sender_full_name": "klonos",
+        "timestamp": 1591261814
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> OK, thanks for your reply. :-)<br>\nDidn't notice the creation time. Makes sense then. :-)</p>",
+        "id": 199721944,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591262140
+    },
+    {
+        "content": "<p>I don't think that this has ever happened to us before <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...guess we'll be more careful next time.</p>",
+        "id": 199722028,
+        "sender_full_name": "klonos",
+        "timestamp": 1591262182
+    },
+    {
+        "content": "<p>Hehe, there's a first time for everything. ;-)<br>\nNo problem, thanks for clearing it up. :-)</p>",
+        "id": 199722100,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591262235
+    },
+    {
+        "content": "<p>Yup. ...anyway, I think that we have some bug fixes lined up for a 1.16.2 release, so this issue will be short-lived.</p>",
+        "id": 199722184,
+        "sender_full_name": "klonos",
+        "timestamp": 1591262286
+    },
+    {
+        "content": "<p>Sounds good! :-)<br>\nWill keep an eye on the next release and update my URL to check for latest release accordingly.</p>",
+        "id": 199722403,
+        "sender_full_name": "Søren Bonde",
+        "timestamp": 1591262449
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256729\">klonos</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Latest.20Backdrop.20version/near/199722028\">said</a>:</p>\n<blockquote>\n<p>I don't think that this has ever happened to us before <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...guess we'll be more careful next time.</p>\n</blockquote>\n<p>It happens to us occasionally on sec releases; <code>drush</code> makes use of that latest release URL too and the <code>drush</code> users notice it</p>",
+        "id": 199738710,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1591273626
+    },
+    {
+        "content": "<p>I guess we may need to create the backport release first</p>",
+        "id": 199783417,
+        "sender_full_name": "Herb",
+        "timestamp": 1591292511
+    },
+    {
+        "content": "<p>not sure if just cutting the tag first and pushing up to GH is sufficient or not</p>",
+        "id": 199784084,
+        "sender_full_name": "Geoff St. Pierre (serundeputy)",
+        "timestamp": 1591292810
+    }
+]

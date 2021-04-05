@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"268294\">@larsdesigns</span> <em>If</em> I get a chance (and can figure it out), do you mind if I have a go at <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/702\">https://github.com/backdrop-ops/backdropcms.org/issues/702</a> ?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/702\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/702\" title=\"Sanitize website backup changes · Issue #702 · backdrop-ops/backdropcms.org\">Sanitize website backup changes · Issue #702 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">I&#39;d like to request a few changes to the backups hosted on the Sanitize website please: backdropcmsorg has 3 database dumps, and also a &#39;latest&#39; dump whose URL is constant. I&#39;d like...</div></div></div>",
+        "id": 210463782,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600385301
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> Yeah for sure.</p>",
+        "id": 210463943,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1600385484
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> This is the repository: <a href=\"https://github.com/serundeputy/sql-dump-sanitize\">https://github.com/serundeputy/sql-dump-sanitize</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/serundeputy/sql-dump-sanitize\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/6763671?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/serundeputy/sql-dump-sanitize\" title=\"serundeputy/sql-dump-sanitize\">serundeputy/sql-dump-sanitize</a></div><div class=\"message_embed_description\">The purpose of this script is to backup and optionally --sanitize the database of your Backdrop CMS website. - serundeputy/sql-dump-sanitize</div></div></div>",
+        "id": 210464077,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1600385611
+    },
+    {
+        "content": "<p>Hmm, I thought I saw it was using <a href=\"https://github.com/larsdesigns/sql-dump-sanitize\">https://github.com/larsdesigns/sql-dump-sanitize</a> instead...</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/larsdesigns/sql-dump-sanitize\" style=\"background-image: url(https://avatars0.githubusercontent.com/u/976705?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/larsdesigns/sql-dump-sanitize\" title=\"larsdesigns/sql-dump-sanitize\">larsdesigns/sql-dump-sanitize</a></div><div class=\"message_embed_description\">The purpose of this script is to backup and optionally --sanitize the database of your Backdrop CMS website. - larsdesigns/sql-dump-sanitize</div></div></div>",
+        "id": 210464419,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600385973
+    },
+    {
+        "content": "<p>But then I get confused with <code>remote</code> and <code>origin</code>...</p>",
+        "id": 210464483,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1600386006
+    },
+    {
+        "content": "<p>Well, that was my fork but it is  <span class=\"user-mention\" data-user-id=\"256583\">@Geoff St. Pierre (serundeputy)</span> 's project.</p>",
+        "id": 210464518,
+        "sender_full_name": "larsdesigns",
+        "timestamp": 1600386060
+    },
+    {
+        "content": "<p>What's the reason for <a href=\"http://sanitize.backdropcms.org\">sanitize.backdropcms.org</a> having a username/password to access it? Since the DB is sanitized, do we need to restrict access?</p>",
+        "id": 215037740,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1604011319
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> anyone with a copy of the db will be able to set up a local version of <a href=\"http://b.org\">b.org</a>, which will allow them to have a look at how the site is configured (including any security/privacy/sensitive settings) ...I think that access to it is on a per-case/request case - not to be open for public consumption.</p>",
+        "id": 215053106,
+        "sender_full_name": "klonos",
+        "timestamp": 1604027968
+    },
+    {
+        "content": "<p>...we disclose the shield credentials only to people that we know are part of the community and want to contribute in building/improving/fixing <a href=\"http://b.org\">b.org</a></p>",
+        "id": 215053174,
+        "sender_full_name": "klonos",
+        "timestamp": 1604028029
+    }
+]

@@ -1,0 +1,170 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Module.20defaults.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html">Module defaults</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="185016599"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185016599" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185016599">(Jan 07 2020 at 14:44)</a>:</h4>
+<p>I want to mention setting defaults in a module's configuration form. That's what I started to do:</p>
+<div class="codehilite"><pre><span></span>&#39;#description&#39; =&gt; t(&#39;Additional body class for pages with a Tocbot block.&lt;br /&gt;
+    Default: &lt;code&gt;toc-is-active&lt;/code&gt;&#39;),
+</pre></div>
+
+
+<p>Instead, I'd like to make use of <code>'#default_value' =&gt; $config-&gt;get('tocbot_extrabodyclass'),</code> for the display of defaults. Is it possible, and could someone post an example?</p>
+
+
+
+<a name="185016763"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185016763" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185016763">(Jan 07 2020 at 14:46)</a>:</h4>
+<p>Here is a complete example block of my current situation:</p>
+<div class="codehilite"><pre><span></span>$form[&#39;moduleSettings&#39;][&#39;tocbot_extrabodyclass&#39;] = array(
+    &#39;#type&#39; =&gt; &#39;textfield&#39;,
+    &#39;#title&#39; =&gt; t(&#39;Body class&#39;),
+    &#39;#description&#39; =&gt; t(&#39;Additional body class for pages with a Tocbot block.&lt;br /&gt;
+    Default: &lt;code&gt;toc-is-active&lt;/code&gt;&#39;),
+    &#39;#default_value&#39; =&gt; $config-&gt;get(&#39;tocbot_extrabodyclass&#39;),
+  );
+</pre></div>
+
+
+
+<a name="185019820"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185019820" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185019820">(Jan 07 2020 at 15:17)</a>:</h4>
+<p>I don't think I understand what you're trying to do. What does "mention setting defaults..." mean?</p>
+
+
+
+<a name="185024200"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185024200" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185024200">(Jan 07 2020 at 15:59)</a>:</h4>
+<p>I think what you would have to do is to get the config setting before setting the form array, check to see if it is empty or not, and if it is empty, set the default value. Something like this untested snippet:<br>
+<code>$default_value = $config-&gt;get('tocbot_extrabodyclass');
+if (empty($default_value)) {
+  $default_value = '&lt;code&gt;toc-is-active&lt;/code&gt;';
+}
+$form['moduleSettings']['tocbot_extrabodyclass'] = array(
+    '#type' =&gt; 'textfield',
+    '#title' =&gt; t('Body class'),
+    '#description' =&gt; t('Additional body class for pages with a Tocbot block.&lt;br /&gt;
+    Default: &lt;code&gt;toc-is-active&lt;/code&gt;'),
+    '#default_value' =&gt; $default_value,
+  );</code></p>
+
+
+
+<a name="185024236"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185024236" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185024236">(Jan 07 2020 at 15:59)</a>:</h4>
+<p>Well, the code formatting isn't very nice.</p>
+
+
+
+<a name="185024291"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185024291" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185024291">(Jan 07 2020 at 16:00)</a>:</h4>
+<p><span class="user-mention" data-user-id="256705">@Herb</span> Yeah, was a bit unclear! I'd like to display default settings in the description text of the setting.</p>
+
+
+
+<a name="185024341"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185024341" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185024341">(Jan 07 2020 at 16:00)</a>:</h4>
+<p>I think you already have that by adding it to <code>#description</code>.</p>
+
+
+
+<a name="185024445"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185024445" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185024445">(Jan 07 2020 at 16:01)</a>:</h4>
+<p>You mean you want to print the variable in the description?</p>
+
+
+
+<a name="185024500"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185024500" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185024500">(Jan 07 2020 at 16:02)</a>:</h4>
+<p>Yes!</p>
+
+
+
+<a name="185024576"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185024576" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185024576">(Jan 07 2020 at 16:03)</a>:</h4>
+<p>If someone changes the value in the variable, it will no longer be displaying the default, but what is currently set.</p>
+
+
+
+<a name="185025255"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185025255" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185025255">(Jan 07 2020 at 16:09)</a>:</h4>
+<p>Hm, good point! Is there a way to get the value for the description text from (in my case) <code>tocbot/config/tocbot.settings.json</code>? AFAIK, a changed value would be from the config file in the Backdrop active config directory instead.</p>
+
+
+
+<a name="185025694"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185025694" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185025694">(Jan 07 2020 at 16:13)</a>:</h4>
+<p>If there isn't a obvious approach, I'm however fine to hardcode the default values in the description texts. I guess they won't change so often.</p>
+
+
+
+<a name="185040810"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185040810" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185040810">(Jan 07 2020 at 18:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> The only place default values exist is in your module's <code>config/*.json</code> file. Once the module's installed and that file's copied into the active config, it can change. I don't believe there's any (easy) way to read from your module's default config file, so hard-coding is the only way (and I don't think it's the wrong way either - default values are hard-coded in the default config file, so they can be hard-coded in a description text too, just remember to update both places should they ever change).</p>
+
+
+
+<a name="185058418"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185058418" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185058418">(Jan 07 2020 at 21:48)</a>:</h4>
+<blockquote>
+<p>hard-coding is the only way (and I don't think it's the wrong way either - default values are hard-coded in the default config file, so they can be hard-coded in a description text too, just remember to update both places should they ever change)</p>
+</blockquote>
+<p>Thanks for your feedback, <span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span>! Good to know that hardcoding the values isn't the 'wrong' way in this case. Re "remember to update both places". Actually, there are <em>three</em> places as there is also the install file. And my module has a lot of config values. Unfortunately, all three places are in slightly different format. But as you say: should they <em>ever</em> change ...</p>
+
+
+
+<a name="185060574"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185060574" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185060574">(Jan 07 2020 at 22:13)</a>:</h4>
+<p>Seems that we need a <code>$config-&gt;getDefault('what.have.you')</code> ...could be a feature request <span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> <span aria-label="wink" class="emoji emoji-1f609" role="img" title="wink">:wink:</span></p>
+
+
+
+<a name="185061439"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185061439" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185061439">(Jan 07 2020 at 22:25)</a>:</h4>
+<p>...there you go: <a href="https://github.com/backdrop/backdrop-issues/issues/4262" target="_blank" title="https://github.com/backdrop/backdrop-issues/issues/4262">https://github.com/backdrop/backdrop-issues/issues/4262</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4262" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4262" target="_blank" title="[DX] provide a way to retrieve default/OOTB config values · Issue #4262 · backdrop/backdrop-issues">[DX] provide a way to retrieve default/OOTB config values · Issue #4262 · backdrop/backdrop-issues</a></div><div class="message_embed_description">This came up in the Zulip chat: @olafgrabienski I want to mention setting defaults in a module&#39;s configuration form. That&#39;s what I started to do: &#39;#description&#39; =&gt; t(&#39;Additio...</div></div></div>
+
+
+
+<a name="185061613"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185061613" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185061613">(Jan 07 2020 at 22:26)</a>:</h4>
+<p>^^ this could open the doors for config revert to OOTB defaults (although that can already be achieved by disabling -&gt; uninstalling -&gt; reinstalling a module)</p>
+
+
+
+<a name="185081236"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185081236" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185081236">(Jan 08 2020 at 04:53)</a>:</h4>
+<p><span class="user-mention" data-user-id="256674">@Olaf Grabienski</span> What's the third one in install...?</p>
+
+
+
+<a name="185094760"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185094760" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185094760">(Jan 08 2020 at 10:03)</a>:</h4>
+<p><span class="user-mention" data-user-id="256607">@BWPanda (Peter)</span> It's <a href="https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install" target="_blank" title="https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install">https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install</a>. Not sure if it's the correct way. IIRC, it's a result of  the <em>Coder Upgrade</em> parsing.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install" style="background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)" target="_blank"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-contrib/tocbot/blob/1.x-1.x/tocbot.install" target="_blank" title="backdrop-contrib/tocbot">backdrop-contrib/tocbot</a></div><div class="message_embed_description">Builds a table of contents (TOC) from content headings. - backdrop-contrib/tocbot</div></div></div>
+
+
+
+<a name="185098027"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Module%20defaults/near/185098027" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Module.20defaults.html#185098027">(Jan 08 2020 at 10:49)</a>:</h4>
+<p>Ah OK. Makes sense.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

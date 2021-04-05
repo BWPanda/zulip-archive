@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>Could someone please try this: <a href=\"https://www.drupal4u.org/howtos/how-display-search-results-views\" target=\"_blank\" title=\"https://www.drupal4u.org/howtos/how-display-search-results-views\">https://www.drupal4u.org/howtos/how-display-search-results-views</a></p>",
+        "id": 189651317,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583283641
+    },
+    {
+        "content": "<p>I get an error after the search runs with <code>Fatal error: Class 'viewsSearchQuery' not found in C:\\wamp64\\www\\cpr\\core\\includes\\database\\select.inc on line 1254</code></p>",
+        "id": 189651344,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583283691
+    },
+    {
+        "content": "<p><code>viewsSearchQuery</code> is a valid class name in Search module, declared in <code>hook_autoload_info()</code>, no reason it should be not found. Cant figure it.</p>",
+        "id": 189651496,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583283861
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256757\">docwilmot</span> <a href=\"#narrow/stream/218635-General/topic/Bug.20in.20Search/near/189651496\" title=\"#narrow/stream/218635-General/topic/Bug.20in.20Search/near/189651496\">said</a>:</p>\n<blockquote>\n<p><code>viewsSearchQuery</code> is ... declared in <code>hook_autoload_info()</code></p>\n</blockquote>\n<p>No it is not. Its a bug.</p>",
+        "id": 189652713,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583285413
+    },
+    {
+        "content": "<p>PR up, quick one for an enterprising core committer. <a href=\"https://github.com/backdrop/backdrop/pull/3089\" target=\"_blank\" title=\"https://github.com/backdrop/backdrop/pull/3089\">https://github.com/backdrop/backdrop/pull/3089</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop/pull/3089\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop/pull/3089\" target=\"_blank\" title=\"Issue #4328: viewsSearchQuery class missing by docwilmot · Pull Request #3089 · backdrop/backdrop\">Issue #4328: viewsSearchQuery class missing by docwilmot · Pull Request #3089 · backdrop/backdrop</a></div><div class=\"message_embed_description\">Fixes backdrop/backdrop-issues#4328</div></div></div>",
+        "id": 189653410,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1583286407
+    }
+]

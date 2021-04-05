@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>Does anyone know of a module that allows users to select an image style or picture mapping for an image that is inserted into content with CKEditor?</p>",
+        "id": 205856938,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1596495508
+    },
+    {
+        "content": "<p>Closest I know of is <a href=\"https://github.com/backdrop-contrib/insert\">https://github.com/backdrop-contrib/insert</a> but that works by inserting an image from an image field, not using CKEditor's images...</p>\n<p>There is a core issue for this feature though: <a href=\"https://github.com/backdrop/backdrop-issues/issues/2658\">https://github.com/backdrop/backdrop-issues/issues/2658</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/insert\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/insert\" title=\"backdrop-contrib/insert\">backdrop-contrib/insert</a></div><div class=\"message_embed_description\">A Backdrop CMS port of drupal.org/project/insert, a utility that makes inserting images and links to files into text areas or WYSIWYGs much easier. - backdrop-contrib/insert</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2658\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2658\" title=\"[D8] CKEditor: Allow Image Styles to be used with inline images · Issue #2658 · backdrop/backdrop-issues\">[D8] CKEditor: Allow Image Styles to be used with inline images · Issue #2658 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This is basically the respective issue for what is being worked on for D8 core here: https://www.drupal.org/project/drupal/issues/2061377 This is part of #1087 and #378, and related to #2841 Origin...</div></div></div>",
+        "id": 205857845,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1596496257
+    },
+    {
+        "content": "<p>Thanks. I'll take a look at the issue and see if I can get something working for core.</p>",
+        "id": 205929061,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1596558699
+    },
+    {
+        "content": "<p>I have a problem with image style images not appearing in the Styleguide module: <a href=\"https://github.com/backdrop-contrib/styleguide/issues/14\">https://github.com/backdrop-contrib/styleguide/issues/14</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/styleguide/issues/14\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/styleguide/issues/14\" title=\"Image styles not generated automatically · Issue #14 · backdrop-contrib/styleguide\">Image styles not generated automatically · Issue #14 · backdrop-contrib/styleguide</a></div><div class=\"message_embed_description\">The images in the styleguide aren&#39;t generated automatically, in that they don&#39;t appear by default, only after I visit each style&#39;s configuration page (e.g. /admin/config/media/image-sty...</div></div></div>",
+        "id": 219943549,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608016130
+    },
+    {
+        "content": "<p>The only way I can get images to appear initially is to visit the image style configuration pages. Then they work. But before that, no amount of refreshing or clearing of caches works...</p>",
+        "id": 219943572,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608016171
+    },
+    {
+        "content": "<p>Is there a way Styleguide should be generating images/URLs, or is this just a bug with core?</p>",
+        "id": 219943578,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1608016194
+    },
+    {
+        "content": "<blockquote>\n<p>Is there a way Styleguide should be generating images/URLs, or is this just a bug with core?</p>\n</blockquote>\n<p>I also noticed that when using styleguide. I think it's a bug in the module, but didn't dig any deeper.</p>",
+        "id": 219948464,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1608020691
+    }
+]

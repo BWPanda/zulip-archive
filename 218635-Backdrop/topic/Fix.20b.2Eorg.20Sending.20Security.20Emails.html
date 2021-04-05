@@ -1,0 +1,72 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html">Fix b.org Sending Security Emails</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="192093644"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Fix%20b.org%20Sending%20Security%20Emails/near/192093644" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html#192093644">(Mar 27 2020 at 23:48)</a>:</h4>
+<p><span class="user-mention" data-user-id="256583">@Geoff St. Pierre (serundeputy)</span> could you give <a href="https://github.com/backdrop-ops/backdropcms.org/issues/670" title="https://github.com/backdrop-ops/backdropcms.org/issues/670">https://github.com/backdrop-ops/backdropcms.org/issues/670</a> an eyeball? Others welcome as well of course. Wednesday's security release we encountered a problem with sending the email notifications.</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/issues/670" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/issues/670" title="Sending security announcement emails prevents saving nodes · Issue #670 · backdrop-ops/backdropcms.org">Sending security announcement emails prevents saving nodes · Issue #670 · backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">Today when we went to edit and then save the SA for today&#39;s security release, the browser hung for about 60 seconds, then the server threw a SQLSTATE[HY000]: General error: 1205 Lock wait timeo...</div></div></div>
+
+
+
+<a name="192093887"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Fix%20b.org%20Sending%20Security%20Emails/near/192093887" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html#192093887">(Mar 27 2020 at 23:53)</a>:</h4>
+<p>approved by me; <a href="https://github.com/backdrop-ops/backdropcms.org/pull/672" title="https://github.com/backdrop-ops/backdropcms.org/pull/672">https://github.com/backdrop-ops/backdropcms.org/pull/672</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/pull/672" style="background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/pull/672" title="Issue #670: Delay sending security emails until after node is saved. by quicksketch · Pull Request #672 · backdrop-ops/backdropcms.org">Issue #670: Delay sending security emails until after node is saved. by quicksketch · Pull Request #672 · backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">Fixes #670.</div></div></div>
+
+
+
+<a name="192093947"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Fix%20b.org%20Sending%20Security%20Emails/near/192093947" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Geoff St. Pierre (serundeputy) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html#192093947">(Mar 27 2020 at 23:54)</a>:</h4>
+<p>we should consider spinning up <code>mailhog</code> in the <code>.lando.yml</code> file</p>
+
+
+
+<a name="192094046"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Fix%20b.org%20Sending%20Security%20Emails/near/192094046" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html#192094046">(Mar 27 2020 at 23:56)</a>:</h4>
+<p>Thank you!</p>
+
+
+
+<a name="192097191"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Fix%20b.org%20Sending%20Security%20Emails/near/192097191" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html#192097191">(Mar 28 2020 at 01:02)</a>:</h4>
+<p><span class="user-mention" data-user-id="258586">@Nate Lampton</span> is this <code>ini_set()</code> here permanent?: <a href="https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170" title="https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170">https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170" style="background-image: url(https://avatars1.githubusercontent.com/u/100206?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/pull/672/files#diff-aa231d71d1b21eb93c1a62dafc792648R170" title="Issue #670: Delay sending security emails until after node is saved. by quicksketch · Pull Request #672 · backdrop-ops/backdropcms.org">Issue #670: Delay sending security emails until after node is saved. by quicksketch · Pull Request #672 · backdrop-ops/backdropcms.org</a></div><div class="message_embed_description">Fixes #670.</div></div></div>
+
+
+
+<a name="192097247"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Fix%20b.org%20Sending%20Security%20Emails/near/192097247" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> klonos <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html#192097247">(Mar 28 2020 at 01:03)</a>:</h4>
+<p>...it seems so. Not 100% sure, but should we be doing an <code>ini_get('max_execution_time');</code> before setting it to 300, and then at the end of this function reset to what it was before we set it. ...if that's not how things work and I'm being silly, then please ignore me <span aria-label="sweat smile" class="emoji emoji-1f605" role="img" title="sweat smile">:sweat_smile:</span></p>
+
+
+
+<a name="192136749"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Fix%20b.org%20Sending%20Security%20Emails/near/192136749" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html#192136749">(Mar 28 2020 at 18:57)</a>:</h4>
+<p>I suppose we could shorten it again. It's intended to be permanent. It basically guarantees that the max execution time is at least 5 minutes. But as this will only fire when it's sending emails, it's not going to happen very frequently.</p>
+
+
+
+<a name="192137077"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Fix%20b.org%20Sending%20Security%20Emails/near/192137077" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> quicksketch <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Fix.20b.2Eorg.20Sending.20Security.20Emails.html#192137077">(Mar 28 2020 at 19:04)</a>:</h4>
+<p>Oops, this should have been in that previous commit. Just found it uncommitted on my copy. Pushed this up as well to only increase if lower: <a href="https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f" title="https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f">https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f</a></p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f" style="background-image: url(https://avatars3.githubusercontent.com/u/100206?s=200&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop-ops/backdropcms.org/commit/d6ad62ff239fb6e089027c8914ea16050a1c191f" title="Issue #670: Only increase time if it's less than the current amount. · backdrop-ops/backdropcms.org@d6ad62f">Issue #670: Only increase time if it's less than the current amount. · backdrop-ops/backdropcms.org@d6ad62f</a></div><div class="message_embed_description">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

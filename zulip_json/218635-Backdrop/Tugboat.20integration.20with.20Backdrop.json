@@ -1,0 +1,26 @@
+[
+    {
+        "content": "<p>This is going to be a long shot, but does anyone have experience integrating <a href=\"http://Tugboat.qa\" target=\"_blank\" title=\"http://Tugboat.qa\">Tugboat.qa</a> with Backdrop? I'm trying to get the <a href=\"http://B.org\" target=\"_blank\" title=\"http://B.org\">B.org</a> custom module <code>borg_tugboat</code> working on my site using my own Tugboat account and repo, but I'm getting an error that doesn't happen on <a href=\"http://B.org\" target=\"_blank\" title=\"http://B.org\">B.org</a>... It's a matter of some urgency, so if anyone can assist I'd be very grateful!</p>",
+        "id": 185400343,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578767683
+    },
+    {
+        "content": "<p>I haven't tried at all but curious. Wasn't there a port from Backdrop to d7 of a tugboat QA module?</p>",
+        "id": 185400697,
+        "sender_full_name": "Herb",
+        "timestamp": 1578768326
+    },
+    {
+        "content": "<p>So I originally took the <a href=\"http://B.org\" target=\"_blank\" title=\"http://B.org\">B.org</a> module and started refactoring it to make it more generic and release it as a contrib project anyone can use. Then I ran into this issue, and thought maybe I'd messed something up. So then I tried using the <a href=\"http://B.org\" target=\"_blank\" title=\"http://B.org\">B.org</a> module as-is, but had the same problem (so it seems to be something else (my site, Tugboat account, etc.). While looking into this I found the Drupal module. Apparently someone had a similar idea a while ago and started porting the <a href=\"http://B.org\" target=\"_blank\" title=\"http://B.org\">B.org</a> module to Drupal. From the looks of it they basically just tried to get it working in Drupal, not refactor it like I was doing. But not much has happened there (I think I got further than they did).</p>",
+        "id": 185404478,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578775329
+    },
+    {
+        "content": "<p>I've now rewritten parts of the module to use Tugboat's new API, which is much easier and actually works for me! So all good now <span aria-label=\"grinning face with smiling eyes\" class=\"emoji emoji-1f601\" role=\"img\" title=\"grinning face with smiling eyes\">:grinning_face_with_smiling_eyes:</span></p>",
+        "id": 185437848,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578841707
+    }
+]

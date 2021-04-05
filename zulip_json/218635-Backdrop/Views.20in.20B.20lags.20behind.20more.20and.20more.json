@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>I tried to figure out what I could do to let views in Backdrop catch up with D7. But that's such a huge task that I don't even know where to start.</p>\n<p>We have this <a href=\"https://github.com/backdrop/backdrop-issues/issues/3853\">daunting meta issue</a>. But in the meantime there are two more views releases for D7:</p>\n<ul>\n<li><a href=\"https://www.drupal.org/project/views/releases/7.x-3.24-rc1\">https://www.drupal.org/project/views/releases/7.x-3.24-rc1</a></li>\n<li><a href=\"https://www.drupal.org/project/views/releases/7.x-3.24\">https://www.drupal.org/project/views/releases/7.x-3.24</a></li>\n</ul>\n<p>How can we ever catch up? Or if we're not able to: how can we avoid to fall behind even more?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3853\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3853\" title=\"crossport views commits from 7.x-3.22 - 7.x-3.23 · Issue #3853 · backdrop/backdrop-issues\">crossport views commits from 7.x-3.22 - 7.x-3.23 · Issue #3853 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Has separate issues/PRs: #4075 | e19e3546 | Issue #2900405 by collinhaines, jenlampton, sano, paulbeaney, jyraya: Undefined index in views_handler_filter-&gt;store_exposed_input(). #4075 | ddaeddc3...</div></div></div>",
+        "id": 221123690,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609236225
+    },
+    {
+        "content": "<p>And that we always have to keep an eye on the regressions introduced by previous releases doesn't make it easier. Triage alone would take a long time. Fixing and reviewing... oh dear.</p>",
+        "id": 221124475,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609237198
+    },
+    {
+        "content": "<p>How about a spike to triage them?</p>\n<p>(I volunteer to take a crack at this one <span aria-label=\"smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"smile\">:smile:</span> <a href=\"https://www.drupal.org/node/3097632\">https://www.drupal.org/node/3097632</a> )</p>",
+        "id": 221140026,
+        "sender_full_name": "cellear (Luke McCormick)",
+        "timestamp": 1609254132
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256738\">@indigoxela</span> we have a decent process for managing releases of Drupal core / contrib -- not great because we obviously aren't doing a good job of keeping up, but the create/review process is actually less work than it seems.</p>",
+        "id": 221163356,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1609272828
+    },
+    {
+        "content": "<p>We can do many of the commits from a Drupal project in a single PR for core (which is different than our usual process of one commit per PR)</p>",
+        "id": 221163509,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1609272959
+    }
+]

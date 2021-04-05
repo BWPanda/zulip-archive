@@ -1,0 +1,224 @@
+[
+    {
+        "content": "<p>...hmm, it seems that either that module does require <a href=\"https://github.com/backdrop-contrib/libraries\">https://github.com/backdrop-contrib/libraries</a> after all, or the requirement left in the .info file is an oversight. In any way, I'm sure that there must be a reason. <span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> care to shed some light?</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/libraries\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/libraries\" title=\"backdrop-contrib/libraries\">backdrop-contrib/libraries</a></div><div class=\"message_embed_description\">(Deprecated) Provides external library handling for other Backdrop modules. - backdrop-contrib/libraries</div></div></div>",
+        "id": 233202804,
+        "sender_full_name": "klonos",
+        "timestamp": 1617643749
+    },
+    {
+        "content": "<p>After installation I also ran into this one cc: <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>  <a href=\"https://github.com/backdrop-contrib/entity_plus/issues/23\">https://github.com/backdrop-contrib/entity_plus/issues/23</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/entity_plus/issues/23\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/entity_plus/issues/23\" title=\"Migration from Drupal : undefined function entity_metadata_field_text_property_callback · Issue #23 · backdrop-contrib/entity_plus\">Migration from Drupal : undefined function entity_metadata_field_text_property_callback · Issue #23 · backdrop-contrib/entity_plus</a></div><div class=\"message_embed_description\">Whilst migrating from Drupal I received the below error: Fatal error: Class &#39;EntityPlusControllerExportable&#39; not found in /app/web/core/modules/entity/entity.module As entity_plus was not e...</div></div></div>",
+        "id": 233203026,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617643854
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"298007\">@Rob Feature</span> did you install <a href=\"https://github.com/backdrop-contrib/entity_plus\">https://github.com/backdrop-contrib/entity_plus</a>? (see <a href=\"https://github.com/backdrop-contrib/rules/issues/43\">https://github.com/backdrop-contrib/rules/issues/43</a>)</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/entity_plus\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/entity_plus\" title=\"backdrop-contrib/entity_plus\">backdrop-contrib/entity_plus</a></div><div class=\"message_embed_description\">Contribute to backdrop-contrib/entity_plus development by creating an account on GitHub.</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/rules/issues/43\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/rules/issues/43\" title=\"PHP Fatal Error when updating · Issue #43 · backdrop-contrib/rules\">PHP Fatal Error when updating · Issue #43 · backdrop-contrib/rules</a></div><div class=\"message_embed_description\">Ran an update to Rules 1.x-2.1.0 from Rules 1.x-2.0.2 and got the following error: Fatal error: Class &#39;EntityPlusControllerExportable&#39; not found in /var/www/test/[site]/public/modules/rules...</div></div></div>",
+        "id": 233203406,
+        "sender_full_name": "klonos",
+        "timestamp": 1617644032
+    },
+    {
+        "content": "<p>yeah, trying to get that installed...can't do it in any normal way because i'm getting WSOD and don't have a functional drush</p>",
+        "id": 233203556,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644077
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"298007\">@Rob Feature</span> you also need <a href=\"https://github.com/backdrop-contrib/entity_ui\">https://github.com/backdrop-contrib/entity_ui</a> ...see: <a href=\"https://github.com/backdrop-contrib/rules/blob/1.x-2.x/rules.info#L4\">https://github.com/backdrop-contrib/rules/blob/1.x-2.x/rules.info#L4</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/entity_ui\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/entity_ui\" title=\"backdrop-contrib/entity_ui\">backdrop-contrib/entity_ui</a></div><div class=\"message_embed_description\">Port to Backdrop of the UI functionality of Drupal's Entity API - backdrop-contrib/entity_ui</div></div></div><div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/rules/blob/1.x-2.x/rules.info#L4\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/rules/blob/1.x-2.x/rules.info#L4\" title=\"backdrop-contrib/rules\">backdrop-contrib/rules</a></div><div class=\"message_embed_description\">Porting the Rules project to Backdrop. Contribute to backdrop-contrib/rules development by creating an account on GitHub.</div></div></div>",
+        "id": 233203826,
+        "sender_full_name": "klonos",
+        "timestamp": 1617644213
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"298007\">@Rob Feature</span> Just replied in that error thread you linked.</p>",
+        "id": 233203852,
+        "sender_full_name": "Laryn",
+        "timestamp": 1617644228
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> Thanks, yeah, trying to get it installed.  How do I install if I can't access the site due to the error? Never had to do that before!</p>",
+        "id": 233203979,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644287
+    },
+    {
+        "content": "<p>(i haven't yet installed a backdrop friendly version of drush for installing modules via commandline)</p>",
+        "id": 233204019,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644315
+    },
+    {
+        "content": "<p>ohh, sorry i see.</p>",
+        "id": 233204060,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644348
+    },
+    {
+        "content": "<p>you're suggesting they're installed in the drupal site before trying to upgrade the database...</p>",
+        "id": 233204079,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644365
+    },
+    {
+        "content": "<p>Ideally. In this case, you could try copying the module into the <code>modules</code> directory and then flipping the setting directly in the database to enable Entity Plus (since it doesn't run anything in an install hook).</p>",
+        "id": 233204103,
+        "sender_full_name": "Laryn",
+        "timestamp": 1617644383
+    },
+    {
+        "content": "<p>just changing status in the system table?</p>",
+        "id": 233204177,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644408
+    },
+    {
+        "content": "<p>I think so. And then maybe clearing cache tables if needed.</p>",
+        "id": 233204345,
+        "sender_full_name": "Laryn",
+        "timestamp": 1617644493
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> does this issue happen even if entity_plus and entity_ui are present in the codebase when starting the upgrade process?</p>",
+        "id": 233204468,
+        "sender_full_name": "klonos",
+        "timestamp": 1617644547
+    },
+    {
+        "content": "<p>I would guess so, if they aren't enabled!</p>",
+        "id": 233204506,
+        "sender_full_name": "Laryn",
+        "timestamp": 1617644565
+    },
+    {
+        "content": "<p>ok, that worked (the cache clear was getting me).  And yeah, I had them in the codebase, but not enabled</p>",
+        "id": 233204519,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644574
+    },
+    {
+        "content": "<p><span aria-label=\"tada\" class=\"emoji emoji-1f389\" role=\"img\" title=\"tada\">:tada:</span></p>",
+        "id": 233204532,
+        "sender_full_name": "klonos",
+        "timestamp": 1617644585
+    },
+    {
+        "content": "<p>...we should streamline this, so that others don't have all these issues. Is there anything that can/should be done in Backdrop core?</p>",
+        "id": 233204723,
+        "sender_full_name": "klonos",
+        "timestamp": 1617644692
+    },
+    {
+        "content": "<p>I'm thinking that individual modules (such as rules, in my case) should look for the required entity modules and enable them during their update script, if possible.</p>",
+        "id": 233205044,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644841
+    },
+    {
+        "content": "<p>that way, if they're at least in the codebase, the rest is seamless.</p>",
+        "id": 233205070,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644860
+    },
+    {
+        "content": "<p>maybe a notice if they're not found with a download link or something.</p>",
+        "id": 233205090,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644875
+    },
+    {
+        "content": "<p>(and <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> for the record:  I did have to install that deprecated libraries module, otherwise rest_server causes the site to fail)</p>",
+        "id": 233205200,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617644922
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"298007\">@Rob Feature</span> I believe that the issue is that Rules is already installed in the D7 database, and enabling dependencies only works during module installation (not during \"runtime\"). ...IIRC, that's why people mentioned that we need \"stub\" modules as a workaround <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 233206278,
+        "sender_full_name": "klonos",
+        "timestamp": 1617645425
+    },
+    {
+        "content": "<p>how does this work in D7 when you upgrade a module and it includes a new requirement?  Seems like the same thing (?)</p>",
+        "id": 233206622,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617645576
+    },
+    {
+        "content": "<p>Let me try to explain...</p>",
+        "id": 233206793,
+        "sender_full_name": "klonos",
+        "timestamp": 1617645628
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-contrib/entity_plus/issues/47\">https://github.com/backdrop-contrib/entity_plus/issues/47</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/entity_plus/issues/47\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/entity_plus/issues/47\" title=\"Upgrade process: can we enable Entity Plus if it's not already? · Issue #47 · backdrop-contrib/entity_plus\">Upgrade process: can we enable Entity Plus if it's not already? · Issue #47 · backdrop-contrib/entity_plus</a></div><div class=\"message_embed_description\">See https://github.com/backdrop-contrib/entity_plus/wiki#migrating-from-drupal-7s-entity-api-module Rob Feature: I&#39;m thinking that individual modules (such as rules, in my case) should look for...</div></div></div>",
+        "id": 233207041,
+        "sender_full_name": "Laryn",
+        "timestamp": 1617645725
+    },
+    {
+        "content": "<p>yup, <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> that issue looks like what I was thinking</p>",
+        "id": 233207118,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617645764
+    },
+    {
+        "content": "<p>A similar situation arose with upgrading Ubercart from D7. Here's the explanation of the workaround and \"stub modules\". <a href=\"https://github.com/backdrop-contrib/ubercart/wiki/Upgrading-Ubercart-from-Drupal-7\">https://github.com/backdrop-contrib/ubercart/wiki/Upgrading-Ubercart-from-Drupal-7</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/ubercart/wiki/Upgrading-Ubercart-from-Drupal-7\" style=\"background-image: url(https://avatars.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/ubercart/wiki/Upgrading-Ubercart-from-Drupal-7\" title=\"backdrop-contrib/ubercart\">backdrop-contrib/ubercart</a></div><div class=\"message_embed_description\">A flexible but easy-to-use e-commerce system for Backdrop. - backdrop-contrib/ubercart</div></div></div>",
+        "id": 233207322,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1617645846
+    },
+    {
+        "content": "<p>I was thinking that something should be done in core. Something along the lines of if required dependencies for already enabled modules \"suddenly go missing\" (are found to be disabled but their code exists in the codebase), then they should be \"retroactively\" enabled.</p>",
+        "id": 233207460,
+        "sender_full_name": "klonos",
+        "timestamp": 1617645911
+    },
+    {
+        "content": "<p>That would be very nice!</p>",
+        "id": 233207768,
+        "sender_full_name": "bugfolder",
+        "timestamp": 1617646056
+    },
+    {
+        "content": "<p>I'm still wondering:  Back in D7, lets say a module released a 2.x version and that new version required other new contrib modules that wouldn't have been previously installed.  How did the upgrade process, for the new version, ensure that any new requirements were enabled?  Seems like the same situation as this, unless I'm misunderstanding something.</p>",
+        "id": 233208387,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617646359
+    },
+    {
+        "content": "<p>...seems that this was (still is?) an issue in Drupal: <a href=\"https://drupal.stackexchange.com/questions/58234/what-is-the-protocol-for-adding-a-new-module-dependency-to-a-module-that-has-onl\">https://drupal.stackexchange.com/questions/58234/what-is-the-protocol-for-adding-a-new-module-dependency-to-a-module-that-has-onl</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://drupal.stackexchange.com/questions/58234/what-is-the-protocol-for-adding-a-new-module-dependency-to-a-module-that-has-onl\" style=\"background-image: url(https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon@2.png?v=5d949c166061)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://drupal.stackexchange.com/questions/58234/what-is-the-protocol-for-adding-a-new-module-dependency-to-a-module-that-has-onl\" title=\"What is the protocol for adding a new module dependency to a module that has only had a dev release?\">What is the protocol for adding a new module dependency to a module that has only had a dev release?</a></div><div class=\"message_embed_description\">I created a module a while ago and it has only had a 7.x-1.x-dev release on Drupal.org for the last month or so. There are a number of reported downloads and installs already for this module so I w...</div></div></div>",
+        "id": 233208803,
+        "sender_full_name": "klonos",
+        "timestamp": 1617646570
+    },
+    {
+        "content": "<p>yeah, the update hook shown in that answer is what I was thinking...</p>",
+        "id": 233208913,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617646613
+    },
+    {
+        "content": "<p>I'm pretty sure I've had that situation in the past, and it created a broken site until that dependency was added.</p>",
+        "id": 233208982,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1617646658
+    },
+    {
+        "content": "<p>...someone in that thread suggested enabling dependencies via <code>hook_requirements</code> <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 233209075,
+        "sender_full_name": "klonos",
+        "timestamp": 1617646693
+    },
+    {
+        "content": "<p>yeah, seems ideal because it won't even get as far as breaking stuff if the requirements aren't met.</p>",
+        "id": 233209150,
+        "sender_full_name": "Rob Feature",
+        "timestamp": 1617646740
+    },
+    {
+        "content": "<p>If that <code>hook_requirements()</code> trick works, then it might be worth doing that.</p>",
+        "id": 233209354,
+        "sender_full_name": "klonos",
+        "timestamp": 1617646832
+    }
+]

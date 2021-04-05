@@ -1,0 +1,38 @@
+[
+    {
+        "content": "<p>Any tips on how to prevent timeout or memory issues when trying to output lots on information with Devel's <code>dpm()</code>? I need to output the array(s) before I can see what the keys/values are in order to narrow down what I'm looking for. Problem is it's just too big to output initially so I can't even start filtering what I'm looking for...</p>",
+        "id": 208808943,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599045402
+    },
+    {
+        "content": "<p>I know D8 has a settings where you can tell it how many 'levels' in an array or object to display for better performance. Does Backdrop have that?</p>",
+        "id": 208808989,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599045444
+    },
+    {
+        "content": "<p>Well no wonder! Discovered the <code>dd()</code> function which writes variables to a file in the temp directory. That file is almost 400MB!</p>",
+        "id": 208809802,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1599046031
+    },
+    {
+        "content": "<p>I have no tricks for dpm(), but you could use debug() in code directly:</p>\n<p>Huge objects (nodes/views):<br>\n<code>debug(array_keys(get_object_vars($node)));</code></p>\n<p>Huge forms:<br>\n<code>debug(element_children($form));</code></p>\n<p>Huge arrays:<br>\n<code>debug(array_keys($whatever));</code></p>",
+        "id": 208810502,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1599046538
+    },
+    {
+        "content": "<p>If you want to use <code>debug()</code>, you have to select the \"All messages\" at <code>admin/config/development/logging</code></p>",
+        "id": 208815985,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1599049860
+    },
+    {
+        "content": "<p>Experienced this issue again. Opened an issue for Devel to hopefully find a way to fix this: <a href=\"https://github.com/backdrop-contrib/devel/issues/104\">https://github.com/backdrop-contrib/devel/issues/104</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/devel/issues/104\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/devel/issues/104\" title=\"Web page (dpm()) slowing down browser · Issue #104 · backdrop-contrib/devel\">Web page (dpm()) slowing down browser · Issue #104 · backdrop-contrib/devel</a></div><div class=\"message_embed_description\">Sometimes when I use dpm() to view an object/variable, I get a message in my browser saying that a web page is slowing down the browser: Even though I click the &#39;Wait&#39; button, the message o...</div></div></div>",
+        "id": 218046165,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1606434962
+    }
+]

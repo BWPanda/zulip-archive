@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p>D7:<br>\n<code>$internal_link = l(t('Book admin'), 'admin/structure/book');</code></p>\n<p>D8:</p>\n<div class=\"codehilite\"><pre><span></span><span class=\"x\">use Drupal\\Core\\Link;</span>\n<span class=\"x\">use Drupal\\Core\\Url;</span>\n<span class=\"x\">$url = Url::fromRoute(&#39;book.admin&#39;);</span>\n<span class=\"x\">$internal_link = Link::fromTextAndUrl(t(&#39;Book admin&#39;), $url)-&gt;toString();</span>\n</pre></div>\n\n\n<p><span aria-label=\"rolling eyes\" class=\"emoji emoji-1f644\" role=\"img\" title=\"rolling eyes\">:rolling_eyes:</span></p>",
+        "id": 186774862,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580212024
+    },
+    {
+        "content": "<p><code>Url::fromRoute('book.admin')</code><br>\nWhat the heck is a 'route'!? And why can't I just link to a URL?<br>\n<span aria-label=\"expressionless\" class=\"emoji emoji-1f611\" role=\"img\" title=\"expressionless\">:expressionless:</span> <span aria-label=\"gun\" class=\"emoji emoji-1f52b\" role=\"img\" title=\"gun\">:gun:</span></p>",
+        "id": 186775187,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580212308
+    },
+    {
+        "content": "<p>Maybe: <a href=\"https://www.drupal.org/docs/8/api/routing-system/introductory-drupal-8-routes-and-controllers-example\" target=\"_blank\" title=\"https://www.drupal.org/docs/8/api/routing-system/introductory-drupal-8-routes-and-controllers-example\">https://www.drupal.org/docs/8/api/routing-system/introductory-drupal-8-routes-and-controllers-example</a></p>",
+        "id": 186780845,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1580217324
+    },
+    {
+        "content": "<p>The concept of a route is pretty common with other libraries such as Node and Laravel. Though I can see how it can be confusing</p>",
+        "id": 186786432,
+        "sender_full_name": "Herb",
+        "timestamp": 1580221119
+    },
+    {
+        "content": "<p>Yes, routes are confusing, but my main pain point with D8 is the complexity added (IMO, unnecessarily). What was one line of code in D7 becomes 4 lines in D8. Another example is the deprecation of <code>arg()</code>: <a href=\"https://www.drupal.org/node/2274705\" target=\"_blank\" title=\"https://www.drupal.org/node/2274705\">https://www.drupal.org/node/2274705</a> (read the first few comments on that page)</p>",
+        "id": 186786782,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580221325
+    },
+    {
+        "content": "<p>As one commenter alluded to, D8 is going in the opposite direction to other software, specifically jQuery with its \"Write less, do more\" motto.</p>",
+        "id": 186786981,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580221457
+    },
+    {
+        "content": "<p>(Drupal seems to have adopted a \"Write more, do the same\" motto <span aria-label=\"laughing\" class=\"emoji emoji-1f606\" role=\"img\" title=\"laughing\">:laughing:</span> )</p>",
+        "id": 186787043,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580221516
+    },
+    {
+        "content": "<p>I recall a Drupalcon presentation making a similar point. By someone who worked heavily on menu system in Drupal 7 and 8. Can't recall who exactly</p>",
+        "id": 186787136,
+        "sender_full_name": "Herb",
+        "timestamp": 1580221575
+    },
+    {
+        "content": "<p>I seem to recall that those routes also required some YAML code. Am I not remembering that correctly? I stopped doing anything with D8 about 3 years ago.</p>",
+        "id": 186794169,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1580225887
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> Yes, I think if you create your own menu items you need YAML code to do so.</p>",
+        "id": 186800818,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580229852
+    },
+    {
+        "content": "<p>I think it's for creating a route, not referencing one. The yaml makes that step easier</p>",
+        "id": 186804122,
+        "sender_full_name": "Herb",
+        "timestamp": 1580231757
+    },
+    {
+        "content": "<p>this thread made me smile. thanks</p>",
+        "id": 186829473,
+        "sender_full_name": "ericfg",
+        "timestamp": 1580245846
+    },
+    {
+        "content": "<p>Hi, ericfg. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions.</p>",
+        "id": 186829474,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1580245846
+    },
+    {
+        "content": "<p>Aww, thank you guys ...always good to have a laugh at things D8 does \"so much better\" then D7 <span aria-label=\"tongue\" class=\"emoji emoji-1f445\" role=\"img\" title=\"tongue\">:tongue:</span></p>",
+        "id": 187469341,
+        "sender_full_name": "klonos",
+        "timestamp": 1580920131
+    }
+]

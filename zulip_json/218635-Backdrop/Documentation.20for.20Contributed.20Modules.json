@@ -1,0 +1,80 @@
+[
+    {
+        "content": "<p>I have just discovered that Drupal has some useful structured documentation for Contributed Modules at <a href=\"https://www.drupal.org/docs/7/modules\" target=\"_blank\" title=\"https://www.drupal.org/docs/7/modules\">https://www.drupal.org/docs/7/modules</a><br>\nI found this because while working on the Rules module in Backdrop I find it has a link to explanatory information at <a href=\"https://www.drupal.org/node/298480\" target=\"_blank\" title=\"https://www.drupal.org/node/298480\">https://www.drupal.org/node/298480</a> 'Introduction to Rules'. I would like to create a Backdrop version of this.<br>\nDo we have a similar section on Contributed Modules in our online documentation? I think not. Please could we have one. I would be happy to start adding content.</p>",
+        "id": 184991959,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1578387081
+    },
+    {
+        "content": "<p>I think that we should open a github ticket?<br>\n<a href=\"https://github.com/backdrop-ops/backdropcms.org/issues\" target=\"_blank\" title=\"https://github.com/backdrop-ops/backdropcms.org/issues\">https://github.com/backdrop-ops/backdropcms.org/issues</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues\" target=\"_blank\" title=\"backdrop-ops/backdropcms.org\">backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">Issue tracker for the BackdropCMS.org website. Contribute to backdrop-ops/backdropcms.org development by creating an account on GitHub.</div></div></div>",
+        "id": 184992229,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1578387407
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256648\">@Graham Oliver</span> Wouldn't a separate documentation section for contributed projects overlap with the README (and Wiki) of the individual projects? I think, amongst other reasons, Drupal has a separate documentation because they have only README.txt files for the project itself. Backdrop projects use markdown files (and have the Wiki).</p>",
+        "id": 184995268,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578390352
+    },
+    {
+        "content": "<p>I agree with <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span>, that's what GitHub wiki's are for. The default README template even mentions this.</p>",
+        "id": 184995577,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578390603
+    },
+    {
+        "content": "<p><a href=\"https://github.com/backdrop-ops/module-template/blob/master/README.md\" target=\"_blank\" title=\"https://github.com/backdrop-ops/module-template/blob/master/README.md\">https://github.com/backdrop-ops/module-template/blob/master/README.md</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/module-template/blob/master/README.md\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/module-template/blob/master/README.md\" target=\"_blank\" title=\"backdrop-ops/module-template\">backdrop-ops/module-template</a></div><div class=\"message_embed_description\">A template for creating your own, custom Backdrop module. - backdrop-ops/module-template</div></div></div>",
+        "id": 184995658,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578390699
+    },
+    {
+        "content": "<p>That separate contrib documentation section has existed for a long time. As a Drupal project maintainer, keeping up on documentation has always been a sore spot for me. As a Drupal project maintainer, I am supposed to keep up to date separate documentation for each project in three areas: the README.txt file, the main project page, and that contrib documentation section. And even if they all had the same content, you still have to keep up on the three separate areas, and the formatting for at least two of them is different. For someone who does not have a lot of time for responding to and fixing issues, maintaining three separate sets of documentation is a little too much.</p>",
+        "id": 185010160,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578403938
+    },
+    {
+        "content": "<p>Not to mention <code>hook_help()</code>... <span aria-label=\"smile\" class=\"emoji emoji-263a\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 185010208,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578404002
+    },
+    {
+        "content": "<p>Oh, yeah. I forgot about that one.</p>",
+        "id": 185010280,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578404044
+    },
+    {
+        "content": "<p>I'm really glad Backdrop uses the README for the project page on <a href=\"http://BackdropCMS.org\" target=\"_blank\" title=\"http://BackdropCMS.org\">BackdropCMS.org</a>, and got rid of <code>hook_help()</code>.</p>",
+        "id": 185010334,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1578404099
+    },
+    {
+        "content": "<p>Something nice about using the README for the project page is that key information can be included and people can either view it locally or navigate to the project page, whichever is more convenient for the user at the time. I always found it annoying (but totally understandable, given the documentation situation) to be reading the README for information on installation and/or configuration only to be pointed to a website. It kind of made the README seem pointless.</p>",
+        "id": 185010938,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1578404502
+    },
+    {
+        "content": "<p>I appreciate the points being made here but expecting a user to find the project page seems not very user-friendly, though reasonable for developers.</p>",
+        "id": 185015946,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1578407925
+    },
+    {
+        "content": "<p>I have opened an issue at <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/627\" target=\"_blank\" title=\"https://github.com/backdrop-ops/backdropcms.org/issues/627\">https://github.com/backdrop-ops/backdropcms.org/issues/627</a> so we will see what others think.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/627\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/627\" target=\"_blank\" title=\"Documentation for Contributed Modules · Issue #627 · backdrop-ops/backdropcms.org\">Documentation for Contributed Modules · Issue #627 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">I would like to propose that we have a new section in backdropcms.org for documentation relating to contributed modules that is user-focused rather than development focused, that is it would explai...</div></div></div>",
+        "id": 185016176,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1578408072
+    },
+    {
+        "content": "<p>Thanks for the issue, <span class=\"user-mention\" data-user-id=\"256648\">@Graham Oliver</span> . I've replied there.</p>",
+        "id": 185019422,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1578409992
+    }
+]

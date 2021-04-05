@@ -1,0 +1,44 @@
+[
+    {
+        "content": "<p>A quick survey: On a multilingual site with several menu items in different languages...</p>\n<p>It makes sense that child menu items should have the same language as their parent, in other words, when creating a new menu item in a language, only items of the same language should be available in the parent dropdown list. That seems logic.</p>\n<p>But how about language neutral items? Should the parent select list allow <em>all</em> items, regardless of language, or only language neutral ones?</p>",
+        "id": 221757469,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609932845
+    },
+    {
+        "content": "<p>Background to my question is <a href=\"https://github.com/backdrop/backdrop-issues/issues/4857\">this issue</a> where I'm trying to fix it. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4857\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4857\" title=\"Menu UI: &quot;Parent link&quot; options only ever shows current language and neutral options · Issue #4857 · backdrop/backdrop-issues\">Menu UI: \"Parent link\" options only ever shows current language and neutral options · Issue #4857 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When I am adding a menu link for the Spanish language (and url contains langcode=es), I usually want to put the new link underneath another link that is Spanish. The select l...</div></div></div>",
+        "id": 221757768,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609933083
+    },
+    {
+        "content": "<p>I’d say, it should allow all.</p>",
+        "id": 221759842,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1609934677
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"269428\">@mazze.ch</span> What would you expect in that case? All or language neutral only?</p>",
+        "id": 221766452,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1609939747
+    },
+    {
+        "content": "<p>All of them.</p>",
+        "id": 221771929,
+        "sender_full_name": "mazze.ch",
+        "timestamp": 1609942948
+    },
+    {
+        "content": "<p>I agree. All of them.</p>",
+        "id": 221797587,
+        "sender_full_name": "Herb",
+        "timestamp": 1609954818
+    },
+    {
+        "content": "<p>A PR is available for testing and feedback is welcome. Especially regarding the node form UX, but any feedback is appreciated. <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span> </p>\n<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4857\">https://github.com/backdrop/backdrop-issues/issues/4857</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4857\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4857\" title=\"Menu UI: &quot;Parent link&quot; options only ever shows current language and neutral options · Issue #4857 · backdrop/backdrop-issues\">Menu UI: \"Parent link\" options only ever shows current language and neutral options · Issue #4857 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the bug When I am adding a menu link for the Spanish language (and url contains langcode=es), I usually want to put the new link underneath another link that is Spanish. The select l...</div></div></div>",
+        "id": 222446973,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1610465423
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p>Since <span class=\"user-mention\" data-user-id=\"256793\">@Dragonbot</span> isn't putting links to new forum posts here yet, here's a post I just made that I could use help with: <a href=\"https://forum.backdropcms.org/forum/colourising-images-css\" target=\"_blank\" title=\"https://forum.backdropcms.org/forum/colourising-images-css\">https://forum.backdropcms.org/forum/colourising-images-css</a></p>",
+        "id": 190277723,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1583931574
+    },
+    {
+        "content": "<p>What an interesting thing to be working on! <span aria-label=\"thinking\" class=\"emoji emoji-1f914\" role=\"img\" title=\"thinking\">:thinking:</span></p>",
+        "id": 190286857,
+        "sender_full_name": "klonos",
+        "timestamp": 1583936894
+    },
+    {
+        "content": "<p>PHP provides some functions to get color information out of a picture that you could use and then you could do some math to figure out what the angle should be for shifting with filter. <a href=\"https://www.php.net/manual/en/function.imagecolorat.php#70783\" target=\"_blank\" title=\"https://www.php.net/manual/en/function.imagecolorat.php#70783\">https://www.php.net/manual/en/function.imagecolorat.php#70783</a></p>",
+        "id": 190309549,
+        "sender_full_name": "Joseph Flatt",
+        "timestamp": 1583948035
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> It may not be exactly what you had in mind, but I just did a quick test with Image Effects:</p>\n<ul>\n<li>Activate <strong>Image Effects</strong> and <strong>Image Effects Color Actions</strong></li>\n<li>Create a new Image Style</li>\n<li>Add the \"Desaturate\" effect</li>\n<li>Add the \"Color Shift\" effect and choose your color<br>\nHere's how your example came out:<br>\n<a href=\"/user_uploads/18319/upxAB3jB6b-P8XUL7NnewcPu/Screenshot_2020-03-11-colorized.png\" target=\"_blank\" title=\"Screenshot_2020-03-11-colorized.png\">Screenshot_2020-03-11-colorized.png</a><div class=\"message_inline_image\"><a href=\"/user_uploads/18319/upxAB3jB6b-P8XUL7NnewcPu/Screenshot_2020-03-11-colorized.png\" target=\"_blank\" title=\"Screenshot_2020-03-11-colorized.png\"><img src=\"/user_uploads/18319/upxAB3jB6b-P8XUL7NnewcPu/Screenshot_2020-03-11-colorized.png\"></a></div></li>\n</ul>",
+        "id": 190330367,
+        "sender_full_name": "Laryn",
+        "timestamp": 1583960151
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span>  Ah! I didn't realise I had to enable a separate sub-module <span aria-label=\"face palm\" class=\"emoji emoji-1f926\" role=\"img\" title=\"face palm\">:face_palm:</span> Thanks, that might just be the solution!</p>",
+        "id": 190330966,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1583960445
+    },
+    {
+        "content": "<p>I think the 'Color multiply' effect works best... Thanks for pointing that out <span aria-label=\"smile\" class=\"emoji emoji-263a\" role=\"img\" title=\"smile\">:smile:</span></p>",
+        "id": 190331581,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1583960812
+    },
+    {
+        "content": "<p>There's also CSS that can do this now, the support is pretty good: <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode\" target=\"_blank\" title=\"https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode\">https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode\" style=\"background-image: url(https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode\" target=\"_blank\" title=\"mix-blend-mode\">mix-blend-mode</a></div><div class=\"message_embed_description\">The mix-blend-mode CSS property sets how an element's content should blend with the content of the element's parent and the element's background.</div></div></div>",
+        "id": 191657920,
+        "sender_full_name": "wesruv",
+        "timestamp": 1585076541
+    },
+    {
+        "content": "<p>Hi, wesruv. Welcome to the Backdrop CMS community on Zulip. I'm your friendly neighborhood Dragonbot. Try '@Dragonbot help' for a list of things I can help you with. There are lots of friendly humans that hang around here, so please feel free to ask questions. </p>\n<p>Here is a short (3 min) video to help you navigate Zulip. <a href=\"https://youtu.be/DN8YL2MrsSU\" target=\"_blank\" title=\"https://youtu.be/DN8YL2MrsSU\">https://youtu.be/DN8YL2MrsSU</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"DN8YL2MrsSU\" href=\"https://youtu.be/DN8YL2MrsSU\" target=\"_blank\" title=\"https://youtu.be/DN8YL2MrsSU\"><img src=\"https://i.ytimg.com/vi/DN8YL2MrsSU/default.jpg\"></a></div>",
+        "id": 191657921,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1585076541
+    },
+    {
+        "content": "<p><a href=\"https://caniuse.com/#search=mix-blend\" target=\"_blank\" title=\"https://caniuse.com/#search=mix-blend\">https://caniuse.com/#search=mix-blend</a></p>",
+        "id": 191657965,
+        "sender_full_name": "wesruv",
+        "timestamp": 1585076568
+    }
+]

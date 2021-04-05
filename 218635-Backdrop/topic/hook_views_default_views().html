@@ -1,0 +1,225 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/hook_views_default_views().html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html">hook_views_default_views()</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="207189865"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207189865" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207189865">(Aug 17 2020 at 19:57)</a>:</h4>
+<p>Hi Guys...,</p>
+<p>I'm going around in circles trying to find out why a new view in the module I'm trying to convert won't show up...</p>
+<p>the api.backdrop.....  site says the API is 1,  </p>
+<p>With hook_views_default_views()  it say's</p>
+<p>$view-&gt;api_version = '3';</p>
+<p>Should this be  $view-&gt;api_version = '1';</p>
+<p>I've searched the "Search API and Documentation" and can't find it...  </p>
+<p>Also checked <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/group/views_hooks/1">https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/group/views_hooks/1</a></p>
+<p>HELP!!!!  please <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+<p>Thanks in advance.</p>
+
+
+
+<a name="207190418"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207190418" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207190418">(Aug 17 2020 at 20:02)</a>:</h4>
+<p>The API version of Views should be 3. Where are you seeing it is saying 1? That link just lists all the Views hooks.</p>
+
+
+
+<a name="207190537"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207190537" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207190537">(Aug 17 2020 at 20:03)</a>:</h4>
+<p>And this is where the Views API version is set: <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/function/hook_views_api/1">https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/function/hook_views_api/1</a></p>
+
+
+
+<a name="207192077"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207192077" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207192077">(Aug 17 2020 at 20:17)</a>:</h4>
+<p>Thanks....  the API for backdrop says v1... and I was clutching at straws <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+<p>I've also checked the URL you have sent... that also has a 1 on the end of API <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span>  "....views_hooks/1"  So I was guessing as to what the value should have been...  where as <br>
+<a href="https://api.drupal.org/api/drupal/7.x">https://api.drupal.org/api/drupal/7.x</a>  has 7 on the end to depict version 7... </p>
+<p>It's all good fun <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="207192644"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207192644" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207192644">(Aug 17 2020 at 20:22)</a>:</h4>
+<p>Ah, okay. That's the version for Backdrop and its API, not for Views. Views has its own API numbering scheme, both in Backdrop and Drupal.</p>
+
+
+
+<a name="207192794"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207192794" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207192794">(Aug 17 2020 at 20:23)</a>:</h4>
+<p>But I'm making an assumption about what you are doing based on your variable name of $view, which might be a bad assumption.</p>
+
+
+
+<a name="207193117"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207193117" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207193117">(Aug 17 2020 at 20:26)</a>:</h4>
+<p>Did you clear the cache? ;-)</p>
+
+
+
+<a name="207194221"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207194221" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> StPaulTim <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207194221">(Aug 17 2020 at 20:35)</a>:</h4>
+<p>(Sorry, but  I solved a weird Drupal 7 problem today by clearing the magic cache. I couldn't resist.)</p>
+
+
+
+<a name="207194407"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207194407" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207194407">(Aug 17 2020 at 20:37)</a>:</h4>
+<p>I would just check the config of any default views to see what values they use if unsure.</p>
+
+
+
+<a name="207198480"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207198480" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207198480">(Aug 17 2020 at 21:16)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256570">StPaulTim</span> <a href="#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/hook_views_default_views()/near/207194221">said</a>:</p>
+<blockquote>
+<p>(Sorry, but  I solved a weird Drupal 7 problem today by clearing the magic cache. I couldn't resist.)</p>
+</blockquote>
+<p>Yeah, I did, a few times lol</p>
+
+
+
+<a name="207198546"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207198546" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207198546">(Aug 17 2020 at 21:16)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256607">BWPanda</span> <a href="#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/hook_views_default_views()/near/207194407">said</a>:</p>
+<blockquote>
+<p>I would just check the config of any default views to see what values they use if unsure.</p>
+</blockquote>
+<p>I've had a look at Drupal ones... will have a look for BD now...  <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+
+
+
+<a name="207199433"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207199433" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207199433">(Aug 17 2020 at 21:29)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="302871">Steve Moorhouse</span> <a href="#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/hook_views_default_views()/near/207189865">said</a>:</p>
+<blockquote>
+<p>Hi Guys...,</p>
+<p>I'm going around in circles trying to find out why a new view in the module I'm trying to convert won't show up...</p>
+<p>the api.backdrop.....  site says the API is 1,  </p>
+<p>With hook_views_default_views()  it say's</p>
+<p>$view-&gt;api_version = '3';</p>
+<p>Should this be  $view-&gt;api_version = '1';</p>
+<p>I've searched the "Search API and Documentation" and can't find it...  </p>
+<p>Also checked <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/group/views_hooks/1">https://api.backdropcms.org/api/backdrop/core%21modules%21views%21views.api.php/group/views_hooks/1</a></p>
+<p>HELP!!!!  please <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span></p>
+<p>Thanks in advance.</p>
+</blockquote>
+<p>Found out why it doesn't work...</p>
+<p><a href="https://backdropcms.org/project/default_views_config">https://backdropcms.org/project/default_views_config</a></p>
+<p>Need to convert it to a json file</p>
+
+
+
+<a name="207202374"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207202374" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207202374">(Aug 17 2020 at 22:06)</a>:</h4>
+<p><a href="https://backdropcms.org/project/default_views_config">https://backdropcms.org/project/default_views_config</a></p>
+<p>Need to convert it to a json file</p>
+<div class="codehilite"><pre><span></span><code>ok, so... after another 40 minutes of surfing... and not finding an answer...  any chance of letting me know what I do with the JSON view file to import it?
+
+Getting fed up and can&#39;t really waste another 8 or 9 hours searching and trying to figure things out...
+</code></pre></div>
+
+
+
+<a name="207211038"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207211038" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207211038">(Aug 18 2020 at 00:04)</a>:</h4>
+<p>It goes in a <code>config</code> folder and is detected and automatically installed with the module. Alternatively, if your module is already installed and enabled and you dont want to through un/re-install, just copy it to your active config folder under the root <code>files</code> folder (the one that looks like gibberish <code>ohjhvoehrf9her9f8yrfh_config</code></p>
+
+
+
+<a name="207211073"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207211073" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207211073">(Aug 18 2020 at 00:05)</a>:</h4>
+<p>and to be clear, I mean a folder called <code>config</code> in your module root. Like most of core and contrib has got</p>
+
+
+
+<a name="207211162"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207211162" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207211162">(Aug 18 2020 at 00:06)</a>:</h4>
+<p>And to be clearer, dont waste any hours, just ask us here</p>
+
+
+
+<a name="207263683"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207263683" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207263683">(Aug 18 2020 at 14:10)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256757">docwilmot</span> <a href="#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/hook_views_default_views()/near/207211162">said</a>:</p>
+<blockquote>
+<p>And to be clearer, dont waste any hours, just ask us here</p>
+</blockquote>
+<p>Thanks <span class="user-mention" data-user-id="256757">@docwilmot</span> appreciate it...</p>
+<p>I don't like bothering people <span aria-label="smile" class="emoji emoji-1f642" role="img" title="smile">:smile:</span> </p>
+<p>Many thanks.</p>
+
+
+
+<a name="207403937"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207403937" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207403937">(Aug 19 2020 at 13:00)</a>:</h4>
+<p>Afternoon....</p>
+<p>We've got a lot of Drupal sites I will be migrating over to BD in the next six months or so... </p>
+<p>The problem I and my customers have is with webforms and "contact us" forms and spam.  On some of the sites, I've enabled the "Form Validation" module... I've added various keywords to stop some forms being submitted for example with "HTTP" in, plus others, but when I see spam being sent and seeing a formula I could add to a filter to stop them, updating 50+ sites becomes a pain <span aria-label="frown" class="emoji emoji-1f641" role="img" title="frown">:frown:</span></p>
+<p>So, I'm thinking of having some sort of REST module so they can connect "home" automatically and update their "Form Validation" settings every so often.</p>
+<p>My question...  Before I expend effort in creating it, can anyone think of any caveats or gotchas that would stop it from working?</p>
+<p>Any help or thoughts would be appreciated.</p>
+<p>Thanks again.</p>
+
+
+
+<a name="207410469"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207410469" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207410469">(Aug 19 2020 at 13:53)</a>:</h4>
+<p>Backdrop has a several alternative form spam prevention modules. Have you ever considered switching to one of those? Like Antibot, Akismet, Recaptcha, Honeypot... there are more.</p>
+
+
+
+<a name="207410662"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207410662" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207410662">(Aug 19 2020 at 13:55)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="256738">indigoxela</span> <a href="#narrow/stream/228714-Community-Chat.20(other.20topics)/topic/hook_views_default_views()/near/207410469">said</a>:</p>
+<blockquote>
+<p>Backdrop has a several alternative form spam prevention modules. Have you ever considered switching to one of those? Like Antibot, Akismet, Recaptcha, Honeypot... there are more.</p>
+</blockquote>
+<p>No, I'll have a play...  </p>
+<p>Many thanks.</p>
+
+
+
+<a name="207556431"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207556431" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Elisabeth Garbeil <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207556431">(Aug 20 2020 at 18:21)</a>:</h4>
+<p><span class="user-mention" data-user-id="302871">@Steve Moorhouse</span> <br>
+We use honeypot and reCaptcha with backdrop to almost completely eliminate spam issues with webforms and other various forms.  Using both is pretty effective and we haven't had a problem with it.  There are some other modules that are available as well, but the combination of these 2 is what worked the best for us.  We have over 100 sites, some Backdrop, some Wordpress and some still in Drupal and the modules are available on all 3 platforms.  Wordpress has more spam filtering available, but it's also hit much harder by spam bots.   There are some other resources available as well, but try these 2 first.  It's by far the simplest and quickest to set up.  FYI, we have one gmail account that we use for all site recaptchas so that we don't have to bother the client, even if they have their own gmail account for other things.</p>
+<p>Elisabeth Garbeil, Brainwrap LLC<br>
+810-560-7181, <a href="mailto:egaba@brainwrap.com">egaba@brainwrap.com</a><br>
+<span class="user-mention silent" data-user-id="302871">Steve Moorhouse</span> <a href="#narrow/stream/218635-Backdrop/topic/hook_views_default_views()/near/207403937">said</a>:</p>
+<blockquote>
+<p>Afternoon....</p>
+<p>We've got a lot of Drupal sites I will be migrating over to BD in the next six months or so... </p>
+<p>The problem I and my customers have is with webforms and "contact us" forms and spam.  On some of the sites, I've enabled the "Form Validation" module... I've added various keywords to stop some forms being submitted for example with "HTTP" in, plus others, but when I see spam being sent and seeing a formula I could add to a filter to stop them, updating 50+ sites becomes a pain <span aria-label="frown" class="emoji emoji-1f641" role="img" title="frown">:frown:</span></p>
+<p>So, I'm thinking of having some sort of REST module so they can connect "home" automatically and update their "Form Validation" settings every so often.</p>
+<p>My question...  Before I expend effort in creating it, can anyone think of any caveats or gotchas that would stop it from working?</p>
+<p>Any help or thoughts would be appreciated.</p>
+<p>Thanks again.</p>
+</blockquote>
+
+
+
+<a name="207564743"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/hook_views_default_views%28%29/near/207564743" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Steve Moorhouse <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/hook_views_default_views().html#207564743">(Aug 20 2020 at 19:33)</a>:</h4>
+<p><span class="user-mention silent" data-user-id="268008">Elisabeth Garbeil</span> <a href="#narrow/stream/218635-Backdrop/topic/hook_views_default_views()/near/207556431">said</a>:</p>
+<blockquote>
+<p>Awesome, many thanks.</p>
+</blockquote>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

@@ -1,0 +1,86 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ++ (for all your work)</p>",
+        "id": 189092112,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1582703160
+    },
+    {
+        "content": "<p>(peter)** kudos (Karma: 13)</p>",
+        "id": 189092113,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1582703160
+    },
+    {
+        "content": "<p>There seems to be an issue with sending emails on <a href=\"http://B.org\" target=\"_blank\" title=\"http://B.org\">B.org</a>: <a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/657\" target=\"_blank\" title=\"https://github.com/backdrop-ops/backdropcms.org/issues/657\">https://github.com/backdrop-ops/backdropcms.org/issues/657</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-ops/backdropcms.org/issues/657\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/8452564?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-ops/backdropcms.org/issues/657\" target=\"_blank\" title=\"&quot;SMTP Error: Could not authenticate.&quot; error · Issue #657 · backdrop-ops/backdropcms.org\">\"SMTP Error: Could not authenticate.\" error · Issue #657 · backdrop-ops/backdropcms.org</a></div><div class=\"message_embed_description\">B.org seems to be struggling to send emails. It&#39;s giving an &quot;SMTP Error: Could not authenticate.&quot; error... Originally reported here: https://forum.backdropcms.org/forum/unable-send-e-...</div></div></div>",
+        "id": 190065366,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1583758854
+    },
+    {
+        "content": "<p>Say, I updated a node on <a href=\"http://BackdropCMS.org\">BackdropCMS.org</a> earlier tonight. Logged in as admin, I could see my changes to the node. BUT, when I viewed the page as unauthenticated user in another browser, the changes were not there. I tried clearing the cache about 5 times. </p>\n<p>I assume there is some other caching happening. Anyone know what kind of caching is causing that kind of problem.</p>",
+        "id": 208314716,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598601266
+    },
+    {
+        "content": "<p>I just looked now, about 90 minutes later and my change is visible to unauthenticated user.</p>",
+        "id": 208314727,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598601298
+    },
+    {
+        "content": "<p>I think you can force the cache reset of the page by adding something like \"?something=something\" (or maybe just \"?something\") at the end of the URL.</p>",
+        "id": 208341550,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1598621013
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256627\">@oadaeh (Jason Flatt)</span> yup, I've heard people refer to that as \"cache busting\", and a simple <code>?123</code> or <code>?abc</code> works <span aria-label=\"+1\" class=\"emoji emoji-1f44d\" role=\"img\" title=\"+1\">:+1:</span></p>",
+        "id": 208347650,
+        "sender_full_name": "klonos",
+        "timestamp": 1598623963
+    },
+    {
+        "content": "<p>Which cache is so persistent? Are we using cloudflare or another external caching system?</p>",
+        "id": 208373771,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1598636484
+    },
+    {
+        "content": "<p>I believe that it's just Drupal cache. ...when you are logged in, you are not being served cached content.</p>",
+        "id": 208393565,
+        "sender_full_name": "klonos",
+        "timestamp": 1598647755
+    },
+    {
+        "content": "<p>Drupal? Interesting!</p>",
+        "id": 208403152,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1598655124
+    },
+    {
+        "content": "<p>You known what I mean <span aria-label=\"stuck out tongue\" class=\"emoji emoji-1f61b\" role=\"img\" title=\"stuck out tongue\">:stuck_out_tongue:</span></p>",
+        "id": 208405337,
+        "sender_full_name": "klonos",
+        "timestamp": 1598657405
+    },
+    {
+        "content": "<p>there is also an nginx cache on the server (reverse proxy)</p>",
+        "id": 208782777,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1599025943
+    },
+    {
+        "content": "<p>Date of Drupal 7 EOL is invalid on <a href=\"https://backdropcms.org/roadmap\">https://backdropcms.org/roadmap</a></p>",
+        "id": 208815239,
+        "sender_full_name": "Attila Vasas",
+        "timestamp": 1599049453
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256741\">@Attila Vasas</span> ...we have an internal issue open in the PMC queue, to discuss \"Should we push Backdrop v2.0 from \"not before\" Jan 2024 to Jan 2025?\" ...all PMC members have voted in favor, and the last task is a blog post to make the official announcement. Once that's done, we'll update the roadmap page too.</p>",
+        "id": 208847166,
+        "sender_full_name": "klonos",
+        "timestamp": 1599062352
+    }
+]

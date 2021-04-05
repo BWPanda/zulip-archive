@@ -1,0 +1,32 @@
+[
+    {
+        "content": "<p>I'm struggling with something here. I wants to run some intensive code to create a large zip file that downloads automatically after the zip is created (by calling <code>readfile()</code> then <code>exit()</code>) but this seems not doable in a batch API finish callback because the <code>exit()</code> hangs the batch process and progress indicator just keeps going forever. Is there any other way you can think of to get a file download after a batch process?</p>",
+        "id": 232121618,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1616882846
+    },
+    {
+        "content": "<blockquote>\n<p>Is there any other way you can think of to get a file download after a batch process?</p>\n</blockquote>\n<p>To be honest, I never did that in combination. Maybe just save the file in batches, and after job completion redirect to the download? Or a page with the download link... Or set a message with the download link?</p>",
+        "id": 232174119,
+        "sender_full_name": "indigoxela",
+        "timestamp": 1616945883
+    },
+    {
+        "content": "<p>You could take a look at views export module for an example</p>",
+        "id": 232175539,
+        "sender_full_name": "Herb",
+        "timestamp": 1616947435
+    },
+    {
+        "content": "<p>As I can see this task: it should be client request, maybe cron job with URL provided/programmed?</p>",
+        "id": 232178765,
+        "sender_full_name": "findlabnet(Vladimir)",
+        "timestamp": 1616950647
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"256738\">indigoxela</span> <a href=\"#narrow/stream/228714-Community-Chat.20.28other.20topics.29/topic/Download.20file.20after.20batch.20complete/near/232174119\">said</a>:</p>\n<div class=\"codehilite\"><pre><span></span><code>Or a page with the download link?\n</code></pre></div>\n<p>Thanks all. I did that <span aria-label=\"point up\" class=\"emoji emoji-1f446\" role=\"img\" title=\"point up\">:point_up:</span></p>",
+        "id": 232429408,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1617112682
+    }
+]

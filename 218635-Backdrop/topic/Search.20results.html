@@ -1,0 +1,74 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Search.20results.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20results.html">Search results</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="195739582"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20results/near/195739582" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20results.html#195739582">(Apr 29 2020 at 16:56)</a>:</h4>
+<p>What's the best way to adjust the search results listing? (In this case, I want to remove the author name/link). <br>
+<a href="/user_uploads/18319/Iy70j99ZAXw5v5FePHrh7XAx/Screen-Shot-2020-04-29-at-11.54.42-AM.jpg" title="Screen-Shot-2020-04-29-at-11.54.42-AM.jpg">Screen-Shot-2020-04-29-at-11.54.42-AM.jpg</a></p>
+<div class="message_inline_image"><a href="/user_uploads/18319/Iy70j99ZAXw5v5FePHrh7XAx/Screen-Shot-2020-04-29-at-11.54.42-AM.jpg" title="Screen-Shot-2020-04-29-at-11.54.42-AM.jpg"><img src="/user_uploads/18319/Iy70j99ZAXw5v5FePHrh7XAx/Screen-Shot-2020-04-29-at-11.54.42-AM.jpg"></a></div>
+
+
+
+<a name="195739761"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20results/near/195739761" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20results.html#195739761">(Apr 29 2020 at 16:57)</a>:</h4>
+<p>Is it just to create a template override in my theme in <a href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/search/templates/search-results.tpl.php" title="https://github.com/backdrop/backdrop/blob/1.x/core/modules/search/templates/search-results.tpl.php">this file</a> or is it possible through the UI?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/search/templates/search-results.tpl.php" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop/blob/1.x/core/modules/search/templates/search-results.tpl.php" title="backdrop/backdrop">backdrop/backdrop</a></div><div class="message_embed_description">Backdrop core code repository. Contribute to backdrop/backdrop development by creating an account on GitHub.</div></div></div>
+
+
+
+<a name="195746520"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20results/near/195746520" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20results.html#195746520">(Apr 29 2020 at 17:51)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> I've done something similar here: <a href="https://panda.id.au/search/node/test" title="https://panda.id.au/search/node/test">https://panda.id.au/search/node/test</a><br>
+To achieve that, I have this code in my theme's <code>template.php</code> file:</p>
+<div class="codehilite"><pre><span></span><code><span class="x">/**</span>
+<span class="x"> * Overrides template_preprocess_search_results().</span>
+<span class="x"> */</span>
+<span class="x">function [THEME]_preprocess_search_results(&amp;$variables) {</span>
+<span class="x">  foreach ($variables[&#39;search_results&#39;] as &amp;$result) {</span>
+<span class="x">    $result[&#39;info&#39;] = $result[&#39;url&#39;];</span>
+<span class="x">  }</span>
+<span class="x">}</span>
+</code></pre></div>
+
+
+<p>Maybe that helps you make the changes you need...?</p>
+<div class="message_embed"><a class="message_embed_image" href="https://panda.id.au/search/node/test" style="background-image: url(https://panda.id.au/sites/panda/themes/panda/images/road.jpg)"></a><div class="data-container"><div class="message_embed_title"><a href="https://panda.id.au/search/node/test" title="Search">Search</a></div><div class="message_embed_description">https://panda.id.au/posts/ammo-testing-results</div></div></div>
+
+
+
+<a name="195762004"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20results/near/195762004" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20results.html#195762004">(Apr 29 2020 at 19:56)</a>:</h4>
+<p>Thanks! This line in the <code>foreach</code> looks like it will do it:</p>
+<p><code>$result['info'] = $result['info_split']['date'];</code></p>
+
+
+
+<a name="195779592"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20results/near/195779592" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> docwilmot <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20results.html#195779592">(Apr 29 2020 at 22:47)</a>:</h4>
+<p>Use Views?</p>
+
+
+
+<a name="195880469"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20results/near/195880469" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Olaf Grabienski <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20results.html#195880469">(Apr 30 2020 at 18:20)</a>:</h4>
+<p>Or the good old “display: none;”</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

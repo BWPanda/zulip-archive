@@ -1,0 +1,74 @@
+[
+    {
+        "content": "<p>I haven't found a good way to add the search box to the header. On a lot of sites a search box ends up in the top right corner. Yet it's a bit difficult to put it there. Wondering if anyone else has good approaches for this. I was also wondering if we added it as an option to the default header block</p>",
+        "id": 187004282,
+        "sender_full_name": "Herb",
+        "timestamp": 1580401970
+    },
+    {
+        "content": "<p>I was able to add the 'Search form' block to the header on a test site just now, no problems... Are you having an issue doing this, or is the problem more a theming one in terms of styling it to appear literally in the top-right corner of the header? (in which case I'd suggest looking into CSS Flex/Grid/Floats)</p>",
+        "id": 187020690,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580411933
+    },
+    {
+        "content": "<p>More about design. I've used flex but it's not really user friendly</p>",
+        "id": 187022471,
+        "sender_full_name": "Herb",
+        "timestamp": 1580413082
+    },
+    {
+        "content": "<p>Wondering about a quick solution, much like how the header block already has smart defaults</p>",
+        "id": 187022531,
+        "sender_full_name": "Herb",
+        "timestamp": 1580413114
+    },
+    {
+        "content": "<p>Some themes/layouts would be better suited to this task than others then I imagine...</p>",
+        "id": 187022556,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1580413133
+    },
+    {
+        "content": "<p>There was another person having issues with getting the Search block to display nicely relatively recently. It was on Gitter but I think related to how the submit button was displaying. Agreed that making this more friendly ootb would be helpful.</p>",
+        "id": 187024534,
+        "sender_full_name": "Laryn",
+        "timestamp": 1580414295
+    },
+    {
+        "content": "<p>I ported <a href=\"https://github.com/backdrop-contrib/better_search\" target=\"_blank\" title=\"https://github.com/backdrop-contrib/better_search\">https://github.com/backdrop-contrib/better_search</a> at one point for a site but haven't done much with it besides the port.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/better_search\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\" target=\"_blank\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/better_search\" target=\"_blank\" title=\"backdrop-contrib/better_search\">backdrop-contrib/better_search</a></div><div class=\"message_embed_description\">Tweak the default Backdrop search block with CSS animations - backdrop-contrib/better_search</div></div></div>",
+        "id": 187024620,
+        "sender_full_name": "Laryn",
+        "timestamp": 1580414378
+    },
+    {
+        "content": "<p>I think that was me. Seems like there should be an easy way in the UI to make the search button go next to the search box. I have to use Custom Search because I need several search paths.</p>",
+        "id": 188074491,
+        "sender_full_name": "Justin Keiser",
+        "timestamp": 1581563571
+    },
+    {
+        "content": "<p>I would like there to be a discussion about the Header layout in Basic. I think we need more flexibility to add things and produce different styles/layouts of header. I usually find I have to make custom alterations.</p>",
+        "id": 188085215,
+        "sender_full_name": "Graham Oliver",
+        "timestamp": 1581580700
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256705\">@Herb</span> maybe we should add a checkbox in the header settings to include a search box?</p>",
+        "id": 188148683,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1581626704
+    },
+    {
+        "content": "<p>this seems like soemthing that would be a common use case, and would be valuable</p>",
+        "id": 188148707,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1581626721
+    },
+    {
+        "content": "<p>That's what I was thinking. I took a look to see how hard. Probably not that bad to implement but I ended up moving on to something else. I can't recall if we have a backlog issue for it</p>",
+        "id": 188156302,
+        "sender_full_name": "Herb",
+        "timestamp": 1581630840
+    }
+]

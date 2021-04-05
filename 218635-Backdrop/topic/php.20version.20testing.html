@@ -1,0 +1,58 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/php.20version.20testing.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/php.20version.20testing.html">php version testing</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="210746851"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/php%20version%20testing/near/210746851" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/php.20version.20testing.html#210746851">(Sep 21 2020 at 14:13)</a>:</h4>
+<p>Does anyone know if there's an existing issue for increasing the PHP version for testing? Seems like we need to move to 7.3 or so.</p>
+
+
+
+<a name="210747980"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/php%20version%20testing/near/210747980" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> oadaeh (Jason Flatt) <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/php.20version.20testing.html#210747980">(Sep 21 2020 at 14:20)</a>:</h4>
+<p>I don't know if there's a separate issue for it, but it has been discussed in at least a couple of issues.</p>
+
+
+
+<a name="210750344"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/php%20version%20testing/near/210750344" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> indigoxela <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/php.20version.20testing.html#210750344">(Sep 21 2020 at 14:38)</a>:</h4>
+<p>I remember someone mentioning that there's no test box version that provides php 5.3 together with something newer than php 7.0.<br>
+Additionally there's a small bug with the command line installer and php versions above 7.1 (<a href="https://github.com/backdrop/backdrop-issues/issues/4111">https://github.com/backdrop/backdrop-issues/issues/4111</a>)</p>
+<div class="message_embed"><a class="message_embed_image" href="https://github.com/backdrop/backdrop-issues/issues/4111" style="background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)"></a><div class="data-container"><div class="message_embed_title"><a href="https://github.com/backdrop/backdrop-issues/issues/4111" title="PHP warning: Headers already sent · Issue #4111 · backdrop/backdrop-issues">PHP warning: Headers already sent · Issue #4111 · backdrop/backdrop-issues</a></div><div class="message_embed_description">When installing Backdrop using ./core/scripts/install.sh I see lots of the following warnings: PHP Warning: ini_set(): Headers already sent. You cannot change the session module&#39;s ini settings ...</div></div></div>
+
+
+
+<a name="210753483"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/php%20version%20testing/near/210753483" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/php.20version.20testing.html#210753483">(Sep 21 2020 at 14:59)</a>:</h4>
+<p>I'm guessing the issue should go into backdrop-ops</p>
+
+
+
+<a name="210764267"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/php%20version%20testing/near/210764267" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/php.20version.20testing.html#210764267">(Sep 21 2020 at 16:15)</a>:</h4>
+<p>I have no idea where to put it. Is there a project for the testing infrastructure?</p>
+
+
+
+<a name="210764426"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/php%20version%20testing/near/210764426" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Herb <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/php.20version.20testing.html#210764426">(Sep 21 2020 at 16:16)</a>:</h4>
+<p>there are two issues - increase the PHP 7.x version for testing; and possibly increase from 5.3 to 5.6 (match WP's minimum?)</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

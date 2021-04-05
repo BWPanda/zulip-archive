@@ -1,0 +1,42 @@
+---
+layout: archive
+title: Zulip Chat Archive
+permalink: /stream/218635-Backdrop/topic/Search.20block.html
+---
+
+<h2>Stream: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/index.html">Backdrop</a></h2>
+<h3>Topic: <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20block.html">Search block</a></h3>
+
+<hr>
+
+<base href="backdrop.zulipchat.com">
+
+<head><link href="/style.css" rel="stylesheet"></head>
+
+{% raw %}
+
+<a name="188662016"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20block/near/188662016" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20block.html#188662016">(Feb 20 2020 at 18:06)</a>:</h4>
+<p>I'm trying to render the search block from within a custom module. This seems to work, except the values I'm trying to pass as parameters aren't taking (e.g. the button shows up and no placeholder text in the search field). Anyone have an idea what I need to change here?</p>
+<div class="codehilite"><pre><span></span>$searchblock = module_invoke(&#39;search&#39;, &#39;block_view&#39;, array( &#39;placeholder&#39; =&gt; &#39;Search&#39;, &#39;button_text&#39; =&gt; &#39;&#39;));
+  $output = render($searchblock[&#39;content&#39;]);
+</pre></div>
+
+
+
+<a name="188663297"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20block/near/188663297" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> Laryn <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20block.html#188663297">(Feb 20 2020 at 18:21)</a>:</h4>
+<p>Update: First line seems to work like this:<br>
+<code>$searchblock = module_invoke('search', 'block_view', 'search_block', array( 'search' =&gt; array('placeholder' =&gt; 'Search', 'button_text' =&gt; '')));</code></p>
+
+
+
+<a name="188666958"></a>
+<h4><a href="backdrop.zulipchat.com#narrow/stream/218635-Backdrop/topic/Search%20block/near/188666958" class="zl"><img src="https://bwpanda.github.io/zulip-archive/assets/img/zulip.svg" alt="view this post on Zulip" style="width:20px;height:20px;"></a> BWPanda <a href="https://bwpanda.github.io/zulip-archive/stream/218635-Backdrop/topic/Search.20block.html#188666958">(Feb 20 2020 at 19:00)</a>:</h4>
+<p><span class="user-mention" data-user-id="256573">@Laryn</span> Yep, you got it. Note however that the 3rd parameter to <code>module_invoke()</code> is the <code>$delta</code> of the block, and that <code>search_block_view()</code> doesn't seem to use that parameter at all, so you could make that an empty string, or anything else, and it wouldn't matter.</p>
+
+
+
+{% endraw %}
+
+<hr><p>Last updated: Apr 05 2021 at 23:47 UTC</p>

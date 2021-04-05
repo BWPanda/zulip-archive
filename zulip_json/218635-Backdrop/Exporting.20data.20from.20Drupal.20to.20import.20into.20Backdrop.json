@@ -1,0 +1,110 @@
+[
+    {
+        "content": "<p>I need to export a D7 site's data (content, taxonomy, users, etc.) to Backdrop. Just wondering if D7 <code>views_data_export</code> and B <code>feeds</code> are the best tools for this...?</p>",
+        "id": 204031696,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1594860126
+    },
+    {
+        "content": "<p>Might work</p>",
+        "id": 204032826,
+        "sender_full_name": "Herb",
+        "timestamp": 1594861161
+    },
+    {
+        "content": "<p>Or you could port the migrate module</p>",
+        "id": 204032835,
+        "sender_full_name": "Herb",
+        "timestamp": 1594861179
+    },
+    {
+        "content": "<p>I just tried out backdrop for the first time today and did an D7 migration. I just imported the D7 database right into the backdrop database, ran drush updb and all my data was there.</p>",
+        "id": 204032837,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594861187
+    },
+    {
+        "content": "<p><a href=\"https://backdropcms.org/upgrade-from-drupal\">https://backdropcms.org/upgrade-from-drupal</a></p>",
+        "id": 204032899,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594861219
+    },
+    {
+        "content": "<p>Yeah, doing an actual migration of the site as a whole was my first thought, but once I started looking at the site in detail, I realised there was a whole bunch of stuff/junk there (possibly from D6) that I didn't want to copy over, and removing it beforehand or changing it to a better system mid-migration looked too difficult. So decided easier in this case to setup a new Backdrop site and just import the necessary content.</p>",
+        "id": 204032956,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1594861305
+    },
+    {
+        "content": "<p>That makes sense</p>",
+        "id": 204033026,
+        "sender_full_name": "sdubois",
+        "timestamp": 1594861351
+    },
+    {
+        "content": "<p>Biolithic started porting the migrate module some years ago: <a href=\"https://github.com/backdrop-contrib/migrate\">https://github.com/backdrop-contrib/migrate</a><br>\nDue to the project I've been working on the last couple of months, I've been trying to finish it up and include the new things that have been added to the D7 module since the initial start.<br>\nI'm also going to port the WordPress Migrate module <a href=\"https://www.drupal.org/project/wordpress_migrate\">https://www.drupal.org/project/wordpress_migrate</a> and the Drupal-to-Drupal data migration (renamed to Drupal-to-Backdrop data migration) module <a href=\"https://www.drupal.org/project/migrate_d2d\">https://www.drupal.org/project/migrate_d2d</a>.<br>\nAt least I'm going to see how far along I can get them. I think they might be quite handy real soon.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop-contrib/migrate\" style=\"background-image: url(https://avatars1.githubusercontent.com/u/7720679?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop-contrib/migrate\" title=\"backdrop-contrib/migrate\">backdrop-contrib/migrate</a></div><div class=\"message_embed_description\">the early conversion beginning of Migrate module Drupal 7 port - backdrop-contrib/migrate</div></div></div>",
+        "id": 204033958,
+        "sender_full_name": "oadaeh (Jason Flatt)",
+        "timestamp": 1594862273
+    },
+    {
+        "content": "<p>Is someone talking about Wordpress again?</p>",
+        "id": 204033959,
+        "sender_full_name": "Dragonbot",
+        "timestamp": 1594862273
+    },
+    {
+        "content": "<p>Yeah, Feeds sounds like a good option in that case <span class=\"user-mention\" data-user-id=\"256607\">@BWPanda (Peter)</span> ...this reminds me of what <span class=\"user-mention\" data-user-id=\"256664\">@Luke McCormick</span> often keeps mentioning re not \"locking\" people's data, and how WP allows to easily export it:</p>",
+        "id": 204034009,
+        "sender_full_name": "klonos",
+        "timestamp": 1594862284
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/kmBrzMn6GX9_7VZRJ1Eh3tcu/Screen-Shot-2020-07-16-at-4.17.46-am.png\">Screen-Shot-2020-07-16-at-4.17.46-am.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/kmBrzMn6GX9_7VZRJ1Eh3tcu/Screen-Shot-2020-07-16-at-4.17.46-am.png\" title=\"Screen-Shot-2020-07-16-at-4.17.46-am.png\"><img src=\"/user_uploads/18319/kmBrzMn6GX9_7VZRJ1Eh3tcu/Screen-Shot-2020-07-16-at-4.17.46-am.png\"></a></div>",
+        "id": 204034049,
+        "sender_full_name": "klonos",
+        "timestamp": 1594862314
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/C-K6uZOxVrulRSxiowNzXmGu/Screen-Shot-2020-07-16-at-4.18.21-am.png\">Screen-Shot-2020-07-16-at-4.18.21-am.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/C-K6uZOxVrulRSxiowNzXmGu/Screen-Shot-2020-07-16-at-4.18.21-am.png\" title=\"Screen-Shot-2020-07-16-at-4.18.21-am.png\"><img src=\"/user_uploads/18319/C-K6uZOxVrulRSxiowNzXmGu/Screen-Shot-2020-07-16-at-4.18.21-am.png\"></a></div>",
+        "id": 204034057,
+        "sender_full_name": "klonos",
+        "timestamp": 1594862325
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/5ZJ78RtCtqkz-34FRVNn5Gpo/Screen-Shot-2020-07-16-at-4.20.35-am.png\">Screen-Shot-2020-07-16-at-4.20.35-am.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/5ZJ78RtCtqkz-34FRVNn5Gpo/Screen-Shot-2020-07-16-at-4.20.35-am.png\" title=\"Screen-Shot-2020-07-16-at-4.20.35-am.png\"><img src=\"/user_uploads/18319/5ZJ78RtCtqkz-34FRVNn5Gpo/Screen-Shot-2020-07-16-at-4.20.35-am.png\"></a></div>",
+        "id": 204034181,
+        "sender_full_name": "klonos",
+        "timestamp": 1594862454
+    },
+    {
+        "content": "<p><a href=\"/user_uploads/18319/dx9QZSMoJMv5PgB_sh7XhMSo/Screen-Shot-2020-07-16-at-4.21.42-am.png\">Screen-Shot-2020-07-16-at-4.21.42-am.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/dx9QZSMoJMv5PgB_sh7XhMSo/Screen-Shot-2020-07-16-at-4.21.42-am.png\" title=\"Screen-Shot-2020-07-16-at-4.21.42-am.png\"><img src=\"/user_uploads/18319/dx9QZSMoJMv5PgB_sh7XhMSo/Screen-Shot-2020-07-16-at-4.21.42-am.png\"></a></div>",
+        "id": 204034215,
+        "sender_full_name": "klonos",
+        "timestamp": 1594862518
+    },
+    {
+        "content": "<p>There's also <a href=\"https://www.drupal.org/project/views_data_export\">https://www.drupal.org/project/views_data_export</a> ...but not able to find a D7 module that imports that data <span aria-label=\"disappointed\" class=\"emoji emoji-1f61e\" role=\"img\" title=\"disappointed\">:disappointed:</span> ...only D8: <a href=\"https://www.drupal.org/project/csv_importer\">https://www.drupal.org/project/csv_importer</a> and <a href=\"https://www.drupal.org/project/contentimport\">https://www.drupal.org/project/contentimport</a></p>",
+        "id": 204034532,
+        "sender_full_name": "klonos",
+        "timestamp": 1594862847
+    },
+    {
+        "content": "<p>...and I'm glad that we have an issue for it <span aria-label=\"slight smile\" class=\"emoji emoji-1f642\" role=\"img\" title=\"slight smile\">:slight_smile:</span> <a href=\"https://github.com/backdrop/backdrop-issues/issues/487\">#487</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/487\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/487\" title=\"[WP] Data import and export · Issue #487 · backdrop/backdrop-issues\">[WP] Data import and export · Issue #487 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">For years, my biggest gripe with Drupal has been how hard it is to get data in and out. When I started (mid D6) the best solution was the Node Import module. It worked ok, but the interface struck ...</div></div></div>",
+        "id": 204036095,
+        "sender_full_name": "klonos",
+        "timestamp": 1594864509
+    },
+    {
+        "content": "<p>I'd recommend feeds, but build your own views for it. Depending on the content you need to export, you could even do RSS or JSON formats.</p>",
+        "id": 204127308,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1594925911
+    },
+    {
+        "content": "<p>the down-side of doing exports and imports is that you won't be able to keep the IDs the same. so if you had content that referenced terms, that might need to be re-mapped after the import.</p>",
+        "id": 204127385,
+        "sender_full_name": "jenlampton",
+        "timestamp": 1594925947
+    }
+]

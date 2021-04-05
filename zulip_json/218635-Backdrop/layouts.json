@@ -1,0 +1,416 @@
+[
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> in regards to the layouts question in the forum. On a (slightly) related note, last night I was helping a highly experienced Drupal 7 &amp; 8 developer figure out how to place an image field block on all nodes using layouts. I hope to look closer at what they were trying to do and see if we can make it easier for a site builder to figure this out. I think that this is an area where most users get confused and/or just don't understand what is possible.</p>",
+        "id": 216141426,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1604955146
+    },
+    {
+        "content": "<p>Yeah, layouts can be as simple or as complex as views are I guess.</p>",
+        "id": 216161719,
+        "sender_full_name": "klonos",
+        "timestamp": 1604969591
+    },
+    {
+        "content": "<p>...equally powerful.</p>",
+        "id": 216161722,
+        "sender_full_name": "klonos",
+        "timestamp": 1604969599
+    },
+    {
+        "content": "<p>Is it expected behavior for the \"home\" layout not to respect a node that has an alias of /home and the system is set to use /home as the front page?</p>\n<p>My default layout appears to control the home page instead of the more logical home layout which is rather confusing...</p>",
+        "id": 221113217,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609219926
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> - Is this the issue you are talking about?<br>\n<a href=\"https://github.com/backdrop/backdrop-issues/issues/4839\">https://github.com/backdrop/backdrop-issues/issues/4839</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4839\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4839\" title=\"Improve Help Text Regarding Default Home Page · Issue #4839 · backdrop/backdrop-issues\">Improve Help Text Regarding Default Home Page · Issue #4839 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need Within the context of this issue #3343 about the &quot;Default Home Page,&quot; I raised a related source of frustration for at least one user in the forum who changed the d...</div></div></div>",
+        "id": 221115124,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609223570
+    },
+    {
+        "content": "<p>If so, please comment on that issue. I think it is something that will confuse lots of users and that we need to find some way to fix.</p>",
+        "id": 221115146,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609223600
+    },
+    {
+        "content": "<p>See also: <a href=\"https://forum.backdropcms.org/forum/adding-menu-block-front-page\">https://forum.backdropcms.org/forum/adding-menu-block-front-page</a></p>",
+        "id": 221115153,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609223626
+    },
+    {
+        "content": "<p>TBH, I'm not sure. To me it acts more like a bug rather than a UX or documentation issue. But it could very well be the way it's designed, doesn't match expectation of how it \"should\" work, which would be a UX issue after all.</p>\n<p>I created a new content type called \"front\". From there I created a node of that type with the URL /home. I double checked the system default for the home page and it is also set to /home. Even the layout is configured to /home. I would expect all of this to work, but it's like there's a disconnect between the node alias and layout path.</p>\n<p>That reminds me, /home needs to be added to the robots.txt file if it isn't already. Google picks it up and shouldn't.</p>",
+        "id": 221115398,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609223995
+    },
+    {
+        "content": "<p><span class=\"user-mention silent\" data-user-id=\"330989\">Phil Ward</span> <a href=\"#narrow/stream/218635-Backdrop/topic/Layouts/near/221113217\">said</a>:</p>\n<blockquote>\n<p>Is it expected behavior for the \"home\" layout not to respect a node that has an alias of /home and the system is set to use /home as the front page?</p>\n<p>My default layout appears to control the home page instead of the more logical home layout which is rather confusing...</p>\n</blockquote>\n<p>If you change the default home page to a specific node. then the layout used for the new home page is the layout assigned to that page, not the \"home\" layout. </p>\n<p>At a minimum it's a huge UX flaw in my opinion. I can see why it works this way, but I can also see why it doesn't make sense to anyone that doesn't understand how layouts work.</p>",
+        "id": 221115474,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609224087
+    },
+    {
+        "content": "<p>Yeah, I get it now...</p>",
+        "id": 221115533,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224147
+    },
+    {
+        "content": "<p>That home layout needs to live in its own world to a degree.</p>",
+        "id": 221115542,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224181
+    },
+    {
+        "content": "<p>My suggestion was to improve the help text so that users better understand what is happening (at a minimum). But, I would love to hear other ideas for how to make this better.</p>",
+        "id": 221115568,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609224229
+    },
+    {
+        "content": "<p>I'll have to think on it a bit. That's a tough one.</p>\n<p>Ideally, layouts needs to be separated into \"pages\" and \"templates\".</p>",
+        "id": 221115614,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224283
+    },
+    {
+        "content": "<p>I don't think they should be that way as a hard default, but rather tagged as such, so that a user can change a template layout to a page layout and vice-versa.</p>\n<p>A similar strategy should be applied to blocks</p>",
+        "id": 221115690,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224384
+    },
+    {
+        "content": "<p>Pages means a layout for a specific page. Templates means a layout for a given path of pages.</p>",
+        "id": 221115719,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224469
+    },
+    {
+        "content": "<p>It \"could\" be automatically tagged as one or the other by looking for the % in the path. If no % exists, assume a single page. If it does exist, assume it is a template for multiple pages.</p>",
+        "id": 221115769,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224530
+    },
+    {
+        "content": "<p>For the record, our current use of the words is something like this:</p>\n<ul>\n<li>Layout Template = A specific configuration of regions. Boxton and Geary are layout templates. Layout templates are not specific to paths, they are only a specific configuration of regions.</li>\n<li>Layouts = All of the specific blocks and configuration (visibility rules, etc) attached to a specific template. Your home page layout might use the Boxton layout template but still be different from other layouts that use Boxton, based upon the blocks, content and configuration.</li>\n</ul>",
+        "id": 221115833,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609224626
+    },
+    {
+        "content": "<p>We've already made a number of changes to the UI to reflect these specific definitions and with the intent to reduce confusion.</p>",
+        "id": 221115903,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609224811
+    },
+    {
+        "content": "<p>Right, I use the word \"template\" loosely because I don't think of the layout templates as templates (yet).</p>\n<p>So what could be used to describe a single page vs many pages with a given criteria? I think this is the main disconnect. Single page layouts are lumped in with layouts that cover multiple pages.</p>",
+        "id": 221115942,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224843
+    },
+    {
+        "content": "<p>If I'm dealing with the layout of single pages, I want to see them all grouped together away from the more general layouts.</p>",
+        "id": 221115956,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224904
+    },
+    {
+        "content": "<p>Single Page Layouts<br>\nMulti-page Layouts</p>",
+        "id": 221115962,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609224942
+    },
+    {
+        "content": "<p>This would be a good topic to talk about during a meeting sometime. Also, if you can define what you are looking for sufficiently, I recommend opening a ticket in Github, where it can be discussed.</p>",
+        "id": 221116029,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609225048
+    },
+    {
+        "content": "<p>I bring up blocks, because this is the one glaring disconnect with \"custom\" blocks on Drupal 8+. A very specific block that is going on a specific page, gets lumped together with all the other blocks. 3 years and 50 blocks later, trying to handle that one specific block becomes a needle in a haystack scenario.</p>",
+        "id": 221116074,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609225093
+    },
+    {
+        "content": "<p>Do you think it warrants its own issue? I feel like it fits within yours being a UX/UI problem</p>",
+        "id": 221116141,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609225219
+    },
+    {
+        "content": "<p>I don't know if your ideas are big/cifferent enough to need their own issue or close enough to the existing issue. Just do what feels right to you. </p>\n<p>If you add it to my issue and I think it needs to be split, we can deal with that later.</p>",
+        "id": 221116252,
+        "sender_full_name": "StPaulTim",
+        "timestamp": 1609225415
+    },
+    {
+        "content": "<p>If you have a node with the same path as a layout than it has to decide which one should be used. Seems like the node with alias \"home\" is taking precedence over the layout with path \"home\". One should disable one or the other.</p>",
+        "id": 221168577,
+        "sender_full_name": "Herb",
+        "timestamp": 1609277083
+    },
+    {
+        "content": "<p>One UX improvement would be to highlight if a layout path collides with a node, view, etc. Or even prevent it from happening when trying to create the path. Though not sure if we want to in all cases since I have used it advantage with a layout and a view</p>",
+        "id": 221168769,
+        "sender_full_name": "Herb",
+        "timestamp": 1609277200
+    },
+    {
+        "content": "<p>For new people, there is a glaring disconnect between a layout page and a node page and blocks that can live on layout pages but they can't live on node pages.</p>\n<p>I have no suggestions right now on how to fix that UX, but it's difficult to wrap your head around the fact that more than one thing can be a page. A layout page can hold a node page, but a node can't do anything except be a page.</p>\n<p>We're inheriting a lot of poor UX decisions from Drupal which makes the entire thing completely confusing to anyone new to the platform.</p>\n<p>What I find interesting is that people who are not familiar with websites, find Wordpress to be \"super easy\" to use. I can setup Drupal/BD the same way and \"It's too difficult to use...\" Personally, I find the site building aspects of wordpress to be extremely confusing however the \"page creation and manipulation\" is somehow vastly easier on wordpress for non-techie folks.</p>\n<p>I have some ideas regarding Wordpress that I think I understand why it's seen as being \"easy\". I would love to see us move towards a great UX that bridges that gap.</p>\n<p>So, how do we change the UX of a layout being a page that doesn't actually have content but rather holds blocks that do have content, whereas a node holds all of the content, is technically a true \"page\" but can also be manipulated by layouts that aren't actually pages. Then you have blocks that can hold content but they aren't pages, and they can only live inside a layout but yet you could totally use a block within a layout as if the block content was an actual page.</p>\n<p>Queue the mind explosion</p>",
+        "id": 221169876,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609278149
+    },
+    {
+        "content": "<p>Well, if you think of it this way it may make more sense:</p>\n<ul>\n<li>layouts are NOT pages</li>\n<li>layouts are set of regions + rules that dictate how one or more pages will be rendered (what blocks/content will be shown/hidden and where, and in which conditions).</li>\n<li>the fact that there may be a case where a layout applies only to a single page on a site should never be considered that the layout is the page (or the other way around for that matter)</li>\n</ul>",
+        "id": 221176482,
+        "sender_full_name": "klonos",
+        "timestamp": 1609284545
+    },
+    {
+        "content": "<blockquote>\n<p>however the \"page creation and manipulation\" is somehow vastly easier on wordpress for non-techie folks</p>\n</blockquote>\n<p>That was also my impression for some time, but recently people were seriously asking me how to create a page in WordPress, they weren't able to figure it out.</p>",
+        "id": 221213447,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1609336084
+    },
+    {
+        "content": "<p>WP is also so popular that there are millions of tutorials for everything, which makes it seem easier.</p>",
+        "id": 221219765,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609341665
+    },
+    {
+        "content": "<p>Comparing WP and Drupal in the context of layout/page building because they are both CMSes to me seems like comparing MS Word (word processing) to MS Publisher (DTP) because they both happen to be software that generate \"pages\" ...totally different purpose if you look deeper ...otherwise, sure, both WP and Drupal are used to make sites.</p>",
+        "id": 221233661,
+        "sender_full_name": "klonos",
+        "timestamp": 1609352385
+    },
+    {
+        "content": "<p>...and yes, Word is much easier to use than any DTP software, but if you try to use Word to produce \"pages\" that will be used in magazine/newspaper printing, there will be a \"slight\" difference in the output <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 221233930,
+        "sender_full_name": "klonos",
+        "timestamp": 1609352570
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I'm going to have to disagree with:</p>\n<blockquote>\n<p>layouts are not pages</p>\n</blockquote>\n<p>If there is a path to a specific location that is output for general view, it is a page. It's less about how it is output and more about how it is perceived by the end-user viewing it or building it. If a specific URL points to a specific piece of information, then it is a page. No, I don't believe queries are pages and no, I don't believe every url is a page. It's the designated output of information that constitutes it as a page.</p>\n<p>I love the layouts of BD, but there is way too much to \"figure out\" for someone who just wants to \"add a page\".</p>\n<p>Views can have specific URLs, so according to the logic that a layout with a specific URL isn't a page means that no views can be a page either.</p>\n<p>None of this jives with how the general population is going to \"perceive\" any of this. We're telling people \"It's technically a page, but we don't call it a page and neither should you.\" So now we expect people to re-learn everything they thought they knew about what a page is? Hence: Web... Page...</p>\n<p>Google Domains took an approach to a really bad UX expecting the end-user to \"just figure it out\" and \"relearn everything you know\" and years later, they still haven't fixed it: <a href=\"https://www.thewichitacomputerguy.com/blog/how-fix-google-domains-record-already-use-error\">https://www.thewichitacomputerguy.com/blog/how-fix-google-domains-record-already-use-error</a> Look at the comments...</p>\n<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> said:</p>\n<blockquote>\n<p>WP is also so popular that there are millions of tutorials for everything, which makes it seem easier.</p>\n</blockquote>\n<p>I setup a Drupal site a while back for a tech-minded buddy. He said he didn't like it, it was too confusing. About a year ago, we installed WP for him and his comment: This is way easier for me to understand! This was all without any tutorials. Point being, if a person can't spend 5-10 min to look at it, click around and \"just figure it out\", then the UI isn't doing its job properly to create the good UX.</p>\n<p>Look... This UX discussion is a very VERY large discussion. I don't expect anything major to come out of it any time soon. It's actually less about the UX and more about UI changes that will create a better UX.</p>\n<p>I'm looking at this from the perspective of someone who is \"new to backdrop\". I've got a lot of time with Drupal so I'm no stranger to this stuff but if I'm struggling to \"quickly just figure out\" what are we saying to those who don't know anything about Drupal or any CMS?</p>",
+        "id": 221253896,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609369271
+    },
+    {
+        "content": "<blockquote>\n<p>I setup a Drupal site a while back for a tech-minded buddy. He said he didn't like it, it was too confusing. About a year ago, we installed WP for him and his comment: This is way easier for me to understand! This was all without any tutorials. Point being, if a person can't spend 5-10 min to look at it, click around and \"just figure it out\", then the UI isn't doing its job properly to create the good UX.</p>\n</blockquote>\n<p>Good points. Why is WP easier to click around and figure out tho?</p>",
+        "id": 221254824,
+        "sender_full_name": "docwilmot",
+        "timestamp": 1609370185
+    },
+    {
+        "content": "<p>I have to insist though, because the devil is in the details (and so is God) <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span> ...it is a matter of using precise words to describe what things are, how they work, and what their purpose is. There's a great difference between:</p>\n<ul>\n<li>(all) layouts with a path are pages</li>\n<li>a layout with a path generates the structure of the specific page that corresponds to that path</li>\n</ul>",
+        "id": 221254981,
+        "sender_full_name": "klonos",
+        "timestamp": 1609370372
+    },
+    {
+        "content": "<p>...but I totally agree with the fact that such things are hard to understand/remember, and that we need to improve the UX.</p>",
+        "id": 221255058,
+        "sender_full_name": "klonos",
+        "timestamp": 1609370440
+    },
+    {
+        "content": "<blockquote>\n<blockquote>\n<p>I setup a Drupal site a while back for a tech-minded buddy. He said he didn't like it</p>\n</blockquote>\n</blockquote>\n<blockquote>\n<p>Good points. Why is WP easier to click around and figure out tho?</p>\n</blockquote>\n<p>Are we comparing Drupal with WordPress now?</p>",
+        "id": 221255166,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1609370535
+    },
+    {
+        "content": "<p>Always it seems <span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> <span aria-label=\"sweat smile\" class=\"emoji emoji-1f605\" role=\"img\" title=\"sweat smile\">:sweat_smile:</span></p>",
+        "id": 221255186,
+        "sender_full_name": "klonos",
+        "timestamp": 1609370553
+    },
+    {
+        "content": "<p>...but in all seriousness here's what I believe with re to the WP vs Drupal/Backdrop thing:</p>\n<ul>\n<li>we should always keep in mind that it is apples vs oranges</li>\n<li>we should strive to match the easiness of their UI (where possible), and learn from what they do better than us.</li>\n</ul>",
+        "id": 221255289,
+        "sender_full_name": "klonos",
+        "timestamp": 1609370681
+    },
+    {
+        "content": "<p>The site-building approach the two CMSes take is totally different though ...we have taken a road towards \"properly structured\", whereas they have gone with the Gutenberg-y \"all things in a page are stored in a single blob\".</p>",
+        "id": 221255414,
+        "sender_full_name": "klonos",
+        "timestamp": 1609370814
+    },
+    {
+        "content": "<p>...both have their pros and cons.</p>",
+        "id": 221255431,
+        "sender_full_name": "klonos",
+        "timestamp": 1609370836
+    },
+    {
+        "content": "<p>...one of the main pros for the single-blob is the ease of use, since the experience is like any other text editor software, which is what most people take as a first course into learning to work with a computer <span aria-label=\"shrug\" class=\"emoji emoji-1f937\" role=\"img\" title=\"shrug\">:shrug:</span></p>",
+        "id": 221255503,
+        "sender_full_name": "klonos",
+        "timestamp": 1609370924
+    },
+    {
+        "content": "<p>...which to everyone that's been using Drupal/Backdrop for a long time seems like this: <a href=\"/user_uploads/18319/w6I93ByTc-GRmD36pPWOO9qT/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/18319/w6I93ByTc-GRmD36pPWOO9qT/image.png\" title=\"image.png\"><img src=\"/user_uploads/18319/w6I93ByTc-GRmD36pPWOO9qT/image.png\"></a></div>",
+        "id": 221255744,
+        "sender_full_name": "klonos",
+        "timestamp": 1609371203
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256757\">@docwilmot</span> The best I can come up with, is the left side \"admin\" bar. I think if we were to move all \"page\" related functions to a similar bar where \"this page has certain things that are common to all\" to that type of setup, it might be less confusing? Honestly don't have an answer on that just yet...</p>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> I'm am but I'm not disagreeing with your thinking/logic. I'm looking it as \"how will most people interpret it\" and trying to figure out how we can do better.</p>\n<p><span class=\"user-mention\" data-user-id=\"256674\">@Olaf Grabienski</span> What <span class=\"user-mention\" data-user-id=\"256729\">@klonos</span>  just said about matching the easiness. I'm not suggesting we make BD a clone of WP but rather build off the things that make WP great and excel in the areas that people hate about WP.</p>\n<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> </p>\n<blockquote>\n<p>we should always keep in mind that it is apples vs oranges</p>\n</blockquote>\n<p>Yes on the backend, not necessarily on how to build the front-end. I just think we need to have enough similarities on how a normal person would expect to build a \"page\", then expand from there.</p>\n<p>It might be as simple as building out a starter profile with an about page, contact page, home page ready for content etc where not only can seasoned builders choose that profile and have a basic site 95% ready to go, but a new user can choose that profile and see how it all comes together by reverse engineering it if they really want to dig in.</p>\n<p>Better yet, a profile with a \"choose popular modules\" feature where you can add a few extras (webform for example) that will bring it together and get it 98% there.</p>",
+        "id": 221255748,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609371207
+    },
+    {
+        "content": "<blockquote>\n<p>build off the things that make WP great</p>\n</blockquote>\n<p>I agree! Was only wondering what to do about people who don't like a Drupal site. Backdrop is already quite different (for sure not perfect).</p>",
+        "id": 221255975,
+        "sender_full_name": "Olaf Grabienski",
+        "timestamp": 1609371414
+    },
+    {
+        "content": "<p>We have been doing that (think the ability to schedule content OOTB, and other small things here and there) ...and we have many issues in our issue queue to work on that further (think providing a \"trash can\" feature instead of permanently deleting + many others). ...but once again, so many great ideas, but not enough hands on deck to \"do all the things\" (same issue every open source software has really)</p>",
+        "id": 221256303,
+        "sender_full_name": "klonos",
+        "timestamp": 1609371792
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256729\">@klonos</span> yeah, you hit the nail on the head <span aria-label=\"wink\" class=\"emoji emoji-1f609\" role=\"img\" title=\"wink\">:wink:</span></p>",
+        "id": 221257235,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609372916
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span> the updated title make more sense?</p>\n<p><a href=\"https://github.com/backdrop/backdrop-issues/issues/4841\">https://github.com/backdrop/backdrop-issues/issues/4841</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/4841\" style=\"background-image: url(https://avatars3.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/4841\" title=\"[UX] Separate single page and multi-page layouts on layout page · Issue #4841 · backdrop/backdrop-issues\">[UX] Separate single page and multi-page layouts on layout page · Issue #4841 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Description of the need In issue #4839 - we are discussing user confusion over how the default &quot;Home Page&quot; layout in core is applied, especially when the default home page setting has bee...</div></div></div>",
+        "id": 221372667,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609540966
+    },
+    {
+        "content": "<p>(click through... Zulip doesn't update titles)</p>",
+        "id": 221372677,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1609540989
+    },
+    {
+        "content": "<p>Yep, thanks!</p>",
+        "id": 221372768,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1609541126
+    },
+    {
+        "content": "<p>Home page layout 403 server error<br>\nStrange problem, when saving the home page layout it saves to (mydomain)/home with a 403 server error.  Any suggestions?</p>",
+        "id": 223809212,
+        "sender_full_name": "SteveP",
+        "timestamp": 1611487408
+    },
+    {
+        "content": "<p>(deleted)</p>",
+        "id": 223809267,
+        "sender_full_name": "SteveP",
+        "timestamp": 1611487490
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"356829\">@SteveP</span> shooting from the hip.</p>\n<p>1) is there a node using the /home alias?</p>\n<p>2) are there any odd blocks that have been added which might contribute to this?</p>\n<p>I got nothing else...</p>",
+        "id": 223833030,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611519061
+    },
+    {
+        "content": "<p>Thanks Phil,, yes, the site-information page had default home page as (mydomain)/home for some strange reason. Removed it. Now when saving home layout, no problem. But, while logged in, default domain url goes to user1. So it seems some strange aliases have been set up. I have ubercart installed, I think that's got something to do with it. Investigating.</p>",
+        "id": 223835127,
+        "sender_full_name": "SteveP",
+        "timestamp": 1611521763
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"356829\">@SteveP</span> Currently the homepage defaults to <code>/user</code> if you delete the value on the Site Information page (unlike Drupal where it defaults to <code>/node</code>). We're looking to change this in <a href=\"https://github.com/backdrop/backdrop-issues/issues/3343\">https://github.com/backdrop/backdrop-issues/issues/3343</a>. Until then, if you want your Home layout (with path <code>home</code> to be the frontpage, then you should set the Site Information page's frontpage to <code>home</code>.</p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3343\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3343\" title=\"[UX] Change default home page from 'user' to 'node' - if user removes path to home · Issue #3343 · backdrop/backdrop-issues\">[UX] Change default home page from 'user' to 'node' - if user removes path to home · Issue #3343 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">On /admin/config/system/site-information, the default front page field is pre-populated with home, which generates the a layout, containing a feed of promoted posts. But the instructions beneath th...</div></div></div>",
+        "id": 223835492,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611522247
+    },
+    {
+        "content": "<p>The 403 error sounds like a slightly different problem...</p>",
+        "id": 223835510,
+        "sender_full_name": "BWPanda",
+        "timestamp": 1611522298
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"256607\">@BWPanda</span>  thanks for this -- prior to your reply I'd removed home, and default page then went to user/login -- so thought it must be a rules config, somewhere. Couldn't find it. Your reply resolves things, somewhat. Anyway, put the home default back in, site now working, but (not tested) likely will have that 403 error again, which is not a serious problem (the home-layout still gets saved), just don't like seeing 403 messages (I wonder if that's flagged for the hosting provider?)</p>",
+        "id": 223836166,
+        "sender_full_name": "SteveP",
+        "timestamp": 1611523226
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"356829\">@SteveP</span> what about a node that you maybe set the path to /home? </p>\n<p>Outside of that, it kind of acts like a document root issue of sorts.</p>",
+        "id": 223864312,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611561469
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span>   I've checked URL aliases, and URL redirects, all good there. I'll load a fresh system, with layouts pulled from the site, and see if I can replicate the error.</p>",
+        "id": 223868639,
+        "sender_full_name": "SteveP",
+        "timestamp": 1611564525
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"356829\">@SteveP</span> sounds good. Definitely weird issue.</p>",
+        "id": 223868725,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611564599
+    },
+    {
+        "content": "<p>Just realized 403 is a forbidden error. Might be a permissions issue. I'm new to the underlying of BD but I think a lot of config stuff (like variables) has been yanked from the DB and placed inside files. Something worth investigating if all else fails.</p>",
+        "id": 223868910,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611564722
+    },
+    {
+        "content": "<p>Yes, I was planning to check file permissions, especially as it's on a shared server. I'd set files to 664 and 775, but I'll check again.</p>",
+        "id": 223869074,
+        "sender_full_name": "SteveP",
+        "timestamp": 1611564836
+    },
+    {
+        "content": "<p>I heard there is an issue out there that talks about \"making layouts directly editable from the viewed page\". I can't seem to find it, so if anyone knows which # it is, I would like to take a look at that discussion.</p>",
+        "id": 224525875,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611950634
+    },
+    {
+        "content": "<p>Maybe <a href=\"https://github.com/backdrop/backdrop-issues/issues/2626\">https://github.com/backdrop/backdrop-issues/issues/2626</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/2626\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/2626\" title=\"[UX] Add a contextual menu for quick access to editing things like the layout, theme, etc. of the current page · Issue #2626 · backdrop/backdrop-issues\">[UX] Add a contextual menu for quick access to editing things like the layout, theme, etc. of the current page · Issue #2626 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">This thought just occurred to me as I glanced over a notification that came in on another thread (&quot;...there does not seem to be a way of seeing exactly which layout is in action for a page, ev...</div></div></div>",
+        "id": 224526481,
+        "sender_full_name": "Laryn",
+        "timestamp": 1611950971
+    },
+    {
+        "content": "<p>Thanks <span class=\"user-mention\" data-user-id=\"256573\">@Laryn</span> that looks like a good place for my thoughts. I'll dig into it a bit deeper.</p>",
+        "id": 224537552,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1611956470
+    },
+    {
+        "content": "<p><span class=\"user-mention\" data-user-id=\"330989\">@Phil Ward</span> Something else you were working on related to an \"admin edit mode\" button came across my screen and made me think of <a href=\"https://github.com/backdrop/backdrop-issues/issues/3086\">https://github.com/backdrop/backdrop-issues/issues/3086</a></p>\n<div class=\"message_embed\"><a class=\"message_embed_image\" href=\"https://github.com/backdrop/backdrop-issues/issues/3086\" style=\"background-image: url(https://avatars.githubusercontent.com/u/5283039?s=400&amp;v=4)\"></a><div class=\"data-container\"><div class=\"message_embed_title\"><a href=\"https://github.com/backdrop/backdrop-issues/issues/3086\" title=\"[UX] Allow moving blocks from the front end? · Issue #3086 · backdrop/backdrop-issues\">[UX] Allow moving blocks from the front end? · Issue #3086 · backdrop/backdrop-issues</a></div><div class=\"message_embed_description\">Describe your issue or idea I&#39;m willing to be convinced that this is a bad idea, but at the moment I&#39;m wondering if it would be UX win to be able to drag-and-drop blocks from the front end....</div></div></div>",
+        "id": 224647811,
+        "sender_full_name": "Laryn",
+        "timestamp": 1612104195
+    },
+    {
+        "content": "<p>Yeah, I had that idea running in my head too when talking about the edit builder whatever page. I figured it was too early to bring it up and I'm honestly not sure what I think about it since that can be done on the layout page.</p>\n<p>That said, it makes a lot of sense to be able to do that for content editors, so I dunno.</p>",
+        "id": 224658363,
+        "sender_full_name": "Phil Ward",
+        "timestamp": 1612118610
+    },
+    {
+        "content": "<p>I wonder if another way to look at it is to have a preview on the current layout admin side</p>",
+        "id": 224662524,
+        "sender_full_name": "Herb",
+        "timestamp": 1612124374
+    }
+]
